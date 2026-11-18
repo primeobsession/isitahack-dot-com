@@ -5,8 +5,12 @@
 ## Index
 - [index.json](https://isitahack.com/index.json): JSON list of all incidents: slug, title, status, last_updated, paths to its files.
 
-## Incident pages (Markdown with YAML front-matter)
+## Pages
+- [Home](https://isitahack.com/index.html): HTML list of incidents, generated from front-matter.
+
+## Incident pages (Markdown with YAML front-matter, plus a rendered .html)
 - [FAA ground stop, Nov 13 2026](https://isitahack.com/incidents/2026-11-faa-ground-stop.md): incident write-up (still monitored). Front-matter: slug, title, status, labels summary, dates.
+- [FAA ground stop, Nov 13 2026 (HTML)](https://isitahack.com/incidents/2026-11-faa-ground-stop.html): the same write-up rendered to HTML by scripts/build.mjs.
 
 ## Data (CSV, UTF-8, RFC 4180, header row; legacy schema, not yet the manual's claims/sources/timeline/update_log schema)
 - [airport_delays.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/airport_delays.csv): columns airport,time_et,avg_delay_min,display

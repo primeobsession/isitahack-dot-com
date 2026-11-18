@@ -1,10 +1,44 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><title>isitahack.com</title><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<title>isitahack.com</title>
+<meta name="description" content="Public-source fact-checks of security news. Each incident carries a label (Confirmed, Reported, Unverified, Rumor, Debunked, Not established), source links, and a dated update log.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><a class="brand" href="index.html">isitahack.com</a></header>
+<div class="status-banner status-monitoring" role="status">
+<span class="status-dot" aria-hidden="true"></span><strong>Monitoring 1 incident</strong><span class="sep" aria-hidden="true">·</span><span>Last updated <time datetime="2026-11-18T08:18:00-05:00">Nov 18, 2026, 8:18 AM ET</time></span>
+</div>
+<main id="main" class="home">
+<header class="home-header">
 <h1>isitahack.com</h1>
-<p>Placeholder. The site is not built yet.</p>
-<p>First incident (still being monitored): <a href="incidents/2026-11-faa-ground-stop.md">FAA nationwide ground stop, Nov 13, 2026</a>.</p>
-<p>Made for entertainment using AI. Not endorsed by anyone named here.</p>
+<p class="lede">Public-source fact-checks of security news. Each incident carries a label (Confirmed, Reported, Unverified, Rumor, Debunked, Not established), source links, and a dated update log.</p>
+</header>
+<h2 class="list-heading">Incidents</h2>
+<ul class="cards">
+<li class="card">
+<p class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</p>
+<h2><a href="incidents/2026-11-faa-ground-stop.html">FAA Nationwide Ground Stop: What We Know</a></h2>
+<p class="meta">Incident date <time datetime="2026-11-13">Nov 13, 2026</time> · Last updated <time datetime="2026-11-18T08:18:00-05:00">Nov 18, 2026, 8:18 AM ET</time></p>
+<ul class="tally-list"><li><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span> <span class="count">3</span></li><li><span class="pill pill-reported" data-label="Reported">Reported</span> <span class="count">4</span></li><li><span class="pill pill-unverified" data-label="Unverified">Unverified</span> <span class="count">5</span></li><li><span class="pill pill-rumor" data-label="Rumor">Rumor</span> <span class="count">3</span></li><li><span class="pill pill-debunked" data-label="Debunked">Debunked</span> <span class="count">2</span></li><li><span class="pill pill-not-established" data-label="Not established">Not established</span> <span class="count">0</span></li></ul>
+<p class="card-links"><a class="button" href="incidents/2026-11-faa-ground-stop.html">Read the fact-check</a> <a href="incidents/2026-11-faa-ground-stop.md">Markdown</a></p>
+</li>
+</ul>
+</main>
+<footer class="site-footer">
+<p class="disclaimer-short">Made for entertainment using AI. Not endorsed by anyone named here.</p>
+<p class="alt-formats">Machine-readable: <a href="index.json">index.json</a> · <a href="llms.txt">llms.txt</a></p>
+</footer>
 </body>
 </html>

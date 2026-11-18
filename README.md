@@ -13,7 +13,8 @@ Starter skeleton only. The generator and the full site are not built. Planned: o
 - `incidents/<slug>.md`: one page per incident.
 - `data/incidents/<slug>/raw/`: preserved source material, copied byte-for-byte; `MANIFEST.txt` has a sha256 for each file.
 - `index.json`, `llms.txt`: machine-readable indexes.
-- `scripts/`: empty for now.
+- `scripts/build.mjs`: renders `incidents/*.md` to `incidents/*.html` and regenerates `index.html`; see `scripts/README.md`.
+- `assets/site.css`: shared stylesheet.
 
 ## First incident
 
