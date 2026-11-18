@@ -1,0 +1,23 @@
+item,status,note
+Cause of the frequency and radar problems,open,"Officials say telecom outage but haven't named the failed system or carrier. CBS, citing multiple sources, reports a network update caused a reboot; that is not officially confirmed."
+Confirm the CBS network-update/reboot report with the FAA or DOT,open,CBS cites multiple sources saying an update to the L3Harris-operated ATC network caused a reboot and crash. Bloomberg says the FBI is looking at a software update. Neither is an official confirmation.
+Which specific frequencies or channels went down,open,None named publicly; a unique Reagan National tower failure remains unconfirmed
+Airband recordings or spectrum captures from SDR communities,open,"None found; LiveATC archives are blocked from my computer, though the Chicago feed names are known"
+Domestic ground stop lifted,open,Listed until 11 PM ET with a tiered release as centers recover; the FAA hasn't said which centers go first.
+Outcome of the 9:15 PM ET planning webinar,open,The FAA national summary lists the next planning webinar at 0215Z (9:15 PM ET).
+Outcome of the 7:15 PM ET planning call,done,No restart came out of it: at 7:44 PM ET the FAA still lists the national stop until 11 PM and set the next planning webinar for 9:15 PM ET.
+Whether the Newark PENNS restriction clears with the national stop,open,"If it clears with the national stop, that supports one failure; a later plan naming a Cleveland-specific equipment problem would point to a second fault. Still listed on the FAA restrictions list at 7:44 PM ET (2234Z–0500Z, EQ:FAA) while the national stop holds."
+"What ""communications failure"" means in practice",open,"The FAA reason changed from ""telecommunications outage"" to ""COMMUNICATIONS FAILURE"" without naming the system, circuits or carrier"
+Rumor that AT&T provides the ARTCC network,open,"Unsourced Hacker News comment, separate from the Verizon fiber-cut theory and from AT&T's FENS planning contract."
+Rumor that 911 systems are also down,open,A Hacker News comment cites Downdetector; that claim has not been checked against Downdetector or local 911 centers.
+Any SMART link to the outage,open,CISA is reviewing; no evidence so far. Air Space Intelligence denies SMART caused it. Officials have not established a role.
+Chicago as the starting point,done,"First in the FAA paperwork, confirmed. Whether the failure technically started there is still unclear."
+L3Harris copper-to-fiber changeover as the cause,done,"The 70% upgraded figure is confirmed. A cutover causing today's outage is unverified: no public schedule or contract change names Nov. 13, and L3Harris says it cuts over in low-traffic windows."
+Cleveland Center equipment hold on Newark departures,done,Most likely the same national failure (medium confidence). No separate advisory in the 70–123 range. IFR Meter reports a 5:34 PM PENNS restriction until midnight for FAA equipment. Earlier Newark stops were for volume and ended before 3:10 PM.
+The two areas that kept communicating,done,"Mullin said two US areas were unaffected and would not name them. Inference, medium confidence: Alaska and Hawaii, based on Alaska Airlines' statement that intra-Alaska and Neighbor Island flights were not impacted. No FAA advisory carves them out."
+Cyberattack,done,"No public evidence; not officially ruled out. CISA and the FBI have made no public statement. Mullin would not rule it out. NBC and Bloomberg, citing officials, say early signs point away from cyber."
+"Kansas City Center as the origin, and Reagan National",done,"The Kansas City origin is a rumor, contradicted by the Chicago-first advisories. No ZKC-specific advisory. Reagan National held under the national stop is confirmed. A unique tower failure is unconfirmed."
+Why the Weather Service radar site went down,done,Debunked as a separate outage. Stale webpage text; NWS says radar is operating normally.
+Canadian systems hit,done,"Not hit, per NAV CANADA and Transport Minister MacKinnon. Only US-bound flights, and some flights crossing US airspace, were stopped."
+Airport weather radar dropouts tied to the same network,done,Boston Center's teleco issue was cited when Boston's radar data came back at 3:46 PM.
+Public carrier outage ruled out for the window,done,No public AT&T or Verizon consumer outage lines up with the window. L3Harris runs the private FTI network and had no comment.

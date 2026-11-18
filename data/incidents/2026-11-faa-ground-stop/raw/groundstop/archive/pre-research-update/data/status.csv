@@ -1,0 +1,5 @@
+key,value
+headline,"Nationwide ground stop still in effect under FAA Advisory 120 through 11 PM ET; no restart after the 7:15 PM planning call, next call 9:15 PM ET. No official cause; the FAA calls it a telecommunications outage."
+headline_source_url,https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&number=120
+open_items_as_of,7:45 PM ET
+working_read,"Chicago was first in the FAA paperwork; whether the failure technically started there is still unclear. Public carrier status, user-report levels and internet routing data all look normal, which points to a failure inside the FAA's own leased network rather than a public carrier outage. CBS, citing multiple sources, reports that an update to the L3Harris-operated ATC network caused a reboot and crash. That report is sourced journalism, not an official confirmation, and it is not a confirmed cause."

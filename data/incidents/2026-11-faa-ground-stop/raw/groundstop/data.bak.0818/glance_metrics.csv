@@ -1,0 +1,7 @@
+value,label,detail,tone
+3:10 PM,First ground stop,"O'Hare, comms and equipment",
+3:54 PM,National ground stop,FAA Advisory 111,
+22,En route centers affected,Per Secretary Duffy,
+Officials' account,Root cause,"Router flooded legacy network during L3Harris fiber work (Duffy, Sat; DOT written release); no FAA root-cause report",warning
+8:16 PM,National stop cancelled,Advisory 005; ended nationwide at once,success
+10:30 AM Sat,Duffy/Bedford briefing,Held at DOT HQ; Duffy named L3Harris copper-to-fiber work,
