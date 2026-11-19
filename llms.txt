@@ -6,41 +6,33 @@
 - [index.json](https://isitahack.com/index.json): JSON list of all incidents: slug, title, status, last_updated, paths to its files.
 
 ## Pages
-- [Home](https://isitahack.com/index.html): HTML list of incidents, generated from front-matter.
+- [Home](https://isitahack.com/index.html): HTML list of incidents, generated from each incident's data.
+- [How it works](https://isitahack.com/how-it-works.html): who does what, the six labels, the sourcing tiers and the rules the agents work to.
+- [About](https://isitahack.com/about.html): why the site exists, who is behind it, and how to report an error.
 
-## Incident pages (Markdown with YAML front-matter, plus a rendered .html)
-- [FAA ground stop, Nov 13 2026](https://isitahack.com/incidents/2026-11-faa-ground-stop.md): incident write-up (still monitored). Front-matter: slug, title, status, labels summary, dates.
-- [FAA ground stop, Nov 13 2026 (HTML)](https://isitahack.com/incidents/2026-11-faa-ground-stop.html): the same write-up rendered to HTML by scripts/build.mjs.
-- [Apple services outage, Nov 17 2026](https://isitahack.com/incidents/2026-11-apple-services-outage.md): incident write-up (still monitored; final verdict pending). Front-matter: slug, title, status, labels summary, dates.
-- [Apple services outage, Nov 17 2026 (HTML)](https://isitahack.com/incidents/2026-11-apple-services-outage.html): the same write-up rendered to HTML by scripts/build.mjs.
+## Incident pages (HTML, plus a Markdown version built from the same data)
+- [FAA ground stop, Nov 13 2026](https://isitahack.com/incidents/2026-11-faa-ground-stop.md): the report as Markdown (still monitored). Built from the data below; front-matter gives slug, title, status, dates and size.
+- [FAA ground stop, Nov 13 2026 (HTML)](https://isitahack.com/incidents/2026-11-faa-ground-stop.html): the same report as a web page.
+- [Apple services outage, Nov 17 2026](https://isitahack.com/incidents/2026-11-apple-services-outage.md): the report as Markdown (still monitored). Built from its data folder.
+- [Apple services outage, Nov 17 2026 (HTML)](https://isitahack.com/incidents/2026-11-apple-services-outage.html): the same report as a web page.
 
-## Data (CSV, UTF-8, RFC 4180, header row; legacy schema, not yet the manual's claims/sources/timeline/update_log schema)
-- [airport_delays.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/airport_delays.csv): columns airport,time_et,avg_delay_min,display
-- [cancellations.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/cancellations.csv): columns time_et,cancellations
-- [carriers.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/carriers.csv): columns title,detail
-- [delays.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/delays.csv): columns time_et,delays
-- [flights_in_air.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/flights_in_air.csv): columns time_et,today,yesterday_same_time
-- [glance_figures.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/glance_figures.csv): columns figure,source
-- [glance_metrics.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/glance_metrics.csv): columns value,label,detail,tone
-- [key_events.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/key_events.csv): columns time_et,title,detail
-- [official_sources.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/official_sources.csv): columns statement,source
-- [open_items.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/open_items.csv): columns item,status,note
-- [ruled_out.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/ruled_out.csv): columns area,finding,source
-- [sdr_search.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/sdr_search.csv): columns source,result,label
-- [side_threads.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/side_threads.csv): columns item,finding,label
-- [smart_docs.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/smart_docs.csv): columns source,what_it_says,support
-- [smart_procurement.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/smart_procurement.csv): columns item,record,support,label
-- [sources.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/sources.csv): columns title,site,href
-- [status.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/status.csv): columns key,value
-- [theories.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/theories.csv): columns theory,label,gist,source_title,source_url
-- [thread_results.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/thread_results.csv): columns thread,verdict,confidence,sources
-- [timeline_events.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/timeline_events.csv): columns time_et,event,evidence,label
-- [update_log.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/update_log.csv): columns time_et,update
-- [Apple services outage, Nov 17 2026: claims.csv](https://isitahack.com/data/incidents/2026-11-apple-services-outage/claims.csv): one row per claim with label, source, tier and why it supports (manual section 6.1 schema)
-- [Apple services outage, Nov 17 2026: sources.csv](https://isitahack.com/data/incidents/2026-11-apple-services-outage/sources.csv): sources per claim with tier, independence group and link status (manual section 6.1 schema)
-- [Apple services outage, Nov 17 2026: timeline.csv](https://isitahack.com/data/incidents/2026-11-apple-services-outage/timeline.csv): dated events, each tied to a claim (manual section 6.1 schema)
-- [Apple services outage, Nov 17 2026: update_log.csv](https://isitahack.com/data/incidents/2026-11-apple-services-outage/update_log.csv): newest-first change log (manual section 6.1 schema)
+## Data (typed incident format: UTF-8, RFC 4180 CSV with a header row; see Format below)
+- [data/incidents/2026-11-faa-ground-stop/](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/): the folder the FAA report is built from.
+- [incident.json](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/incident.json): the head: status, size, who is affected, known and not known, key figures, charts, tables and section order.
+- [claims.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/claims.csv): every labelled claim, with its summary, label, sources and a note on why the source supports it.
+- [sources.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/sources.csv): every source, with tier, publication date where the source states one, and link status.
+- [timeline.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/timeline.csv): dated events, each pointing at its claim.
+- [questions.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/questions.csv): the headline question and its answer.
+- [update_log.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/update_log.csv): every check and change, newest first.
+- charts/, tables/ and notes/ in the same folder: chart numbers, reference tables and narrative sections named in incident.json.
+- [raw/](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/): source material preserved from before the conversion, in its original layout, with a sha256 [MANIFEST.txt](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/MANIFEST.txt).
+- [data/incidents/2026-11-apple-services-outage/](https://isitahack.com/data/incidents/2026-11-apple-services-outage/): the folder the Apple report is built from: incident.json, claims.csv, sources.csv, timeline.csv, questions.csv, update_log.csv and notes/.
+
+## Format
+- [format/README.md](https://github.com/primeobsession/isitahack-dot-com/blob/main/format/README.md): the typed incident format. New incidents are a folder of JSON and CSV under data/incidents/<slug>/, checked by scripts/validate.mjs.
+- [format/incident.schema.json](https://github.com/primeobsession/isitahack-dot-com/blob/main/format/incident.schema.json): JSON Schema for incident.json, with a description of every field.
+- [format/tables.schema.json](https://github.com/primeobsession/isitahack-dot-com/blob/main/format/tables.schema.json): column definitions for claims.csv, sources.csv, timeline.csv, questions.csv, quotes.csv and update_log.csv.
 
 ## Notes
-- Schemas are documented in the operations manual section 6.1.
+- Every field is defined in format/incident.schema.json and format/tables.schema.json.
 - Preserved source material for each incident is under data/incidents/<slug>/raw/ with a sha256 MANIFEST.txt.

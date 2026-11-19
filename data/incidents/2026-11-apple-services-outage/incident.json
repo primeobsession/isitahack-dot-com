@@ -1,0 +1,119 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-apple-services-outage",
+  "title": "Apple Services Outage, Nov 17, 2026: What We Know",
+  "status": "monitoring",
+  "incident_date": "2026-11-17",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Apple, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "iCloud sign-in and the App Store are services many people rely on daily, and consumer services were affected for about five to six hours. This is actual impact, not potential. There is no sign of an impact on national infrastructure.",
+  "who_is_affected": "Apple account holders who could not sign in to iCloud, buy apps or reach iCloud Mail on Tuesday afternoon, plus schools, businesses, some Apple store shoppers and some developers. Nothing suggests account data was exposed, so there is no special action to take.",
+  "known": [
+    {
+      "text": "Apple's status page lists outages or issues on Nov 17 for iCloud sign-in, iCloud Mail, iCloud.com, the App Store and several business and school services.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Problems began between 11:15 and 11:45 AM ET, per Apple's status page.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "Every consumer entry on Apple's status page was resolved by 5:00 PM ET.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "Apple said an internal update caused the outages. This confirms what Apple said, not that it is so.",
+      "claim_id": "c007"
+    },
+    {
+      "text": "Apple retail store systems were disrupted, and some stores could not complete purchases.",
+      "claim_id": "c014"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Which internal update failed, or what went wrong technically. Apple has not said."
+    },
+    {
+      "text": "How many people were affected. Downdetector counts are user reports only."
+    },
+    {
+      "text": "Whether Apple's internal employee systems and stores worldwide were down for as long as reported. That rests on one outlet's anonymous sources."
+    },
+    {
+      "text": "Whether Apple will publish a fuller explanation."
+    }
+  ],
+  "figures": [
+    {
+      "value": "11:15 AM",
+      "label": "First service problems",
+      "detail": "Nov 17, per Apple's status page",
+      "claim_id": "c002"
+    },
+    {
+      "value": "5:00 PM",
+      "label": "Last consumer entry resolved",
+      "detail": "Nov 17, per Apple's status page",
+      "claim_id": "c003"
+    },
+    {
+      "value": "~2,300",
+      "label": "Apple Pay reports at the peak",
+      "detail": "Downdetector, via Reuters",
+      "claim_id": "c005"
+    },
+    {
+      "value": "13,000+",
+      "label": "Reports for Apple Support",
+      "detail": "Downdetector, via Lifehacker",
+      "claim_id": "c006"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Cause and hack claims",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions and rumors",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline with evidence"
+    },
+    {
+      "type": "claims",
+      "title": "Who and what was affected",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "Official statements",
+      "file": "notes/official-statements.md"
+    },
+    {
+      "type": "note",
+      "title": "Checked, not found",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

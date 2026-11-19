@@ -4,18 +4,35 @@ Public-source fact-checks of security news. Each incident carries a label (Confi
 
 Made for entertainment using AI. Not endorsed by anyone named on the site.
 
-## Status
+## How it works
 
-Starter skeleton only. The generator and the full site are not built. Planned: one Markdown file per incident with YAML front-matter, rendered to static HTML by a small Node script, plus `index.json` and `llms.txt`, hosted on GitHub Pages. Conventions are in the operations manual (private repo `primeobsession/isitahack-ops`), sections 6 and 7.
+An incident is a folder of typed data: one `incident.json` plus CSV files for its claims, sources, timeline, questions, quotes and update log. AI agents edit the data. A check script validates it. A build script turns it into the page. Nobody edits a page by hand.
+
+```
+data/incidents/<slug>/   the data for one incident (the source of truth)
+format/                  what every field is for, as JSON Schema and table definitions
+scripts/validate.mjs     checks an incident folder; a failed check stops the build
+scripts/build.mjs        writes the HTML pages and a Markdown version of each incident
+pages/                   the copy for Home, How it works and About
+assets/site.css          one shared stylesheet, light and dark
+```
+
+The site is static files served by GitHub Pages. The built pages (`index.html`, `how-it-works.html`, `about.html`, `incidents/*.html`, `incidents/*.md`) are committed next to their sources.
+
+```sh
+node scripts/validate.mjs     # check every incident under data/incidents
+node scripts/build.mjs        # rebuild the site in place
+```
+
+Both are plain Node with no dependencies. See `format/README.md` for the incident format and `scripts/README.md` for the build.
 
 ## Layout
 
-- `incidents/<slug>.md`: one page per incident.
-- `data/incidents/<slug>/raw/`: preserved source material, copied byte-for-byte; `MANIFEST.txt` has a sha256 for each file.
+- `data/incidents/<slug>/`: an incident's data, and `raw/` for preserved source material with a sha256 `MANIFEST.txt`.
+- `incidents/<slug>.html` and `<slug>.md`: the page and its plain-text version, built from the data.
 - `index.json`, `llms.txt`: machine-readable indexes.
-- `scripts/build.mjs`: renders `incidents/*.md` to `incidents/*.html` and regenerates `index.html`; see `scripts/README.md`.
-- `assets/site.css`: shared stylesheet.
 
-## First incident
+## Status
 
-`incidents/2026-11-faa-ground-stop.md`: FAA nationwide ground stop, Nov 13, 2026. Still being monitored.
+- The FAA nationwide ground stop (Nov 13, 2026) is the first incident in the typed format: `data/incidents/2026-11-faa-ground-stop/`. It was converted from a hand-written page on Nov 18, 2026; the page's update log says what changed.
+- `format/sample/` holds a made-up incident used to test the format. It is never built into the site.
