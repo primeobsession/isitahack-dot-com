@@ -3,7 +3,7 @@ slug: 2026-11-microsoft-365-outage
 title: "Microsoft 365 Outage, Nov 12-13, 2026: What We Know"
 status: monitoring
 incident_date: 2026-11-12
-last_updated: 2026-11-18T23:18:00-05:00
+last_updated: 2026-11-18T23:19:00-05:00
 size: "Large"
 data_dir: data/incidents/2026-11-microsoft-365-outage
 generated: true
@@ -24,7 +24,7 @@ This is the current answer, not a final verdict.
 
 ## The latest
 
-Nov 18, 2026, 11:18 PM ET: **Microsoft 365 is back to normal; Microsoft's final report on the outage is due Nov 20.** Moved to the site's data format before first publication and reviewed against the sourcing rules. Posts on official social accounts are Tier 4 and third-party copies of Microsoft's report are Tier 3, so 6 claims that rested on them are labeled Reported, not Confirmed (c002, c007, c008, c013, c014, c015). The page no longer states a likely verdict: a final verdict is published only after the site's owner approves it.
+Nov 18, 2026, 11:19 PM ET: **Microsoft 365 is back to normal; Microsoft's final report on the outage is due Nov 20.** Microsoft 365 has been back to normal since Nov 13, and Microsoft's final post-incident report is due Nov 20. Before first publication this page was moved to the site's data format and reviewed against the sourcing rules: 6 claims whose official source is a social post are labeled Reported, not Confirmed (c002, c007, c008, c013, c014, c015).
 
 ## At a glance
 
@@ -149,7 +149,7 @@ Nov 18, 2026, 11:18 PM ET: **Microsoft 365 is back to normal; Microsoft's final 
 
 | When | Update | Type |
 |---|---|---|
-| Nov 18, 2026, 11:18 PM ET | **Microsoft 365 is back to normal; Microsoft's final report on the outage is due Nov 20.** Moved to the site's data format before first publication and reviewed against the sourcing rules. Posts on official social accounts are Tier 4 and third-party copies of Microsoft's report are Tier 3, so 6 claims that rested on them are labeled Reported, not Confirmed (c002, c007, c008, c013, c014, c015). The page no longer states a likely verdict: a final verdict is published only after the site's owner approves it. | Label change |
+| Nov 18, 2026, 11:19 PM ET | **Microsoft 365 is back to normal; Microsoft's final report on the outage is due Nov 20.** Microsoft 365 has been back to normal since Nov 13, and Microsoft's final post-incident report is due Nov 20. Before first publication this page was moved to the site's data format and reviewed against the sourcing rules: 6 claims whose official source is a social post are labeled Reported, not Confirmed (c002, c007, c008, c013, c014, c015). | Label change |
 | Nov 18, 2026, 9:25 PM ET | **AP's article and Microsoft's own copy of its report could not be checked; a third-party copy is cited.** AP article not checked: access blocked (HTTP 403 to our check; fetch timed out). Microsoft's own copy of the preliminary post-incident report not checked: login required (Microsoft 365 admin center). A third-party copy is cited instead and labeled as such. | Source blocked |
 | Nov 18, 2026, 9:20 PM ET | **Page drafted: Microsoft blames a months-old defect, and the US government says it was not a cyberattack.** Page drafted from public sources, including Microsoft's official X posts. All source links re-checked Nov 18; AP blocked. The AI or agents claim is labeled Rumor, not Debunked, because only Microsoft has addressed it. No final verdict is applied; that needs the owner's approval. No major Azure outage found on Nov 18. | Added |
 
