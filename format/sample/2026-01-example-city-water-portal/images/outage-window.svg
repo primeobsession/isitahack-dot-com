@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="160" viewBox="0 0 800 160" role="img" aria-label="Bar showing the portal offline from 8:40 AM to 5:20 PM">
+<rect width="800" height="160" fill="#F6F7F9"/>
+<rect x="60" y="64" width="680" height="24" rx="4" fill="#D5DAE1"/>
+<rect x="246" y="64" width="368" height="24" rx="4" fill="#1D3FD1"/>
+<text x="246" y="52" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#0E1116">8:40 AM offline</text>
+<text x="614" y="114" text-anchor="end" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#0E1116">5:20 PM restored</text>
+</svg>

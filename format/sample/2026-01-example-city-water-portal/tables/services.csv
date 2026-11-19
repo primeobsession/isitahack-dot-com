@@ -1,0 +1,4 @@
+service,state,source
+Online bill pay,Offline from 8:40 AM to 5:20 PM ET,s001
+Water supply,Not affected,s002
+Phone payments,Slower than usual,s003

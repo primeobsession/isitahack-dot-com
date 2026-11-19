@@ -1,0 +1,91 @@
+{
+  "format_version": 1,
+  "slug": "2026-01-example-city-water-portal",
+  "title": "Example City Water Billing Portal Outage: What We Know",
+  "status": "monitoring",
+  "incident_date": "2026-01-12",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by any utility, agency, news outlet, company, or anyone else named. This incident is a made-up sample.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Local",
+  "size_basis": "One utility's online billing portal. The water supply itself was not affected.",
+  "who_is_affected": "Customers of Example City Water who pay bills online. Water service was not interrupted, and nothing needs to be done beyond paying once the portal is back.",
+  "known": [
+    { "text": "The online billing portal went offline at 8:40 AM ET on Jan 12.", "claim_id": "c005" },
+    { "text": "It was back online at 5:20 PM ET the same day.", "claim_id": "c006" },
+    { "text": "The utility says a failed software update caused it.", "claim_id": "c001" }
+  ],
+  "not_known": [
+    { "text": "Whether anyone outside the utility has reviewed its account." },
+    { "text": "Whether customer payment data was exposed.", "question_id": "q003" }
+  ],
+  "figures": [
+    { "value": "8:40 AM", "label": "Portal went offline", "detail": "Utility status page", "claim_id": "c005" },
+    { "value": "5:20 PM", "label": "Portal restored", "detail": "Utility status page", "claim_id": "c006" },
+    { "value": "2", "label": "Outlets reporting delays", "detail": "Independent of each other", "claim_id": "c007" }
+  ],
+  "charts": [
+    {
+      "id": "problem-reports",
+      "title": "Problem reports per hour",
+      "type": "line",
+      "data": "charts/problem-reports.csv",
+      "x": { "column": "time", "kind": "time", "label": "Jan 12, Eastern time" },
+      "series": [{ "column": "reports", "label": "Reports" }],
+      "unit": "reports",
+      "alt": "Reports rose from 3 at 8 AM to a peak of 212 at 11 AM, then fell steadily to 4 by 6 PM.",
+      "caption": "Counts as published by Example Daily News.",
+      "source_ids": ["s003"]
+    },
+    {
+      "id": "payments-by-channel",
+      "title": "Payments taken, by channel",
+      "type": "bar",
+      "data": "charts/payments-by-channel.csv",
+      "x": { "column": "channel", "kind": "category", "label": "Channel" },
+      "series": [{ "column": "usual_day", "label": "A usual day" }, { "column": "outage_day", "label": "Jan 12" }],
+      "unit": "payments",
+      "alt": "Online payments fell from about 4,200 on a usual day to 310, while phone and in-person payments more than doubled.",
+      "caption": "Figures as reported by Example Wire.",
+      "source_ids": ["s004"]
+    }
+  ],
+  "images": [
+    {
+      "id": "outage-window",
+      "title": "How long the portal was down",
+      "file": "images/outage-window.svg",
+      "alt": "A bar for the day with the stretch from 8:40 AM to 5:20 PM filled in, the time the portal was offline.",
+      "caption": "The portal was offline for 8 hours 40 minutes.",
+      "credit": "isitahack.com",
+      "rights": "own",
+      "sha256": "0f7a7381d0fa11c551f7c5c0c8a110a79d27fefe8cc06bb0d2aa1724a0272647",
+      "width": 800,
+      "height": 160
+    }
+  ],
+  "tables": [
+    {
+      "id": "services",
+      "title": "Which services were affected",
+      "data": "tables/services.csv",
+      "columns": [
+        { "name": "service", "label": "Service", "type": "text" },
+        { "name": "state", "label": "State", "type": "text" },
+        { "name": "source", "label": "Source", "type": "source" }
+      ]
+    }
+  ],
+  "sections": [
+    { "type": "claims", "title": "Leading theories", "group": "theory", "open": true },
+    { "type": "questions", "title": "Questions and rumors", "open": true },
+    { "type": "timeline", "title": "Timeline with evidence", "open": true },
+    { "type": "image", "id": "outage-window" },
+    { "type": "chart", "id": "problem-reports", "open": true },
+    { "type": "chart", "id": "payments-by-channel" },
+    { "type": "quotes", "title": "Official statements", "group": "official-statement" },
+    { "type": "table", "id": "services" },
+    { "type": "note", "title": "Background", "file": "notes/background.md" }
+  ]
+}

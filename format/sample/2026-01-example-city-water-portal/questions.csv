@@ -1,0 +1,4 @@
+question_id,kind,question_text,state,answer_text,label,claim_ids,rumor_type,what_would_settle_it,opened_at,answered_at
+q001,question,Was it a hack?,answered,Not shown by any public source. The utility says a failed software update caused the outage and that it found no sign of an intrusion.,Unverified,c004;c001,,,2026-01-12T09:10:00-05:00,2026-01-12T13:20:00-05:00
+q002,rumor,Did ransomware lock the billing system?,answered,"No. The utility said no systems were encrypted, and the claim came from one anonymous post.",Debunked,c002,fabricated,,2026-01-12T10:30:00-05:00,2026-01-12T13:20:00-05:00
+q003,question,Was customer payment data exposed?,open,,,,,A statement from the utility or its regulator on whether any data was accessed.,2026-01-12T10:30:00-05:00,
