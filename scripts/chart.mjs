@@ -26,8 +26,9 @@ function niceScale(max) {
 const tickText = (v, top) => (top >= 10000 ? `${Math.round((v / 1000) * 10) / 10}K` : fmtNumber(v));
 
 export function renderChart(chart, rows) {
-  const series = chart.series.map((s, i) => ({ ...s, n: i + 1, values: rows.map((r) => Number(r[s.column])) }));
-  const max = Math.max(...series.flatMap((s) => s.values));
+  // an empty cell is a gap: no reading at that point
+  const series = chart.series.map((s, i) => ({ ...s, n: i + 1, values: rows.map((r) => (r[s.column] === "" ? null : Number(r[s.column]))) }));
+  const max = Math.max(...series.flatMap((s) => s.values.filter((v) => v !== null)));
   const { top, step } = niceScale(max);
   const x0 = PAD.left, x1 = W - PAD.right, y0 = H - PAD.bottom, y1 = PAD.top;
   const y = (v) => round(y0 - (v / top) * (y0 - y1));
@@ -58,9 +59,10 @@ export function renderChart(chart, rows) {
       out.push(`<text class="chart-tick" x="${px}" y="${y0 + 20}" text-anchor="${anchor}">${esc(multiDay ? `${fmtDay(iso).replace(/, \d{4}$/, "")} ${fmtTime(iso)}` : fmtTime(iso))}</text>`);
     }
     for (const s of series) {
-      const pts = s.values.map((v, i) => `${x(times[i])},${y(v)}`);
+      const pts = s.values.map((v, i) => (v === null ? null : `${x(times[i])},${y(v)}`)).filter(Boolean);
       out.push(`<polyline class="chart-line series-${s.n}" points="${pts.join(" ")}"/>`);
       s.values.forEach((v, i) => {
+        if (v === null) return;
         const label = `${fmtTime(rows[i][chart.x.column])}: ${fmtNumber(v)}${unit}${series.length > 1 ? ` (${s.label})` : ""}`;
         out.push(`<circle class="chart-dot series-${s.n}" cx="${x(times[i])}" cy="${y(v)}" r="4"/>`);
         out.push(`<circle class="chart-hit" cx="${x(times[i])}" cy="${y(v)}" r="14"><title>${esc(label)}</title></circle>`);
@@ -82,6 +84,7 @@ export function renderChart(chart, rows) {
       out.push(`<text class="chart-tick" x="${round(cx)}" y="${y0 + 20}" text-anchor="middle">${esc(r[chart.x.column])}</text>`);
       series.forEach((s, j) => {
         const v = s.values[i];
+        if (v === null) return;
         const bx = round(cx - groupW / 2 + j * (barW + 2)), by = y(v), bh = round(y0 - by);
         const rad = Math.min(4, bh, barW / 2);
         // rounded at the data end, square on the baseline

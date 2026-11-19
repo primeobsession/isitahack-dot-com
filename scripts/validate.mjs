@@ -202,7 +202,10 @@ export function loadIncident(dir) {
     const groups = new Set(cited.filter((s) => s.source_tier === 2 || s.source_tier === 3).map((s) => s.independence_group).filter(Boolean));
     if (!official && groups.size < 2) errs.push(`claims.csv row ${c._row}, label: Confirmed needs a Tier 1 source, or two Tier 2/3 sources with different independence_group values`);
   }
-  for (const s of t.sources) if (s.link_status === "dead" && !s.archive_url) errs.push(`sources.csv row ${s._row}, archive_url: required when link_status is dead`);
+  for (const s of t.sources) {
+    if (s.link_status === "dead" && !s.archive_url) errs.push(`sources.csv row ${s._row}, archive_url: required when link_status is dead`);
+    if ((s.link_status === "ok" || s.link_status === "archived") && !s.retrieved_at) errs.push(`sources.csv row ${s._row}, retrieved_at: required when link_status is ${s.link_status}`);
+  }
   for (const q of t.questions) {
     const at = `questions.csv row ${q._row}`;
     if (q.state === "answered") {
@@ -253,9 +256,13 @@ export function loadIncident(dir) {
       if (chart.x?.kind === "category" && xValue === "") errs.push(`${chart.data} row ${r + 1}, ${chart.x.column}: empty`);
       for (const s of chart.series || []) {
         const v = cells[header.indexOf(s.column)];
-        if (v !== undefined && !numeric.test(v)) errs.push(`${chart.data} row ${r + 1}, ${s.column}: ${show(v)} is not a number`);
+        if (v !== undefined && v !== "" && !numeric.test(v)) errs.push(`${chart.data} row ${r + 1}, ${s.column}: ${show(v)} is not a number`);
       }
     });
+    for (const s of chart.series || []) {
+      const filled = rows.slice(1).filter((cells) => numeric.test(cells[header.indexOf(s.column)] ?? "")).length;
+      if (header.includes(s.column) && filled < 2) errs.push(`${chart.data}: column ${show(s.column)} needs at least two numbers`);
+    }
     chartData[chart.id] = rows.slice(1).map((cells) => Object.fromEntries(header.map((h, j) => [h, cells[j]])));
   }
   // images

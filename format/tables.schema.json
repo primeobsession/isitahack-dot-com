@@ -18,7 +18,7 @@
         { "name": "source_ids", "type": "list", "delimiter": ";", "itemType": "string", "description": "The sources that support this claim, primary source first, separated by semicolons. Every claim has at least one.", "constraints": { "required": true, "itemPattern": "^s[0-9]{3,}$" } },
         { "name": "why_it_supports", "type": "string", "description": "One line: what the primary source shows and why that backs the claim.", "constraints": { "required": true, "maxLength": 240 } },
         { "name": "notes", "type": "string", "description": "Working notes for the desk. Not shown on the page.", "constraints": {} },
-        { "name": "last_checked", "type": "datetime", "description": "When an agent last re-checked this claim against its sources.", "constraints": { "required": true } }
+        { "name": "last_checked", "type": "datetime", "description": "When an agent last re-checked this claim against its sources. Leave empty only for a claim carried over from before this was recorded; fill it in at the next re-check.", "constraints": {} }
       ],
       "foreignKeys": [{ "fields": "source_ids", "reference": { "resource": "sources", "fields": "source_id" } }]
     },
@@ -33,10 +33,10 @@
         { "name": "source_name", "type": "string", "description": "Publisher or document name as a reader should see it, for example 'FAA ATCSCC Advisory 005'. Never a reporter's name.", "constraints": { "required": true, "maxLength": 120 } },
         { "name": "source_tier", "type": "integer", "description": "1 official or primary statement, 2 independent reputable outlet, 3 named researcher or technical analysis, 4 social post from an official account or named expert, 5 rumor.", "constraints": { "required": true, "minimum": 1, "maximum": 5 } },
         { "name": "independence_group", "type": "string", "description": "A short name for where the reporting originated. Outlets repeating one report share a value and count as one source. Leave empty for Tier 1.", "constraints": { "pattern": "^[a-z][a-z0-9-]*$" } },
-        { "name": "source_date", "type": "string", "description": "When the source was published. A date, or a date and time with offset if the time is known.", "constraints": { "required": true, "format": "date-or-datetime" } },
-        { "name": "retrieved_at", "type": "datetime", "description": "When an agent read the source.", "constraints": { "required": true } },
+        { "name": "source_date", "type": "string", "description": "When the source was published. A date, or a date and time with offset if the time is known. Leave empty if the source does not say; never guess.", "constraints": { "format": "date-or-datetime" } },
+        { "name": "retrieved_at", "type": "datetime", "description": "When an agent last read the source. Required when link_status is ok or archived; leave empty when the source could not be read.", "constraints": {} },
         { "name": "archive_url", "type": "string", "description": "Public archived copy. Required when link_status is dead.", "constraints": { "pattern": "^https?://[^\\s]+$" } },
-        { "name": "link_status", "type": "string", "description": "ok, dead, blocked (the site blocks bots or needs a login, so it was not checked) or archived.", "constraints": { "required": true, "enum": ["ok", "dead", "blocked", "archived"] } },
+        { "name": "link_status", "type": "string", "description": "ok, dead, blocked (the site blocks automated access or needs a login, so it was not re-read) or archived.", "constraints": { "required": true, "enum": ["ok", "dead", "blocked", "archived"] } },
         { "name": "last_checked", "type": "datetime", "description": "When the link was last checked.", "constraints": { "required": true } }
       ]
     },
@@ -47,9 +47,10 @@
       "primaryKey": "event_id",
       "fields": [
         { "name": "event_id", "type": "string", "description": "Permanent id for this event, t plus a number (t001).", "constraints": { "required": true, "unique": true, "pattern": "^t[0-9]{3,}$" } },
-        { "name": "event_time", "type": "datetime", "description": "When the event happened, with timezone offset.", "constraints": { "required": true } },
+        { "name": "event_time", "type": "string", "description": "When the event happened: a date and time with timezone offset, or a date alone when the source gives only the day. Rows are shown in file order, so keep them in the order things happened.", "constraints": { "required": true, "format": "date-or-datetime" } },
         { "name": "event_end_time", "type": "datetime", "description": "When it ended, if the event is a span (for example a radar outage from 12:19 to 12:44).", "constraints": {} },
-        { "name": "time_basis", "type": "string", "description": "stated if the source gives the time, inferred if the desk worked it out. For inferred, say how in notes.", "constraints": { "required": true, "enum": ["stated", "inferred"] } },
+        { "name": "time_text", "type": "string", "description": "Only when the time cannot be written as a clock time: how it should read on the page, for example 'Before 3:54 PM' or 'night'. It replaces the clock time; the date still comes from event_time.", "constraints": { "maxLength": 40 } },
+        { "name": "time_basis", "type": "string", "description": "stated if the source gives the time, approximate if it gives a rough time, inferred if the desk worked it out. For inferred, say how in notes.", "constraints": { "required": true, "enum": ["stated", "approximate", "inferred"] } },
         { "name": "event_text", "type": "string", "description": "What happened, in one attributed line.", "constraints": { "required": true, "maxLength": 200 } },
         { "name": "claim_id", "type": "string", "description": "The claim that carries this event's label, evidence and source.", "constraints": { "required": true, "pattern": "^c[0-9]{3,}$" } },
         { "name": "notes", "type": "string", "description": "The anchor for an inferred time, or other working notes.", "constraints": {} }
@@ -107,7 +108,7 @@
         { "name": "headline", "type": "string", "description": "One plain sentence a reader could take away, for example 'Investigators recreated the overload in the lab; the root cause is still unclear.' Not 'Morning watch check'.", "constraints": { "required": true, "maxLength": 140 } },
         { "name": "summary", "type": "string", "description": "What changed and why, in full. Include 'not checked: login required' for blocked sources.", "constraints": { "required": true } },
         { "name": "claim_ids", "type": "list", "delimiter": ";", "itemType": "string", "description": "The claims this entry added or changed, separated by semicolons.", "constraints": { "itemPattern": "^c[0-9]{3,}$" } },
-        { "name": "author", "type": "string", "description": "The role that made the entry. Never a person's name.", "constraints": { "required": true, "enum": ["Research agent", "Verification agent", "Writer agent", "Editor-in-Chief", "Owner"] } }
+        { "name": "author", "type": "string", "description": "The role that made the entry. Never a person's name. Desk is only for entries made before roles were recorded.", "constraints": { "required": true, "enum": ["Research agent", "Verification agent", "Writer agent", "Editor-in-Chief", "Owner", "Desk"] } }
       ],
       "foreignKeys": [{ "fields": "claim_ids", "reference": { "resource": "claims", "fields": "claim_id" } }]
     }

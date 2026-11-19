@@ -1,6 +1,6 @@
-event_id,event_time,event_end_time,time_basis,event_text,claim_id,notes
-t001,2026-01-12T08:40:00-05:00,2026-01-12T17:20:00-05:00,stated,The billing portal is offline,c005,
-t002,2026-01-12T10:15:00-05:00,,inferred,An anonymous forum post claims ransomware,c008,Time taken from the forum's own timestamp display
-t003,2026-01-12T13:00:00-05:00,,stated,The utility says a software update failed,c001,
-t004,2026-01-12T14:00:00-05:00,,stated,Outlets report that online payments are delayed,c007,
-t005,2026-01-12T17:20:00-05:00,,stated,The portal is back online,c006,
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-01-12T08:40:00-05:00,2026-01-12T17:20:00-05:00,,stated,The billing portal is offline,c005,
+t002,2026-01-12T10:15:00-05:00,,,inferred,An anonymous forum post claims ransomware,c008,Time taken from the forum's own timestamp display
+t003,2026-01-12T13:00:00-05:00,,,stated,The utility says a software update failed,c001,
+t004,2026-01-12T14:00:00-05:00,,,stated,Outlets report that online payments are delayed,c007,
+t005,2026-01-12T17:20:00-05:00,,,stated,The portal is back online,c006,

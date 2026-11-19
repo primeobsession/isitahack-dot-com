@@ -119,9 +119,9 @@ export function renderIncident(loaded, { root, dataHref, dir, repo, others }) {
   const sourceLink = (id) => { const s = sources.get(id); return linkTag(s.source_url, esc(s.source_name)); };
   const sourceLine = (id) => {
     const s = sources.get(id);
-    const status = s.link_status === "ok" ? "" : s.link_status === "blocked" ? " · not checked: access blocked"
+    const status = s.link_status === "ok" ? "" : s.link_status === "blocked" ? " · not re-checked: site blocks automated access"
       : ` · link ${esc(s.link_status)}${s.archive_url ? `; ${linkTag(s.archive_url, "archived copy")}` : ""}`;
-    return `<li>${sourceLink(id)} <span class="meta">${esc(TIERS[s.source_tier])} · ${esc(fmtDate(s.source_date))}${status}</span></li>`;
+    return `<li>${sourceLink(id)} <span class="meta">${esc(TIERS[s.source_tier])}${s.source_date ? ` · ${esc(fmtDate(s.source_date))}` : ""}${status}</span></li>`;
   };
   // Where a mention of a claim should link: its row, its timeline event, or its primary source.
   const claimHref = (id) => {
@@ -133,8 +133,7 @@ export function renderIncident(loaded, { root, dataHref, dir, repo, others }) {
   const claimBody = (c) => `${c.detail ? `<p>${inline(c.detail)}</p>\n` : ""}<p><span class="field">Why it supports</span> ${esc(c.why_it_supports)}</p>
 <ul class="source-lines">
 ${c.source_ids.map(sourceLine).join("\n")}
-</ul>
-<p class="meta">Last checked ${timeTag(c.last_checked)}</p>`;
+</ul>${c.last_checked ? `\n<p class="meta">Last checked ${timeTag(c.last_checked)}</p>` : ""}`;
 
   // ---------- sections ----------
   const ids = new Map();
@@ -162,13 +161,16 @@ ${body}
       return fold({ title: s.title, count: list.length, open: s.open, body: `${intro(s)}<div class="rows">\n${foldRest(rows, 8, "rows")}\n</div>` });
     },
     timeline(s) {
-      const events = [...t.timeline].sort((a, b) => Date.parse(a.event_time) - Date.parse(b.event_time) || a.event_id.localeCompare(b.event_id));
+      const events = t.timeline; // file order: the order things happened
       const multiDay = new Set(events.map((e) => e.event_time.slice(0, 10))).size > 1;
       const rows = events.map((e) => {
         const c = claims.get(e.claim_id);
-        const when = `${multiDay ? `<span class="row-day">${esc(fmtDay(e.event_time).replace(/, \d{4}$/, ""))}</span> ` : ""}${timeTag(e.event_time, fmtTime(e.event_time))}${e.event_end_time ? `<span class="row-until"> to ${esc(fmtTime(e.event_end_time))}</span>` : ""}`;
-        const basis = e.time_basis === "inferred" ? `<p class="meta">Time inferred${e.notes ? `: ${esc(e.notes)}` : ""}</p>\n` : "";
-        return row({ id: e.event_id, lead: when, title: esc(e.event_text), trail: pill(c.label), body: `<p>${esc(c.summary)}</p>\n${basis}${claimBody(c)}` });
+        const clock = e.time_text || (e.event_time.length === 10 ? "" : `${e.time_basis === "approximate" ? "~" : ""}${fmtTime(e.event_time)}`);
+        const day = multiDay || !clock ? `<span class="row-day">${esc(fmtDay(e.event_time).replace(/, \d{4}$/, ""))}</span> ` : "";
+        const when = `${day}${clock ? timeTag(e.event_time, clock) : ""}${e.event_end_time ? `<span class="row-until"> to ${esc(fmtTime(e.event_end_time))}</span>` : ""}`;
+        const basis = e.time_basis === "inferred" ? `<p class="meta">Time inferred${e.notes ? `: ${esc(e.notes)}` : ""}</p>\n` : e.notes ? `<p class="meta">${esc(e.notes)}</p>\n` : "";
+        const repeats = c.why_it_supports.startsWith(c.summary) || c.summary.startsWith(c.why_it_supports);
+        return row({ id: e.event_id, lead: when, title: esc(e.event_text), trail: pill(c.label), body: `${repeats ? "" : `<p>${esc(c.summary)}</p>\n`}${basis}${claimBody(c)}` });
       });
       const zone = events.length ? fmtDate(events[0].event_time).split(" ").pop() : "";
       return fold({ title: s.title, count: events.length, open: s.open, body: `${intro(s)}<p class="meta">Times are ${zone === "ET" ? "Eastern" : esc(zone)}. Each row opens to show its evidence and source.</p>\n<div class="rows rows-timeline">\n${foldRest(rows, 8, "events")}\n</div>` });
@@ -197,7 +199,7 @@ ${body}
       const chart = head.charts.find((c) => c.id === s.id);
       const rows = chartData[chart.id];
       const headRow = [chart.x.label, ...chart.series.map((x) => x.label)];
-      const body = rows.map((r) => [esc(chart.x.kind === "time" ? fmtDate(r[chart.x.column]) : r[chart.x.column]), ...chart.series.map((x) => esc(fmtNumber(Number(r[x.column]))))]);
+      const body = rows.map((r) => [esc(chart.x.kind === "time" ? fmtDate(r[chart.x.column]) : r[chart.x.column]), ...chart.series.map((x) => (r[x.column] === "" ? "" : esc(fmtNumber(Number(r[x.column])))))]);
       return fold({ title: chart.title, open: s.open, id: uniqueId(chart.id), body: `<figure class="figure">
 ${renderChart(chart, rows)}
 <figcaption>${chart.caption ? `${esc(chart.caption)} ` : ""}Source: ${chart.source_ids.map(sourceLink).join(", ")}.</figcaption>
@@ -219,7 +221,7 @@ ${tableHtml(headRow, body)}
       const table = head.tables.find((x) => x.id === s.id);
       const cell = (c, v) => (v == null ? "" : c.type === "label" ? pill(v) : c.type === "source" ? sourceLink(v) : c.type === "number" ? esc(fmtNumber(v)) : inline(String(v)));
       const body = tableData[table.id].map((r) => table.columns.map((c) => cell(c, r[c.name])));
-      return fold({ title: table.title, count: body.length, open: s.open, id: uniqueId(table.id), body: tableHtml(table.columns.map((c) => c.label), body) });
+      return fold({ title: table.title, count: body.length, open: s.open, id: uniqueId(table.id), body: `${table.intro ? `<p class="intro">${esc(table.intro)}</p>\n` : ""}${tableHtml(table.columns.map((c) => c.label), body)}` });
     },
     note(s) {
       const doc = renderBody(readFileSync(join(dir, s.file), "utf8"));
@@ -324,8 +326,8 @@ export function incidentMarkdown(loaded, { dataPath }) {
       const list = t.claims.filter((c) => c.group === s.group);
       out.push(`## ${s.title}\n\n${tableMd(["Claim", "Label", "What we know", "Why it supports", "Sources"], list.map((c) => [c.claim_text, c.label, [c.summary, c.detail].filter(Boolean).join(" "), c.why_it_supports, c.source_ids.map(src).join(", ")]))}`);
     } else if (s.type === "timeline") {
-      const events = [...t.timeline].sort((a, b) => Date.parse(a.event_time) - Date.parse(b.event_time) || a.event_id.localeCompare(b.event_id));
-      out.push(`## ${s.title}\n\n${tableMd(["Time", "What happened", "Label", "Source"], events.map((e) => { const c = claims.get(e.claim_id); return [`${fmtDate(e.event_time)}${e.time_basis === "inferred" ? " (inferred)" : ""}`, e.event_text, c.label, src(c.source_ids[0])]; }))}`);
+      const when = (e) => `${e.time_text ? `${fmtDay(e.event_time)}, ${e.time_text}` : `${e.time_basis === "approximate" ? "about " : ""}${fmtDate(e.event_time)}`}${e.event_end_time ? ` to ${fmtTime(e.event_end_time)}` : ""}${e.time_basis === "inferred" ? " (inferred)" : ""}`;
+      out.push(`## ${s.title}\n\n${tableMd(["Time", "What happened", "Label", "Evidence", "Sources"], t.timeline.map((e) => { const c = claims.get(e.claim_id); return [when(e), e.event_text, c.label, c.detail || c.why_it_supports, c.source_ids.map(src).join(", ")]; }))}`);
     } else if (s.type === "questions") {
       out.push(`## ${s.title}\n\n${tableMd(["Question", "Answer", "Label"], t.questions.map((q) => [q.question_text, q.answer_text || `Not answered yet. ${q.what_would_settle_it || ""}`, q.label || "Open"]))}`);
     } else if (s.type === "quotes") {
@@ -338,13 +340,13 @@ export function incidentMarkdown(loaded, { dataPath }) {
       out.push(`## ${image.title}\n\n![${image.alt}](../${dataPath}/${image.file})\n\n${image.caption || ""} Image: ${image.credit}.`);
     } else if (s.type === "table") {
       const table = head.tables.find((x) => x.id === s.id);
-      out.push(`## ${table.title}\n\n${tableMd(table.columns.map((c) => c.label), tableData[table.id].map((r) => table.columns.map((c) => (c.type === "source" && r[c.name] ? src(r[c.name]) : r[c.name]))))}`);
+      out.push(`## ${table.title}\n\n${table.intro ? `${table.intro}\n\n` : ""}${tableMd(table.columns.map((c) => c.label), tableData[table.id].map((r) => table.columns.map((c) => (c.type === "source" && r[c.name] ? src(r[c.name]) : r[c.name]))))}`);
     } else if (s.type === "note") {
       out.push(`## ${s.title}\n\n${readFileSync(join(loaded.dir, s.file), "utf8").trim()}`);
     }
   }
   out.push(`## Update log\n\n${tableMd(["When", "Update", "Type"], t.update_log.map((u) => [fmtDate(u.logged_at), `**${u.headline}** ${u.summary}`, CHANGES[u.change_type]]))}`);
-  out.push(`## Sources\n\n${t.sources.map((s) => `- [${s.source_name}](${s.source_url}) (${TIERS[s.source_tier]}, ${fmtDate(s.source_date)})`).join("\n")}`);
+  out.push(`## Sources\n\n${t.sources.map((s) => `- [${s.source_name}](${s.source_url}) (${TIERS[s.source_tier]}${s.source_date ? `, ${fmtDate(s.source_date)}` : ""})`).join("\n")}`);
   out.push(`## Data files\n\n${["incident.json", "claims.csv", "sources.csv", "timeline.csv", "questions.csv", ...(t.quotes.length ? ["quotes.csv"] : []), "update_log.csv"].map((f) => `- [${f}](../${dataPath}/${f})`).join("\n")}`);
   return out.join("\n\n") + "\n";
 }
