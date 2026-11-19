@@ -11,12 +11,15 @@
 - [About](https://isitahack.com/about.html): why the site exists, who is behind it, and how to report an error.
 
 ## Incident pages (HTML, plus a Markdown version built from the same data)
+- [Microsoft 365 outage, Nov 12-13 2026](https://isitahack.com/incidents/2026-11-microsoft-365-outage.md): the report as Markdown (still monitored). Built from its data folder.
+- [Microsoft 365 outage, Nov 12-13 2026 (HTML)](https://isitahack.com/incidents/2026-11-microsoft-365-outage.html): the same report as a web page.
 - [FAA ground stop, Nov 13 2026](https://isitahack.com/incidents/2026-11-faa-ground-stop.md): the report as Markdown (still monitored). Built from the data below; front-matter gives slug, title, status, dates and size.
 - [FAA ground stop, Nov 13 2026 (HTML)](https://isitahack.com/incidents/2026-11-faa-ground-stop.html): the same report as a web page.
 - [Apple services outage, Nov 17 2026](https://isitahack.com/incidents/2026-11-apple-services-outage.md): the report as Markdown (still monitored). Built from its data folder.
 - [Apple services outage, Nov 17 2026 (HTML)](https://isitahack.com/incidents/2026-11-apple-services-outage.html): the same report as a web page.
 
 ## Data (typed incident format: UTF-8, RFC 4180 CSV with a header row; see Format below)
+- [data/incidents/2026-11-microsoft-365-outage/](https://isitahack.com/data/incidents/2026-11-microsoft-365-outage/): the folder the Microsoft 365 report is built from: incident.json, claims.csv, sources.csv, timeline.csv, questions.csv, update_log.csv and notes/.
 - [data/incidents/2026-11-faa-ground-stop/](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/): the folder the FAA report is built from.
 - [incident.json](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/incident.json): the head: status, size, who is affected, known and not known, key figures, charts, tables and section order.
 - [claims.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/claims.csv): every labelled claim, with its summary, label, sources and a note on why the source supports it.

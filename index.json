@@ -12,6 +12,17 @@
       }
     },
     {
+      "slug": "2026-11-microsoft-365-outage",
+      "title": "Microsoft 365 outage, Nov 12-13, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-18T23:19:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-microsoft-365-outage.md",
+        "html": "incidents/2026-11-microsoft-365-outage.html",
+        "data": "data/incidents/2026-11-microsoft-365-outage/"
+      }
+    },
+    {
       "slug": "2026-11-faa-ground-stop",
       "title": "FAA nationwide ground stop",
       "status": "monitoring",

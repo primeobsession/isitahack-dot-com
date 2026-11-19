@@ -1,0 +1,5 @@
+- Microsoft's own copy of the preliminary post-incident report. Not checked: it needs a Microsoft 365 admin-center login. We cite a third-party copy, labeled as such.
+- Microsoft's final post-incident report. Not yet published; due Nov 20, 2026.
+- Any credible claim of a hack, breach or attacker behind the outage. Not found.
+- A major Azure outage on Nov 18, 2026. Not found.
+- AP's article on the recovery. Not checked: access blocked.

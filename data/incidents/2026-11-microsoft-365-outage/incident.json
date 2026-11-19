@@ -1,0 +1,119 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-microsoft-365-outage",
+  "title": "Microsoft 365 outage, Nov 12-13, 2026",
+  "also_called": ["the Microsoft outage"],
+  "status": "monitoring",
+  "incident_date": "2026-11-12",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Microsoft, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Exchange Online email is a service many organizations and governments rely on every day. Microsoft says most users were affected for about 24 hours, and problems were reported in at least 70 countries. This is actual impact, not potential.",
+  "who_is_affected": "Most Microsoft 365 business, school and government users who rely on Exchange Online or Outlook for email. This was a service outage, not a breach. Be wary of emails about the outage that ask you to click to restore held messages.",
+  "known": [
+    {
+      "text": "Exchange Online and Outlook were down for most users from 11:20 AM ET Nov 12 to 11:10 AM ET Nov 13, per Microsoft's report.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Most users could not reach their mailboxes, and parts of Teams, Copilot, SharePoint and OneDrive were also affected.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "Microsoft's preliminary report blames a latent defect from a July update, set off by extra traffic and reduced capacity. This is Microsoft's own finding.",
+      "claim_id": "c005"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "What Microsoft's final post-incident report will add. It is due Nov 20, 2026."
+    },
+    {
+      "text": "Exactly how many users and organizations were affected."
+    },
+    {
+      "text": "Why the safeguards between regions failed. Microsoft says only that \"a separate issue\" let the failure spread."
+    },
+    {
+      "text": "Whether the phishing campaign stole any credentials. Microsoft says this has not been confirmed."
+    }
+  ],
+  "figures": [
+    {
+      "value": "~24 hours",
+      "label": "Length of the outage",
+      "detail": "11:20 AM ET Nov 12 to 11:10 AM ET Nov 13",
+      "claim_id": "c001"
+    },
+    {
+      "value": "70+",
+      "label": "Countries reporting problems",
+      "detail": "BBC News",
+      "claim_id": "c004"
+    },
+    {
+      "value": "80%+",
+      "label": "Gateway servers unresponsive at worst",
+      "detail": "Microsoft's preliminary report",
+      "claim_id": "c006"
+    },
+    {
+      "value": "~14%",
+      "label": "Gateway capacity already out of service",
+      "detail": "Microsoft's preliminary report",
+      "claim_id": "c005"
+    },
+    {
+      "value": "Nov 20",
+      "label": "Final report due",
+      "detail": "Microsoft",
+      "claim_id": "c016"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "What caused it? Cause and hack claims",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions and rumors",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Microsoft 365 outage"
+    },
+    {
+      "type": "claims",
+      "title": "What happened after the outage?",
+      "group": "aftermath"
+    },
+    {
+      "type": "claims",
+      "title": "No Azure outage found on Nov 18",
+      "group": "azure",
+      "intro": "People were also asking about a Microsoft Azure incident around Nov 18. We checked and found none. The outage people were discussing that week appears to be this one."
+    },
+    {
+      "type": "note",
+      "title": "Official statements",
+      "file": "notes/official-statements.md"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
