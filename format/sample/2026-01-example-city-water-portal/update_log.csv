@@ -1,0 +1,5 @@
+log_id,logged_at,run_type,change_type,headline,summary,claim_ids,author
+u004,2026-01-13T08:00:00-05:00,watch,checked_no_change,Morning check found nothing new.,"Checked the status page, the utility newsroom and both outlets. No change.",,Research agent
+u003,2026-01-12T17:30:00-05:00,live,updated,The billing portal is back online.,The status page reports the portal restored at 5:20 PM ET. Added the restore event.,c006,Writer agent
+u002,2026-01-12T13:20:00-05:00,live,label_change,The utility says a failed software update caused the outage.,Press release published at 1:00 PM ET. The software update theory moved to Confirmed as the utility's account; the ransomware claim moved to Debunked.,c001;c002;c004,Editor-in-Chief
+u001,2026-01-12T09:10:00-05:00,live,added,Page opened: the billing portal is offline.,Status page reports the portal offline from 8:40 AM ET.,c005,Writer agent
