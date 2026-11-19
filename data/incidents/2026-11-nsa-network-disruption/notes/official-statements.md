@@ -9,3 +9,7 @@
 > These are separate service outages associated with maintenance and technical changes. They are not a coordinated or state-sponsored attack.
 >
 > — Director of National Intelligence Jay Clayton, House Homeland Security Committee hearing, Nov 18, as reported by CBS News and ABC News
+
+> I want to be clear that as Ranking Member of the House Intelligence Committee, I have seen no evidence to suggest any of these outages were the result of a malicious actor.
+>
+> — Rep. Jim Himes, Ranking Member of the House Intelligence Committee, statement, Nov 18
