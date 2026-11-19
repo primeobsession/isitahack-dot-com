@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Apple, any governm
 
 Incident: Apple services outage, Nov 17, 2026. Also reported as the Apple outage. First published Nov 18, 2026; last updated Nov 18, 2026, 11:19 PM ET.
 
+Picture: Apple Park, Apple's headquarters in Cupertino, California, in June 2024. Image: Nils Huenerfuerst, CC0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Apple_Park_aerial_view,_June_2024.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Apple, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.
@@ -146,6 +148,7 @@ Nov 18, 2026, 11:19 PM ET: **Apple's services are back to normal; Apple blames a
 
 | When | Update | Type |
 |---|---|---|
+| Nov 19, 2026, 8:02 AM ET | **A photograph now leads the page in place of the drawn picture.** Apple Park, Apple's headquarters in Cupertino, California, in June 2024. Its credit and licence are shown with it. No claim, label, source or answer was changed. | Wording or layout only |
 | Nov 19, 2026, 7:55 AM ET | **A drawn picture naming the subject now leads the page.** The page and its entry on the home page now carry a picture drawn by the site: the name of the subject over a simple drawing for the kind of thing it is. It is not a logo. No claim, label, source or answer was changed. | Wording or layout only |
 | Nov 18, 2026, 11:19 PM ET | **Apple's services are back to normal; Apple blames an internal update and has given no technical detail.** Apple's status page shows every Nov 17 entry resolved, and Apple has published no technical root cause. Before first publication this page was moved to the site's data format and reviewed against the sourcing rules; no labels changed. | Updated |
 | Nov 18, 2026, 9:25 PM ET | **Apple's developer status page could not be read; no outage posts found on Apple Support's X account.** Apple Developer System Status page not checked: content loads by script and could not be read by our fetch. Checked, not found: no outage posts on Apple Support's official X account for Nov 17 to 18. | Source blocked |

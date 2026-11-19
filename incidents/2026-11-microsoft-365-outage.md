@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Microsoft, any gov
 
 Incident: Microsoft 365 outage, Nov 12-13, 2026. Also reported as the Microsoft outage. First published Nov 18, 2026; last updated Nov 18, 2026, 11:19 PM ET.
 
+Picture: Building 92 at Microsoft's headquarters in Redmond, Washington, in May 2016. Image: Coolcaesar, CC BY-SA 4.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Building92microsoft.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Microsoft, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.
@@ -151,6 +153,7 @@ Nov 18, 2026, 11:19 PM ET: **Microsoft 365 is back to normal; Microsoft's final 
 
 | When | Update | Type |
 |---|---|---|
+| Nov 19, 2026, 8:02 AM ET | **A photograph now leads the page in place of the drawn picture.** Building 92 at Microsoft's headquarters in Redmond, Washington, in May 2016. Its credit and licence are shown with it. No claim, label, source or answer was changed. | Wording or layout only |
 | Nov 19, 2026, 7:55 AM ET | **A drawn picture naming the subject now leads the page.** The page and its entry on the home page now carry a picture drawn by the site: the name of the subject over a simple drawing for the kind of thing it is. It is not a logo. No claim, label, source or answer was changed. | Wording or layout only |
 | Nov 18, 2026, 11:19 PM ET | **Microsoft 365 is back to normal; Microsoft's final report on the outage is due Nov 20.** Microsoft 365 has been back to normal since Nov 13, and Microsoft's final post-incident report is due Nov 20. Before first publication this page was moved to the site's data format and reviewed against the sourcing rules: 6 claims whose official source is a social post are labeled Reported, not Confirmed (c002, c007, c008, c013, c014, c015). | Label change |
 | Nov 18, 2026, 9:25 PM ET | **AP's article and Microsoft's own copy of its report could not be checked; a third-party copy is cited.** AP article not checked: access blocked (HTTP 403 to our check; fetch timed out). Microsoft's own copy of the preliminary post-incident report not checked: login required (Microsoft 365 admin center). A third-party copy is cited instead and labeled as such. | Source blocked |

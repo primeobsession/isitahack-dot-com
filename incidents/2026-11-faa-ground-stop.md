@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by the FAA, any gover
 
 Incident: FAA nationwide ground stop. Also reported as the FAA outage, the air traffic control outage and the nationwide flight grounding. First published Nov 13, 2026; last updated Nov 18, 2026, 11:12 PM ET.
 
+Picture: An FAA radar tower near Bennett, Colorado, photographed in 2017. It shows what an FAA radar site looks like and was not involved in this incident. Image: Jeffrey Beall, CC BY 4.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:FAA_radar_(Bennett,_Colorado).JPG).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by the FAA, any government agency, airline, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.
@@ -512,6 +514,7 @@ Two items on the earlier page carried a label but no public link. Every labelled
 
 | When | Update | Type |
 |---|---|---|
+| Nov 19, 2026, 8:02 AM ET | **A photograph now leads the page in place of the drawn picture.** An FAA radar tower near Bennett, Colorado, photographed in 2017. It shows what an FAA radar site looks like and was not involved in this incident. Its credit and licence are shown with it. No claim, label, source or answer was changed. | Wording or layout only |
 | Nov 19, 2026, 7:55 AM ET | **A drawn picture naming the subject now leads the page.** The page and its entry on the home page now carry a picture drawn by the site: the name of the subject over a simple drawing for the kind of thing it is. It is not a logo. No claim, label, source or answer was changed. | Wording or layout only |
 | Nov 19, 2026, 7:25 AM ET | **The page now leads with the question it answers, and several section headings are worded as plain questions.** The main heading is now the question the page answers, the other names this incident goes by are listed under it, and section headings were reworded. No claim, label, source or answer was changed. | Wording or layout only |
 | Nov 18, 2026, 11:12 PM ET | **A White House release quotes the Director of National Intelligence saying the recent outages are "not a cyberattack."** Staleness check during the conversion. A White House release dated Nov 18 quotes Director of National Intelligence Clayton and Secretary Rubio on several recent outages, the FAA's among them. It was added as an official source and a timeline entry, and noted on the Cyberattack row. The Cyberattack label and the main answer were not changed; whether they should be is for the site's owner to review. | Added |

@@ -13,6 +13,8 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { validateIncident } from "../validate.mjs";
+import { incidentPicture } from "../incident.mjs";
+import { renderPlate } from "../plate.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const SLUG = "2026-01-example-city-water-portal";
@@ -128,6 +130,23 @@ rule("an SVG used as the lead image", (t) => t.head((h) => { h.lead_image = "out
 rule("a lead image that is too small", (t) => t.head((h) => { h.images.find((x) => x.id === "water-tower").width = 800; }), /lead_image: the image is 800 pixels wide/);
 rule("a lead image that is not landscape", (t) => t.head((h) => { const x = h.images.find((i) => i.id === "water-tower"); x.width = 1200; x.height = 1600; }), /lead_image: the image must be landscape/);
 
+// These two do not depend on which pictures the live incidents happen to use.
+test("an incident without a photograph gets the drawn picture", () => {
+  const head = JSON.parse(readFileSync(join(SAMPLE, "incident.json"), "utf8"));
+  delete head.lead_image;
+  const picture = incidentPicture(head, "data");
+  assert.match(picture.html, /^<svg class="plate"[^>]*aria-label="Example City Water"/);
+  assert.match(picture.html, /<text class="plate-name"[^>]*>Example City Water<\/text>/);
+  assert.equal(picture.credit, "");
+  assert.equal(picture.image, null);
+});
+test("the drawn picture names the subject and its kind, and an unknown kind still draws", () => {
+  const plate = renderPlate({ name: "FAA", kind: "aviation" });
+  assert.match(plate, /aria-label="FAA: aviation"/);
+  assert.match(plate, /<text class="plate-kind"[^>]*>Aviation<\/text>/);
+  assert.match(renderPlate({ name: "A & B <Co>", kind: "not-a-kind" }), /<text class="plate-name"[^>]*>A &amp; B &lt;Co&gt;<\/text>/);
+});
+
 // ---------- the build ----------
 test("the build is repeatable and writes the pages search engines need", () => {
   const base = mkdtempSync(join(tmpdir(), "isitahack-build-"));
@@ -153,8 +172,8 @@ test("the build is repeatable and writes the pages search engines need", () => {
     assert.match(page, /<meta property="og:image" content="https:\/\/isitahack\.com\/data\/incidents\/[^"]+\/images\/water-tower\.png">/);
     const home = readFileSync(join(a, "index.html"), "utf8");
     assert.equal(home.match(/<li class="story lead">/g).length, 1, "the home page has one lead story");
-    assert.match(home, /<svg class="plate"/, "an incident without a photograph gets the drawn plate");
     assert.doesNotMatch(home, /<svg class="plate"[^>]*aria-label="Example City Water/, "the sample's photograph replaces its plate");
+    assert.match(home, /<img src="data\/incidents\/[^"]+\/images\/water-tower\.png"[^>]*><span class="credit">Image: isitahack\.com<\/span>/, "the sample's photograph and credit are on the home page");
   } finally {
     rmSync(base, { recursive: true, force: true });
   }
