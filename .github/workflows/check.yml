@@ -1,0 +1,27 @@
+# Runs the same checks an agent runs before handing off: validate every incident,
+# test the checks themselves, rebuild, and fail if the committed pages differ from
+# a fresh build. See scripts/check.mjs.
+name: Check
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate, test, rebuild and compare
+        run: node scripts/check.mjs --ci

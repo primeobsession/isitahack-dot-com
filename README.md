@@ -13,24 +13,25 @@ data/incidents/<slug>/   the data for one incident (the source of truth)
 format/                  what every field is for, as JSON Schema and table definitions
 scripts/validate.mjs     checks an incident folder; a failed check stops the build
 scripts/build.mjs        writes the HTML pages and a Markdown version of each incident
+scripts/check.mjs        the one command to run before a hand-off: validate, test, rebuild
+AGENTS.md                the short version of the rules, for agents working here
 pages/                   the copy for Home, How it works and About
 assets/site.css          one shared stylesheet, light and dark
 ```
 
-The site is static files served by GitHub Pages. The built pages (`index.html`, `how-it-works.html`, `about.html`, `incidents/*.html`, `incidents/*.md`) are committed next to their sources.
+The site is static files served by GitHub Pages. The built pages (`index.html`, `how-it-works.html`, `about.html`, `404.html`, `sitemap.xml`, `incidents/*.html`, `incidents/*.md`) are committed next to their sources.
 
 ```sh
-node scripts/validate.mjs     # check every incident under data/incidents
-node scripts/build.mjs        # rebuild the site in place
+node scripts/check.mjs        # validate, test the checks, rebuild, and list what to commit
 ```
 
-Both are plain Node with no dependencies. See `format/README.md` for the incident format and `scripts/README.md` for the build.
+It is plain Node with no dependencies. The same command runs on GitHub for every push and pull request (`.github/workflows/check.yml`). See `format/README.md` for the incident format and `scripts/README.md` for the build.
 
 ## Layout
 
 - `data/incidents/<slug>/`: an incident's data, and `raw/` for preserved source material with a sha256 `MANIFEST.txt`.
 - `incidents/<slug>.html` and `<slug>.md`: the page and its plain-text version, built from the data.
-- `index.json`, `llms.txt`: machine-readable indexes.
+- `index.json`, `llms.txt`: machine-readable indexes. `robots.txt` and `sitemap.xml`: for search engines.
 
 ## Status
 

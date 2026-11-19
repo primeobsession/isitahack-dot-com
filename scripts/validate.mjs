@@ -30,6 +30,26 @@ const FORMATS = {
 // Privacy lint (operations manual 2.9): no social handles or email addresses in any text.
 const HANDLE = /(^|[^A-Za-z0-9._%+\/-])@[A-Za-z0-9_]{2,}/;
 const EMAIL = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/;
+const PHONE = /(?<![\d.])(?:\+?1[ .-]?)?\(?\d{3}\)?[ .-]\d{3}[ .-]\d{4}(?!\d)/;
+const USERNAME = /(^|[^A-Za-z0-9])\/?u\/[A-Za-z0-9_-]{3,}/;
+// Returns what the privacy rule objects to in a piece of text, or "" when it is clean.
+export function privacyProblem(text) {
+  if (HANDLE.test(text) || EMAIL.test(text)) return "contains a handle or email address (privacy rule)";
+  if (PHONE.test(text)) return "contains what looks like a phone number (privacy rule)";
+  if (USERNAME.test(text)) return "contains a forum username (privacy rule)";
+  return "";
+}
+// Only the owner decides a verdict (operations manual 2.11.4). Until one is approved,
+// no text may use the verdict's words, not even as "likely" or "candidate".
+const VERDICT_WORDS = /confirmed\s+(not\s+)?(a\s+)?hack\b/i;
+// Social platforms are Tier 4 or 5 whoever posts there (operations manual 2.2): leads,
+// never a basis for Confirmed.
+const SOCIAL_HOSTS = ["x.com", "twitter.com", "facebook.com", "instagram.com", "threads.net", "threads.com", "tiktok.com", "reddit.com", "bsky.app", "truthsocial.com", "t.me", "linkedin.com", "mastodon.social"];
+const isSocial = (url) => { try { const h = new URL(url).hostname.toLowerCase(); return SOCIAL_HOSTS.some((s) => h === s || h.endsWith(`.${s}`)); } catch { return false; } };
+// The main question becomes the page title and main heading, so it has to make
+// sense on its own in a list of search results.
+const VAGUE_QUESTION = /^(was|is|were|are|did|does|do|has|have|had|can|could|will|would)\s+(it|this|that|they|these|those|there)\b/i;
+const MAIN_QUESTION_MAX = 70;
 const show = (v) => JSON.stringify(v);
 
 // ---------- JSON Schema (the subset the incident schema uses) ----------
@@ -66,7 +86,8 @@ function checkJson(rawSchema, value, path, errs) {
     if (schema.maxLength != null && value.length > schema.maxLength) errs.push(`${path}: too long (${value.length} characters, maximum ${schema.maxLength})`);
     if (schema.pattern && !new RegExp(schema.pattern).test(value)) errs.push(`${path}: ${show(value)} does not match ${schema.pattern}`);
     if (schema.format && FORMATS[schema.format]) { const ok = FORMATS[schema.format](value); if (ok !== true) errs.push(`${path}: ${show(value)} ${ok}`); }
-    if (HANDLE.test(value) || EMAIL.test(value)) errs.push(`${path}: contains a handle or email address (privacy rule)`);
+    const privacy = privacyProblem(value);
+    if (privacy) errs.push(`${path}: ${privacy}`);
   }
   if (typeof value === "number") {
     if (schema.minimum != null && value < schema.minimum) errs.push(`${path}: ${value} is below the minimum ${schema.minimum}`);
@@ -134,7 +155,7 @@ function checkCell(field, raw, where, errs) {
   if (c.pattern && !new RegExp(c.pattern).test(raw)) errs.push(`${where}: ${show(raw)} does not match ${c.pattern}`);
   if (c.maxLength != null && raw.length > c.maxLength) errs.push(`${where}: too long (${raw.length} characters, maximum ${c.maxLength})`);
   if (c.format && FORMATS[c.format]) { const ok = FORMATS[c.format](raw); if (ok !== true) errs.push(`${where}: ${show(raw)} ${ok}`); }
-  if (!/_url$/.test(field.name) && (HANDLE.test(raw) || EMAIL.test(raw))) errs.push(`${where}: contains a handle or email address (privacy rule)`);
+  if (!/_url$/.test(field.name)) { const privacy = privacyProblem(raw); if (privacy) errs.push(`${where}: ${privacy}`); }
   return raw;
 }
 function readTable(dir, file, fields, errs, required = true) {
@@ -203,6 +224,7 @@ export function loadIncident(dir) {
     if (!official && groups.size < 2) errs.push(`claims.csv row ${c._row}, label: Confirmed needs a Tier 1 source, or two Tier 2/3 sources with different independence_group values`);
   }
   for (const s of t.sources) {
+    if (s.source_url && isSocial(s.source_url) && s.source_tier < 4) errs.push(`sources.csv row ${s._row}, source_tier: a post on a social platform is Tier 4 or 5, whoever posted it (operations manual 2.2)`);
     if (s.link_status === "dead" && !s.archive_url) errs.push(`sources.csv row ${s._row}, archive_url: required when link_status is dead`);
     if ((s.link_status === "ok" || s.link_status === "archived") && !s.retrieved_at) errs.push(`sources.csv row ${s._row}, retrieved_at: required when link_status is ${s.link_status}`);
   }
@@ -223,7 +245,14 @@ export function loadIncident(dir) {
   // the head's references
   const main = questions.get(head.main_question_id);
   if (!main) errs.push(`incident.json.main_question_id: ${show(head.main_question_id)} is not in questions.csv`);
-  else if (main.state !== "answered") errs.push(`incident.json.main_question_id: the main question must have an answer and a label (use Not established if nothing settles it)`);
+  else {
+    const at = `questions.csv row ${main._row}, question_text`;
+    if (main.state !== "answered") errs.push(`incident.json.main_question_id: the main question must have an answer and a label (use Not established if nothing settles it)`);
+    const text = main.question_text || "";
+    if (VAGUE_QUESTION.test(text)) errs.push(`${at}: the main question must name its subject, for example "Was the FAA ground stop a cyberattack?"; it is the page title, and ${show(text)} means nothing in a list of search results`);
+    if (text && !text.endsWith("?")) errs.push(`${at}: the main question must end with a question mark`);
+    if (text.length > MAIN_QUESTION_MAX) errs.push(`${at}: the main question is the page title; keep it to ${MAIN_QUESTION_MAX} characters (it has ${text.length})`);
+  }
   (head.known || []).forEach((k, i) => {
     const c = claims.get(k.claim_id);
     if (!c) errs.push(`incident.json.known[${i}].claim_id: ${show(k.claim_id)} is not in claims.csv`);
@@ -303,6 +332,31 @@ export function loadIncident(dir) {
     if (byKind[s?.type] && !byKind[s.type].has(s.id)) errs.push(`${at}.id: no ${s.type} with id ${show(s.id)} is defined in incident.json.${s.type}s`);
     if (s?.type === "note" && typeof s.file === "string" && !existsSync(join(dir, s.file))) errs.push(`${at}.file: ${show(s.file)} is missing`);
   });
+  // notes are free text: the privacy rule applies to them too
+  const notes = [];
+  for (const s of Array.isArray(head.sections) ? head.sections : []) {
+    if (s?.type !== "note" || typeof s.file !== "string" || !existsSync(join(dir, s.file))) continue;
+    const text = readFileSync(join(dir, s.file), "utf8");
+    notes.push([s.file, text]);
+    text.split("\n").forEach((line, i) => {
+      const privacy = privacyProblem(line.replace(/\]\([^)]*\)/g, "]").replace(/https?:\/\/\S+/g, ""));
+      if (privacy) errs.push(`${s.file} line ${i + 1}: ${privacy}`);
+    });
+  }
+  // verdict wording, anywhere, while no verdict is approved
+  if (!head.verdict) {
+    const flag = (where, text) => { if (typeof text === "string" && VERDICT_WORDS.test(text)) errs.push(`${where}: uses the words of a final verdict (${show(text.match(VERDICT_WORDS)[0])}) but no verdict is approved; only the owner decides one, so do not name a likely verdict`); };
+    const walk = (value, path) => {
+      if (typeof value === "string") flag(path, value);
+      else if (Array.isArray(value)) value.forEach((v, i) => walk(v, `${path}[${i}]`));
+      else if (value && typeof value === "object") for (const [k, v] of Object.entries(value)) walk(v, `${path}.${k}`);
+    };
+    walk(head, "incident.json");
+    for (const [name, def] of Object.entries(TABLE_SCHEMA.tables)) for (const r of t[name]) for (const f of def.fields) {
+      if (!/_url$/.test(f.name)) flag(`${def.path} row ${r._row}, ${f.name}`, r[f.name]);
+    }
+    for (const [file, text] of notes) text.split("\n").forEach((line, i) => flag(`${file} line ${i + 1}`, line));
+  }
   return { errs, head, t, chartData, tableData };
 }
 export const validateIncident = (dir) => loadIncident(dir).errs;

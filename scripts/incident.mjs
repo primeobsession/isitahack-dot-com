@@ -11,20 +11,29 @@ const TIERS = { 1: "Official source", 2: "News outlet", 3: "Researcher or analys
 const CHANGES = {
   added: "Added", updated: "Updated", label_change: "Label change", correction: "Correction",
   staleness_check: "Staleness check", checked_no_change: "Checked, no change", blocked_source: "Source blocked",
+  presentation: "Wording or layout only",
 };
+// Rows that record no change to the findings never become "the latest", and a
+// wording-only row does not count as a check either.
+const QUIET = new Set(["checked_no_change", "presentation"]);
+// "the FAA outage" / "X and Y" / "X, Y and Z"
+const listOf = (items) => (items.length < 3 ? items.join(" and ") : `${items.slice(0, -1).join(", ")} and ${items[items.length - 1]}`);
+export const alsoCalled = (head) => (head.also_called?.length ? `Also reported as ${listOf(head.also_called)}.` : "");
 const STATUSES = { monitoring: "Monitoring", resolved: "Resolved", closed: "Closed" };
 const STANDARD_NOTE = `<strong>Not verified: initial investigation only.</strong> Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them.`;
 const two = (n) => String(n).padStart(2, "0");
 
 // Everything other pages need to know about an incident, worked out from its data.
 export function summarize({ head, t }) {
-  const latest = t.update_log.find((r) => r.change_type !== "checked_no_change");
+  const latest = t.update_log.find((r) => !QUIET.has(r.change_type));
+  const checked = t.update_log.find((r) => r.change_type !== "presentation");
   const main = t.questions.find((q) => q.question_id === head.main_question_id);
   const tallyGroup = head.sections.find((s) => s.type === "claims")?.group;
   const inGroup = t.claims.filter((c) => c.group === tallyGroup);
   return {
     slug: head.slug, title: head.title, status: head.status, incident_date: head.incident_date, disclaimer: head.disclaimer,
-    last_updated: latest.logged_at, last_checked: t.update_log[0].logged_at,
+    last_updated: latest.logged_at, last_checked: checked.logged_at,
+    first_published: t.update_log[t.update_log.length - 1].logged_at, also_called: alsoCalled(head),
     latest: { at: latest.logged_at, headline: latest.headline, summary: latest.summary },
     question: { text: main.question_text, answer: main.answer_text, label: main.label, claim_ids: main.claim_ids },
     verdict: head.verdict || null, verdict_approved_at: head.verdict_approved_at || null,
@@ -55,19 +64,19 @@ const otherIncidents = (others, root) => `<section class="side-block">
 ${others.length
     ? `<ul class="others">\n${others.slice(0, 5).map((o) => `<li><a href="${esc(o.slug)}.html">${esc(o.title)}</a><span class="meta">${esc(STATUSES[o.status] || o.status)} · updated ${timeTag(o.last_updated, fmtDay(o.last_updated))}</span></li>`).join("\n")}\n</ul>`
     : `<p class="meta">This is the only incident being tracked so far.</p>`}
-<p><a href="${root}index.html#incidents">All incidents</a></p>
+<p><a href="${root}#incidents">All incidents</a></p>
 </section>`;
 
 // The layout every incident page uses: a contents list that follows the reader,
 // the report in the middle, and a side rail with the latest and other incidents.
 // `toc` is [{ id, name, count }]; `lead`, `main` and `facts` are ready-made HTML.
-export function incidentLayout({ root, slug, crumb, title, lead = "", toc, main, facts = "", others, repo, historyPath }) {
+export function incidentLayout({ root, slug, crumb, title, titleId = "", lead = "", toc, main, facts = "", others, repo, historyPath }) {
   const tocHtml = toc.map((s, i) => `<li><a href="#${esc(s.id)}"><span class="toc-n">${two(i + 1)}</span><span class="toc-name">${esc(s.name)}</span>${s.count !== undefined && s.count !== "" ? `<span class="count">${esc(s.count)}</span>` : ""}</a></li>`).join("\n");
   return `<main id="main" class="incident">
 <div class="wrap page-grid">
 <header class="page-head">
 <p class="crumb">${crumb}</p>
-<h1>${title}</h1>
+<h1${titleId ? ` id="${esc(titleId)}"` : ""}>${title}</h1>
 ${lead}
 </header>
 <nav class="toc" aria-label="On this page">
@@ -231,7 +240,7 @@ ${tableHtml(headRow, body)}
   };
   const sectionsHtml = head.sections.map((s) => renderers[s.type](s)).join("\n\n");
 
-  const logRows = t.update_log.map((u) => `<li class="log-row${u.change_type === "checked_no_change" ? " quiet" : ""}" id="${esc(u.log_id)}">
+  const logRows = t.update_log.map((u) => `<li class="log-row${QUIET.has(u.change_type) ? " quiet" : ""}" id="${esc(u.log_id)}">
 <span class="log-when">${timeTag(u.logged_at)}</span>
 <span class="log-what"><strong>${esc(u.headline)}</strong> ${esc(u.summary)} <span class="meta">${esc(CHANGES[u.change_type])} · ${esc(u.author)}</span></span>
 </li>`);
@@ -243,13 +252,14 @@ ${tableHtml(headRow, body)}
   const verdictNote = sum.verdict
     ? `<p class="verdict"><span class="verdict-badge">${esc(sum.verdict)}</span> Final verdict, approved by the site's owner on ${timeTag(sum.verdict_approved_at, fmtDay(sum.verdict_approved_at))}.</p>`
     : `<p class="answer-note">This is the current answer, not a final verdict. A final verdict is published only after the site's owner has reviewed the evidence.</p>`;
-  const lead = `<section class="answer-box" aria-labelledby="the-question">
-<p class="kicker">The short answer</p>
-<div class="answer-head"><h2 id="the-question">${esc(q.text)}</h2>${pill(q.label)}</div>
+  // The main question is the page's heading; the box under it answers it.
+  const lead = `${sum.also_called ? `<p class="aka">${esc(sum.also_called)}</p>\n` : ""}<section class="answer-box" aria-labelledby="the-question">
+<div class="answer-head"><p class="kicker">Is it a hack? The short answer</p>${pill(q.label)}</div>
 <p class="answer">${esc(q.answer)}</p>
 <p class="answer-refs"><span class="field">Rests on</span> ${q.claim_ids.map((id) => `<a href="${esc(claimHref(id))}">${esc(claims.get(id).claim_text)}</a>`).join(" · ")}</p>
 ${verdictNote}
-</section>`;
+</section>
+<p class="byline">By the isitahack.com desk. AI agents research public sources and label each claim; a person decides only the final verdict. <a href="${root}how-it-works.html">How it works</a></p>`;
   const tiles = (head.figures || []).map((f) => `<li class="tile"><a href="${esc(claimHref(f.claim_id))}"><span class="tile-value">${esc(f.value)}</span><span class="tile-label">${esc(f.label)}</span>${f.detail ? `<span class="tile-detail">${esc(f.detail)}</span>` : ""}</a></li>`).join("\n");
   const known = head.known.map((k) => `<li>${esc(k.text)} <a class="ref" href="${esc(claimHref(k.claim_id))}">evidence</a></li>`).join("\n");
   const notKnown = head.not_known.map((k) => `<li>${esc(k.text)}${k.question_id ? ` <a class="ref" href="#${esc(k.question_id)}">open question</a>` : ""}</li>`).join("\n");
@@ -291,8 +301,8 @@ ${sourcesHtml}`;
 
   const html = incidentLayout({
     root, slug: head.slug, repo, others, toc, lead, main, facts,
-    crumb: `<a href="${root}index.html">Incidents</a> / Incident date ${timeTag(head.incident_date)}`,
-    title: esc(head.title), historyPath: `data/incidents/${head.slug}`,
+    crumb: `<a href="${root}#incidents">Incidents</a> / ${esc(head.title)} · Incident date ${timeTag(head.incident_date)} · First published ${timeTag(sum.first_published, fmtDay(sum.first_published))}`,
+    title: esc(q.text), titleId: "the-question", historyPath: `data/incidents/${head.slug}`,
   });
   return { main: html, sum };
 }
@@ -310,11 +320,12 @@ export function incidentMarkdown(loaded, { dataPath }) {
   const sources = new Map(t.sources.map((s) => [s.source_id, s]));
   const src = (id) => { const s = sources.get(id); return `[${s.source_name}](${s.source_url})`; };
   const out = [];
-  out.push(`---\nslug: ${head.slug}\ntitle: ${JSON.stringify(head.title)}\nstatus: ${head.status}\nincident_date: ${head.incident_date}\nlast_updated: ${sum.last_updated}\nsize: ${JSON.stringify(head.size)}\ndata_dir: ${dataPath}\ngenerated: true\ndisclaimer: ${JSON.stringify(head.disclaimer)}\n---`);
+  out.push(`---\nslug: ${head.slug}\ntitle: ${JSON.stringify(head.title)}\nquestion: ${JSON.stringify(sum.question.text)}\nstatus: ${head.status}\nincident_date: ${head.incident_date}\nfirst_published: ${sum.first_published}\nlast_updated: ${sum.last_updated}\nsize: ${JSON.stringify(head.size)}\ndata_dir: ${dataPath}\ngenerated: true\ndisclaimer: ${JSON.stringify(head.disclaimer)}\n---`);
   out.push(`<!-- Generated by scripts/build.mjs from ${dataPath}/. Do not edit this file; edit the data. -->`);
-  out.push(`# ${head.title}`);
+  out.push(`# ${sum.question.text}`);
+  out.push(`**${sum.question.label}.** ${sum.question.answer}`);
+  out.push(`Incident: ${head.title}.${sum.also_called ? ` ${sum.also_called}` : ""} First published ${fmtDay(sum.first_published)}; last updated ${fmtDate(sum.last_updated)}.`);
   out.push(`> **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. ${head.disclaimer}`);
-  out.push(`## ${sum.question.text}\n\n**${sum.question.label}.** ${sum.question.answer}`);
   out.push(sum.verdict ? `Final verdict: **${sum.verdict}**, approved by the site's owner on ${fmtDay(sum.verdict_approved_at)}.` : `This is the current answer, not a final verdict.`);
   out.push(`## The latest\n\n${fmtDate(sum.latest.at)}: **${sum.latest.headline}** ${sum.latest.summary}`);
   out.push(`## At a glance\n\n- Status: ${head.status}\n- Size: ${head.size}. ${head.size_basis}\n- Who is affected: ${head.who_is_affected}`);

@@ -1,0 +1,145 @@
+// Proves that each rule in validate.mjs still catches what it is there to catch.
+// Every case copies the made-up sample incident, breaks one thing, and expects the
+// validator to name it. Run with: node --test scripts/tests/*.test.mjs
+//
+// If you change a rule, change its case here in the same commit. Never delete a
+// case to get a green run.
+
+import { test } from "node:test";
+import assert from "node:assert/strict";
+import { cpSync, mkdtempSync, readFileSync, writeFileSync, rmSync, readdirSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+import { execFileSync } from "node:child_process";
+import { validateIncident } from "../validate.mjs";
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
+const SLUG = "2026-01-example-city-water-portal";
+const SAMPLE = join(ROOT, "format", "sample", SLUG);
+
+// Copies the sample, lets `change` break it, and returns the validator's problems.
+function problems(change) {
+  const base = mkdtempSync(join(tmpdir(), "isitahack-test-"));
+  const dir = join(base, SLUG);
+  try {
+    cpSync(SAMPLE, dir, { recursive: true });
+    const tools = {
+      dir,
+      // Replace text in a file. The text must be there, or the test itself is wrong.
+      swap(file, from, to) {
+        const before = readFileSync(join(dir, file), "utf8");
+        assert.ok(before.includes(from), `test setup: ${file} does not contain ${JSON.stringify(from)}`);
+        writeFileSync(join(dir, file), before.replace(from, to));
+      },
+      head(fn) {
+        const path = join(dir, "incident.json");
+        const head = JSON.parse(readFileSync(path, "utf8"));
+        fn(head);
+        writeFileSync(path, JSON.stringify(head, null, 2) + "\n");
+      },
+    };
+    change(tools);
+    return validateIncident(dir);
+  } finally {
+    rmSync(base, { recursive: true, force: true });
+  }
+}
+const expectProblem = (errs, pattern) => assert.ok(errs.some((e) => pattern.test(e)), `expected a problem matching ${pattern}, got:\n  ${errs.join("\n  ") || "(none)"}`);
+const rule = (name, change, pattern) => test(name, () => expectProblem(problems(change), pattern));
+
+test("the sample incident passes every check", () => {
+  assert.deepEqual(problems(() => {}), []);
+});
+
+// ---------- shape of the files ----------
+rule("an unknown field in incident.json is rejected", (t) => t.head((h) => { h.severity = "high"; }), /incident\.json\.severity: unknown field/);
+rule("a missing required field is named", (t) => t.head((h) => { delete h.who_is_affected; }), /who_is_affected: missing \(required\)/);
+rule("a value outside the allowed list is rejected", (t) => t.head((h) => { h.size = "Huge"; }), /incident\.json\.size: "Huge" is not one of/);
+rule("the slug must equal the folder name", (t) => t.head((h) => { h.slug = "2026-01-something-else"; }), /slug: .* must equal the folder name/);
+rule("a field over its length limit is rejected", (t) => t.head((h) => { h.known[0].text = "x".repeat(201); }), /known\[0\]\.text: too long/);
+rule("a changed CSV header is rejected", (t) => t.swap("claims.csv", "claim_id,group,claim_text", "id,group,claim_text"), /claims\.csv: header row must be exactly/);
+rule("a row with the wrong number of cells is rejected", (t) => t.swap("timeline.csv", "The portal is back online,c006,", "The portal is back online,c006"), /timeline\.csv row 5: has 7 cells, expected 8/);
+rule("an id used twice is rejected", (t) => t.swap("claims.csv", "\nc002,", "\nc001,"), /claim_id: "c001" is used more than once/);
+rule("CR line endings are rejected", (t) => t.swap("sources.csv", "last_checked\n", "last_checked\r\n"), /sources\.csv: has CR line endings/);
+rule("a time without an offset is rejected", (t) => t.swap("timeline.csv", "t003,2026-01-12T13:00:00-05:00", "t003,2026-01-12T13:00:00"), /event_time: .* must be a date/);
+rule("a label outside the six is rejected", (t) => t.swap("claims.csv", "no evidence offered.\",,Rumor,", "no evidence offered.\",,Likely,"), /label: "Likely" is not one of/);
+rule("'N/A' is rejected in favour of an empty cell", (t) => t.swap("timeline.csv", "The portal is back online,c006,", "The portal is back online,c006,N/A"), /leave the cell empty instead of "N\/A"/);
+
+// ---------- references between files ----------
+rule("a claim citing a source that does not exist", (t) => t.swap("claims.csv", "Debunked,s002;s005,", "Debunked,s002;s099,"), /source_ids: "s099" is not in sources\.csv/);
+rule("an event pointing at a claim that does not exist", (t) => t.swap("timeline.csv", "a software update failed,c001,", "a software update failed,c099,"), /claim_id: "c099" is not in claims\.csv/);
+rule("a section naming a chart that is not defined", (t) => t.head((h) => { h.sections.find((s) => s.type === "chart").id = "missing-chart"; }), /no chart with id "missing-chart"/);
+rule("a section naming a claim group with no rows", (t) => t.head((h) => { h.sections.find((s) => s.type === "claims").group = "nothing"; }), /no claims\.csv row has group "nothing"/);
+rule("a main question that is not in questions.csv", (t) => t.head((h) => { h.main_question_id = "q099"; }), /main_question_id: "q099" is not in questions\.csv/);
+
+// ---------- label rules ----------
+rule("Confirmed on a single news outlet is rejected", (t) => t.swap("claims.csv", "Confirmed,s003;s004,", "Confirmed,s003,"), /Confirmed needs a Tier 1 source, or two Tier 2\/3 sources/);
+rule("Confirmed on two outlets repeating one report is rejected", (t) => t.swap("sources.csv", "Example Wire,2,example-wire,", "Example Wire,2,example-daily,"), /Confirmed needs a Tier 1 source, or two Tier 2\/3 sources/);
+rule("a 'known' item resting on a claim that is not Confirmed", (t) => t.head((h) => { h.known[0].claim_id = "c003"; }), /only Confirmed claims can be listed as known/);
+rule("a social post ranked as an official source", (t) => t.swap("sources.csv", "s001,https://water.example.org/status,", "s001,https://x.com/examplewater/status/1,"), /a post on a social platform is Tier 4 or 5/);
+rule("a dead link with no archived copy", (t) => t.swap("sources.csv", "2026-01-12T10:30:00-05:00,,ok,", "2026-01-12T10:30:00-05:00,,dead,"), /archive_url: required when link_status is dead/);
+
+// ---------- questions and the page title ----------
+rule("a main question that does not name its subject", (t) => t.swap("questions.csv", "Was the Example City water portal outage a hack?", "Was it a hack?"), /the main question must name its subject/);
+rule("a main question with no question mark", (t) => t.swap("questions.csv", "Was the Example City water portal outage a hack?", "The Example City water portal outage"), /must end with a question mark/);
+rule("a main question too long to be a page title", (t) => t.swap("questions.csv", "Was the Example City water portal outage a hack?", "Was the Example City water billing portal outage on January 12 caused by a hack?"), /keep it to 70 characters/);
+rule("an answered question with no answer", (t) => t.swap("questions.csv", "\"No. The utility said no systems were encrypted, and the claim came from one anonymous post.\"", ""), /answer_text: required once state is answered/);
+rule("an open question that does not say what would settle it", (t) => t.swap("questions.csv", "A statement from the utility or its regulator on whether any data was accessed.", ""), /what_would_settle_it: required while open/);
+rule("more than three other names", (t) => t.head((h) => { h.also_called = ["the first name", "the second name", "the third name", "the fourth name"]; }), /also_called: has 4 items, maximum 3/);
+
+// ---------- the verdict belongs to the owner ----------
+rule("a verdict with no approval time", (t) => t.head((h) => { h.verdict = "Confirmed not a hack"; h.status = "closed"; }), /verdict_approved_at: required when a verdict is set/);
+rule("a verdict on an incident that is not closed", (t) => t.head((h) => { h.verdict = "Confirmed not a hack"; h.verdict_approved_at = "2026-01-20T09:00:00-05:00"; }), /status: must be closed once a verdict is set/);
+rule("a closed incident with no verdict", (t) => t.head((h) => { h.status = "closed"; }), /a closed incident needs an approved verdict/);
+rule("a likely verdict named in a claim", (t) => t.swap("claims.csv", "No outside party has reviewed it.", "Confirmed not a hack candidate."), /uses the words of a final verdict/);
+rule("a likely verdict named in the head", (t) => t.head((h) => { h.not_known[0].text = "Whether this ends as a confirmed hack."; }), /uses the words of a final verdict/);
+rule("a likely verdict named in a note", (t) => t.swap("notes/background.md", "\n", "\nLikely confirmed not a hack.\n"), /notes\/background\.md line \d+: uses the words of a final verdict/);
+
+// ---------- update log ----------
+rule("an update log that is not newest first", (t) => t.swap("update_log.csv", "u003,2026-01-12T17:30:00-05:00", "u003,2026-01-14T17:30:00-05:00"), /update_log\.csv: rows must be newest first/);
+rule("a role outside the list as author", (t) => t.swap("update_log.csv", ",Research agent\n", ",Intern\n"), /author: "Intern" is not one of/);
+
+// ---------- privacy ----------
+rule("a social handle in text", (t) => t.swap("claims.csv", "No outside party has reviewed it.", "First posted by @somebody."), /contains a handle or email address/);
+rule("an email address in text", (t) => t.head((h) => { h.who_is_affected = "Customers; write to press@example.org."; }), /contains a handle or email address/);
+rule("a phone number in text", (t) => t.swap("claims.csv", "No outside party has reviewed it.", "Customers were told to call 555-867-5309."), /looks like a phone number/);
+rule("a forum username in text", (t) => t.swap("claims.csv", "No outside party has reviewed it.", "Posted by u/some_person."), /contains a forum username/);
+rule("a handle in a note", (t) => t.swap("notes/background.md", "\n", "\nSeen first from @somebody.\n"), /notes\/background\.md line \d+: contains a handle/);
+
+// ---------- charts and images ----------
+rule("a chart column that is not a number", (t) => {
+  const file = "charts/problem-reports.csv";
+  const lines = readFileSync(join(t.dir, file), "utf8").split("\n");
+  const cells = lines[1].split(",");
+  cells[cells.length - 1] = "many";
+  lines[1] = cells.join(",");
+  writeFileSync(join(t.dir, file), lines.join("\n"));
+}, /problem-reports\.csv row 1, .*: "many" is not a number/);
+rule("an image that no longer matches its checksum", (t) => t.swap("images/outage-window.svg", "<svg", "<svg data-edited=\"1\""), /sha256: does not match the file/);
+rule("an image file that is missing", (t) => t.head((h) => { h.images[0].file = "images/gone.svg"; }), /images\[0\]\.file: "images\/gone\.svg" is missing/);
+
+// ---------- the build ----------
+test("the build is repeatable and writes the pages search engines need", () => {
+  const base = mkdtempSync(join(tmpdir(), "isitahack-build-"));
+  try {
+    const build = (name) => { execFileSync(process.execPath, [join(ROOT, "scripts", "build.mjs"), "--out", join(base, name), "--sample"], { stdio: "pipe" }); return join(base, name); };
+    const a = build("a"), b = build("b");
+    const files = ["index.html", "404.html", "sitemap.xml", "robots.txt", "index.json", `incidents/${SLUG}.html`, `incidents/${SLUG}.md`];
+    for (const f of files) assert.equal(readFileSync(join(a, f), "utf8"), readFileSync(join(b, f), "utf8"), `${f} differs between two builds`);
+    const page = readFileSync(join(a, "incidents", `${SLUG}.html`), "utf8");
+    assert.match(page, /<title>Was the Example City water portal outage a hack\? \| Is It a Hack\?<\/title>/);
+    assert.match(page, /<h1 id="the-question">Was the Example City water portal outage a hack\?<\/h1>/);
+    assert.equal(page.match(/<h1[ >]/g).length, 1, "an incident page has exactly one main heading");
+    assert.match(page, new RegExp(`<link rel="canonical" href="https://isitahack\\.com/incidents/${SLUG}\\.html">`));
+    const data = [...page.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)].map((m) => JSON.parse(m[1]));
+    const article = data.find((d) => d["@type"] === "Article");
+    assert.equal(article.headline, "Was the Example City water portal outage a hack?");
+    assert.equal(article.datePublished, "2026-01-12T09:10:00-05:00");
+    assert.equal(article.dateModified, "2026-01-12T17:30:00-05:00", "a check that changed nothing does not move the modified date");
+    assert.match(readFileSync(join(a, "sitemap.xml"), "utf8"), new RegExp(`<loc>https://isitahack\\.com/incidents/${SLUG}\\.html</loc><lastmod>2026-01-12T17:30:00-05:00</lastmod>`));
+    assert.ok(readdirSync(a).includes("404.html"));
+  } finally {
+    rmSync(base, { recursive: true, force: true });
+  }
+});

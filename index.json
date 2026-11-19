@@ -2,7 +2,7 @@
   "incidents": [
     {
       "slug": "2026-11-apple-services-outage",
-      "title": "Apple Services Outage, Nov 17, 2026: What We Know",
+      "title": "Apple services outage, Nov 17, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-18T23:19:00-05:00",
       "files": {
@@ -13,7 +13,7 @@
     },
     {
       "slug": "2026-11-faa-ground-stop",
-      "title": "FAA Nationwide Ground Stop: What We Know",
+      "title": "FAA nationwide ground stop",
       "status": "monitoring",
       "last_updated": "2026-11-18T23:12:59-05:00",
       "files": {
