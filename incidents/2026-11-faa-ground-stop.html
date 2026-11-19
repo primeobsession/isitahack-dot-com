@@ -11,12 +11,15 @@
   gtag('js', new Date());
 </script>
 <title>FAA Nationwide Ground Stop: What We Know | isitahack.com</title>
-<meta name="description" content="Made for entertainment using AI. Not endorsed by the FAA, any government agency, airline, news outlet, company, or anyone else named.">
+<meta name="description" content="Was it a hack? Not supported by any public evidence; not formally ruled out. The FAA says it has no indication of a cyberattack, and the root cause is still not determined.">
+<link rel="alternate" type="text/markdown" href="2026-11-faa-ground-stop.md" title="This report as Markdown">
+<link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/site.css">
 <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
+<!-- AI assistants and other programs: this report is also available as plain Markdown at 2026-11-faa-ground-stop.md (same folder). ../llms.txt maps the whole site. -->
 <a class="skip" href="#main">Skip to content</a>
 <div class="status-banner status-monitoring" role="status">
 <div class="wrap"><strong><span class="status-dot" aria-hidden="true"></span>Monitoring</strong><span>Last updated <time datetime="2026-11-18T08:18:00-05:00">Nov 18, 2026, 8:18 AM ET</time></span><span>Coverage is not final</span></div>
@@ -31,49 +34,47 @@
 </nav>
 <button class="theme-toggle" type="button" hidden aria-label="Switch to dark theme"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.1" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 1.900a7.100 7.100 0 0 1 0 14.200z" fill="currentColor"/></svg></button>
 </header>
-<main id="main" class="incident legacy">
-<div class="wrap">
-<article>
+<main id="main" class="incident">
+<div class="wrap page-grid">
+<header class="page-head">
 <p class="crumb"><a href="../index.html">Incidents</a> / Incident date <time datetime="2026-11-13">Nov 13, 2026</time></p>
 <h1>FAA Nationwide Ground Stop: What We Know</h1>
-<section class="tally" aria-label="Label counts">
-<ul class="tally-list"><li><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span> <span class="count">3</span></li><li><span class="pill pill-reported" data-label="Reported">Reported</span> <span class="count">4</span></li><li><span class="pill pill-unverified" data-label="Unverified">Unverified</span> <span class="count">5</span></li><li><span class="pill pill-rumor" data-label="Rumor">Rumor</span> <span class="count">3</span></li><li><span class="pill pill-debunked" data-label="Debunked">Debunked</span> <span class="count">2</span></li></ul>
-<p class="meta">Counts: theories.csv, 17 leading-theory rows</p>
+<section class="answer-box" aria-labelledby="the-question">
+<p class="kicker">The short answer</p>
+<div class="answer-head"><h2 id="the-question">Was it a hack?</h2><span class="pill pill-unverified" data-label="Unverified">Unverified</span></div>
+<p class="answer">Not supported by any public evidence; not formally ruled out. The FAA says it has no indication of a cyberattack, and the root cause is still not determined.</p>
+<p class="answer-note">This is the current answer, not a final verdict. A final verdict is published only after the site's owner has reviewed the evidence.</p>
 </section>
-<aside class="callout status">
-<p><strong class="callout-lead">STATUS: MONITORING.</strong> This incident is still being monitored. As of 8:18 AM ET Wed Nov 18, 2026 there is no written root cause, FBI or CISA finding, DOT IG or NTSB review, or hearing date (per the data&#39;s &quot;Working read&quot;). Coverage is not final.</p>
-</aside>
-<aside class="callout">
-<p><strong class="callout-lead">Starter page.</strong> Content below is a Markdown export of the FAA reference Page, built only from the raw data files in <code>data/incidents/2026-11-faa-ground-stop/raw/</code>. Labels use the source data&#39;s codes expanded (C = Confirmed, R = Rumor, D = Debunked). The claims-level CSVs in the manual&#39;s section 6.1 schema have not been produced yet.</p>
-</aside>
-<p>A timeline with evidence for the November 13, 2026 FAA telecom outage, with every item labeled confirmed, rumor or debunked, plus what is still unresolved. All times are Eastern. Last updated 8:18 AM ET, Nov 14, 2026; see the update log near the end.</p>
+</header>
+<nav class="toc" aria-label="On this page">
+<p class="kicker">On this page</p>
+<ol>
+<li><a href="#headline-and-leading-theories"><span class="toc-n">01</span><span class="toc-name">Headline and leading theories</span></a></li>
+<li><a href="#charts-at-a-glance"><span class="toc-n">02</span><span class="toc-name">Charts at a glance</span></a></li>
+<li><a href="#at-a-glance"><span class="toc-n">03</span><span class="toc-name">At a glance</span></a></li>
+<li><a href="#timeline-with-evidence"><span class="toc-n">04</span><span class="toc-name">Timeline with evidence</span></a></li>
+<li><a href="#thread-results"><span class="toc-n">05</span><span class="toc-name">Thread results</span></a></li>
+<li><a href="#side-threads-smart-air-current-d-c-national"><span class="toc-n">06</span><span class="toc-name">Side threads: SMART, Air Current, D.C. National</span></a></li>
+<li><a href="#sdr-and-community-search"><span class="toc-n">07</span><span class="toc-name">SDR and community search</span></a></li>
+<li><a href="#radio-exchanges-recovered"><span class="toc-n">08</span><span class="toc-name">Radio exchanges recovered</span></a></li>
+<li><a href="#official-statements"><span class="toc-n">09</span><span class="toc-name">Official statements</span></a></li>
+<li><a href="#faa-network-and-carriers"><span class="toc-n">10</span><span class="toc-name">FAA network and carriers</span></a></li>
+<li><a href="#checked-and-ruled-out"><span class="toc-n">11</span><span class="toc-name">Checked and ruled out</span></a></li>
+<li><a href="#still-in-flight-still-being-monitored"><span class="toc-n">12</span><span class="toc-name">Still in flight (still being monitored)</span></a></li>
+<li><a href="#public-smart-documentation"><span class="toc-n">13</span><span class="toc-name">Public SMART documentation</span></a></li>
+<li><a href="#smart-procurement-record"><span class="toc-n">14</span><span class="toc-name">SMART procurement record</span></a></li>
+<li><a href="#update-log"><span class="toc-n">15</span><span class="toc-name">Update log</span></a></li>
+<li><a href="#sources"><span class="toc-n">16</span><span class="toc-name">Sources</span></a></li>
+</ol>
+</nav>
+<div class="page-main">
+<p>A timeline with evidence for the November 13, 2026 FAA telecom outage, with every item labeled confirmed, rumor or debunked, plus what is still unresolved. All times are Eastern.</p>
 <aside class="callout disclaimer">
 <p><strong class="callout-lead">Not verified: initial investigation only.</strong> Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled &quot;Confirmed&quot; only mean a public source reports them. This analysis was put together for entertainment purposes using AI. It is not endorsed by, affiliated with, or reviewed by the FAA, any government agency, airline, news outlet, company, or anyone else named here.</p>
 </aside>
-<details class="toc">
-<summary>On this page</summary>
-<ol>
-<li><a href="#headline-and-leading-theories">Headline and leading theories</a></li>
-<li><a href="#charts-at-a-glance">Charts at a glance</a></li>
-<li><a href="#at-a-glance">At a glance</a></li>
-<li><a href="#timeline-with-evidence">Timeline with evidence</a></li>
-<li><a href="#thread-results">Thread results</a></li>
-<li><a href="#side-threads-smart-air-current-d-c-national">Side threads: SMART, Air Current, D.C. National</a></li>
-<li><a href="#sdr-and-community-search">SDR and community search</a></li>
-<li><a href="#radio-exchanges-recovered">Radio exchanges recovered</a></li>
-<li><a href="#official-statements">Official statements</a></li>
-<li><a href="#faa-network-and-carriers">FAA network and carriers</a></li>
-<li><a href="#checked-and-ruled-out">Checked and ruled out</a></li>
-<li><a href="#still-in-flight-still-being-monitored">Still in flight (still being monitored)</a></li>
-<li><a href="#public-smart-documentation">Public SMART documentation</a></li>
-<li><a href="#smart-procurement-record">SMART procurement record</a></li>
-<li><a href="#update-log">Update log</a></li>
-<li><a href="#sources">Sources</a></li>
-</ol>
-</details>
 
 <section id="headline-and-leading-theories" class="section section-headline-and-leading-theories">
-<h2>Headline and leading theories</h2>
+<div class="block-head"><span class="sec-n">01</span><h2>Headline and leading theories</h2></div>
 <p><strong>Headline</strong> (as of 8:18 AM ET Wed; see source): Monday morning: flights are near normal, with no ground stops on the FAA status feed at 10:16 AM ET. FlightAware counts about 18,100 US cancellations Friday through Sunday. The FAA&#39;s written Q&amp;A traces the Nov. 13 data flood to a new router at an El Dorado, Ark., radio site and a radar site in Amarillo, Texas, both on the L3Harris-run FTI network. Duffy says the Amarillo router, replaced about three weeks earlier, began flooding when the El Dorado router came on. Both routers are in L3Harris&#39;s Florida lab with FAA, Juniper and Cisco engineers; the root cause is still not determined. Router maker HPE says the device worked as the installer configured it (Reported). The FAA says it has no indication of a cyberattack. FAA/DOT staff brief House T&amp;I today on the $30.1 billion request ($10.1 billion for ATC); no hearing date is posted. The ask has grown to up to $50 billion, and government funding runs out Dec. 11.</p>
 <p>Headline source: <a href="https://www.yahoo.com/news/us/live/faa-ground-stop-latest-updates-duffy-blames-contractor-l3harris-thousands-more-flights-canceled-saturday-no-sign-of-cyberattack-161329174.html" rel="noopener">https://www.yahoo.com/news/us/live/faa-ground-stop-latest-updates-duffy-blames-contractor-l3harris-thousands-more-flights-canceled-saturday-no-sign-of-cyberattack-161329174.html</a></p>
 <div class="table-wrap" role="region" aria-label="Theory, Status, What we know, Source table" tabindex="0">
@@ -103,7 +104,7 @@
 </section>
 
 <section id="charts-at-a-glance" class="section section-charts-at-a-glance">
-<h2>Charts at a glance</h2>
+<div class="block-head"><span class="sec-n">02</span><h2>Charts at a glance</h2></div>
 <p>Chart data as plain tables (the Page draws these as charts).</p>
 <h4 id="cancellations">Cancellations</h4>
 <p>FlightAware counts via IFR Meter, Fox Weather, ABC7</p>
@@ -197,7 +198,7 @@
 </section>
 
 <section id="at-a-glance" class="section section-at-a-glance">
-<h2>At a glance</h2>
+<div class="block-head"><span class="sec-n">03</span><h2>At a glance</h2></div>
 <div class="table-wrap" role="region" aria-label="Value, Label, Detail, Tone table" tabindex="0">
 <table class="data-table">
 <thead><tr><th scope="col">Value</th><th scope="col">Label</th><th scope="col">Detail</th><th scope="col">Tone</th></tr></thead>
@@ -233,7 +234,7 @@
 </section>
 
 <section id="timeline-with-evidence" class="section section-timeline-with-evidence">
-<h2>Timeline with evidence</h2>
+<div class="block-head"><span class="sec-n">04</span><h2>Timeline with evidence</h2></div>
 <p>Times are Eastern (UTC-5). Inferred times are marked. Confirmed rows include a public source link and a short note on why it supports the entry. Labels are shown as in the source data (C = Confirmed, R = Rumor, D = Debunked, Reported).</p>
 <div class="table-wrap" role="region" aria-label="Time (ET), What happened, Evidence, Label table" tabindex="0">
 <table class="data-table">
@@ -360,7 +361,7 @@
 </section>
 
 <section id="thread-results" class="section section-thread-results">
-<h2>Thread results</h2>
+<div class="block-head"><span class="sec-n">05</span><h2>Thread results</h2></div>
 <p>Findings from the open investigation threads and the Hacker News and Reddit sweep. Confirmed means a public source reports it, not that it is absolutely verified. Sourced reporting is labeled as rumor until the FAA or DOT confirms it.</p>
 <div class="table-wrap" role="region" aria-label="Thread, Verdict, Confidence, Key sources table" tabindex="0">
 <table class="data-table">
@@ -382,7 +383,7 @@
 </section>
 
 <section id="side-threads-smart-air-current-d-c-national" class="section section-side-threads-smart-air-current-d-c-national">
-<h2>Side threads: SMART, Air Current, D.C. National</h2>
+<div class="block-head"><span class="sec-n">06</span><h2>Side threads: SMART, Air Current, D.C. National</h2></div>
 <div class="table-wrap" role="region" aria-label="Item, What we found, Label table" tabindex="0">
 <table class="data-table">
 <thead><tr><th scope="col">Item</th><th scope="col">What we found</th><th scope="col">Label</th></tr></thead>
@@ -398,7 +399,7 @@
 </section>
 
 <section id="sdr-and-community-search" class="section section-sdr-and-community-search">
-<h2>SDR and community search</h2>
+<div class="block-head"><span class="sec-n">07</span><h2>SDR and community search</h2></div>
 <div class="table-wrap" role="region" aria-label="Source, Result, Label table" tabindex="0">
 <table class="data-table">
 <thead><tr><th scope="col">Source</th><th scope="col">Result</th><th scope="col">Label</th></tr></thead>
@@ -415,7 +416,7 @@
 </section>
 
 <section id="radio-exchanges-recovered" class="section section-radio-exchanges-recovered">
-<h2>Radio exchanges recovered</h2>
+<div class="block-head"><span class="sec-n">08</span><h2>Radio exchanges recovered</h2></div>
 <p>Automatically transcribed from edited news and YouTube clips. Call signs other than SkyWest 4792, SkyWest 4179 and Alaska 773 are low confidence.</p>
 <figure class="quote">
 <blockquote>
@@ -444,7 +445,7 @@
 </section>
 
 <section id="official-statements" class="section section-official-statements">
-<h2>Official statements</h2>
+<div class="block-head"><span class="sec-n">09</span><h2>Official statements</h2></div>
 <figure class="quote">
 <blockquote>
 <p>There has been a temporary telecommunications outage. Out of an abundance of caution all flights have been halted.</p>
@@ -496,7 +497,7 @@
 </section>
 
 <section id="faa-network-and-carriers" class="section section-faa-network-and-carriers">
-<h2>FAA network and carriers</h2>
+<div class="block-head"><span class="sec-n">10</span><h2>FAA network and carriers</h2></div>
 <div class="table-wrap" role="region" aria-label="Item, Detail table" tabindex="0">
 <table class="data-table">
 <thead><tr><th scope="col">Item</th><th scope="col">Detail</th></tr></thead>
@@ -511,7 +512,7 @@
 </section>
 
 <section id="checked-and-ruled-out" class="section section-checked-and-ruled-out">
-<h2>Checked and ruled out</h2>
+<div class="block-head"><span class="sec-n">11</span><h2>Checked and ruled out</h2></div>
 <p>For 2:45–4:00 PM ET; nothing below lines up in time. Each finding now has a source link or a pending-source note.</p>
 <div class="table-wrap" role="region" aria-label="Area, Finding, Source and why it supports table" tabindex="0">
 <table class="data-table">
@@ -533,7 +534,7 @@
 </section>
 
 <section id="still-in-flight-still-being-monitored" class="section section-still-in-flight-still-being-monitored">
-<h2>Still in flight (still being monitored)</h2>
+<div class="block-head"><span class="sec-n">12</span><h2>Still in flight (still being monitored)</h2></div>
 <p>Status as of 8:18 AM ET Wed. Ticked items have been investigated; the note is the verdict, not a claim that the underlying question can never change.</p>
 <ul class="tasks">
 <li class="task open"><span class="task-mark" aria-hidden="true">○</span><span class="sr-only">Open: </span><span class="task-text">Which equipment, site or upgrade set off the overload, and whether L3Harris FTI was involved — Update 8:18 AM ET Wednesday: DOT&#39;s written release quotes Duffy saying investigators recreated the El Dorado overload in the lab but the root cause is still unclear (Confirmed). New Reported angles: the Washington Post says an FAA official supervised and signed off on the work about eight minutes before the network faltered; KATV reports a 2025 procedure change that auto-approves contractor upgrades; a CRN source says the device&#39;s broadcast/multicast feature should not have been on. <a href="https://www.transportation.gov/briefing-room/icymi-trumps-transportation-secretary-sean-p-duffy-shares-update-nationwide-ground" rel="noopener">DOT release</a> · <a href="https://www.washingtonpost.com/transportation/2026/11/17/faa-oversaw-signed-off-repair-work-before-nationwide-ground-stop/" rel="noopener">Washington Post</a> Earlier: Partly answered Saturday. At the 10:30 AM ET DOT briefing, Duffy said the outage began during L3Harris copper-to-fiber work at a remote FAA site, when a router involved in the work flooded the network. Still open: which site, whether the router was faulty or the contractor erred (officials have not determined it), any written FAA report, and L3Harris&#39;s account of the fault. L3Harris has now responded in writing: it is supporting the FAA investigation and says more than 70% of the copper-to-fiber conversion is done, but it does not address the router (<a href="https://www.l3harris.com/newsroom/press-release/2026/11/l3harris-statement-nov-13-ground-stop" rel="noopener">L3Harris statement</a>). DOT&#39;s written release of Duffy&#39;s remarks adds that the router made over 1,000 connection attempts every four to five seconds (<a href="https://www.transportation.gov/briefing-room/icymi-us-transportation-secretary-sean-p-duffy-provides-update-restoration-airspace" rel="noopener">DOT release</a>). Reuters (via CNA), citing officials, reports possible router problems in both Arkansas and Texas and 17 of 22 en route centers affected (Reported). CBS (update caused a reboot) and Bloomberg (FBI looking at a software update; equipment already over capacity) stay Reported. <a href="https://www.yahoo.com/news/us/live/faa-ground-stop-latest-updates-duffy-blames-contractor-l3harris-thousands-more-flights-canceled-saturday-no-sign-of-cyberattack-161329174.html" rel="noopener">Yahoo News</a> · <a href="https://www.ainvest.com/news/duffy-contractor-l3harris-working-telecommunication-maintenance-time-time-aviation-shutdown-2611/" rel="noopener">AInvest</a> Sunday check (8:14 AM ET): the WSJ (via Investing.com) reports the sites as an FAA radio facility in El Dorado, Ark., and a radar site in Amarillo, Texas, with a newly installed Juniper router involved and first trouble at Indianapolis Center; HPE says its devices did not fail (Reported). The PASS union says two routers updated Friday were involved (Reported). Bedford confirmed on the record that the FAA is swapping about 2,000 Cisco 600 routers for Juniper routers as routine work, without saying which router failed. Still no written FAA root-cause report. <a href="https://www.investing.com/news/stock-market-news/faa-router-overload-in-arkansas-triggered-nationwide-flight-grounding--wsj-5027664" rel="noopener">Investing.com (citing WSJ)</a> · <a href="https://www.magnoliareporter.com/news_and_business/union_county/article_14de6a8d-c040-442b-a7ff-578db41b1c7e.html" rel="noopener">Magnolia Reporter</a> · <a href="https://biz.heraldcorp.com/article/10937583" rel="noopener">Herald Business</a> · <a href="https://www.transportation.gov/briefing-room/icymi-us-transportation-secretary-sean-p-duffy-provides-update-restoration-airspace" rel="noopener">DOT release</a> Sunday 5:16 PM ET: the FAA&#39;s written Q&amp;A now names the two sites on the record (Amarillo, Texas, radar site; El Dorado, Ark., radio site, where L3Harris was deploying a new router) and says root cause is still under investigation; the routers are in L3Harris&#39;s Florida lab. Still open: faulty router vs. installation or configuration, and a final root-cause report. <a href="https://www.faa.gov/newsroom/nationwide-ground-stop-questions-and-answers" rel="noopener">FAA Q&amp;A</a> · <a href="https://www.transportation.gov/briefing-room/icymi-trumps-transportation-secretary-sean-p-duffy-provides-update-across-sunday" rel="noopener">DOT Sunday release</a> Monday 10:25 AM ET: still no written root cause. The routers are in L3Harris&#39;s Florida lab with FAA, Juniper and Cisco engineers (Duffy&#39;s X post via Fox News, Reported). Duffy says the Amarillo router was replaced about three weeks earlier and began flooding when the El Dorado router was switched on (DOT release, Confirmed). HPE says the device &quot;functioned as it was configured to by the installer&quot; (via ABC, Reported). Open: installer/configuration error vs. faulty router, and why both sites flooded at once. <a href="https://www.transportation.gov/briefing-room/icymi-trumps-transportation-secretary-sean-p-duffy-provides-update-across-sunday" rel="noopener">DOT Sunday release</a> · <a href="https://abcnews.com/US/live-updates/faa-ground-stop-live-updates-hundreds-flights-canceled/?entryId=138163207&amp;id=138125140" rel="noopener">ABC News live updates</a> · <a href="https://www.foxnews.com/us/duffy-investigators-examining-2-routers-nationwide-faa-ground-stop-no-signs-foreign-cyberattack" rel="noopener">Fox News</a></span></li>
@@ -571,7 +572,7 @@
 </section>
 
 <section id="public-smart-documentation" class="section section-public-smart-documentation">
-<h2>Public SMART documentation</h2>
+<div class="block-head"><span class="sec-n">13</span><h2>Public SMART documentation</h2></div>
 <p>Public web sources only. No public status page, API documentation or technical spec was found. Each row links the document that supports the summary.</p>
 <div class="table-wrap" role="region" aria-label="Source, What it says, Source and why it supports table" tabindex="0">
 <table class="data-table">
@@ -588,7 +589,7 @@
 </section>
 
 <section id="smart-procurement-record" class="section section-smart-procurement-record">
-<h2>SMART procurement record</h2>
+<div class="block-head"><span class="sec-n">14</span><h2>SMART procurement record</h2></div>
 <p>Public contract, notice and press records only. Items not found are stated plainly.</p>
 <div class="table-wrap" role="region" aria-label="Item, What the record shows, Source and why it supports, Label table" tabindex="0">
 <table class="data-table">
@@ -610,7 +611,7 @@
 </section>
 
 <section id="update-log" class="section section-update-log">
-<h2>Update log</h2>
+<div class="block-head"><span class="sec-n">15</span><h2>Update log</h2></div>
 <p>Times are Eastern, when each update was made to this Page. Newest first. The source data records the time of day only, not the date.</p>
 <div class="table-wrap" role="region" aria-label="Time (ET), Update table" tabindex="0">
 <table class="data-table">
@@ -675,7 +676,7 @@
 </section>
 
 <section id="sources" class="section section-sources">
-<h2>Sources</h2>
+<div class="block-head"><span class="sec-n">16</span><h2>Sources</h2></div>
 <ul>
 <li><a href="https://nasstatus.faa.gov/api/airport-status-information" rel="noopener">FAA airport status feed</a> (FAA)</li>
 <li><a href="https://transportation.house.gov/calendar/" rel="noopener">House T&amp;I Committee calendar</a> (House T&amp;I)</li>
@@ -849,12 +850,34 @@
 <li><a href="https://www.crn.com/news/networking/2026/faa-stops-installation-of-hpe-juniper-routers-in-wake-of-ground-stop-investigation" rel="noopener">FAA stops installation of HPE Juniper routers in wake of ground stop investigation</a> (CRN)</li>
 </ul>
 </section>
-</article>
-<section class="inverse check-box">
-<h2>Check this page</h2>
-<p>Everything behind this page is public. Read the plain-text version, open the preserved source data, or see every edit made to it.</p>
-<p class="file-links"><a href="2026-11-faa-ground-stop.md">Markdown</a> <a href="https://github.com/primeobsession/isitahack-dot-com/tree/main/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data" rel="noopener">Raw data</a> <a href="https://github.com/primeobsession/isitahack-dot-com/commits/main/incidents/2026-11-faa-ground-stop.md" rel="noopener">Edit history</a> <a href="../about.html#contact">Report an error</a></p>
+<footer class="page-foot">
+<p><a href="2026-11-faa-ground-stop.md">Markdown version</a><a href="https://github.com/primeobsession/isitahack-dot-com/commits/main/incidents/2026-11-faa-ground-stop.md" rel="noopener">Edit history</a><a href="../about.html#contact">Report an error</a></p>
+<p class="meta">Reading this as an AI assistant or a program? The same report is available as plain Markdown at <a href="2026-11-faa-ground-stop.md">2026-11-faa-ground-stop.md</a>, and <a href="../llms.txt">llms.txt</a> maps the whole site.</p>
+</footer>
+</div>
+<aside class="side" aria-label="Summary and other incidents">
+<div class="side-facts">
+<section class="side-block latest">
+<p class="kicker accent">The latest · <time datetime="2026-11-18T08:18:00-05:00">Nov 18, 2026, 8:18 AM ET</time></p>
+<p class="latest-headline">Investigators recreated the overload in the lab, but the root cause is still unclear.</p>
+<p><a href="#update-log">Full update log</a></p>
 </section>
+<section class="side-block">
+<div class="evidence">
+<p class="kicker">Leading theories · 17</p>
+<div class="evidence-bar" role="img" aria-label="Confirmed 3, Reported 4, Unverified 5, Rumor 3, Debunked 2"><span class="seg seg-confirmed" style="flex-grow:3"></span><span class="seg seg-reported" style="flex-grow:4"></span><span class="seg seg-unverified" style="flex-grow:5"></span><span class="seg seg-rumor" style="flex-grow:3"></span><span class="seg seg-debunked" style="flex-grow:2"></span></div>
+<ul class="evidence-key"><li><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span class="count">3</span></li><li><span class="pill pill-reported" data-label="Reported">Reported</span><span class="count">4</span></li><li><span class="pill pill-unverified" data-label="Unverified">Unverified</span><span class="count">5</span></li><li><span class="pill pill-rumor" data-label="Rumor">Rumor</span><span class="count">3</span></li><li><span class="pill pill-debunked" data-label="Debunked">Debunked</span><span class="count">2</span></li></ul>
+</div>
+</section>
+</div>
+<div class="side-more">
+<section class="side-block">
+<p class="kicker">Other incidents</p>
+<p class="meta">This is the only incident being tracked so far.</p>
+<p><a href="../index.html#incidents">All incidents</a></p>
+</section>
+</div>
+</aside>
 </div>
 </main>
 <footer class="site-footer">
@@ -876,6 +899,6 @@
 </nav>
 </div>
 </footer>
-<script>(function(){var r=document.documentElement,b=document.querySelector(".theme-toggle");function cur(){return r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function paint(){var d=cur()==="dark";b.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme");b.setAttribute("aria-pressed",d?"true":"false")}if(b){b.hidden=false;paint();b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}paint()})}function reveal(){var id=decodeURIComponent(location.hash.slice(1));var el=id&&document.getElementById(id);if(!el)return;for(var p=el;p;p=p.parentElement)if(p.tagName==="DETAILS")p.open=true;el.scrollIntoView()}addEventListener("hashchange",reveal);reveal()})();</script>
+<script>(function(){var r=document.documentElement,b=document.querySelector(".theme-toggle");function cur(){return r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function paint(){var d=cur()==="dark";b.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme");b.setAttribute("aria-pressed",d?"true":"false")}if(b){b.hidden=false;paint();b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}paint()})}function reveal(){var id=decodeURIComponent(location.hash.slice(1));var el=id&&document.getElementById(id);if(!el)return;for(var p=el;p;p=p.parentElement)if(p.tagName==="DETAILS")p.open=true;el.scrollIntoView()}addEventListener("hashchange",reveal);reveal();var links=[].slice.call(document.querySelectorAll(".toc a"));if(links.length&&"IntersectionObserver"in window){var seen={};var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id]=e.isIntersecting});var on=null;links.forEach(function(a){var id=a.getAttribute("href").slice(1);if(!on&&seen[id])on=a});if(on)links.forEach(function(a){if(a===on)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")})},{rootMargin:"-10% 0px -60% 0px"});links.forEach(function(a){var s=document.getElementById(a.getAttribute("href").slice(1));if(s)io.observe(s)})}})();</script>
 </body>
 </html>

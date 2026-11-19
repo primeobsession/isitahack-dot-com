@@ -12,17 +12,17 @@ labels_summary:
   Debunked: 2
   Not established: 0
 labels_summary_basis: theories.csv, 17 leading-theory rows
+question: "Was it a hack?"
+answer: "Not supported by any public evidence; not formally ruled out. The FAA says it has no indication of a cyberattack, and the root cause is still not determined."
+answer_label: Unverified
+latest: "Investigators recreated the overload in the lab, but the root cause is still unclear."
 data_dir: data/incidents/2026-11-faa-ground-stop/raw/groundstop/data
 disclaimer: Made for entertainment using AI. Not endorsed by the FAA, any government agency, airline, news outlet, company, or anyone else named.
 ---
 
-> **STATUS: MONITORING.** This incident is still being monitored. As of 8:18 AM ET Wed Nov 18, 2026 there is no written root cause, FBI or CISA finding, DOT IG or NTSB review, or hearing date (per the data's "Working read"). Coverage is not final.
-
-> **Starter page.** Content below is a Markdown export of the FAA reference Page, built only from the raw data files in `data/incidents/2026-11-faa-ground-stop/raw/`. Labels use the source data's codes expanded (C = Confirmed, R = Rumor, D = Debunked). The claims-level CSVs in the manual's section 6.1 schema have not been produced yet.
-
 # FAA Nationwide Ground Stop: What We Know
 
-A timeline with evidence for the November 13, 2026 FAA telecom outage, with every item labeled confirmed, rumor or debunked, plus what is still unresolved. All times are Eastern. Last updated 8:18 AM ET, Nov 14, 2026; see the update log near the end.
+A timeline with evidence for the November 13, 2026 FAA telecom outage, with every item labeled confirmed, rumor or debunked, plus what is still unresolved. All times are Eastern.
 
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. This analysis was put together for entertainment purposes using AI. It is not endorsed by, affiliated with, or reviewed by the FAA, any government agency, airline, news outlet, company, or anyone else named here.
 

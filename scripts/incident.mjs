@@ -1,5 +1,6 @@
 // Renders one incident, loaded and checked by validate.mjs, as page HTML and as
 // a Markdown export. Pure functions of the loaded data: no clock, no locale.
+// Also holds the page layout that typed and hand-written incident pages share.
 
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -11,7 +12,9 @@ const CHANGES = {
   added: "Added", updated: "Updated", label_change: "Label change", correction: "Correction",
   staleness_check: "Staleness check", checked_no_change: "Checked, no change", blocked_source: "Source blocked",
 };
+const STATUSES = { monitoring: "Monitoring", resolved: "Resolved", closed: "Closed" };
 const STANDARD_NOTE = `<strong>Not verified: initial investigation only.</strong> Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them.`;
+const two = (n) => String(n).padStart(2, "0");
 
 // Everything other pages need to know about an incident, worked out from its data.
 export function summarize({ head, t }) {
@@ -27,12 +30,71 @@ export function summarize({ head, t }) {
     verdict: head.verdict || null, verdict_approved_at: head.verdict_approved_at || null,
     size: head.size,
     tally: Object.fromEntries(LABELS.map((l) => [l, inGroup.filter((c) => c.label === l).length])),
-    tally_basis: `${inGroup.length} ${tallyGroup ? tallyGroup.replace(/-/g, " ") : "claim"} rows`,
+    tally_title: head.sections.find((s) => s.type === "claims")?.title || "Claims",
     counts: { sources: t.sources.length, updates: t.update_log.length, events: t.timeline.length },
   };
 }
 
-// ---------- small pieces ----------
+// ---------- shared pieces ----------
+// One bar for a set of labelled rows: each label gets a share of the width and
+// the same fill, border and dot it has everywhere else on the site.
+export function evidenceBar(tally, title) {
+  const parts = LABELS.map((l) => [l, Number(tally[l]) || 0]).filter(([, n]) => n > 0);
+  const total = parts.reduce((sum, [, n]) => sum + n, 0);
+  if (!total) return "";
+  const cls = (l) => l.toLowerCase().replace(/ /g, "-");
+  return `<div class="evidence">
+<p class="kicker">${esc(title)} · ${total}</p>
+<div class="evidence-bar" role="img" aria-label="${esc(parts.map(([l, n]) => `${l} ${n}`).join(", "))}">${parts.map(([l, n]) => `<span class="seg seg-${cls(l)}" style="flex-grow:${n}"></span>`).join("")}</div>
+<ul class="evidence-key">${parts.map(([l, n]) => `<li>${pill(l)}<span class="count">${n}</span></li>`).join("")}</ul>
+</div>`;
+}
+
+const otherIncidents = (others, root) => `<section class="side-block">
+<p class="kicker">Other incidents</p>
+${others.length
+    ? `<ul class="others">\n${others.slice(0, 5).map((o) => `<li><a href="${esc(o.slug)}.html">${esc(o.title)}</a><span class="meta">${esc(STATUSES[o.status] || o.status)} · updated ${timeTag(o.last_updated, fmtDay(o.last_updated))}</span></li>`).join("\n")}\n</ul>`
+    : `<p class="meta">This is the only incident being tracked so far.</p>`}
+<p><a href="${root}index.html#incidents">All incidents</a></p>
+</section>`;
+
+// The layout every incident page uses: a contents list that follows the reader,
+// the report in the middle, and a side rail with the latest and other incidents.
+// `toc` is [{ id, name, count }]; `lead`, `main` and `facts` are ready-made HTML.
+export function incidentLayout({ root, slug, crumb, title, lead = "", toc, main, facts = "", others, repo, historyPath }) {
+  const tocHtml = toc.map((s, i) => `<li><a href="#${esc(s.id)}"><span class="toc-n">${two(i + 1)}</span><span class="toc-name">${esc(s.name)}</span>${s.count !== undefined && s.count !== "" ? `<span class="count">${esc(s.count)}</span>` : ""}</a></li>`).join("\n");
+  return `<main id="main" class="incident">
+<div class="wrap page-grid">
+<header class="page-head">
+<p class="crumb">${crumb}</p>
+<h1>${title}</h1>
+${lead}
+</header>
+<nav class="toc" aria-label="On this page">
+<p class="kicker">On this page</p>
+<ol>
+${tocHtml}
+</ol>
+</nav>
+<div class="page-main">
+${main}
+<footer class="page-foot">
+<p><a href="${esc(slug)}.md">Markdown version</a><a href="${esc(`${repo}/commits/main/${historyPath}`)}" rel="noopener">Edit history</a><a href="${root}about.html#contact">Report an error</a></p>
+<p class="meta">Reading this as an AI assistant or a program? The same report is available as plain Markdown at <a href="${esc(slug)}.md">${esc(slug)}.md</a>, and <a href="${root}llms.txt">llms.txt</a> maps the whole site.</p>
+</footer>
+</div>
+<aside class="side" aria-label="Summary and other incidents">
+<div class="side-facts">
+${facts}
+</div>
+<div class="side-more">
+${otherIncidents(others, root)}
+</div>
+</aside>
+</div>
+</main>`;
+}
+
 const row = ({ id, lead, title, sub, trail = "", body, open = false }) => `<details class="row"${id ? ` id="${esc(id)}"` : ""}${open ? " open" : ""}>
 <summary><span class="row-lead">${lead}</span><span class="row-main"><span class="row-title">${title}</span>${sub ? `<span class="row-sub">${sub}</span>` : ""}</span>${trail ? `<span class="row-trail">${trail}</span>` : ""}</summary>
 <div class="row-body">
@@ -46,7 +108,7 @@ function foldRest(items, n, noun) {
   return `${items.slice(0, n).join("\n")}\n<details class="more">\n<summary>Show ${items.length - n} more ${noun}</summary>\n${items.slice(n).join("\n")}\n</details>`;
 }
 
-export function renderIncident(loaded, { root, dataHref, dir, repo }) {
+export function renderIncident(loaded, { root, dataHref, dir, repo, others }) {
   const { head, t, chartData, tableData } = loaded;
   const sum = summarize(loaded);
   const claims = new Map(t.claims.map((c) => [c.claim_id, c]));
@@ -78,13 +140,13 @@ ${c.source_ids.map(sourceLine).join("\n")}
   const ids = new Map();
   const uniqueId = (text) => { const base = slugify(text); const n = (ids.get(base) || 0) + 1; ids.set(base, n); return n === 1 ? base : `${base}-${n}`; };
   for (const reserved of ["glance", "update-log", "sources", "main"]) ids.set(reserved, 1);
-  const jumps = [{ href: "#glance", name: "At a glance", count: "" }];
+  const toc = [{ id: "glance", name: "At a glance" }];
   const fold = ({ title, count = "", open, body, id }) => {
     const sid = id || uniqueId(title);
-    jumps.push({ href: `#${sid}`, name: title, count });
+    toc.push({ id: sid, name: title, count });
     return `<section class="block" id="${esc(sid)}">
 <details class="fold"${open ? " open" : ""}>
-<summary><h2>${esc(title)}</h2>${count !== "" ? `<span class="count">${esc(count)}</span>` : ""}</summary>
+<summary><span class="sec-n">${two(toc.length)}</span><h2>${esc(title)}</h2>${count !== "" ? `<span class="count">${esc(count)}</span>` : ""}</summary>
 <div class="fold-body">
 ${body}
 </div>
@@ -96,10 +158,8 @@ ${body}
   const renderers = {
     claims(s) {
       const list = t.claims.filter((c) => c.group === s.group);
-      const tally = LABELS.map((l) => [l, list.filter((c) => c.label === l).length]).filter(([, n]) => n)
-        .map(([l, n]) => `<li>${pill(l)} <span class="count">${n}</span></li>`).join("");
       const rows = list.map((c) => row({ id: c.claim_id, lead: pill(c.label), title: esc(c.claim_text), sub: esc(c.summary), body: claimBody(c) }));
-      return fold({ title: s.title, count: list.length, open: s.open, body: `${intro(s)}<ul class="tally-list" aria-label="Rows by label">${tally}</ul>\n<div class="rows">\n${foldRest(rows, 8, "rows")}\n</div>` });
+      return fold({ title: s.title, count: list.length, open: s.open, body: `${intro(s)}<div class="rows">\n${foldRest(rows, 8, "rows")}\n</div>` });
     },
     timeline(s) {
       const events = [...t.timeline].sort((a, b) => Date.parse(a.event_time) - Date.parse(b.event_time) || a.event_id.localeCompare(b.event_id));
@@ -145,7 +205,6 @@ ${renderChart(chart, rows)}
 <details class="more">
 <summary>Show the numbers</summary>
 ${tableHtml(headRow, body)}
-<p class="meta"><a href="${esc(`${dataHref}/${chart.data}`)}">Download as CSV</a></p>
 </details>` });
     },
     image(s) {
@@ -182,45 +241,39 @@ ${tableHtml(headRow, body)}
   const verdictNote = sum.verdict
     ? `<p class="verdict"><span class="verdict-badge">${esc(sum.verdict)}</span> Final verdict, approved by the site's owner on ${timeTag(sum.verdict_approved_at, fmtDay(sum.verdict_approved_at))}.</p>`
     : `<p class="answer-note">This is the current answer, not a final verdict. A final verdict is published only after the site's owner has reviewed the evidence.</p>`;
-  const tiles = (head.figures || []).map((f) => `<li class="tile"><a href="${esc(claimHref(f.claim_id))}"><span class="tile-value">${esc(f.value)}</span><span class="tile-label">${esc(f.label)}</span>${f.detail ? `<span class="tile-detail">${esc(f.detail)}</span>` : ""}</a></li>`).join("\n");
-  const known = head.known.map((k) => `<li>${esc(k.text)} <a class="ref" href="${esc(claimHref(k.claim_id))}">evidence</a></li>`).join("\n");
-  const notKnown = head.not_known.map((k) => `<li>${esc(k.text)}${k.question_id ? ` <a class="ref" href="#${esc(k.question_id)}">open question</a>` : ""}</li>`).join("\n");
-  const files = ["incident.json", "claims.csv", "sources.csv", "timeline.csv", "questions.csv", ...(t.quotes.length ? ["quotes.csv"] : []), "update_log.csv"];
-
-  const main = `<main id="main" class="incident">
-<div class="wrap">
-<p class="crumb"><a href="${root}index.html">Incidents</a> / Incident date ${timeTag(head.incident_date)}</p>
-<h1>${esc(head.title)}</h1>
-<div class="incident-top">
-<section class="answer-box" aria-labelledby="the-question">
+  const lead = `<section class="answer-box" aria-labelledby="the-question">
 <p class="kicker">The short answer</p>
 <div class="answer-head"><h2 id="the-question">${esc(q.text)}</h2>${pill(q.label)}</div>
 <p class="answer">${esc(q.answer)}</p>
 <p class="answer-refs"><span class="field">Rests on</span> ${q.claim_ids.map((id) => `<a href="${esc(claimHref(id))}">${esc(claims.get(id).claim_text)}</a>`).join(" · ")}</p>
 ${verdictNote}
-</section>
-<section class="latest-box" aria-labelledby="the-latest">
-<p class="kicker" id="the-latest">The latest · ${timeTag(sum.latest.at)}</p>
+</section>`;
+  const tiles = (head.figures || []).map((f) => `<li class="tile"><a href="${esc(claimHref(f.claim_id))}"><span class="tile-value">${esc(f.value)}</span><span class="tile-label">${esc(f.label)}</span>${f.detail ? `<span class="tile-detail">${esc(f.detail)}</span>` : ""}</a></li>`).join("\n");
+  const known = head.known.map((k) => `<li>${esc(k.text)} <a class="ref" href="${esc(claimHref(k.claim_id))}">evidence</a></li>`).join("\n");
+  const notKnown = head.not_known.map((k) => `<li>${esc(k.text)}${k.question_id ? ` <a class="ref" href="#${esc(k.question_id)}">open question</a>` : ""}</li>`).join("\n");
+
+  const facts = `<section class="side-block latest">
+<p class="kicker accent">The latest · ${timeTag(sum.latest.at)}</p>
 <p class="latest-headline">${esc(sum.latest.headline)}</p>
 <p class="latest-summary">${esc(sum.latest.summary)}</p>
 <p><a href="#update-log">All ${t.update_log.length} updates</a></p>
 </section>
-</div>
+<section class="side-block">
 <dl class="reach">
 <div><dt>Size</dt><dd><strong>${esc(head.size)}.</strong> ${esc(head.size_basis)}</dd></div>
 <div><dt>Who is affected</dt><dd>${esc(head.who_is_affected)}</dd></div>
 </dl>
-<aside class="disclaimer-box">
+</section>
+<section class="side-block">
+${evidenceBar(sum.tally, sum.tally_title)}
+</section>`;
+
+  const main = `<aside class="note">
 <p>${STANDARD_NOTE}</p>
 <p>${esc(head.disclaimer)}</p>
 </aside>
-<nav class="jump" aria-label="On this page">
-<span class="kicker">Jump to</span>
-<!--jumps-->
-</nav>
 <section class="block" id="glance">
-<p class="kicker">The two-minute version</p>
-<h2>At a glance</h2>
+<div class="block-head"><span class="sec-n">01</span><h2>At a glance</h2></div>
 ${tiles ? `<ul class="tiles">\n${tiles}\n</ul>` : ""}
 <div class="known-grid">
 <div class="known"><h3>Known so far</h3>${known ? `<ul>\n${known}\n</ul>` : `<p>Nothing is established yet.</p>`}</div>
@@ -232,17 +285,14 @@ ${sectionsHtml}
 
 ${logHtml}
 
-${sourcesHtml}
+${sourcesHtml}`;
 
-<section class="inverse check-box">
-<h2>Check this page</h2>
-<p>Everything behind this page is public. Read the plain-text version, open the data files it was built from, or see every edit made to them.</p>
-<p class="file-links"><a href="${esc(head.slug)}.md">Markdown</a> ${files.map((f) => `<a href="${esc(`${dataHref}/${f}`)}">${esc(f)}</a>`).join(" ")} <a href="${esc(`${repo}/commits/main/data/incidents/${head.slug}`)}" rel="noopener">Edit history</a> <a href="${root}about.html#contact">Report an error</a></p>
-</section>
-</div>
-</main>`;
-  const jumpHtml = [...jumps].map((j) => `<a href="${esc(j.href)}">${esc(j.name)}${j.count !== "" ? ` <span class="count">${esc(j.count)}</span>` : ""}</a>`).join("\n");
-  return { main: main.replace("<!--jumps-->", jumpHtml), sum };
+  const html = incidentLayout({
+    root, slug: head.slug, repo, others, toc, lead, main, facts,
+    crumb: `<a href="${root}index.html">Incidents</a> / Incident date ${timeTag(head.incident_date)}`,
+    title: esc(head.title), historyPath: `data/incidents/${head.slug}`,
+  });
+  return { main: html, sum };
 }
 
 // ---------- Markdown export ----------
