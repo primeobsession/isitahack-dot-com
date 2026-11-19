@@ -1,0 +1,470 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-faa-ground-stop",
+  "title": "FAA Nationwide Ground Stop: What We Know",
+  "status": "monitoring",
+  "incident_date": "2026-11-13",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by the FAA, any government agency, airline, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Nation-level",
+  "size_basis": "A nationwide FAA ground stop halted departures at all US airports for more than four hours on Nov 13, 2026. The FAA says operators cancelled about 12,462 flights that day.",
+  "who_is_affected": "Air travelers on US flights on Nov 13 and the weekend after. By Monday, Nov 16, flights were near normal and the FAA status feed listed no ground stops.",
+  "known": [
+    {
+      "text": "The FAA ordered a ground stop for all US airports at 3:54 PM ET on Nov 13 (FAA Advisory 111).",
+      "claim_id": "c045"
+    },
+    {
+      "text": "The nationwide stop was cancelled at 8:16 PM ET the same day (FAA Advisory 005).",
+      "claim_id": "c077"
+    },
+    {
+      "text": "Officials' account: legacy telecom switches and routers were overloaded with data. That is what officials said, not an independent finding.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The FAA's written Q&A names two sites: a radio site in El Dorado, Ark., and a radar site in Amarillo, Texas.",
+      "claim_id": "c120"
+    },
+    {
+      "text": "A White House release on Nov 18 says the administration sees no indication of a cyberattack behind the recent outages, the FAA's among them.",
+      "claim_id": "c144"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "The root cause. Investigators recreated the overload in a lab, but no written root-cause report has been published."
+    },
+    {
+      "text": "Which equipment, site or upgrade set off the overload, and whether the router was faulty or the installation was."
+    },
+    {
+      "text": "Which specific frequencies or channels went down. None has been named publicly."
+    },
+    {
+      "text": "Whether a written finding from the FBI, CISA, the DOT Inspector General or the NTSB will follow. None had been published at the last check."
+    }
+  ],
+  "figures": [
+    {
+      "value": "3:10 PM",
+      "label": "First ground stop",
+      "detail": "O'Hare, comms and equipment",
+      "claim_id": "c033"
+    },
+    {
+      "value": "3:54 PM",
+      "label": "National ground stop",
+      "detail": "FAA Advisory 111",
+      "claim_id": "c045"
+    },
+    {
+      "value": "8:16 PM",
+      "label": "National stop cancelled",
+      "detail": "Advisory 005; ended nationwide at once",
+      "claim_id": "c077"
+    },
+    {
+      "value": "10:30 AM Sat",
+      "label": "Duffy/Bedford briefing",
+      "detail": "Held at DOT headquarters",
+      "claim_id": "c107"
+    },
+    {
+      "value": "~12,462",
+      "label": "Friday cancellations",
+      "detail": "FAA Q&A, Nov. 15",
+      "claim_id": "c120"
+    },
+    {
+      "value": "~18,100",
+      "label": "Fri–Sun cancellations",
+      "detail": "FlightAware count",
+      "claim_id": "c126"
+    }
+  ],
+  "charts": [
+    {
+      "id": "cancellations",
+      "title": "Cancellations",
+      "type": "line",
+      "data": "charts/cancellations.csv",
+      "x": {
+        "column": "time",
+        "kind": "time",
+        "label": "Nov 13, Eastern time"
+      },
+      "series": [
+        {
+          "column": "cancellations",
+          "label": "Cancellations"
+        }
+      ],
+      "unit": "flights",
+      "alt": "Cancellations rose from 440 at 5:00 PM to 5,000 at 8:30 PM Eastern on Nov 13.",
+      "caption": "FlightAware counts via IFR Meter, Fox Weather, ABC7.",
+      "source_ids": [
+        "s039",
+        "s052"
+      ]
+    },
+    {
+      "id": "delays",
+      "title": "Delays",
+      "type": "line",
+      "data": "charts/delays.csv",
+      "x": {
+        "column": "time",
+        "kind": "time",
+        "label": "Nov 13, Eastern time"
+      },
+      "series": [
+        {
+          "column": "delays",
+          "label": "Delays"
+        }
+      ],
+      "unit": "flights",
+      "alt": "Delays stood at 10,000 at 5:30 PM, reached 10,494 at 6:04 PM and were 9,124 at 8:30 PM Eastern on Nov 13.",
+      "caption": "Same sources; above 10,000 by 5:30 PM.",
+      "source_ids": [
+        "s039",
+        "s052"
+      ]
+    },
+    {
+      "id": "arrival-metering",
+      "title": "Flights in arrival metering",
+      "type": "line",
+      "data": "charts/arrival-metering.csv",
+      "x": {
+        "column": "time",
+        "kind": "time",
+        "label": "Nov 13, Eastern time"
+      },
+      "series": [
+        {
+          "column": "today",
+          "label": "Nov 13"
+        },
+        {
+          "column": "yesterday_same_time",
+          "label": "The day before, same time"
+        }
+      ],
+      "unit": "flights",
+      "alt": "Flights in arrival metering fell from 646 at 6:03 PM to 136 at 8:23 PM on Nov 13, against about 3,000 at the same times the day before.",
+      "caption": "Proxy for traffic in the air, per IFR Meter. Blank = no reading.",
+      "source_ids": [
+        "s039"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "id": "worst-delays",
+      "title": "Worst airport departure delays",
+      "data": "tables/worst-delays.csv",
+      "columns": [
+        {
+          "name": "airport",
+          "label": "Airport",
+          "type": "text"
+        },
+        {
+          "name": "time_et",
+          "label": "Time (ET)",
+          "type": "text"
+        },
+        {
+          "name": "avg_delay_min",
+          "label": "Average delay (minutes)",
+          "type": "number"
+        },
+        {
+          "name": "display",
+          "label": "As reported",
+          "type": "text"
+        }
+      ],
+      "intro": "Average minutes, latest public reading."
+    },
+    {
+      "id": "key-events",
+      "title": "Key events",
+      "data": "tables/key-events.csv",
+      "columns": [
+        {
+          "name": "time_et",
+          "label": "Time (ET)",
+          "type": "text"
+        },
+        {
+          "name": "event",
+          "label": "Event",
+          "type": "text"
+        },
+        {
+          "name": "detail",
+          "label": "Detail",
+          "type": "text"
+        }
+      ],
+      "intro": "Eastern time. Full evidence is in the timeline."
+    },
+    {
+      "id": "figure-sources",
+      "title": "Where the key figures come from",
+      "data": "tables/figure-sources.csv",
+      "columns": [
+        {
+          "name": "figure",
+          "label": "Figure",
+          "type": "text"
+        },
+        {
+          "name": "source_and_why",
+          "label": "Source and why it supports",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "thread-results",
+      "title": "Thread results",
+      "data": "tables/thread-results.csv",
+      "columns": [
+        {
+          "name": "thread",
+          "label": "Thread",
+          "type": "text"
+        },
+        {
+          "name": "verdict",
+          "label": "Verdict",
+          "type": "text"
+        },
+        {
+          "name": "confidence",
+          "label": "Confidence",
+          "type": "text"
+        },
+        {
+          "name": "key_sources",
+          "label": "Key sources",
+          "type": "text"
+        }
+      ],
+      "intro": "Findings from the open investigation threads and the Hacker News and Reddit sweep. Confirmed means a public source reports it, not that it is absolutely verified. Sourced reporting is labeled as rumor until the FAA or DOT confirms it."
+    },
+    {
+      "id": "community-search",
+      "title": "SDR and community search",
+      "data": "tables/community-search.csv",
+      "columns": [
+        {
+          "name": "source",
+          "label": "Where we looked",
+          "type": "text"
+        },
+        {
+          "name": "result",
+          "label": "Result",
+          "type": "text"
+        },
+        {
+          "name": "old_label",
+          "label": "Label on the earlier page",
+          "type": "text"
+        }
+      ],
+      "intro": "A record of where the desk looked and what it found. These rows are search results, not labelled claims."
+    },
+    {
+      "id": "network-and-carriers",
+      "title": "FAA network and carriers",
+      "data": "tables/network-and-carriers.csv",
+      "columns": [
+        {
+          "name": "item",
+          "label": "Item",
+          "type": "text"
+        },
+        {
+          "name": "detail",
+          "label": "Detail",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "ruled-out",
+      "title": "Checked and ruled out",
+      "data": "tables/ruled-out.csv",
+      "columns": [
+        {
+          "name": "area",
+          "label": "Area",
+          "type": "text"
+        },
+        {
+          "name": "finding",
+          "label": "Finding",
+          "type": "text"
+        },
+        {
+          "name": "source_and_why",
+          "label": "Source and why it supports",
+          "type": "text"
+        }
+      ],
+      "intro": "For 2:45–4:00 PM ET; nothing below lines up in time. Each finding now has a source link or a pending-source note."
+    },
+    {
+      "id": "smart-docs",
+      "title": "Public SMART documentation",
+      "data": "tables/smart-docs.csv",
+      "columns": [
+        {
+          "name": "source",
+          "label": "Source",
+          "type": "text"
+        },
+        {
+          "name": "what_it_says",
+          "label": "What it says",
+          "type": "text"
+        },
+        {
+          "name": "source_and_why",
+          "label": "Source and why it supports",
+          "type": "text"
+        }
+      ],
+      "intro": "Public web sources only. No public status page, API documentation or technical spec was found. Each row links the document that supports the summary."
+    },
+    {
+      "id": "smart-not-found",
+      "title": "SMART records looked for and not found",
+      "data": "tables/smart-not-found.csv",
+      "columns": [
+        {
+          "name": "item",
+          "label": "Item",
+          "type": "text"
+        },
+        {
+          "name": "what_the_record_shows",
+          "label": "What the record shows",
+          "type": "text"
+        },
+        {
+          "name": "source_and_why",
+          "label": "Source and why it supports",
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "type": "note",
+      "title": "The story so far",
+      "file": "notes/story-so-far.md",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Leading theories",
+      "group": "theory",
+      "open": true
+    },
+    {
+      "type": "chart",
+      "id": "cancellations",
+      "open": true
+    },
+    {
+      "type": "chart",
+      "id": "delays"
+    },
+    {
+      "type": "chart",
+      "id": "arrival-metering"
+    },
+    {
+      "type": "table",
+      "id": "worst-delays"
+    },
+    {
+      "type": "table",
+      "id": "key-events"
+    },
+    {
+      "type": "table",
+      "id": "figure-sources"
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline with evidence",
+      "open": true
+    },
+    {
+      "type": "table",
+      "id": "thread-results"
+    },
+    {
+      "type": "claims",
+      "title": "Side threads: SMART, Air Current, D.C. National",
+      "group": "side-thread"
+    },
+    {
+      "type": "table",
+      "id": "community-search"
+    },
+    {
+      "type": "note",
+      "title": "Radio exchanges recovered",
+      "file": "notes/radio-exchanges.md"
+    },
+    {
+      "type": "note",
+      "title": "Official statements",
+      "file": "notes/official-statements.md"
+    },
+    {
+      "type": "table",
+      "id": "network-and-carriers"
+    },
+    {
+      "type": "table",
+      "id": "ruled-out"
+    },
+    {
+      "type": "note",
+      "title": "Still in flight (still being monitored)",
+      "file": "notes/still-in-flight.md"
+    },
+    {
+      "type": "table",
+      "id": "smart-docs"
+    },
+    {
+      "type": "claims",
+      "title": "SMART procurement record",
+      "group": "smart-procurement",
+      "intro": "Public contract, notice and press records only. Items not found are stated plainly."
+    },
+    {
+      "type": "table",
+      "id": "smart-not-found"
+    },
+    {
+      "type": "note",
+      "title": "Items not carried over as labelled claims",
+      "file": "notes/not-carried-over.md"
+    }
+  ]
+}

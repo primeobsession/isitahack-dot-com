@@ -11,7 +11,7 @@
       "fields": [
         { "name": "claim_id", "type": "string", "description": "Permanent id for this claim, c plus a number (c001). Never reused or renumbered.", "constraints": { "required": true, "unique": true, "pattern": "^c[0-9]{3,}$" } },
         { "name": "group", "type": "string", "description": "The set this claim belongs to, for example theory, timeline, side-thread, ruled-out. A 'claims' section in incident.json shows one group.", "constraints": { "required": true, "pattern": "^[a-z][a-z0-9-]*$" } },
-        { "name": "claim_text", "type": "string", "description": "The claim in one short line, as a reader would recognise it (for example 'Cyberattack' or 'National ground stop ordered'). This is the row's heading.", "constraints": { "required": true, "maxLength": 160 } },
+        { "name": "claim_text", "type": "string", "description": "The claim in one short line, as a reader would recognise it (for example 'Cyberattack' or 'National ground stop ordered'). This is the row's heading.", "constraints": { "required": true, "maxLength": 220 } },
         { "name": "summary", "type": "string", "description": "One or two plain sentences saying what the sources say, attributed to who said it. Shown while the row is closed, so it must stand alone.", "constraints": { "required": true, "maxLength": 240 } },
         { "name": "detail", "type": "string", "description": "Everything else worth knowing: caveats, conflicting accounts, quotes. Shown when the row is opened. Inline Markdown only (links, bold, code).", "constraints": {} },
         { "name": "label", "type": "string", "description": "How well supported the claim is. Exactly one of the six labels, in full words.", "constraints": { "required": true, "enum": ["Confirmed", "Reported", "Unverified", "Rumor", "Debunked", "Not established"] } },
@@ -51,7 +51,7 @@
         { "name": "event_end_time", "type": "datetime", "description": "When it ended, if the event is a span (for example a radar outage from 12:19 to 12:44).", "constraints": {} },
         { "name": "time_text", "type": "string", "description": "Only when the time cannot be written as a clock time: how it should read on the page, for example 'Before 3:54 PM' or 'night'. It replaces the clock time; the date still comes from event_time.", "constraints": { "maxLength": 40 } },
         { "name": "time_basis", "type": "string", "description": "stated if the source gives the time, approximate if it gives a rough time, inferred if the desk worked it out. For inferred, say how in notes.", "constraints": { "required": true, "enum": ["stated", "approximate", "inferred"] } },
-        { "name": "event_text", "type": "string", "description": "What happened, in one attributed line.", "constraints": { "required": true, "maxLength": 200 } },
+        { "name": "event_text", "type": "string", "description": "What happened, in one attributed line.", "constraints": { "required": true, "maxLength": 220 } },
         { "name": "claim_id", "type": "string", "description": "The claim that carries this event's label, evidence and source.", "constraints": { "required": true, "pattern": "^c[0-9]{3,}$" } },
         { "name": "notes", "type": "string", "description": "The anchor for an inferred time, or other working notes.", "constraints": {} }
       ],

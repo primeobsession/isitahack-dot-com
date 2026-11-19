@@ -64,6 +64,10 @@ If something carries a label, it is a claim. Do not put labelled statements in a
 
 The build works these out, so they cannot drift: last-updated and last-checked times, label counts, row counts, the source list, the entry in `index.json`, and the `.md` and `.html` pages. `llms.txt` is still edited by hand; the build warns when it does not list an incident's files.
 
+## When something was never recorded
+
+Leave it empty; never guess. A source's `source_date` may be empty when the source does not state one. `retrieved_at` is required only when the link could be read (`link_status` ok or archived); a site that blocks automated access is `blocked` and the page says it was not re-read. A claim's `last_checked` may be empty only for a claim carried over from before the format. A timeline event may carry a date alone, an `approximate` time, or a short `time_text` such as "Before 3:54 PM". The update-log author `Desk` is only for entries made before roles were recorded.
+
 ## Two kinds of Confirmed
 
 A claim is labelled Confirmed by the agents when it meets the evidence bar. The verdict on a whole incident (`verdict`: Confirmed hack or Confirmed not a hack) is different: it needs the owner's personal approval, recorded in `verdict_approved_at`, and setting it closes the case.
@@ -100,5 +104,4 @@ A failed check is never bypassed (operations manual 7.3). The build runs the sam
 
 ## Not done yet
 
-- The FAA incident has not been converted. Its sources need tiers, publication dates and retrieval times that the old page never recorded, so converting it is a research job, not a reformat.
 - No link checker or Markdown lint (operations manual 7.1, items 5 and 8).

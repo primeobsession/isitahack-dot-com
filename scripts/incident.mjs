@@ -130,7 +130,7 @@ export function renderIncident(loaded, { root, dataHref, dir, repo, others }) {
     if (eventByClaim.has(id)) return `#${eventByClaim.get(id).event_id}`;
     return sources.get(c.source_ids[0]).source_url;
   };
-  const claimBody = (c) => `${c.detail ? `<p>${inline(c.detail)}</p>\n` : ""}<p><span class="field">Why it supports</span> ${esc(c.why_it_supports)}</p>
+  const claimBody = (c) => `<p><span class="field">Why it supports</span> ${esc(c.why_it_supports)}</p>${c.detail ? `\n<p>${inline(c.detail)}</p>` : ""}
 <ul class="source-lines">
 ${c.source_ids.map(sourceLine).join("\n")}
 </ul>${c.last_checked ? `\n<p class="meta">Last checked ${timeTag(c.last_checked)}</p>` : ""}`;
@@ -324,10 +324,10 @@ export function incidentMarkdown(loaded, { dataPath }) {
   for (const s of head.sections) {
     if (s.type === "claims") {
       const list = t.claims.filter((c) => c.group === s.group);
-      out.push(`## ${s.title}\n\n${tableMd(["Claim", "Label", "What we know", "Why it supports", "Sources"], list.map((c) => [c.claim_text, c.label, [c.summary, c.detail].filter(Boolean).join(" "), c.why_it_supports, c.source_ids.map(src).join(", ")]))}`);
+      out.push(`## ${s.title}\n\n${tableMd(["Claim", "Label", "What we know", "Why it supports, and more detail", "Sources"], list.map((c) => [c.claim_text, c.label, c.summary, [c.why_it_supports, c.detail].filter(Boolean).join(" "), c.source_ids.map(src).join(", ")]))}`);
     } else if (s.type === "timeline") {
       const when = (e) => `${e.time_text ? `${fmtDay(e.event_time)}, ${e.time_text}` : `${e.time_basis === "approximate" ? "about " : ""}${fmtDate(e.event_time)}`}${e.event_end_time ? ` to ${fmtTime(e.event_end_time)}` : ""}${e.time_basis === "inferred" ? " (inferred)" : ""}`;
-      out.push(`## ${s.title}\n\n${tableMd(["Time", "What happened", "Label", "Evidence", "Sources"], t.timeline.map((e) => { const c = claims.get(e.claim_id); return [when(e), e.event_text, c.label, c.detail || c.why_it_supports, c.source_ids.map(src).join(", ")]; }))}`);
+      out.push(`## ${s.title}\n\n${tableMd(["Time", "What happened", "Label", "Evidence", "Sources"], t.timeline.map((e) => { const c = claims.get(e.claim_id); return [when(e), e.event_text, c.label, [c.why_it_supports, c.detail].filter(Boolean).join(" "), c.source_ids.map(src).join(", ")]; }))}`);
     } else if (s.type === "questions") {
       out.push(`## ${s.title}\n\n${tableMd(["Question", "Answer", "Label"], t.questions.map((q) => [q.question_text, q.answer_text || `Not answered yet. ${q.what_would_settle_it || ""}`, q.label || "Open"]))}`);
     } else if (s.type === "quotes") {

@@ -34,5 +34,5 @@ Both are plain Node with no dependencies. See `format/README.md` for the inciden
 
 ## Status
 
-- `incidents/2026-11-faa-ground-stop.md` (FAA nationwide ground stop, Nov 13, 2026) is still a hand-written Markdown page from before the typed format. The build renders it as it is until it is converted.
+- The FAA nationwide ground stop (Nov 13, 2026) is the first incident in the typed format: `data/incidents/2026-11-faa-ground-stop/`. It was converted from a hand-written page on Nov 18, 2026; the page's update log says what changed.
 - `format/sample/` holds a made-up incident used to test the format. It is never built into the site.

@@ -343,8 +343,10 @@ details[open] > summary::after { transform: rotate(-135deg); margin-bottom: -0.1
 .row > summary::after { position: absolute; right: 0.4rem; top: 1.15rem; margin: 0; }
 .row[open] > summary::after { top: 1.4rem; margin: 0; }
 .row-lead { flex: 0 0 132px; }
-.rows-timeline .row-lead { flex-basis: 100px; font: 600 0.76rem/2 var(--mono); }
+.rows-timeline .row-lead { flex-basis: 100px; font: 600 0.76rem/1.5 var(--mono); padding-top: 0.2rem; }
+.rows-timeline .row-lead time { white-space: nowrap; }
 .row-day, .row-until { font-weight: 400; color: var(--muted); }
+.row-day { display: block; }
 .row-main { flex: 1 1 300px; min-width: 0; display: grid; gap: 0.1rem; }
 .row-title { font-size: 0.98rem; font-weight: 700; line-height: 1.4; letter-spacing: -0.005em; }
 .rows-timeline .row-title { font-weight: 600; }
@@ -358,7 +360,9 @@ details[open] > summary::after { transform: rotate(-135deg); margin-bottom: -0.1
 .source-lines { list-style: none; padding: 0; display: grid; gap: 0.35rem; font-size: 0.86rem; }
 .source-lines.numbered { list-style: decimal; padding-left: 2.2rem; gap: 0.6rem; }
 .source-lines a { font-weight: 600; }
-.log { list-style: none; padding: 0; display: grid; }
+.log { list-style: none; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); }
+.log > *, .log .more > *, .source-lines > *, .fold-body .more > * { min-width: 0; }
+.log-what, .source-lines li, .row-body, .prose { overflow-wrap: anywhere; }
 .log-row { display: flex; flex-wrap: wrap; gap: 0.2rem 1.2rem; padding: 0.9rem 0; border-top: 1px solid var(--rule); font-size: 0.9rem; line-height: 1.55; }
 .log-when { flex: 0 0 13rem; font: 600 0.74rem/2 var(--mono); }
 .log-what { flex: 1 1 360px; min-width: 0; }
