@@ -1,0 +1,115 @@
+{
+  "title": "isitahack incident tables",
+  "description": "Column definitions for the CSV files in an incident folder. The field vocabulary (name, type, constraints, foreignKeys) follows Frictionless Table Schema. Every 'description' is written for the agent filling the column in: it says what the column is for.",
+  "labels": ["Confirmed", "Reported", "Unverified", "Rumor", "Debunked", "Not established"],
+  "tables": {
+    "claims": {
+      "path": "claims.csv",
+      "required": true,
+      "description": "Every labelled claim on the page, one row each. Theories, timeline facts, findings and side threads are all claims; 'group' says which set a claim belongs to.",
+      "primaryKey": "claim_id",
+      "fields": [
+        { "name": "claim_id", "type": "string", "description": "Permanent id for this claim, c plus a number (c001). Never reused or renumbered.", "constraints": { "required": true, "unique": true, "pattern": "^c[0-9]{3,}$" } },
+        { "name": "group", "type": "string", "description": "The set this claim belongs to, for example theory, timeline, side-thread, ruled-out. A 'claims' section in incident.json shows one group.", "constraints": { "required": true, "pattern": "^[a-z][a-z0-9-]*$" } },
+        { "name": "claim_text", "type": "string", "description": "The claim in one short line, as a reader would recognise it (for example 'Cyberattack' or 'National ground stop ordered'). This is the row's heading.", "constraints": { "required": true, "maxLength": 160 } },
+        { "name": "summary", "type": "string", "description": "One or two plain sentences saying what the sources say, attributed to who said it. Shown while the row is closed, so it must stand alone.", "constraints": { "required": true, "maxLength": 240 } },
+        { "name": "detail", "type": "string", "description": "Everything else worth knowing: caveats, conflicting accounts, quotes. Shown when the row is opened. Inline Markdown only (links, bold, code).", "constraints": {} },
+        { "name": "label", "type": "string", "description": "How well supported the claim is. Exactly one of the six labels, in full words.", "constraints": { "required": true, "enum": ["Confirmed", "Reported", "Unverified", "Rumor", "Debunked", "Not established"] } },
+        { "name": "source_ids", "type": "list", "delimiter": ";", "itemType": "string", "description": "The sources that support this claim, primary source first, separated by semicolons. Every claim has at least one.", "constraints": { "required": true, "itemPattern": "^s[0-9]{3,}$" } },
+        { "name": "why_it_supports", "type": "string", "description": "One line: what the primary source shows and why that backs the claim.", "constraints": { "required": true, "maxLength": 240 } },
+        { "name": "notes", "type": "string", "description": "Working notes for the desk. Not shown on the page.", "constraints": {} },
+        { "name": "last_checked", "type": "datetime", "description": "When an agent last re-checked this claim against its sources.", "constraints": { "required": true } }
+      ],
+      "foreignKeys": [{ "fields": "source_ids", "reference": { "resource": "sources", "fields": "source_id" } }]
+    },
+    "sources": {
+      "path": "sources.csv",
+      "required": true,
+      "description": "Every source cited anywhere in the incident, one row each. Claims, quotes, charts, images and tables point here by source_id.",
+      "primaryKey": "source_id",
+      "fields": [
+        { "name": "source_id", "type": "string", "description": "Permanent id for this source, s plus a number (s001).", "constraints": { "required": true, "unique": true, "pattern": "^s[0-9]{3,}$" } },
+        { "name": "source_url", "type": "string", "description": "Public http(s) address of the source. Nothing behind a login.", "constraints": { "required": true, "unique": true, "pattern": "^https?://[^\\s]+$" } },
+        { "name": "source_name", "type": "string", "description": "Publisher or document name as a reader should see it, for example 'FAA ATCSCC Advisory 005'. Never a reporter's name.", "constraints": { "required": true, "maxLength": 120 } },
+        { "name": "source_tier", "type": "integer", "description": "1 official or primary statement, 2 independent reputable outlet, 3 named researcher or technical analysis, 4 social post from an official account or named expert, 5 rumor.", "constraints": { "required": true, "minimum": 1, "maximum": 5 } },
+        { "name": "independence_group", "type": "string", "description": "A short name for where the reporting originated. Outlets repeating one report share a value and count as one source. Leave empty for Tier 1.", "constraints": { "pattern": "^[a-z][a-z0-9-]*$" } },
+        { "name": "source_date", "type": "string", "description": "When the source was published. A date, or a date and time with offset if the time is known.", "constraints": { "required": true, "format": "date-or-datetime" } },
+        { "name": "retrieved_at", "type": "datetime", "description": "When an agent read the source.", "constraints": { "required": true } },
+        { "name": "archive_url", "type": "string", "description": "Public archived copy. Required when link_status is dead.", "constraints": { "pattern": "^https?://[^\\s]+$" } },
+        { "name": "link_status", "type": "string", "description": "ok, dead, blocked (the site blocks bots or needs a login, so it was not checked) or archived.", "constraints": { "required": true, "enum": ["ok", "dead", "blocked", "archived"] } },
+        { "name": "last_checked", "type": "datetime", "description": "When the link was last checked.", "constraints": { "required": true } }
+      ]
+    },
+    "timeline": {
+      "path": "timeline.csv",
+      "required": true,
+      "description": "Dated events in the order they happened. Each event takes its label and source from one claim, so the label lives in one place.",
+      "primaryKey": "event_id",
+      "fields": [
+        { "name": "event_id", "type": "string", "description": "Permanent id for this event, t plus a number (t001).", "constraints": { "required": true, "unique": true, "pattern": "^t[0-9]{3,}$" } },
+        { "name": "event_time", "type": "datetime", "description": "When the event happened, with timezone offset.", "constraints": { "required": true } },
+        { "name": "event_end_time", "type": "datetime", "description": "When it ended, if the event is a span (for example a radar outage from 12:19 to 12:44).", "constraints": {} },
+        { "name": "time_basis", "type": "string", "description": "stated if the source gives the time, inferred if the desk worked it out. For inferred, say how in notes.", "constraints": { "required": true, "enum": ["stated", "inferred"] } },
+        { "name": "event_text", "type": "string", "description": "What happened, in one attributed line.", "constraints": { "required": true, "maxLength": 200 } },
+        { "name": "claim_id", "type": "string", "description": "The claim that carries this event's label, evidence and source.", "constraints": { "required": true, "pattern": "^c[0-9]{3,}$" } },
+        { "name": "notes", "type": "string", "description": "The anchor for an inferred time, or other working notes.", "constraints": {} }
+      ],
+      "foreignKeys": [{ "fields": "claim_id", "reference": { "resource": "claims", "fields": "claim_id" } }]
+    },
+    "questions": {
+      "path": "questions.csv",
+      "required": true,
+      "description": "The questions people are asking and the rumors going round, each with a plain answer once there is one. The page's headline question is the row named by main_question_id in incident.json.",
+      "primaryKey": "question_id",
+      "fields": [
+        { "name": "question_id", "type": "string", "description": "Permanent id, q plus a number (q001).", "constraints": { "required": true, "unique": true, "pattern": "^q[0-9]{3,}$" } },
+        { "name": "kind", "type": "string", "description": "question for something people are asking, rumor for a claim going round.", "constraints": { "required": true, "enum": ["question", "rumor"] } },
+        { "name": "question_text", "type": "string", "description": "The question in the words a reader would use, for example 'Was it a hack?'.", "constraints": { "required": true, "maxLength": 160 } },
+        { "name": "state", "type": "string", "description": "open while the desk is still working on it, answered once answer_text and label are filled in.", "constraints": { "required": true, "enum": ["open", "answered"] } },
+        { "name": "answer_text", "type": "string", "description": "The plain answer, one or two calm sentences. Lead with the answer, not the threat.", "constraints": { "maxLength": 240 } },
+        { "name": "label", "type": "string", "description": "The label on the answer. Required once answered. Use Not established when the evidence settles nothing.", "constraints": { "enum": ["Confirmed", "Reported", "Unverified", "Rumor", "Debunked", "Not established"] } },
+        { "name": "claim_ids", "type": "list", "delimiter": ";", "itemType": "string", "description": "The claims the answer rests on, separated by semicolons. Required once answered.", "constraints": { "itemPattern": "^c[0-9]{3,}$" } },
+        { "name": "rumor_type", "type": "string", "description": "For rumors: what kind it turned out to be.", "constraints": { "enum": ["stale-page", "false-context", "fabricated", "misattributed", "other"] } },
+        { "name": "what_would_settle_it", "type": "string", "description": "What evidence would answer this. Required while open, and when the label is Not established.", "constraints": { "maxLength": 240 } },
+        { "name": "opened_at", "type": "datetime", "description": "When the desk first recorded the question.", "constraints": { "required": true } },
+        { "name": "answered_at", "type": "datetime", "description": "When the current answer was written.", "constraints": {} }
+      ],
+      "foreignKeys": [{ "fields": "claim_ids", "reference": { "resource": "claims", "fields": "claim_id" } }]
+    },
+    "quotes": {
+      "path": "quotes.csv",
+      "required": false,
+      "description": "Statements quoted word for word, with who said them. Use for official statements and for transcribed audio.",
+      "primaryKey": "quote_id",
+      "fields": [
+        { "name": "quote_id", "type": "string", "description": "Permanent id, v plus a number (v001).", "constraints": { "required": true, "unique": true, "pattern": "^v[0-9]{3,}$" } },
+        { "name": "group", "type": "string", "description": "The set this quote belongs to, for example official-statement or radio. A 'quotes' section shows one group.", "constraints": { "required": true, "pattern": "^[a-z][a-z0-9-]*$" } },
+        { "name": "quote_text", "type": "string", "description": "The exact words. Never paraphrased, never invented.", "constraints": { "required": true } },
+        { "name": "speaker", "type": "string", "description": "The organisation, or a public official by name and role. Never a private person, a reporter or a handle.", "constraints": { "required": true, "maxLength": 120 } },
+        { "name": "context", "type": "string", "description": "Where or how it was said, for example 'White House briefing'.", "constraints": { "maxLength": 160 } },
+        { "name": "said_at", "type": "string", "description": "When it was said, if known. A date, or a date and time with offset.", "constraints": { "format": "date-or-datetime" } },
+        { "name": "source_id", "type": "string", "description": "The source the quote was taken from.", "constraints": { "required": true, "pattern": "^s[0-9]{3,}$" } },
+        { "name": "confidence", "type": "string", "description": "For transcribed audio only: how sure the desk is of the words and the speaker.", "constraints": { "enum": ["high", "medium", "low"] } },
+        { "name": "notes", "type": "string", "description": "Caveats shown with the quote, for example 'edited clip, time inferred'.", "constraints": {} }
+      ],
+      "foreignKeys": [{ "fields": "source_id", "reference": { "resource": "sources", "fields": "source_id" } }]
+    },
+    "update_log": {
+      "path": "update_log.csv",
+      "required": true,
+      "description": "Every check and change, newest first. The newest row that changed something supplies 'The latest' at the top of the page and the page's last-updated time.",
+      "primaryKey": "log_id",
+      "fields": [
+        { "name": "log_id", "type": "string", "description": "Permanent id, u plus a number (u001).", "constraints": { "required": true, "unique": true, "pattern": "^u[0-9]{3,}$" } },
+        { "name": "logged_at", "type": "datetime", "description": "When this check or change was made, with the America/New_York offset.", "constraints": { "required": true } },
+        { "name": "run_type", "type": "string", "description": "What kind of run made the entry.", "constraints": { "required": true, "enum": ["live", "watch", "periodic", "correction", "manual"] } },
+        { "name": "change_type", "type": "string", "description": "What happened. Use checked_no_change when nothing changed, blocked_source when a source could not be read.", "constraints": { "required": true, "enum": ["added", "updated", "label_change", "correction", "staleness_check", "checked_no_change", "blocked_source"] } },
+        { "name": "headline", "type": "string", "description": "One plain sentence a reader could take away, for example 'Investigators recreated the overload in the lab; the root cause is still unclear.' Not 'Morning watch check'.", "constraints": { "required": true, "maxLength": 140 } },
+        { "name": "summary", "type": "string", "description": "What changed and why, in full. Include 'not checked: login required' for blocked sources.", "constraints": { "required": true } },
+        { "name": "claim_ids", "type": "list", "delimiter": ";", "itemType": "string", "description": "The claims this entry added or changed, separated by semicolons.", "constraints": { "itemPattern": "^c[0-9]{3,}$" } },
+        { "name": "author", "type": "string", "description": "The role that made the entry. Never a person's name.", "constraints": { "required": true, "enum": ["Research agent", "Verification agent", "Writer agent", "Editor-in-Chief", "Owner"] } }
+      ],
+      "foreignKeys": [{ "fields": "claim_ids", "reference": { "resource": "claims", "fields": "claim_id" } }]
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://isitahack.com/format/incident.schema.json",
+  "title": "isitahack incident head (incident.json)",
+  "description": "The head of one incident: what it is, how big it is, the short summary a reader sees first, and the order of the sections below it. Row data lives in the CSV files beside it. Every 'description' is written for the agent filling the field in.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format_version", "slug", "title", "status", "incident_date", "disclaimer", "main_question_id", "size", "size_basis", "who_is_affected", "known", "not_known", "sections"],
+  "properties": {
+    "format_version": { "const": 1, "description": "Version of this format. Always 1 until the format itself changes." },
+    "slug": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[a-z0-9]+(-[a-z0-9]+)*$", "description": "The incident's permanent short name: year, month, then a few words (2026-11-faa-ground-stop). Must equal the folder name." },
+    "title": { "type": "string", "minLength": 1, "maxLength": 90, "description": "The page title. Plain and calm; no alarmist words." },
+    "status": { "enum": ["monitoring", "resolved", "closed"], "description": "monitoring while the desk is still checking, resolved once the event is over but the cause is not settled, closed only with an approved verdict." },
+    "incident_date": { "type": "string", "format": "date", "description": "The day the incident began." },
+    "disclaimer": { "type": "string", "minLength": 1, "description": "The entertainment and AI disclaimer for this page, naming the kinds of organisation it mentions." },
+    "main_question_id": { "type": "string", "pattern": "^q[0-9]{3,}$", "description": "The row in questions.csv that is the headline question, usually 'Was it a hack?'. Its answer and label open the page." },
+    "verdict": { "enum": ["Confirmed hack", "Confirmed not a hack", null], "description": "The final call on the whole incident. Leave null until the owner has personally approved it. Setting it closes the case." },
+    "verdict_approved_at": { "type": ["string", "null"], "format": "date-time", "description": "When the owner approved the verdict. Required whenever verdict is set." },
+    "size": { "enum": ["Local", "Regional", "Large", "Nation-level", "Nation-level potential"], "description": "How far the incident reaches. Use 'Nation-level potential' only when it would be nation-level if the worst case were true." },
+    "size_basis": { "type": "string", "minLength": 1, "maxLength": 300, "description": "One or two plain sentences on why that size. For a potential size, state what is actually known." },
+    "who_is_affected": { "type": "string", "minLength": 1, "maxLength": 300, "description": "In practical terms: which service, which people, and what they can or need not do." },
+    "known": {
+      "type": "array", "maxItems": 6,
+      "description": "The few things that are established. Each one must point at a claim labelled Confirmed.",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["text", "claim_id"],
+        "properties": {
+          "text": { "type": "string", "minLength": 1, "maxLength": 200, "description": "One plain sentence." },
+          "claim_id": { "type": "string", "pattern": "^c[0-9]{3,}$", "description": "The Confirmed claim this rests on." }
+        }
+      }
+    },
+    "not_known": {
+      "type": "array", "maxItems": 6,
+      "description": "The few things nobody has established yet. Say them plainly; do not guess.",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["text"],
+        "properties": {
+          "text": { "type": "string", "minLength": 1, "maxLength": 200, "description": "One plain sentence." },
+          "question_id": { "type": "string", "pattern": "^q[0-9]{3,}$", "description": "The open question in questions.csv this corresponds to, if there is one." }
+        }
+      }
+    },
+    "figures": {
+      "type": "array", "maxItems": 8,
+      "description": "Key numbers and times for the 'At a glance' tiles.",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["value", "label", "claim_id"],
+        "properties": {
+          "value": { "type": "string", "minLength": 1, "maxLength": 14, "description": "The number or time itself, short enough for a tile (3:54 PM, 22, ~12,462)." },
+          "label": { "type": "string", "minLength": 1, "maxLength": 40, "description": "What the value is." },
+          "detail": { "type": "string", "maxLength": 80, "description": "A few words of context, such as the source document." },
+          "claim_id": { "type": "string", "pattern": "^c[0-9]{3,}$", "description": "The claim that carries the source for this figure." }
+        }
+      }
+    },
+    "charts": { "type": "array", "description": "Charts available to the page. A chart appears only where a 'chart' section names it.", "items": { "$ref": "#/$defs/chart" } },
+    "images": { "type": "array", "description": "Images available to the page. An image appears only where an 'image' section names it.", "items": { "$ref": "#/$defs/image" } },
+    "tables": { "type": "array", "description": "Extra tables for information that fits none of the standard files, for example who runs which network.", "items": { "$ref": "#/$defs/table" } },
+    "sections": {
+      "type": "array", "minItems": 1,
+      "description": "The sections under the summary, in page order. The summary block at the top, the update log and the source list are added by the build and are not listed here.",
+      "items": {
+        "oneOf": [
+          { "$ref": "#/$defs/sectionClaims" }, { "$ref": "#/$defs/sectionTimeline" }, { "$ref": "#/$defs/sectionQuestions" }, { "$ref": "#/$defs/sectionQuotes" },
+          { "$ref": "#/$defs/sectionChart" }, { "$ref": "#/$defs/sectionImage" }, { "$ref": "#/$defs/sectionTable" }, { "$ref": "#/$defs/sectionNote" }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+    "title": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "chart": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "title", "type", "data", "x", "series", "alt", "source_ids"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id", "description": "Short name used by a 'chart' section to place it." },
+        "title": { "$ref": "#/$defs/title", "description": "What the chart shows, as a plain heading." },
+        "type": { "enum": ["line", "bar"], "description": "line for a value changing over time, bar for comparing a few categories." },
+        "data": { "type": "string", "pattern": "^charts/[a-z0-9-]+\\.csv$", "description": "The CSV file holding the numbers. The build draws the chart from it and publishes the file." },
+        "x": {
+          "type": "object", "additionalProperties": false, "required": ["column", "kind", "label"],
+          "description": "The horizontal axis.",
+          "properties": {
+            "column": { "type": "string", "minLength": 1, "description": "Column name in the data file." },
+            "kind": { "enum": ["time", "category"], "description": "time if the column holds date-times with offset, category if it holds names." },
+            "label": { "type": "string", "minLength": 1, "maxLength": 40, "description": "Axis label, with the timezone for times." }
+          }
+        },
+        "series": {
+          "type": "array", "minItems": 1, "maxItems": 4,
+          "description": "The lines or bar groups. Each is one numeric column. All series share one scale, so they must be the same kind of quantity.",
+          "items": {
+            "type": "object", "additionalProperties": false, "required": ["column", "label"],
+            "properties": {
+              "column": { "type": "string", "minLength": 1, "description": "Column name in the data file. Every value must be a number." },
+              "label": { "type": "string", "minLength": 1, "maxLength": 40, "description": "Legend label." }
+            }
+          }
+        },
+        "unit": { "type": "string", "maxLength": 20, "description": "Unit of the values, if any (flights, minutes)." },
+        "alt": { "type": "string", "minLength": 20, "maxLength": 300, "description": "What the chart shows, in words, for someone who cannot see it: the trend and the key numbers." },
+        "caption": { "type": "string", "maxLength": 200, "description": "A note under the chart, such as how the numbers were counted." },
+        "source_ids": { "type": "array", "minItems": 1, "items": { "type": "string", "pattern": "^s[0-9]{3,}$" }, "description": "Where the numbers came from." }
+      }
+    },
+    "image": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "file", "alt", "credit", "rights", "sha256", "width", "height"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id", "description": "Short name used by an 'image' section to place it." },
+        "file": { "type": "string", "pattern": "^images/[a-z0-9-]+\\.(png|jpg|webp|svg)$", "description": "The image file in this incident's images folder." },
+        "alt": { "type": "string", "minLength": 10, "maxLength": 300, "description": "What the image shows, for someone who cannot see it." },
+        "caption": { "type": "string", "maxLength": 200, "description": "The line shown under the image." },
+        "credit": { "type": "string", "minLength": 1, "maxLength": 120, "description": "Who made it, and the licence if it is licensed. Use 'isitahack.com' for the desk's own work." },
+        "rights": { "enum": ["own", "public-domain", "licensed"], "description": "Why we may publish it: own (the desk made it), public-domain (for example a US federal government work), licensed (a licence allows reuse; name it in credit). News photos and screenshots of other people's articles are none of these and are not allowed." },
+        "source_id": { "type": "string", "pattern": "^s[0-9]{3,}$", "description": "Where the image came from. Required unless rights is own." },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$", "description": "SHA-256 of the file, so a changed image shows." },
+        "width": { "type": "integer", "minimum": 1, "description": "Width in pixels, so the page does not jump while loading." },
+        "height": { "type": "integer", "minimum": 1, "description": "Height in pixels." }
+      }
+    },
+    "table": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "title", "data", "columns"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id", "description": "Short name used by a 'table' section to place it." },
+        "title": { "$ref": "#/$defs/title", "description": "The table's heading." },
+        "data": { "type": "string", "pattern": "^tables/[a-z0-9-]+\\.csv$", "description": "The CSV file holding the rows." },
+        "columns": {
+          "type": "array", "minItems": 1, "maxItems": 6,
+          "description": "The columns, in file order. The file's header row must match these names exactly.",
+          "items": {
+            "type": "object", "additionalProperties": false, "required": ["name", "label", "type"],
+            "properties": {
+              "name": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$", "description": "Column name in the file." },
+              "label": { "type": "string", "minLength": 1, "maxLength": 40, "description": "Heading shown on the page." },
+              "type": { "enum": ["text", "number", "label", "source"], "description": "text for words, number for a number, label for one of the six labels, source for a source_id." }
+            }
+          }
+        }
+      }
+    },
+    "sectionClaims": {
+      "type": "object", "additionalProperties": false, "required": ["type", "title", "group"],
+      "properties": {
+        "type": { "const": "claims" },
+        "title": { "$ref": "#/$defs/title", "description": "Section heading." },
+        "group": { "$ref": "#/$defs/id", "description": "Which group of claims.csv rows to show." },
+        "intro": { "type": "string", "maxLength": 300, "description": "A sentence or two above the rows." },
+        "open": { "type": "boolean", "description": "true to show the section expanded when the page loads." }
+      }
+    },
+    "sectionTimeline": {
+      "type": "object", "additionalProperties": false, "required": ["type", "title"],
+      "properties": { "type": { "const": "timeline" }, "title": { "$ref": "#/$defs/title" }, "intro": { "type": "string", "maxLength": 300 }, "open": { "type": "boolean" } }
+    },
+    "sectionQuestions": {
+      "type": "object", "additionalProperties": false, "required": ["type", "title"],
+      "properties": { "type": { "const": "questions" }, "title": { "$ref": "#/$defs/title" }, "intro": { "type": "string", "maxLength": 300 }, "open": { "type": "boolean" } }
+    },
+    "sectionQuotes": {
+      "type": "object", "additionalProperties": false, "required": ["type", "title", "group"],
+      "properties": { "type": { "const": "quotes" }, "title": { "$ref": "#/$defs/title" }, "group": { "$ref": "#/$defs/id", "description": "Which group of quotes.csv rows to show." }, "intro": { "type": "string", "maxLength": 300 }, "open": { "type": "boolean" } }
+    },
+    "sectionChart": {
+      "type": "object", "additionalProperties": false, "required": ["type", "id"],
+      "properties": { "type": { "const": "chart" }, "id": { "$ref": "#/$defs/id", "description": "A chart defined in 'charts'." }, "open": { "type": "boolean" } }
+    },
+    "sectionImage": {
+      "type": "object", "additionalProperties": false, "required": ["type", "id"],
+      "properties": { "type": { "const": "image" }, "id": { "$ref": "#/$defs/id", "description": "An image defined in 'images'." }, "open": { "type": "boolean" } }
+    },
+    "sectionTable": {
+      "type": "object", "additionalProperties": false, "required": ["type", "id"],
+      "properties": { "type": { "const": "table" }, "id": { "$ref": "#/$defs/id", "description": "A table defined in 'tables'." }, "open": { "type": "boolean" } }
+    },
+    "sectionNote": {
+      "type": "object", "additionalProperties": false, "required": ["type", "title", "file"],
+      "properties": { "type": { "const": "note" }, "title": { "$ref": "#/$defs/title" }, "file": { "type": "string", "pattern": "^notes/[a-z0-9-]+\\.md$", "description": "A Markdown file of free narrative. Use sparingly: anything with a label belongs in claims.csv." }, "open": { "type": "boolean" } }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
+s001,https://water.example.org/status,Example City Water status page,1,,2026-01-12T08:45:00-05:00,2026-01-12T09:05:00-05:00,,ok,2026-01-13T08:00:00-05:00
+s002,https://www.example.org/news/billing-portal-outage,Example City Water press release,1,,2026-01-12T13:00:00-05:00,2026-01-12T13:10:00-05:00,,ok,2026-01-13T08:00:00-05:00
+s003,https://news.example.com/local/water-portal-down,Example Daily News,2,example-daily,2026-01-12,2026-01-12T14:00:00-05:00,,ok,2026-01-13T08:00:00-05:00
+s004,https://wire.example.net/2026/01/12/water-payments-delayed,Example Wire,2,example-wire,2026-01-12,2026-01-12T15:20:00-05:00,,ok,2026-01-13T08:00:00-05:00
+s005,https://forum.example.com/t/1234,Anonymous forum thread,5,,2026-01-12,2026-01-12T10:30:00-05:00,,ok,2026-01-13T08:00:00-05:00
