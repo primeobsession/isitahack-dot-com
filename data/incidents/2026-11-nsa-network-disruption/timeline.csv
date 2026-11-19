@@ -1,0 +1,7 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-10-21,,,stated,"CISA, the FBI and the NSA urge immediate patching of the PHP2Shell flaws",c005,
+t002,2026-11-17,,,stated,NSA says some internal systems were affected during scheduled routine maintenance,c001,
+t003,2026-11-17,,Tuesday afternoon,stated,DNI says on Fox Business that PHP patching left some NSA systems not coming back up,c002,
+t004,2026-11-18,,,stated,DNI tells a House committee the outages were not a coordinated or state-sponsored attack,c004,
+t005,2026-11-18,,,stated,White House publishes DNI and Secretary Rubio remarks: no indication of a cyberattack,c003,
+t006,2026-11-19,,,stated,Outlets report the network still partly down for a third day; most staff told to stay home,c006,

@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-nsa-network-disruption",
+      "title": "NSA internal network disruption, Nov 17, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-19T17:20:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-nsa-network-disruption.md",
+        "html": "incidents/2026-11-nsa-network-disruption.html",
+        "data": "data/incidents/2026-11-nsa-network-disruption/"
+      }
+    },
+    {
       "slug": "2026-11-apple-services-outage",
       "title": "Apple services outage, Nov 17, 2026",
       "status": "monitoring",
