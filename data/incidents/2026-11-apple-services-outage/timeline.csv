@@ -1,0 +1,15 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-17T11:15:00-05:00,,,stated,"AppleCare on Device outage begins, per Apple's status page",c002,
+t002,2026-11-17T11:30:00-05:00,,,stated,"First Downdetector user reports, per Engadget",c004,
+t003,2026-11-17T11:45:00-05:00,,,stated,"iCloud Account & Sign In, iCloud Mail, iCloud.com and App Store problems begin, per Apple's status page",c002,
+t004,2026-11-17T12:20:00-05:00,,,stated,"About 2,300 US Apple Pay reports on Downdetector, per Reuters",c005,
+t005,2026-11-17T13:25:00-05:00,,,stated,"iCloud Mail entry resolved, per Apple's status page",c001,
+t006,2026-11-17T13:40:00-05:00,,,stated,"Apple Business, Apple School Manager and Schoolwork problems begin, per Apple's status page",c002,
+t007,2026-11-17T14:30:00-05:00,,,inferred,"Apple's statement (internal update, not a cyberattack) is published by outlets",c007,Anchor: MacRumors posted at 11:31 AM PT and Engadget added the statement at 2:35 PM ET; Bloomberg had it first.
+t008,2026-11-17T15:00:00-05:00,,,stated,"App Store and Volume Purchase Program outages resolved, per Apple's status page",c001,
+t009,2026-11-17T15:39:00-05:00,,,stated,"AppleCare on Device outage resolved, per Apple's status page",c001,
+t010,2026-11-17T16:15:00-05:00,,,stated,"iCloud Account & Sign In and iCloud.com resolved, per Apple's status page",c001,
+t011,2026-11-17T17:00:00-05:00,,,stated,"Last Nov 17 consumer entries (Apple Business, Apple School Manager, Schoolwork, Volume Purchase Program) resolved, per Apple's status page",c003,
+t012,2026-11-17T17:24:00-05:00,,,stated,USA Today sees every service listed as available,c003,
+t013,2026-11-17T19:10:00-05:00,,,stated,"Two App Store Connect developer outages still open, per AppleInsider",c016,
+t014,2026-11-18T10:52:00-05:00,,,stated,"Separate Stocks outage begins (resolved 5:55 PM), per Apple's status page",c018,

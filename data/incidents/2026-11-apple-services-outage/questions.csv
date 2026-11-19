@@ -1,0 +1,7 @@
+question_id,kind,question_text,state,answer_text,label,claim_ids,rumor_type,what_would_settle_it,opened_at,answered_at
+q001,question,Was the Apple services outage a cyberattack?,answered,"No credible source says it was, and we found no evidence that it was. Apple says an internal update caused the outage and that it was not a cyberattack; that rests on Apple's word alone.",Rumor,c011;c010;c008,,,2026-11-18T21:20:00-05:00,2026-11-18T21:20:00-05:00
+q002,question,Did Apple services really go down on Nov 17?,answered,Yes. Apple's own status page lists the outages.,Confirmed,c001,,,2026-11-18T21:20:00-05:00,2026-11-18T21:20:00-05:00
+q003,question,Did Apple say an internal update caused it?,answered,"Yes, in a statement given to several outlets.",Confirmed,c007,,,2026-11-18T21:20:00-05:00,2026-11-18T21:20:00-05:00
+q004,question,Did an internal update cause it?,answered,That is Apple's explanation. Apple has given no technical detail and no one has checked it independently.,Reported,c008,,,2026-11-18T21:20:00-05:00,2026-11-18T21:20:00-05:00
+q005,question,Did Apple say it was not a cyberattack?,answered,Yes.,Confirmed,c010,,,2026-11-18T21:20:00-05:00,2026-11-18T21:20:00-05:00
+q006,rumor,Was it part of a coordinated attack with the week's other outages?,answered,The White House says there is no indication of a coordinated cyberattack or hostile actor behind the recent outages.,Debunked,c012,,,2026-11-18T21:20:00-05:00,2026-11-18T21:20:00-05:00
