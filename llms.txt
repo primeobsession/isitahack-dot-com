@@ -6,7 +6,9 @@
 - [index.json](https://isitahack.com/index.json): JSON list of all incidents: slug, title, status, last_updated, paths to its files.
 
 ## Pages
-- [Home](https://isitahack.com/index.html): HTML list of incidents, generated from front-matter.
+- [Home](https://isitahack.com/index.html): HTML list of incidents, generated from each incident's data.
+- [How it works](https://isitahack.com/how-it-works.html): who does what, the six labels, the sourcing tiers and the rules the agents work to.
+- [About](https://isitahack.com/about.html): why the site exists, who is behind it, and how to report an error.
 
 ## Incident pages (Markdown with YAML front-matter, plus a rendered .html)
 - [FAA ground stop, Nov 13 2026](https://isitahack.com/incidents/2026-11-faa-ground-stop.md): incident write-up (still monitored). Front-matter: slug, title, status, labels summary, dates.
@@ -34,6 +36,11 @@
 - [thread_results.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/thread_results.csv): columns thread,verdict,confidence,sources
 - [timeline_events.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/timeline_events.csv): columns time_et,event,evidence,label
 - [update_log.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/update_log.csv): columns time_et,update
+
+## Format
+- [format/README.md](https://github.com/primeobsession/isitahack-dot-com/blob/main/format/README.md): the typed incident format. New incidents are a folder of JSON and CSV under data/incidents/<slug>/, checked by scripts/validate.mjs.
+- [format/incident.schema.json](https://github.com/primeobsession/isitahack-dot-com/blob/main/format/incident.schema.json): JSON Schema for incident.json, with a description of every field.
+- [format/tables.schema.json](https://github.com/primeobsession/isitahack-dot-com/blob/main/format/tables.schema.json): column definitions for claims.csv, sources.csv, timeline.csv, questions.csv, quotes.csv and update_log.csv.
 
 ## Notes
 - Schemas are documented in the operations manual section 6.1.

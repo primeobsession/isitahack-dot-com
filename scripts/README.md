@@ -1,39 +1,52 @@
 # scripts
 
+Plain Node (tested on Node 22), zero dependencies, no framework or bundler.
+
 ## build.mjs
 
-Renders the site. Plain Node (tested on Node 24), zero dependencies, no framework, bundler or client-side JavaScript (the only script tags are the Google Tag Manager partial below).
-
 ```sh
-node scripts/build.mjs
+node scripts/build.mjs                            # build the site in place
+node scripts/build.mjs --out _preview             # build a copy into a folder
+node scripts/build.mjs --out _preview --sample    # ...and include the made-up sample incident
 ```
 
 What it does:
 
-1. Reads every `incidents/*.md`, parses the YAML front-matter (`slug`, `title`, `status`, `incident_date`, `last_updated`, `labels_summary`, `disclaimer`, ...) and checks that `slug` matches the filename.
-2. Renders the Markdown body to `incidents/<slug>.html`, next to the `.md`:
-   - a status banner (front-matter `status` and `last_updated`), the page title, and the label tally from `labels_summary`;
-   - the body's callouts (the "Not verified" disclaimer is kept word for word), a table of contents, then one section per `##` heading, in file order;
-   - table cells whose whole text is one of the six labels (Confirmed, Reported, Unverified, Rumor, Debunked, Not established) become text pills with distinct colors and border styles;
-   - every link (Markdown links and bare URLs) becomes `<a href="..." rel="noopener">`, opening in the same tab; only http(s) URLs are linked;
-   - pipe tables reflow into cards on phones and become scrollable tables from 760px wide;
-   - the footer carries the front-matter `disclaimer` and links to the `.md`, the raw data, `index.json` and `llms.txt`.
-3. Regenerates `index.html` from the incidents' front-matter, newest `last_updated` first.
-4. Updates `index.json`: keeps existing fields, refreshes `title`, `status`, `last_updated`, and adds `files.html`.
-5. Warns (does not fail) when `llms.txt` does not list an incident's `.md` and `.html`, when the body's "Last updated" date differs from front-matter, or when a table cell holds a raw label code (`C`, `R`, `D`).
+1. For every `data/incidents/<slug>/incident.json`, loads the folder through `validate.mjs`. Any problem stops the build; a failed check is never bypassed. It then writes `incidents/<slug>.html` and a Markdown version, `incidents/<slug>.md`. Both are outputs.
+2. For every other `incidents/<slug>.md`, renders the hand-written page as it is. This is how incidents not yet converted to the typed format stay on the site.
+3. Writes `index.html`, `how-it-works.html` and `about.html` from `pages/*.html`.
+4. Updates `index.json`, keeping existing fields.
+5. Warns (does not fail) when `llms.txt` does not list a page or an incident's files.
 
-All content is HTML-escaped. The build reads no clock, locale or environment, so the same input produces byte-identical output. Unsupported Markdown is rendered as escaped text, never dropped. A table row with the wrong number of cells fails the build.
+The build reads no clock, locale or environment, so the same input produces byte-identical output. All content is HTML-escaped.
 
-The Markdown subset supported: `#`–`######` headings, paragraphs, pipe tables, `>` blockquotes (a final `> — Name` line makes an attributed quote, a leading `**Lead**` makes a callout), `-` lists and `- [ ]`/`- [x]` task lists, `[text](url)`, bare URLs, `**bold**`, `` `code` ``, and fenced code blocks.
+`--sample` only works with `--out`: the sample incident in `format/sample/` is made up and must never be built into the real site. To look at a preview, serve the folder, for example `python3 -m http.server --directory _preview`.
+
+## validate.mjs
+
+```sh
+node scripts/validate.mjs [incident-folder ...]
+```
+
+Checks incident folders against `format/incident.schema.json` and `format/tables.schema.json`, and against the label, privacy and verdict rules. With no arguments it checks everything under `data/incidents`. Exit code 1 on any problem. See `format/README.md` for the list of checks.
+
+## The other modules
+
+- `incident.mjs`: turns one loaded incident into page HTML and Markdown.
+- `chart.mjs`: draws a chart as inline SVG from a chart definition and its CSV rows. No client-side script; every mark has a hover title and the page prints the numbers as a table.
+- `html.mjs`: escaping, dates, label tags and the Markdown subset shared by the above.
+
+The Markdown subset (hand-written pages and `notes/*.md`): `#`–`######` headings, paragraphs, pipe tables, `>` blockquotes (a final `> — Name` line makes an attributed quote, a leading `**Lead**` makes a callout), `-` lists and `- [ ]`/`- [x]` task lists, `[text](url)`, bare URLs, `**bold**`, `` `code` ``, and fenced code blocks. Anything else is rendered as escaped text, never dropped.
 
 ## partials/head.html
 
-Shared `<head>` snippet inserted verbatim into every generated page (incident pages and `index.html`). It holds the Google Tag Manager loader for container `GTM-M6WWGDJ5`. Edit it here, not in the generated HTML.
+Shared `<head>` snippet inserted verbatim into every generated page. It holds the Google Tag Manager loader for container `GTM-M6WWGDJ5`. Edit it here, not in the generated HTML.
 
-## Styling
+## Page scripts
 
-`assets/site.css`: one shared, mobile-first stylesheet with system fonts and light/dark themes via `prefers-color-scheme`. No external fonts or CDNs.
+Two small inline scripts, both optional: one applies a stored light or dark choice before the page paints, the other wires up the theme toggle and opens a collapsed row when a link points at it. With JavaScript off the toggle stays hidden, the page follows the system theme, and everything is readable.
 
 ## Not built yet
 
-`scripts/validate` (operations manual, section 7) is not built yet.
+- A link checker and Markdown lint (operations manual 7.1, items 5 and 8).
+- A GitHub Action that runs `validate.mjs` on every push.

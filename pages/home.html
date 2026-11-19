@@ -1,0 +1,104 @@
+<main id="main" class="home">
+
+<section class="wrap hero">
+<div class="hero-copy">
+<p class="kicker accent">Public-source fact-checks of security news</p>
+<h1>Is it a hack?<br><span class="soft">Here is what is actually known.</span></h1>
+<p class="lede">When something big breaks, rumors arrive before facts. We sort every claim about an outage, breach or security story into what is confirmed, what is only reported and what has been debunked, and we link each one to its source.</p>
+<ol class="hero-points">
+<li><strong>Gathered and organized by AI agents.</strong> They read public sources on a schedule and file what they find.</li>
+<li><strong>A person makes the final call.</strong> A case is closed as a hack, or as not a hack, only after the site's owner has reviewed the evidence.</li>
+<li><strong>Every edit is public.</strong> The pages, the data behind them and their full history live on GitHub.</li>
+</ol>
+<p class="actions"><a class="button" href="{{latest}}">Read the latest fact-check</a> <a class="button secondary" href="how-it-works.html">How it works</a></p>
+</div>
+{{anatomy}}
+</section>
+
+<section class="wrap" aria-label="Disclaimer">
+<div class="disclaimer-box row-box">
+<p><strong>Made for entertainment using AI. Not endorsed by anyone named here.</strong></p>
+<a href="about.html#what-this-is-not">What that means</a>
+</div>
+</section>
+
+<section class="wrap band">
+<div class="band-head">
+<h2>Don't take our word for it.</h2>
+<p>We are not asking you to trust us. We are asking you to check. Everything here is built so that you can.</p>
+</div>
+<ul class="grid proofs">
+<li class="panel"><span class="num">01</span><h3>Every claim links to its source</h3><p>Each claim shows where it came from and why that source supports it. No source, no claim.</p><a href="{{latest}}">See a sourced page</a></li>
+<li class="panel"><span class="num">02</span><h3>Every change is logged</h3><p>Each page carries a dated update log, newest first. Underneath it, GitHub keeps the full edit history.</p><a href="{{repo}}/commits/main" rel="noopener">View the edit history</a></li>
+<li class="panel"><span class="num">03</span><h3>The data is public</h3><p>Every page is built from plain data files you can open, download and compare with the sources.</p><a href="{{repo}}/tree/main/data/incidents" rel="noopener">Open the data</a></li>
+<li class="panel"><span class="num">04</span><h3>Corrections stay visible</h3><p>When we get something wrong, we fix it and leave a dated note saying what changed. Nothing is edited quietly.</p><a href="about.html#contact">Report an error</a></li>
+</ul>
+</section>
+
+<section class="wrap band" id="incidents">
+<div class="list-head">
+<h2>Incidents</h2>
+<span class="meta">{{count}}</span>
+</div>
+<ul class="cards">
+{{incidents}}
+</ul>
+</section>
+
+<section class="wrap band">
+<div class="band-head">
+<h2>Who does the work</h2>
+<p>A small desk of AI agents, each with one job, hands work down the line. One person makes the call that closes a case.</p>
+</div>
+<ol class="grid steps">
+<li class="panel step"><span class="kicker">Step 1 · AI agent</span><h3>Research</h3><p>Watches public sources on a schedule and logs what it finds, with links.</p></li>
+<li class="panel step"><span class="kicker">Step 2 · AI agent</span><h3>Verification</h3><p>Checks each claim against the sourcing rules and proposes a label.</p></li>
+<li class="panel step"><span class="kicker">Step 3 · AI agent</span><h3>Writing</h3><p>Turns verified facts into the page, with a source on every claim.</p></li>
+<li class="panel step"><span class="kicker">Step 4 · AI agent</span><h3>Editor-in-Chief</h3><p>Reviews the draft against the rulebook, then publishes it.</p></li>
+</ol>
+<div class="inverse row-box">
+<div>
+<p class="kicker">Above the desk · A person</p>
+<h3>The final verdict is a person's call</h3>
+<p>The agents label individual claims as the evidence comes in. The verdict on a whole incident, Confirmed hack or Confirmed not a hack, is published only after the site's owner has reviewed the evidence and approved it. The agents never contact anyone, never log in anywhere and never use leaked data.</p>
+</div>
+<a class="button on-dark" href="how-it-works.html">Read the full method</a>
+</div>
+</section>
+
+<section class="wrap band">
+<div class="band-head">
+<h2>Six labels, in plain words</h2>
+<p>Every claim carries exactly one. The fuller the dot, the firmer the footing.</p>
+</div>
+<dl class="label-key">
+<div><dt>{{pill_confirmed}}</dt><dd>An official document states it, or at least two independent sources report it. Outlets repeating one source count as one.</dd></div>
+<div><dt>{{pill_reported}}</dt><dd>Sourced journalism that has not been officially confirmed. One outlet, or several relying on the same source.</dd></div>
+<div><dt>{{pill_unverified}}</dt><dd>Claimed in public, but not yet checked or checkable, or the accounts conflict.</dd></div>
+<div><dt>{{pill_rumor}}</dt><dd>Circulating with weak or no provenance. Shown clearly as a rumor, never as fact.</dd></div>
+<div><dt>{{pill_debunked}}</dt><dd>Shown to be false by an official source or independent evidence. The original claim stays visible, with the evidence.</dd></div>
+<div><dt>{{pill_not_established}}</dt><dd>The evidence does not settle it either way. Used for headline questions such as whether something was a cyberattack.</dd></div>
+</dl>
+</section>
+
+<section class="wrap band last">
+<div class="inverse repo-block">
+<div>
+<p class="kicker">Open source, open history</p>
+<h2>It all lives on GitHub.</h2>
+<p>The pages, the data behind them and every edit ever made sit in one public repository. Read it, compare versions, or tell us what we got wrong.</p>
+<p class="actions"><a class="button on-dark" href="{{repo}}" rel="noopener">Browse the repository</a> <a class="button on-dark secondary" href="{{repo}}/commits/main" rel="noopener">See every change</a> <a class="button on-dark secondary" href="about.html#contact">Report an error</a></p>
+</div>
+<dl class="file-tree">
+<dt>primeobsession/isitahack-dot-com</dt>
+<div><dt>data/incidents/&lt;slug&gt;/</dt><dd>One folder of data files per incident: claims, sources, timeline, update log</dd></div>
+<div><dt>incidents/&lt;slug&gt;.html and .md</dt><dd>The page and a plain-text version, both built from that data</dd></div>
+<div><dt>format/</dt><dd>The definition of every data field, and what each is for</dd></div>
+<div><dt>scripts/validate.mjs</dt><dd>The checks every incident must pass before it is published</dd></div>
+<div><dt>scripts/build.mjs</dt><dd>The script that builds these pages, with no dependencies</dd></div>
+<div><dt>index.json, llms.txt</dt><dd>The list of incidents and a map of the site, for programs and AI assistants</dd></div>
+</dl>
+</div>
+</section>
+
+</main>

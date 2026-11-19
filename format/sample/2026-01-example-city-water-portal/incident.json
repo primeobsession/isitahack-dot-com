@@ -54,6 +54,7 @@
   "images": [
     {
       "id": "outage-window",
+      "title": "How long the portal was down",
       "file": "images/outage-window.svg",
       "alt": "A bar for the day with the stretch from 8:40 AM to 5:20 PM filled in, the time the portal was offline.",
       "caption": "The portal was offline for 8 hours 40 minutes.",

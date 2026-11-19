@@ -107,9 +107,10 @@
     },
     "image": {
       "type": "object", "additionalProperties": false,
-      "required": ["id", "file", "alt", "credit", "rights", "sha256", "width", "height"],
+      "required": ["id", "title", "file", "alt", "credit", "rights", "sha256", "width", "height"],
       "properties": {
         "id": { "$ref": "#/$defs/id", "description": "Short name used by an 'image' section to place it." },
+        "title": { "$ref": "#/$defs/title", "description": "A short heading for the image, used as its section title." },
         "file": { "type": "string", "pattern": "^images/[a-z0-9-]+\\.(png|jpg|webp|svg)$", "description": "The image file in this incident's images folder." },
         "alt": { "type": "string", "minLength": 10, "maxLength": 300, "description": "What the image shows, for someone who cannot see it." },
         "caption": { "type": "string", "maxLength": 200, "description": "The line shown under the image." },
