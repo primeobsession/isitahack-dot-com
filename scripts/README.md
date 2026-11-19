@@ -45,6 +45,7 @@ Checks incident folders against `format/incident.schema.json` and `format/tables
 ## The other modules
 
 - `incident.mjs`: turns one loaded incident into page HTML and Markdown.
+- `plate.mjs`: draws an incident's picture from its `subject`: the name in type over a drawing for the kind. Used on the home page and at the top of the incident page unless the incident names a photograph as `lead_image`.
 - `chart.mjs`: draws a chart as inline SVG from a chart definition and its CSV rows. No client-side script; every mark has a hover title and the page prints the numbers as a table.
 - `html.mjs`: escaping, dates, label tags and the Markdown subset shared by the above.
 

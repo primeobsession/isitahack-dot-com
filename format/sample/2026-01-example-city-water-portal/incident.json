@@ -2,6 +2,8 @@
   "format_version": 1,
   "slug": "2026-01-example-city-water-portal",
   "title": "Example City water billing portal outage",
+  "subject": { "name": "Example City Water", "kind": "other" },
+  "lead_image": "water-tower",
   "also_called": ["the Example City water outage"],
   "status": "monitoring",
   "incident_date": "2026-01-12",
@@ -53,6 +55,7 @@
     }
   ],
   "images": [
+    { "id": "water-tower", "title": "A water tower", "file": "images/water-tower.png", "alt": "A plain drawing of a blue water tower on a flat horizon under a pale sky.", "credit": "isitahack.com", "rights": "own", "sha256": "833dafb5cde9194238f9dd180c424143818c5e272907d7c727ae29d4714a7ed9", "width": 1200, "height": 675 },
     {
       "id": "outage-window",
       "title": "How long the portal was down",

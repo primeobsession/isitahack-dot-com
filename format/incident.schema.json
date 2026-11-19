@@ -5,12 +5,21 @@
   "description": "The head of one incident: what it is, how big it is, the short summary a reader sees first, and the order of the sections below it. Row data lives in the CSV files beside it. Every 'description' is written for the agent filling the field in.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["format_version", "slug", "title", "status", "incident_date", "disclaimer", "main_question_id", "size", "size_basis", "who_is_affected", "known", "not_known", "sections"],
+  "required": ["format_version", "slug", "title", "subject", "status", "incident_date", "disclaimer", "main_question_id", "size", "size_basis", "who_is_affected", "known", "not_known", "sections"],
   "properties": {
     "format_version": { "const": 1, "description": "Version of this format. Always 1 until the format itself changes." },
     "slug": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[a-z0-9]+(-[a-z0-9]+)*$", "description": "The incident's permanent short name: year, month, then a few words (2026-11-faa-ground-stop). Must equal the folder name." },
     "title": { "type": "string", "minLength": 1, "maxLength": 90, "description": "The incident's plain name, as it appears in lists and breadcrumbs: 'FAA nationwide ground stop'. Calm; no alarmist words. It is not the page headline: the main question is." },
     "also_called": { "type": "array", "maxItems": 3, "items": { "type": "string", "minLength": 3, "maxLength": 40 }, "description": "Up to three other plain names people use for this incident, each written to follow the words 'Also reported as': 'the FAA outage'. Shown once under the heading so people who search by another name find the page. Names really in use only; never a list of keywords." },
+    "subject": {
+      "type": "object", "additionalProperties": false, "required": ["name", "kind"],
+      "description": "Who or what the incident is about. The build draws the incident's picture from it: the name set in type over a drawing for the kind. It is the desk's own drawing, never a logo.",
+      "properties": {
+        "name": { "type": "string", "minLength": 2, "maxLength": 22, "description": "The short name people know the subject by: 'FAA', 'Apple', 'Microsoft 365'. A product or organisation, never a person." },
+        "kind": { "enum": ["aviation", "online-service", "devices", "finance", "government", "telecom", "energy", "health", "network", "other"], "description": "What kind of thing the subject is, which picks the drawing. Choose by the subject, not by the suspected cause. Use other when none fits." }
+      }
+    },
+    "lead_image": { "$ref": "#/$defs/id", "description": "Optional. The id of an entry in images to use as the incident's picture instead of the drawn one: on the home page, at the top of the page and when the page is shared. It must be a photograph or illustration the rules allow (own work, public domain or licensed), at least 1200 pixels wide, landscape, and a png, jpg or webp. Never a company or agency logo or seal." },
     "status": { "enum": ["monitoring", "resolved", "closed"], "description": "monitoring while the desk is still checking, resolved once the event is over but the cause is not settled, closed only with an approved verdict." },
     "incident_date": { "type": "string", "format": "date", "description": "The day the incident began." },
     "disclaimer": { "type": "string", "minLength": 1, "description": "The entertainment and AI disclaimer for this page, naming the kinds of organisation it mentions." },
@@ -56,7 +65,7 @@
       }
     },
     "charts": { "type": "array", "description": "Charts available to the page. A chart appears only where a 'chart' section names it.", "items": { "$ref": "#/$defs/chart" } },
-    "images": { "type": "array", "description": "Images available to the page. An image appears only where an 'image' section names it.", "items": { "$ref": "#/$defs/image" } },
+    "images": { "type": "array", "description": "Images available to the page. An image appears where an 'image' section names it, or as the incident's picture when lead_image names it.", "items": { "$ref": "#/$defs/image" } },
     "tables": { "type": "array", "description": "Extra tables for information that fits none of the standard files, for example who runs which network.", "items": { "$ref": "#/$defs/table" } },
     "sections": {
       "type": "array", "minItems": 1,
@@ -116,7 +125,7 @@
         "alt": { "type": "string", "minLength": 10, "maxLength": 300, "description": "What the image shows, for someone who cannot see it." },
         "caption": { "type": "string", "maxLength": 200, "description": "The line shown under the image." },
         "credit": { "type": "string", "minLength": 1, "maxLength": 120, "description": "Who made it, and the licence if it is licensed. Use 'isitahack.com' for the desk's own work." },
-        "rights": { "enum": ["own", "public-domain", "licensed"], "description": "Why we may publish it: own (the desk made it), public-domain (for example a US federal government work), licensed (a licence allows reuse; name it in credit). News photos and screenshots of other people's articles are none of these and are not allowed." },
+        "rights": { "enum": ["own", "public-domain", "licensed"], "description": "Why we may publish it: own (the desk made it), public-domain (for example a US federal government work), licensed (a licence allows reuse; name it in credit). News photos, screenshots of other people's articles, and company or agency logos and seals are none of these and are not allowed." },
         "source_id": { "type": "string", "pattern": "^s[0-9]{3,}$", "description": "Where the image came from. Required unless rights is own." },
         "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$", "description": "SHA-256 of the file, so a changed image shows." },
         "width": { "type": "integer", "minimum": 1, "description": "Width in pixels, so the page does not jump while loading." },

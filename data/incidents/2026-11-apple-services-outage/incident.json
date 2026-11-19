@@ -2,6 +2,7 @@
   "format_version": 1,
   "slug": "2026-11-apple-services-outage",
   "title": "Apple services outage, Nov 17, 2026",
+  "subject": { "name": "Apple", "kind": "devices" },
   "also_called": ["the Apple outage"],
   "status": "monitoring",
   "incident_date": "2026-11-17",

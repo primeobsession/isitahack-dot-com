@@ -1,25 +1,39 @@
 <main id="main" class="home">
 
-<section class="wrap hero">
-<div class="hero-copy">
-<p class="kicker accent">Public-source fact-checks of security news</p>
-<h1>Is it a hack?<br><span class="soft">Here is what is actually known.</span></h1>
-<p class="lede">When something big breaks, rumors arrive before facts. We sort every claim about an outage, breach or security story into what is confirmed, what is only reported and what has been debunked, and we link each one to its source.</p>
-<ol class="hero-points">
-<li><strong>Gathered and organized by AI agents.</strong> They read public sources on a schedule and file what they find.</li>
-<li><strong>A person makes the final call.</strong> A case is closed as a hack, or as not a hack, only after the site's owner has reviewed the evidence.</li>
-<li><strong>Every edit is public.</strong> The pages, the data behind them and their full history live on GitHub.</li>
-</ol>
-<p class="actions"><a class="button" href="{{latest}}">Read the latest fact-check</a> <a class="button secondary" href="how-it-works.html">How it works</a></p>
+<section class="wrap home-intro">
+<div class="intro-copy">
+<p class="kicker accent">A different kind of news desk</p>
+<h1>Is it a hack? <span class="soft">Here is what is actually known.</span></h1>
+<p class="lede">When something big breaks, rumors arrive before facts. We check every claim against public sources and say which are confirmed, which are only reported and which are false.</p>
 </div>
-{{anatomy}}
+<div class="is-isnt">
+<div>
+<h2 class="kicker">What this is</h2>
+<ul>
+<li>A running fact-check of outages, breaches and security scares.</li>
+<li>Researched and organized by AI agents, from public sources only.</li>
+<li>Every claim labelled and linked to its source. Every edit public.</li>
+</ul>
+</div>
+<div>
+<h2 class="kicker">What it is not</h2>
+<ul>
+<li>Not breaking news. We wait for sources, so we are often slower.</li>
+<li>Not an official source, and not endorsed by anyone named here.</li>
+<li>Not advice. Made for entertainment using AI. <a href="about.html#what-this-is-not">What that means</a></li>
+</ul>
+</div>
+</div>
 </section>
 
-<section class="wrap" aria-label="Disclaimer">
-<div class="disclaimer-box row-box">
-<p><strong>Made for entertainment using AI. Not endorsed by anyone named here.</strong></p>
-<a href="about.html#what-this-is-not">What that means</a>
+<section class="wrap headlines" id="incidents">
+<div class="list-head">
+<h2>The latest fact-checks</h2>
+<span class="meta">{{now}}</span>
 </div>
+<ul class="stories">
+{{incidents}}
+</ul>
 </section>
 
 <section class="wrap band">
@@ -35,14 +49,13 @@
 </ul>
 </section>
 
-<section class="wrap band" id="incidents">
-<div class="list-head">
-<h2>Incidents</h2>
-<span class="meta">{{count}}</span>
+<section class="wrap band split">
+<div class="band-head">
+<h2>How to read a claim</h2>
+<p>Every row on every page has the same parts: the claim, its label, what is known, the source, and why that source supports it. A claim without a source does not get published.</p>
+<p class="actions"><a class="button secondary" href="how-it-works.html">How it works</a></p>
 </div>
-<ul class="cards">
-{{incidents}}
-</ul>
+{{anatomy}}
 </section>
 
 <section class="wrap band">

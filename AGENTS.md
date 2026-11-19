@@ -19,6 +19,7 @@ This is the site repository for isitahack.com: public-source fact-checks of secu
 - **Public sources only.** Nothing behind a login. No personal information, social handles, email addresses, phone numbers or usernames in any text.
 - **Change only the rows that need it.** Never renumber or reuse an id. Never delete a published claim: relabel it and say why.
 - **Every run adds a row at the top of `update_log.csv`**, with a headline about the incident, not about the run. Use `presentation` for a change to wording or headings that leaves every finding as it was.
+- **Give every incident a `subject`** (its short name and kind). The build draws the incident's picture from it. You may add a photograph as `lead_image` if it is public domain, licensed for reuse or the desk's own work, with its credit. Never use a company logo or a government seal, and never a picture that suggests an answer (hooded figures, padlocks, code).
 - **List new files in `llms.txt`** in the same change. The build stops if an incident's files are missing from it.
 
 ## Being found

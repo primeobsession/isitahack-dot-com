@@ -19,7 +19,7 @@ import { join, dirname, basename, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { LABELS, esc, slugify, pill, inline, linkTag, fmtDate, timeTag, renderBody, warnings, warn, setCurrent } from "./html.mjs";
 import { loadIncident } from "./validate.mjs";
-import { renderIncident, incidentMarkdown, incidentLayout, evidenceBar, summarize } from "./incident.mjs";
+import { renderIncident, incidentMarkdown, incidentLayout, incidentPicture, evidenceBar, summarize } from "./incident.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -92,9 +92,10 @@ const ORG = { "@type": "Organization", "@id": `${SITE.url}/#org`, name: SITE.tit
 
 // `path` is the page's address on the site ("" for the home page); `share` is the
 // title to show when the page is shared, without the site name.
-function shell({ title, share = title, description, root, path, body, banner = "", current = "", disclaimer = SITE.footer, markdown = "", article = null, data = [], noindex = false }) {
+function shell({ title, share = title, description, root, path, body, banner = "", current = "", disclaimer = SITE.footer, markdown = "", article = null, data = [], noindex = false, card = null }) {
   const home = root || "./";
   const url = `${SITE.url}/${path}`;
+  const shareImage = card || { url: `${SITE.url}/${SITE.card.path}`, width: SITE.card.width, height: SITE.card.height, alt: SITE.card.alt };
   const meta = noindex ? `<meta name="robots" content="noindex">` : [
     `<link rel="canonical" href="${esc(url)}">`,
     `<meta property="og:site_name" content="${esc(SITE.title)}">`,
@@ -102,10 +103,10 @@ function shell({ title, share = title, description, root, path, body, banner = "
     `<meta property="og:title" content="${esc(share)}">`,
     `<meta property="og:description" content="${esc(description)}">`,
     `<meta property="og:url" content="${esc(url)}">`,
-    `<meta property="og:image" content="${SITE.url}/${SITE.card.path}">`,
-    `<meta property="og:image:width" content="${SITE.card.width}">`,
-    `<meta property="og:image:height" content="${SITE.card.height}">`,
-    `<meta property="og:image:alt" content="${esc(SITE.card.alt)}">`,
+    `<meta property="og:image" content="${esc(shareImage.url)}">`,
+    `<meta property="og:image:width" content="${shareImage.width}">`,
+    `<meta property="og:image:height" content="${shareImage.height}">`,
+    `<meta property="og:image:alt" content="${esc(shareImage.alt)}">`,
     article ? `<meta property="article:published_time" content="${esc(article.published)}">\n<meta property="article:modified_time" content="${esc(article.modified)}">` : "",
     `<meta name="twitter:card" content="summary_large_image">`,
     `<meta name="twitter:site" content="${SITE.xHandle}">`,
@@ -204,12 +205,15 @@ function writeTyped(i, others, out) {
   // The page title is the question people ask, then the site name.
   const path = `incidents/${i.slug}.html`, url = `${SITE.url}/${path}`;
   const description = `${i.question.text} ${i.question.answer}`;
+  // A photograph, when the incident has one, is also what a shared link shows.
+  const photo = incidentPicture(i.loaded.head, i.dataPath).image;
+  const card = photo ? { url: `${SITE.url}/${i.dataPath}/${photo.file}`, width: photo.width, height: photo.height, alt: photo.alt } : null;
   const data = [{
     "@context": "https://schema.org", "@type": "Article", "@id": `${url}#article`,
     headline: i.question.text, alternativeHeadline: i.title, description, abstract: i.question.answer,
     url, mainEntityOfPage: url, inLanguage: "en", isAccessibleForFree: true,
     datePublished: i.first_published, dateModified: i.last_updated,
-    image: [`${SITE.url}/${SITE.card.path}`],
+    image: [card ? card.url : `${SITE.url}/${SITE.card.path}`],
     about: { "@type": "Event", name: i.title, startDate: i.incident_date },
     author: { "@type": "Organization", name: `${SITE.name} desk`, url: `${SITE.url}/how-it-works.html` },
     publisher: ORG,
@@ -221,7 +225,7 @@ function writeTyped(i, others, out) {
     ],
   }];
   writeFileSync(join(out, "incidents", `${i.slug}.html`), shell({
-    title: `${i.question.text} | ${SITE.title}`, share: i.question.text, description, path, data,
+    title: `${i.question.text} | ${SITE.title}`, share: i.question.text, description, path, data, card,
     article: { published: i.first_published, modified: i.last_updated },
     root: "../", banner: statusBanner(i), body: main, disclaimer: i.disclaimer, markdown: `${i.slug}.md`,
   }));
@@ -286,21 +290,26 @@ function writeLegacy(i, others, out) {
 }
 
 // ---------- home and the static pages ----------
-function incidentCard(i) {
+// One headline on the home page. The newest is the lead story; the rest are smaller.
+function incidentCard(i, lead) {
   const status = STATUSES[i.status] || String(i.status);
   const href = `incidents/${esc(i.slug)}.html`;
-  const answer = i.question ? `<div class="answer-row"><strong>${esc(i.question.text)}</strong>${pill(i.question.label)}<span>${esc(i.question.answer)}</span></div>` : "";
+  const picture = i.typed ? incidentPicture(i.loaded.head, i.dataPath) : null;
+  const media = picture ? `<a class="story-media" href="${href}" tabindex="-1" aria-hidden="true">${picture.html}${picture.credit ? `<span class="credit">${esc(picture.credit)}</span>` : ""}</a>` : "";
+  const headline = i.question ? i.question.text : i.title;
+  const answer = i.question ? `<p class="story-answer">${pill(i.question.label)}<span>${esc(i.question.answer)}</span></p>` : "";
   const verdict = i.verdict ? `<p class="verdict"><span class="verdict-badge">${esc(i.verdict)}</span> Final verdict.</p>` : "";
   const latest = i.typed ? `<p class="card-latest"><span class="kicker accent">The latest · ${timeTag(i.latest.at)}</span> ${esc(i.latest.headline)}</p>`
     : i.latestLine ? `<p class="card-latest"><span class="kicker accent">The latest · ${timeTag(i.last_updated)}</span> ${esc(i.latestLine)}</p>` : "";
-  return `<li class="card">
-<div class="card-main">
-<p class="card-meta"><span class="card-status status-${esc(slugify(String(i.status)))}"><span class="status-dot" aria-hidden="true"></span>${esc(status)}</span><span class="meta">${i.incident_date ? `Incident ${timeTag(i.incident_date)} · ` : ""}Updated ${timeTag(i.last_updated)}</span></p>
-<h3><a href="${href}">${esc(i.title)}</a></h3>
-${[answer, verdict, latest].filter(Boolean).join("\n")}
-<p class="card-links"><a class="button" href="${href}">Read the fact-check</a>${i.typed ? ` <span class="meta">${i.counts.sources} sources</span>` : ""}</p>
+  const tally = lead && i.tally ? `<div class="story-evidence">\n${evidenceBar(i.tally, i.tally_title)}\n</div>` : "";
+  return `<li class="story${lead ? " lead" : ""}">
+${media}
+<div class="story-body">
+<p class="card-meta"><span class="card-status status-${esc(slugify(String(i.status)))}"><span class="status-dot" aria-hidden="true"></span>${esc(status)}</span><span class="meta">${i.question ? `${esc(i.title)} · ` : ""}Updated ${timeTag(i.last_updated)}</span></p>
+<h3><a href="${href}">${esc(headline)}</a></h3>
+${[answer, verdict, latest, tally].filter(Boolean).join("\n")}
+<p class="card-links"><a class="button${lead ? "" : " secondary"}" href="${href}">Read the fact-check</a>${i.typed ? ` <span class="meta">${i.counts.sources} sources · ${i.counts.updates} updates</span>` : ""}</p>
 </div>
-${i.tally ? `<div class="card-side">\n${evidenceBar(i.tally, i.tally_title)}\n</div>` : ""}
 </li>`;
 }
 function anatomyCard(i) {
@@ -335,7 +344,8 @@ function buildHome(incidents, out) {
     latest: latest ? `incidents/${esc(latest.slug)}.html` : "#incidents",
     anatomy: typed ? anatomyCard(typed) : "",
     count: `${incidents.length} tracked, newest update first`,
-    incidents: incidents.length ? incidents.map(incidentCard).join("\n") : `<li class="card"><p>No incidents are being tracked yet.</p></li>`,
+    now: latest ? `${monitoring.length ? `Monitoring ${monitoring.length} incident${monitoring.length === 1 ? "" : "s"}` : "Nothing being monitored"} · latest update ${timeTag(latest.last_updated)}` : "",
+    incidents: incidents.length ? incidents.map((i, n) => incidentCard(i, n === 0)).join("\n") : `<li class="story"><div class="story-body"><p>No incidents are being tracked yet.</p></div></li>`,
   });
   const data = [
     { "@context": "https://schema.org", "@type": "WebSite", "@id": `${SITE.url}/#site`, name: SITE.title, alternateName: ["isitahack", SITE.name], url: `${SITE.url}/`, description: SITE.tagline, publisher: { "@id": ORG["@id"] } },

@@ -6,6 +6,18 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { LABELS, esc, slugify, pill, inline, linkTag, fmtDate, fmtTime, fmtDay, timeTag, renderBody, tableHtml } from "./html.mjs";
 import { renderChart, fmtNumber } from "./chart.mjs";
+import { renderPlate } from "./plate.mjs";
+
+// The incident's picture: its photograph when it has one, otherwise the drawn plate.
+// `base` is where the incident's data folder is, as seen from the page.
+export function incidentPicture(head, base) {
+  const image = head.lead_image && (head.images || []).find((x) => x.id === head.lead_image);
+  if (!image) return { html: renderPlate(head.subject), credit: "", image: null };
+  return {
+    html: `<img src="${esc(`${base}/${image.file}`)}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}">`,
+    credit: `Image: ${image.credit}`, image,
+  };
+}
 
 const TIERS = { 1: "Official source", 2: "News outlet", 3: "Researcher or analysis", 4: "Social post", 5: "Rumor source" };
 const CHANGES = {
@@ -37,7 +49,7 @@ export function summarize({ head, t }) {
     latest: { at: latest.logged_at, headline: latest.headline, summary: latest.summary },
     question: { text: main.question_text, answer: main.answer_text, label: main.label, claim_ids: main.claim_ids },
     verdict: head.verdict || null, verdict_approved_at: head.verdict_approved_at || null,
-    size: head.size,
+    size: head.size, subject: head.subject,
     tally: Object.fromEntries(LABELS.map((l) => [l, inGroup.filter((c) => c.label === l).length])),
     tally_title: head.sections.find((s) => s.type === "claims")?.title || "Claims",
     counts: { sources: t.sources.length, updates: t.update_log.length, events: t.timeline.length },
@@ -70,13 +82,15 @@ ${others.length
 // The layout every incident page uses: a contents list that follows the reader,
 // the report in the middle, and a side rail with the latest and other incidents.
 // `toc` is [{ id, name, count }]; `lead`, `main` and `facts` are ready-made HTML.
-export function incidentLayout({ root, slug, crumb, title, titleId = "", lead = "", toc, main, facts = "", others, repo, historyPath }) {
+export function incidentLayout({ root, slug, crumb, title, titleId = "", aka = "", media = "", lead = "", toc, main, facts = "", others, repo, historyPath }) {
   const tocHtml = toc.map((s, i) => `<li><a href="#${esc(s.id)}"><span class="toc-n">${two(i + 1)}</span><span class="toc-name">${esc(s.name)}</span>${s.count !== undefined && s.count !== "" ? `<span class="count">${esc(s.count)}</span>` : ""}</a></li>`).join("\n");
   return `<main id="main" class="incident">
 <div class="wrap page-grid">
-<header class="page-head">
+<header class="page-head${media ? " has-media" : ""}">
+<div class="head-text">
 <p class="crumb">${crumb}</p>
-<h1${titleId ? ` id="${esc(titleId)}"` : ""}>${title}</h1>
+<h1${titleId ? ` id="${esc(titleId)}"` : ""}>${title}</h1>${aka ? `\n${aka}` : ""}
+</div>${media ? `\n${media}` : ""}
 ${lead}
 </header>
 <nav class="toc" aria-label="On this page">
@@ -253,7 +267,9 @@ ${tableHtml(headRow, body)}
     ? `<p class="verdict"><span class="verdict-badge">${esc(sum.verdict)}</span> Final verdict, approved by the site's owner on ${timeTag(sum.verdict_approved_at, fmtDay(sum.verdict_approved_at))}.</p>`
     : `<p class="answer-note">This is the current answer, not a final verdict. A final verdict is published only after the site's owner has reviewed the evidence.</p>`;
   // The main question is the page's heading; the box under it answers it.
-  const lead = `${sum.also_called ? `<p class="aka">${esc(sum.also_called)}</p>\n` : ""}<section class="answer-box" aria-labelledby="the-question">
+  const picture = incidentPicture(head, dataHref);
+  const media = `<figure class="head-media">${picture.html}${picture.credit ? `<figcaption>${esc(picture.credit)}</figcaption>` : ""}</figure>`;
+  const lead = `<section class="answer-box" aria-labelledby="the-question">
 <div class="answer-head"><p class="kicker">Is it a hack? The short answer</p>${pill(q.label)}</div>
 <p class="answer">${esc(q.answer)}</p>
 <p class="answer-refs"><span class="field">Rests on</span> ${q.claim_ids.map((id) => `<a href="${esc(claimHref(id))}">${esc(claims.get(id).claim_text)}</a>`).join(" · ")}</p>
@@ -300,7 +316,8 @@ ${logHtml}
 ${sourcesHtml}`;
 
   const html = incidentLayout({
-    root, slug: head.slug, repo, others, toc, lead, main, facts,
+    root, slug: head.slug, repo, others, toc, lead, main, facts, media,
+    aka: sum.also_called ? `<p class="aka">${esc(sum.also_called)}</p>` : "",
     crumb: `<a href="${root}#incidents">Incidents</a> / ${esc(head.title)} · Incident date ${timeTag(head.incident_date)} · First published ${timeTag(sum.first_published, fmtDay(sum.first_published))}`,
     title: esc(q.text), titleId: "the-question", historyPath: `data/incidents/${head.slug}`,
   });

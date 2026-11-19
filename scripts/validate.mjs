@@ -305,6 +305,18 @@ export function loadIncident(dir) {
     if (sum !== image.sha256) errs.push(`${at}.sha256: does not match the file (file is ${sum})`);
     if (image.file.endsWith(".svg") && /<script|\son[a-z]+\s*=|href\s*=\s*["']https?:/i.test(bytes.toString("utf8"))) errs.push(`${at}.file: SVG must not contain scripts, event handlers or external links`);
   }
+  // the incident's picture, when it is a photograph
+  if (head.lead_image) {
+    const at = "incident.json.lead_image";
+    const image = (head.images || []).find((x) => x.id === head.lead_image);
+    if (!image) errs.push(`${at}: no image with id ${show(head.lead_image)} is defined in incident.json.images`);
+    else {
+      if (/\.svg$/.test(image.file || "")) errs.push(`${at}: must be a png, jpg or webp; an SVG cannot be used when the page is shared`);
+      if (image.width < 1200) errs.push(`${at}: the image is ${image.width} pixels wide; the incident's picture needs at least 1200`);
+      const ratio = image.width / image.height;
+      if (!(ratio >= 1.3 && ratio <= 2.1)) errs.push(`${at}: the image must be landscape, between 4:3 and 2:1 (it is ${image.width} x ${image.height})`);
+    }
+  }
   // extra tables
   const tableData = {};
   for (const [i, table] of (head.tables || []).entries()) {

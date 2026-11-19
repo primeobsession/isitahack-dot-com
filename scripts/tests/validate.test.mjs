@@ -119,6 +119,14 @@ rule("a chart column that is not a number", (t) => {
 rule("an image that no longer matches its checksum", (t) => t.swap("images/outage-window.svg", "<svg", "<svg data-edited=\"1\""), /sha256: does not match the file/);
 rule("an image file that is missing", (t) => t.head((h) => { h.images[0].file = "images/gone.svg"; }), /images\[0\]\.file: "images\/gone\.svg" is missing/);
 
+// ---------- the incident's picture ----------
+rule("an incident with no subject", (t) => t.head((h) => { delete h.subject; }), /incident\.json\.subject: missing \(required\)/);
+rule("a subject kind outside the list", (t) => t.head((h) => { h.subject.kind = "big-tech"; }), /subject\.kind: "big-tech" is not one of/);
+rule("a lead image that is not defined", (t) => t.head((h) => { h.lead_image = "missing-photo"; }), /lead_image: no image with id "missing-photo"/);
+rule("an SVG used as the lead image", (t) => t.head((h) => { h.lead_image = "outage-window"; }), /lead_image: must be a png, jpg or webp/);
+rule("a lead image that is too small", (t) => t.head((h) => { h.images.find((x) => x.id === "water-tower").width = 800; }), /lead_image: the image is 800 pixels wide/);
+rule("a lead image that is not landscape", (t) => t.head((h) => { const x = h.images.find((i) => i.id === "water-tower"); x.width = 1200; x.height = 1600; }), /lead_image: the image must be landscape/);
+
 // ---------- the build ----------
 test("the build is repeatable and writes the pages search engines need", () => {
   const base = mkdtempSync(join(tmpdir(), "isitahack-build-"));
@@ -139,6 +147,13 @@ test("the build is repeatable and writes the pages search engines need", () => {
     assert.equal(article.dateModified, "2026-01-12T17:30:00-05:00", "a check that changed nothing does not move the modified date");
     assert.match(readFileSync(join(a, "sitemap.xml"), "utf8"), new RegExp(`<loc>https://isitahack\\.com/incidents/${SLUG}\\.html</loc><lastmod>2026-01-12T17:30:00-05:00</lastmod>`));
     assert.ok(readdirSync(a).includes("404.html"));
+    // pictures: a photograph where the incident has one, the drawn plate where it does not
+    assert.match(page, /<figure class="head-media"><img src="\.\.\/data\/incidents\/[^"]+\/images\/water-tower\.png"[^>]*><figcaption>Image: isitahack\.com<\/figcaption>/);
+    assert.match(page, /<meta property="og:image" content="https:\/\/isitahack\.com\/data\/incidents\/[^"]+\/images\/water-tower\.png">/);
+    const home = readFileSync(join(a, "index.html"), "utf8");
+    assert.equal(home.match(/<li class="story lead">/g).length, 1, "the home page has one lead story");
+    assert.match(home, /<svg class="plate"/, "an incident without a photograph gets the drawn plate");
+    assert.doesNotMatch(home, /<svg class="plate"[^>]*aria-label="Example City Water/, "the sample's photograph replaces its plate");
   } finally {
     rmSync(base, { recursive: true, force: true });
   }

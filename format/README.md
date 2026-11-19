@@ -42,6 +42,7 @@ Each field has a `description` saying what it is for. Those two files are the fi
 | A number that changes over time, or a comparison | `charts/<id>.csv` plus an entry in `incident.json` `charts` |
 | A key number or time for the top of the page | `incident.json` `figures` |
 | A picture or diagram | `images/` plus an entry in `incident.json` `images` |
+| Who or what the incident is about | `incident.json` `subject` (the build draws the incident's picture from it) |
 | A reference table with no labels (who runs what) | `tables/<id>.csv` plus an entry in `incident.json` `tables` |
 | Background that is none of the above | `notes/<name>.md` |
 | A check you ran, whatever it found | `update_log.csv` |
@@ -92,9 +93,18 @@ A claim is labelled Confirmed by the agents when it meets the evidence bar. The 
 
 A chart is a CSV of numbers plus a short description in `incident.json`: its type (`line` or `bar`), which column is the horizontal axis, which columns are the series, the unit, where the numbers came from, and an `alt` sentence that states the trend in words. The build draws the chart and prints the same numbers as a table under it. Agents never draw a chart or save a picture of one. All series on one chart share one scale, so they must be the same kind of quantity; two different quantities need two charts.
 
+## The incident's picture
+
+Every incident has a picture: on the home page, at the top of its page, and (when it is a photograph) on shared links.
+
+- **Always: `subject`.** Give the short name people know the subject by (`"FAA"`, `"Apple"`, `"Microsoft 365"`) and its `kind` (aviation, online-service, devices, finance, government, telecom, energy, health, network, other). The build draws the picture: the name set in type over a simple drawing for the kind. Choose the kind by what the subject is, not by the suspected cause. That is all a new incident needs.
+- **Optional: `lead_image`.** Name an entry in `images` and it takes the drawn picture's place. Use a photograph or illustration that shows the subject plainly: the kind of place or thing involved (an airport control tower, a data centre, a storefront). It must be landscape, at least 1200 pixels wide, a png, jpg or webp, and allowed under the rules below, with its credit.
+- **Never a logo or seal.** Company logos and government seals need the owner's permission, and using one suggests the owner endorses the page. The subject's name in plain type says who it is about. A photograph in which a sign or logo happens to be visible is fine if the photograph itself is allowed.
+- **Never a picture that takes a side.** No hooded figures, padlocks, skulls or code-rain: the picture must not suggest an answer the evidence has not given. No people's faces.
+
 ## Images
 
-Allowed: images the desk made (`own`), public-domain works such as US federal government material (`public-domain`), and images whose licence allows reuse (`licensed`, with the licence named in `credit`). News photos and screenshots of other people's articles are not allowed. Every image needs a title, `alt` text, a credit, its pixel size and its SHA-256. No faces or names of private people.
+Allowed: images the desk made (`own`), public-domain works such as US federal government material (`public-domain`), and images whose licence allows reuse (`licensed`, with the licence named in `credit`). News photos, screenshots of other people's articles, and company or agency logos and seals are not allowed. Every image needs a title, `alt` text, a credit, its pixel size and its SHA-256. No faces or names of private people.
 
 ## Checking your work
 
@@ -119,6 +129,7 @@ To check one folder while you work: `node scripts/validate.mjs data/incidents/<s
 - that no text uses the words of a final verdict ("Confirmed hack", "Confirmed not a hack") before one is approved;
 - that the update log is newest first;
 - that chart columns exist and hold numbers, image files exist and match their SHA-256, and SVGs contain no scripts;
+- that a `lead_image` is a defined image, landscape, at least 1200 pixels wide and not an SVG;
 - the privacy rule: no handles, email addresses, phone numbers or forum usernames in any text, notes included.
 
 A failed check is never bypassed (operations manual 7.3). The build runs the same checks and stops on any problem.
