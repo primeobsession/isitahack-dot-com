@@ -117,6 +117,7 @@ rule("a chart column that is not a number", (t) => {
   writeFileSync(join(t.dir, file), lines.join("\n"));
 }, /problem-reports\.csv row 1, .*: "many" is not a number/);
 rule("an image that no longer matches its checksum", (t) => t.swap("images/outage-window.svg", "<svg", "<svg data-edited=\"1\""), /sha256: does not match the file/);
+rule("a licensed image that does not say where it came from", (t) => t.head((h) => { h.images.find((x) => x.id === "water-tower").rights = "licensed"; }), /say where the image came from with source_id or source_url/);
 rule("an image file that is missing", (t) => t.head((h) => { h.images[0].file = "images/gone.svg"; }), /images\[0\]\.file: "images\/gone\.svg" is missing/);
 
 // ---------- the incident's picture ----------

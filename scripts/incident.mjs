@@ -12,10 +12,10 @@ import { renderPlate } from "./plate.mjs";
 // `base` is where the incident's data folder is, as seen from the page.
 export function incidentPicture(head, base) {
   const image = head.lead_image && (head.images || []).find((x) => x.id === head.lead_image);
-  if (!image) return { html: renderPlate(head.subject), credit: "", image: null };
+  if (!image) return { html: renderPlate(head.subject), credit: "", caption: "", image: null };
   return {
     html: `<img src="${esc(`${base}/${image.file}`)}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}">`,
-    credit: `Image: ${image.credit}`, image,
+    credit: `Image: ${image.credit}`, caption: image.caption || "", image,
   };
 }
 
@@ -234,7 +234,7 @@ ${tableHtml(headRow, body)}
     },
     image(s) {
       const image = head.images.find((i) => i.id === s.id);
-      const credit = `${esc(image.credit)}${image.source_id ? `, via ${sourceLink(image.source_id)}` : ""}`;
+      const credit = `${esc(image.credit)}${image.source_id ? `, via ${sourceLink(image.source_id)}` : image.source_url ? ` (${linkTag(image.source_url, "source")})` : ""}`;
       return fold({ title: image.title, open: s.open, id: uniqueId(image.id), body: `<figure class="figure">
 <img src="${esc(`${dataHref}/${image.file}`)}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}" loading="lazy">
 <figcaption>${image.caption ? `${esc(image.caption)} ` : ""}Image: ${credit}.</figcaption>
@@ -268,7 +268,10 @@ ${tableHtml(headRow, body)}
     : `<p class="answer-note">This is the current answer, not a final verdict. A final verdict is published only after the site's owner has reviewed the evidence.</p>`;
   // The main question is the page's heading; the box under it answers it.
   const picture = incidentPicture(head, dataHref);
-  const media = `<figure class="head-media">${picture.html}${picture.credit ? `<figcaption>${esc(picture.credit)}</figcaption>` : ""}</figure>`;
+  // A photograph says what it shows and who made it; the credit links to where it came from.
+  const pictureFrom = picture.image && (picture.image.source_url || (picture.image.source_id && sources.get(picture.image.source_id).source_url));
+  const pictureCredit = picture.credit ? (pictureFrom ? linkTag(pictureFrom, esc(picture.credit)) : esc(picture.credit)) : "";
+  const media = `<figure class="head-media">${picture.html}${pictureCredit ? `<figcaption>${picture.caption ? `${esc(picture.caption)} ` : ""}${pictureCredit}</figcaption>` : ""}</figure>`;
   const lead = `<section class="answer-box" aria-labelledby="the-question">
 <div class="answer-head"><p class="kicker">Is it a hack? The short answer</p>${pill(q.label)}</div>
 <p class="answer">${esc(q.answer)}</p>
@@ -342,6 +345,8 @@ export function incidentMarkdown(loaded, { dataPath }) {
   out.push(`# ${sum.question.text}`);
   out.push(`**${sum.question.label}.** ${sum.question.answer}`);
   out.push(`Incident: ${head.title}.${sum.also_called ? ` ${sum.also_called}` : ""} First published ${fmtDay(sum.first_published)}; last updated ${fmtDate(sum.last_updated)}.`);
+  const lead = head.lead_image && (head.images || []).find((x) => x.id === head.lead_image);
+  if (lead) out.push(`Picture: ${lead.caption ? `${lead.caption} ` : ""}Image: ${lead.credit}${lead.source_url ? ` (${lead.source_url})` : ""}.`);
   out.push(`> **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. ${head.disclaimer}`);
   out.push(sum.verdict ? `Final verdict: **${sum.verdict}**, approved by the site's owner on ${fmtDay(sum.verdict_approved_at)}.` : `This is the current answer, not a final verdict.`);
   out.push(`## The latest\n\n${fmtDate(sum.latest.at)}: **${sum.latest.headline}** ${sum.latest.summary}`);

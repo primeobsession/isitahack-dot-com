@@ -3,6 +3,7 @@
   "slug": "2026-11-microsoft-365-outage",
   "title": "Microsoft 365 outage, Nov 12-13, 2026",
   "subject": { "name": "Microsoft 365", "kind": "online-service" },
+  "lead_image": "microsoft-building-92",
   "also_called": ["the Microsoft outage"],
   "status": "monitoring",
   "incident_date": "2026-11-12",
@@ -71,6 +72,21 @@
       "label": "Final report due",
       "detail": "Microsoft",
       "claim_id": "c016"
+    }
+  ],
+  "images": [
+    {
+      "id": "microsoft-building-92",
+      "title": "Microsoft headquarters",
+      "file": "images/microsoft-building-92.jpg",
+      "alt": "A low glass and concrete office building with trees in front and a Microsoft sign at the edge of a paved plaza, under a clear blue sky.",
+      "caption": "Building 92 at Microsoft's headquarters in Redmond, Washington, in May 2016.",
+      "credit": "Coolcaesar, CC BY-SA 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Building92microsoft.jpg",
+      "sha256": "59ff483ef293aaf8cb2ae8b051155ffcbe9e8340cc81bd015153bac2eb299a6c",
+      "width": 1920,
+      "height": 1280
     }
   ],
   "sections": [

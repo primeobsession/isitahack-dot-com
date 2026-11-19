@@ -3,6 +3,7 @@
   "slug": "2026-11-faa-ground-stop",
   "title": "FAA nationwide ground stop",
   "subject": { "name": "FAA", "kind": "aviation" },
+  "lead_image": "faa-radar-site",
   "also_called": [
     "the FAA outage",
     "the air traffic control outage",
@@ -372,6 +373,21 @@
           "type": "text"
         }
       ]
+    }
+  ],
+  "images": [
+    {
+      "id": "faa-radar-site",
+      "title": "An FAA radar site",
+      "file": "images/faa-radar-bennett-colorado.jpg",
+      "alt": "A white radar dome on a steel lattice tower beside a small building, standing in a dry field under a pale blue sky.",
+      "caption": "An FAA radar tower near Bennett, Colorado, photographed in 2017. It shows what an FAA radar site looks like and was not involved in this incident.",
+      "credit": "Jeffrey Beall, CC BY 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:FAA_radar_(Bennett,_Colorado).JPG",
+      "sha256": "ab95736bf0a317594b49928da2065c17d31ea981c26f8248509c5e0d93d532c8",
+      "width": 1920,
+      "height": 1256
     }
   ],
   "sections": [

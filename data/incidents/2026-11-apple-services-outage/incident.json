@@ -3,6 +3,7 @@
   "slug": "2026-11-apple-services-outage",
   "title": "Apple services outage, Nov 17, 2026",
   "subject": { "name": "Apple", "kind": "devices" },
+  "lead_image": "apple-park",
   "also_called": ["the Apple outage"],
   "status": "monitoring",
   "incident_date": "2026-11-17",
@@ -73,6 +74,21 @@
       "label": "Reports for Apple Support",
       "detail": "Downdetector, via Lifehacker",
       "claim_id": "c006"
+    }
+  ],
+  "images": [
+    {
+      "id": "apple-park",
+      "title": "Apple Park",
+      "file": "images/apple-park-aerial-2024.jpg",
+      "alt": "An aerial view of Apple Park, the ring-shaped Apple headquarters building, surrounded by trees and low buildings at sunset.",
+      "caption": "Apple Park, Apple's headquarters in Cupertino, California, in June 2024.",
+      "credit": "Nils Huenerfuerst, CC0, via Wikimedia Commons",
+      "rights": "public-domain",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Apple_Park_aerial_view,_June_2024.jpg",
+      "sha256": "ddf6e640d3e3d8528bb283a8204e6bd5d854c817252c2cf63003be12a91335aa",
+      "width": 1920,
+      "height": 1440
     }
   ],
   "sections": [

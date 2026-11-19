@@ -297,7 +297,7 @@ export function loadIncident(dir) {
   // images
   for (const [i, image] of (head.images || []).entries()) {
     const at = `incident.json.images[${i}]`;
-    if (image.rights !== "own" && !image.source_id) errs.push(`${at}.source_id: required unless rights is own`);
+    if (image.rights !== "own" && !image.source_id && !image.source_url) errs.push(`${at}: say where the image came from with source_id or source_url; required unless rights is own`);
     if (image.source_id && !sources.has(image.source_id)) errs.push(`${at}.source_id: ${show(image.source_id)} is not in sources.csv`);
     if (typeof image.file !== "string" || !existsSync(join(dir, image.file))) { errs.push(`${at}.file: ${show(image.file)} is missing`); continue; }
     const bytes = readFileSync(join(dir, image.file));

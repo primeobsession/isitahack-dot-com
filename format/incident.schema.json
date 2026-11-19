@@ -126,7 +126,8 @@
         "caption": { "type": "string", "maxLength": 200, "description": "The line shown under the image." },
         "credit": { "type": "string", "minLength": 1, "maxLength": 120, "description": "Who made it, and the licence if it is licensed. Use 'isitahack.com' for the desk's own work." },
         "rights": { "enum": ["own", "public-domain", "licensed"], "description": "Why we may publish it: own (the desk made it), public-domain (for example a US federal government work), licensed (a licence allows reuse; name it in credit). News photos, screenshots of other people's articles, and company or agency logos and seals are none of these and are not allowed." },
-        "source_id": { "type": "string", "pattern": "^s[0-9]{3,}$", "description": "Where the image came from. Required unless rights is own." },
+        "source_id": { "type": "string", "pattern": "^s[0-9]{3,}$", "description": "The row in sources.csv the image came from, when it came from one of the incident's sources. Unless rights is own, give this or source_url." },
+        "source_url": { "type": "string", "pattern": "^https://[^\\s]+$", "description": "The public page the image was taken from, when it is not one of the incident's sources: for example its Wikimedia Commons page. The credit on the incident page links to it." },
         "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$", "description": "SHA-256 of the file, so a changed image shows." },
         "width": { "type": "integer", "minimum": 1, "description": "Width in pixels, so the page does not jump while loading." },
         "height": { "type": "integer", "minimum": 1, "description": "Height in pixels." }
