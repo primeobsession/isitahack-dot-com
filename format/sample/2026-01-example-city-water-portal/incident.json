@@ -1,7 +1,8 @@
 {
   "format_version": 1,
   "slug": "2026-01-example-city-water-portal",
-  "title": "Example City Water Billing Portal Outage: What We Know",
+  "title": "Example City water billing portal outage",
+  "also_called": ["the Example City water outage"],
   "status": "monitoring",
   "incident_date": "2026-01-12",
   "disclaimer": "Made for entertainment using AI. Not endorsed by any utility, agency, news outlet, company, or anyone else named. This incident is a made-up sample.",

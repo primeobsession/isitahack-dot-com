@@ -1,0 +1,6 @@
+# isitahack.com is public and meant to be read, quoted and linked, by people and by programs.
+# Search engines and AI assistants are welcome on every page.
+User-agent: *
+Allow: /
+
+Sitemap: https://isitahack.com/sitemap.xml

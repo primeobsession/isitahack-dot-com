@@ -28,6 +28,10 @@
 - charts/, tables/ and notes/ in the same folder: chart numbers, reference tables and narrative sections named in incident.json.
 - [raw/](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/): source material preserved from before the conversion, in its original layout, with a sha256 [MANIFEST.txt](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/MANIFEST.txt).
 
+## For search engines
+- [sitemap.xml](https://isitahack.com/sitemap.xml): every page, with each incident's last update.
+- [robots.txt](https://isitahack.com/robots.txt): all crawlers are welcome.
+
 ## Format
 - [format/README.md](https://github.com/primeobsession/isitahack-dot-com/blob/main/format/README.md): the typed incident format. New incidents are a folder of JSON and CSV under data/incidents/<slug>/, checked by scripts/validate.mjs.
 - [format/incident.schema.json](https://github.com/primeobsession/isitahack-dot-com/blob/main/format/incident.schema.json): JSON Schema for incident.json, with a description of every field.

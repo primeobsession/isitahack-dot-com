@@ -1,7 +1,8 @@
 {
   "format_version": 1,
   "slug": "2026-11-microsoft-365-outage",
-  "title": "Microsoft 365 Outage, Nov 12-13, 2026: What We Know",
+  "title": "Microsoft 365 outage, Nov 12-13, 2026",
+  "also_called": ["the Microsoft outage"],
   "status": "monitoring",
   "incident_date": "2026-11-12",
   "disclaimer": "Made for entertainment using AI. Not endorsed by Microsoft, any government agency, news outlet, company, or anyone else named.",
@@ -74,7 +75,7 @@
   "sections": [
     {
       "type": "claims",
-      "title": "Cause and hack claims",
+      "title": "What caused it? Cause and hack claims",
       "group": "cause",
       "open": true
     },
@@ -85,17 +86,17 @@
     },
     {
       "type": "claims",
-      "title": "What happened",
+      "title": "What happened?",
       "group": "what-happened",
       "open": true
     },
     {
       "type": "timeline",
-      "title": "Timeline with evidence"
+      "title": "Timeline of the Microsoft 365 outage"
     },
     {
       "type": "claims",
-      "title": "After the outage",
+      "title": "What happened after the outage?",
       "group": "aftermath"
     },
     {
@@ -111,7 +112,7 @@
     },
     {
       "type": "note",
-      "title": "Checked, not found",
+      "title": "What we checked and did not find",
       "file": "notes/checked-not-found.md"
     }
   ]

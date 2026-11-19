@@ -52,17 +52,33 @@ If something carries a label, it is a claim. Do not put labelled statements in a
 
 | On the page | Comes from |
 |---|---|
-| The question and short answer | The `questions.csv` row named by `main_question_id` |
-| The latest | The newest `update_log.csv` row that is not `checked_no_change`: its `headline` and `logged_at` |
+| The page title, the main heading and the short answer | The `questions.csv` row named by `main_question_id` |
+| "Also reported as…" under the heading | `incident.json` `also_called` |
+| The incident's name in lists and breadcrumbs | `incident.json` `title` |
+| The latest | The newest `update_log.csv` row that changed a finding (not `checked_no_change`, not `presentation`): its `headline` and `logged_at` |
+| First published, last updated | The oldest `update_log.csv` row, and the newest one that changed a finding |
 | Known so far | `incident.json` `known`; each item must rest on a Confirmed claim |
 | Not known yet | `incident.json` `not_known` |
 | Size and who is affected | `incident.json` `size`, `size_basis`, `who_is_affected` |
 | At a glance | `incident.json` `figures` |
 | Final verdict | `incident.json` `verdict`, only after the owner approves it |
 
+## Being found
+
+People type a question into a search box or ask an AI assistant: "is the FAA outage a hack?". The page has to be the obvious answer to that question without reading like bait.
+
+- **The main question is the page title and the main heading.** Write it the way a person would ask it, naming the subject: "Was the FAA ground stop a cyberattack?". Never "Was it a hack?", which means nothing in a list of search results. Keep it within 70 characters and end it with a question mark.
+- **Its answer is the first thing on the page.** Lead with the answer in plain words; one or two calm sentences.
+- **`title` is the incident's plain name** ("FAA nationwide ground stop"). It appears in lists and breadcrumbs.
+- **`also_called` holds up to three other names really in use** ("the FAA outage"), each written to follow "Also reported as". It is shown once, under the heading.
+- **Section titles are the questions a reader has**: "What caused it?", "What has been ruled out?", "What officials have said". Not desk shorthand.
+- **No keyword lists, anywhere.** One clear question, one clear answer, plain names. Search engines treat stuffing as spam, and readers notice.
+
+The build adds the rest: the canonical address, the description, the share image, the dates and the structured data that search engines read. All of it restates what the page shows.
+
 ## Never written by hand
 
-The build works these out, so they cannot drift: last-updated and last-checked times, label counts, row counts, the source list, the entry in `index.json`, and the `.md` and `.html` pages. `llms.txt` is still edited by hand; the build warns when it does not list an incident's files.
+The build works these out, so they cannot drift: the page title, first-published, last-updated and last-checked times, label counts, row counts, the source list, `sitemap.xml`, the entry in `index.json`, and the `.md` and `.html` pages. `llms.txt` is still edited by hand; the build stops when it does not list an incident's files.
 
 ## When something was never recorded
 
@@ -83,25 +99,30 @@ Allowed: images the desk made (`own`), public-domain works such as US federal go
 ## Checking your work
 
 ```sh
-node scripts/validate.mjs data/incidents/<slug>
+node scripts/check.mjs
 ```
 
-Run it before every push. It checks:
+Run it before every hand-off. It validates every incident, runs the tests that prove each rule still works, rebuilds the site and lists what to commit. Commit the data and the rebuilt pages together. The same command runs on GitHub for every push and pull request, where it also fails if the committed pages differ from a fresh build (a page edited by hand, or data changed without a rebuild).
+
+To check one folder while you work: `node scripts/validate.mjs data/incidents/<slug>`. It checks:
 
 - every field's type, allowed values and length against the two schema files, and rejects unknown fields;
 - CSV headers, exact and in order; UTF-8, LF line endings, no blank rows;
 - dates and times, which must carry a timezone offset;
 - every id reference (claim to source, event to claim, answer to claim, section to chart, and so on);
 - the Confirmed rule: a Tier 1 source, or two Tier 2/3 sources with different `independence_group` values;
+- source tiers: a post on a social platform is Tier 4 or 5, whoever posted it;
 - that `known` items rest on Confirmed claims;
+- that the main question names its subject, ends with a question mark and fits in a page title;
 - that an answered question has an answer, a label and its claims, and an open one says what would settle it;
 - that a verdict has an approval time and a closed status, and a closed incident has a verdict;
+- that no text uses the words of a final verdict ("Confirmed hack", "Confirmed not a hack") before one is approved;
 - that the update log is newest first;
 - that chart columns exist and hold numbers, image files exist and match their SHA-256, and SVGs contain no scripts;
-- the privacy rule: no handles or email addresses in any text.
+- the privacy rule: no handles, email addresses, phone numbers or forum usernames in any text, notes included.
 
 A failed check is never bypassed (operations manual 7.3). The build runs the same checks and stops on any problem.
 
 ## Not done yet
 
-- No link checker or Markdown lint (operations manual 7.1, items 5 and 8).
+- No link checker or Markdown lint (operations manual 7.1).

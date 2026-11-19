@@ -1,2 +1,2 @@
 question_id,kind,question_text,state,answer_text,label,claim_ids,rumor_type,what_would_settle_it,opened_at,answered_at
-q001,question,Was it a hack?,answered,"Not supported by any public evidence; not formally ruled out. The FAA says it has no indication of a cyberattack, and the root cause is still not determined.",Unverified,c007,,,2026-11-13T18:00:00-05:00,2026-11-18T21:36:34-05:00
+q001,question,Was the FAA ground stop a cyberattack?,answered,"Not supported by any public evidence; not formally ruled out. The FAA says it has no indication of a cyberattack, and the root cause is still not determined.",Unverified,c007,,,2026-11-13T18:00:00-05:00,2026-11-18T21:36:34-05:00

@@ -10,8 +10,8 @@
 //                                        scripts/validate.mjs first; any problem stops the build.
 //                                        The build writes incidents/<slug>.html and <slug>.md.
 //   incidents/<slug>.md                  a hand-written page, for incidents not yet converted.
-// It also writes index.html, how-it-works.html and about.html from pages/*.html, and updates
-// index.json. Output depends only on the input files: no clock, no locale, no randomness, so
+// It also writes index.html, how-it-works.html and about.html from pages/*.html, 404.html and
+// sitemap.xml, and updates index.json. Output depends only on the input files: no clock, no locale, no randomness, so
 // the same input always produces byte-identical output.
 
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync, cpSync } from "node:fs";
@@ -25,6 +25,12 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
 const SITE = {
   name: "isitahack.com",
+  // The name search engines should show for the site, and the address every page is published at.
+  title: "Is It a Hack?",
+  url: "https://isitahack.com",
+  card: { path: "assets/social-card.png", width: 1200, height: 630, alt: "Is it a hack? Public-source fact-checks of security news, with every claim labelled and linked to its source." },
+  logo: "assets/logo.png",
+  xHandle: "@isitahack",
   tagline:
     "Public-source fact-checks of security news. Each incident carries a label (Confirmed, Reported, Unverified, Rumor, Debunked, Not established), source links, and a dated update log.",
   footer: "Made for entertainment using AI. Not endorsed by anyone named here.",
@@ -80,9 +86,33 @@ const THEME_INIT = `<script>try{var t=localStorage.getItem("theme");if(t==="ligh
 // and marking the section being read in the contents list.
 const ENHANCE = `<script>(function(){var r=document.documentElement,b=document.querySelector(".theme-toggle");function cur(){return r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function paint(){var d=cur()==="dark";b.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme");b.setAttribute("aria-pressed",d?"true":"false")}if(b){b.hidden=false;paint();b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}paint()})}function reveal(){var id=decodeURIComponent(location.hash.slice(1));var el=id&&document.getElementById(id);if(!el)return;for(var p=el;p;p=p.parentElement)if(p.tagName==="DETAILS")p.open=true;el.scrollIntoView()}addEventListener("hashchange",reveal);reveal();var links=[].slice.call(document.querySelectorAll(".toc a"));if(links.length&&"IntersectionObserver"in window){var seen={};var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id]=e.isIntersecting});var on=null;links.forEach(function(a){var id=a.getAttribute("href").slice(1);if(!on&&seen[id])on=a});if(on)links.forEach(function(a){if(a===on)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")})},{rootMargin:"-10% 0px -60% 0px"});links.forEach(function(a){var s=document.getElementById(a.getAttribute("href").slice(1));if(s)io.observe(s)})}})();</script>`;
 
-function shell({ title, description, root, body, banner = "", current = "", disclaimer = SITE.footer, markdown = "" }) {
+// Structured data for search engines. It only restates what the page shows.
+const jsonLd = (data) => `<script type="application/ld+json">${JSON.stringify(data).replace(/</g, "\\u003c")}</script>`;
+const ORG = { "@type": "Organization", "@id": `${SITE.url}/#org`, name: SITE.title, alternateName: SITE.name, url: `${SITE.url}/`, logo: `${SITE.url}/${SITE.logo}`, sameAs: [SITE.x, SITE.repo] };
+
+// `path` is the page's address on the site ("" for the home page); `share` is the
+// title to show when the page is shared, without the site name.
+function shell({ title, share = title, description, root, path, body, banner = "", current = "", disclaimer = SITE.footer, markdown = "", article = null, data = [], noindex = false }) {
+  const home = root || "./";
+  const url = `${SITE.url}/${path}`;
+  const meta = noindex ? `<meta name="robots" content="noindex">` : [
+    `<link rel="canonical" href="${esc(url)}">`,
+    `<meta property="og:site_name" content="${esc(SITE.title)}">`,
+    `<meta property="og:type" content="${article ? "article" : "website"}">`,
+    `<meta property="og:title" content="${esc(share)}">`,
+    `<meta property="og:description" content="${esc(description)}">`,
+    `<meta property="og:url" content="${esc(url)}">`,
+    `<meta property="og:image" content="${SITE.url}/${SITE.card.path}">`,
+    `<meta property="og:image:width" content="${SITE.card.width}">`,
+    `<meta property="og:image:height" content="${SITE.card.height}">`,
+    `<meta property="og:image:alt" content="${esc(SITE.card.alt)}">`,
+    article ? `<meta property="article:published_time" content="${esc(article.published)}">\n<meta property="article:modified_time" content="${esc(article.modified)}">` : "",
+    `<meta name="twitter:card" content="summary_large_image">`,
+    `<meta name="twitter:site" content="${SITE.xHandle}">`,
+    ...data.map(jsonLd),
+  ].filter(Boolean).join("\n");
   const nav = [
-    ["incidents", `${root}index.html#incidents`, "Incidents"],
+    ["incidents", `${home}#incidents`, "Incidents"],
     ["how-it-works", `${root}how-it-works.html`, "How it works"],
     ["about", `${root}about.html`, "About"],
   ].map(([key, href, text]) => `<a href="${href}"${key === current ? ' aria-current="page"' : ""}>${text}</a>`).join("\n");
@@ -100,6 +130,7 @@ function shell({ title, description, root, body, banner = "", current = "", disc
 ${HEAD_PARTIAL}
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
+${meta}
 ${alternates}
 <link rel="icon" href="${root}assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="${root}assets/site.css">
@@ -110,7 +141,7 @@ ${agentNote}
 <a class="skip" href="#main">Skip to content</a>
 ${banner}
 <header class="site-header wrap">
-<a class="brand" href="${root}index.html">${MARK}${WORDMARK}</a>
+<a class="brand" href="${home}">${MARK}${WORDMARK}</a>
 <nav class="site-nav" aria-label="Main">
 ${nav}
 <a href="${SITE.repo}" rel="noopener">GitHub</a>
@@ -126,7 +157,7 @@ ${WORDMARK}
 <p class="meta">Researched and organized by AI agents from public sources. Not security, legal, financial or safety advice.</p>
 </div>
 <nav class="footer-nav" aria-label="Footer">
-<a href="${root}index.html#incidents">Incidents</a>
+<a href="${home}#incidents">Incidents</a>
 <a href="${root}how-it-works.html">How it works</a>
 <a href="${root}about.html">About</a>
 <a href="${SITE.repo}" rel="noopener">GitHub repository</a>
@@ -170,8 +201,28 @@ function loadTyped(dir) {
 }
 function writeTyped(i, others, out) {
   const { main } = renderIncident(i.loaded, { root: "../", dataHref: `../${i.dataPath}`, dir: i.loaded.dir, repo: SITE.repo, others });
+  // The page title is the question people ask, then the site name.
+  const path = `incidents/${i.slug}.html`, url = `${SITE.url}/${path}`;
+  const description = `${i.question.text} ${i.question.answer}`;
+  const data = [{
+    "@context": "https://schema.org", "@type": "Article", "@id": `${url}#article`,
+    headline: i.question.text, alternativeHeadline: i.title, description, abstract: i.question.answer,
+    url, mainEntityOfPage: url, inLanguage: "en", isAccessibleForFree: true,
+    datePublished: i.first_published, dateModified: i.last_updated,
+    image: [`${SITE.url}/${SITE.card.path}`],
+    about: { "@type": "Event", name: i.title, startDate: i.incident_date },
+    author: { "@type": "Organization", name: `${SITE.name} desk`, url: `${SITE.url}/how-it-works.html` },
+    publisher: ORG,
+  }, {
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: SITE.title, item: `${SITE.url}/` },
+      { "@type": "ListItem", position: 2, name: i.title, item: url },
+    ],
+  }];
   writeFileSync(join(out, "incidents", `${i.slug}.html`), shell({
-    title: `${i.title} | ${SITE.name}`, description: `${i.question.text} ${i.question.answer}`,
+    title: `${i.question.text} | ${SITE.title}`, share: i.question.text, description, path, data,
+    article: { published: i.first_published, modified: i.last_updated },
     root: "../", banner: statusBanner(i), body: main, disclaimer: i.disclaimer, markdown: `${i.slug}.md`,
   }));
   writeFileSync(join(out, "incidents", `${i.slug}.md`), incidentMarkdown(i.loaded, { dataPath: i.dataPath }));
@@ -224,12 +275,12 @@ function writeLegacy(i, others, out) {
     root: "../", slug: i.slug, repo: SITE.repo, others, lead, facts,
     toc: doc.sections.map((s) => ({ id: s.id, name: s.heading.replace(/\*\*|`/g, "") })),
     main: `${doc.pre.join("\n")}\n\n${sectionsHtml}`,
-    crumb: `<a href="../index.html">Incidents</a>${i.incident_date ? ` / Incident date ${timeTag(i.incident_date)}` : ""}`,
+    crumb: `<a href="../#incidents">Incidents</a>${i.incident_date ? ` / Incident date ${timeTag(i.incident_date)}` : ""}`,
     title: inline(doc.title || i.title), historyPath: `incidents/${i.slug}.md`,
   });
   writeFileSync(join(out, "incidents", `${i.slug}.html`), shell({
-    title: `${i.title} | ${SITE.name}`, description: i.question ? `${i.question.text} ${i.question.answer}` : i.disclaimer,
-    root: "../", banner: statusBanner(i), disclaimer: i.disclaimer, body, markdown: `${i.slug}.md`,
+    title: `${i.title} | ${SITE.title}`, share: i.title, description: i.question ? `${i.question.text} ${i.question.answer}` : i.disclaimer,
+    path: `incidents/${i.slug}.html`, root: "../", banner: statusBanner(i), disclaimer: i.disclaimer, body, markdown: `${i.slug}.md`,
   }));
   if (resolve(out) !== resolve(ROOT)) writeFileSync(join(out, "incidents", `${i.slug}.md`), i.src);
 }
@@ -286,13 +337,32 @@ function buildHome(incidents, out) {
     count: `${incidents.length} tracked, newest update first`,
     incidents: incidents.length ? incidents.map(incidentCard).join("\n") : `<li class="card"><p>No incidents are being tracked yet.</p></li>`,
   });
-  writeFileSync(join(out, "index.html"), shell({ title: `${SITE.name}: is it a hack?`, description: SITE.tagline, root: "", banner, body, current: "incidents" }));
+  const data = [
+    { "@context": "https://schema.org", "@type": "WebSite", "@id": `${SITE.url}/#site`, name: SITE.title, alternateName: ["isitahack", SITE.name], url: `${SITE.url}/`, description: SITE.tagline, publisher: { "@id": ORG["@id"] } },
+    { "@context": "https://schema.org", ...ORG },
+  ];
+  writeFileSync(join(out, "index.html"), shell({ title: `${SITE.title} Public-source fact-checks of security news`, share: `${SITE.title} Here is what is actually known.`, description: `Is it a hack? ${SITE.tagline}`, root: "", path: "", data, banner, body, current: "incidents" }));
 }
 function buildPages(out) {
   for (const page of PAGES) {
     const body = fill(readPage(page.file), { root: "", repo: SITE.repo, x: SITE.x, ...pillMap });
-    writeFileSync(join(out, `${page.file}.html`), shell({ title: `${page.title} | ${SITE.name}`, description: page.description, root: "", body, current: page.file }));
+    writeFileSync(join(out, `${page.file}.html`), shell({ title: `${page.title} | ${SITE.title}`, share: page.title, description: page.description, root: "", path: `${page.file}.html`, body, current: page.file }));
   }
+  // GitHub Pages serves 404.html for any address that does not exist, at any depth,
+  // so its links start from the site root.
+  writeFileSync(join(out, "404.html"), shell({
+    title: `Page not found | ${SITE.title}`, description: "This page does not exist.", root: "/", path: "404.html", noindex: true,
+    body: `<main id="main" class="doc">\n<section class="wrap doc-head">\n<p class="kicker accent">Page not found</p>\n<h1>There is nothing at this address.</h1>\n<p class="lede">It may have moved, or the link may be wrong.</p>\n<p class="actions"><a class="button" href="/#incidents">See all incidents</a> <a class="button secondary" href="/about.html#contact">Report a broken link</a></p>\n</section>\n</main>`,
+  }));
+}
+
+// sitemap.xml: every page a search engine should list. An incident's date is its
+// last real update, so the file only changes when a page does.
+function buildSitemap(incidents, out) {
+  const newest = incidents[0]?.last_updated;
+  const entry = (path, lastmod) => `<url><loc>${esc(`${SITE.url}/${path}`)}</loc>${lastmod ? `<lastmod>${esc(lastmod)}</lastmod>` : ""}</url>`;
+  const urls = [entry("", newest), ...incidents.map((i) => entry(`incidents/${i.slug}.html`, i.last_updated)), ...PAGES.map((p) => entry(`${p.file}.html`))];
+  writeFileSync(join(out, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`);
 }
 
 // index.json: keep every existing field, refresh title/status/last_updated, and list each incident's files.
@@ -308,13 +378,16 @@ function updateIndexJson(incidents, out) {
   });
   writeFileSync(join(out, "index.json"), JSON.stringify({ ...existing, incidents: list }, null, 2) + "\n");
 }
-function checkLlms(incidents, out) {
+// llms.txt is written by hand. It must list every page and every incident's files;
+// a missing entry stops the build. The sample incident is never listed.
+function checkLlms(incidents) {
   const path = join(ROOT, "llms.txt");
-  if (!existsSync(path)) return warn("llms.txt", "missing");
+  if (!existsSync(path)) return ["llms.txt: file is missing"];
   const txt = readFileSync(path, "utf8");
-  for (const page of PAGES) if (!txt.includes(`${page.file}.html`)) warn("llms.txt", `does not list ${page.file}.html`);
-  for (const i of incidents) for (const f of Object.values(i.files)) if (!txt.includes(f)) warn("llms.txt", `does not list ${f}`);
-  if (resolve(out) !== resolve(ROOT)) writeFileSync(join(out, "llms.txt"), txt);
+  const missing = [];
+  for (const page of PAGES) if (!txt.includes(`${page.file}.html`)) missing.push(`${page.file}.html`);
+  for (const i of incidents) if (!i.sample) for (const f of Object.values(i.files)) if (!txt.includes(f)) missing.push(f);
+  return missing.map((f) => `llms.txt: does not list ${f}; add it in the same change`);
 }
 
 // ---------- main ----------
@@ -330,11 +403,15 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1
   const folders = (base) => (existsSync(base) ? readdirSync(base).sort().map((d) => join(base, d)).filter((d) => existsSync(join(d, "incident.json"))) : []);
   const typedDirs = [...folders(join(ROOT, "data", "incidents")), ...(args.includes("--sample") ? folders(join(ROOT, "format", "sample")) : [])];
   const typed = typedDirs.map(loadTyped);
+  for (const i of typed) if (i && i.loaded.dir.startsWith(join(ROOT, "format"))) i.sample = true;
   if (typed.includes(null)) { console.error("Build stopped: fix the problems above. A failed check is never bypassed."); process.exit(1); }
   const typedSlugs = new Set(typed.map((i) => i.slug));
   const legacy = readdirSync(join(ROOT, "incidents")).filter((f) => f.endsWith(".md") && !typedSlugs.has(basename(f, ".md"))).sort()
     .map((f) => loadLegacy(join(ROOT, "incidents", f)));
   const incidents = [...typed, ...legacy].sort((a, b) => String(b.last_updated).localeCompare(String(a.last_updated)) || a.slug.localeCompare(b.slug));
+
+  const unlisted = checkLlms(incidents);
+  if (unlisted.length) { for (const e of unlisted) console.error(e); console.error("Build stopped: fix the problems above. A failed check is never bypassed."); process.exit(1); }
 
   for (const i of incidents) {
     const others = incidents.filter((o) => o !== i).map((o) => ({ slug: o.slug, title: o.title, status: o.status, last_updated: o.last_updated }));
@@ -342,9 +419,10 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1
   }
   buildHome(incidents, out);
   buildPages(out);
+  buildSitemap(incidents, out);
   updateIndexJson(incidents, out);
-  checkLlms(incidents, out);
+  if (!inPlace) for (const f of ["llms.txt", "robots.txt"]) cpSync(join(ROOT, f), join(out, f));
   for (const i of incidents) console.log(`wrote incidents/${i.slug}.html${i.typed ? ` and ${i.slug}.md` : ""}`);
-  console.log(`wrote index.html, ${PAGES.map((p) => `${p.file}.html`).join(", ")}, index.json`);
+  console.log(`wrote index.html, ${PAGES.map((p) => `${p.file}.html`).join(", ")}, 404.html, sitemap.xml, index.json`);
   for (const w of warnings) console.warn(`warning: ${w}`);
 }

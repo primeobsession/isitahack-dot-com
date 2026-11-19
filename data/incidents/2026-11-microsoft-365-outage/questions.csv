@@ -1,5 +1,5 @@
 question_id,kind,question_text,state,answer_text,label,claim_ids,rumor_type,what_would_settle_it,opened_at,answered_at
-q001,question,Was it a hack?,answered,"All the public evidence says no. Microsoft says it was a technical failure, and the US government said on Nov 18 that the outage was not a cyberattack.",Debunked,c010;c005;c007,,,2026-11-18T21:20:00-05:00,2026-11-18T21:20:00-05:00
+q001,question,Was the Microsoft 365 outage a cyberattack?,answered,"All the public evidence says no. Microsoft says it was a technical failure, and the US government said on Nov 18 that the outage was not a cyberattack.",Debunked,c010;c005;c007,,,2026-11-18T21:20:00-05:00,2026-11-18T21:20:00-05:00
 q002,question,Was there a global Microsoft 365 outage on Nov 12 to 13?,answered,"Yes, about 24 hours, per Microsoft's own report.",Confirmed,c001,,,2026-11-18T21:20:00-05:00,2026-11-18T21:20:00-05:00
 q003,question,"What caused it, according to Microsoft?",answered,"A latent defect from a July update, extra load from a Teams failover, and reduced capacity, all at once.",Confirmed,c005,,,2026-11-18T21:20:00-05:00,2026-11-18T21:20:00-05:00
 q004,rumor,Was it caused by AI-written code or AI agents?,answered,Microsoft says no. No one else has addressed it.,Rumor,c011,,,2026-11-18T21:20:00-05:00,2026-11-18T21:20:00-05:00

@@ -1,0 +1,37 @@
+<!doctype html>
+<!-- Source of assets/social-card.png (1200x630) and assets/logo.png (512x512).
+     Regenerate with the commands in scripts/README.md. Add ?logo to draw the logo alone. -->
+<html lang="en">
+<meta charset="utf-8">
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body { background: #fbfaf7; color: #14161c; font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif; padding: 72px 80px; display: grid; grid-template-rows: auto 1fr auto; }
+  .brand { display: flex; align-items: center; gap: 22px; font-size: 40px; font-weight: 500; letter-spacing: -0.02em; }
+  .brand b { font-weight: 800; }
+  .brand .tld { color: #6b7080; }
+  svg { stroke: #1d3fd1; fill: #1d3fd1; }
+  h1 { align-self: center; font-size: 124px; line-height: 0.98; letter-spacing: -0.045em; font-weight: 800; }
+  h1 span { display: block; font-size: 52px; line-height: 1.15; letter-spacing: -0.025em; font-weight: 500; color: #4a4f5c; margin-top: 26px; }
+  .foot { display: flex; align-items: center; gap: 18px; font: 600 23px/1 ui-monospace, "SF Mono", Menlo, monospace; letter-spacing: 0.06em; text-transform: uppercase; color: #4a4f5c; border-top: 2px solid #14161c; padding-top: 30px; }
+  .dot { width: 18px; height: 18px; border-radius: 50%; border: 3px solid #1d3fd1; flex: none; }
+  .dot.half { background: linear-gradient(90deg, transparent 50%, #1d3fd1 50%); }
+  .dot.full { background: #1d3fd1; }
+  .foot span + .dot { margin-left: 22px; }
+  body.logo { width: 512px; height: 512px; padding: 0; display: grid; place-items: center; grid-template-rows: none; }
+  html:has(body.logo) { width: 512px; height: 512px; }
+  body.logo > :not(.mark) { display: none; }
+  .mark { display: none; }
+  body.logo .mark { display: block; }
+</style>
+<body>
+<div class="brand">
+<svg width="84" height="84" viewBox="0 0 28 28" fill="none"><path d="M14 3 A11 11 0 0 1 14 25" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M14 25 A11 11 0 0 1 14 3" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="0.1 4.2" fill="none"/><text x="14" y="19.4" text-anchor="middle" font-weight="800" font-size="15" stroke="none">?</text></svg>
+<span>isita<b>hack</b><span class="tld">.com</span></span>
+</div>
+<h1>Is it a hack?<span>Here is what is actually known.</span></h1>
+<div class="foot"><i class="dot"></i><span>Rumor</span><i class="dot half"></i><span>Reported</span><i class="dot full"></i><span>Confirmed</span><span style="margin-left:auto">Every claim linked to its source</span></div>
+<svg class="mark" width="400" height="400" viewBox="0 0 28 28" fill="none"><path d="M14 3 A11 11 0 0 1 14 25" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M14 25 A11 11 0 0 1 14 3" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="0.1 4.2" fill="none"/><text x="14" y="19.4" text-anchor="middle" font-weight="800" font-size="15" stroke="none">?</text></svg>
+<script>if (location.search === "?logo") document.body.className = "logo";</script>
+</body>
+</html>

@@ -1,7 +1,12 @@
 {
   "format_version": 1,
   "slug": "2026-11-faa-ground-stop",
-  "title": "FAA Nationwide Ground Stop: What We Know",
+  "title": "FAA nationwide ground stop",
+  "also_called": [
+    "the FAA outage",
+    "the air traffic control outage",
+    "the nationwide flight grounding"
+  ],
   "status": "monitoring",
   "incident_date": "2026-11-13",
   "disclaimer": "Made for entertainment using AI. Not endorsed by the FAA, any government agency, airline, news outlet, company, or anyone else named.",
@@ -88,7 +93,7 @@
   "charts": [
     {
       "id": "cancellations",
-      "title": "Cancellations",
+      "title": "How many flights were cancelled?",
       "type": "line",
       "data": "charts/cancellations.csv",
       "x": {
@@ -112,7 +117,7 @@
     },
     {
       "id": "delays",
-      "title": "Delays",
+      "title": "How many flights were delayed?",
       "type": "line",
       "data": "charts/delays.csv",
       "x": {
@@ -165,7 +170,7 @@
   "tables": [
     {
       "id": "worst-delays",
-      "title": "Worst airport departure delays",
+      "title": "Which airports had the worst delays?",
       "data": "tables/worst-delays.csv",
       "columns": [
         {
@@ -233,7 +238,7 @@
     },
     {
       "id": "thread-results",
-      "title": "Thread results",
+      "title": "What each line of inquiry found",
       "data": "tables/thread-results.csv",
       "columns": [
         {
@@ -261,7 +266,7 @@
     },
     {
       "id": "community-search",
-      "title": "SDR and community search",
+      "title": "Search for radio recordings and community reports",
       "data": "tables/community-search.csv",
       "columns": [
         {
@@ -301,7 +306,7 @@
     },
     {
       "id": "ruled-out",
-      "title": "Checked and ruled out",
+      "title": "What has been ruled out?",
       "data": "tables/ruled-out.csv",
       "columns": [
         {
@@ -371,13 +376,13 @@
   "sections": [
     {
       "type": "note",
-      "title": "The story so far",
+      "title": "What happened: the story so far",
       "file": "notes/story-so-far.md",
       "open": true
     },
     {
       "type": "claims",
-      "title": "Leading theories",
+      "title": "What caused it? Leading theories",
       "group": "theory",
       "open": true
     },
@@ -408,7 +413,7 @@
     },
     {
       "type": "timeline",
-      "title": "Timeline with evidence",
+      "title": "Timeline of the FAA ground stop",
       "open": true
     },
     {
@@ -417,7 +422,7 @@
     },
     {
       "type": "claims",
-      "title": "Side threads: SMART, Air Current, D.C. National",
+      "title": "Side questions: SMART, Air Current, D.C. National",
       "group": "side-thread"
     },
     {
@@ -431,7 +436,7 @@
     },
     {
       "type": "note",
-      "title": "Official statements",
+      "title": "What officials have said",
       "file": "notes/official-statements.md"
     },
     {
@@ -444,7 +449,7 @@
     },
     {
       "type": "note",
-      "title": "Still in flight (still being monitored)",
+      "title": "What is still being checked?",
       "file": "notes/still-in-flight.md"
     },
     {
