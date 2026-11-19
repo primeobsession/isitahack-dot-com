@@ -11,6 +11,8 @@
 ## Incident pages (Markdown with YAML front-matter, plus a rendered .html)
 - [FAA ground stop, Nov 13 2026](https://isitahack.com/incidents/2026-11-faa-ground-stop.md): incident write-up (still monitored). Front-matter: slug, title, status, labels summary, dates.
 - [FAA ground stop, Nov 13 2026 (HTML)](https://isitahack.com/incidents/2026-11-faa-ground-stop.html): the same write-up rendered to HTML by scripts/build.mjs.
+- [Apple services outage, Nov 17 2026](https://isitahack.com/incidents/2026-11-apple-services-outage.md): incident write-up (still monitored; final verdict pending). Front-matter: slug, title, status, labels summary, dates.
+- [Apple services outage, Nov 17 2026 (HTML)](https://isitahack.com/incidents/2026-11-apple-services-outage.html): the same write-up rendered to HTML by scripts/build.mjs.
 
 ## Data (CSV, UTF-8, RFC 4180, header row; legacy schema, not yet the manual's claims/sources/timeline/update_log schema)
 - [airport_delays.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/airport_delays.csv): columns airport,time_et,avg_delay_min,display
@@ -34,6 +36,10 @@
 - [thread_results.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/thread_results.csv): columns thread,verdict,confidence,sources
 - [timeline_events.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/timeline_events.csv): columns time_et,event,evidence,label
 - [update_log.csv](https://isitahack.com/data/incidents/2026-11-faa-ground-stop/raw/groundstop/data/update_log.csv): columns time_et,update
+- [Apple services outage, Nov 17 2026: claims.csv](https://isitahack.com/data/incidents/2026-11-apple-services-outage/claims.csv): one row per claim with label, source, tier and why it supports (manual section 6.1 schema)
+- [Apple services outage, Nov 17 2026: sources.csv](https://isitahack.com/data/incidents/2026-11-apple-services-outage/sources.csv): sources per claim with tier, independence group and link status (manual section 6.1 schema)
+- [Apple services outage, Nov 17 2026: timeline.csv](https://isitahack.com/data/incidents/2026-11-apple-services-outage/timeline.csv): dated events, each tied to a claim (manual section 6.1 schema)
+- [Apple services outage, Nov 17 2026: update_log.csv](https://isitahack.com/data/incidents/2026-11-apple-services-outage/update_log.csv): newest-first change log (manual section 6.1 schema)
 
 ## Notes
 - Schemas are documented in the operations manual section 6.1.

@@ -1,6 +1,16 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-apple-services-outage",
+      "title": "Apple Services Outage, Nov 17, 2026: Was It a Hack?",
+      "status": "monitoring",
+      "last_updated": "2026-11-18T21:30:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-apple-services-outage.md",
+        "html": "incidents/2026-11-apple-services-outage.html"
+      }
+    },
+    {
       "slug": "2026-11-faa-ground-stop",
       "title": "FAA Nationwide Ground Stop: What We Know",
       "status": "monitoring",
