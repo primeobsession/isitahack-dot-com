@@ -3,7 +3,7 @@ slug: 2026-11-apple-services-outage
 title: "Apple Services Outage, Nov 17, 2026: What We Know"
 status: monitoring
 incident_date: 2026-11-17
-last_updated: 2026-11-18T23:17:00-05:00
+last_updated: 2026-11-18T23:19:00-05:00
 size: "Large"
 data_dir: data/incidents/2026-11-apple-services-outage
 generated: true
@@ -24,7 +24,7 @@ This is the current answer, not a final verdict.
 
 ## The latest
 
-Nov 18, 2026, 11:17 PM ET: **Apple's services are back to normal; Apple blames an internal update and has given no technical detail.** Moved to the site's data format before first publication and reviewed against the sourcing rules. No labels changed. The page no longer states a likely verdict: a final verdict is published only after the site's owner approves it.
+Nov 18, 2026, 11:19 PM ET: **Apple's services are back to normal; Apple blames an internal update and has given no technical detail.** Apple's status page shows every Nov 17 entry resolved, and Apple has published no technical root cause. Before first publication this page was moved to the site's data format and reviewed against the sourcing rules; no labels changed.
 
 ## At a glance
 
@@ -144,7 +144,7 @@ Nov 18, 2026, 11:17 PM ET: **Apple's services are back to normal; Apple blames a
 
 | When | Update | Type |
 |---|---|---|
-| Nov 18, 2026, 11:17 PM ET | **Apple's services are back to normal; Apple blames an internal update and has given no technical detail.** Moved to the site's data format before first publication and reviewed against the sourcing rules. No labels changed. The page no longer states a likely verdict: a final verdict is published only after the site's owner approves it. | Updated |
+| Nov 18, 2026, 11:19 PM ET | **Apple's services are back to normal; Apple blames an internal update and has given no technical detail.** Apple's status page shows every Nov 17 entry resolved, and Apple has published no technical root cause. Before first publication this page was moved to the site's data format and reviewed against the sourcing rules; no labels changed. | Updated |
 | Nov 18, 2026, 9:25 PM ET | **Apple's developer status page could not be read; no outage posts found on Apple Support's X account.** Apple Developer System Status page not checked: content loads by script and could not be read by our fetch. Checked, not found: no outage posts on Apple Support's official X account for Nov 17 to 18. | Source blocked |
 | Nov 18, 2026, 9:20 PM ET | **Page drafted: Apple says an internal update caused the outage and that it was not a cyberattack.** Page drafted from public sources. All 18 source links re-checked Nov 18 (all loaded). Claims labeled under the site's labeling rules; the cause and the cyberattack denial stay Reported because they rest on Apple's statement alone. No final verdict is applied; that needs the owner's approval. | Added |
 
