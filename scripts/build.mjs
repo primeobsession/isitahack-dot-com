@@ -344,6 +344,8 @@ function buildHome(incidents, out) {
     latest: latest ? `incidents/${esc(latest.slug)}.html` : "#incidents",
     anatomy: typed ? anatomyCard(typed) : "",
     count: `${incidents.length} tracked, newest update first`,
+    // The stories under the lead sit two or three to a row, whichever leaves no gap.
+    story_cols: incidents.length - 1 <= 1 ? "cols-1" : incidents.length - 1 === 2 || incidents.length - 1 === 4 ? "cols-2" : "cols-3",
     now: latest ? `${monitoring.length ? `Monitoring ${monitoring.length} incident${monitoring.length === 1 ? "" : "s"}` : "Nothing being monitored"} · latest update ${timeTag(latest.last_updated)}` : "",
     incidents: incidents.length ? incidents.map((i, n) => incidentCard(i, n === 0)).join("\n") : `<li class="story"><div class="story-body"><p>No incidents are being tracked yet.</p></div></li>`,
   });
