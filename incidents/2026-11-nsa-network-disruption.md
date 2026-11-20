@@ -47,7 +47,7 @@ Nov 20, 2026, 4:00 PM ET: **The NSA says it is back to normal operations; the ca
 - The Director of National Intelligence says the recent outages were not a cyberattack and not a coordinated nation-state effort.
 - He told a House committee there is no indication of outside or state-sponsored actors behind the NSA disruption.
 - In October, CISA, the FBI and the NSA urged everyone to patch two critical PHP flaws right away.
-- The NSA says it has been operating under normal conditions since Nov 20, with some facilities on delayed openings that day.
+- The NSA said on Nov 20 that it is now operating under normal conditions; some facilities had delayed openings that day.
 
 ### Not known yet
 
