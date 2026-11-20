@@ -1,5 +1,5 @@
 - A technical root cause from the NSA: which system failed and why. Not found.
-- An NSA statement on when full service returned. Not found as of Nov 20, 10:05 AM ET; outlets report restoration from unnamed sources (c016).
+- An NSA statement on when full service returned. Found Nov 20, 4:00 PM ET: an NSA spokesperson told The Record the agency is operating under normal conditions (c016). No new statement on the NSA's own press page.
 - Any credible claim of a hack, breach or malicious cause. Not found.
 - A CISA or FBI statement about the NSA disruption itself. Not found.
 - nsa.gov press pages. Not re-read directly: access blocked to automated fetch. Their text was read through search results and outlets quoting them in full.

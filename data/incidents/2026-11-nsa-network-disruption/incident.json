@@ -41,13 +41,13 @@
       "claim_id": "c005"
     },
     {
-      "text": "The House Intelligence Committee's top Democrat says he has seen no evidence that any of the recent outages, including the NSA's, came from a malicious actor.",
-      "claim_id": "c012"
+      "text": "The NSA says it has been operating under normal conditions since Nov 20, with some facilities on delayed openings that day.",
+      "claim_id": "c016"
     }
   ],
   "not_known": [
     {
-      "text": "Whether the network is fully back. CNN, Fox News, The Record and MS NOW reported on Nov 20 that it was restored or mostly back to normal; the NSA has not said."
+      "text": "Exactly when every NSA facility returned to normal hours. Some were still on delayed openings for non-essential staff on Nov 20."
     },
     {
       "text": "Which systems failed, or what went wrong technically. The NSA has not said."
@@ -77,6 +77,12 @@
       "label": "US warning to patch PHP flaws",
       "detail": "CISA, FBI and NSA",
       "claim_id": "c005"
+    },
+    {
+      "value": "Nov 20",
+      "label": "NSA says operations back to normal",
+      "detail": "NSA spokesperson, via The Record",
+      "claim_id": "c016"
     }
   ],
   "sections": [
