@@ -5,7 +5,7 @@ question: "Was the FAA ground stop a cyberattack?"
 status: monitoring
 incident_date: 2026-11-13
 first_published: 2026-11-13T18:00:00-05:00
-last_updated: 2026-11-20T15:35:00-05:00
+last_updated: 2026-11-20T16:35:00-05:00
 size: "Nation-level"
 data_dir: data/incidents/2026-11-faa-ground-stop
 generated: true
@@ -18,7 +18,7 @@ disclaimer: "Made for entertainment using AI. Not endorsed by the FAA, any gover
 
 **Unverified.** Not supported by any public evidence; not formally ruled out. The FAA says it has no indication of a cyberattack, and the root cause is still not determined.
 
-Incident: FAA nationwide ground stop. Also reported as the FAA outage, the air traffic control outage and the nationwide flight grounding. First published Nov 13, 2026; last updated Nov 20, 2026, 3:35 PM ET.
+Incident: FAA nationwide ground stop. Also reported as the FAA outage, the air traffic control outage and the nationwide flight grounding. First published Nov 13, 2026; last updated Nov 20, 2026, 4:35 PM ET.
 
 Picture: An FAA radar tower near Bennett, Colorado, photographed in 2017. It shows what an FAA radar site looks like and was not involved in this incident. Image: Jeffrey Beall, CC BY 4.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:FAA_radar_(Bennett,_Colorado).JPG).
 
@@ -28,7 +28,7 @@ This is the current answer, not a final verdict.
 
 ## The latest
 
-Nov 20, 2026, 3:35 PM ET: **Reports say the network contractor took hours to find where the flooding came from; an official root-cause announcement is still pending.** Added CBS News's Nov. 18 report, from a person familiar with the investigation, that L3Harris took several hours to pinpoint the source of the flooding, delaying the end of the ground stop (Reported, one outlet). Added a former FAA official's view, in a Nov. 20 Ars Technica interview, that the SMART planning system only reads data and does not push into the operational network (Reported; one expert's opinion). Ars Technica also reports, citing CNN, that Secretary Duffy may announce the root cause as soon as Nov. 20; no announcement had been published at this check. Staleness check done: the main answer, known and not-known lists, size and who is affected still hold. Privacy check done: no handles, contacts, bylines or interviewee names added. The main answer and its label were not changed.
+Nov 20, 2026, 4:35 PM ET: **A second outlet reports the device behind the flooding was a converter whose broadcast feature is off by default; root cause still pending.** Added TechTarget's Nov. 19 report, from a source familiar with the issue, that the devices the FAA quarantined were circuit-to-packet converters and that their broadcast feature is not on by default and takes coding knowledge to turn on (Reported, one anonymous source; consistent with CRN's source in c143). No root-cause announcement from DOT or the FAA had been published at this check; the FAA Q&A is unchanged. Lead from the news sweep about an OPM USA Staffing access report checked: the article itself says there is no indication of a link to the ground stop, so it was not added. Staleness check done: the main answer, known and not-known lists, size and who is affected still hold. Privacy check done: no handles, contacts, bylines or interviewee names added. The main answer and its label were not changed.
 
 ## At a glance
 
@@ -522,6 +522,7 @@ Two items on the earlier page carried a label but no public link. Every labelled
 
 | When | Update | Type |
 |---|---|---|
+| Nov 20, 2026, 4:35 PM ET | **A second outlet reports the device behind the flooding was a converter whose broadcast feature is off by default; root cause still pending.** Added TechTarget's Nov. 19 report, from a source familiar with the issue, that the devices the FAA quarantined were circuit-to-packet converters and that their broadcast feature is not on by default and takes coding knowledge to turn on (Reported, one anonymous source; consistent with CRN's source in c143). No root-cause announcement from DOT or the FAA had been published at this check; the FAA Q&A is unchanged. Lead from the news sweep about an OPM USA Staffing access report checked: the article itself says there is no indication of a link to the ground stop, so it was not added. Staleness check done: the main answer, known and not-known lists, size and who is affected still hold. Privacy check done: no handles, contacts, bylines or interviewee names added. The main answer and its label were not changed. | Added |
 | Nov 20, 2026, 3:35 PM ET | **Reports say the network contractor took hours to find where the flooding came from; an official root-cause announcement is still pending.** Added CBS News's Nov. 18 report, from a person familiar with the investigation, that L3Harris took several hours to pinpoint the source of the flooding, delaying the end of the ground stop (Reported, one outlet). Added a former FAA official's view, in a Nov. 20 Ars Technica interview, that the SMART planning system only reads data and does not push into the operational network (Reported; one expert's opinion). Ars Technica also reports, citing CNN, that Secretary Duffy may announce the root cause as soon as Nov. 20; no announcement had been published at this check. Staleness check done: the main answer, known and not-known lists, size and who is affected still hold. Privacy check done: no handles, contacts, bylines or interviewee names added. The main answer and its label were not changed. | Added |
 | Nov 20, 2026, 2:45 PM ET | **The FAA's own account of how closely its technician watched the contractor's router work is now in dispute.** Added Bedford's Nov. 17 statement that the L3Harris engineer was monitored by an FAA technician (Confirmed that he said it; CNN and Bloomberg), and CNN's report that an FAA spokesperson later said the escort is not present while the contractor works, with the union's account and an unnamed-source account of a 2025 memo (Reported). Added Bloomberg's report of Bedford saying the FAA thought the router function was disabled and does not yet know how the configuration changed (Reported, one outlet). Noted the conflict on the Washington Post report c141. No root-cause announcement had been published at this check. Staleness check done: the main answer, known and not-known lists, size and who is affected still hold. Privacy check done: no handles, contacts, bylines or spokesperson names added. The main answer and its label were not changed. | Added |
 | Nov 20, 2026, 1:35 PM ET | **The transportation secretary says the ground stop could have ended sooner if the network contractor had found the problem faster.** Added AP and Reuters reports of Secretary Duffy's Nov. 18 remarks that L3Harris, which runs and monitors the FAA telecommunications network, did not identify the problem quickly enough (Confirmed that he said it; it is not a finding on the cause). No root-cause announcement had been published at this check. Staleness check done: the main answer, known and not-known lists, size and who is affected still hold. Privacy check done: no handles, contacts or bylines added. The main answer and its label were not changed. | Added |
@@ -851,6 +852,7 @@ Two items on the earlier page carried a label but no public link. Every labelled
 - [Bloomberg via The Straits Times: US aviation authority pauses router installation](https://www.straitstimes.com/world/united-states/us-aviation-authority-pauses-installation-of-gear-tied-to-messy-flight-halt) (News outlet)
 - [CBS News: During nationwide ground stop, L3Harris struggled to find location of system outage](https://www.cbsnews.com/news/ground-stop-l3harris-system-outage/) (News outlet, Nov 18, 2026)
 - [Ars Technica: US will soon announce root cause behind FAA nationwide ground stop](https://arstechnica.com/gadgets/2026/11/how-faa-can-modernize-us-national-airspace-system-without-emergency-ground-stops/) (News outlet, Nov 20, 2026)
+- [TechTarget: Experts look beyond HPE devices for answers on FAA ground stop](https://www.techtarget.com/news/experts-look-beyond-hpe-devices-for-answers-on-faa-ground-stop/875209/) (News outlet, Nov 19, 2026)
 
 ## Data files
 
