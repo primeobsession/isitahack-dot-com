@@ -2,8 +2,14 @@
   "format_version": 1,
   "slug": "2026-11-nsa-network-disruption",
   "title": "NSA internal network disruption, Nov 17, 2026",
-  "subject": { "name": "NSA", "kind": "government" },
-  "also_called": ["the NSA outage", "the NSANet outage"],
+  "subject": {
+    "name": "NSA",
+    "kind": "government"
+  },
+  "also_called": [
+    "the NSA outage",
+    "the NSANet outage"
+  ],
   "status": "monitoring",
   "incident_date": "2026-11-17",
   "disclaimer": "Made for entertainment using AI. Not endorsed by the NSA, any government agency, news outlet, company, or anyone else named.",
@@ -14,34 +20,111 @@
   "size_basis": "Potential only: it would be nation-level if the worst case were true, since this is the NSA's classified network. The known impact is an internal outage that kept many staff home; officials say core missions kept running and see no sign of an attack.",
   "who_is_affected": "NSA employees, mainly at Fort Meade, Maryland, and a site in Georgia, who could not use the internal network normally and were told to stagger arrivals or stay home. The public is not directly affected and there is nothing the public needs to do.",
   "known": [
-    { "text": "The NSA says it had a temporary degradation during scheduled routine maintenance, and that mission-critical capabilities stayed fully operational.", "claim_id": "c001" },
-    { "text": "The Director of National Intelligence said patching for recently found PHP flaws caused some NSA systems not to come back up as expected. This confirms what he said, not the technical detail.", "claim_id": "c002" },
-    { "text": "The Director of National Intelligence says the recent outages were not a cyberattack and not a coordinated nation-state effort.", "claim_id": "c003" },
-    { "text": "He told a House committee there is no indication of outside or state-sponsored actors behind the NSA disruption.", "claim_id": "c004" },
-    { "text": "In October, CISA, the FBI and the NSA urged everyone to patch two critical PHP flaws right away.", "claim_id": "c005" },
-    { "text": "The House Intelligence Committee's top Democrat says he has seen no evidence that any of the recent outages, including the NSA's, came from a malicious actor.", "claim_id": "c012" }
+    {
+      "text": "The NSA says it had a temporary degradation during scheduled routine maintenance, and that mission-critical capabilities stayed fully operational.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The Director of National Intelligence said patching for recently found PHP flaws caused some NSA systems not to come back up as expected. This confirms what he said, not the technical detail.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "The Director of National Intelligence says the recent outages were not a cyberattack and not a coordinated nation-state effort.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "He told a House committee there is no indication of outside or state-sponsored actors behind the NSA disruption.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "In October, CISA, the FBI and the NSA urged everyone to patch two critical PHP flaws right away.",
+      "claim_id": "c005"
+    },
+    {
+      "text": "The House Intelligence Committee's top Democrat says he has seen no evidence that any of the recent outages, including the NSA's, came from a malicious actor.",
+      "claim_id": "c012"
+    }
   ],
   "not_known": [
-    { "text": "Whether the network is fully back. Reports on Nov 18 and Nov 19 differ, and the NSA has not said." },
-    { "text": "Which systems failed, or what went wrong technically. The NSA has not said." },
-    { "text": "How many staff were affected and for how long." },
-    { "text": "Whether the network first failed on Monday, Nov 16, or Tuesday, Nov 17." },
-    { "text": "Whether the red-team review the Senate Democratic Leader asked for will happen, and what it would find." },
-    { "text": "Whether the NSA or the intelligence community will publish a fuller explanation." }
+    {
+      "text": "Whether the network is fully back. CNN and Fox News reported on Nov 20 that it was restored; the NSA has not said."
+    },
+    {
+      "text": "Which systems failed, or what went wrong technically. The NSA has not said."
+    },
+    {
+      "text": "How many staff were affected. CNN reports the outage lasted almost four days."
+    },
+    {
+      "text": "Whether the network first failed on Monday, Nov 16, or Tuesday, Nov 17."
+    },
+    {
+      "text": "Whether the red-team review the Senate Democratic Leader asked for will happen, and what it would find."
+    },
+    {
+      "text": "Whether the NSA or the intelligence community will publish a fuller explanation."
+    }
   ],
   "figures": [
-    { "value": "Nov 17", "label": "NSA statement on the disruption", "detail": "Routine maintenance, per the NSA", "claim_id": "c001" },
-    { "value": "Oct 21", "label": "US warning to patch PHP flaws", "detail": "CISA, FBI and NSA", "claim_id": "c005" }
+    {
+      "value": "Nov 17",
+      "label": "NSA statement on the disruption",
+      "detail": "Routine maintenance, per the NSA",
+      "claim_id": "c001"
+    },
+    {
+      "value": "Oct 21",
+      "label": "US warning to patch PHP flaws",
+      "detail": "CISA, FBI and NSA",
+      "claim_id": "c005"
+    }
   ],
   "sections": [
-    { "type": "claims", "title": "What caused it? Cause and hack claims", "group": "cause", "open": true },
-    { "type": "questions", "title": "Questions and rumors", "open": true },
-    { "type": "claims", "title": "What happened?", "group": "what-happened", "open": true },
-    { "type": "timeline", "title": "Timeline of the NSA network disruption" },
-    { "type": "claims", "title": "Who and what was affected?", "group": "impact" },
-    { "type": "claims", "title": "What were the PHP flaws?", "group": "background" },
-    { "type": "claims", "title": "Related, but separate", "group": "related" },
-    { "type": "note", "title": "Official statements", "file": "notes/official-statements.md" },
-    { "type": "note", "title": "What we checked and did not find", "file": "notes/checked-not-found.md" }
+    {
+      "type": "claims",
+      "title": "What caused it? Cause and hack claims",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions and rumors",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the NSA network disruption"
+    },
+    {
+      "type": "claims",
+      "title": "Who and what was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "What were the PHP flaws?",
+      "group": "background"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "Official statements",
+      "file": "notes/official-statements.md"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
   ]
 }
