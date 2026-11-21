@@ -4,3 +4,5 @@ t002,2026-11-16T00:00:00+09:00,,Nov 16,stated,"Rakuten Securities detects possib
 t003,2026-11-17T00:00:00+09:00,,Nov 17,stated,Rakuten Securities publishes its apology and notice: up to about 4.47 million and 11.25 million accounts affected,c003,"Date only, Japan time. Counts in c003 and c004."
 t004,2026-11-19T00:00:00+09:00,,Nov 19,stated,Japan's Financial Services Agency orders Rakuten Securities to report; the company announces it,c008,"Date only, Japan time."
 t005,2026-11-20T15:21:00+09:00,,"Nov 20, 3:21 PM Japan time",stated,Nippon TV reports the financial services minister confirmed the order,c008,Time is the outlet's last-updated time.
+t006,2026-11-19T00:00:00+09:00,,Nov 19,stated,"The Japan Times (Jiji) reports the company says it used real customer data in the test environment, postpones a planned Tokyo store opening and waives some transfer fees",c013,"Date only, Japan time; date of the report."
+t007,2026-11-20T00:00:00+09:00,,Nov 20,stated,"The Japan Times reports at least 15,000 people registered interest in a possible class action",c014,"Date only, Japan time; date of the report."
