@@ -34,12 +34,12 @@
       "claim_id": "c003"
     },
     {
-      "text": "It says up to about 11.25 million more accounts had only a login ID and customer code exposed.",
-      "claim_id": "c004"
-    },
-    {
       "text": "It says it has not confirmed any password or PIN leak, or related unauthorized trades.",
       "claim_id": "c005"
+    },
+    {
+      "text": "The company says it used real customer data, not dummy data, in the test environment, the press reports.",
+      "claim_id": "c013"
     },
     {
       "text": "Japan's Financial Services Agency ordered the company to report on Nov 19.",
@@ -60,7 +60,7 @@
       "text": "Whether the company's statement that passwords and PINs were not leaked holds up."
     },
     {
-      "text": "Whether real customer data was in the test environment, as one outlet reports."
+      "text": "Whether the real customer data in the test environment was masked."
     }
   ],
   "figures": [
