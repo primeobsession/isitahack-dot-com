@@ -1,0 +1,7 @@
+- A Workday root-cause or post-incident report. Not found as of Nov 20, 11:00 AM ET.
+- An SEC filing from Workday about the outage. Not found.
+- A CISA, FBI or other government statement naming Workday. Not found. The Nov 18 White House release covers other outages and does not mention Workday.
+- Any credible claim of a hack, breach, ransomware or data theft at Workday. Not found. The only claim of a different cause timeline comes from forum posts repeated by a vendor blog (c010).
+- A public Workday status page. Workday's own pages were not logged into; recaps say customer updates reached the public through employers' status pages.
+- A Workday post on X. Not checked.
+- The San Francisco Chronicle original. Not read directly; its reporting is cited through other outlets.

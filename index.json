@@ -23,6 +23,17 @@
       }
     },
     {
+      "slug": "2026-11-workday-outage",
+      "title": "Workday HR and payroll outage, Nov 13-14, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-20T18:55:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-workday-outage.md",
+        "html": "incidents/2026-11-workday-outage.html",
+        "data": "data/incidents/2026-11-workday-outage/"
+      }
+    },
+    {
       "slug": "2026-11-faa-ground-stop",
       "title": "FAA nationwide ground stop",
       "status": "monitoring",

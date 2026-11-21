@@ -1,0 +1,134 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-workday-outage",
+  "title": "Workday HR and payroll outage, Nov 13-14, 2026",
+  "subject": {
+    "name": "Workday",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "the Workday outage",
+    "the Workday payroll outage"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-13",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Workday, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Workday serves about 11,500 organizations and is a service many employees rely on for pay, time and benefits. The outage lasted about a day for most customers. Nobody has said how many organizations or people were affected.",
+  "who_is_affected": "Employees at organizations that use Workday, who could not clock in, see pay, request time off or file for benefits from the afternoon of Nov 13 until Nov 14. Service is back for most customers. Check your employer's notice for any benefits deadline or timecard steps.",
+  "known": [
+    {
+      "text": "Workday's customer notice said its disaster-recovery site unexpectedly connected to production databases. This is what Workday said, not an independent finding.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Workday said the outage was not related to a cybersecurity incident. This is the company's own statement, not an independent finding.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "Workday acknowledged a service disruption on Friday, Nov 13.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "Employees at affected organizations could not clock in, see pay, request time off or file for benefits.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "Workday said service was restored by 11 AM ET on Saturday, Nov 14. Some employers reported restoration at other times.",
+      "claim_id": "c006"
+    },
+    {
+      "text": "A Nov 18 White House release says officials see no indication of a coordinated cyberattack behind recent tech outages. It does not name Workday.",
+      "claim_id": "c007"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether the outage was a cyberattack. Workday says it was not; no independent source has confirmed that."
+    },
+    {
+      "text": "The root cause. Workday has not published a report or said how its disaster-recovery services reached production databases."
+    },
+    {
+      "text": "How many customers and employees were affected. Workday has not said."
+    },
+    {
+      "text": "Whether any customer data was lost or changed. Employers told staff to check their own records and pending requests."
+    },
+    {
+      "text": "Whether a regulator, CISA or an outside investigator will say anything about it. None had at the last check."
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 13",
+      "label": "Outage began",
+      "detail": "Friday afternoon, ET",
+      "claim_id": "c003"
+    },
+    {
+      "value": "11 AM Sat",
+      "label": "Service restored, per Workday",
+      "detail": "Some customers returned later",
+      "claim_id": "c006"
+    },
+    {
+      "value": "11,500",
+      "label": "Organizations Workday serves",
+      "detail": "Total customers, not the number affected",
+      "claim_id": "c005"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "What caused it? Cause and hack claims",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions and rumors",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Workday outage"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What Workday and others said",
+      "file": "notes/official-statements.md"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
