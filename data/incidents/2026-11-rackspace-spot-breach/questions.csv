@@ -1,0 +1,6 @@
+question_id,kind,question_text,state,answer_text,label,claim_ids,rumor_type,what_would_settle_it,opened_at,answered_at
+q001,question,Was Rackspace Spot hacked?,answered,"Reportedly yes: Rackspace's customer notice, as BleepingComputer quotes it, says leaked credentials let an unauthorized party into Spot on Nov 17. No Rackspace page carries it. Data theft, customer count and attacker are not established.",Reported,c001;c002;c008,,,2026-11-21T18:09:37-05:00,2026-11-21T18:09:37-05:00
+q002,question,Was customer data stolen?,open,,,c008,,"A Rackspace incident report, or affected customers or a regulator saying what was read or misused.",2026-11-21T18:09:37-05:00,
+q003,question,How many customers were affected?,open,,,c009,,"Rackspace publishing a count, or a regulator filing.",2026-11-21T18:09:37-05:00,
+q004,question,"How did the credentials leak, and who is behind it?",open,,,c010;c011,,"A published Rackspace incident report, or an independent forensic finding or government attribution.",2026-11-21T18:09:37-05:00,
+q005,question,Is service back to normal?,open,,,c004;c007,,Rackspace posting the restoration and the end of the sign-up restriction on its own pages.,2026-11-21T18:09:37-05:00,

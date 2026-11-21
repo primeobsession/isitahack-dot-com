@@ -1,0 +1,5 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-16T19:20:00-05:00,2026-11-17T17:00:00-05:00,,approximate,"An unauthorized party uses leaked credentials to access parts of Rackspace Spot, per Rackspace's customer notice",c001,"00:20 to 22:00 UTC Nov 17, 'about', per the notice as BleepingComputer quotes it. Converted to ET."
+t002,2026-11-18T00:00:00-05:00,,Nov 18,approximate,Rackspace learns of the intrusion after a customer report and confirms that customer was affected,c002,Date only in the report; midnight is a placeholder.
+t003,2026-11-21T00:00:00-05:00,,Nov 21,approximate,"Rackspace announces Spot service fully restored, per BleepingComputer",c004,Date only in the report; midnight is a placeholder. The admin console had been down for several days.
+t004,2026-11-21T17:59:00-05:00,,,stated,BleepingComputer publishes its report,c001,"05:59 PM per the article, taken as ET. The article page does not label its time zone."
