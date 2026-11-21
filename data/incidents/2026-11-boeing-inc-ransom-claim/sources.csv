@@ -1,0 +1,6 @@
+source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
+s001,https://cybernews.com/security/boeing-data-breach-military-helicopters/,Cybernews: Boeing data breach allegations put decades of data at risk,2,cybernews,2026-11-20,2026-11-20T19:49:00-05:00,,ok,2026-11-20T19:49:00-05:00
+s002,https://www.ransomware.live/id/Qm9laW5nQGluY3JhbnNvbQ,ransomware.live: Boeing entry (INC Ransom),3,ransomware-live,2026-11-20,2026-11-20T19:49:00-05:00,,ok,2026-11-20T19:49:00-05:00
+s003,https://playciso.com/blog/boeing-inc-ransom-leak-site-claim,PlayCISO: Boeing named on INC Ransom leak site,3,playciso,2026-11-20,2026-11-20T19:49:00-05:00,,ok,2026-11-20T19:49:00-05:00
+s004,https://boeing.mediaroom.com/news-releases-statements,Boeing newsroom: news releases and statements,1,boeing,,2026-11-20T19:49:00-05:00,,ok,2026-11-20T19:49:00-05:00
+s005,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000012927&type=8-K,SEC EDGAR: Boeing filings (submissions list),1,sec,,2026-11-20T19:49:00-05:00,,ok,2026-11-20T19:49:00-05:00
