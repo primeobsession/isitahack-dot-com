@@ -17,22 +17,30 @@
   "verdict_approved_at": null,
   "size": "Large",
   "size_basis": "DoorDash is a food-delivery service that many people use daily, and Downdetector logged more than 12,700 reports. DoorDash has not said how many customers were affected, and Downdetector counts reports, not users.",
-  "who_is_affected": "People who use the DoorDash app or website, mostly in the US, from about 11 AM ET on Saturday, Nov 21, and businesses using DoorDash Drive from 11:30 AM ET. When the problem fully ended is not confirmed.",
+  "who_is_affected": "People who use the DoorDash app or website, mostly in the US, from about 11 AM ET on Saturday, Nov 21, and businesses using DoorDash Drive from 11:30 AM ET. DoorDash marked both status-page incidents resolved by 2:50 PM ET but has not said when the app was fully back for everyone.",
   "known": [
     {
-      "text": "DoorDash's status page showed an increase in errors on its Drive endpoints from 11:30 AM ET on Nov 21 and a recovery update at 11:50 AM ET, per two outlets relaying it.",
+      "text": "DoorDash's status page showed an increase in errors on its Drive endpoints from 11:30 AM ET on Nov 21 and a recovery update at 11:50 AM ET.",
       "claim_id": "c001"
+    },
+    {
+      "text": "DoorDash opened a second status-page incident, 'DoorDash Health Degredation', at 11:33 AM ET, tied to its merchant orders component.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "DoorDash marked the Drive incident resolved at 1:58 PM ET and said the second incident ended at 11:51 AM ET.",
+      "claim_id": "c010"
     }
   ],
   "not_known": [
     {
-      "text": "What caused the outage. DoorDash has not said."
+      "text": "What caused the outage. DoorDash has not said; its status page says a post mortem will be posted later."
     },
     {
       "text": "Whether it was a cyberattack. DoorDash has not said either way; the hack idea is only social-media speculation."
     },
     {
-      "text": "Whether the Drive incident caused the app and website errors, and when the problem ended. Components showed operational by 1:52 PM ET, but neither incident was marked resolved."
+      "text": "Whether either status-page incident caused the app and website errors, and when the app was fully back for everyone."
     },
     {
       "text": "How many customers were affected."
@@ -56,6 +64,12 @@
       "label": "Recovery update (ET)",
       "detail": "On the Drive incident",
       "claim_id": "c001"
+    },
+    {
+      "value": "1:58 PM",
+      "label": "Drive incident resolved (ET)",
+      "detail": "Per DoorDash's status page",
+      "claim_id": "c010"
     }
   ],
   "sections": [
