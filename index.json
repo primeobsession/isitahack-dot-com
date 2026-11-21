@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-microsoft-365-outage",
+      "title": "Microsoft 365 outage, Nov 12-13, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-21T18:45:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-microsoft-365-outage.md",
+        "html": "incidents/2026-11-microsoft-365-outage.html",
+        "data": "data/incidents/2026-11-microsoft-365-outage/"
+      }
+    },
+    {
       "slug": "2026-11-rackspace-spot-breach",
       "title": "Rackspace Spot breach, Nov 2026",
       "status": "monitoring",
@@ -77,17 +88,6 @@
         "page": "incidents/2026-11-doordash-outage.md",
         "html": "incidents/2026-11-doordash-outage.html",
         "data": "data/incidents/2026-11-doordash-outage/"
-      }
-    },
-    {
-      "slug": "2026-11-microsoft-365-outage",
-      "title": "Microsoft 365 outage, Nov 12-13, 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-21T14:45:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-microsoft-365-outage.md",
-        "html": "incidents/2026-11-microsoft-365-outage.html",
-        "data": "data/incidents/2026-11-microsoft-365-outage/"
       }
     },
     {
