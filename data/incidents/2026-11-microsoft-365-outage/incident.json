@@ -26,11 +26,18 @@
     {
       "text": "Microsoft's preliminary report blames a latent defect from a July update, set off by extra traffic and reduced capacity. This is Microsoft's own finding.",
       "claim_id": "c005"
+    },
+    {
+      "text": "Microsoft's final report, dated Nov 20, gives the same cause and says the outage was confirmed not to be a cyberattack. This is Microsoft's own finding.",
+      "claim_id": "c021"
     }
   ],
   "not_known": [
     {
-      "text": "Whether established news outlets confirm the final report's account. For now it rests on a third-party copy and one small outlet."
+      "text": "Why the Teams routing issue in Microsoft's US East region happened, and what the July update was meant to fix. The final report does not say."
+    },
+    {
+      "text": "Whether any independent body will publish its own finding on the cause. None has; the answer that it was not a cyberattack rests on Microsoft's report and the US government's statement."
     },
     {
       "text": "Exactly how many users and organizations were affected."
@@ -69,8 +76,8 @@
     },
     {
       "value": "Nov 20",
-      "label": "Final report due",
-      "detail": "Microsoft",
+      "label": "Final report released",
+      "detail": "Microsoft, per GeekWire",
       "claim_id": "c016"
     }
   ],
