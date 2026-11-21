@@ -1,0 +1,6 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-07-23T00:00:00+00:00,,Jul 23,stated,"Per Microsoft, the flaw is introduced into the Entra Connect Health API",c002,Date only; time zone not stated.
+t002,2026-11-09T00:00:00+00:00,,Nov 9,stated,Microsoft says it discovers the vulnerability,c002,Date only; time zone not stated.
+t003,2026-11-19T00:00:00+00:00,,Nov 19,stated,Microsoft deploys a server-side fix,c003,Date only; time zone not stated.
+t004,2026-11-20T00:00:00+00:00,,Nov 20,stated,"Microsoft concludes its investigation, finds unauthorized read-only access, and begins notifying affected organizations",c004,Date only; time zone not stated.
+t005,2026-11-21T00:00:00+00:00,,Nov 21,stated,BleepingComputer and Borns IT- und Windows-Blog report the notification,c001,Date only; date of the reports.
