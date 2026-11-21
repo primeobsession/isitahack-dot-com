@@ -3,3 +3,4 @@ t001,2026-11-01,,Nov 1 to Nov 5,stated,An unknown party has access to Staples Ca
 t002,2026-11-20,,Friday evening,approximate,Staples emails affected customers about the security incident,c001,Les Affaires says the message went out Friday evening.
 t003,2026-11-20T18:41:00-05:00,,,stated,Global News publishes the first report of the notice,c001,Article time stamp.
 t004,2026-11-20T22:58:00-05:00,,,stated,"CBC News publishes its report, with a statement from a Staples spokesperson",c006,Article time stamp.
+t005,2026-11-21T00:05:00-05:00,,,stated,The Canadian Press reports that a Staples spokesperson says no other Staples website was affected,c006,Winnipeg Free Press posting time; the wire says it was first published Nov 20.

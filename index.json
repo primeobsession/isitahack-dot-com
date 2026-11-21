@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-staples-canada-print-breach",
+      "title": "Staples Canada print website breach, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-21T00:36:34-05:00",
+      "files": {
+        "page": "incidents/2026-11-staples-canada-print-breach.md",
+        "html": "incidents/2026-11-staples-canada-print-breach.html",
+        "data": "data/incidents/2026-11-staples-canada-print-breach/"
+      }
+    },
+    {
       "slug": "2026-11-faa-ground-stop",
       "title": "FAA nationwide ground stop",
       "status": "monitoring",
@@ -33,17 +44,6 @@
         "page": "incidents/2026-11-usda-farm-payment-system-cyberattack.md",
         "html": "incidents/2026-11-usda-farm-payment-system-cyberattack.html",
         "data": "data/incidents/2026-11-usda-farm-payment-system-cyberattack/"
-      }
-    },
-    {
-      "slug": "2026-11-staples-canada-print-breach",
-      "title": "Staples Canada print website breach, Nov 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-21T00:11:29-05:00",
-      "files": {
-        "page": "incidents/2026-11-staples-canada-print-breach.md",
-        "html": "incidents/2026-11-staples-canada-print-breach.html",
-        "data": "data/incidents/2026-11-staples-canada-print-breach/"
       }
     },
     {
