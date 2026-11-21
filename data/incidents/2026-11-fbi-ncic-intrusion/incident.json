@@ -1,0 +1,106 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-fbi-ncic-intrusion",
+  "title": "FBI crime database (NCIC) intrusion, reported Nov 20, 2026",
+  "subject": {
+    "name": "FBI NCIC",
+    "kind": "government"
+  },
+  "also_called": [
+    "the NCIC breach",
+    "the FBI crime database hack"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-20",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by the FBI, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Nation-level potential",
+  "size_basis": "NCIC is used by more than 100,000 criminal justice partners nationwide. No source says what was reached, so this is the worst case, not a known impact.",
+  "who_is_affected": "Potentially police and courts that rely on NCIC, and people with records in it. No source says whose records, if any, were reached, and there is no notice for the public to act on.",
+  "known": [
+    {
+      "text": "NCIC is the FBI-run database police nationwide use for warrants, stolen property and other records.",
+      "claim_id": "c006"
+    },
+    {
+      "text": "The FBI has not commented on CNN's report.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "A separate breach hit the FBI jobs site in September; the FBI blamed a contractor's missed patch.",
+      "claim_id": "c008"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether the intrusion happened as described. It rests on two unnamed people speaking to CNN."
+    },
+    {
+      "text": "What part of NCIC was reached, how the intruders got in, and who they are."
+    },
+    {
+      "text": "Whether any records were copied or changed."
+    },
+    {
+      "text": "Whether it is linked to this week's outages or the September jobs-site breach. No source says so."
+    },
+    {
+      "text": "Whether NCIC service for police was interrupted."
+    }
+  ],
+  "figures": [
+    {
+      "value": "18M+",
+      "label": "Active NCIC records",
+      "detail": "FBI figure as of 2023; not a count of anything affected",
+      "claim_id": "c006"
+    },
+    {
+      "value": "Nov 19",
+      "label": "Officials knew by",
+      "detail": "Per CNN's two sources; discovery date not given",
+      "claim_id": "c002"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions and rumors",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the NCIC report"
+    },
+    {
+      "type": "claims",
+      "title": "What is NCIC?",
+      "group": "background"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related",
+      "open": true
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

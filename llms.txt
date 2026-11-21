@@ -27,6 +27,8 @@
 - [Boeing ransomware claim by INC Ransom, Nov 20 2026 (HTML)](https://isitahack.com/incidents/2026-11-boeing-inc-ransom-claim.html): the same report as a web page.
 - [Vermont Valcour police dispatch outage, Nov 2026](https://isitahack.com/incidents/2026-11-vermont-valcour-dispatch-outage.md): the report as Markdown (still monitored). Built from its data folder.
 - [Vermont Valcour police dispatch outage, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-vermont-valcour-dispatch-outage.html): the same report as a web page.
+- [FBI crime database (NCIC) intrusion, reported Nov 20 2026](https://isitahack.com/incidents/2026-11-fbi-ncic-intrusion.md): the report as Markdown (still monitored). Built from its data folder.
+- [FBI crime database (NCIC) intrusion, reported Nov 20 2026 (HTML)](https://isitahack.com/incidents/2026-11-fbi-ncic-intrusion.html): the same report as a web page.
 
 ## Data (typed incident format: UTF-8, RFC 4180 CSV with a header row; see Format below)
 - [data/incidents/2026-11-microsoft-365-outage/](https://isitahack.com/data/incidents/2026-11-microsoft-365-outage/): the folder the Microsoft 365 report is built from: incident.json, claims.csv, sources.csv, timeline.csv, questions.csv, update_log.csv and notes/.
@@ -45,6 +47,7 @@
 - [data/incidents/2026-11-opm-usa-staffing-access/](https://isitahack.com/data/incidents/2026-11-opm-usa-staffing-access/): the folder the OPM report is built from.
 - [data/incidents/2026-11-boeing-inc-ransom-claim/](https://isitahack.com/data/incidents/2026-11-boeing-inc-ransom-claim/): the folder the Boeing report is built from.
 - [data/incidents/2026-11-vermont-valcour-dispatch-outage/](https://isitahack.com/data/incidents/2026-11-vermont-valcour-dispatch-outage/): the folder the Vermont Valcour report is built from.
+- [data/incidents/2026-11-fbi-ncic-intrusion/](https://isitahack.com/data/incidents/2026-11-fbi-ncic-intrusion/): the folder the FBI NCIC report is built from.
 
 ## For search engines
 - [sitemap.xml](https://isitahack.com/sitemap.xml): every page, with each incident's last update.
