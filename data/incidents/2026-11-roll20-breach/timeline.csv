@@ -1,0 +1,4 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-16,,Evening,stated,"Roll20 learns an unauthorized third party got into its system, and blocks the access",c005,'On the evening of November 16' per Roll20.
+t002,2026-11-20T12:50:00-05:00,,,approximate,Affected users begin posting Roll20's warning email,c006,About 17:50 UTC per Privacy Affairs.
+t003,2026-11-20T13:37:00-05:00,,,stated,Roll20's CTO posts the security notice on the company forum,c007,Post time stamp on the forum.

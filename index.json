@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-roll20-breach",
+      "title": "Roll20 account data breach, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-20T23:46:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-roll20-breach.md",
+        "html": "incidents/2026-11-roll20-breach.html",
+        "data": "data/incidents/2026-11-roll20-breach/"
+      }
+    },
+    {
       "slug": "2026-11-fbi-ncic-intrusion",
       "title": "FBI crime database (NCIC) intrusion, reported Nov 20, 2026",
       "status": "monitoring",
