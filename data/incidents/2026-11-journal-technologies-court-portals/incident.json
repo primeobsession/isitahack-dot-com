@@ -1,0 +1,113 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-journal-technologies-court-portals",
+  "title": "Journal Technologies court portal outage, Nov 13, 2026",
+  "subject": {
+    "name": "Journal Technologies",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "court portal outage",
+    "California court portals down",
+    "eCourt portal outage"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-13",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Journal Technologies, any court, news outlet, government agency, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Regional",
+  "size_basis": "The vendor serves courts in several states and countries. Press and court notices show portals offline at many courts in California, Nevada and Washington. The vendor gives no count, so the size rests on reported reach, not a measured total.",
+  "who_is_affected": "People and lawyers who use online case lookup, e-filing or reservation systems at courts that use the vendor's portal software. Courts say to file in person and to call clerk's offices meanwhile. Courts' own case-management systems are said to be separate from the portals.",
+  "known": [
+    {
+      "text": "Journal Technologies says suspicious, malicious automated activity targeted its public portal software, first identified on Nov 13.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The vendor advised customers to take their public portals offline, and courts did.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "Public portals or e-filing were offline at many courts, including Alameda, Kern, Ventura, Riverside, Los Angeles and Spokane.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "Kern's court says its portal is offline and gives no estimated restoration time.",
+      "claim_id": "c009"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Who was behind the activity."
+    },
+    {
+      "text": "Whether any data was exposed; the vendor says it has found no evidence so far for Criminal Justice Information and is still investigating."
+    },
+    {
+      "text": "When every affected portal will be restored, and how many courts are affected."
+    },
+    {
+      "text": "Whether this is connected to the other outages reported this week."
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 13",
+      "label": "Activity identified by vendor",
+      "detail": "Portals taken offline on the vendor's advice",
+      "claim_id": "c001"
+    },
+    {
+      "value": "About 90%",
+      "label": "Customers the Nov 20 build supports",
+      "detail": "The vendor's own estimate; each court must apply it",
+      "claim_id": "c007"
+    },
+    {
+      "value": "No ETA",
+      "label": "Kern court portal",
+      "detail": "As read on Nov 21",
+      "claim_id": "c009"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a cyberattack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the court portal outage"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

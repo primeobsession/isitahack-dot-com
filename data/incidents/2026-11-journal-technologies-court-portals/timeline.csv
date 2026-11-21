@@ -1,0 +1,9 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-13T00:00:00-05:00,,"Friday, Nov 13",approximate,Journal Technologies says it identified suspicious automated activity targeting its public portal technology and advised customers to suspend portal access,c001,No time of day given. Riverside's court says it was advised that Friday.
+t002,2026-11-13T00:00:00-05:00,,"Friday, Nov 13",approximate,The FBI publishes an advisory on the ARTEX hacking framework; it does not mention this vendor,c015,Date only.
+t003,2026-11-16T00:00:00-05:00,,"Monday, Nov 16",approximate,Journal Technologies publishes its first public statement; Los Angeles Superior Court says its reservation system and the vendor's e-filing site are offline,c001,The court's announcement was “late Monday”; the vendor's page is dated Nov 16.
+t004,2026-11-16T00:00:00-05:00,,"Monday morning, Nov 16",approximate,Riverside court's internal network comes back; its public portal stays down,c017,Per a court spokesperson quoted by MyNewsLA.
+t005,2026-11-17T00:00:00-05:00,,"Tuesday, Nov 17",approximate,"Alameda court posts that its eCourt portal and the vendor's e-filing service remain offline; FOX40 reports outages at Sacramento, Alameda, Kern, Las Vegas and Spokane courts",c003,FOX40 first posted at 1:56 PM Pacific and updated at 6:04 PM Pacific.
+t006,2026-11-19T00:00:00-05:00,,"Thursday, Nov 19",approximate,Local outlets report Ventura County's and Spokane's court portals still down,c003,Ventura County Star 1:07 PM Pacific.
+t007,2026-11-20T00:00:00-05:00,,"Friday, Nov 20",approximate,Journal Technologies says it released a secured build supporting the portal version used by about 90% of affected customers,c007,No time of day given.
+t008,2026-11-21T07:16:04-05:00,,Now,stated,Our check: Kern's court page still says its portal is offline with no ETA,c009,Own first-hand read.
