@@ -8,3 +8,4 @@ We looked for these and did not find them as of the latest update (Nov 21).
 - A count of affected customers.
 - The Ticketmaster posts on X themselves. We relied on how news outlets quote them.
 - A statement from Ticketmaster México or the Corona Capital organizers on the cause. Milenio could not be re-read (it blocks automated access); we rely on its text as indexed by search.
+- A cause from Ticketmaster or the AFL for the queues at Ikon Park in Melbourne. Ticketmaster only said it was looking into it.

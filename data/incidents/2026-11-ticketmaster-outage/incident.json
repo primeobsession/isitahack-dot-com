@@ -17,8 +17,8 @@
   "verdict": null,
   "verdict_approved_at": null,
   "size": "Large",
-  "size_basis": "Ticketmaster sells tickets for events across the country, and fans at a stadium show could not get in. Reports came from several states and abroad, and events in Mexico City were delayed too. Ticketmaster has not said how many people were affected.",
-  "who_is_affected": "People with Ticketmaster tickets who tried to load them on Friday evening, Nov 20, most visibly at the Caesars Superdome and at two events in Mexico City. It appears mostly fixed. Tickets saved to a phone wallet worked at the Superdome. On Nov 19, entry was held up at a tournament in Sioux Falls.",
+  "size_basis": "Ticketmaster sells tickets for events across the country, and fans at a stadium show could not get in. Reports came from several states and abroad, events in Mexico City were delayed, and the AFL in Australia called the outage global. Ticketmaster has not said how many people were affected.",
+  "who_is_affected": "People who tried to load Ticketmaster tickets on Friday evening, Nov 20 (ET), most visibly at the Caesars Superdome, two events in Mexico City and a football final in Melbourne. It appears mostly fixed. On Nov 19, entry was held up at a tournament in Sioux Falls.",
   "known": [
     {
       "text": "Ticketmaster's service had an outage on Friday night, Nov 20, that kept fans at the Superdome from loading mobile tickets, according to the event organizer and the venue manager.",
