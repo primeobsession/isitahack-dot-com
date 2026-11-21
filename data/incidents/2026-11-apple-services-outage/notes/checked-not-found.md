@@ -2,4 +2,5 @@
 - Any credible claim of a hack, breach or malicious cause. Not found.
 - A government or independent security finding that names Apple's outage. Not found. The White House statement covers the recent outages in general.
 - Outage posts on Apple Support's official X account for Nov 17 to 18. Not found.
-- Apple's Developer System Status page. Not checked: its content loads by script and our fetch could not read it.
+- Apple's Developer System Status page. Not readable on Nov 18 (its content loads by script). Read on Nov 20 through its public data file: the Nov 17 developer entries no longer appear there, so the developer times on this page rest on AppleInsider.
+- An Apple newsroom post or post-mortem about the outage, as of Nov 20. Not found.
