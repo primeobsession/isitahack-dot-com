@@ -5,7 +5,7 @@ question: "Was the Premise Health data breach a hack?"
 status: monitoring
 incident_date: 2026-03-26
 first_published: 2026-11-20T23:47:00-05:00
-last_updated: 2026-11-20T23:47:00-05:00
+last_updated: 2026-11-20T23:49:00-05:00
 size: "Large"
 data_dir: data/incidents/2026-11-premise-health-insider-theft
 generated: true
@@ -16,9 +16,9 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Premise Health, an
 
 # Was the Premise Health data breach a hack?
 
-**Confirmed.** No outside hack is known. Premise Health says an employee copied the data, starting around March 26, and that 'this was not a hacking or ransomware event.'
+**Reported.** No outside hack is known. Premise Health says an employee copied the data from around March 26 and that 'this was not a hacking or ransomware event.' That is the company's account; no independent investigation has confirmed it.
 
-Incident: Premise Health patient data taken by an employee, 2026. Also reported as the Premise Health data breach and the Premise Health insider breach. First published Nov 20, 2026; last updated Nov 20, 2026, 11:47 PM ET.
+Incident: Premise Health patient data taken by an employee, 2026. Also reported as the Premise Health data breach and the Premise Health insider breach. First published Nov 20, 2026; last updated Nov 20, 2026, 11:49 PM ET.
 
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Premise Health, any government agency, news outlet, company, or anyone else named.
 
@@ -26,7 +26,7 @@ This is the current answer, not a final verdict.
 
 ## The latest
 
-Nov 20, 2026, 11:47 PM ET: **Premise Health says an employee copied data on about 2.76 million people and that it was not a hack.** First draft. 6 sources (4 Tier 1), 16 claims (15 Confirmed, 1 Not established), 7 questions. The insider cause is the company's own account; no outside review. Oregon lists breach dates Mar 26-30. HHS breach portal not readable. Privacy check done: employee not named.
+Nov 20, 2026, 11:49 PM ET: **The 'not a hack' answer now reads as Reported: it is Premise Health's own account, not independently confirmed.** Main answer relabelled from Confirmed to Reported, matching how the desk treats an uncorroborated company denial. The insider-theft facts the company admits stay Confirmed. c002 reworded to make clear it confirms only that the company said it.
 
 ## At a glance
 
@@ -60,7 +60,7 @@ Nov 20, 2026, 11:47 PM ET: **Premise Health says an employee copied data on abou
 | Claim | Label | What we know | Why it supports, and more detail | Sources |
 |---|---|---|---|---|
 | An employee took the data, the company says | Confirmed | Premise Health says an employee violated its security policies and misappropriated company data, starting on or about March 26, 2026. | The company's website notice and its notice letter both say an employee misappropriated the data. The company has not named the employee, given their role or said why they took it. We do not name them. | [Premise Health: Notice of Data Security Incident (company website)](https://www.premisehealth.com/notice-of-data-security-incident/), [Premise Health sample notice letter filed with the Washington Attorney General (Nov 6)](https://agportal-s3bucket.s3.amazonaws.com/databreach/BreachA43681.pdf) |
-| Premise Health says it was not a hacking or ransomware event | Confirmed | Premise Health's website notice says: 'This was not a hacking or ransomware event.' | The company's own notice says it in these words. That line is on the website, not in the sample letter. No outside investigation has been published to check it, and we found no claim by any hacker or ransomware group. | [Premise Health: Notice of Data Security Incident (company website)](https://www.premisehealth.com/notice-of-data-security-incident/) |
+| Premise Health says it was not a hacking or ransomware event | Confirmed | Premise Health's website notice says: 'This was not a hacking or ransomware event.' This is the company's own statement. | The company's own notice says it in these words; the label confirms that Premise Health said it, not that it has been independently checked. Its notice letters and state filings describe an employee taking the data, which fits that account, but no independent investigation has been published to confirm there was no outside intrusion. We found no claim by any hacker or ransomware group. | [Premise Health: Notice of Data Security Incident (company website)](https://www.premisehealth.com/notice-of-data-security-incident/) |
 
 ## What caused it?
 
@@ -73,7 +73,7 @@ Nov 20, 2026, 11:47 PM ET: **Premise Health says an employee copied data on abou
 
 | Question | Answer | Label |
 |---|---|---|
-| Was the Premise Health data breach a hack? | No outside hack is known. Premise Health says an employee copied the data, starting around March 26, and that 'this was not a hacking or ransomware event.' | Confirmed |
+| Was the Premise Health data breach a hack? | No outside hack is known. Premise Health says an employee copied the data from around March 26 and that 'this was not a hacking or ransomware event.' That is the company's account; no independent investigation has confirmed it. | Reported |
 | Who took the Premise Health data? | An employee, who has since been fired, the company says. Premise Health has not said who or why, and reported it to law enforcement. | Confirmed |
 | How many people were affected by the Premise Health breach? | About 2.76 million people, per the company's state filing. | Confirmed |
 | What information was taken from Premise Health? | It varies by person but may include name, address, date of birth, Social Security number, health insurance and treatment information. | Confirmed |
@@ -129,6 +129,7 @@ We looked for these and did not find them as of 11:45 PM ET on Nov 20, 2026.
 
 | When | Update | Type |
 |---|---|---|
+| Nov 20, 2026, 11:49 PM ET | **The 'not a hack' answer now reads as Reported: it is Premise Health's own account, not independently confirmed.** Main answer relabelled from Confirmed to Reported, matching how the desk treats an uncorroborated company denial. The insider-theft facts the company admits stay Confirmed. c002 reworded to make clear it confirms only that the company said it. | Label change |
 | Nov 20, 2026, 11:47 PM ET | **Premise Health says an employee copied data on about 2.76 million people and that it was not a hack.** First draft. 6 sources (4 Tier 1), 16 claims (15 Confirmed, 1 Not established), 7 questions. The insider cause is the company's own account; no outside review. Oregon lists breach dates Mar 26-30. HHS breach portal not readable. Privacy check done: employee not named. | Added |
 
 ## Sources
