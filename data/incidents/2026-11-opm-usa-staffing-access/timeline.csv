@@ -1,0 +1,5 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-12,,Nov 12-13,stated,Reported outside access to 403 tentative job offers in USA Staffing,c001,Per the internal email as described.
+t002,2026-11-14,,,stated,OPM cyber team reportedly confirms and blocks the access,c003,Per the internal email as described.
+t003,2026-11-19,,,stated,Email reportedly sent to USA Staffing users about the access,c001,A Thursday.
+t004,2026-11-20,,,stated,MSW Media publishes the report,c001,
