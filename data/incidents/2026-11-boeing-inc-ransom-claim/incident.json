@@ -1,0 +1,100 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-boeing-inc-ransom-claim",
+  "title": "Boeing ransomware claim by INC Ransom, Nov 20, 2026",
+  "subject": {
+    "name": "Boeing",
+    "kind": "aviation"
+  },
+  "also_called": [
+    "the Boeing leak-site claim",
+    "the Boeing helicopter unit claim"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-20",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Boeing, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Local",
+  "size_basis": "The group claims 3.6 million files from one Boeing-linked support unit. None of it is verified, and Boeing has not said whether anything was taken.",
+  "who_is_affected": "No one is confirmed to be affected. If the claim is true, it could involve staff, vendors and customers of one military helicopter support unit.",
+  "known": [
+    {
+      "text": "INC Ransom listed Boeing on its leak site on Nov 20. This confirms the post exists, not that data was taken.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Boeing has made no public statement about the claim as of Nov 20.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "Boeing has filed no cybersecurity 8-K as of Nov 20.",
+      "claim_id": "c005"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether any intrusion happened, and at which Boeing or joint-venture system."
+    },
+    {
+      "text": "Whether the files and screenshots are real."
+    },
+    {
+      "text": "Whether the unit is part of Boeing's own network."
+    },
+    {
+      "text": "Whether Boeing will make a statement or file with the SEC."
+    },
+    {
+      "text": "Whether the group will publish more data."
+    }
+  ],
+  "figures": [
+    {
+      "value": "3.6M",
+      "label": "Files claimed",
+      "detail": "The gang's claim, unverified",
+      "claim_id": "c002"
+    },
+    {
+      "value": "10",
+      "label": "Screenshots released",
+      "detail": "Per Cybernews",
+      "claim_id": "c003"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was Boeing hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What does the group claim?",
+      "group": "claim",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions and rumors",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the claim"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

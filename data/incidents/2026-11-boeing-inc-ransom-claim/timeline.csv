@@ -1,0 +1,4 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-20T03:46:00+00:00,,,stated,Tracker logs a Boeing entry on the INC Ransom leak site,c001,10:46 PM ET on Nov 19.
+t002,2026-11-20,,,stated,Cybernews reports the claim and says it cannot verify it,c002,
+t003,2026-11-20,,,stated,No Boeing statement or cybersecurity 8-K at the time of checking,c004,Newsroom and EDGAR read the evening of Nov 20.
