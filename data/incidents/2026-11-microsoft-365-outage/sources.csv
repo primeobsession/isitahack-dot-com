@@ -1,6 +1,6 @@
 source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
 s001,https://www.opensecurity.es/wp-content/uploads/2026/11/PostIncidentReport.pdf,"Microsoft preliminary post-incident report (third-party copy, opensecurity.es)",3,opensecurity,2026-11-15,2026-11-18T20:59:00-05:00,,ok,2026-11-18T20:59:00-05:00
-s002,https://mailservices.isc.upenn.edu/computing/email/penno365/alerts/ms-incidents.html,Microsoft service health text (University of Pennsylvania mirror),3,upenn,2026-11-14,2026-11-18T20:59:00-05:00,,ok,2026-11-18T20:59:00-05:00
+s002,https://mailservices.isc.upenn.edu/computing/email/penno365/alerts/ms-incidents.html,Microsoft service health text (University of Pennsylvania mirror),3,upenn,2026-11-14,2026-11-20T20:40:00-05:00,,ok,2026-11-20T20:40:00-05:00
 s003,https://www.bleepingcomputer.com/news/microsoft/microsoft-says-months-old-bug-caused-global-microsoft-365-outage/,BleepingComputer,2,bleepingcomputer,2026-11-16T11:43:00-05:00,2026-11-18T20:59:00-05:00,,ok,2026-11-18T20:59:00-05:00
 s004,https://x.com/i/status/2120904489209143320,Microsoft 365 Status (official X account),4,microsoft-social,2026-11-12T10:40:09-05:00,2026-11-18T20:59:00-05:00,,ok,2026-11-18T20:59:00-05:00
 s005,https://x.com/i/status/2120938282204688468,Microsoft 365 Status (official X account),4,microsoft-social,2026-11-12T12:54:26-05:00,2026-11-18T20:59:00-05:00,,ok,2026-11-18T20:59:00-05:00

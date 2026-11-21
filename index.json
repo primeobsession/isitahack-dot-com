@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-microsoft-365-outage",
+      "title": "Microsoft 365 outage, Nov 12-13, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-20T20:40:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-microsoft-365-outage.md",
+        "html": "incidents/2026-11-microsoft-365-outage.html",
+        "data": "data/incidents/2026-11-microsoft-365-outage/"
+      }
+    },
+    {
       "slug": "2026-11-apple-services-outage",
       "title": "Apple services outage, Nov 17, 2026",
       "status": "monitoring",
@@ -22,17 +33,6 @@
         "data": "data/incidents/2026-11-faa-ground-stop/",
         "raw_dir": "data/incidents/2026-11-faa-ground-stop/raw/",
         "manifest": "data/incidents/2026-11-faa-ground-stop/MANIFEST.txt"
-      }
-    },
-    {
-      "slug": "2026-11-microsoft-365-outage",
-      "title": "Microsoft 365 outage, Nov 12-13, 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-18T23:19:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-microsoft-365-outage.md",
-        "html": "incidents/2026-11-microsoft-365-outage.html",
-        "data": "data/incidents/2026-11-microsoft-365-outage/"
       }
     }
   ]
