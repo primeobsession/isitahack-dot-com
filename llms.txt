@@ -49,6 +49,8 @@
 - [Algonquin Dam apparent cyberattack, Nov 16 2026 (HTML)](https://isitahack.com/incidents/2026-11-illinois-algonquin-dam-cyberattack.html): the same report as a web page.
 - [Project Gutenberg website vandalism, Nov 15 2026](https://isitahack.com/incidents/2026-11-project-gutenberg-vandalism.md): the report as Markdown (still monitored). Built from its data folder.
 - [Project Gutenberg website vandalism, Nov 15 2026 (HTML)](https://isitahack.com/incidents/2026-11-project-gutenberg-vandalism.html): the same report as a web page.
+- [GL.iNet cloud malware incident, Nov 20 2026](https://isitahack.com/incidents/2026-11-glinet-cloud-malware.md): the report as Markdown (still monitored). Built from its data folder.
+- [GL.iNet cloud malware incident, Nov 20 2026 (HTML)](https://isitahack.com/incidents/2026-11-glinet-cloud-malware.html): the same report as a web page.
 
 ## Data (typed incident format: UTF-8, RFC 4180 CSV with a header row; see Format below)
 - [data/incidents/2026-11-microsoft-365-outage/](https://isitahack.com/data/incidents/2026-11-microsoft-365-outage/): the folder the Microsoft 365 report is built from: incident.json, claims.csv, sources.csv, timeline.csv, questions.csv, update_log.csv and notes/.
@@ -78,6 +80,7 @@
 - [data/incidents/2026-11-steam-outage/](https://isitahack.com/data/incidents/2026-11-steam-outage/): the folder the Steam report is built from.
 - [data/incidents/2026-11-illinois-algonquin-dam-cyberattack/](https://isitahack.com/data/incidents/2026-11-illinois-algonquin-dam-cyberattack/): the folder the Algonquin Dam report is built from.
 - [data/incidents/2026-11-project-gutenberg-vandalism/](https://isitahack.com/data/incidents/2026-11-project-gutenberg-vandalism/): the folder the Project Gutenberg report is built from.
+- [data/incidents/2026-11-glinet-cloud-malware/](https://isitahack.com/data/incidents/2026-11-glinet-cloud-malware/): the folder the GL.iNet report is built from.
 
 ## For search engines
 - [sitemap.xml](https://isitahack.com/sitemap.xml): every page, with each incident's last update.
