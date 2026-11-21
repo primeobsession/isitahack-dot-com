@@ -1,0 +1,113 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-ochsner-health-breach",
+  "title": "Ochsner Health data breach, Nov 19, 2026",
+  "subject": {
+    "name": "Ochsner Health",
+    "kind": "health"
+  },
+  "also_called": [
+    "Ochsner data incident",
+    "Ochsner Microsoft 365 breach",
+    "Ochsner Vortex claim"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-19",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Ochsner Health, Orlando Health, any news outlet, government agency, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Regional",
+  "size_basis": "Ochsner is the largest health system in Louisiana, and says letters will go to people whose information is involved. It has not said how many people, so size rests on the organization's reach, not a count.",
+  "who_is_affected": "People whose information was in the files downloaded from one of two Ochsner employee accounts. Ochsner says it is still working out who, and will send letters. It says patient care and its record systems were not disrupted.",
+  "known": [
+    {
+      "text": "Ochsner says an unauthorized party accessed two employee accounts in its Microsoft environment on Sept 18 to 21 and downloaded files from one.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Ochsner learned of it on Oct 1, determined on Nov 18 that specific information was accessed, and began notifying people on Nov 19.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "The files may include names, demographic information, Social Security numbers and health information.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "Ochsner is offering one year of free credit monitoring to people whose Social Security numbers were involved.",
+      "claim_id": "c010"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "How the two accounts were accessed, and who did it."
+    },
+    {
+      "text": "Whether the group Vortex, which claims about 25,000 files, is behind it."
+    },
+    {
+      "text": "How many people are affected."
+    },
+    {
+      "text": "Whether a ransom was demanded or any data has been published."
+    }
+  ],
+  "figures": [
+    {
+      "value": "2",
+      "label": "Employee accounts accessed",
+      "detail": "Files downloaded from one, per Ochsner",
+      "claim_id": "c001"
+    },
+    {
+      "value": "Sept 18 to 21",
+      "label": "Access window",
+      "detail": "Ochsner learned of it on Oct 1",
+      "claim_id": "c001"
+    },
+    {
+      "value": "About 25,000",
+      "label": "Files Vortex claims",
+      "detail": "A group's claim, not verified",
+      "claim_id": "c005"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a cyberattack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Ochsner data breach"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
