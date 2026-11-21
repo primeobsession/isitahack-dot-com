@@ -1,4 +1,4 @@
-We looked for these and did not find them as of our Nov 21 morning check.
+We looked for these and did not find them as of our latest check on Nov 21.
 
 - A description of how the two accounts were accessed, or of the attacker, from Ochsner or any regulator.
 - A count of the people affected, from Ochsner, a state attorney general or a federal breach filing. We found no Louisiana or federal filing in the coverage we read.
@@ -7,3 +7,5 @@ We looked for these and did not find them as of our Nov 21 morning check.
 - A statement from Orlando Health.
 - Independent confirmation of the Vortex file count. We did not look at leak sites, underground forums or trackers, and we cite the claim only through outlets that report it.
 - KLFY's page blocked a direct fetch; its text was read through a search result, not the page itself.
+- A security researcher's report naming Ochsner. Palo Alto Networks Unit 42's Vortex research does not mention Ochsner or Orlando Health.
+- Becker's Hospital Review covered the notice, per a headline aggregator, but its page blocked our fetch, so we do not cite it.

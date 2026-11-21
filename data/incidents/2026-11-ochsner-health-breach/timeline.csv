@@ -5,3 +5,5 @@ t003,2026-11-18T00:00:00-05:00,,"Wednesday, Nov 18",approximate,Ochsner says it 
 t004,2026-11-19T00:00:00-05:00,,"Thursday, Nov 19",approximate,"Ochsner begins notifying people; a group called Vortex is listed as claiming Ochsner files, per press and a tracker",c002,Date only.
 t005,2026-11-20T00:00:00-05:00,,"Friday, Nov 20",approximate,Louisiana outlets report the notice and the Vortex claim; Ochsner opens a help line,c010,Date only.
 t006,2026-11-21T09:19:17-05:00,,Now,stated,"Our check: no count of affected people, no named attacker and no method published",c008,Own first-hand read.
+t007,2026-11-20T00:00:00-05:00,,"Friday, Nov 20",approximate,Palo Alto Networks Unit 42 publishes research on an extortion cluster it calls Vortex that targets healthcare; it does not name Ochsner,c012,Date only.
+t008,2026-11-21T09:40:33-05:00,,Now,stated,"Our check: Ochsner's notice unchanged; still no count of affected people, no named attacker and no method published",c008,Own first-hand read.
