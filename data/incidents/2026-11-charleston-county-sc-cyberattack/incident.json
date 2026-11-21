@@ -1,0 +1,113 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-charleston-county-sc-cyberattack",
+  "title": "Charleston County, SC cyberattack, Nov 16, 2026",
+  "subject": {
+    "name": "Charleston County",
+    "kind": "government"
+  },
+  "also_called": [
+    "Charleston County cybersecurity incident",
+    "Charleston County data breach"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-16",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Charleston County, SLED, any news outlet, government agency, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Local",
+  "size_basis": "This is a county government in South Carolina. The county has not said how many people's information is involved, so size rests on the organization's reach, not a count.",
+  "who_is_affected": "Possibly people whose information is held in county systems; the county has not said whether personal or financial information was taken. It says day-to-day operations and life safety services are unaffected.",
+  "known": [
+    {
+      "text": "Charleston County says it identified a sophisticated cyberattack on Nov 16.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The county says its IT team noticed unusual network activity that evening, secured systems overnight and notified SLED.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "The county confirms data was copied from its systems.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "SLED is treating it as a criminal investigation, with state and federal agencies assisting.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "The county says day-to-day operations are unaffected and core life safety services remain intact.",
+      "claim_id": "c005"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "What data was copied, and whether it includes personal or financial information."
+    },
+    {
+      "text": "Who did it."
+    },
+    {
+      "text": "How the attackers got into the county's systems."
+    },
+    {
+      "text": "Whether a ransom was demanded or any data has been published."
+    },
+    {
+      "text": "Whether it is connected to any other incident this month."
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 16",
+      "label": "Unusual activity found",
+      "detail": "Evening, per the county",
+      "claim_id": "c002"
+    },
+    {
+      "value": "Criminal",
+      "label": "SLED's treatment",
+      "detail": "Per the county's Nov 19 release",
+      "claim_id": "c004"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a cyberattack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Charleston County cyberattack"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
