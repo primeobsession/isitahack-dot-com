@@ -18,7 +18,7 @@
   "verdict": null,
   "verdict_approved_at": null,
   "size": "Regional",
-  "size_basis": "The vendor serves courts in several states and countries. Press and court notices show portals offline at many courts in California, Nevada and Washington. The vendor gives no count, so the size rests on reported reach, not a measured total.",
+  "size_basis": "The vendor serves courts in several states and countries. Court notices and press show portals offline at many courts in California, Illinois, Nevada and Washington; the Sacramento Bee counts 20 California superior courts. The vendor gives no total, so size rests on reported reach.",
   "who_is_affected": "People and lawyers who use online case lookup, e-filing or reservation systems at courts that use the vendor's portal software. Courts say to file in person and to call clerk's offices meanwhile. Courts' own case-management systems are said to be separate from the portals.",
   "known": [
     {
@@ -30,7 +30,7 @@
       "claim_id": "c002"
     },
     {
-      "text": "Public portals or e-filing were offline at many courts, including Alameda, Kern, Ventura, Riverside, Los Angeles and Spokane.",
+      "text": "Public portals or e-filing were offline at many courts, including Alameda, Kern, Ventura, Riverside, Los Angeles, Spokane and Lake County, Illinois.",
       "claim_id": "c003"
     },
     {
