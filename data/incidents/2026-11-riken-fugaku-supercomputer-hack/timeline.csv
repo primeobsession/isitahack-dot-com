@@ -1,0 +1,8 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-10,,Nov 10 to Nov 13,stated,"An outside party is in Fugaku's operational network, entering through the public status dashboard",c002,Window per RIKEN.
+t002,2026-11-12,,Nov 12,stated,Suspicious network traffic is detected; RIKEN starts an investigation with its maintenance provider,c001,Per RIKEN's first notice.
+t003,2026-11-13T16:33:00+09:00,,,stated,RIKEN confirms the unauthorized access,c001,4:33 PM Japan time per RIKEN.
+t004,2026-11-14T04:30:00+09:00,,,stated,RIKEN suspends Fugaku and blocks outside access,c011,4:30 AM Japan time per RIKEN.
+t005,2026-11-15T16:18:00+09:00,,,stated,RIKEN emails affected users,c006,4:18 PM Japan time per RIKEN.
+t006,2026-11-16,,,stated,RIKEN publishes its first notice and explains the incident to the Saitama and Hyogo police,c012,The notice is dated Nov 16 and was posted Nov 17.
+t007,2026-11-20,,,stated,"RIKEN publishes its second notice: 430 stolen keys, 4,222 Fugaku users",c005,Per RIKEN.

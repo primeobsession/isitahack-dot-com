@@ -1,0 +1,113 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-riken-fugaku-supercomputer-hack",
+  "title": "RIKEN Fugaku supercomputer break-in, Nov 2026",
+  "subject": {
+    "name": "Fugaku",
+    "kind": "government"
+  },
+  "also_called": [
+    "the Fugaku hack",
+    "the RIKEN supercomputer cyberattack"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-10",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by RIKEN, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Regional",
+  "size_basis": "One national research supercomputer in Japan, offline since Nov 14. Up to 4,222 Fugaku users and 375 RIKYU users are affected, and stolen keys could reach other research computers.",
+  "who_is_affected": "Registered users of Fugaku and RIKYU, who are researchers, and researchers waiting for time on the machine. Their contact details and any private keys stored on Fugaku were involved.",
+  "known": [
+    {
+      "text": "An outside party got into Fugaku's operational network between Nov 10 and 13, through the public status dashboard.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Malicious programs were installed on some servers.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "430 private keys for outside systems were taken, 233 of them without a passphrase.",
+      "claim_id": "c005"
+    },
+    {
+      "text": "Fugaku was suspended on Nov 14 and has no restart date.",
+      "claim_id": "c011"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Who was behind it."
+    },
+    {
+      "text": "Whether the stolen keys were used to break into other organizations."
+    },
+    {
+      "text": "The exact method used to get past the dashboard."
+    },
+    {
+      "text": "When Fugaku will return to service."
+    }
+  ],
+  "figures": [
+    {
+      "value": "430",
+      "label": "Private keys taken",
+      "detail": "233 with no passphrase",
+      "claim_id": "c005"
+    },
+    {
+      "value": "4,222",
+      "label": "Fugaku users, up to",
+      "detail": "Plus 375 RIKYU users",
+      "claim_id": "c006"
+    },
+    {
+      "value": "Nov 14",
+      "label": "Fugaku taken offline",
+      "detail": "4:30 AM Japan time",
+      "claim_id": "c011"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How did they get in?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Fugaku break-in"
+    },
+    {
+      "type": "claims",
+      "title": "What was taken?",
+      "group": "impact"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
+s001,https://www.riken.jp/en/news_pubs/news/2026/20261120_1/,"RIKEN: Status of the investigation into unauthorized access to Fugaku and RIKYU (Second notice), Nov 20",1,,2026-11-20,2026-11-21T00:12:56-05:00,,ok,2026-11-21T00:12:56-05:00
+s002,https://www.riken.jp/en/news_pubs/news/2026/20261116_2/,"RIKEN: Notice of a possible personal information leak affecting Fugaku and RIKYU users (First notice), Nov 16",1,,2026-11-17,2026-11-21T00:12:56-05:00,,ok,2026-11-21T00:12:56-05:00
+s003,https://www.japantimes.co.jp/news/2026/11/17/japan/fugaku-unauthorized-access/,The Japan Times: Japan's most powerful supercomputer hit by unauthorized access,2,japan-times,2026-11-17,2026-11-21T00:12:56-05:00,,ok,2026-11-21T00:12:56-05:00
+s004,https://www.techradar.com/pro/japanese-supercomputer-hit-by-suspected-cyberattack-fugaku-facility-was-apparently-lacking-in-some-essential-security-protection,TechRadar: Japanese supercomputer hit by suspected cyberattack,2,techradar,2026-11-21,2026-11-21T00:12:56-05:00,,ok,2026-11-21T00:12:56-05:00
