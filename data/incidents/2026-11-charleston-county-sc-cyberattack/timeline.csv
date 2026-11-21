@@ -1,4 +1,5 @@
 event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
 t001,2026-11-16T00:00:00-05:00,,"Evening of Monday, Nov 16",approximate,"County IT notices unusual network activity, works through the night to secure systems, and notifies SLED",c002,Date only; the county says evening.
 t002,2026-11-17T00:00:00-05:00,,"Tuesday, Nov 17",approximate,County issues its first statement: data was removed from its systems; SLED on-site,c003,Date only.
+t004,2026-11-18T00:00:00-05:00,,"Wednesday, Nov 18",approximate,SLED confirms to WCIV that its assistance to the county began Tuesday and is ongoing,c004,Date only; reported by WCIV.
 t003,2026-11-19T00:00:00-05:00,,"Thursday, Nov 19",approximate,"County calls it a ""sophisticated cyberattack"" and says SLED is treating it as a criminal investigation with state and federal agencies assisting",c004,Date only.
