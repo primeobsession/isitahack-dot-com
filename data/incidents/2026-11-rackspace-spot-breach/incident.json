@@ -31,7 +31,7 @@
   ],
   "not_known": [
     {
-      "text": "Whether Rackspace itself has confirmed the breach on a page it hosts. Reports rely on a customer notice."
+      "text": "Whether Rackspace itself has confirmed the breach on a page it hosts. Reports rely on a customer notice and a Spot team member's forum post."
     },
     {
       "text": "Whether customer data or Secrets were actually read or misused, not just readable."
@@ -40,7 +40,7 @@
       "text": "How many customers were affected."
     },
     {
-      "text": "How the credentials leaked, whose they were, and who used them."
+      "text": "Whose credential was used, how it leaked, what the breached observability system is, and who used it."
     },
     {
       "text": "Whether the full restoration Nov 21 is confirmed by Rackspace on its own pages."
