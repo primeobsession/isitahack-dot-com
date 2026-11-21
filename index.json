@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-doordash-outage",
+      "title": "DoorDash app and website outage, Nov 21, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-21T13:17:45-05:00",
+      "files": {
+        "page": "incidents/2026-11-doordash-outage.md",
+        "html": "incidents/2026-11-doordash-outage.html",
+        "data": "data/incidents/2026-11-doordash-outage/"
+      }
+    },
+    {
       "slug": "2026-11-gofundme-pro-donorperfect-breach",
       "title": "GoFundMe Pro and DonorPerfect breaches, Nov 2026",
       "status": "monitoring",

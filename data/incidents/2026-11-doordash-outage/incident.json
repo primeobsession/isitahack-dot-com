@@ -1,0 +1,104 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-doordash-outage",
+  "title": "DoorDash app and website outage, Nov 21, 2026",
+  "subject": {
+    "name": "DoorDash",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "the DoorDash outage"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-21",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by DoorDash, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "DoorDash is a food-delivery service that many people use daily, and Downdetector logged more than 12,700 reports. DoorDash has not said how many customers were affected, and Downdetector counts reports, not users.",
+  "who_is_affected": "People who use the DoorDash app or website, mostly in the US, from about 11 AM ET on Saturday, Nov 21, and businesses using DoorDash Drive from 11:30 AM ET. When the problem fully ended is not confirmed.",
+  "known": [
+    {
+      "text": "DoorDash's status page showed an increase in errors on its Drive endpoints from 11:30 AM ET on Nov 21 and a recovery update at 11:50 AM ET, per two outlets relaying it.",
+      "claim_id": "c001"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "What caused the outage. DoorDash has not said."
+    },
+    {
+      "text": "Whether it was a cyberattack. DoorDash has not said either way; the hack idea is only social-media speculation."
+    },
+    {
+      "text": "Whether the Drive incident caused the app and website errors, and when the customer-facing problem ended."
+    },
+    {
+      "text": "How many customers were affected."
+    }
+  ],
+  "figures": [
+    {
+      "value": "12,700+",
+      "label": "Downdetector reports",
+      "detail": "User-submitted, not customers affected",
+      "claim_id": "c003"
+    },
+    {
+      "value": "11:30 AM",
+      "label": "First status-page entry (ET)",
+      "detail": "Drive endpoint errors",
+      "claim_id": "c001"
+    },
+    {
+      "value": "11:50 AM",
+      "label": "Recovery update (ET)",
+      "detail": "On the Drive incident",
+      "claim_id": "c001"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the DoorDash outage"
+    },
+    {
+      "type": "claims",
+      "title": "What caused it?",
+      "group": "cause"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

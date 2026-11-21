@@ -41,6 +41,8 @@
 - [USDA farm payment system cyberattack, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-usda-farm-payment-system-cyberattack.html): the same report as a web page.
 - [Dropbox outage, Nov 20 2026](https://isitahack.com/incidents/2026-11-dropbox-outage.md): the report as Markdown (still monitored). Built from its data folder.
 - [Dropbox outage, Nov 20 2026 (HTML)](https://isitahack.com/incidents/2026-11-dropbox-outage.html): the same report as a web page.
+- [DoorDash app and website outage, Nov 21 2026](https://isitahack.com/incidents/2026-11-doordash-outage.md): the report as Markdown (still monitored). Built from its data folder.
+- [DoorDash app and website outage, Nov 21 2026 (HTML)](https://isitahack.com/incidents/2026-11-doordash-outage.html): the same report as a web page.
 - [Ticketmaster outage, Nov 20 2026](https://isitahack.com/incidents/2026-11-ticketmaster-outage.md): the report as Markdown (still monitored). Built from its data folder.
 - [Steam outages, Nov 17 and Nov 20-21 2026](https://isitahack.com/incidents/2026-11-steam-outage.md): the report as Markdown (still monitored). Built from its data folder.
 - [Ticketmaster outage, Nov 20 2026 (HTML)](https://isitahack.com/incidents/2026-11-ticketmaster-outage.html): the same report as a web page.
@@ -86,6 +88,7 @@
 - [data/incidents/2026-11-riken-fugaku-supercomputer-hack/](https://isitahack.com/data/incidents/2026-11-riken-fugaku-supercomputer-hack/): the folder the Fugaku report is built from.
 - [data/incidents/2026-11-usda-farm-payment-system-cyberattack/](https://isitahack.com/data/incidents/2026-11-usda-farm-payment-system-cyberattack/): the folder the USDA report is built from.
 - [data/incidents/2026-11-dropbox-outage/](https://isitahack.com/data/incidents/2026-11-dropbox-outage/): the folder the Dropbox report is built from.
+- [data/incidents/2026-11-doordash-outage/](https://isitahack.com/data/incidents/2026-11-doordash-outage/): the folder the DoorDash report is built from.
 - [data/incidents/2026-11-ticketmaster-outage/](https://isitahack.com/data/incidents/2026-11-ticketmaster-outage/): the folder the Ticketmaster report is built from.
 - [data/incidents/2026-11-steam-outage/](https://isitahack.com/data/incidents/2026-11-steam-outage/): the folder the Steam report is built from.
 - [data/incidents/2026-11-illinois-algonquin-dam-cyberattack/](https://isitahack.com/data/incidents/2026-11-illinois-algonquin-dam-cyberattack/): the folder the Algonquin Dam report is built from.

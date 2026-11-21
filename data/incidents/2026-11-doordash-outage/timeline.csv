@@ -1,0 +1,6 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-21T11:02:00-05:00,,,stated,"Downdetector users begin reporting problems with DoorDash, per Men's Journal",c005,
+t002,2026-11-21T11:30:00-05:00,,,stated,DoorDash's status page reports an increase in errors on Drive endpoints and says it is investigating,c001,16:30 UTC on IsDown.
+t003,2026-11-21T11:33:00-05:00,,,stated,DoorDash opens a second incident about degraded service: 'We are currently investigating this issue',c002,"Three minutes after the Drive entry, per Men's Journal."
+t004,2026-11-21T11:50:00-05:00,,,stated,DoorDash updates the Drive incident: 'We are seeing recovery. Team will continue to monitor.',c001,16:50 UTC on IsDown.
+t005,2026-11-21T12:00:00-05:00,,,approximate,"Both incidents are still listed as unresolved on the status page, per Men's Journal",c010,"""As of noon ET"" in the source."
