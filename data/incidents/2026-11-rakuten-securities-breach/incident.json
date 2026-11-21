@@ -1,0 +1,124 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-rakuten-securities-breach",
+  "title": "Rakuten Securities breach, Nov 2026",
+  "subject": {
+    "name": "Rakuten Securities",
+    "kind": "finance"
+  },
+  "also_called": [
+    "Rakuten Securities data leak",
+    "Rakuten Securities unauthorized access",
+    "楽天証券 情報漏えい"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-11",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Rakuten Securities, Rakuten Group, Japan's Financial Services Agency, any news outlet, government agency, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Rakuten Securities says up to about 15.72 million accounts may be affected, about 4.47 million with personal and financial details. Press calls it the largest breach at a Japanese securities firm so far.",
+  "who_is_affected": "Current and former Rakuten Securities customers. The company says it has identified them and will tell them individually; it urges caution about phishing and suggests setting a passkey.",
+  "known": [
+    {
+      "text": "Rakuten Securities says a third party gained unauthorized access to some of its systems, detected on Nov 16.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "It says information in its test environment may have leaked on Nov 11.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "It says up to about 4.47 million accounts had personal and financial details exposed, including birth dates, addresses and withdrawal bank accounts.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "It says up to about 11.25 million more accounts had only a login ID and customer code exposed.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "It says it has not confirmed any password or PIN leak, or related unauthorized trades.",
+      "claim_id": "c005"
+    },
+    {
+      "text": "Japan's Financial Services Agency ordered the company to report on Nov 19.",
+      "claim_id": "c008"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "How the attacker got in, and what flaw was used."
+    },
+    {
+      "text": "Who did it."
+    },
+    {
+      "text": "Whether anyone has claimed a ransom or published the data."
+    },
+    {
+      "text": "Whether the company's statement that passwords and PINs were not leaked holds up."
+    },
+    {
+      "text": "Whether real customer data was in the test environment, as one outlet reports."
+    }
+  ],
+  "figures": [
+    {
+      "value": "15.72M",
+      "label": "Accounts, at most",
+      "detail": "4.47M with details plus 11.25M with IDs only, per the company and press",
+      "claim_id": "c004"
+    },
+    {
+      "value": "4.47M",
+      "label": "Accounts with personal/financial data",
+      "detail": "Per the company, maximum",
+      "claim_id": "c003"
+    },
+    {
+      "value": "Nov 11",
+      "label": "Date data may have leaked",
+      "detail": "Per the company",
+      "claim_id": "c002"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was Rakuten Securities hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Rakuten Securities breach"
+    },
+    {
+      "type": "claims",
+      "title": "What data was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-11T00:00:00+09:00,,Nov 11,stated,Rakuten Securities says information in its test environment may have leaked on this date (as found later),c002,"Date only, Japan time."
+t002,2026-11-16T00:00:00+09:00,,Nov 16,stated,"Rakuten Securities detects possible unauthorized access, blocks the affected access and makes fixes",c001,"Date only, Japan time."
+t003,2026-11-17T00:00:00+09:00,,Nov 17,stated,Rakuten Securities publishes its apology and notice: up to about 4.47 million and 11.25 million accounts affected,c003,"Date only, Japan time. Counts in c003 and c004."
+t004,2026-11-19T00:00:00+09:00,,Nov 19,stated,Japan's Financial Services Agency orders Rakuten Securities to report; the company announces it,c008,"Date only, Japan time."
+t005,2026-11-20T15:21:00+09:00,,"Nov 20, 3:21 PM Japan time",stated,Nippon TV reports the financial services minister confirmed the order,c008,Time is the outlet's last-updated time.
