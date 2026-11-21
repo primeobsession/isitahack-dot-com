@@ -1,0 +1,10 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-15T12:00:00-05:00,,"Sunday morning, Nov 15",approximate,"Foundation's first update: “Will be back soon”, looks like a spammer redirecting visitors",c003,Posted 9 AM PT per File 770's reproduction; shown as noon ET.
+t002,2026-11-16T01:29:00-05:00,,"About 1:30 AM ET, Monday",stated,Project's feed says it is running on a backup database after an abuse issue; newest 140 or so books not discoverable,c003,Feed time is 06:29 UTC.
+t003,2026-11-16T08:00:00-05:00,,"About 8 AM ET, Monday",stated,Foundation says attackers re-vandalized the site; offline until further notice,c005,5 AM PT.
+t004,2026-11-16T08:08:00-05:00,,"8:08 AM ET, Monday",stated,Feed says the site is going down for unplanned maintenance in a few minutes,c007,13:08 UTC.
+t005,2026-11-16T08:40:00-05:00,,"8:40 AM ET, Monday",stated,ibiblio posts that its login and Gutenberg services are down,c008,13:40 UTC.
+t006,2026-11-18T00:00:00-05:00,,"Tuesday night, Nov 17 (PT)",approximate,Foundation finds a likely entry point and removes it; asks mirror operators to report books containing “asiafilm”,c006,The 9 PM PT update is midnight ET; the mirror request was Tuesday 6 AM PT.
+t007,2026-11-18T19:00:00-05:00,,"Wednesday afternoon PT, Nov 18",approximate,Foundation: site will not come up until 100% sure it is safe,c006,4 PM PT update.
+t008,2026-11-20T13:52:00-05:00,,"1:52 PM ET, Friday",stated,"ibiblio says university staff are helping, with next steps for contributors by Monday, Nov 23",c008,18:52 UTC.
+t009,2026-11-21T05:12:00-05:00,,"5:12 AM ET, Saturday",stated,Our check: gutenberg.org still returns HTTP 503 maintenance page,c007,Own first-hand check.
