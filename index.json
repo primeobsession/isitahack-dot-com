@@ -23,6 +23,17 @@
       }
     },
     {
+      "slug": "2026-11-starbucks-mobile-order-outage",
+      "title": "Starbucks Mobile Order & Pay outage, Nov 20, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-20T19:49:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-starbucks-mobile-order-outage.md",
+        "html": "incidents/2026-11-starbucks-mobile-order-outage.html",
+        "data": "data/incidents/2026-11-starbucks-mobile-order-outage/"
+      }
+    },
+    {
       "slug": "2026-11-workday-outage",
       "title": "Workday HR and payroll outage, Nov 13-14, 2026",
       "status": "monitoring",
