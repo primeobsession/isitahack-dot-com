@@ -1,0 +1,117 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-rackspace-spot-breach",
+  "title": "Rackspace Spot breach, Nov 2026",
+  "subject": {
+    "name": "Rackspace Spot",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "the Rackspace Spot outage",
+    "the Rackspace Spot Kubernetes breach"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-17",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Rackspace, Platform9, BleepingComputer, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Regional",
+  "size_basis": "Rackspace Spot runs customers' Kubernetes clusters, and the admin console was down for days. Rackspace reportedly says some customer organizations were affected. The number is unknown.",
+  "who_is_affected": "Organizations that run workloads on Rackspace Spot. Rackspace reportedly told affected customers to reissue Spot API tokens, replace refresh tokens, download new kubeconfig files and rotate credentials in cluster Secrets. Other customers should watch Rackspace's notices.",
+  "known": [
+    {
+      "text": "Rackspace's release notes list a November 2026 fix that closed a network exposure on Spot worker nodes as part of security hardening.",
+      "claim_id": "c006"
+    },
+    {
+      "text": "Rackspace's Spot status page says new sign-ups are restricted until Nov 25, 17:00 UTC after recent system maintenance.",
+      "claim_id": "c007"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether Rackspace itself has confirmed the breach on a page it hosts. Reports rely on a customer notice."
+    },
+    {
+      "text": "Whether customer data or Secrets were actually read or misused, not just readable."
+    },
+    {
+      "text": "How many customers were affected."
+    },
+    {
+      "text": "How the credentials leaked, whose they were, and who used them."
+    },
+    {
+      "text": "Whether the full restoration Nov 21 is confirmed by Rackspace on its own pages."
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 17",
+      "label": "Reported access window (UTC)",
+      "detail": "About 00:20 to 22:00 UTC, per the notice",
+      "claim_id": "c001"
+    },
+    {
+      "value": "Nov 21",
+      "label": "Service reportedly restored",
+      "detail": "Per BleepingComputer; console was down for days",
+      "claim_id": "c004"
+    },
+    {
+      "value": "Nov 25",
+      "label": "New sign-ups restricted until",
+      "detail": "17:00 UTC, on Rackspace's status page",
+      "claim_id": "c007"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Rackspace Spot breach"
+    },
+    {
+      "type": "claims",
+      "title": "What caused it?",
+      "group": "cause"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "What has Rackspace done, and what has it published?",
+      "group": "response"
+    },
+    {
+      "type": "claims",
+      "title": "Related Rackspace notices",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
