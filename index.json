@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-illinois-algonquin-dam-cyberattack",
+      "title": "Algonquin Dam apparent cyberattack, Nov 16, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-21T05:37:15-05:00",
+      "files": {
+        "page": "incidents/2026-11-illinois-algonquin-dam-cyberattack.md",
+        "html": "incidents/2026-11-illinois-algonquin-dam-cyberattack.html",
+        "data": "data/incidents/2026-11-illinois-algonquin-dam-cyberattack/"
+      }
+    },
+    {
       "slug": "2026-11-project-gutenberg-vandalism",
       "title": "Project Gutenberg website vandalism, Nov 15, 2026",
       "status": "monitoring",
@@ -9,17 +20,6 @@
         "page": "incidents/2026-11-project-gutenberg-vandalism.md",
         "html": "incidents/2026-11-project-gutenberg-vandalism.html",
         "data": "data/incidents/2026-11-project-gutenberg-vandalism/"
-      }
-    },
-    {
-      "slug": "2026-11-illinois-algonquin-dam-cyberattack",
-      "title": "Algonquin Dam apparent cyberattack, Nov 16, 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-21T05:13:25-05:00",
-      "files": {
-        "page": "incidents/2026-11-illinois-algonquin-dam-cyberattack.md",
-        "html": "incidents/2026-11-illinois-algonquin-dam-cyberattack.html",
-        "data": "data/incidents/2026-11-illinois-algonquin-dam-cyberattack/"
       }
     },
     {
