@@ -5,7 +5,7 @@ question: "Was the Premise Health data breach a hack?"
 status: monitoring
 incident_date: 2026-03-26
 first_published: 2026-11-20T23:47:00-05:00
-last_updated: 2026-11-21T01:15:00-05:00
+last_updated: 2026-11-21T07:08:00-05:00
 size: "Large"
 data_dir: data/incidents/2026-11-premise-health-insider-theft
 generated: true
@@ -18,7 +18,7 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Premise Health, an
 
 **Reported.** No outside hack is known. Premise Health says an employee copied the data from around March 26 and that 'this was not a hacking or ransomware event.' That is the company's account; no independent investigation has confirmed it.
 
-Incident: Premise Health patient data taken by an employee, 2026. Also reported as the Premise Health data breach and the Premise Health insider breach. First published Nov 20, 2026; last updated Nov 21, 2026, 1:15 AM ET.
+Incident: Premise Health patient data taken by an employee, 2026. Also reported as the Premise Health data breach and the Premise Health insider breach. First published Nov 20, 2026; last updated Nov 21, 2026, 7:08 AM ET.
 
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Premise Health, any government agency, news outlet, company, or anyone else named.
 
@@ -26,7 +26,7 @@ This is the current answer, not a final verdict.
 
 ## The latest
 
-Nov 21, 2026, 1:15 AM ET: **At least 11 lawsuits have been filed against Premise Health in federal court over the breach.** Added court dockets (CourtListener, Justia; Tier 1) showing at least 11 cases against Premise Health Holding Corp. in the Middle District of Tennessee, filed Nov 11-19 (c017, q008, t006). Complaints not read; allegations unknown. Main answer unchanged (Reported). Staleness check done: 'checked and not found' note updated (court filings now exist; still no criminal charges or law-enforcement statement). HHS breach portal not checked: not readable by our tools. Privacy check done: no plaintiffs or employee named.
+Nov 21, 2026, 7:08 AM ET: **One lawsuit alleges an outside hack but offers no evidence beyond the company's own notice, which says it was an employee.** Read the complaint in case 3:26-cv-01843 (M.D. Tenn., Nov 13; Tier 1 court filing, now in the RECAP archive). It alleges the company 'was hacked' by 'cybercriminals' but cites only Premise Health's notice and quotes its employee account. Added s009 and c018 (Unverified); c017 detail updated. Main answer unchanged (Reported). Staleness check done: 'checked and not found' note updated (one complaint now read; still no law-enforcement statement or charges). Privacy check done: no plaintiff or employee named.
 
 ## At a glance
 
@@ -101,13 +101,14 @@ Nov 21, 2026, 1:15 AM ET: **At least 11 lawsuits have been filed against Premise
 | Sep 18, 2026 | Premise Health discovers it and revokes the employee's access | Confirmed | The notice and the letter give the discovery date and the response. | [Premise Health: Notice of Data Security Incident (company website)](https://www.premisehealth.com/notice-of-data-security-incident/), [Premise Health sample notice letter filed with the Washington Attorney General (Nov 6)](https://agportal-s3bucket.s3.amazonaws.com/databreach/BreachA43681.pdf) |
 | Oct 14, 2026 | Premise Health receives a preliminary analysis of the data | Confirmed | The notice and the letter give the date. | [Premise Health: Notice of Data Security Incident (company website)](https://www.premisehealth.com/notice-of-data-security-incident/), [Premise Health sample notice letter filed with the Washington Attorney General (Nov 6)](https://agportal-s3bucket.s3.amazonaws.com/databreach/BreachA43681.pdf) |
 | Nov 6, 2026 | Notice letters dated; filings appear on state breach lists | Confirmed | The dated letter and the two state listings agree on Nov 6. Some letters went to parents of minors whose data was involved, per the letter. | [Premise Health sample notice letter filed with the Washington Attorney General (Nov 6)](https://agportal-s3bucket.s3.amazonaws.com/databreach/BreachA43681.pdf), [Oregon Department of Justice: data breach notifications list (Premise Health entry)](https://justice.oregon.gov/consumer/databreach/), [Washington Attorney General: data breach notifications list (Premise Health entry)](https://www.atg.wa.gov/data-breach-notifications) |
-| Nov 11, 2026 | First lawsuit over the breach filed against Premise Health in federal court in Nashville | Confirmed | The court dockets list each case, its filing date and Premise Health as defendant. The dockets list complaints, summonses and scheduling orders. We have not read the complaints, so we do not know what they allege about how the data was taken. A lawsuit is a claim, not a finding; no court has ruled. We do not name the people suing. | [CourtListener (RECAP archive): federal court dockets naming Premise Health Holding Corp. as defendant, M.D. Tenn.](https://www.courtlistener.com/?q=%22Premise+Health+Holding%22&type=r&order_by=dateFiled+desc), [Justia Dockets: case 3:26-cv-01819 against Premise Health Holding Corp. (M.D. Tenn., filed Nov 11)](https://dockets.justia.com/docket/tennessee/tnmdce/3:2026cv01819/112822) |
+| Nov 11, 2026 | First lawsuit over the breach filed against Premise Health in federal court in Nashville | Confirmed | The court dockets list each case, its filing date and Premise Health as defendant. The dockets list complaints, summonses and scheduling orders. We have read one complaint (see the claim on the lawsuit that alleges a hack); the others are not yet in the public archive. A lawsuit is a claim, not a finding; no court has ruled. We do not name the people suing. | [CourtListener (RECAP archive): federal court dockets naming Premise Health Holding Corp. as defendant, M.D. Tenn.](https://www.courtlistener.com/?q=%22Premise+Health+Holding%22&type=r&order_by=dateFiled+desc), [Justia Dockets: case 3:26-cv-01819 against Premise Health Holding Corp. (M.D. Tenn., filed Nov 11)](https://dockets.justia.com/docket/tennessee/tnmdce/3:2026cv01819/112822) |
 
 ## Is anyone suing?
 
 | Claim | Label | What we know | Why it supports, and more detail | Sources |
 |---|---|---|---|---|
-| At least 11 lawsuits have been filed against Premise Health | Confirmed | Federal court dockets in Nashville (Middle District of Tennessee) show at least 11 cases against Premise Health Holding Corp. filed between Nov 11 and Nov 19, 2026, at least one as a proposed class action. | The court dockets list each case, its filing date and Premise Health as defendant. The dockets list complaints, summonses and scheduling orders. We have not read the complaints, so we do not know what they allege about how the data was taken. A lawsuit is a claim, not a finding; no court has ruled. We do not name the people suing. | [CourtListener (RECAP archive): federal court dockets naming Premise Health Holding Corp. as defendant, M.D. Tenn.](https://www.courtlistener.com/?q=%22Premise+Health+Holding%22&type=r&order_by=dateFiled+desc), [Justia Dockets: case 3:26-cv-01819 against Premise Health Holding Corp. (M.D. Tenn., filed Nov 11)](https://dockets.justia.com/docket/tennessee/tnmdce/3:2026cv01819/112822) |
+| At least 11 lawsuits have been filed against Premise Health | Confirmed | Federal court dockets in Nashville (Middle District of Tennessee) show at least 11 cases against Premise Health Holding Corp. filed between Nov 11 and Nov 19, 2026, at least one as a proposed class action. | The court dockets list each case, its filing date and Premise Health as defendant. The dockets list complaints, summonses and scheduling orders. We have read one complaint (see the claim on the lawsuit that alleges a hack); the others are not yet in the public archive. A lawsuit is a claim, not a finding; no court has ruled. We do not name the people suing. | [CourtListener (RECAP archive): federal court dockets naming Premise Health Holding Corp. as defendant, M.D. Tenn.](https://www.courtlistener.com/?q=%22Premise+Health+Holding%22&type=r&order_by=dateFiled+desc), [Justia Dockets: case 3:26-cv-01819 against Premise Health Holding Corp. (M.D. Tenn., filed Nov 11)](https://dockets.justia.com/docket/tennessee/tnmdce/3:2026cv01819/112822) |
+| One lawsuit alleges Premise Health was hacked by outside criminals | Unverified | A proposed class action filed Nov 13 (case 3:26-cv-01843) says the company 'was hacked' and that 'cybercriminals infiltrated' its systems, some of it stated 'on information and belief'. | The complaint text (pages 2, 4 and 8) makes these allegations and cites only the company notice and state breach filings for the facts. The complaint's only cited source for what happened is Premise Health's own notice, which says this was 'not a hacking or ransomware event', and the complaint also quotes the company's statement that an employee misappropriated the data. It offers no evidence of an outside intruder. A complaint is one side's allegations; no court has ruled. | [Class action complaint, case 3:26-cv-01843 v. Premise Health Holding Corp. (M.D. Tenn., Nov 13), CourtListener RECAP](https://storage.courtlistener.com/recap/gov.uscourts.tnmd.112854/gov.uscourts.tnmd.112854.1.0.pdf) |
 
 ## Who is affected, and what was taken?
 
@@ -123,13 +124,13 @@ Nov 21, 2026, 1:15 AM ET: **At least 11 lawsuits have been filed against Premise
 
 ## What we checked and did not find
 
-We looked for these and did not find them as of 1:15 AM ET on Nov 21, 2026.
+We looked for these and did not find them as of 7:08 AM ET on Nov 21, 2026.
 
 - An entry on the federal HHS breach portal. Its list could not be read by our tools, so we could not check it.
 - Maine's breach list, which blocked our tools.
-- Any claim by a hacker or ransomware group, or any report of an outside intrusion.
+- Any claim by a hacker or ransomware group, or any evidence of an outside intrusion. (One lawsuit alleges a hack, but cites only the company's notice; see "Is anyone suing?".)
 - A law-enforcement statement or criminal charges. (Civil lawsuits have been filed; see "Is anyone suing?".)
-- The text of the lawsuits' complaints, which are not yet in the public court archive we use.
+- The text of most of the lawsuits' complaints, which are not yet in the public court archive we use. One complaint (case 3:26-cv-01843) has been read.
 - Why the employee took the data, or where it went.
 - An explanation for the end date of March 30 in Oregon's listing.
 - Any link to this week's outages. The data was taken from March and found in September.
@@ -138,6 +139,7 @@ We looked for these and did not find them as of 1:15 AM ET on Nov 21, 2026.
 
 | When | Update | Type |
 |---|---|---|
+| Nov 21, 2026, 7:08 AM ET | **One lawsuit alleges an outside hack but offers no evidence beyond the company's own notice, which says it was an employee.** Read the complaint in case 3:26-cv-01843 (M.D. Tenn., Nov 13; Tier 1 court filing, now in the RECAP archive). It alleges the company 'was hacked' by 'cybercriminals' but cites only Premise Health's notice and quotes its employee account. Added s009 and c018 (Unverified); c017 detail updated. Main answer unchanged (Reported). Staleness check done: 'checked and not found' note updated (one complaint now read; still no law-enforcement statement or charges). Privacy check done: no plaintiff or employee named. | Added |
 | Nov 21, 2026, 1:15 AM ET | **At least 11 lawsuits have been filed against Premise Health in federal court over the breach.** Added court dockets (CourtListener, Justia; Tier 1) showing at least 11 cases against Premise Health Holding Corp. in the Middle District of Tennessee, filed Nov 11-19 (c017, q008, t006). Complaints not read; allegations unknown. Main answer unchanged (Reported). Staleness check done: 'checked and not found' note updated (court filings now exist; still no criminal charges or law-enforcement statement). HHS breach portal not checked: not readable by our tools. Privacy check done: no plaintiffs or employee named. | Added |
 | Nov 20, 2026, 11:49 PM ET | **The 'not a hack' answer now reads as Reported: it is Premise Health's own account, not independently confirmed.** Main answer relabelled from Confirmed to Reported, matching how the desk treats an uncorroborated company denial. The insider-theft facts the company admits stay Confirmed. c002 reworded to make clear it confirms only that the company said it. | Label change |
 | Nov 20, 2026, 11:47 PM ET | **Premise Health says an employee copied data on about 2.76 million people and that it was not a hack.** First draft. 6 sources (4 Tier 1), 16 claims (15 Confirmed, 1 Not established), 7 questions. The insider cause is the company's own account; no outside review. Oregon lists breach dates Mar 26-30. HHS breach portal not readable. Privacy check done: employee not named. | Added |
@@ -152,6 +154,7 @@ We looked for these and did not find them as of 1:15 AM ET on Nov 21, 2026.
 - [Healthcare Info Security (ISMG): Premise Health insider breach could affect millions](https://www.healthcareinfosecurity.com/premise-health-insider-breach-could-affect-millions-a-33377) (News outlet, Nov 12, 2026)
 - [CourtListener (RECAP archive): federal court dockets naming Premise Health Holding Corp. as defendant, M.D. Tenn.](https://www.courtlistener.com/?q=%22Premise+Health+Holding%22&type=r&order_by=dateFiled+desc) (Official source, Nov 20, 2026)
 - [Justia Dockets: case 3:26-cv-01819 against Premise Health Holding Corp. (M.D. Tenn., filed Nov 11)](https://dockets.justia.com/docket/tennessee/tnmdce/3:2026cv01819/112822) (Official source, Nov 11, 2026)
+- [Class action complaint, case 3:26-cv-01843 v. Premise Health Holding Corp. (M.D. Tenn., Nov 13), CourtListener RECAP](https://storage.courtlistener.com/recap/gov.uscourts.tnmd.112854/gov.uscourts.tnmd.112854.1.0.pdf) (Official source, Nov 13, 2026)
 
 ## Data files
 
