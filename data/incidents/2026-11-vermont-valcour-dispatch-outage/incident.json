@@ -1,0 +1,121 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-vermont-valcour-dispatch-outage",
+  "title": "Vermont Valcour police dispatch system outage, Nov 2026",
+  "subject": {
+    "name": "Valcour",
+    "kind": "government"
+  },
+  "also_called": [
+    "the Vermont police software outage",
+    "the Vermont dispatch system breach"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-16",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by CrossWind Technologies, the State of Vermont, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Regional",
+  "size_basis": "Valcour runs dispatch and records for nearly all Vermont police and many fire and EMS agencies, 97 agencies by one count. It is statewide, but 911 still works and no use outside Vermont is known.",
+  "who_is_affected": "Vermont police, fire and EMS agencies, which are working on paper, radio and phone. The public can still call 911 and non-emergency lines. Some records work, such as reports, may be slower.",
+  "known": [
+    {
+      "text": "The vendor told the state late on Nov 16 of a potential security incident, and the state took Valcour offline as a precaution.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "911 and emergency response still work.",
+      "claim_id": "c006"
+    },
+    {
+      "text": "The state has notified the Vermont Attorney General's Office and the FBI.",
+      "claim_id": "c014"
+    },
+    {
+      "text": "Valcour stays offline until the investigation ends and any weaknesses are fixed. There is no timeline.",
+      "claim_id": "c009"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "What happened. No cause has been published."
+    },
+    {
+      "text": "Whether it was a cyberattack, and if so, who was behind it."
+    },
+    {
+      "text": "Whether any police or personal data was accessed or taken."
+    },
+    {
+      "text": "Whether it is connected to this week's national outages."
+    },
+    {
+      "text": "When Valcour will be back."
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 16",
+      "label": "Vendor reports incident",
+      "detail": "Late Monday, per the state",
+      "claim_id": "c001"
+    },
+    {
+      "value": "97",
+      "label": "Agencies that use Valcour",
+      "detail": "35 police, 62 fire and EMS; one outlet's count",
+      "claim_id": "c005"
+    },
+    {
+      "value": "Working",
+      "label": "911 service",
+      "detail": "Per the state's statements",
+      "claim_id": "c006"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What caused it?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Valcour outage"
+    },
+    {
+      "type": "claims",
+      "title": "Who is affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Is it linked to the other outages?",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
