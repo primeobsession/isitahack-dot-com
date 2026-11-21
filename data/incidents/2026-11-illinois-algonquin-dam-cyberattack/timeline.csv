@@ -1,0 +1,5 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-16T00:00:00-05:00,,"Monday, Nov 16",approximate,IDNR's Office of Water Resources identifies an apparent cyberattack attempt at the Algonquin Dam,c001,No time of day given in any source we read.
+t002,2026-11-18T00:00:00-05:00,,"Wednesday, Nov 18",stated,White House says it sees no indication of a cyberattack behind recent tech outages (does not name the dam),c010,Release date; no time used.
+t003,2026-11-20T22:31:00-05:00,,"Friday evening, Nov 20",approximate,IDNR announces the incident; CBS Chicago and Shaw Local publish that evening,c002,10:31 PM ET is Shaw Local's 9:31 PM CST stamp; IDNR's own release time is not known.
+t004,2026-11-21T00:15:00-05:00,,"12:15 AM ET, Saturday",stated,"Gizmodo publishes, noting IDNR gave no detail and a spokesperson had not answered questions",c007,From Gizmodo's published time.
