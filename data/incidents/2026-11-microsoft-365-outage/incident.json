@@ -30,13 +30,13 @@
   ],
   "not_known": [
     {
-      "text": "What Microsoft's final post-incident report adds. A notice on Nov 20 said a new report had been published, but its text is not public yet."
+      "text": "Whether established news outlets confirm the final report's account. For now it rests on a third-party copy and one small outlet."
     },
     {
       "text": "Exactly how many users and organizations were affected."
     },
     {
-      "text": "Why the safeguards between regions failed. Microsoft says only that \"a separate issue\" let the failure spread."
+      "text": "When Microsoft's promised fixes, such as smaller fault zones and separate gateway pools for each workload, will be in place. Its final report dates several for early 2027."
     },
     {
       "text": "Whether the phishing campaign stole any credentials. Microsoft says this has not been confirmed."
