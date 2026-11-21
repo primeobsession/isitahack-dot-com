@@ -12,6 +12,17 @@
       }
     },
     {
+      "slug": "2026-11-opm-usa-staffing-access",
+      "title": "OPM USA Staffing unauthorized access, Nov 12-13, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-21T00:35:58-05:00",
+      "files": {
+        "page": "incidents/2026-11-opm-usa-staffing-access.md",
+        "html": "incidents/2026-11-opm-usa-staffing-access.html",
+        "data": "data/incidents/2026-11-opm-usa-staffing-access/"
+      }
+    },
+    {
       "slug": "2026-11-faa-ground-stop",
       "title": "FAA nationwide ground stop",
       "status": "monitoring",
@@ -110,17 +121,6 @@
         "page": "incidents/2026-11-apple-services-outage.md",
         "html": "incidents/2026-11-apple-services-outage.html",
         "data": "data/incidents/2026-11-apple-services-outage/"
-      }
-    },
-    {
-      "slug": "2026-11-opm-usa-staffing-access",
-      "title": "OPM USA Staffing unauthorized access, Nov 12-13, 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-20T20:01:59-05:00",
-      "files": {
-        "page": "incidents/2026-11-opm-usa-staffing-access.md",
-        "html": "incidents/2026-11-opm-usa-staffing-access.html",
-        "data": "data/incidents/2026-11-opm-usa-staffing-access/"
       }
     },
     {

@@ -5,7 +5,7 @@ question: "Was OPM's USA Staffing system hacked in November 2026?"
 status: monitoring
 incident_date: 2026-11-12
 first_published: 2026-11-20T19:49:00-05:00
-last_updated: 2026-11-20T20:01:59-05:00
+last_updated: 2026-11-21T00:35:58-05:00
 size: "Local"
 data_dir: data/incidents/2026-11-opm-usa-staffing-access
 generated: true
@@ -18,7 +18,7 @@ disclaimer: "Made for entertainment using AI. Not endorsed by OPM, any governmen
 
 **Not established.** Not established. One outlet says an internal OPM email describes outside access to 403 job offers on Nov 12-13. OPM has published nothing, and how the party got in and who it was are unknown, so a hack is not settled.
 
-Incident: OPM USA Staffing unauthorized access, Nov 12-13, 2026. Also reported as the OPM job-offer breach and the USA Staffing breach. First published Nov 20, 2026; last updated Nov 20, 2026, 8:01 PM ET.
+Incident: OPM USA Staffing unauthorized access, Nov 12-13, 2026. Also reported as the OPM job-offer breach and the USA Staffing breach. First published Nov 20, 2026; last updated Nov 21, 2026, 12:35 AM ET.
 
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by OPM, any government agency, news outlet, company, or anyone else named.
 
@@ -26,7 +26,7 @@ This is the current answer, not a final verdict.
 
 ## The latest
 
-Nov 20, 2026, 8:01 PM ET: **The main answer is now Not established: one outlet's account of an internal email does not settle whether OPM's USA Staffing was hacked.** q001 changed from Reported to Not established (manual 2.5: headline questions use Not established when evidence does not settle it). The only source is one outlet describing an internal email; how the outside party got in and who it was are unknown, and OPM has said nothing. Added what would settle it: an OPM statement or notice, or a second independent outlet. Claim c001 (unauthorized access was reported) stays Reported. No new sources.
+Nov 21, 2026, 12:35 AM ET: **OPM still has not commented on the reported USA Staffing access, and no second outlet has confirmed it.** Correction: source s001 (MSW Media) moved from Tier 2 to Tier 3. It is a single-author newsletter without published editorial standards, so it does not meet Tier 2 (established news organization); no label changes, since every claim resting on it was already Reported or Not established. Re-checked OPM's news releases page (latest item still Nov 2) and cybersecurity page (no incident notice); searched for an OPM statement, congressional statements and independent coverage: none found. One foreign-language summary repeating the MSW Media report was seen; it adds no sourcing of its own and is not counted. Staleness check done: c006 and the known item now read 'as of Nov 21'. Privacy check done: no reporter names, handles or usernames added. Not checked: the original email, which is not public.
 
 ## At a glance
 
@@ -42,7 +42,7 @@ Nov 20, 2026, 8:01 PM ET: **The main answer is now Not established: one outlet's
 ### Known so far
 
 - USA Staffing is OPM's hiring system for federal agencies.
-- OPM has published no statement about this as of Nov 20.
+- OPM has published no statement about this as of Nov 21.
 
 ### Not known yet
 
@@ -62,7 +62,7 @@ Nov 20, 2026, 8:01 PM ET: **The main answer is now Not established: one outlet's
 
 | Claim | Label | What we know | Why it supports, and more detail | Sources |
 |---|---|---|---|---|
-| An outside party accessed 403 tentative job offers in USA Staffing on Nov 12-13 | Reported | MSW Media says an internal OPM email told USA Staffing users that an outside third party accessed 403 tentative job offers on Nov 12 and 13. | MSW Media says it reviewed the email and quotes its content; the part shown has signature blocks removed. This rests on one outlet's description of an internal email that readers cannot see in full. We found no OPM statement and no second outlet. How the party got in is not stated. | [MSW Media: OPM data was breached on the same day as the FAA ground stop, per internal email](https://www.muellershewrote.com/p/breaking-opm-data-was-breached-on) |
+| An outside party accessed 403 tentative job offers in USA Staffing on Nov 12-13 | Reported | MSW Media says an internal OPM email told USA Staffing users that an outside third party accessed 403 tentative job offers on Nov 12 and 13. | MSW Media says it reviewed the email and quotes its content; the part shown has signature blocks removed. This rests on one outlet's description of an internal email that readers cannot see in full. The outlet is a single-author newsletter, which this site lists as Tier 3, not an established newsroom. We found no OPM statement and no second outlet with its own sourcing. How the party got in is not stated. | [MSW Media: OPM data was breached on the same day as the FAA ground stop, per internal email](https://www.muellershewrote.com/p/breaking-opm-data-was-breached-on) |
 | The data included names, emails, agency, position, grade, duty location and starting salary | Reported | Per the email as described, the offers included selectee names, emails, hiring agencies, positions, grades, duty locations and starting salaries. | MSW Media lists these fields as the email's description of what the offers contained. No Social Security numbers or other identifiers are mentioned in the report. We have no way to check the list against the email. | [MSW Media: OPM data was breached on the same day as the FAA ground stop, per internal email](https://www.muellershewrote.com/p/breaking-opm-data-was-breached-on) |
 | USA Staffing is OPM's hiring system for federal agencies | Confirmed | USA Staffing is the OPM system federal agencies use to recruit, assess, select and onboard employees. | OPM's own privacy assessment describes the system and its purpose. This is background about the system, not about the reported access. | [OPM Privacy Impact Assessment: USA Staffing](https://www.opm.gov/privacy/privacy-policy/usas-pia.pdf) |
 
@@ -85,16 +85,16 @@ Nov 20, 2026, 8:01 PM ET: **The main answer is now Not established: one outlet's
 
 | Time | What happened | Label | Evidence | Sources |
 |---|---|---|---|---|
-| Nov 12, 2026, Nov 12-13 | Reported outside access to 403 tentative job offers in USA Staffing | Reported | MSW Media says it reviewed the email and quotes its content; the part shown has signature blocks removed. This rests on one outlet's description of an internal email that readers cannot see in full. We found no OPM statement and no second outlet. How the party got in is not stated. | [MSW Media: OPM data was breached on the same day as the FAA ground stop, per internal email](https://www.muellershewrote.com/p/breaking-opm-data-was-breached-on) |
+| Nov 12, 2026, Nov 12-13 | Reported outside access to 403 tentative job offers in USA Staffing | Reported | MSW Media says it reviewed the email and quotes its content; the part shown has signature blocks removed. This rests on one outlet's description of an internal email that readers cannot see in full. The outlet is a single-author newsletter, which this site lists as Tier 3, not an established newsroom. We found no OPM statement and no second outlet with its own sourcing. How the party got in is not stated. | [MSW Media: OPM data was breached on the same day as the FAA ground stop, per internal email](https://www.muellershewrote.com/p/breaking-opm-data-was-breached-on) |
 | Nov 14, 2026 | OPM cyber team reportedly confirms and blocks the access | Reported | MSW Media relays these steps from the email. This is the email's account, relayed by MSW Media, not an OPM statement. | [MSW Media: OPM data was breached on the same day as the FAA ground stop, per internal email](https://www.muellershewrote.com/p/breaking-opm-data-was-breached-on) |
-| Nov 19, 2026 | Email reportedly sent to USA Staffing users about the access | Reported | MSW Media says it reviewed the email and quotes its content; the part shown has signature blocks removed. This rests on one outlet's description of an internal email that readers cannot see in full. We found no OPM statement and no second outlet. How the party got in is not stated. | [MSW Media: OPM data was breached on the same day as the FAA ground stop, per internal email](https://www.muellershewrote.com/p/breaking-opm-data-was-breached-on) |
-| Nov 20, 2026 | MSW Media publishes the report | Reported | MSW Media says it reviewed the email and quotes its content; the part shown has signature blocks removed. This rests on one outlet's description of an internal email that readers cannot see in full. We found no OPM statement and no second outlet. How the party got in is not stated. | [MSW Media: OPM data was breached on the same day as the FAA ground stop, per internal email](https://www.muellershewrote.com/p/breaking-opm-data-was-breached-on) |
+| Nov 19, 2026 | Email reportedly sent to USA Staffing users about the access | Reported | MSW Media says it reviewed the email and quotes its content; the part shown has signature blocks removed. This rests on one outlet's description of an internal email that readers cannot see in full. The outlet is a single-author newsletter, which this site lists as Tier 3, not an established newsroom. We found no OPM statement and no second outlet with its own sourcing. How the party got in is not stated. | [MSW Media: OPM data was breached on the same day as the FAA ground stop, per internal email](https://www.muellershewrote.com/p/breaking-opm-data-was-breached-on) |
+| Nov 20, 2026 | MSW Media publishes the report | Reported | MSW Media says it reviewed the email and quotes its content; the part shown has signature blocks removed. This rests on one outlet's description of an internal email that readers cannot see in full. The outlet is a single-author newsletter, which this site lists as Tier 3, not an established newsroom. We found no OPM statement and no second outlet with its own sourcing. How the party got in is not stated. | [MSW Media: OPM data was breached on the same day as the FAA ground stop, per internal email](https://www.muellershewrote.com/p/breaking-opm-data-was-breached-on) |
 
 ## What OPM has published
 
 | Claim | Label | What we know | Why it supports, and more detail | Sources |
 |---|---|---|---|---|
-| OPM has published no statement about this | Confirmed | OPM's news releases page showed nothing on the topic as of Nov 20, and its cybersecurity page has no incident notice. | Both OPM pages were read on Nov 20 and carry no notice about USA Staffing. The releases page's latest item is dated Nov 2. A missing statement does not show the report is wrong. | [OPM news releases page](https://www.opm.gov/news/news-releases/), [OPM cybersecurity page](https://www.opm.gov/cybersecurity/) |
+| OPM has published no statement about this | Confirmed | OPM's news releases page showed nothing on the topic as of Nov 21, and its cybersecurity page has no incident notice. | Both OPM pages were read on Nov 20 and again on Nov 21 and carry no notice about USA Staffing. The releases page's latest item is dated Nov 2. A missing statement does not show the report is wrong. | [OPM news releases page](https://www.opm.gov/news/news-releases/), [OPM cybersecurity page](https://www.opm.gov/cybersecurity/) |
 
 ## Related, but separate
 
@@ -116,12 +116,13 @@ We looked for these and did not find them as of 8 PM ET on Nov 20, 2026.
 
 | When | Update | Type |
 |---|---|---|
+| Nov 21, 2026, 12:35 AM ET | **OPM still has not commented on the reported USA Staffing access, and no second outlet has confirmed it.** Correction: source s001 (MSW Media) moved from Tier 2 to Tier 3. It is a single-author newsletter without published editorial standards, so it does not meet Tier 2 (established news organization); no label changes, since every claim resting on it was already Reported or Not established. Re-checked OPM's news releases page (latest item still Nov 2) and cybersecurity page (no incident notice); searched for an OPM statement, congressional statements and independent coverage: none found. One foreign-language summary repeating the MSW Media report was seen; it adds no sourcing of its own and is not counted. Staleness check done: c006 and the known item now read 'as of Nov 21'. Privacy check done: no reporter names, handles or usernames added. Not checked: the original email, which is not public. | Correction |
 | Nov 20, 2026, 8:01 PM ET | **The main answer is now Not established: one outlet's account of an internal email does not settle whether OPM's USA Staffing was hacked.** q001 changed from Reported to Not established (manual 2.5: headline questions use Not established when evidence does not settle it). The only source is one outlet describing an internal email; how the outside party got in and who it was are unknown, and OPM has said nothing. Added what would settle it: an OPM statement or notice, or a second independent outlet. Claim c001 (unauthorized access was reported) stays Reported. No new sources. | Label change |
 | Nov 20, 2026, 7:49 PM ET | **One outlet reports an outside party accessed 403 federal job offers in OPM's USA Staffing on Nov 12-13; OPM has said nothing publicly.** First draft. 4 sources (3 Tier 1, all OPM pages with no incident notice), 8 claims (2 Confirmed, 4 Reported, 2 Not established), 3 questions. The report rests on one outlet's description of an internal email, so the main answer is Reported. Searched for an OPM statement and other outlets: none found. Not checked: the original email, which is not public. Staleness check done. Privacy check done: no reporter names, handles or usernames; the source page's contact details were left out. | Added |
 
 ## Sources
 
-- [MSW Media: OPM data was breached on the same day as the FAA ground stop, per internal email](https://www.muellershewrote.com/p/breaking-opm-data-was-breached-on) (News outlet, Nov 20, 2026)
+- [MSW Media: OPM data was breached on the same day as the FAA ground stop, per internal email](https://www.muellershewrote.com/p/breaking-opm-data-was-breached-on) (Researcher or analysis, Nov 20, 2026)
 - [OPM news releases page](https://www.opm.gov/news/news-releases/) (Official source, Nov 2, 2026)
 - [OPM cybersecurity page](https://www.opm.gov/cybersecurity/) (Official source)
 - [OPM Privacy Impact Assessment: USA Staffing](https://www.opm.gov/privacy/privacy-policy/usas-pia.pdf) (Official source)
