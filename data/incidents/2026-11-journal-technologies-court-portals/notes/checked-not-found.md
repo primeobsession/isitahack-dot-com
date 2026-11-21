@@ -1,13 +1,14 @@
-We looked for these and did not find them as of our Nov 21 late-morning check.
+We looked for these and did not find them as of our Nov 21 late-afternoon check.
 
 - A count or list of the courts and customers affected, from the vendor or any government body. The Sacramento Bee's count covers California superior courts only.
 - A description of the flaws, a CVE, or indicators of compromise from the vendor.
 - A claim of responsibility or any named attacker. We did not look at leak sites, underground forums or trackers.
 - An FBI, CISA or court statement tying this incident to ARTEX or to anyone else.
 - A finding on whether any data other than Criminal Justice Information was exposed.
-- A list of courts whose portals are restored, or a restoration date for Kern or Riverside.
+- A list of courts whose portals are restored, or a restoration date for Kern or Riverside. (King County, Washington's Superior Court Clerk gives Nov 29 as the earliest; see c021.)
 - Any source linking this outage to the other outages reported this week.
 - A vendor named in the Court of Appeal of Alberta's own notice; it says only “unscheduled maintenance.”
 - A public vendor post newer than Nov 20.
 - A vendor or cause named in the Washoe County, Nevada court's own notice; it says only that the portal is down with no ETA.
 - A vendor named in the San Joaquin County court's own notice; it says only that it is working with "our vendor" to restore its eCourt portal.
+- A vendor named in King County Superior Court Clerk's own alerts; they say only “the Court Clerk's vendor.”
