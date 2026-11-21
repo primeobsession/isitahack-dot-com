@@ -1,0 +1,133 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-airbyte-cloud-security-incident",
+  "title": "Airbyte Cloud security incident, Nov 2026",
+  "subject": {
+    "name": "Airbyte",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "the Airbyte Cloud outage",
+    "the Airbyte cyberattack"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-17",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Airbyte, Salesforce, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Regional",
+  "size_basis": "Airbyte Cloud moves data between many companies' apps and databases, and every customer lost service for days. Airbyte says fewer than 1% of customers were directly affected. Salesforce also cut access. The full count is unknown.",
+  "who_is_affected": "Companies that use Airbyte Cloud to sync data. API connectors for Salesforce, HubSpot, Zendesk and others were still down as of 1:00 AM ET Nov 21. Affected customers were contacted by Airbyte; others need only watch its status page.",
+  "known": [
+    {
+      "text": "Airbyte says a security incident gave an attacker access to its systems; it blocked them and took Cloud offline on Nov 17.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Airbyte Cloud was offline for days; the service began coming back on Nov 19.",
+      "claim_id": "c009"
+    },
+    {
+      "text": "Airbyte says fewer than 1% of its customers were affected and that it contacted them.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "As of 1:00 AM ET Nov 21, 15 API connectors, Connector Builder and MCP were still down as a cautionary measure.",
+      "claim_id": "c008"
+    },
+    {
+      "text": "Salesforce disabled the Airbyte connected app on Nov 20 and says this was not a Salesforce platform problem.",
+      "claim_id": "c010"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether customer data, credentials or metadata were accessed or taken."
+    },
+    {
+      "text": "How the attacker got in. Airbyte says a full incident report is coming."
+    },
+    {
+      "text": "Who is behind it, and what 'broader, global cyberattack' Airbyte means."
+    },
+    {
+      "text": "Whether Salesforce or other platforms' customer data was reached through Airbyte."
+    },
+    {
+      "text": "When the remaining 15 API connectors, Builder and MCP will return."
+    },
+    {
+      "text": "Whether self-managed Airbyte installs were affected."
+    }
+  ],
+  "figures": [
+    {
+      "value": "<1%",
+      "label": "Customers affected, per Airbyte",
+      "detail": "Airbyte's own figure; not checked by anyone else",
+      "claim_id": "c004"
+    },
+    {
+      "value": "15",
+      "label": "API connectors still down",
+      "detail": "As of 1:00 AM ET Nov 21, per Airbyte",
+      "claim_id": "c008"
+    },
+    {
+      "value": "4:09 PM",
+      "label": "Security incident announced (ET)",
+      "detail": "Nov 17, on Airbyte's status page",
+      "claim_id": "c001"
+    },
+    {
+      "value": "4:33 PM",
+      "label": "Salesforce advisory (ET)",
+      "detail": "Nov 20; disabled the Airbyte app",
+      "claim_id": "c010"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Airbyte incident"
+    },
+    {
+      "type": "claims",
+      "title": "What caused it?",
+      "group": "cause"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "What have Salesforce and other platforms said?",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
