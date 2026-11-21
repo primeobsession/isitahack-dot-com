@@ -18,7 +18,7 @@
   "verdict_approved_at": null,
   "size": "Regional",
   "size_basis": "One national research supercomputer in Japan, offline since Nov 14. Up to 4,222 Fugaku users and 375 RIKYU users are affected, and stolen keys could reach other research computers.",
-  "who_is_affected": "Registered users of Fugaku and RIKYU, who are researchers, and researchers waiting for time on the machine. Their contact details and any private keys stored on Fugaku were involved.",
+  "who_is_affected": "Registered users of Fugaku and RIKYU, who are researchers, and researchers waiting for time on the machine. Their contact details and any private keys stored on Fugaku were involved. Other Japanese universities and research centers that run supercomputers have been asked to check their systems.",
   "known": [
     {
       "text": "An outside party got into Fugaku's operational network between Nov 10 and 13, through the public status dashboard.",
@@ -33,8 +33,16 @@
       "claim_id": "c005"
     },
     {
+      "text": "Keys that give administrator access to Fugaku's servers were taken; RIKEN replaced them on Nov 14.",
+      "claim_id": "c014"
+    },
+    {
       "text": "Fugaku was suspended on Nov 14 and has no restart date.",
       "claim_id": "c011"
+    },
+    {
+      "text": "Japan's education ministry has asked other supercomputer operators to check their systems.",
+      "claim_id": "c016"
     }
   ],
   "not_known": [
