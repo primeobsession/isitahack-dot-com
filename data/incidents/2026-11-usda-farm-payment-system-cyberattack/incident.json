@@ -1,0 +1,107 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-usda-farm-payment-system-cyberattack",
+  "title": "USDA farm payment system cyberattack, Nov 2026",
+  "subject": {
+    "name": "USDA",
+    "kind": "government"
+  },
+  "also_called": [
+    "the USDA hack",
+    "the USDA cybersecurity incident"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-16",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by USDA, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Nation-level",
+  "size_basis": "Farm Service Agency offices across the US reported outages in loan, payment and mapping tools for about a week, ahead of a Dec 11 sign-up deadline. The number of farmers affected is not given.",
+  "who_is_affected": "Farmers and ranchers who use USDA loan, payment and conservation programs, and USDA staff. USDA says no personal information was involved.",
+  "known": [
+    {
+      "text": "A USDA under secretary called the week-long disruption a cyberthreat, not a software update.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Loan, payment and mapping tools went down, delaying farmer loans and payments.",
+      "claim_id": "c007"
+    },
+    {
+      "text": "The disruption began around Monday, Nov 16.",
+      "claim_id": "c008"
+    },
+    {
+      "text": "The under secretary says no personal information was involved and no data was lost.",
+      "claim_id": "c009"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether outsiders actually got into the payment system."
+    },
+    {
+      "text": "Who was behind it."
+    },
+    {
+      "text": "Whether any data was taken."
+    },
+    {
+      "text": "Whether every system is back online."
+    }
+  ],
+  "figures": [
+    {
+      "value": "~1 week",
+      "label": "Disruption so far",
+      "detail": "Since about Nov 16",
+      "claim_id": "c008"
+    },
+    {
+      "value": "None",
+      "label": "Personal data, USDA says",
+      "detail": "An official's statement",
+      "claim_id": "c009"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What was the cause?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the USDA incident"
+    },
+    {
+      "type": "claims",
+      "title": "Is it linked to anything else?",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
