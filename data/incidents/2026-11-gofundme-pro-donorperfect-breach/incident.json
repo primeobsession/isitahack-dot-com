@@ -1,0 +1,120 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-gofundme-pro-donorperfect-breach",
+  "title": "GoFundMe Pro and DonorPerfect breaches, Nov 2026",
+  "subject": {
+    "name": "GoFundMe, DonorPerfect",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "GoFundMe Pro data breach",
+    "DonorPerfect cyberattack",
+    "Nonprofit fundraising platform attacks"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-10",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by GoFundMe, DonorPerfect, Salesforce, any news outlet, government agency, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "DonorPerfect says it serves about 11,000 nonprofit customers, and GoFundMe Pro is used by many more, in the weeks before Giving Tuesday. Neither company has said how many people's information is involved, so size rests on the platforms' reach, not a count.",
+  "who_is_affected": "People whose information sits in GoFundMe Pro, mainly donors and supporters of nonprofits that use it, and the nonprofits' staff. DonorPerfect's customers lost access to the platform for days; whether their donors' data was taken is not established.",
+  "known": [
+    {
+      "text": "GoFundMe says an unauthorized third party accessed data from GoFundMe Pro on Oct 10 to 18 and Nov 8 to 9.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "DonorPerfect says it found unauthorized activity and took its application offline on Nov 10.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "GoFundMe says the data included names, postal addresses, phone numbers and, for some, dates of birth.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "GoFundMe's Salesforce connection was cut off and is still disabled.",
+      "claim_id": "c006"
+    },
+    {
+      "text": "DonorPerfect has restored most of its application since Nov 14; its API and mobile app were still down on Nov 21.",
+      "claim_id": "c008"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "How many people's information was taken, at either company."
+    },
+    {
+      "text": "Whether DonorPerfect customer or donor data was taken."
+    },
+    {
+      "text": "How the attackers got into GoFundMe Pro. DonorPerfect says its marketing website, which is its own claim."
+    },
+    {
+      "text": "Who did it, and whether it was the same attacker at both."
+    },
+    {
+      "text": "Whether the AI bots account is accurate."
+    }
+  ],
+  "figures": [
+    {
+      "value": "Oct 10",
+      "label": "First GoFundMe Pro access",
+      "detail": "Per GoFundMe's Nov 20 notice",
+      "claim_id": "c001"
+    },
+    {
+      "value": "Nov 10",
+      "label": "DonorPerfect goes offline",
+      "detail": "Per its status page",
+      "claim_id": "c008"
+    },
+    {
+      "value": "11,000",
+      "label": "DonorPerfect customers",
+      "detail": "Per the company, to Fortune",
+      "claim_id": "c008"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Were they hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the GoFundMe Pro and DonorPerfect breaches"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

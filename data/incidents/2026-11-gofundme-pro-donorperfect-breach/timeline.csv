@@ -1,0 +1,12 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-10-10T00:00:00-04:00,2026-10-18T00:00:00-04:00,Oct 10 to 18,stated,GoFundMe says an unauthorized party accessed data from the GoFundMe Pro API (first period),c001,Dates only.
+t002,2026-11-08T00:00:00-05:00,2026-11-09T00:00:00-05:00,Nov 8 to 9,stated,GoFundMe says the unauthorized party accessed GoFundMe Pro data again (second period),c001,Dates only.
+t003,2026-11-09T08:07:59-08:00,,"Nov 9, 8:07 AM PT",stated,GoFundMe Pro status page reports data failing to sync to Salesforce; it says it is working with Salesforce,c006,The sources do not date when Salesforce disabled the connected app.
+t004,2026-11-09T17:30:00-05:00,,"Nov 9, 5:30 PM ET",stated,DonorPerfect says it found security threats targeting its reporting technology and took its primary reporting engine offline,c002,
+t005,2026-11-10T15:12:00-05:00,,"Nov 10, 3:12 PM ET",stated,DonorPerfect takes its API offline over security concerns,c008,
+t006,2026-11-10T20:16:00-05:00,,"Nov 10, 8:16 PM ET",stated,"DonorPerfect takes the whole application offline ""out of an abundance of caution""",c008,
+t007,2026-11-14T22:50:00-05:00,,"Nov 14, 10:50 PM ET",stated,DonorPerfect begins restoring the application in stages,c008,
+t008,2026-11-19T00:00:00-05:00,,Nov 19,approximate,GoFundMe begins notifying affected individuals,c014,"Date only, per press."
+t009,2026-11-20T14:15:00-08:00,,"Nov 20, 2:15 PM PT",stated,GoFundMe says the GoFundMe Pro packages in Salesforce are restored; the connection stays disabled,c006,
+t010,2026-11-20T14:52:00-08:00,,"Nov 20, 2:52 PM PT",stated,GoFundMe posts its Security Notice on its status page,c001,
+t011,2026-11-21T09:31:00-05:00,,"Nov 21, 9:31 AM ET",stated,DonorPerfect says four partner integrations are rebuilt but not yet active; the API and mobile app are still unavailable,c008,
