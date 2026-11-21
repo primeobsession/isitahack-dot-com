@@ -1,0 +1,121 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-roll20-breach",
+  "title": "Roll20 account data breach, Nov 2026",
+  "subject": {
+    "name": "Roll20",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "the Roll20 hack",
+    "the Roll20 security incident"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-16",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Roll20, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Local",
+  "size_basis": "Roll20 says fewer than 1% of its users were affected. It claims over 15 million players, so that is up to about 150,000 accounts on one gaming site, worldwide.",
+  "who_is_affected": "Roll20 users who got the company's warning email. Their names, emails and password hashes were involved, and for some the last 4 digits of a saved card.",
+  "known": [
+    {
+      "text": "An unauthorized third party got into Roll20's system on the evening of Nov 16; Roll20 blocked the access.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Fewer than 1% of Roll20 users were affected, and each was emailed.",
+      "claim_id": "c009"
+    },
+    {
+      "text": "Names, email addresses and salted bcrypt password hashes were involved.",
+      "claim_id": "c011"
+    },
+    {
+      "text": "Some users with a saved card had the last 4 digits involved; full card numbers were not.",
+      "claim_id": "c012"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Who was behind it."
+    },
+    {
+      "text": "How many accounts, as a number."
+    },
+    {
+      "text": "Whether any data was copied. Roll20 says it found no evidence of it."
+    },
+    {
+      "text": "Why Roll20 believes the attack was AI-assisted."
+    },
+    {
+      "text": "Which software had the flaw."
+    }
+  ],
+  "figures": [
+    {
+      "value": "<1%",
+      "label": "Users affected",
+      "detail": "Roll20's figure; no count given",
+      "claim_id": "c009"
+    },
+    {
+      "value": "Nov 16",
+      "label": "Access found and blocked",
+      "detail": "Evening, per Roll20",
+      "claim_id": "c005"
+    },
+    {
+      "value": "Last 4",
+      "label": "Card digits, for some",
+      "detail": "No full card numbers",
+      "claim_id": "c012"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How did they get in?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Roll20 breach"
+    },
+    {
+      "type": "claims",
+      "title": "What data was involved?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Has this happened before, and is it linked to anything else?",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
