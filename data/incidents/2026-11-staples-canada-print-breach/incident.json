@@ -35,6 +35,10 @@
     {
       "text": "Staples says no financial information was exposed.",
       "claim_id": "c004"
+    },
+    {
+      "text": "Staples says it removed the intruder and secured all accounts.",
+      "claim_id": "c012"
     }
   ],
   "not_known": [
