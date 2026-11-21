@@ -34,6 +34,17 @@
       }
     },
     {
+      "slug": "2026-11-usda-farm-payment-system-cyberattack",
+      "title": "USDA farm payment system cyberattack, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-21T00:49:23-05:00",
+      "files": {
+        "page": "incidents/2026-11-usda-farm-payment-system-cyberattack.md",
+        "html": "incidents/2026-11-usda-farm-payment-system-cyberattack.html",
+        "data": "data/incidents/2026-11-usda-farm-payment-system-cyberattack/"
+      }
+    },
+    {
       "slug": "2026-11-staples-canada-print-breach",
       "title": "Staples Canada print website breach, Nov 2026",
       "status": "monitoring",
@@ -66,17 +77,6 @@
         "data": "data/incidents/2026-11-faa-ground-stop/",
         "raw_dir": "data/incidents/2026-11-faa-ground-stop/raw/",
         "manifest": "data/incidents/2026-11-faa-ground-stop/MANIFEST.txt"
-      }
-    },
-    {
-      "slug": "2026-11-usda-farm-payment-system-cyberattack",
-      "title": "USDA farm payment system cyberattack, Nov 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-21T00:14:03-05:00",
-      "files": {
-        "page": "incidents/2026-11-usda-farm-payment-system-cyberattack.md",
-        "html": "incidents/2026-11-usda-farm-payment-system-cyberattack.html",
-        "data": "data/incidents/2026-11-usda-farm-payment-system-cyberattack/"
       }
     },
     {
