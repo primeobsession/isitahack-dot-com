@@ -1,6 +1,19 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-faa-ground-stop",
+      "title": "FAA nationwide ground stop",
+      "status": "monitoring",
+      "last_updated": "2026-11-21T18:15:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-faa-ground-stop.md",
+        "html": "incidents/2026-11-faa-ground-stop.html",
+        "data": "data/incidents/2026-11-faa-ground-stop/",
+        "raw_dir": "data/incidents/2026-11-faa-ground-stop/raw/",
+        "manifest": "data/incidents/2026-11-faa-ground-stop/MANIFEST.txt"
+      }
+    },
+    {
       "slug": "2026-11-rackspace-spot-breach",
       "title": "Rackspace Spot breach, Nov 2026",
       "status": "monitoring",
@@ -229,19 +242,6 @@
         "page": "incidents/2026-11-opm-usa-staffing-access.md",
         "html": "incidents/2026-11-opm-usa-staffing-access.html",
         "data": "data/incidents/2026-11-opm-usa-staffing-access/"
-      }
-    },
-    {
-      "slug": "2026-11-faa-ground-stop",
-      "title": "FAA nationwide ground stop",
-      "status": "monitoring",
-      "last_updated": "2026-11-21T00:30:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-faa-ground-stop.md",
-        "html": "incidents/2026-11-faa-ground-stop.html",
-        "data": "data/incidents/2026-11-faa-ground-stop/",
-        "raw_dir": "data/incidents/2026-11-faa-ground-stop/raw/",
-        "manifest": "data/incidents/2026-11-faa-ground-stop/MANIFEST.txt"
       }
     },
     {
