@@ -14,3 +14,4 @@ t012,2026-11-14T01:32:58-05:00,,,stated,Microsoft Threat Intelligence warns of p
 t013,2026-11-16T00:48:11-05:00,,,stated,Microsoft says its preliminary post-incident report is available in the admin center,c015,
 t014,2026-11-18T12:00:00-05:00,,,inferred,White House publishes officials' statements that the recent outages were not a cyberattack and are unrelated,c012,Anchor: the release is dated Nov 18 with no time; noon is a placeholder.
 t015,2026-11-18T20:59:00-05:00,,,stated,Azure status page shows no active events when checked,c017,
+t016,2026-11-20T20:04:46-05:00,,,stated,Microsoft's service health records for both incidents show a new notice that a post-incident report has been published (01:04 UTC Nov 21),c019,
