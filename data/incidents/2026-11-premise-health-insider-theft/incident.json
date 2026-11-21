@@ -105,6 +105,11 @@
     },
     {
       "type": "claims",
+      "title": "Is anyone suing?",
+      "group": "legal"
+    },
+    {
+      "type": "claims",
       "title": "Who is affected, and what was taken?",
       "group": "impact"
     },
