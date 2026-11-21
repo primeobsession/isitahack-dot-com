@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-glinet-cloud-malware",
+      "title": "GL.iNet cloud malware incident, Nov 20, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-21T18:07:13-05:00",
+      "files": {
+        "page": "incidents/2026-11-glinet-cloud-malware.md",
+        "html": "incidents/2026-11-glinet-cloud-malware.html",
+        "data": "data/incidents/2026-11-glinet-cloud-malware/"
+      }
+    },
+    {
       "slug": "2026-11-airbyte-cloud-security-incident",
       "title": "Airbyte Cloud security incident, Nov 2026",
       "status": "monitoring",
@@ -75,17 +86,6 @@
         "page": "incidents/2026-11-gofundme-pro-donorperfect-breach.md",
         "html": "incidents/2026-11-gofundme-pro-donorperfect-breach.html",
         "data": "data/incidents/2026-11-gofundme-pro-donorperfect-breach/"
-      }
-    },
-    {
-      "slug": "2026-11-glinet-cloud-malware",
-      "title": "GL.iNet cloud malware incident, Nov 20, 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-21T12:18:28-05:00",
-      "files": {
-        "page": "incidents/2026-11-glinet-cloud-malware.md",
-        "html": "incidents/2026-11-glinet-cloud-malware.html",
-        "data": "data/incidents/2026-11-glinet-cloud-malware/"
       }
     },
     {
