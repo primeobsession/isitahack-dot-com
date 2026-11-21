@@ -1,0 +1,117 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-premise-health-insider-theft",
+  "title": "Premise Health patient data taken by an employee, 2026",
+  "subject": {
+    "name": "Premise Health",
+    "kind": "health"
+  },
+  "also_called": [
+    "the Premise Health data breach",
+    "the Premise Health insider breach"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-03-26",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Premise Health, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "About 2.76 million people across the US, per the company's state filing, with Social Security numbers and health details for many. Care itself was not disrupted.",
+  "who_is_affected": "People whose data Premise Health held, mostly members of employer-sponsored health centers. Those affected are getting letters from Nov 6, 2026.",
+  "known": [
+    {
+      "text": "Premise Health says an employee misappropriated company data starting on or about March 26, 2026.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The company says it was not a hacking or ransomware event.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "It was found on Sept 18, 2026; the employee was fired and the case reported to law enforcement.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "About 2.76 million people are affected, per the company's filing listed by Oregon.",
+      "claim_id": "c010"
+    },
+    {
+      "text": "The data may include names, birth dates, Social Security numbers, insurance and treatment information.",
+      "claim_id": "c012"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Why the employee took the data, or where it went."
+    },
+    {
+      "text": "Whether any of it has been misused."
+    },
+    {
+      "text": "Why Oregon's listing ends the breach dates on March 30."
+    },
+    {
+      "text": "Whether law enforcement has taken any action."
+    }
+  ],
+  "figures": [
+    {
+      "value": "2.76M",
+      "label": "People affected",
+      "detail": "Company's filing, Oregon list",
+      "claim_id": "c010"
+    },
+    {
+      "value": "Mar 26",
+      "label": "Taking began",
+      "detail": "On or about, per the company",
+      "claim_id": "c006"
+    },
+    {
+      "value": "Sep 18",
+      "label": "Discovered",
+      "detail": "Access revoked that day",
+      "claim_id": "c005"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What caused it?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Premise Health breach"
+    },
+    {
+      "type": "claims",
+      "title": "Who is affected, and what was taken?",
+      "group": "impact"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
