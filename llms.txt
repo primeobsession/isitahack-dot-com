@@ -33,6 +33,8 @@
 - [Roll20 account data breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-roll20-breach.html): the same report as a web page.
 - [Premise Health patient data taken by an employee, 2026](https://isitahack.com/incidents/2026-11-premise-health-insider-theft.md): the report as Markdown (still monitored). Built from its data folder.
 - [Premise Health patient data taken by an employee, 2026 (HTML)](https://isitahack.com/incidents/2026-11-premise-health-insider-theft.html): the same report as a web page.
+- [Staples Canada print website breach, Nov 2026](https://isitahack.com/incidents/2026-11-staples-canada-print-breach.md): the report as Markdown (still monitored). Built from its data folder.
+- [Staples Canada print website breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-staples-canada-print-breach.html): the same report as a web page.
 
 ## Data (typed incident format: UTF-8, RFC 4180 CSV with a header row; see Format below)
 - [data/incidents/2026-11-microsoft-365-outage/](https://isitahack.com/data/incidents/2026-11-microsoft-365-outage/): the folder the Microsoft 365 report is built from: incident.json, claims.csv, sources.csv, timeline.csv, questions.csv, update_log.csv and notes/.
@@ -54,6 +56,7 @@
 - [data/incidents/2026-11-fbi-ncic-intrusion/](https://isitahack.com/data/incidents/2026-11-fbi-ncic-intrusion/): the folder the FBI NCIC report is built from.
 - [data/incidents/2026-11-roll20-breach/](https://isitahack.com/data/incidents/2026-11-roll20-breach/): the folder the Roll20 report is built from.
 - [data/incidents/2026-11-premise-health-insider-theft/](https://isitahack.com/data/incidents/2026-11-premise-health-insider-theft/): the folder the Premise Health report is built from.
+- [data/incidents/2026-11-staples-canada-print-breach/](https://isitahack.com/data/incidents/2026-11-staples-canada-print-breach/): the folder the Staples Canada report is built from.
 
 ## For search engines
 - [sitemap.xml](https://isitahack.com/sitemap.xml): every page, with each incident's last update.
