@@ -6,3 +6,4 @@ t004,2026-11-19T18:41:00-05:00,,,stated,DTN reports outages and quotes a USDA un
 t005,2026-11-20T13:41:00-05:00,,,stated,DTN updates its report with the under secretary's comments that no personal information was involved,c009,"Update time stamp, 12:41 PM Central."
 t006,2026-11-20T17:12:00-05:00,,,stated,"NBC News reports that hackers accessed the farmer-payment system, citing sources",c002,Article time stamp.
 t007,2026-11-20,,Friday,stated,Reuters relays the NBC report; CISA refers questions to USDA,c013,Reuters dateline Nov 20.
+t008,2026-11-19,,Thursday,stated,GAO releases a report finding gaps in USDA and FDA work on food-sector cybersecurity; it does not mention this incident,c015,Report publication date.
