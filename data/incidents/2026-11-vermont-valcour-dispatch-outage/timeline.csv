@@ -1,0 +1,7 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-16,,Late Monday,stated,CrossWind Technologies notifies the state of a potential security incident in Valcour,c001,"'Late on Monday, November 16' per the state."
+t002,2026-11-17,,Monday night or Tuesday,approximate,The state helps take Valcour offline and cuts off connected state systems,c003,Outlets differ on whether it was Monday night or Tuesday.
+t003,2026-11-17T17:31:00-05:00,,,stated,Public Safety and Digital Services publish their first joint statement,c002,Posting time on the state police news page.
+t004,2026-11-18T15:05:00-05:00,,,stated,State says Valcour won't be back that day; 911 still unaffected,c009,Posting time on the state police news page.
+t005,2026-11-19,,Thursday evening,stated,The governor says the FBI is involved,c015,"Per VTDigger, at a Thursday press conference."
+t006,2026-11-20T15:33:00-05:00,,,stated,State says it notified the Attorney General and FBI and has no restore timeline,c014,Posting time on the state police news page.
