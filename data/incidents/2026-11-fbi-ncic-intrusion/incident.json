@@ -21,11 +21,15 @@
   "who_is_affected": "Potentially police and courts that rely on NCIC, and people with records in it. No source says whose records, if any, were reached, and there is no notice for the public to act on.",
   "known": [
     {
+      "text": "CNN and NBC News, each citing their own sources, report the FBI is investigating an apparent breach of NCIC.",
+      "claim_id": "c001"
+    },
+    {
       "text": "NCIC is the FBI-run database police nationwide use for warrants, stolen property and other records.",
       "claim_id": "c006"
     },
     {
-      "text": "The FBI has not commented on CNN's report.",
+      "text": "The FBI has not commented on the CNN or NBC News reports.",
       "claim_id": "c003"
     },
     {
@@ -35,7 +39,7 @@
   ],
   "not_known": [
     {
-      "text": "Whether the intrusion happened as described. It rests on two unnamed people speaking to CNN."
+      "text": "Whether the FBI confirms the breach. Both reports call it 'apparent' and rest on unnamed people briefed on the matter."
     },
     {
       "text": "What part of NCIC was reached, how the intruders got in, and who they are."
