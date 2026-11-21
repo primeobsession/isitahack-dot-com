@@ -1,0 +1,8 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-13T15:15:00-05:00,,,approximate,"Users report 'Workday is currently unavailable'; Downdetector shows more than 2,900 reports",c003,
+t002,2026-11-13T20:00:00-05:00,,,stated,Workday's notice: DR services unexpectedly connected to production databases; all WD1 production tenants placed into maintenance,c001,Washington University posted the notice at 7:05 PM CST; Florida Atlantic at 8:00 PM ET.
+t003,2026-11-14T10:30:00-05:00,,,stated,Florida Atlantic reports Workday production available,c006,
+t004,2026-11-14T11:00:00-05:00,,,stated,Workday says service was restored by this time,c006,Per a Workday spokesperson; some customers came back later.
+t005,2026-11-14T15:16:00-05:00,,,stated,WUSA9 reports Workday's statement that the outage was not related to a cybersecurity incident,c002,
+t006,2026-11-14T19:49:00-05:00,,,stated,Washington University marks its Workday incident resolved,c006,6:49 PM CST.
+t007,2026-11-18,,,stated,White House release: no indication of a coordinated cyberattack behind recent tech outages,c007,Workday not named.
