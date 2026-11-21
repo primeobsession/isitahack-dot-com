@@ -63,6 +63,8 @@
 - [GoFundMe Pro and DonorPerfect breaches, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-gofundme-pro-donorperfect-breach.html): the same report as a web page.
 - [Rakuten Securities breach, Nov 2026](https://isitahack.com/incidents/2026-11-rakuten-securities-breach.md): the report as Markdown (still monitored). Built from its data folder.
 - [Rakuten Securities breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-rakuten-securities-breach.html): the same report as a web page.
+- [Airbyte Cloud security incident, Nov 2026](https://isitahack.com/incidents/2026-11-airbyte-cloud-security-incident.md): the report as Markdown (still monitored). Built from its data folder.
+- [Airbyte Cloud security incident, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-airbyte-cloud-security-incident.html): the same report as a web page.
 - [Microsoft Entra Connect Health data exposure, Nov 2026](https://isitahack.com/incidents/2026-11-microsoft-entra-connect-health-breach.md): the report as Markdown (still monitored). Built from its data folder.
 - [Microsoft Entra Connect Health data exposure, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-microsoft-entra-connect-health-breach.html): the same report as a web page.
 
@@ -101,6 +103,7 @@
 - [data/incidents/2026-11-charleston-county-sc-cyberattack/](https://isitahack.com/data/incidents/2026-11-charleston-county-sc-cyberattack/): the folder the Charleston County report is built from.
 - [data/incidents/2026-11-gofundme-pro-donorperfect-breach/](https://isitahack.com/data/incidents/2026-11-gofundme-pro-donorperfect-breach/): the folder the GoFundMe Pro and DonorPerfect report is built from.
 - [data/incidents/2026-11-rakuten-securities-breach/](https://isitahack.com/data/incidents/2026-11-rakuten-securities-breach/): the folder the Rakuten Securities report is built from.
+- [data/incidents/2026-11-airbyte-cloud-security-incident/](https://isitahack.com/data/incidents/2026-11-airbyte-cloud-security-incident/): the folder the Airbyte Cloud report is built from.
 - [data/incidents/2026-11-microsoft-entra-connect-health-breach/](https://isitahack.com/data/incidents/2026-11-microsoft-entra-connect-health-breach/): the folder the Microsoft Entra Connect Health report is built from.
 
 ## For search engines

@@ -1,0 +1,10 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-17T06:22:00-05:00,,,stated,Airbyte's status page opens an incident for data syncs failing or delayed,c003,11:22 UTC on the status page.
+t002,2026-11-17T08:39:00-05:00,,,stated,Airbyte says users now see HTTP 502 errors in its web app and API and ties them to the incident,c003,13:39 UTC.
+t003,2026-11-17T16:09:00-05:00,,,stated,"Airbyte says it found a security incident it believes is part of a broader, global cyberattack, and took Cloud offline",c001,21:09 UTC on the status page; trackers cite its X post at about 21:01 UTC.
+t004,2026-11-18T22:08:00-05:00,,,stated,"Airbyte begins 'gradually returning services' to Cloud, starting with backend syncs for some customers",c009,Nov 19 03:08 UTC.
+t005,2026-11-20T03:05:00-05:00,,,stated,"Airbyte says most data syncs and database connectors work; API sources, Connector Builder and MCP are unavailable",c009,08:05 UTC.
+t006,2026-11-20T00:00:00-05:00,,Nov 20,approximate,"Airbyte says Airbyte Cloud is back online, with Connector Builder and MCP offline until further notice",c009,Time of day not shown on the mirror we read.
+t007,2026-11-20T16:33:00-05:00,,,stated,Salesforce posts an advisory that it disabled the Airbyte connected app after suspicious activity,c010,Posted 4:33 pm EST per Salesforce.
+t008,2026-11-20T23:05:00-05:00,,,stated,Airbyte lists 16 API connectors still down because OAuth is deactivated,c008,Nov 21 04:05 UTC.
+t009,2026-11-21T01:00:00-05:00,,,stated,"Airbyte says Intercom OAuth is fixed; 15 API connectors, Connector Builder and MCP stay down",c008,06:00 UTC. Latest update on the page when we checked.
