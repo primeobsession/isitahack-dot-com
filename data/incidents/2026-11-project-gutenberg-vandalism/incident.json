@@ -1,0 +1,106 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-project-gutenberg-vandalism",
+  "title": "Project Gutenberg website vandalism, Nov 15, 2026",
+  "subject": {
+    "name": "Project Gutenberg",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "the Gutenberg hack",
+    "Project Gutenberg down"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-15",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Project Gutenberg, the Project Gutenberg Literary Archive Foundation, ibiblio, any news outlet, government agency, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "A free library of tens of thousands of public-domain books, used worldwide. The site has been down since Nov 15-16, but the foundation says the book files appear clear. Volunteers run recovery.",
+  "who_is_affected": "Readers who use gutenberg.org, and sites and tools that link to or load books from it. Contributors who use ibiblio logins cannot upload. The books appear unaffected.",
+  "known": [
+    {
+      "text": "The foundation says gutenberg.org was hit by vandalism and is being rebuilt.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Its updates describe outside attackers, injected code and root access to a server.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "As of 5:12 AM ET on Nov 21, gutenberg.org still shows a 503 maintenance page.",
+      "claim_id": "c007"
+    },
+    {
+      "text": "ibiblio, which hosts Gutenberg services, reports its own unplanned outage that began on Nov 15.",
+      "claim_id": "c008"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Who did it, and why."
+    },
+    {
+      "text": "Whether any user data was exposed."
+    },
+    {
+      "text": "When the site will return."
+    },
+    {
+      "text": "Whether the ibiblio outage is the same incident."
+    }
+  ],
+  "figures": [
+    {
+      "value": "5+ days",
+      "label": "Offline so far",
+      "detail": "Down since Nov 16, as of Nov 21",
+      "claim_id": "c007"
+    },
+    {
+      "value": "~140",
+      "label": "Newest books not discoverable",
+      "detail": "Per the project's Nov 16 notice",
+      "claim_id": "c003"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Project Gutenberg outage"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
