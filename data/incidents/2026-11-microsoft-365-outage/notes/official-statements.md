@@ -6,6 +6,10 @@
 >
 > — Microsoft Preliminary Post Incident Report, Nov 15 (third-party copy)
 
+> This incident was confirmed not to be caused by a cyberattack, and we found no evidence of malicious activity. This change was not caused by AI tooling.
+>
+> — Microsoft Post Incident Report, Nov 20 (third-party copy)
+
 > This is not a cyberattack, and this is not a coordinated effort by a nation state.
 >
 > — Director of National Intelligence, quoted by the White House, Nov 18
