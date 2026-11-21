@@ -1,0 +1,5 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-17T18:21:00-05:00,,6:21 PM,stated,"Tuesday: XDA reports Steam down, with Downdetector near 48,000 reports",c002,"Time is when XDA published, 6:21 PM EST."
+t002,2026-11-17T18:35:00-05:00,,6:35 PM,stated,Tuesday: XDA reports services back online and Downdetector reports falling,c003,"From XDA's update note, 18:35 EST."
+t003,2026-11-20T23:47:00-05:00,,About 11:47 PM,stated,Friday: tracker reports of Steam sign-in and connection failures begin to climb,c006,"Time as given by IBTimes AU, citing IsItDownRightNow."
+t004,2026-11-21T00:00:00-05:00,,Overnight,approximate,"Friday-Saturday: tracker reports above 1,600 in an hour, still elevated into early Saturday",c006,Approximate; IBTimes AU gives no end time.

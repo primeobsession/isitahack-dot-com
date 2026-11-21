@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-steam-outage",
+      "title": "Steam outages, Nov 17 and Nov 20-21, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-21T03:12:31-05:00",
+      "files": {
+        "page": "incidents/2026-11-steam-outage.md",
+        "html": "incidents/2026-11-steam-outage.html",
+        "data": "data/incidents/2026-11-steam-outage/"
+      }
+    },
+    {
       "slug": "2026-11-ticketmaster-outage",
       "title": "Ticketmaster outage, Nov 20, 2026",
       "status": "monitoring",

@@ -1,0 +1,104 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-steam-outage",
+  "title": "Steam outages, Nov 17 and Nov 20-21, 2026",
+  "subject": {
+    "name": "Steam",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "the Steam outage",
+    "Steam down",
+    "Valve Steam outage"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-17",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Valve, Steam, any news outlet, government agency, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Steam is the largest PC game store, and the Nov 17 outage drew tens of thousands of user reports and took down downloads, the Store and cloud saves. The later reports are in the low thousands. Valve has not said how many people were affected.",
+  "who_is_affected": "Steam users on Tuesday evening, Nov 17, who could not download, use Friends or load the Store, and users who reported sign-in, connection or checkout problems from late Friday, Nov 20, into Saturday, Nov 21. The Tuesday outage appears fixed; the later reports looked ongoing.",
+  "known": [
+    {
+      "text": "Steam had a broad outage on Tuesday evening, Nov 17, that took down downloads, Friends, cloud saves and the Store for many users.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The White House said on Nov 18 that it sees no indication of a cyberattack behind recent tech outages. It does not name Steam.",
+      "claim_id": "c013"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "What caused either disruption. Valve has not said."
+    },
+    {
+      "text": "Whether it was a cyberattack. No one has claimed one, reported one, or ruled one out."
+    },
+    {
+      "text": "Whether the Nov 17 and Nov 20-21 problems are connected."
+    },
+    {
+      "text": "How many people were affected."
+    }
+  ],
+  "figures": [
+    {
+      "value": "30,000+",
+      "label": "Downdetector reports, Nov 17",
+      "detail": "Near 48,000 at one point, per XDA",
+      "claim_id": "c002"
+    },
+    {
+      "value": "1,600+",
+      "label": "Reports in an hour, Nov 20-21",
+      "detail": "Tracker figure from about 11:47 PM ET, per IBTimes AU",
+      "claim_id": "c006"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Steam outages"
+    },
+    {
+      "type": "claims",
+      "title": "What caused it?",
+      "group": "cause"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
