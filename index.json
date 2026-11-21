@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-dropbox-outage",
+      "title": "Dropbox outage, Nov 20, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-21T01:23:54-05:00",
+      "files": {
+        "page": "incidents/2026-11-dropbox-outage.md",
+        "html": "incidents/2026-11-dropbox-outage.html",
+        "data": "data/incidents/2026-11-dropbox-outage/"
+      }
+    },
+    {
       "slug": "2026-11-riken-fugaku-supercomputer-hack",
       "title": "RIKEN Fugaku supercomputer break-in, Nov 2026",
       "status": "monitoring",

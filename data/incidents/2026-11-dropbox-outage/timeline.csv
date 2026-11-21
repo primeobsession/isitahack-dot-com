@@ -1,0 +1,5 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-20T14:28:00-05:00,,,stated,Dropbox opens an incident: 'We are currently investigating this issue.',c001,19:28 UTC on the status page.
+t002,2026-11-20T14:37:00-05:00,,,stated,"Dropbox says the outage is not caused by a cyberattack or by AI acting on its own, and apologizes for the disruption",c003,19:37 UTC.
+t003,2026-11-20T15:05:00-05:00,,,stated,Dropbox says a fix has been implemented and it is monitoring,c001,20:05 UTC.
+t004,2026-11-20T15:13:00-05:00,,,stated,Dropbox marks the incident resolved; all components return to operational,c002,20:13 UTC.
