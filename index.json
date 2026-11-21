@@ -12,6 +12,17 @@
       }
     },
     {
+      "slug": "2026-11-rakuten-securities-breach",
+      "title": "Rakuten Securities breach, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-21T12:17:47-05:00",
+      "files": {
+        "page": "incidents/2026-11-rakuten-securities-breach.md",
+        "html": "incidents/2026-11-rakuten-securities-breach.html",
+        "data": "data/incidents/2026-11-rakuten-securities-breach/"
+      }
+    },
+    {
       "slug": "2026-11-charleston-county-sc-cyberattack",
       "title": "Charleston County, SC cyberattack, Nov 16, 2026",
       "status": "monitoring",

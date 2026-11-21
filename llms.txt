@@ -56,9 +56,11 @@
 - [Ochsner Health data breach, Nov 19 2026](https://isitahack.com/incidents/2026-11-ochsner-health-breach.md): the report as Markdown (still monitored). Built from its data folder.
 - [Ochsner Health data breach, Nov 19 2026 (HTML)](https://isitahack.com/incidents/2026-11-ochsner-health-breach.html): the same report as a web page.
 - [Charleston County, SC cyberattack, Nov 16 2026](https://isitahack.com/incidents/2026-11-charleston-county-sc-cyberattack.md): the report as Markdown (still monitored). Built from its data folder.
-- [GoFundMe Pro and DonorPerfect breaches, Nov 2026](https://isitahack.com/incidents/2026-11-gofundme-pro-donorperfect-breach.md): the report as Markdown (still monitored). Built from its data folder.
 - [Charleston County, SC cyberattack, Nov 16 2026 (HTML)](https://isitahack.com/incidents/2026-11-charleston-county-sc-cyberattack.html): the same report as a web page.
+- [GoFundMe Pro and DonorPerfect breaches, Nov 2026](https://isitahack.com/incidents/2026-11-gofundme-pro-donorperfect-breach.md): the report as Markdown (still monitored). Built from its data folder.
 - [GoFundMe Pro and DonorPerfect breaches, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-gofundme-pro-donorperfect-breach.html): the same report as a web page.
+- [Rakuten Securities breach, Nov 2026](https://isitahack.com/incidents/2026-11-rakuten-securities-breach.md): the report as Markdown (still monitored). Built from its data folder.
+- [Rakuten Securities breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-rakuten-securities-breach.html): the same report as a web page.
 
 ## Data (typed incident format: UTF-8, RFC 4180 CSV with a header row; see Format below)
 - [data/incidents/2026-11-microsoft-365-outage/](https://isitahack.com/data/incidents/2026-11-microsoft-365-outage/): the folder the Microsoft 365 report is built from: incident.json, claims.csv, sources.csv, timeline.csv, questions.csv, update_log.csv and notes/.
@@ -93,6 +95,7 @@
 - [data/incidents/2026-11-ochsner-health-breach/](https://isitahack.com/data/incidents/2026-11-ochsner-health-breach/): the folder the Ochsner Health report is built from.
 - [data/incidents/2026-11-charleston-county-sc-cyberattack/](https://isitahack.com/data/incidents/2026-11-charleston-county-sc-cyberattack/): the folder the Charleston County report is built from.
 - [data/incidents/2026-11-gofundme-pro-donorperfect-breach/](https://isitahack.com/data/incidents/2026-11-gofundme-pro-donorperfect-breach/): the folder the GoFundMe Pro and DonorPerfect report is built from.
+- [data/incidents/2026-11-rakuten-securities-breach/](https://isitahack.com/data/incidents/2026-11-rakuten-securities-breach/): the folder the Rakuten Securities report is built from.
 
 ## For search engines
 - [sitemap.xml](https://isitahack.com/sitemap.xml): every page, with each incident's last update.
