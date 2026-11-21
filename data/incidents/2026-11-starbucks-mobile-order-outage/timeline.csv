@@ -1,0 +1,4 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-20T10:00:00-05:00,,,approximate,Tracker reports for Starbucks start to rise,c003,3 PM UTC on the Instatus page.
+t002,2026-11-20,,,stated,Starbucks acknowledges 'an issue with Mobile Order & Pay' and apologizes,c001,Time of day not stated.
+t003,2026-11-20T15:00:00-05:00,,,approximate,Tracker reports settle back to their usual level,c003,8 PM UTC on the Instatus page.

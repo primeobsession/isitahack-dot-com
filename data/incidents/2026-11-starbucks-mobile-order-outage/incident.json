@@ -1,0 +1,103 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-starbucks-mobile-order-outage",
+  "title": "Starbucks Mobile Order & Pay outage, Nov 20, 2026",
+  "subject": {
+    "name": "Starbucks",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "the Starbucks app outage",
+    "Starbucks app down"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-20",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Starbucks, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Starbucks Mobile Order & Pay is used across the US. The tracker's reports peaked at about 58 times normal for roughly five hours. Starbucks has not said how many customers or orders were affected.",
+  "who_is_affected": "US customers who order or pay in the Starbucks app. Stores and drive-thrus stayed open. If you were charged for an order that never arrived, check your app history and ask Starbucks support.",
+  "known": [
+    {
+      "text": "Customers in the US saw errors, zero balances and failed payments in the Starbucks app on Friday, Nov 20.",
+      "claim_id": "c002"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "What caused the problem. Starbucks has said only that there was an issue."
+    },
+    {
+      "text": "Whether it was a cyberattack. No source reports one, and nothing has ruled one out."
+    },
+    {
+      "text": "How many customers and orders were affected."
+    },
+    {
+      "text": "Whether customers were charged for orders that failed, and how refunds will work."
+    },
+    {
+      "text": "Whether Starbucks says service is fully restored."
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 20",
+      "label": "Outage day",
+      "detail": "Friday, about 10 AM to 3 PM ET",
+      "claim_id": "c003"
+    },
+    {
+      "value": "58x",
+      "label": "Peak vs normal reports",
+      "detail": "One tracker; not a count of customers",
+      "claim_id": "c004"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "What caused it? Cause and hack claims",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions and rumors",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Starbucks outage"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
