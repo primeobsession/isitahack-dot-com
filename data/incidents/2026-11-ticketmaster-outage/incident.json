@@ -1,0 +1,103 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-ticketmaster-outage",
+  "title": "Ticketmaster outage, Nov 20, 2026",
+  "subject": {
+    "name": "Ticketmaster",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "the Ticketmaster outage",
+    "Ticketmaster down"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-20",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Ticketmaster, Live Nation, any venue, government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Ticketmaster sells tickets for events across the country, and fans at a stadium show could not get in. Reports came from several states and abroad. Ticketmaster has not said how many people were affected.",
+  "who_is_affected": "People with Ticketmaster tickets who tried to load them on Friday evening, Nov 20, most visibly at the Caesars Superdome. It appears mostly fixed. Saving tickets to a phone wallet ahead of time avoided the problem at the Superdome.",
+  "known": [
+    {
+      "text": "Ticketmaster's service had an outage on Friday night, Nov 20, that kept fans at the Superdome from loading mobile tickets, according to the event organizer and the venue manager.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The White House said on Nov 18 that it sees no indication of a cyberattack behind recent tech outages. That was before this outage and does not name Ticketmaster.",
+      "claim_id": "c015"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "What caused the outage. Ticketmaster has not said."
+    },
+    {
+      "text": "Whether it was a cyberattack. No one has claimed one, reported one, or ruled one out."
+    },
+    {
+      "text": "Whether it is linked to the Nov 19 disruption or to other outages this month."
+    },
+    {
+      "text": "How many people were affected."
+    }
+  ],
+  "figures": [
+    {
+      "value": "~500",
+      "label": "Downdetector reports",
+      "detail": "Mostly about the app, from 8:33 PM ET",
+      "claim_id": "c004"
+    },
+    {
+      "value": "2",
+      "label": "Nights with disruption reported",
+      "detail": "Nov 19 and Nov 20",
+      "claim_id": "c009"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Ticketmaster outage"
+    },
+    {
+      "type": "claims",
+      "title": "What caused it?",
+      "group": "cause"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
