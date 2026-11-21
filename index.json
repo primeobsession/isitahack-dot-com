@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-rakuten-securities-breach",
+      "title": "Rakuten Securities breach, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-21T13:45:19-05:00",
+      "files": {
+        "page": "incidents/2026-11-rakuten-securities-breach.md",
+        "html": "incidents/2026-11-rakuten-securities-breach.html",
+        "data": "data/incidents/2026-11-rakuten-securities-breach/"
+      }
+    },
+    {
       "slug": "2026-11-microsoft-entra-connect-health-breach",
       "title": "Microsoft Entra Connect Health data exposure, Nov 2026",
       "status": "monitoring",
@@ -31,17 +42,6 @@
         "page": "incidents/2026-11-gofundme-pro-donorperfect-breach.md",
         "html": "incidents/2026-11-gofundme-pro-donorperfect-breach.html",
         "data": "data/incidents/2026-11-gofundme-pro-donorperfect-breach/"
-      }
-    },
-    {
-      "slug": "2026-11-rakuten-securities-breach",
-      "title": "Rakuten Securities breach, Nov 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-21T12:47:56-05:00",
-      "files": {
-        "page": "incidents/2026-11-rakuten-securities-breach.md",
-        "html": "incidents/2026-11-rakuten-securities-breach.html",
-        "data": "data/incidents/2026-11-rakuten-securities-breach/"
       }
     },
     {
