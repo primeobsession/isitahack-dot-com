@@ -1,0 +1,6 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-09-22,,,stated,"ShinyHunters claims a breach of the FBI jobs site; the FBI says it is investigating the claims, per BleepingComputer",c008,BleepingComputer article date.
+t002,2026-10-06,,,stated,"An FBI cyber official says a contractor's missed security patch caused the jobs-site breach, per NBC News",c008,
+t003,2026-11-18T10:43:23-05:00,,,stated,White House release quotes the DNI and Secretary of State: the week's tech outages were not a cyberattack,c011,Release timestamp 15:43 UTC.
+t004,2026-11-19,,By Thursday,approximate,"FBI officials know of the NCIC intrusion by this day, per CNN's two sources",c002,CNN does not give an exact discovery date.
+t005,2026-11-20T21:12:00-05:00,,,stated,CNN reports the FBI is investigating an apparent NCIC intrusion; the FBI does not respond to a request for comment,c001,CNN publication time.
