@@ -45,6 +45,8 @@
 - [Steam outages, Nov 17 and Nov 20-21 2026](https://isitahack.com/incidents/2026-11-steam-outage.md): the report as Markdown (still monitored). Built from its data folder.
 - [Ticketmaster outage, Nov 20 2026 (HTML)](https://isitahack.com/incidents/2026-11-ticketmaster-outage.html): the same report as a web page.
 - [Steam outages, Nov 17 and Nov 20-21 2026 (HTML)](https://isitahack.com/incidents/2026-11-steam-outage.html): the same report as a web page.
+- [Algonquin Dam apparent cyberattack, Nov 16 2026](https://isitahack.com/incidents/2026-11-illinois-algonquin-dam-cyberattack.md): the report as Markdown (still monitored). Built from its data folder.
+- [Algonquin Dam apparent cyberattack, Nov 16 2026 (HTML)](https://isitahack.com/incidents/2026-11-illinois-algonquin-dam-cyberattack.html): the same report as a web page.
 
 ## Data (typed incident format: UTF-8, RFC 4180 CSV with a header row; see Format below)
 - [data/incidents/2026-11-microsoft-365-outage/](https://isitahack.com/data/incidents/2026-11-microsoft-365-outage/): the folder the Microsoft 365 report is built from: incident.json, claims.csv, sources.csv, timeline.csv, questions.csv, update_log.csv and notes/.
@@ -72,6 +74,7 @@
 - [data/incidents/2026-11-dropbox-outage/](https://isitahack.com/data/incidents/2026-11-dropbox-outage/): the folder the Dropbox report is built from.
 - [data/incidents/2026-11-ticketmaster-outage/](https://isitahack.com/data/incidents/2026-11-ticketmaster-outage/): the folder the Ticketmaster report is built from.
 - [data/incidents/2026-11-steam-outage/](https://isitahack.com/data/incidents/2026-11-steam-outage/): the folder the Steam report is built from.
+- [data/incidents/2026-11-illinois-algonquin-dam-cyberattack/](https://isitahack.com/data/incidents/2026-11-illinois-algonquin-dam-cyberattack/): the folder the Algonquin Dam report is built from.
 
 ## For search engines
 - [sitemap.xml](https://isitahack.com/sitemap.xml): every page, with each incident's last update.

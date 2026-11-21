@@ -1,0 +1,102 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-illinois-algonquin-dam-cyberattack",
+  "title": "Algonquin Dam apparent cyberattack, Nov 16, 2026",
+  "subject": {
+    "name": "Algonquin Dam",
+    "kind": "government"
+  },
+  "also_called": [
+    "the Algonquin Dam hack",
+    "Fox River dam cyberattack"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-16",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by the Illinois Department of Natural Resources, CISA, any news outlet, government agency, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Local",
+  "size_basis": "A small dam in McHenry County, Illinois. IDNR says staff blocked access and it kept operating. No effect on river levels or the public has been reported. Several state agencies and CISA are investigating.",
+  "who_is_affected": "No one is reported affected. Residents near the Fox River need do nothing. IDNR says the dam stayed secure and fully operational.",
+  "known": [
+    {
+      "text": "Illinois DNR announced on Friday, Nov 20 that it is investigating an apparent cyberattack at the dam, with state police, IEMA, Illinois DoIT and CISA helping.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "IDNR says it has no indication the incident is connected to other recent cyber events or nationwide outages.",
+      "claim_id": "c005"
+    },
+    {
+      "text": "The White House said on Nov 18 that it sees no indication of a cyberattack behind recent tech outages. It does not mention the dam.",
+      "claim_id": "c010"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Who did it, and how. No one has said."
+    },
+    {
+      "text": "Whether any dam system was actually reached. IDNR says access was blocked."
+    },
+    {
+      "text": "Whether it connects to the outages of recent weeks. IDNR says no indication."
+    },
+    {
+      "text": "Whether investigators will publish findings."
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 16",
+      "label": "Date it was spotted",
+      "detail": "Announced Friday, Nov 20",
+      "claim_id": "c001"
+    },
+    {
+      "value": "4",
+      "label": "Agencies helping IDNR",
+      "detail": "Three state, plus CISA",
+      "claim_id": "c004"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Algonquin Dam incident"
+    },
+    {
+      "type": "claims",
+      "title": "Effect on the dam",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
