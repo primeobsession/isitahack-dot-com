@@ -5,7 +5,6 @@ We looked for these and did not find them as of our latest check on Nov 21.
 - Any count of the people affected, from GoFundMe, DonorPerfect, a regulator or an outlet.
 - Any statement from DonorPerfect on whether customer or donor data was taken.
 - Any named attacker, ransomware or extortion claim, or published data reported by an outlet. We looked only at news coverage and company pages. We did not visit leak sites, dark-web pages or trackers.
-- A public Salesforce page for its statement on the GoFundMe Pro connected app; we found it only quoted in The NonProfit Times.
 - A public GoFundMe page for its message to customers about Salesforce credentials; we found it only quoted by Fortune and the Chronicle of Philanthropy.
 - Any official or independent link to the other November outages.
 - The Chronicle of Philanthropy article blocks automated access, so we read its text through a search result, not the page itself. The Nov 20 notice was read on GoFundMe's own status page.

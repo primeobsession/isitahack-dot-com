@@ -10,3 +10,5 @@ t008,2026-11-19T00:00:00-05:00,,Nov 19,approximate,GoFundMe begins notifying aff
 t009,2026-11-20T14:15:00-08:00,,"Nov 20, 2:15 PM PT",stated,GoFundMe says the GoFundMe Pro packages in Salesforce are restored; the connection stays disabled,c006,
 t010,2026-11-20T14:52:00-08:00,,"Nov 20, 2:52 PM PT",stated,GoFundMe posts its Security Notice on its status page,c001,
 t011,2026-11-21T09:31:00-05:00,,"Nov 21, 9:31 AM ET",stated,DonorPerfect says four partner integrations are rebuilt but not yet active; the API and mobile app are still unavailable,c008,
+t012,2026-11-11T12:27:00-05:00,,"Nov 11, 12:27 PM ET",stated,"Salesforce posts a security advisory saying it disabled the GoFundMe Pro connected app and packages after suspicious use of access tokens, and that it was not a Salesforce platform flaw",c007,Posting time from the Salesforce Trust status page.
+t013,2026-11-20T16:30:00-05:00,,"Nov 20, 4:30 PM ET",stated,Salesforce says it has re-enabled the GoFundMe Pro managed packages; the connected apps stay disabled while its investigation continues,c007,

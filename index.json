@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-gofundme-pro-donorperfect-breach",
+      "title": "GoFundMe Pro and DonorPerfect breaches, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-21T12:53:54-05:00",
+      "files": {
+        "page": "incidents/2026-11-gofundme-pro-donorperfect-breach.md",
+        "html": "incidents/2026-11-gofundme-pro-donorperfect-breach.html",
+        "data": "data/incidents/2026-11-gofundme-pro-donorperfect-breach/"
+      }
+    },
+    {
       "slug": "2026-11-rakuten-securities-breach",
       "title": "Rakuten Securities breach, Nov 2026",
       "status": "monitoring",
@@ -31,17 +42,6 @@
         "page": "incidents/2026-11-charleston-county-sc-cyberattack.md",
         "html": "incidents/2026-11-charleston-county-sc-cyberattack.html",
         "data": "data/incidents/2026-11-charleston-county-sc-cyberattack/"
-      }
-    },
-    {
-      "slug": "2026-11-gofundme-pro-donorperfect-breach",
-      "title": "GoFundMe Pro and DonorPerfect breaches, Nov 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-21T11:12:52-05:00",
-      "files": {
-        "page": "incidents/2026-11-gofundme-pro-donorperfect-breach.md",
-        "html": "incidents/2026-11-gofundme-pro-donorperfect-breach.html",
-        "data": "data/incidents/2026-11-gofundme-pro-donorperfect-breach/"
       }
     },
     {
