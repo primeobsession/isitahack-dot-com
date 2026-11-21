@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-microsoft-entra-connect-health-breach",
+      "title": "Microsoft Entra Connect Health data exposure, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-21T13:17:54-05:00",
+      "files": {
+        "page": "incidents/2026-11-microsoft-entra-connect-health-breach.md",
+        "html": "incidents/2026-11-microsoft-entra-connect-health-breach.html",
+        "data": "data/incidents/2026-11-microsoft-entra-connect-health-breach/"
+      }
+    },
+    {
       "slug": "2026-11-doordash-outage",
       "title": "DoorDash app and website outage, Nov 21, 2026",
       "status": "monitoring",

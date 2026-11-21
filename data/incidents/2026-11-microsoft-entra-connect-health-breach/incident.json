@@ -1,0 +1,123 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-microsoft-entra-connect-health-breach",
+  "title": "Microsoft Entra Connect Health data exposure, Nov 2026",
+  "subject": {
+    "name": "Microsoft Entra",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "Entra Connect Health breach",
+    "Microsoft Entra Connect Health flaw"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-20",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Microsoft, any news outlet, government agency, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "A worldwide cloud service, but Microsoft has not said how many organizations were affected, so this size is a provisional estimate. More than a dozen administrators reported getting the notice, per one outlet's description of a social media thread.",
+  "who_is_affected": "Organizations that received Microsoft's notice through Azure Service Health, per Microsoft. It says they need no software update, and advises watching for phishing aimed at exposed administrator emails.",
+  "known": [
+    {
+      "text": "Microsoft says unauthorized parties read tenant-level metadata through a flaw in the Entra Connect Health API.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "It says the flaw was introduced Jul 23 and discovered Nov 9.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "It says a server-side fix went live Nov 19 and no customer update is needed.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "It says it notified affected organizations on Nov 20.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "It says the exposed data included administrator and technical-contact emails and tenant configuration metadata.",
+      "claim_id": "c005"
+    },
+    {
+      "text": "It says no passwords, tokens or valid keys were exposed (Microsoft's statement only).",
+      "claim_id": "c007"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Who exploited the flaw."
+    },
+    {
+      "text": "How many organizations were affected."
+    },
+    {
+      "text": "When unauthorized access began."
+    },
+    {
+      "text": "Whether the exposed emails have been used in phishing."
+    },
+    {
+      "text": "Whether Microsoft's statement that no passwords, tokens or keys were exposed holds up."
+    }
+  ],
+  "figures": [
+    {
+      "value": "Jul 23",
+      "label": "Flaw introduced",
+      "detail": "Per Microsoft's notification",
+      "claim_id": "c002"
+    },
+    {
+      "value": "Nov 19",
+      "label": "Server-side fix",
+      "detail": "Per Microsoft",
+      "claim_id": "c003"
+    },
+    {
+      "value": "Nov 20",
+      "label": "Investigation done, notices sent",
+      "detail": "Per Microsoft",
+      "claim_id": "c004"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was Microsoft Entra Connect Health hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Entra Connect Health exposure"
+    },
+    {
+      "type": "claims",
+      "title": "What was exposed, and who is affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
