@@ -1,0 +1,106 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-opm-usa-staffing-access",
+  "title": "OPM USA Staffing unauthorized access, Nov 12-13, 2026",
+  "subject": {
+    "name": "OPM",
+    "kind": "government"
+  },
+  "also_called": [
+    "the OPM job-offer breach",
+    "the USA Staffing breach"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-12",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by OPM, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Local",
+  "size_basis": "The report says 403 tentative job offers across multiple federal agencies. USA Staffing is used by many agencies, but no source says more than those offers were reached.",
+  "who_is_affected": "People with tentative federal job offers made through USA Staffing in the affected period, per the report. Those affected were reportedly notified. If you are unsure, ask your hiring agency.",
+  "known": [
+    {
+      "text": "USA Staffing is OPM's hiring system for federal agencies.",
+      "claim_id": "c005"
+    },
+    {
+      "text": "OPM has published no statement about this as of Nov 20.",
+      "claim_id": "c006"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether the access happened as described. It rests on one outlet's account of an internal email."
+    },
+    {
+      "text": "How the outside party got in and who they were."
+    },
+    {
+      "text": "Exactly what data was exposed and to whom."
+    },
+    {
+      "text": "Whether it has any link to the FAA ground stop or the Microsoft outage. No source gives one."
+    },
+    {
+      "text": "Whether OPM will make a public statement."
+    }
+  ],
+  "figures": [
+    {
+      "value": "403",
+      "label": "Tentative job offers",
+      "detail": "Per the reported OPM email",
+      "claim_id": "c001"
+    },
+    {
+      "value": "Nov 12-13",
+      "label": "Reported access dates",
+      "detail": "Blocked by Nov 14, per the email",
+      "claim_id": "c001"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack"
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions and rumors",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How did OPM respond?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the reported access"
+    },
+    {
+      "type": "claims",
+      "title": "What OPM has published",
+      "group": "public-record"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

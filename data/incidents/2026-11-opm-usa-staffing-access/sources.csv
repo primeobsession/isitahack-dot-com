@@ -1,0 +1,5 @@
+source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
+s001,https://www.muellershewrote.com/p/breaking-opm-data-was-breached-on,"MSW Media: OPM data was breached on the same day as the FAA ground stop, per internal email",2,mswmedia,2026-11-20,2026-11-20T19:49:00-05:00,,ok,2026-11-20T19:49:00-05:00
+s002,https://www.opm.gov/news/news-releases/,OPM news releases page,1,opm,2026-11-02,2026-11-20T19:49:00-05:00,,ok,2026-11-20T19:49:00-05:00
+s003,https://www.opm.gov/cybersecurity/,OPM cybersecurity page,1,opm,,2026-11-20T19:49:00-05:00,,ok,2026-11-20T19:49:00-05:00
+s004,https://www.opm.gov/privacy/privacy-policy/usas-pia.pdf,OPM Privacy Impact Assessment: USA Staffing,1,opm,,2026-11-20T19:49:00-05:00,,ok,2026-11-20T19:49:00-05:00
