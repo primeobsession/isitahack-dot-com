@@ -7,3 +7,4 @@ t005,2026-11-20T13:41:00-05:00,,,stated,DTN updates its report with the under se
 t006,2026-11-20T17:12:00-05:00,,,stated,"NBC News reports that hackers accessed the farmer-payment system, citing sources",c002,Article time stamp.
 t007,2026-11-20,,Friday,stated,Reuters relays the NBC report; CISA refers questions to USDA,c013,Reuters dateline Nov 20.
 t008,2026-11-19,,Thursday,stated,GAO releases a report finding gaps in USDA and FDA work on food-sector cybersecurity; it does not mention this incident,c015,Report publication date.
+t009,2026-11-17,,Tuesday,stated,"An email to employees warns that applications coming back online are not yet fully restored or verified, per DTN",c016,Per the email DTN obtained.
