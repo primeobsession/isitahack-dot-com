@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<title>Was the RIKEN Fugaku supercomputer break-in a hack? | Is It a Hack?</title>
+<meta name="description" content="Was the RIKEN Fugaku supercomputer break-in a hack? Yes, by RIKEN&#39;s own account: an outside party got into Fugaku&#39;s operational network from Nov 10 to 13, installed malicious programs on some servers and took users&#39; files, including private keys. Who did it is not known.">
+<link rel="canonical" href="https://isitahack.com/incidents/2026-11-riken-fugaku-supercomputer-hack.html">
+<meta property="og:site_name" content="Is It a Hack?">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Was the RIKEN Fugaku supercomputer break-in a hack?">
+<meta property="og:description" content="Was the RIKEN Fugaku supercomputer break-in a hack? Yes, by RIKEN&#39;s own account: an outside party got into Fugaku&#39;s operational network from Nov 10 to 13, installed malicious programs on some servers and took users&#39; files, including private keys. Who did it is not known.">
+<meta property="og:url" content="https://isitahack.com/incidents/2026-11-riken-fugaku-supercomputer-hack.html">
+<meta property="og:image" content="https://isitahack.com/assets/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Is it a hack? Public-source fact-checks of security news, with every claim labelled and linked to its source.">
+<meta property="article:published_time" content="2026-11-21T00:12:56-05:00">
+<meta property="article:modified_time" content="2026-11-21T00:12:56-05:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@isitahack">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-riken-fugaku-supercomputer-hack.html#article","headline":"Was the RIKEN Fugaku supercomputer break-in a hack?","alternativeHeadline":"RIKEN Fugaku supercomputer break-in, Nov 2026","description":"Was the RIKEN Fugaku supercomputer break-in a hack? Yes, by RIKEN's own account: an outside party got into Fugaku's operational network from Nov 10 to 13, installed malicious programs on some servers and took users' files, including private keys. Who did it is not known.","abstract":"Yes, by RIKEN's own account: an outside party got into Fugaku's operational network from Nov 10 to 13, installed malicious programs on some servers and took users' files, including private keys. Who did it is not known.","url":"https://isitahack.com/incidents/2026-11-riken-fugaku-supercomputer-hack.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-riken-fugaku-supercomputer-hack.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T00:12:56-05:00","dateModified":"2026-11-21T00:12:56-05:00","image":["https://isitahack.com/assets/social-card.png"],"about":{"@type":"Event","name":"RIKEN Fugaku supercomputer break-in, Nov 2026","startDate":"2026-11-10"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"RIKEN Fugaku supercomputer break-in, Nov 2026","item":"https://isitahack.com/incidents/2026-11-riken-fugaku-supercomputer-hack.html"}]}</script>
+<link rel="alternate" type="text/markdown" href="2026-11-riken-fugaku-supercomputer-hack.md" title="This report as Markdown">
+<link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<!-- AI assistants and other programs: this report is also available as plain Markdown at 2026-11-riken-fugaku-supercomputer-hack.md (same folder). ../llms.txt maps the whole site. -->
+<a class="skip" href="#main">Skip to content</a>
+<div class="status-banner status-monitoring" role="status">
+<div class="wrap"><strong><span class="status-dot" aria-hidden="true"></span>Monitoring</strong><span>Last updated <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></span><span>Coverage is not final</span></div>
+</div>
+<header class="site-header wrap">
+<a class="brand" href="../"><svg class="mark" aria-hidden="true" width="32" height="32" viewBox="0 0 28 28" fill="none"><path d="M14 3 A11 11 0 0 1 14 25" stroke-width="2.6" stroke-linecap="round"/><path d="M14 25 A11 11 0 0 1 14 3" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="0.1 4.2"/><text x="14" y="19.4" text-anchor="middle" font-weight="800" font-size="15">?</text></svg><span class="wordmark"><span>isita</span><b>hack</b><span class="tld">.com</span></span></a>
+<nav class="site-nav" aria-label="Main">
+<a href="../#incidents">Incidents</a>
+<a href="../how-it-works.html">How it works</a>
+<a href="../about.html">About</a>
+<a href="https://github.com/primeobsession/isitahack-dot-com" rel="noopener">GitHub</a>
+</nav>
+<button class="theme-toggle" type="button" hidden aria-label="Switch to dark theme"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.1" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 1.900a7.100 7.100 0 0 1 0 14.200z" fill="currentColor"/></svg></button>
+</header>
+<main id="main" class="incident">
+<div class="wrap page-grid">
+<header class="page-head has-media">
+<div class="head-text">
+<p class="crumb"><a href="../#incidents">Incidents</a> / RIKEN Fugaku supercomputer break-in, Nov 2026 · Incident date <time datetime="2026-11-10">Nov 10, 2026</time> · First published <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026</time></p>
+<h1 id="the-question">Was the RIKEN Fugaku supercomputer break-in a hack?</h1>
+<p class="aka">Also reported as the Fugaku hack and the RIKEN supercomputer cyberattack.</p>
+</div>
+<figure class="head-media"><svg class="plate" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Fugaku: government">
+<rect class="plate-bg" width="640" height="360"/>
+<path class="plate-rule" d="M36 72H604"/>
+<g class="plate-art" transform="translate(352 22) scale(0.78)"><path class="tint" d="M30 128L170 48L310 128Z"/><path d="M30 128L170 48L310 128Z"/><path d="M42 150H298"/><path d="M72 164V268M121 164V268M170 164V268M219 164V268M268 164V268"/><path d="M30 284H310"/><path class="faint" d="M14 310H326"/></g>
+<text class="plate-kind" x="36" y="52">Government</text>
+<text class="plate-name" x="34" y="322" font-size="90">Fugaku</text>
+</svg></figure>
+<section class="answer-box" aria-labelledby="the-question">
+<div class="answer-head"><p class="kicker">Is it a hack? The short answer</p><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></div>
+<p class="answer">Yes, by RIKEN&#39;s own account: an outside party got into Fugaku&#39;s operational network from Nov 10 to 13, installed malicious programs on some servers and took users&#39; files, including private keys. Who did it is not known.</p>
+<p class="answer-refs"><span class="field">Rests on</span> <a href="#c001">An outside party got into Fugaku&#39;s operational network</a> · <a href="#c004">Malicious programs were installed on some servers</a> · <a href="#c005">430 stolen private keys for outside systems, 233 with no passphrase</a></p>
+<p class="answer-note">This is the current answer, not a final verdict. A final verdict is published only after the site's owner has reviewed the evidence.</p>
+</section>
+<p class="byline">By the isitahack.com desk. AI agents research public sources and label each claim; a person decides only the final verdict. <a href="../how-it-works.html">How it works</a></p>
+</header>
+<nav class="toc" aria-label="On this page">
+<p class="kicker">On this page</p>
+<ol>
+<li><a href="#glance"><span class="toc-n">01</span><span class="toc-name">At a glance</span></a></li>
+<li><a href="#was-it-a-hack-what-has-been-said"><span class="toc-n">02</span><span class="toc-name">Was it a hack? What has been said</span><span class="count">2</span></a></li>
+<li><a href="#how-did-they-get-in"><span class="toc-n">03</span><span class="toc-name">How did they get in?</span><span class="count">2</span></a></li>
+<li><a href="#questions-people-are-asking"><span class="toc-n">04</span><span class="toc-name">Questions people are asking</span><span class="count">6</span></a></li>
+<li><a href="#what-happened"><span class="toc-n">05</span><span class="toc-name">What happened?</span><span class="count">4</span></a></li>
+<li><a href="#timeline-of-the-fugaku-break-in"><span class="toc-n">06</span><span class="toc-name">Timeline of the Fugaku break-in</span><span class="count">7</span></a></li>
+<li><a href="#what-was-taken"><span class="toc-n">07</span><span class="toc-name">What was taken?</span><span class="count">5</span></a></li>
+<li><a href="#what-we-checked-and-did-not-find"><span class="toc-n">08</span><span class="toc-name">What we checked and did not find</span></a></li>
+<li><a href="#update-log"><span class="toc-n">09</span><span class="toc-name">Update log</span><span class="count">1</span></a></li>
+<li><a href="#sources"><span class="toc-n">10</span><span class="toc-name">Sources</span><span class="count">4</span></a></li>
+</ol>
+</nav>
+<div class="page-main">
+<aside class="note">
+<p><strong>Not verified: initial investigation only.</strong> Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them.</p>
+<p>Made for entertainment using AI. Not endorsed by RIKEN, any government agency, news outlet, company, or anyone else named.</p>
+</aside>
+<section class="block" id="glance">
+<div class="block-head"><span class="sec-n">01</span><h2>At a glance</h2></div>
+<ul class="tiles">
+<li class="tile"><a href="#c005"><span class="tile-value">430</span><span class="tile-label">Private keys taken</span><span class="tile-detail">233 with no passphrase</span></a></li>
+<li class="tile"><a href="#c006"><span class="tile-value">4,222</span><span class="tile-label">Fugaku users, up to</span><span class="tile-detail">Plus 375 RIKYU users</span></a></li>
+<li class="tile"><a href="#c011"><span class="tile-value">Nov 14</span><span class="tile-label">Fugaku taken offline</span><span class="tile-detail">4:30 AM Japan time</span></a></li>
+</ul>
+<div class="known-grid">
+<div class="known"><h3>Known so far</h3><ul>
+<li>An outside party got into Fugaku&#39;s operational network between Nov 10 and 13, through the public status dashboard. <a class="ref" href="#c001">evidence</a></li>
+<li>Malicious programs were installed on some servers. <a class="ref" href="#c004">evidence</a></li>
+<li>430 private keys for outside systems were taken, 233 of them without a passphrase. <a class="ref" href="#c005">evidence</a></li>
+<li>Fugaku was suspended on Nov 14 and has no restart date. <a class="ref" href="#c011">evidence</a></li>
+</ul></div>
+<div class="not-known"><h3>Not known yet</h3><ul>
+<li>Who was behind it.</li>
+<li>Whether the stolen keys were used to break into other organizations.</li>
+<li>The exact method used to get past the dashboard.</li>
+<li>When Fugaku will return to service.</li>
+</ul></div>
+</div>
+</section>
+
+<section class="block" id="was-it-a-hack-what-has-been-said">
+<details class="fold" open>
+<summary><span class="sec-n">02</span><h2>Was it a hack? What has been said</h2><span class="count">2</span></summary>
+<div class="fold-body">
+<div class="rows">
+<details class="row" id="c001">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">An outside party got into Fugaku&#39;s operational network</span><span class="row-sub">RIKEN says an external third party gained unauthorized access to the internal operational network of the Fugaku supercomputer between Nov 10 and Nov 13, 2026.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> RIKEN&#39;s own notices say so; the Japan Times reports it.</p>
+<p>RIKEN says it confirmed the access at 4:33 PM on Nov 13 (Japan time). Its first notice also gives Nov 12 as the day of the access; the window is Nov 10 to 13.</p>
+<ul class="source-lines">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261120_1/" rel="noopener">RIKEN: Status of the investigation into unauthorized access to Fugaku and RIKYU (Second notice), Nov 20</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261116_2/" rel="noopener">RIKEN: Notice of a possible personal information leak affecting Fugaku and RIKYU users (First notice), Nov 16</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+<li><a href="https://www.japantimes.co.jp/news/2026/11/17/japan/fugaku-unauthorized-access/" rel="noopener">The Japan Times: Japan&#39;s most powerful supercomputer hit by unauthorized access</a> <span class="meta">News outlet · Nov 17, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="c013">
+<summary><span class="row-lead"><span class="pill pill-not-established" data-label="Not established">Not established</span></span><span class="row-main"><span class="row-title">Who was behind it</span><span class="row-sub">No person or group has been named, and we found no claim of responsibility.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> None of the sources names an attacker.</p>
+<p>RIKEN says &#39;intruder(s)&#39; and &#39;an external third party&#39;.</p>
+<ul class="source-lines">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261120_1/" rel="noopener">RIKEN: Status of the investigation into unauthorized access to Fugaku and RIKYU (Second notice), Nov 20</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261116_2/" rel="noopener">RIKEN: Notice of a possible personal information leak affecting Fugaku and RIKYU users (First notice), Nov 16</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+<li><a href="https://www.japantimes.co.jp/news/2026/11/17/japan/fugaku-unauthorized-access/" rel="noopener">The Japan Times: Japan&#39;s most powerful supercomputer hit by unauthorized access</a> <span class="meta">News outlet · Nov 17, 2026</span></li>
+<li><a href="https://www.techradar.com/pro/japanese-supercomputer-hit-by-suspected-cyberattack-fugaku-facility-was-apparently-lacking-in-some-essential-security-protection" rel="noopener">TechRadar: Japanese supercomputer hit by suspected cyberattack</a> <span class="meta">News outlet · Nov 21, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="how-did-they-get-in">
+<details class="fold" open>
+<summary><span class="sec-n">03</span><h2>How did they get in?</h2><span class="count">2</span></summary>
+<div class="fold-body">
+<div class="rows">
+<details class="row" id="c002">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">The way in was the public operating-status dashboard</span><span class="row-sub">RIKEN says the intruder used a publicly reachable web page that displays Fugaku&#39;s operating status (the dashboard) to get into the internal network.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> RIKEN&#39;s first notice names the dashboard as the entry point.</p>
+<p>RIKEN says the exact method used is still being investigated. The page has been taken down, according to the Japan Times.</p>
+<ul class="source-lines">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261116_2/" rel="noopener">RIKEN: Notice of a possible personal information leak affecting Fugaku and RIKYU users (First notice), Nov 16</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+<li><a href="https://www.japantimes.co.jp/news/2026/11/17/japan/fugaku-unauthorized-access/" rel="noopener">The Japan Times: Japan&#39;s most powerful supercomputer hit by unauthorized access</a> <span class="meta">News outlet · Nov 17, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="c003">
+<summary><span class="row-lead"><span class="pill pill-not-established" data-label="Not established">Not established</span></span><span class="row-main"><span class="row-title">A missing security protection let them in</span><span class="row-sub">TechRadar&#39;s headline says the facility &#39;was apparently lacking in some essential security protection&#39;. The article text does not say what.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> Only a headline suggests it; neither RIKEN nor the article&#39;s text states a specific missing control.</p>
+<p>RIKEN has not said so. RIKEN&#39;s second notice plans to separate public services from the administrative network.</p>
+<ul class="source-lines">
+<li><a href="https://www.techradar.com/pro/japanese-supercomputer-hit-by-suspected-cyberattack-fugaku-facility-was-apparently-lacking-in-some-essential-security-protection" rel="noopener">TechRadar: Japanese supercomputer hit by suspected cyberattack</a> <span class="meta">News outlet · Nov 21, 2026</span></li>
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261120_1/" rel="noopener">RIKEN: Status of the investigation into unauthorized access to Fugaku and RIKYU (Second notice), Nov 20</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="questions-people-are-asking">
+<details class="fold" open>
+<summary><span class="sec-n">04</span><h2>Questions people are asking</h2><span class="count">6</span></summary>
+<div class="fold-body">
+<div class="rows">
+<details class="row" id="q001">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">Was the RIKEN Fugaku supercomputer break-in a hack?</span><span class="row-sub">Yes, by RIKEN&#39;s own account: an outside party got into Fugaku&#39;s operational network from Nov 10 to 13, installed malicious programs on some servers and took users&#39; files, including private keys. Who did it is not known.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Rests on</span> <a href="#c001">An outside party got into Fugaku&#39;s operational network</a> · <a href="#c004">Malicious programs were installed on some servers</a> · <a href="#c005">430 stolen private keys for outside systems, 233 with no passphrase</a></p>
+<p class="meta">Question recorded <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time> · answered <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="q002">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">How did the attacker get into Fugaku?</span><span class="row-sub">RIKEN says through the publicly reachable operating-status dashboard. The exact method is still under investigation.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Rests on</span> <a href="#c002">The way in was the public operating-status dashboard</a></p>
+<p class="meta">Question recorded <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time> · answered <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="q003">
+<summary><span class="row-lead"><span class="pill pill-not-established" data-label="Not established">Not established</span></span><span class="row-main"><span class="row-title">Were the stolen keys used to break into other computers?</span><span class="row-sub">RIKEN says the intruder tried to connect to other systems with some of the stolen credentials. It has found no other misuse so far, and it has not confirmed any break-in elsewhere.</span></span></summary>
+<div class="row-body">
+<p><span class="field">What would settle it</span> RIKEN or another operator reporting a confirmed break-in using a stolen key, or RIKEN stating that none happened.</p>
+<p><span class="field">Rests on</span> <a href="#c009">The intruder tried the stolen keys on other systems</a> · <a href="#c010">Break-ins at other organizations using the stolen keys</a></p>
+<p class="meta">Question recorded <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time> · answered <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="q004">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">Was my Fugaku or RIKYU account information taken?</span><span class="row-sub">RIKEN says names, emails, user IDs and registration details were or may have been taken for up to 4,222 Fugaku and 375 RIKYU users, and it is contacting them. If you kept private keys on Fugaku, replace them everywhere.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Rests on</span> <a href="#c006">Up to 4,222 Fugaku users and 375 RIKYU users</a> · <a href="#c007">Names, emails, user IDs, and registration details</a> · <a href="#c005">430 stolen private keys for outside systems, 233 with no passphrase</a></p>
+<p class="meta">Question recorded <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time> · answered <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="q005">
+<summary><span class="row-lead"><span class="chip">Open</span></span><span class="row-main"><span class="row-title">Who hacked Fugaku?</span><span class="row-sub">Not answered yet.</span></span></summary>
+<div class="row-body">
+<p><span class="field">What would settle it</span> RIKEN, police or a credible researcher naming the attacker, or a verified claim of responsibility.</p>
+<p class="meta">Question recorded <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="q006">
+<summary><span class="row-lead"><span class="chip">Open</span></span><span class="row-main"><span class="row-title">When will Fugaku be back online?</span><span class="row-sub">Not answered yet.</span></span></summary>
+<div class="row-body">
+<p><span class="field">What would settle it</span> RIKEN announcing a restart date after its security measures and server rebuild.</p>
+<p class="meta">Question recorded <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="what-happened">
+<details class="fold" open>
+<summary><span class="sec-n">05</span><h2>What happened?</h2><span class="count">4</span></summary>
+<div class="fold-body">
+<div class="rows">
+<details class="row" id="c004">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">Malicious programs were installed on some servers</span><span class="row-sub">RIKEN says multiple internal servers were tampered with, and that some of the compromised servers had malicious programs installed.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> RIKEN&#39;s first notice says so; the Japan Times repeats it.</p>
+<p>RIKEN says it is still investigating the details.</p>
+<ul class="source-lines">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261116_2/" rel="noopener">RIKEN: Notice of a possible personal information leak affecting Fugaku and RIKYU users (First notice), Nov 16</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+<li><a href="https://www.japantimes.co.jp/news/2026/11/17/japan/fugaku-unauthorized-access/" rel="noopener">The Japan Times: Japan&#39;s most powerful supercomputer hit by unauthorized access</a> <span class="meta">News outlet · Nov 17, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="c009">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">The intruder tried the stolen keys on other systems</span><span class="row-sub">RIKEN says it confirmed that the intruder tried to connect to other systems using some of the credentials, and its second notice says it has evidence of external connections for some credentials.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> RIKEN says so in both notices.</p>
+<p>RIKEN says it has found no other misuse.</p>
+<ul class="source-lines">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261120_1/" rel="noopener">RIKEN: Status of the investigation into unauthorized access to Fugaku and RIKYU (Second notice), Nov 20</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261116_2/" rel="noopener">RIKEN: Notice of a possible personal information leak affecting Fugaku and RIKYU users (First notice), Nov 16</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="c011">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">Fugaku has been offline since Nov 14, with no restart date</span><span class="row-sub">RIKEN says it suspended Fugaku at 4:30 AM on Nov 14 (Japan time) and blocked outside access. Restart will follow measures such as separating public services from the administrative network and rebuilding servers.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> RIKEN gives the time and the conditions for restart.</p>
+<p>TechRadar says Fugaku went offline after someone tried to use compromised credentials on Nov 13. RIKEN&#39;s notices give Nov 14 as the shutdown time.</p>
+<ul class="source-lines">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261120_1/" rel="noopener">RIKEN: Status of the investigation into unauthorized access to Fugaku and RIKYU (Second notice), Nov 20</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261116_2/" rel="noopener">RIKEN: Notice of a possible personal information leak affecting Fugaku and RIKYU users (First notice), Nov 16</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+<li><a href="https://www.japantimes.co.jp/news/2026/11/17/japan/fugaku-unauthorized-access/" rel="noopener">The Japan Times: Japan&#39;s most powerful supercomputer hit by unauthorized access</a> <span class="meta">News outlet · Nov 17, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="c012">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">Police and government agencies have been told</span><span class="row-sub">RIKEN says it explained the incident to the Saitama Prefectural Police on Nov 16 and the Hyogo Prefectural Police on Nov 16 and 19, and is sending further reports to government agencies.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> RIKEN&#39;s second notice gives the dates.</p>
+<ul class="source-lines">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261120_1/" rel="noopener">RIKEN: Status of the investigation into unauthorized access to Fugaku and RIKYU (Second notice), Nov 20</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.japantimes.co.jp/news/2026/11/17/japan/fugaku-unauthorized-access/" rel="noopener">The Japan Times: Japan&#39;s most powerful supercomputer hit by unauthorized access</a> <span class="meta">News outlet · Nov 17, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="timeline-of-the-fugaku-break-in">
+<details class="fold">
+<summary><span class="sec-n">06</span><h2>Timeline of the Fugaku break-in</h2><span class="count">7</span></summary>
+<div class="fold-body">
+<p class="meta">Times are 2026. Each row opens to show its evidence and source.</p>
+<div class="rows rows-timeline">
+<details class="row" id="t001">
+<summary><span class="row-lead"><span class="row-day">Nov 10</span> <time datetime="2026-11-10">Nov 10 to Nov 13</time></span><span class="row-main"><span class="row-title">An outside party is in Fugaku&#39;s operational network, entering through the public status dashboard</span></span><span class="row-trail"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span></summary>
+<div class="row-body">
+<p>RIKEN says the intruder used a publicly reachable web page that displays Fugaku&#39;s operating status (the dashboard) to get into the internal network.</p>
+<p class="meta">Window per RIKEN.</p>
+<p><span class="field">Why it supports</span> RIKEN&#39;s first notice names the dashboard as the entry point.</p>
+<p>RIKEN says the exact method used is still being investigated. The page has been taken down, according to the Japan Times.</p>
+<ul class="source-lines">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261116_2/" rel="noopener">RIKEN: Notice of a possible personal information leak affecting Fugaku and RIKYU users (First notice), Nov 16</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+<li><a href="https://www.japantimes.co.jp/news/2026/11/17/japan/fugaku-unauthorized-access/" rel="noopener">The Japan Times: Japan&#39;s most powerful supercomputer hit by unauthorized access</a> <span class="meta">News outlet · Nov 17, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="t002">
+<summary><span class="row-lead"><span class="row-day">Nov 12</span> <time datetime="2026-11-12">Nov 12</time></span><span class="row-main"><span class="row-title">Suspicious network traffic is detected; RIKEN starts an investigation with its maintenance provider</span></span><span class="row-trail"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span></summary>
+<div class="row-body">
+<p>RIKEN says an external third party gained unauthorized access to the internal operational network of the Fugaku supercomputer between Nov 10 and Nov 13, 2026.</p>
+<p class="meta">Per RIKEN&#39;s first notice.</p>
+<p><span class="field">Why it supports</span> RIKEN&#39;s own notices say so; the Japan Times reports it.</p>
+<p>RIKEN says it confirmed the access at 4:33 PM on Nov 13 (Japan time). Its first notice also gives Nov 12 as the day of the access; the window is Nov 10 to 13.</p>
+<ul class="source-lines">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261120_1/" rel="noopener">RIKEN: Status of the investigation into unauthorized access to Fugaku and RIKYU (Second notice), Nov 20</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261116_2/" rel="noopener">RIKEN: Notice of a possible personal information leak affecting Fugaku and RIKYU users (First notice), Nov 16</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+<li><a href="https://www.japantimes.co.jp/news/2026/11/17/japan/fugaku-unauthorized-access/" rel="noopener">The Japan Times: Japan&#39;s most powerful supercomputer hit by unauthorized access</a> <span class="meta">News outlet · Nov 17, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="t003">
+<summary><span class="row-lead"><span class="row-day">Nov 13</span> <time datetime="2026-11-13T16:33:00+09:00">4:33 PM</time></span><span class="row-main"><span class="row-title">RIKEN confirms the unauthorized access</span></span><span class="row-trail"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span></summary>
+<div class="row-body">
+<p>RIKEN says an external third party gained unauthorized access to the internal operational network of the Fugaku supercomputer between Nov 10 and Nov 13, 2026.</p>
+<p class="meta">4:33 PM Japan time per RIKEN.</p>
+<p><span class="field">Why it supports</span> RIKEN&#39;s own notices say so; the Japan Times reports it.</p>
+<p>RIKEN says it confirmed the access at 4:33 PM on Nov 13 (Japan time). Its first notice also gives Nov 12 as the day of the access; the window is Nov 10 to 13.</p>
+<ul class="source-lines">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261120_1/" rel="noopener">RIKEN: Status of the investigation into unauthorized access to Fugaku and RIKYU (Second notice), Nov 20</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261116_2/" rel="noopener">RIKEN: Notice of a possible personal information leak affecting Fugaku and RIKYU users (First notice), Nov 16</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+<li><a href="https://www.japantimes.co.jp/news/2026/11/17/japan/fugaku-unauthorized-access/" rel="noopener">The Japan Times: Japan&#39;s most powerful supercomputer hit by unauthorized access</a> <span class="meta">News outlet · Nov 17, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="t004">
+<summary><span class="row-lead"><span class="row-day">Nov 14</span> <time datetime="2026-11-14T04:30:00+09:00">4:30 AM</time></span><span class="row-main"><span class="row-title">RIKEN suspends Fugaku and blocks outside access</span></span><span class="row-trail"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span></summary>
+<div class="row-body">
+<p>RIKEN says it suspended Fugaku at 4:30 AM on Nov 14 (Japan time) and blocked outside access. Restart will follow measures such as separating public services from the administrative network and rebuilding servers.</p>
+<p class="meta">4:30 AM Japan time per RIKEN.</p>
+<p><span class="field">Why it supports</span> RIKEN gives the time and the conditions for restart.</p>
+<p>TechRadar says Fugaku went offline after someone tried to use compromised credentials on Nov 13. RIKEN&#39;s notices give Nov 14 as the shutdown time.</p>
+<ul class="source-lines">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261120_1/" rel="noopener">RIKEN: Status of the investigation into unauthorized access to Fugaku and RIKYU (Second notice), Nov 20</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261116_2/" rel="noopener">RIKEN: Notice of a possible personal information leak affecting Fugaku and RIKYU users (First notice), Nov 16</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+<li><a href="https://www.japantimes.co.jp/news/2026/11/17/japan/fugaku-unauthorized-access/" rel="noopener">The Japan Times: Japan&#39;s most powerful supercomputer hit by unauthorized access</a> <span class="meta">News outlet · Nov 17, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="t005">
+<summary><span class="row-lead"><span class="row-day">Nov 15</span> <time datetime="2026-11-15T16:18:00+09:00">4:18 PM</time></span><span class="row-main"><span class="row-title">RIKEN emails affected users</span></span><span class="row-trail"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span></summary>
+<div class="row-body">
+<p>RIKEN says up to 4,222 Fugaku users and 375 RIKYU users may be affected. Its second notice says log analysis found traces that an intruder reached the targeted information for the 4,222 Fugaku users.</p>
+<p class="meta">4:18 PM Japan time per RIKEN.</p>
+<p><span class="field">Why it supports</span> Both RIKEN notices give the counts; the Japan Times repeats them.</p>
+<p>RIKEN&#39;s first notice gives 4,222 in its overview but 4,224 in one list. The 375 RIKYU figure appears only in the first notice.</p>
+<ul class="source-lines">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261120_1/" rel="noopener">RIKEN: Status of the investigation into unauthorized access to Fugaku and RIKYU (Second notice), Nov 20</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261116_2/" rel="noopener">RIKEN: Notice of a possible personal information leak affecting Fugaku and RIKYU users (First notice), Nov 16</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+<li><a href="https://www.japantimes.co.jp/news/2026/11/17/japan/fugaku-unauthorized-access/" rel="noopener">The Japan Times: Japan&#39;s most powerful supercomputer hit by unauthorized access</a> <span class="meta">News outlet · Nov 17, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="t006">
+<summary><span class="row-lead"><span class="row-day">Nov 16</span> </span><span class="row-main"><span class="row-title">RIKEN publishes its first notice and explains the incident to the Saitama and Hyogo police</span></span><span class="row-trail"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span></summary>
+<div class="row-body">
+<p>RIKEN says it explained the incident to the Saitama Prefectural Police on Nov 16 and the Hyogo Prefectural Police on Nov 16 and 19, and is sending further reports to government agencies.</p>
+<p class="meta">The notice is dated Nov 16 and was posted Nov 17.</p>
+<p><span class="field">Why it supports</span> RIKEN&#39;s second notice gives the dates.</p>
+<ul class="source-lines">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261120_1/" rel="noopener">RIKEN: Status of the investigation into unauthorized access to Fugaku and RIKYU (Second notice), Nov 20</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.japantimes.co.jp/news/2026/11/17/japan/fugaku-unauthorized-access/" rel="noopener">The Japan Times: Japan&#39;s most powerful supercomputer hit by unauthorized access</a> <span class="meta">News outlet · Nov 17, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="t007">
+<summary><span class="row-lead"><span class="row-day">Nov 20</span> </span><span class="row-main"><span class="row-title">RIKEN publishes its second notice: 430 stolen keys, 4,222 Fugaku users</span></span><span class="row-trail"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span></summary>
+<div class="row-body">
+<p>RIKEN says it has confirmed that authentication credentials such as SSH private keys, used to connect to systems outside RIKEN, were collected and taken from some users&#39; home directories. It counts 430: 233 without a passphrase, 197 with.</p>
+<p class="meta">Per RIKEN.</p>
+<p><span class="field">Why it supports</span> RIKEN&#39;s second notice gives the count and the breakdown.</p>
+<p>A private key without a passphrase can be used by whoever holds it. RIKEN is asking users to revoke and replace their keys.</p>
+<ul class="source-lines">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261120_1/" rel="noopener">RIKEN: Status of the investigation into unauthorized access to Fugaku and RIKYU (Second notice), Nov 20</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="what-was-taken">
+<details class="fold">
+<summary><span class="sec-n">07</span><h2>What was taken?</h2><span class="count">5</span></summary>
+<div class="fold-body">
+<div class="rows">
+<details class="row" id="c005">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">430 stolen private keys for outside systems, 233 with no passphrase</span><span class="row-sub">RIKEN says it has confirmed that authentication credentials such as SSH private keys, used to connect to systems outside RIKEN, were collected and taken from some users&#39; home directories. It counts 430: 233 without a passphrase, 197 with.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> RIKEN&#39;s second notice gives the count and the breakdown.</p>
+<p>A private key without a passphrase can be used by whoever holds it. RIKEN is asking users to revoke and replace their keys.</p>
+<ul class="source-lines">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261120_1/" rel="noopener">RIKEN: Status of the investigation into unauthorized access to Fugaku and RIKYU (Second notice), Nov 20</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="c006">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">Up to 4,222 Fugaku users and 375 RIKYU users</span><span class="row-sub">RIKEN says up to 4,222 Fugaku users and 375 RIKYU users may be affected. Its second notice says log analysis found traces that an intruder reached the targeted information for the 4,222 Fugaku users.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> Both RIKEN notices give the counts; the Japan Times repeats them.</p>
+<p>RIKEN&#39;s first notice gives 4,222 in its overview but 4,224 in one list. The 375 RIKYU figure appears only in the first notice.</p>
+<ul class="source-lines">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261120_1/" rel="noopener">RIKEN: Status of the investigation into unauthorized access to Fugaku and RIKYU (Second notice), Nov 20</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261116_2/" rel="noopener">RIKEN: Notice of a possible personal information leak affecting Fugaku and RIKYU users (First notice), Nov 16</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+<li><a href="https://www.japantimes.co.jp/news/2026/11/17/japan/fugaku-unauthorized-access/" rel="noopener">The Japan Times: Japan&#39;s most powerful supercomputer hit by unauthorized access</a> <span class="meta">News outlet · Nov 17, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="c007">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">Names, emails, user IDs, and registration details</span><span class="row-sub">RIKEN says user names, emails and user IDs were or may have been taken. Its second notice adds registration details such as address, affiliation and phone number, and which type of document was used for identity checks.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> RIKEN lists the data in both notices.</p>
+<p>RIKEN says the identity documents themselves were not found to be leaked.</p>
+<ul class="source-lines">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261120_1/" rel="noopener">RIKEN: Status of the investigation into unauthorized access to Fugaku and RIKYU (Second notice), Nov 20</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261116_2/" rel="noopener">RIKEN: Notice of a possible personal information leak affecting Fugaku and RIKYU users (First notice), Nov 16</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="c008">
+<summary><span class="row-lead"><span class="pill pill-reported" data-label="Reported">Reported</span></span><span class="row-main"><span class="row-title">Research data</span><span class="row-sub">RIKEN&#39;s first notice says there was, at that time, no evidence that research data or files were taken.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> RIKEN said this on Nov 16; TechRadar repeats that no evidence was found. We have not seen a later update.</p>
+<p>Whether files holding other people&#39;s personal information were taken was still under investigation.</p>
+<ul class="source-lines">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261116_2/" rel="noopener">RIKEN: Notice of a possible personal information leak affecting Fugaku and RIKYU users (First notice), Nov 16</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+<li><a href="https://www.techradar.com/pro/japanese-supercomputer-hit-by-suspected-cyberattack-fugaku-facility-was-apparently-lacking-in-some-essential-security-protection" rel="noopener">TechRadar: Japanese supercomputer hit by suspected cyberattack</a> <span class="meta">News outlet · Nov 21, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="c010">
+<summary><span class="row-lead"><span class="pill pill-not-established" data-label="Not established">Not established</span></span><span class="row-main"><span class="row-title">Break-ins at other organizations using the stolen keys</span><span class="row-sub">RIKEN has found no other misuse of the credentials. TechRadar says RIKEN is contacting operators of other supercomputers, and that RIKEN has not confirmed intrusions into those systems.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> RIKEN says it found no other instances of misuse so far.</p>
+<ul class="source-lines">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261120_1/" rel="noopener">RIKEN: Status of the investigation into unauthorized access to Fugaku and RIKYU (Second notice), Nov 20</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.techradar.com/pro/japanese-supercomputer-hit-by-suspected-cyberattack-fugaku-facility-was-apparently-lacking-in-some-essential-security-protection" rel="noopener">TechRadar: Japanese supercomputer hit by suspected cyberattack</a> <span class="meta">News outlet · Nov 21, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="what-we-checked-and-did-not-find">
+<details class="fold">
+<summary><span class="sec-n">08</span><h2>What we checked and did not find</h2></summary>
+<div class="fold-body">
+<div class="prose">
+<p>We looked for these and did not find them as of this page&#39;s first draft.</p>
+<ul>
+<li>Who was behind it, or any claim of responsibility.</li>
+<li>The exact method used to get past the dashboard.</li>
+<li>A confirmed break-in at another organization using a stolen key.</li>
+<li>A date for Fugaku&#39;s return to service.</li>
+<li>Whether research data or other people&#39;s personal information was taken. RIKEN said on Nov 16 it had no evidence; we have not seen a later update.</li>
+<li>RIKEN&#39;s statement of the root cause. The second notice says an investigative committee with outside experts will be set up.</li>
+</ul>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="update-log">
+<details class="fold">
+<summary><span class="sec-n">09</span><h2>Update log</h2><span class="count">1</span></summary>
+<div class="fold-body">
+<p class="meta">Every check and change, newest first.</p>
+<ol class="log">
+<li class="log-row" id="u001">
+<span class="log-when"><time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></span>
+<span class="log-what"><strong>RIKEN says an outsider entered Fugaku through its public status dashboard and took 430 private keys; the machine is offline.</strong> First draft. 4 sources (2 Tier 1), 13 claims (9 Confirmed, 1 Reported, 3 Not established), 6 questions. RIKEN&#39;s two notices confirm the break-in, the stolen keys and the user counts. The attacker and any use of the keys elsewhere are not established. Shutdown time follows RIKEN (Nov 14, 4:30 AM Japan time). Privacy check done: no individuals named, no contact details. <span class="meta">Added · Research agent</span></span>
+</li>
+</ol>
+</div>
+</details>
+</section>
+
+<section class="block" id="sources">
+<details class="fold">
+<summary><span class="sec-n">10</span><h2>Sources</h2><span class="count">4</span></summary>
+<div class="fold-body">
+<ol class="source-lines numbered">
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261120_1/" rel="noopener">RIKEN: Status of the investigation into unauthorized access to Fugaku and RIKYU (Second notice), Nov 20</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.riken.jp/en/news_pubs/news/2026/20261116_2/" rel="noopener">RIKEN: Notice of a possible personal information leak affecting Fugaku and RIKYU users (First notice), Nov 16</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+<li><a href="https://www.japantimes.co.jp/news/2026/11/17/japan/fugaku-unauthorized-access/" rel="noopener">The Japan Times: Japan&#39;s most powerful supercomputer hit by unauthorized access</a> <span class="meta">News outlet · Nov 17, 2026</span></li>
+<li><a href="https://www.techradar.com/pro/japanese-supercomputer-hit-by-suspected-cyberattack-fugaku-facility-was-apparently-lacking-in-some-essential-security-protection" rel="noopener">TechRadar: Japanese supercomputer hit by suspected cyberattack</a> <span class="meta">News outlet · Nov 21, 2026</span></li>
+</ol>
+</div>
+</details>
+</section>
+<footer class="page-foot">
+<p><a href="2026-11-riken-fugaku-supercomputer-hack.md">Markdown version</a><a href="https://github.com/primeobsession/isitahack-dot-com/commits/main/data/incidents/2026-11-riken-fugaku-supercomputer-hack" rel="noopener">Edit history</a><a href="../about.html#contact">Report an error</a></p>
+<p class="meta">Reading this as an AI assistant or a program? The same report is available as plain Markdown at <a href="2026-11-riken-fugaku-supercomputer-hack.md">2026-11-riken-fugaku-supercomputer-hack.md</a>, and <a href="../llms.txt">llms.txt</a> maps the whole site.</p>
+</footer>
+</div>
+<aside class="side" aria-label="Summary and other incidents">
+<div class="side-facts">
+<section class="side-block latest">
+<p class="kicker accent">The latest · <time datetime="2026-11-21T00:12:56-05:00">Nov 21, 2026, 12:12 AM ET</time></p>
+<p class="latest-headline">RIKEN says an outsider entered Fugaku through its public status dashboard and took 430 private keys; the machine is offline.</p>
+<p class="latest-summary">First draft. 4 sources (2 Tier 1), 13 claims (9 Confirmed, 1 Reported, 3 Not established), 6 questions. RIKEN&#39;s two notices confirm the break-in, the stolen keys and the user counts. The attacker and any use of the keys elsewhere are not established. Shutdown time follows RIKEN (Nov 14, 4:30 AM Japan time). Privacy check done: no individuals named, no contact details.</p>
+<p><a href="#update-log">All 1 updates</a></p>
+</section>
+<section class="side-block">
+<dl class="reach">
+<div><dt>Size</dt><dd><strong>Regional.</strong> One national research supercomputer in Japan, offline since Nov 14. Up to 4,222 Fugaku users and 375 RIKYU users are affected, and stolen keys could reach other research computers.</dd></div>
+<div><dt>Who is affected</dt><dd>Registered users of Fugaku and RIKYU, who are researchers, and researchers waiting for time on the machine. Their contact details and any private keys stored on Fugaku were involved.</dd></div>
+</dl>
+</section>
+<section class="side-block">
+<div class="evidence">
+<p class="kicker">Was it a hack? What has been said · 2</p>
+<div class="evidence-bar" role="img" aria-label="Confirmed 1, Not established 1"><span class="seg seg-confirmed" style="flex-grow:1"></span><span class="seg seg-not-established" style="flex-grow:1"></span></div>
+<ul class="evidence-key"><li><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span class="count">1</span></li><li><span class="pill pill-not-established" data-label="Not established">Not established</span><span class="count">1</span></li></ul>
+</div>
+</section>
+</div>
+<div class="side-more">
+<section class="side-block">
+<p class="kicker">Other incidents</p>
+<ul class="others">
+<li><a href="2026-11-staples-canada-print-breach.html">Staples Canada print website breach, Nov 2026</a><span class="meta">Monitoring · updated <time datetime="2026-11-21T00:11:29-05:00">Nov 21, 2026</time></span></li>
+<li><a href="2026-11-fbi-ncic-intrusion.html">FBI crime database (NCIC) intrusion, reported Nov 20, 2026</a><span class="meta">Monitoring · updated <time datetime="2026-11-21T00:10:00-05:00">Nov 21, 2026</time></span></li>
+<li><a href="2026-11-premise-health-insider-theft.html">Premise Health patient data taken by an employee, 2026</a><span class="meta">Monitoring · updated <time datetime="2026-11-20T23:49:00-05:00">Nov 20, 2026</time></span></li>
+<li><a href="2026-11-roll20-breach.html">Roll20 account data breach, Nov 2026</a><span class="meta">Monitoring · updated <time datetime="2026-11-20T23:46:00-05:00">Nov 20, 2026</time></span></li>
+<li><a href="2026-11-vermont-valcour-dispatch-outage.html">Vermont Valcour police dispatch system outage, Nov 2026</a><span class="meta">Monitoring · updated <time datetime="2026-11-20T23:29:00-05:00">Nov 20, 2026</time></span></li>
+</ul>
+<p><a href="../#incidents">All incidents</a></p>
+</section>
+</div>
+</aside>
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap footer-grid">
+<div>
+<span class="wordmark"><span>isita</span><b>hack</b><span class="tld">.com</span></span>
+<p class="disclaimer-short">Made for entertainment using AI. Not endorsed by RIKEN, any government agency, news outlet, company, or anyone else named.</p>
+<p class="meta">Researched and organized by AI agents from public sources. Not security, legal, financial or safety advice.</p>
+</div>
+<nav class="footer-nav" aria-label="Footer">
+<a href="../#incidents">Incidents</a>
+<a href="../how-it-works.html">How it works</a>
+<a href="../about.html">About</a>
+<a href="https://github.com/primeobsession/isitahack-dot-com" rel="noopener">GitHub repository</a>
+<a href="https://x.com/isitahack" rel="noopener">isitahack on X</a>
+<a href="../about.html#contact">Report an error</a>
+<a class="mono" href="../index.json">index.json</a>
+<a class="mono" href="../llms.txt">llms.txt</a>
+</nav>
+</div>
+</footer>
+<script>(function(){var r=document.documentElement,b=document.querySelector(".theme-toggle");function cur(){return r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function paint(){var d=cur()==="dark";b.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme");b.setAttribute("aria-pressed",d?"true":"false")}if(b){b.hidden=false;paint();b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}paint()})}function reveal(){var id=decodeURIComponent(location.hash.slice(1));var el=id&&document.getElementById(id);if(!el)return;for(var p=el;p;p=p.parentElement)if(p.tagName==="DETAILS")p.open=true;el.scrollIntoView()}addEventListener("hashchange",reveal);reveal();var links=[].slice.call(document.querySelectorAll(".toc a"));if(links.length&&"IntersectionObserver"in window){var seen={};var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id]=e.isIntersecting});var on=null;links.forEach(function(a){var id=a.getAttribute("href").slice(1);if(!on&&seen[id])on=a});if(on)links.forEach(function(a){if(a===on)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")})},{rootMargin:"-10% 0px -60% 0px"});links.forEach(function(a){var s=document.getElementById(a.getAttribute("href").slice(1));if(s)io.observe(s)})}})();</script>
+</body>
+</html>
