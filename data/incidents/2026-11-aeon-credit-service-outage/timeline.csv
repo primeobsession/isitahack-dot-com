@@ -1,0 +1,4 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-18T18:00:00+08:00,,Evening of Wed Nov 18 (HK time),approximate,AEON's online services and app go into 'system maintenance',c002,Time given only as 'evening'; 6 PM HK time is our placeholder for the start.
+t002,2026-11-21T14:00:00+08:00,,About 2 PM Nov 21 (HK time),stated,"HK01 counts more than 40 hours of outage, still not restored",c002,From HK01's screenshot caption.
+t003,2026-11-21T23:13:00+08:00,,11:13 PM Nov 21 (HK time),stated,RTHK reports AEON's notice of unauthorized access,c001,RTHK's own time stamp.

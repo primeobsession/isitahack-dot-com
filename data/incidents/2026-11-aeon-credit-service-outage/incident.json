@@ -1,0 +1,112 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-aeon-credit-service-outage",
+  "title": "AEON Credit Service outage and unauthorized access, Nov 2026",
+  "subject": {
+    "name": "AEON Credit",
+    "kind": "finance"
+  },
+  "also_called": [
+    "the AEON credit card outage",
+    "the AEON Credit Service hack"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-18",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by AEON Credit Service, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Local",
+  "size_basis": "One Hong Kong credit card lender. AEON has not said how many customers were affected; its portal and app were down for more than 40 hours.",
+  "who_is_affected": "AEON credit card customers in Hong Kong, who could not use the online portal and app from Nov 18. AEON says affected customers will be told individually.",
+  "known": [
+    {
+      "text": "AEON says its system was accessed without authorization.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The portal and app were offline for more than 40 hours from the evening of Nov 18.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "AEON hired outside cybersecurity and forensics experts.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "AEON says it has found no evidence any data was misused so far.",
+      "claim_id": "c005"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether the intrusion caused the outage."
+    },
+    {
+      "text": "What data was reached, and how many customers."
+    },
+    {
+      "text": "How the intruder got in, or who it was."
+    },
+    {
+      "text": "Whether any regulator is looking into it."
+    }
+  ],
+  "figures": [
+    {
+      "value": "40+ hrs",
+      "label": "Portal and app offline",
+      "detail": "From the evening of Nov 18",
+      "claim_id": "c002"
+    },
+    {
+      "value": "Nov 21",
+      "label": "AEON confirms access",
+      "detail": "Notice on its website",
+      "claim_id": "c001"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How did they get in?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the AEON outage"
+    },
+    {
+      "type": "claims",
+      "title": "What data and who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Has any regulator said anything?",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
