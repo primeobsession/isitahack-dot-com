@@ -1,0 +1,113 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-kepco-customer-data-breach",
+  "title": "KEPCO customer data breach, Nov 2026",
+  "subject": {
+    "name": "KEPCO",
+    "kind": "energy"
+  },
+  "also_called": [
+    "the KEPCO ON leak",
+    "KEPCO's second breach"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-20",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by KEPCO, Yonhap, Chosunbiz, Financial News, Electronic Times, Aju Press, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "KEPCO, South Korea's state-run power utility, says 1,520,248 user records were leaked across two systems; the count of distinct people is not given.",
+  "who_is_affected": "Users of KEPCO ON (electricity bills and payment) and of the SRM procurement system, including company representatives and staff. KEPCO has a desk to check whether you were affected.",
+  "known": [],
+  "not_known": [
+    {
+      "text": "How the attacker got in.",
+      "question_id": "q003"
+    },
+    {
+      "text": "Who the attacker was.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Whether this is linked to the October breach.",
+      "question_id": "q005"
+    },
+    {
+      "text": "How many distinct people are affected, without double counting."
+    },
+    {
+      "text": "Whether the leaked data has been misused."
+    }
+  ],
+  "figures": [
+    {
+      "value": "1.52M",
+      "label": "Records leaked, per KEPCO",
+      "detail": "1,520,248 across two systems",
+      "claim_id": "c002"
+    },
+    {
+      "value": "650,487",
+      "label": "KEPCO ON users",
+      "detail": "About 7.1% of its users",
+      "claim_id": "c002"
+    },
+    {
+      "value": "869,761",
+      "label": "SRM procurement users",
+      "detail": "Representatives and staff",
+      "claim_id": "c004"
+    },
+    {
+      "value": "35,528",
+      "label": "October breach, people",
+      "detail": "A separate earlier leak",
+      "claim_id": "c009"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How did they get in?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the KEPCO data breach"
+    },
+    {
+      "type": "claims",
+      "title": "What data was involved?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
