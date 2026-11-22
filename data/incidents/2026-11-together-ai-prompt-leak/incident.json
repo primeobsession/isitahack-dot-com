@@ -49,6 +49,9 @@
       "text": "How many customers or prompts were affected."
     },
     {
+      "text": "Whether the downloaded data was deleted or shared further."
+    },
+    {
       "text": "Whether real customer credentials were used."
     },
     {
