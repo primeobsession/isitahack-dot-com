@@ -12,13 +12,13 @@
   ],
   "status": "monitoring",
   "incident_date": "2026-11-19",
-  "disclaimer": "Made for entertainment using AI. Not endorsed by Hugendubel, tolino, dpa, Golem.de, retail-news.de, Netzwelt, DerWesten, Handelsblatt, DIE ZEIT, DER SPIEGEL, BR24, Süddeutsche Zeitung, TAG24, LovelyBooks, any government agency, news outlet, company, or anyone else named.",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Hugendubel, tolino, dpa, Golem.de, retail-news.de, Netzwelt, DerWesten, Handelsblatt, DIE ZEIT, DER SPIEGEL, BR24, Süddeutsche Zeitung, TAG24, LovelyBooks, ebook.de, Caschys Blog, any government agency, news outlet, company, or anyone else named.",
   "main_question_id": "q001",
   "verdict": null,
   "verdict_approved_at": null,
   "size": "Regional",
   "size_basis": "A major German bookseller with more than 100 stores has its web shop, service center, email and tolino e-book cloud offline for days. Number of affected customers not published.",
-  "who_is_affected": "Hugendubel web shop customers and tolino e-reader owners who buy through Hugendubel. Books already on a device still open; new downloads, sync and Family Sharing do not work.",
+  "who_is_affected": "Hugendubel and ebook.de web shop customers and tolino e-reader owners who buy through them. Books already on a device still open; new downloads, sync and Family Sharing do not work.",
   "known": [
     {
       "text": "A Hugendubel spokesperson told dpa it was a hacker attack in the night of Nov 18 to 19.",
@@ -39,6 +39,10 @@
     {
       "text": "Free return labels can't be created for now, and Hugendubel has extended the return deadline.",
       "claim_id": "c014"
+    },
+    {
+      "text": "ebook.de, a second shop run by the same Hugendubel company, shows the same outage notice.",
+      "claim_id": "c016"
     }
   ],
   "not_known": [
