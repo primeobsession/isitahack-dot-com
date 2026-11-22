@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-kepco-customer-data-breach",
+      "title": "KEPCO customer data breach, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T14:44:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-kepco-customer-data-breach.md",
+        "html": "incidents/2026-11-kepco-customer-data-breach.html",
+        "data": "data/incidents/2026-11-kepco-customer-data-breach/"
+      }
+    },
+    {
       "slug": "2026-11-expedia-vendor-breach",
       "title": "Expedia third-party vendor breach, Nov 2026",
       "status": "monitoring",
@@ -42,17 +53,6 @@
         "page": "incidents/2026-11-zozo-plaid-karte-breach.md",
         "html": "incidents/2026-11-zozo-plaid-karte-breach.html",
         "data": "data/incidents/2026-11-zozo-plaid-karte-breach/"
-      }
-    },
-    {
-      "slug": "2026-11-kepco-customer-data-breach",
-      "title": "KEPCO customer data breach, Nov 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-22T12:44:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-kepco-customer-data-breach.md",
-        "html": "incidents/2026-11-kepco-customer-data-breach.html",
-        "data": "data/incidents/2026-11-kepco-customer-data-breach/"
       }
     },
     {
