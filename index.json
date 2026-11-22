@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-wellington-it-credit-union-breach",
+      "title": "Wellington IT credit union breach, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T08:54:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-wellington-it-credit-union-breach.md",
+        "html": "incidents/2026-11-wellington-it-credit-union-breach.html",
+        "data": "data/incidents/2026-11-wellington-it-credit-union-breach/"
+      }
+    },
+    {
       "slug": "2026-11-hugendubel-tolino-cyberattack",
       "title": "Hugendubel tolino cyberattack, Nov 2026",
       "status": "monitoring",
@@ -9,17 +20,6 @@
         "page": "incidents/2026-11-hugendubel-tolino-cyberattack.md",
         "html": "incidents/2026-11-hugendubel-tolino-cyberattack.html",
         "data": "data/incidents/2026-11-hugendubel-tolino-cyberattack/"
-      }
-    },
-    {
-      "slug": "2026-11-wellington-it-credit-union-breach",
-      "title": "Wellington IT credit union breach, Nov 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-22T07:59:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-wellington-it-credit-union-breach.md",
-        "html": "incidents/2026-11-wellington-it-credit-union-breach.html",
-        "data": "data/incidents/2026-11-wellington-it-credit-union-breach/"
       }
     },
     {
