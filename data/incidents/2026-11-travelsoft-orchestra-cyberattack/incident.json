@@ -44,7 +44,7 @@
       "text": "How the attackers got in, and who they are."
     },
     {
-      "text": "Whether all services are fully restored."
+      "text": "Which customer platform is still down, and whether it comes back Monday as the company says."
     }
   ],
   "figures": [
@@ -55,9 +55,9 @@
       "claim_id": "c003"
     },
     {
-      "value": "10 PM",
-      "label": "Restoration begins",
-      "detail": "Fri Nov 20, Paris time",
+      "value": "All but 1",
+      "label": "Customer platforms back",
+      "detail": "Sun Nov 22, per the company",
       "claim_id": "c004"
     }
   ],
