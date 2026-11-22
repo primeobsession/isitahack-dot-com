@@ -1,0 +1,4 @@
+source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
+s001,https://tower.jp/,"Tower Records Japan: notice on unauthorised access and leak of personal information (Nov 21, updated Nov 22)",1,,2026-11-22T18:30:00+09:00,2026-11-22T11:18:00-05:00,,ok,2026-11-22T11:18:00-05:00
+s002,https://www.nikkei.com/article/DGXZQOUC221UL0S6A121C2000000/,"Nikkei: Tower Records, 11 million personal records leaked (Japanese; start of article read)",2,tower-notice,2026-11-22T20:58:00+09:00,2026-11-22T11:18:00-05:00,,ok,2026-11-22T11:18:00-05:00
+s003,https://www.investing.com/news/company-news/tower-records-japan-reports-data-breach-affecting-102-million-accounts-5043878,Investing.com: Tower Records Japan reports data breach affecting 10.2 million accounts,2,tower-notice,2026-11-22,2026-11-22T11:18:00-05:00,,ok,2026-11-22T11:18:00-05:00

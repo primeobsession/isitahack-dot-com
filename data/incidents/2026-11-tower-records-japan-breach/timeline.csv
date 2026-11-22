@@ -1,0 +1,5 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-19T17:10:00+09:00,,"About 5:10 PM JST, Thu Nov 19, 2026",approximate,"Tower Records confirms unauthorised access to Tower Records Online, stops the service and starts emergency maintenance",c002,The notice says 'about 17:10'. That is 3:10 AM Eastern the same day.
+t002,2026-11-21,,"Sat Nov 21, 2026",stated,Company notice published; the company says no secondary harm from the leak was known as of this day,c008,Date only. The notice says it was published Nov 21 and updated Nov 22.
+t003,2026-11-22T18:30:00+09:00,,"6:30 PM JST, Sun Nov 22, 2026",stated,Company adds the counts update and the shipping plan: online-shop orders to start shipping Nov 23,c009,Time of the notice's latest update entry.
+t004,2026-11-22T20:58:00+09:00,,"8:58 PM JST, Sun Nov 22, 2026",stated,Nikkei reports the breach of about 11 million records,c003,Time on the article.

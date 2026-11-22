@@ -1,0 +1,128 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-tower-records-japan-breach",
+  "title": "Tower Records Japan data breach, Nov 2026",
+  "subject": {
+    "name": "Tower Records",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "the Tower Records Online breach",
+    "the Tower Records Japan leak"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-19",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Tower Records Japan, Nikkei, Investing.com or any other company, news outlet, government agency, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "About 11 million records of customer data, from a retailer's online shop, per the company. Counts overlap and the number of distinct people is not published.",
+  "who_is_affected": "Tower Records members, including some who left within three years. Leaked: email, member ID, password hash, and for some, name, birth date, address or phone. Card data was not, per the company.",
+  "known": [
+    {
+      "text": "An outside party got into Tower Records Online without authorisation on Nov 19.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The company stopped the shop at about 5:10 PM JST and it is still offline for checks.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "About 11 million records leaked, including people who left within three years.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "10,214,652 login records: email, member ID and password hash.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "No credit card information was included, per the company.",
+      "claim_id": "c007"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "How the attacker got in.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Who the attacker was.",
+      "question_id": "q005"
+    },
+    {
+      "text": "Whether the data has been used against customers.",
+      "question_id": "q003"
+    }
+  ],
+  "figures": [
+    {
+      "value": "11M",
+      "label": "Records leaked",
+      "detail": "About, per the company; counts overlap",
+      "claim_id": "c003"
+    },
+    {
+      "value": "10.2M",
+      "label": "Login records",
+      "detail": "Email, member ID, password hash",
+      "claim_id": "c004"
+    },
+    {
+      "value": "2.78M",
+      "label": "Member profiles",
+      "detail": "Name, birth date, sex, postcode",
+      "claim_id": "c005"
+    },
+    {
+      "value": "777K",
+      "label": "Shipping records",
+      "detail": "Address, name, phone",
+      "claim_id": "c006"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How did they get in?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Tower Records breach"
+    },
+    {
+      "type": "claims",
+      "title": "What data was involved?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
