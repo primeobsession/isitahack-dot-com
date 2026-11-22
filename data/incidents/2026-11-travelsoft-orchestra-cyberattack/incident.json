@@ -1,0 +1,103 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-travelsoft-orchestra-cyberattack",
+  "title": "Travelsoft Orchestra cyberattack, Nov 2026",
+  "subject": {
+    "name": "Orchestra",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "the Orchestra outage",
+    "the Travelsoft hack"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-20",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Travelsoft, Orchestra, Voyages E.Leclerc, Carrefour Voyages, Selectour, Havas Voyages, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Regional",
+  "size_basis": "A booking platform behind 'dozens' of French travel sites and agency tools, per the company's president. No count of travelers or agencies has been given.",
+  "who_is_affected": "Customers and staff of travel brands that use Orchestra, including Voyages E.Leclerc, Carrefour Voyages, Selectour and Havas Voyages, and the travel agents who book through it.",
+  "known": [
+    {
+      "text": "The company's president says Orchestra was hit by a cyberattack with illicit access.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The company shut all its systems down as a precaution.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "Voyages E.Leclerc, Carrefour Voyages, Selectour and Havas Voyages sites went offline.",
+      "claim_id": "c003"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether data was stolen."
+    },
+    {
+      "text": "Whether logins were taken, as TourMaG reports."
+    },
+    {
+      "text": "How the attackers got in, and who they are."
+    },
+    {
+      "text": "Whether all services are fully restored."
+    }
+  ],
+  "figures": [
+    {
+      "value": "4",
+      "label": "Brands named as hit",
+      "detail": "Leclerc, Carrefour, Selectour, Havas",
+      "claim_id": "c003"
+    },
+    {
+      "value": "10 PM",
+      "label": "Restoration begins",
+      "detail": "Fri Nov 20, Paris time",
+      "claim_id": "c004"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How did they get in?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Orchestra cyberattack"
+    },
+    {
+      "type": "claims",
+      "title": "What data was involved?",
+      "group": "impact"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
