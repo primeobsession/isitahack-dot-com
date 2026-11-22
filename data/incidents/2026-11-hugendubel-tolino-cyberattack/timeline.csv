@@ -4,3 +4,4 @@ t002,2026-11-19,,"Thu Nov 19, 2026",stated,"Hugendubel's website, web shop and s
 t003,2026-11-20,,"Fri Nov 20, 2026",stated,A Hugendubel spokesperson tells dpa it was a hacker attack and that no customer data was stolen; the company's help page on the tolino cloud is updated,c001,Date only.
 t004,2026-11-21,,"Sat Nov 21, 2026",stated,"Netzwelt reports further details the company shared on social media, including that the outage may last several more days",c012,Company's post was read only through Netzwelt.
 t005,2026-11-22T08:15:00-05:00,,"Sun Nov 22, 2026, 8:15 AM ET",stated,"hugendubel.de still shows only the 'technical disruption' notice; the shop, service center and tolino cloud remain offline",c004,Read directly by the desk.
+t006,2026-11-20T15:00:00+01:00,,"Fri Nov 20, 2026, 3:00 PM CET",stated,"Hugendubel's returns help page is updated: free return labels unavailable, return deadline extended",c014,"Time is the page's own 'changed' stamp, read as Munich time."

@@ -35,6 +35,10 @@
     {
       "text": "Tolino cloud downloads of books not already on a device, reading-progress sync and Family Sharing do not work.",
       "claim_id": "c005"
+    },
+    {
+      "text": "Free return labels can't be created for now, and Hugendubel has extended the return deadline.",
+      "claim_id": "c014"
     }
   ],
   "not_known": [
