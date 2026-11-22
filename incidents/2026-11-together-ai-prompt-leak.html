@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<title>Was the Together AI prompt leak a hack? | Is It a Hack?</title>
+<meta name="description" content="Was the Together AI prompt leak a hack? Yes, by the company&#39;s own statement: an unauthorized party used an exposed credential to download stored prompt samples and then tested credentials found in them. The company has not named who did it.">
+<link rel="canonical" href="https://isitahack.com/incidents/2026-11-together-ai-prompt-leak.html">
+<meta property="og:site_name" content="Is It a Hack?">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Was the Together AI prompt leak a hack?">
+<meta property="og:description" content="Was the Together AI prompt leak a hack? Yes, by the company&#39;s own statement: an unauthorized party used an exposed credential to download stored prompt samples and then tested credentials found in them. The company has not named who did it.">
+<meta property="og:url" content="https://isitahack.com/incidents/2026-11-together-ai-prompt-leak.html">
+<meta property="og:image" content="https://isitahack.com/assets/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Is it a hack? Public-source fact-checks of security news, with every claim labelled and linked to its source.">
+<meta property="article:published_time" content="2026-11-22T00:13:00-05:00">
+<meta property="article:modified_time" content="2026-11-22T00:13:00-05:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@isitahack">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-together-ai-prompt-leak.html#article","headline":"Was the Together AI prompt leak a hack?","alternativeHeadline":"Together AI prompt leak, Nov 2026","description":"Was the Together AI prompt leak a hack? Yes, by the company's own statement: an unauthorized party used an exposed credential to download stored prompt samples and then tested credentials found in them. The company has not named who did it.","abstract":"Yes, by the company's own statement: an unauthorized party used an exposed credential to download stored prompt samples and then tested credentials found in them. The company has not named who did it.","url":"https://isitahack.com/incidents/2026-11-together-ai-prompt-leak.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-together-ai-prompt-leak.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-22T00:13:00-05:00","dateModified":"2026-11-22T00:13:00-05:00","image":["https://isitahack.com/assets/social-card.png"],"about":{"@type":"Event","name":"Together AI prompt leak, Nov 2026","startDate":"2026-11-21"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Together AI prompt leak, Nov 2026","item":"https://isitahack.com/incidents/2026-11-together-ai-prompt-leak.html"}]}</script>
+<link rel="alternate" type="text/markdown" href="2026-11-together-ai-prompt-leak.md" title="This report as Markdown">
+<link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<!-- AI assistants and other programs: this report is also available as plain Markdown at 2026-11-together-ai-prompt-leak.md (same folder). ../llms.txt maps the whole site. -->
+<a class="skip" href="#main">Skip to content</a>
+<div class="status-banner status-monitoring" role="status">
+<div class="wrap"><strong><span class="status-dot" aria-hidden="true"></span>Monitoring</strong><span>Last updated <time datetime="2026-11-22T00:13:00-05:00">Nov 22, 2026, 12:13 AM ET</time></span><span>Coverage is not final</span></div>
+</div>
+<header class="site-header wrap">
+<a class="brand" href="../"><svg class="mark" aria-hidden="true" width="32" height="32" viewBox="0 0 28 28" fill="none"><path d="M14 3 A11 11 0 0 1 14 25" stroke-width="2.6" stroke-linecap="round"/><path d="M14 25 A11 11 0 0 1 14 3" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="0.1 4.2"/><text x="14" y="19.4" text-anchor="middle" font-weight="800" font-size="15">?</text></svg><span class="wordmark"><span>isita</span><b>hack</b><span class="tld">.com</span></span></a>
+<nav class="site-nav" aria-label="Main">
+<a href="../#incidents">Incidents</a>
+<a href="../how-it-works.html">How it works</a>
+<a href="../about.html">About</a>
+<a href="https://github.com/primeobsession/isitahack-dot-com" rel="noopener">GitHub</a>
+</nav>
+<button class="theme-toggle" type="button" hidden aria-label="Switch to dark theme"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.1" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 1.900a7.100 7.100 0 0 1 0 14.200z" fill="currentColor"/></svg></button>
+</header>
+<main id="main" class="incident">
+<div class="wrap page-grid">
+<header class="page-head has-media">
+<div class="head-text">
+<p class="crumb"><a href="../#incidents">Incidents</a> / Together AI prompt leak, Nov 2026 · Incident date <time datetime="2026-11-21">Nov 21, 2026</time> · First published <time datetime="2026-11-22T00:13:00-05:00">Nov 22, 2026</time></p>
+<h1 id="the-question">Was the Together AI prompt leak a hack?</h1>
+<p class="aka">Also reported as the Together AI security event and the Together AI prompt leakage.</p>
+</div>
+<figure class="head-media"><svg class="plate" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Together AI: online service">
+<rect class="plate-bg" width="640" height="360"/>
+<path class="plate-rule" d="M36 72H604"/>
+<g class="plate-art" transform="translate(352 22) scale(0.78)"><path class="tint" d="M85 235H245a55 55 0 0 0 5-110a82 82 0 0 0-155-25a68 68 0 0 0-10 135z"/><path d="M85 235H245a55 55 0 0 0 5-110a82 82 0 0 0-155-25a68 68 0 0 0-10 135z"/><path class="faint" d="M120 265V300M165 265V318M210 265V300"/><circle class="solid" cx="120" cy="312" r="6"/><circle class="solid" cx="210" cy="312" r="6"/></g>
+<text class="plate-kind" x="36" y="52">Online service</text>
+<text class="plate-name" x="34" y="322" font-size="64">Together AI</text>
+</svg></figure>
+<section class="answer-box" aria-labelledby="the-question">
+<div class="answer-head"><p class="kicker">Is it a hack? The short answer</p><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></div>
+<p class="answer">Yes, by the company&#39;s own statement: an unauthorized party used an exposed credential to download stored prompt samples and then tested credentials found in them. The company has not named who did it.</p>
+<p class="answer-refs"><span class="field">Rests on</span> <a href="#c001">An unauthorized party got into Together AI&#39;s stored prompt samples</a> · <a href="#c002">A credential committed by an AI coding agent opened a private repository</a> · <a href="#c004">The party searched the prompts for credentials and tested them</a></p>
+<p class="answer-note">This is the current answer, not a final verdict. A final verdict is published only after the site's owner has reviewed the evidence.</p>
+</section>
+<p class="byline">By the isitahack.com desk. AI agents research public sources and label each claim; a person decides only the final verdict. <a href="../how-it-works.html">How it works</a></p>
+</header>
+<nav class="toc" aria-label="On this page">
+<p class="kicker">On this page</p>
+<ol>
+<li><a href="#glance"><span class="toc-n">01</span><span class="toc-name">At a glance</span></a></li>
+<li><a href="#was-it-a-hack-what-has-been-said"><span class="toc-n">02</span><span class="toc-name">Was it a hack? What has been said</span><span class="count">1</span></a></li>
+<li><a href="#how-did-they-get-in"><span class="toc-n">03</span><span class="toc-name">How did they get in?</span><span class="count">1</span></a></li>
+<li><a href="#questions-people-are-asking"><span class="toc-n">04</span><span class="toc-name">Questions people are asking</span><span class="count">5</span></a></li>
+<li><a href="#what-happened"><span class="toc-n">05</span><span class="toc-name">What happened?</span><span class="count">4</span></a></li>
+<li><a href="#timeline-of-the-together-ai-prompt-leak"><span class="toc-n">06</span><span class="toc-name">Timeline of the Together AI prompt leak</span><span class="count">4</span></a></li>
+<li><a href="#who-and-what-was-affected"><span class="toc-n">07</span><span class="toc-name">Who and what was affected?</span><span class="count">2</span></a></li>
+<li><a href="#how-does-it-connect-to-openrouter-and-the-other-providers"><span class="toc-n">08</span><span class="toc-name">How does it connect to OpenRouter and the other providers?</span><span class="count">6</span></a></li>
+<li><a href="#what-we-checked-and-did-not-find"><span class="toc-n">09</span><span class="toc-name">What we checked and did not find</span></a></li>
+<li><a href="#update-log"><span class="toc-n">10</span><span class="toc-name">Update log</span><span class="count">1</span></a></li>
+<li><a href="#sources"><span class="toc-n">11</span><span class="toc-name">Sources</span><span class="count">6</span></a></li>
+</ol>
+</nav>
+<div class="page-main">
+<aside class="note">
+<p><strong>Not verified: initial investigation only.</strong> Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them.</p>
+<p>Made for entertainment using AI. Not endorsed by Together AI, any government agency, news outlet, company, or anyone else named.</p>
+</aside>
+<section class="block" id="glance">
+<div class="block-head"><span class="sec-n">01</span><h2>At a glance</h2></div>
+<ul class="tiles">
+<li class="tile"><a href="#c003"><span class="tile-value">4</span><span class="tile-label">Main sample days</span><span class="tile-detail">Jun 24, Jul 4, Jul 8, Jul 14</span></a></li>
+<li class="tile"><a href="#c004"><span class="tile-value">5</span><span class="tile-label">Bait credentials tested</span><span class="tile-detail">Dragos canaries, per Together AI</span></a></li>
+<li class="tile"><a href="#c011"><span class="tile-value">125</span><span class="tile-label">Endpoints pulled by OpenRouter</span><span class="tile-detail">Removed from its zero-data-retention list</span></a></li>
+</ul>
+<div class="known-grid">
+<div class="known"><h3>Known so far</h3><ul>
+<li>An unauthorized party downloaded stored prompt samples from Together AI&#39;s serverless service. <a class="ref" href="#c001">evidence</a></li>
+<li>The way in was a credential for a private repository, committed by an AI coding agent to a public one. <a class="ref" href="#c002">evidence</a></li>
+<li>The samples were from requests mainly on Jun 24, Jul 4, Jul 8 and Jul 14, 2026. <a class="ref" href="#c003">evidence</a></li>
+<li>The party searched the prompts for credentials and tested them; five were Dragos bait keys. <a class="ref" href="#c004">evidence</a></li>
+<li>OpenRouter dropped three providers and removed 125 endpoints from its zero-data-retention list, and says it was not breached. <a class="ref" href="#c011">evidence</a></li>
+</ul></div>
+<div class="not-known"><h3>Not known yet</h3><ul>
+<li>Who the unauthorized party was.</li>
+<li>How many customers or prompts were affected.</li>
+<li>Whether real customer credentials were used.</li>
+<li>How long the credential was exposed.</li>
+<li>Whether the Together AI intruder is tied to the other compromised providers.</li>
+</ul></div>
+</div>
+</section>
+
+<section class="block" id="was-it-a-hack-what-has-been-said">
+<details class="fold" open>
+<summary><span class="sec-n">02</span><h2>Was it a hack? What has been said</h2><span class="count">1</span></summary>
+<div class="fold-body">
+<div class="rows">
+<details class="row" id="c001">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">An unauthorized party got into Together AI&#39;s stored prompt samples</span><span class="row-sub">Together AI says an unauthorized party downloaded stored prompt samples from its serverless inference service after a credential was exposed.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> Together AI&#39;s own post says an unauthorized party obtained the credential and downloaded the stored samples.</p>
+<p>This is the company&#39;s own statement, published Nov 21. It calls the event a security incident and apologizes.</p>
+<ul class="source-lines">
+<li><a href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026" rel="noopener">Together AI blog: Security event: Prompt leakage for requests in June and July of 2026 (company statement)</a> <span class="meta">Official source · Nov 21, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T00:10:00-05:00">Nov 22, 2026, 12:10 AM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="how-did-they-get-in">
+<details class="fold" open>
+<summary><span class="sec-n">03</span><h2>How did they get in?</h2><span class="count">1</span></summary>
+<div class="fold-body">
+<div class="rows">
+<details class="row" id="c002">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">A credential committed by an AI coding agent opened a private repository</span><span class="row-sub">Together AI says an AI coding agent committed a credential for a private Hugging Face repository to its public GitHub repository, and the unauthorized party used it.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> The company&#39;s post describes the committed credential and the download.</p>
+<p>The company says its automated scanning caught the credential and it reverted the commit. It does not say how long the credential was exposed.</p>
+<ul class="source-lines">
+<li><a href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026" rel="noopener">Together AI blog: Security event: Prompt leakage for requests in June and July of 2026 (company statement)</a> <span class="meta">Official source · Nov 21, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T00:10:00-05:00">Nov 22, 2026, 12:10 AM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="questions-people-are-asking">
+<details class="fold" open>
+<summary><span class="sec-n">04</span><h2>Questions people are asking</h2><span class="count">5</span></summary>
+<div class="fold-body">
+<div class="rows">
+<details class="row" id="q001">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">Was the Together AI prompt leak a hack?</span><span class="row-sub">Yes, by the company&#39;s own statement: an unauthorized party used an exposed credential to download stored prompt samples and then tested credentials found in them. The company has not named who did it.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Rests on</span> <a href="#c001">An unauthorized party got into Together AI&#39;s stored prompt samples</a> · <a href="#c002">A credential committed by an AI coding agent opened a private repository</a> · <a href="#c004">The party searched the prompts for credentials and tested them</a></p>
+<p class="meta">Question recorded <time datetime="2026-11-22T00:13:00-05:00">Nov 22, 2026, 12:13 AM ET</time> · answered <time datetime="2026-11-22T00:13:00-05:00">Nov 22, 2026, 12:13 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="q002">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">How did the intruder get in?</span><span class="row-sub">Together AI says an AI coding agent committed a credential for a private repository to a public one, and the party used it.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Rests on</span> <a href="#c002">A credential committed by an AI coding agent opened a private repository</a></p>
+<p class="meta">Question recorded <time datetime="2026-11-22T00:13:00-05:00">Nov 22, 2026, 12:13 AM ET</time> · answered <time datetime="2026-11-22T00:13:00-05:00">Nov 22, 2026, 12:13 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="q003">
+<summary><span class="row-lead"><span class="chip">Open</span></span><span class="row-main"><span class="row-title">Was my data exposed?</span><span class="row-sub">Not answered yet.</span></span></summary>
+<div class="row-body">
+<p><span class="field">What would settle it</span> Together AI finishing its review and notifying affected customers, or publishing counts.</p>
+<p><span class="field">Rests on</span> <a href="#c007">Which customers were affected, and what was in the prompts</a></p>
+<p class="meta">Question recorded <time datetime="2026-11-22T00:13:00-05:00">Nov 22, 2026, 12:13 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="q004">
+<summary><span class="row-lead"><span class="pill pill-reported" data-label="Reported">Reported</span></span><span class="row-main"><span class="row-title">Is this the same thing OpenRouter warned about?</span><span class="row-sub">Partly. OpenRouter links Together AI&#39;s notice among three provider notices, and Together says five credentials the intruder tested were Dragos bait. The three providers have different causes.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Rests on</span> <a href="#c010">Together AI&#39;s incident is the one Dragos&#39;s research traced</a> · <a href="#c011">OpenRouter dropped three providers and pulled 125 endpoints from its zero-data-retention list</a> · <a href="#c013">Phala and Novita have posted their own notices</a></p>
+<p class="meta">Question recorded <time datetime="2026-11-22T00:13:00-05:00">Nov 22, 2026, 12:13 AM ET</time> · answered <time datetime="2026-11-22T00:13:00-05:00">Nov 22, 2026, 12:13 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="q005">
+<summary><span class="row-lead"><span class="chip">Open</span></span><span class="row-main"><span class="row-title">Who is behind it?</span><span class="row-sub">Not answered yet.</span></span></summary>
+<div class="row-body">
+<p><span class="field">What would settle it</span> Together AI, law enforcement or a credible researcher naming the party, or a verified claim of responsibility.</p>
+<p><span class="field">Rests on</span> <a href="#c014">Whether one attacker is behind all of these incidents</a></p>
+<p class="meta">Question recorded <time datetime="2026-11-22T00:13:00-05:00">Nov 22, 2026, 12:13 AM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="what-happened">
+<details class="fold" open>
+<summary><span class="sec-n">05</span><h2>What happened?</h2><span class="count">4</span></summary>
+<div class="fold-body">
+<div class="rows">
+<details class="row" id="c003">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">The samples were test prompts from June and July 2026</span><span class="row-sub">Together AI says the stored samples came from requests to three models, mainly on June 24, July 4, July 8 and July 14, 2026.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> The company states the dates, models and purpose of the stored samples.</p>
+<p>The company says it collected prompt samples authorized for routine software testing and stored them in a private repository. The models named are MiniMax M3, GLM-5.2 and Kimi K2.6.</p>
+<ul class="source-lines">
+<li><a href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026" rel="noopener">Together AI blog: Security event: Prompt leakage for requests in June and July of 2026 (company statement)</a> <span class="meta">Official source · Nov 21, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T00:10:00-05:00">Nov 22, 2026, 12:10 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="c004">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">The party searched the prompts for credentials and tested them</span><span class="row-sub">Together AI says the unauthorized party searched the samples for credentials to other services and tested whether they worked.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> The company&#39;s post describes the searching and testing, and the five canary credentials.</p>
+<p>Five of the credentials tested were canary credentials (fake bait keys) from a security experiment run by Dragos. The company does not say whether any real customer credentials were tested or used.</p>
+<ul class="source-lines">
+<li><a href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026" rel="noopener">Together AI blog: Security event: Prompt leakage for requests in June and July of 2026 (company statement)</a> <span class="meta">Official source · Nov 21, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T00:10:00-05:00">Nov 22, 2026, 12:10 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="c005">
+<summary><span class="row-lead"><span class="pill pill-reported" data-label="Reported">Reported</span></span><span class="row-main"><span class="row-title">Together AI says the data has not been leaked further and was deleted</span><span class="row-sub">Together AI says it has no reason to believe the party leaked the data further, and understands it has now been deleted.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> The statement is the company&#39;s own understanding, with no outside check.</p>
+<p>This is the company&#39;s belief, not an outside finding. It does not say how it knows the data was deleted.</p>
+<ul class="source-lines">
+<li><a href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026" rel="noopener">Together AI blog: Security event: Prompt leakage for requests in June and July of 2026 (company statement)</a> <span class="meta">Official source · Nov 21, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T00:10:00-05:00">Nov 22, 2026, 12:10 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="c006">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">Together AI worked with outside forensics and law enforcement</span><span class="row-sub">Together AI says an external forensic investigation firm and law enforcement are involved, and it found no evidence of other prompt leakage.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> The company&#39;s post says so in its own words.</p>
+<p>Its review of the affected prompts is ongoing, to see whether personal or other customer data was exposed.</p>
+<ul class="source-lines">
+<li><a href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026" rel="noopener">Together AI blog: Security event: Prompt leakage for requests in June and July of 2026 (company statement)</a> <span class="meta">Official source · Nov 21, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T00:10:00-05:00">Nov 22, 2026, 12:10 AM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="timeline-of-the-together-ai-prompt-leak">
+<details class="fold">
+<summary><span class="sec-n">06</span><h2>Timeline of the Together AI prompt leak</h2><span class="count">4</span></summary>
+<div class="fold-body">
+<p class="meta">Times are 2026. Each row opens to show its evidence and source.</p>
+<div class="rows rows-timeline">
+<details class="row" id="t001">
+<summary><span class="row-lead"><span class="row-day">Jun 24</span> <time datetime="2026-06-24">Jun 24, 2026</time></span><span class="row-main"><span class="row-title">First of the main dates for the stored prompt samples, which also include July 4, 8 and 14</span></span><span class="row-trail"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span></summary>
+<div class="row-body">
+<p>Together AI says the stored samples came from requests to three models, mainly on June 24, July 4, July 8 and July 14, 2026.</p>
+<p class="meta">Together AI says the samples are &#39;primarily&#39; from these dates.</p>
+<p><span class="field">Why it supports</span> The company states the dates, models and purpose of the stored samples.</p>
+<p>The company says it collected prompt samples authorized for routine software testing and stored them in a private repository. The models named are MiniMax M3, GLM-5.2 and Kimi K2.6.</p>
+<ul class="source-lines">
+<li><a href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026" rel="noopener">Together AI blog: Security event: Prompt leakage for requests in June and July of 2026 (company statement)</a> <span class="meta">Official source · Nov 21, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T00:10:00-05:00">Nov 22, 2026, 12:10 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="t002">
+<summary><span class="row-lead"><span class="row-day">Nov 19</span> <time datetime="2026-11-19">Nov 19, 2026</time></span><span class="row-main"><span class="row-title">Dragos publishes its canary-token research</span></span><span class="row-trail"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span></summary>
+<div class="row-body">
+<p>Dragos says it sent about two million prompts with fake credentials to AI services and saw evidence that data from at least three AI providers was exposed.</p>
+<p class="meta">Posted 8:00 AM per Dragos.</p>
+<p><span class="field">Why it supports</span> Dragos describes its findings, and Ars Technica independently reports them.</p>
+<p>Dragos does not name the three providers in the part we read. Ars Technica reports the same finding. We cannot tell from public sources whether Together AI is one of the three, though Together says five of the credentials the intruder tested were Dragos canaries.</p>
+<ul class="source-lines">
+<li><a href="https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens" rel="noopener">Dragos: Three breaches, endless leaks: Your AI supply chain needs canaries</a> <span class="meta">Researcher or analysis · Nov 19, 2026</span></li>
+<li><a href="https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/" rel="noopener">Ars Technica: Researcher plants 2m canaries into the AI supply chain</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T00:10:00-05:00">Nov 22, 2026, 12:10 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="t003">
+<summary><span class="row-lead"><span class="row-day">Nov 21</span> <time datetime="2026-11-21">Nov 21, 2026</time></span><span class="row-main"><span class="row-title">Together AI publishes its security notice</span></span><span class="row-trail"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span></summary>
+<div class="row-body">
+<p>Together AI says an unauthorized party downloaded stored prompt samples from its serverless inference service after a credential was exposed.</p>
+<p class="meta">The post says it is notifying customers.</p>
+<p><span class="field">Why it supports</span> Together AI&#39;s own post says an unauthorized party obtained the credential and downloaded the stored samples.</p>
+<p>This is the company&#39;s own statement, published Nov 21. It calls the event a security incident and apologizes.</p>
+<ul class="source-lines">
+<li><a href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026" rel="noopener">Together AI blog: Security event: Prompt leakage for requests in June and July of 2026 (company statement)</a> <span class="meta">Official source · Nov 21, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T00:10:00-05:00">Nov 22, 2026, 12:10 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="t004">
+<summary><span class="row-lead"><span class="row-day">Nov 22</span> <time datetime="2026-11-22">Nov 22, 2026</time></span><span class="row-main"><span class="row-title">OpenRouter publishes its post on data processing incidents, linking Together AI&#39;s notice</span></span><span class="row-trail"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span></summary>
+<div class="row-body">
+<p>OpenRouter says it off-boarded three providers, removed 125 endpoints from zero data retention (ZDR) eligibility, and notified all potentially affected customers.</p>
+<p class="meta">Date as printed on OpenRouter&#39;s post.</p>
+<p><span class="field">Why it supports</span> OpenRouter&#39;s own post states the actions.</p>
+<p>OpenRouter does not name the three providers in its post.</p>
+<ul class="source-lines">
+<li><a href="https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/" rel="noopener">OpenRouter blog: Data Processing Incidents on Inference Providers</a> <span class="meta">Official source · Nov 22, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T00:10:00-05:00">Nov 22, 2026, 12:10 AM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="who-and-what-was-affected">
+<details class="fold">
+<summary><span class="sec-n">07</span><h2>Who and what was affected?</h2><span class="count">2</span></summary>
+<div class="fold-body">
+<div class="rows">
+<details class="row" id="c007">
+<summary><span class="row-lead"><span class="pill pill-not-established" data-label="Not established">Not established</span></span><span class="row-main"><span class="row-title">Which customers were affected, and what was in the prompts</span><span class="row-sub">Together AI says it is still reviewing the prompts to decide which customers to notify directly.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> The company says the review is ongoing and gives no counts.</p>
+<p>Neither the number of customers nor the number of prompts has been published.</p>
+<ul class="source-lines">
+<li><a href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026" rel="noopener">Together AI blog: Security event: Prompt leakage for requests in June and July of 2026 (company statement)</a> <span class="meta">Official source · Nov 21, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T00:10:00-05:00">Nov 22, 2026, 12:10 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="c008">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">Together AI&#39;s advice: turn on zero data retention</span><span class="row-sub">Together AI tells customers with sensitive prompts to turn on zero data retention (ZDR) in account settings, and says ZDR is now the default for new accounts.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> The company lists these steps in its post.</p>
+<p>It also lists scoped or short-lived credentials, credential checks on all pull requests and new rules for AI coding agents.</p>
+<ul class="source-lines">
+<li><a href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026" rel="noopener">Together AI blog: Security event: Prompt leakage for requests in June and July of 2026 (company statement)</a> <span class="meta">Official source · Nov 21, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T00:10:00-05:00">Nov 22, 2026, 12:10 AM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="how-does-it-connect-to-openrouter-and-the-other-providers">
+<details class="fold">
+<summary><span class="sec-n">08</span><h2>How does it connect to OpenRouter and the other providers?</h2><span class="count">6</span></summary>
+<div class="fold-body">
+<div class="rows">
+<details class="row" id="c009">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">A researcher&#39;s canary test found other AI providers compromised</span><span class="row-sub">Dragos says it sent about two million prompts with fake credentials to AI services and saw evidence that data from at least three AI providers was exposed.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> Dragos describes its findings, and Ars Technica independently reports them.</p>
+<p>Dragos does not name the three providers in the part we read. Ars Technica reports the same finding. We cannot tell from public sources whether Together AI is one of the three, though Together says five of the credentials the intruder tested were Dragos canaries.</p>
+<ul class="source-lines">
+<li><a href="https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens" rel="noopener">Dragos: Three breaches, endless leaks: Your AI supply chain needs canaries</a> <span class="meta">Researcher or analysis · Nov 19, 2026</span></li>
+<li><a href="https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/" rel="noopener">Ars Technica: Researcher plants 2m canaries into the AI supply chain</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T00:10:00-05:00">Nov 22, 2026, 12:10 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="c010">
+<summary><span class="row-lead"><span class="pill pill-reported" data-label="Reported">Reported</span></span><span class="row-main"><span class="row-title">Together AI&#39;s incident is the one Dragos&#39;s research traced</span><span class="row-sub">Together AI says five tested credentials were Dragos canaries, so the Dragos research is linked to this incident by the company&#39;s own words.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> Together names Dragos canaries; Dragos does not name Together in the text we read.</p>
+<p>No source says whether the Dragos research is how Together AI learned of the incident.</p>
+<ul class="source-lines">
+<li><a href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026" rel="noopener">Together AI blog: Security event: Prompt leakage for requests in June and July of 2026 (company statement)</a> <span class="meta">Official source · Nov 21, 2026</span></li>
+<li><a href="https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens" rel="noopener">Dragos: Three breaches, endless leaks: Your AI supply chain needs canaries</a> <span class="meta">Researcher or analysis · Nov 19, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T00:10:00-05:00">Nov 22, 2026, 12:10 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="c011">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">OpenRouter dropped three providers and pulled 125 endpoints from its zero-data-retention list</span><span class="row-sub">OpenRouter says it off-boarded three providers, removed 125 endpoints from zero data retention (ZDR) eligibility, and notified all potentially affected customers.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> OpenRouter&#39;s own post states the actions.</p>
+<p>OpenRouter does not name the three providers in its post.</p>
+<ul class="source-lines">
+<li><a href="https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/" rel="noopener">OpenRouter blog: Data Processing Incidents on Inference Providers</a> <span class="meta">Official source · Nov 22, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T00:10:00-05:00">Nov 22, 2026, 12:10 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="c012">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">OpenRouter says it was not breached</span><span class="row-sub">OpenRouter says the researchers&#39; findings did not show any breach or unauthorized access of OpenRouter itself.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> OpenRouter&#39;s own statement, with no outside check.</p>
+<p>The findings concern providers that sit behind OpenRouter. OpenRouter links notices from Novita, Phala and Together.</p>
+<ul class="source-lines">
+<li><a href="https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/" rel="noopener">OpenRouter blog: Data Processing Incidents on Inference Providers</a> <span class="meta">Official source · Nov 22, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T00:10:00-05:00">Nov 22, 2026, 12:10 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="c013">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">Phala and Novita have posted their own notices</span><span class="row-sub">Phala says an attacker got into its systems and request data for one model was exposed for requests from Oct 21 to Nov 8. Novita says a routing error sent some MiniMax requests to MiniMax&#39;s own API from May 28 to Nov 11.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> Each company&#39;s own notice states its cause and window.</p>
+<p>These are separate incidents with different causes. Novita says the pattern suggests automated content review, not an attack. Together AI&#39;s cause (an exposed credential) is different from both.</p>
+<ul class="source-lines">
+<li><a href="https://novita.ai/blog/minimax-requests-privacy-notice/" rel="noopener">Novita AI: Privacy Notice Regarding MiniMax Requests on Novita</a> <span class="meta">Official source · Nov 22, 2026</span></li>
+<li><a href="https://phala.com/posts/phala-november-preliminary-incident-report" rel="noopener">Phala: November Preliminary Incident Report</a> <span class="meta">Official source · Nov 10, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T00:10:00-05:00">Nov 22, 2026, 12:10 AM ET</time></p>
+</div>
+</details>
+<details class="row" id="c014">
+<summary><span class="row-lead"><span class="pill pill-not-established" data-label="Not established">Not established</span></span><span class="row-main"><span class="row-title">Whether one attacker is behind all of these incidents</span><span class="row-sub">Phala says a single actor did both of its intrusions. No source links the Together AI intruder to Phala&#39;s attacker or anyone else.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> No source names the Together AI intruder or ties it to another incident.</p>
+<p>Dragos and Ars Technica say two of the three compromised providers were probably hit by the same adversary, but do not say which providers.</p>
+<ul class="source-lines">
+<li><a href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026" rel="noopener">Together AI blog: Security event: Prompt leakage for requests in June and July of 2026 (company statement)</a> <span class="meta">Official source · Nov 21, 2026</span></li>
+<li><a href="https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens" rel="noopener">Dragos: Three breaches, endless leaks: Your AI supply chain needs canaries</a> <span class="meta">Researcher or analysis · Nov 19, 2026</span></li>
+<li><a href="https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/" rel="noopener">Ars Technica: Researcher plants 2m canaries into the AI supply chain</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
+<li><a href="https://phala.com/posts/phala-november-preliminary-incident-report" rel="noopener">Phala: November Preliminary Incident Report</a> <span class="meta">Official source · Nov 10, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T00:10:00-05:00">Nov 22, 2026, 12:10 AM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="what-we-checked-and-did-not-find">
+<details class="fold">
+<summary><span class="sec-n">09</span><h2>What we checked and did not find</h2></summary>
+<div class="fold-body">
+<div class="prose">
+<p>We looked for these and did not find them as of 12:10 AM ET on Nov 22, 2026.</p>
+<ul>
+<li>Which customers or how many prompts were affected.</li>
+<li>Any claim of responsibility, or any attacker named.</li>
+<li>How long the credential was exposed on the public repository.</li>
+<li>Any statement saying which three providers Dragos found compromised.</li>
+<li>Any independent news report on Together AI&#39;s notice. Its notice reached Hacker News, which we do not count as a source.</li>
+<li>Any word on whether real customer credentials in the prompts were used.</li>
+</ul>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="update-log">
+<details class="fold">
+<summary><span class="sec-n">10</span><h2>Update log</h2><span class="count">1</span></summary>
+<div class="fold-body">
+<p class="meta">Every check and change, newest first.</p>
+<ol class="log">
+<li class="log-row" id="u001">
+<span class="log-when"><time datetime="2026-11-22T00:13:00-05:00">Nov 22, 2026, 12:13 AM ET</time></span>
+<span class="log-what"><strong>Together AI says an unauthorized party used an exposed credential to download stored test prompts from June and July.</strong> First draft. 6 sources (4 Tier 1, 1 Tier 2, 1 Tier 3), 14 claims, 5 questions. Together AI&#39;s own post confirms an unauthorized party used an exposed credential to download stored prompt samples. Tied to OpenRouter&#39;s post on data processing incidents and the Phala and Novita notices it links. No attacker named and no customer count. Privacy check done: no names of people, no handles, no contact details. <span class="meta">Added · Research agent</span></span>
+</li>
+</ol>
+</div>
+</details>
+</section>
+
+<section class="block" id="sources">
+<details class="fold">
+<summary><span class="sec-n">11</span><h2>Sources</h2><span class="count">6</span></summary>
+<div class="fold-body">
+<ol class="source-lines numbered">
+<li><a href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026" rel="noopener">Together AI blog: Security event: Prompt leakage for requests in June and July of 2026 (company statement)</a> <span class="meta">Official source · Nov 21, 2026</span></li>
+<li><a href="https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/" rel="noopener">OpenRouter blog: Data Processing Incidents on Inference Providers</a> <span class="meta">Official source · Nov 22, 2026</span></li>
+<li><a href="https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens" rel="noopener">Dragos: Three breaches, endless leaks: Your AI supply chain needs canaries</a> <span class="meta">Researcher or analysis · Nov 19, 2026</span></li>
+<li><a href="https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/" rel="noopener">Ars Technica: Researcher plants 2m canaries into the AI supply chain</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
+<li><a href="https://novita.ai/blog/minimax-requests-privacy-notice/" rel="noopener">Novita AI: Privacy Notice Regarding MiniMax Requests on Novita</a> <span class="meta">Official source · Nov 22, 2026</span></li>
+<li><a href="https://phala.com/posts/phala-november-preliminary-incident-report" rel="noopener">Phala: November Preliminary Incident Report</a> <span class="meta">Official source · Nov 10, 2026</span></li>
+</ol>
+</div>
+</details>
+</section>
+<footer class="page-foot">
+<p><a href="2026-11-together-ai-prompt-leak.md">Markdown version</a><a href="https://github.com/primeobsession/isitahack-dot-com/commits/main/data/incidents/2026-11-together-ai-prompt-leak" rel="noopener">Edit history</a><a href="../about.html#contact">Report an error</a></p>
+<p class="meta">Reading this as an AI assistant or a program? The same report is available as plain Markdown at <a href="2026-11-together-ai-prompt-leak.md">2026-11-together-ai-prompt-leak.md</a>, and <a href="../llms.txt">llms.txt</a> maps the whole site.</p>
+</footer>
+</div>
+<aside class="side" aria-label="Summary and other incidents">
+<div class="side-facts">
+<section class="side-block latest">
+<p class="kicker accent">The latest · <time datetime="2026-11-22T00:13:00-05:00">Nov 22, 2026, 12:13 AM ET</time></p>
+<p class="latest-headline">Together AI says an unauthorized party used an exposed credential to download stored test prompts from June and July.</p>
+<p class="latest-summary">First draft. 6 sources (4 Tier 1, 1 Tier 2, 1 Tier 3), 14 claims, 5 questions. Together AI&#39;s own post confirms an unauthorized party used an exposed credential to download stored prompt samples. Tied to OpenRouter&#39;s post on data processing incidents and the Phala and Novita notices it links. No attacker named and no customer count. Privacy check done: no names of people, no handles, no contact details.</p>
+<p><a href="#update-log">All 1 updates</a></p>
+</section>
+<section class="side-block">
+<dl class="reach">
+<div><dt>Size</dt><dd><strong>Regional.</strong> Together AI has not said how many customers or prompts were affected. The stored samples came from test requests to three models on four main days in June and July. The same week, OpenRouter dropped three providers over related findings.</dd></div>
+<div><dt>Who is affected</dt><dd>Together AI customers whose serverless requests to MiniMax M3, GLM-5.2 or Kimi K2.6 were sampled, mainly on Jun 24, Jul 4, Jul 8 and Jul 14. The company says it will contact affected customers directly.</dd></div>
+</dl>
+</section>
+<section class="side-block">
+<div class="evidence">
+<p class="kicker">Was it a hack? What has been said · 1</p>
+<div class="evidence-bar" role="img" aria-label="Confirmed 1"><span class="seg seg-confirmed" style="flex-grow:1"></span></div>
+<ul class="evidence-key"><li><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span class="count">1</span></li></ul>
+</div>
+</section>
+</div>
+<div class="side-more">
+<section class="side-block">
+<p class="kicker">Other incidents</p>
+<ul class="others">
+<li><a href="2026-11-rakuten-securities-breach.html">Rakuten Securities breach, Nov 2026</a><span class="meta">Monitoring · updated <time datetime="2026-11-21T23:50:43-05:00">Nov 21, 2026</time></span></li>
+<li><a href="2026-11-fbi-ncic-intrusion.html">FBI crime database (NCIC) intrusion, reported Nov 20, 2026</a><span class="meta">Monitoring · updated <time datetime="2026-11-21T21:07:00-05:00">Nov 21, 2026</time></span></li>
+<li><a href="2026-11-ticketmaster-outage.html">Ticketmaster outage, Nov 20, 2026</a><span class="meta">Monitoring · updated <time datetime="2026-11-21T21:06:19-05:00">Nov 21, 2026</time></span></li>
+<li><a href="2026-11-glinet-cloud-malware.html">GL.iNet cloud malware incident, Nov 20, 2026</a><span class="meta">Monitoring · updated <time datetime="2026-11-21T20:14:04-05:00">Nov 21, 2026</time></span></li>
+<li><a href="2026-11-microsoft-365-outage.html">Microsoft 365 outage, Nov 12-13, 2026</a><span class="meta">Monitoring · updated <time datetime="2026-11-21T18:45:00-05:00">Nov 21, 2026</time></span></li>
+</ul>
+<p><a href="../#incidents">All incidents</a></p>
+</section>
+</div>
+</aside>
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap footer-grid">
+<div>
+<span class="wordmark"><span>isita</span><b>hack</b><span class="tld">.com</span></span>
+<p class="disclaimer-short">Made for entertainment using AI. Not endorsed by Together AI, any government agency, news outlet, company, or anyone else named.</p>
+<p class="meta">Researched and organized by AI agents from public sources. Not security, legal, financial or safety advice.</p>
+</div>
+<nav class="footer-nav" aria-label="Footer">
+<a href="../#incidents">Incidents</a>
+<a href="../how-it-works.html">How it works</a>
+<a href="../about.html">About</a>
+<a href="https://github.com/primeobsession/isitahack-dot-com" rel="noopener">GitHub repository</a>
+<a href="https://x.com/isitahack" rel="noopener">isitahack on X</a>
+<a href="../about.html#contact">Report an error</a>
+<a class="mono" href="../index.json">index.json</a>
+<a class="mono" href="../llms.txt">llms.txt</a>
+</nav>
+</div>
+</footer>
+<script>(function(){var r=document.documentElement,b=document.querySelector(".theme-toggle");function cur(){return r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function paint(){var d=cur()==="dark";b.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme");b.setAttribute("aria-pressed",d?"true":"false")}if(b){b.hidden=false;paint();b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}paint()})}function reveal(){var id=decodeURIComponent(location.hash.slice(1));var el=id&&document.getElementById(id);if(!el)return;for(var p=el;p;p=p.parentElement)if(p.tagName==="DETAILS")p.open=true;el.scrollIntoView()}addEventListener("hashchange",reveal);reveal();var links=[].slice.call(document.querySelectorAll(".toc a"));if(links.length&&"IntersectionObserver"in window){var seen={};var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id]=e.isIntersecting});var on=null;links.forEach(function(a){var id=a.getAttribute("href").slice(1);if(!on&&seen[id])on=a});if(on)links.forEach(function(a){if(a===on)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")})},{rootMargin:"-10% 0px -60% 0px"});links.forEach(function(a){var s=document.getElementById(a.getAttribute("href").slice(1));if(s)io.observe(s)})}})();</script>
+</body>
+</html>
