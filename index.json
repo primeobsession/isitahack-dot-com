@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-aeon-credit-service-outage",
+      "title": "AEON Credit Service outage and unauthorized access, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T12:39:41-05:00",
+      "files": {
+        "page": "incidents/2026-11-aeon-credit-service-outage.md",
+        "html": "incidents/2026-11-aeon-credit-service-outage.html",
+        "data": "data/incidents/2026-11-aeon-credit-service-outage/"
+      }
+    },
+    {
       "slug": "2026-11-expedia-vendor-breach",
       "title": "Expedia third-party vendor breach, Nov 2026",
       "status": "monitoring",
@@ -143,17 +154,6 @@
         "page": "incidents/2026-11-ntt-docomo-customer-data-breach.md",
         "html": "incidents/2026-11-ntt-docomo-customer-data-breach.html",
         "data": "data/incidents/2026-11-ntt-docomo-customer-data-breach/"
-      }
-    },
-    {
-      "slug": "2026-11-aeon-credit-service-outage",
-      "title": "AEON Credit Service outage and unauthorized access, Nov 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-22T03:35:05-05:00",
-      "files": {
-        "page": "incidents/2026-11-aeon-credit-service-outage.md",
-        "html": "incidents/2026-11-aeon-credit-service-outage.html",
-        "data": "data/incidents/2026-11-aeon-credit-service-outage/"
       }
     },
     {
