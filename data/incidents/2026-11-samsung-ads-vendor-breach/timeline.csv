@@ -1,0 +1,6 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-14,,"Sat Nov 14, 2026",stated,"Per DailySecu, citing a threat-intel service, n0n lists Samsung as a victim",c002,"Date only. A claim by the group, relayed by press and not confirmed."
+t002,2026-11-16T20:06:00+09:00,,"8:06 PM JST, Mon Nov 16, 2026",stated,DailySecu updates its article with Samsung's statement on the third-party vendor incident,c001,"Time of the update, 6:06 AM Eastern the same day."
+t003,2026-11-19T05:47:00-05:00,,"5:47 AM ET, Thu Nov 19, 2026",stated,Cybernews first reports that n0n has dumped about 220MB of data it says is Samsung's,c002,"Time of first publication, converted from UTC. The date the group posted the files is not given."
+t004,2026-11-20,,"Fri Nov 20, 2026",stated,Cybernews adds the Samsung statement about the third-party vendor for Samsung Ads North America,c001,Date only. The page shows an update on Nov 20.
+t005,2026-11-20T09:14:45-05:00,,"9:14 AM ET, Fri Nov 20, 2026",stated,Android Headlines reports Samsung's confirmation,c001,"Time of publication, converted from UTC."
