@@ -1,0 +1,102 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-delta-weight-balance-outage",
+  "title": "Delta weight-and-balance outage, Nov 22, 2026",
+  "subject": {
+    "name": "Delta Air Lines",
+    "kind": "aviation"
+  },
+  "also_called": [
+    "Delta outage",
+    "Delta Atlanta ground stop",
+    "Delta ALIS outage"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-22",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Delta Air Lines, the FAA, any news outlet, government agency, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "More than 1,300 Delta flights were delayed on Nov 22, per ABC citing Delta, during the start of Thanksgiving travel. Delta says about 5,000 flights were scheduled that day.",
+  "who_is_affected": "Delta and Delta Connection passengers on Sunday, Nov 22, mainly at Atlanta and on flights into it. Delta says it is rebooking customers and offering meals, hotels and refunds.",
+  "known": [
+    {
+      "text": "Delta's weight-and-balance automation system went down on Sunday, Nov 22; crews used manual workarounds.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "The FAA stopped Atlanta-bound Delta flights at Delta's request, then eased it to a Delta-only delay just after 8:40 AM ET.",
+      "claim_id": "c003"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "What caused the outage. Delta gives no cause."
+    },
+    {
+      "text": "Whether a cyberattack was involved. No official statement addresses it either way."
+    },
+    {
+      "text": "Whether it relates to the FAA's Nov 13 ground stop or United's Nov 16 outage."
+    }
+  ],
+  "figures": [
+    {
+      "value": "1,300+",
+      "label": "Delta flights delayed",
+      "detail": "ABC, citing Delta",
+      "claim_id": "c006"
+    },
+    {
+      "value": "11:26 AM",
+      "label": "Ground delay lifted",
+      "detail": "NBC News, Eastern time",
+      "claim_id": "c004"
+    },
+    {
+      "value": "~70%",
+      "label": "Delays tied to automation",
+      "detail": "Delta, of ~5,000 flights",
+      "claim_id": "c007"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Delta outage"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

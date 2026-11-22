@@ -1,0 +1,5 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-22T00:00:00-05:00,,Sunday morning,approximate,"The FAA issues a ground stop for Delta flights bound for Atlanta, at Delta's request, after the weight-and-balance outage",c003,No clock time given for the start; Atlanta News First published at 8:16 AM ET.
+t002,2026-11-22T08:40:00-05:00,,Just after 8:40 AM,stated,The FAA downgrades the stop to a Delta-only ground delay program,c003,
+t003,2026-11-22T11:26:00-05:00,,,stated,"The FAA lifts the ground delay program for Atlanta-bound Delta flights, per NBC News",c004,
+t004,2026-11-22T15:48:00-05:00,,,stated,WSB-TV reports Delta says its weight-and-balance automation is working again,c005,"Time is the outlet's publication time, not Delta's statement time."
