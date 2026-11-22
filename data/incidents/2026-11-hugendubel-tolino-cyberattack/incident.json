@@ -1,0 +1,111 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-hugendubel-tolino-cyberattack",
+  "title": "Hugendubel tolino cyberattack, Nov 2026",
+  "subject": {
+    "name": "Hugendubel",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "the Hugendubel hack",
+    "the tolino cloud outage"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-19",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Hugendubel, tolino, dpa, Golem.de, retail-news.de, Netzwelt, DerWesten, Handelsblatt, DIE ZEIT, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Regional",
+  "size_basis": "A major German bookseller with more than 100 stores has its web shop, service center, email and tolino e-book cloud offline for days. Number of affected customers not published.",
+  "who_is_affected": "Hugendubel web shop customers and tolino e-reader owners who buy through Hugendubel. Books already on a device still open; new downloads, sync and Family Sharing do not work.",
+  "known": [
+    {
+      "text": "A Hugendubel spokesperson told dpa it was a hacker attack in the night of Nov 18 to 19.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The company's own notices call it a 'technical disruption' and do not mention an attack.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "The web shop, the tolino cloud and the service center are offline.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "Tolino cloud downloads of books not already on a device, reading-progress sync and Family Sharing do not work.",
+      "claim_id": "c005"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether it was ransomware.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Who the attacker was.",
+      "question_id": "q005"
+    },
+    {
+      "text": "How the attackers got in.",
+      "question_id": "q006"
+    },
+    {
+      "text": "When the shop and tolino cloud will be back.",
+      "question_id": "q007"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 19",
+      "label": "Systems taken offline",
+      "detail": "After an attack the night before, per the company",
+      "claim_id": "c001"
+    },
+    {
+      "value": "100+",
+      "label": "Hugendubel stores",
+      "detail": "Stores remain open, per the company",
+      "claim_id": "c013"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How did they get in?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Hugendubel attack"
+    },
+    {
+      "type": "claims",
+      "title": "What is affected?",
+      "group": "impact"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

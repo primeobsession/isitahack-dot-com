@@ -1,0 +1,6 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-19,,"Night of Nov 18 to 19, 2026",stated,"Hacker attack on Hugendubel's IT systems, per the company; it takes systems offline at once",c001,Date only; no clock time is given.
+t002,2026-11-19,,"Thu Nov 19, 2026",stated,"Hugendubel's website, web shop and service center become unreachable",c004,Per dpa and DerWesten: unreachable since Thursday.
+t003,2026-11-20,,"Fri Nov 20, 2026",stated,A Hugendubel spokesperson tells dpa it was a hacker attack and that no customer data was stolen; the company's help page on the tolino cloud is updated,c001,Date only.
+t004,2026-11-21,,"Sat Nov 21, 2026",stated,"Netzwelt reports further details the company shared on social media, including that the outage may last several more days",c012,Company's post was read only through Netzwelt.
+t005,2026-11-22T08:15:00-05:00,,"Sun Nov 22, 2026, 8:15 AM ET",stated,"hugendubel.de still shows only the 'technical disruption' notice; the shop, service center and tolino cloud remain offline",c004,Read directly by the desk.
