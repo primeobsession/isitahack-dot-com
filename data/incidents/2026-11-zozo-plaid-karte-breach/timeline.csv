@@ -3,6 +3,7 @@ t001,2026-11-13T08:59:00+09:00,,"8:59 AM JST, Fri Nov 13, 2026",stated,"PLAID de
 t002,2026-11-13,,"Fri Nov 13, 2026",stated,PLAID tells ZOZO; ZOZO stops its data link to KARTE,c002,"Date only, from ZOZO's notice."
 t003,2026-11-15,,"Sun Nov 15, 2026",stated,PLAID's investigation finds that data ZOZO managed on KARTE had leaked,c002,"Date only, from ZOZO's notice."
 t004,2026-11-16,,"Mon Nov 16, 2026",stated,"PLAID publishes its first notice confirming that data leaked, and that the attacker took credentials",c001,Date only.
+t008,2026-11-17,,"Tue Nov 17, 2026",stated,JINS and RIZAP publish their own notices: up to about 18.29 million JINS member accounts and up to about 4.32 million RIZAP emails affected,c013,"Date only, from the two companies' notices."
 t007,2026-11-18,,"Wed Nov 18, 2026",stated,"MUFG Bank publishes its own notice: about 6.5 million records of customers' gender, age and region leaked through KARTE",c013,"Date only, from the bank's notice."
 t005,2026-11-20,,"Fri Nov 20, 2026",stated,ZOZO publishes its notice with the counts; PLAID publishes its investigation results and a mid-January restart target,c003,Date only for both notices.
 t006,2026-11-20T21:03:00+09:00,,"9:03 PM JST, Fri Nov 20, 2026",stated,Nikkei reports the 15.18 million figure,c003,Time on the article.
