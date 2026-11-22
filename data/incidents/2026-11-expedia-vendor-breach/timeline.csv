@@ -1,3 +1,5 @@
 event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
 t001,2026-11-12T20:53:00-05:00,,"8:53 PM ET, Thu Nov 12, 2026",stated,Skift reports that Expedia confirmed a supply chain attack through a compromised third-party data platform provider,c001,Time on the article. Skift says Expedia confirmed on Thursday.
 t002,2026-11-17T09:23:06-05:00,,"9:23 AM ET, Tue Nov 17, 2026",stated,Cybernews reports the group has posted over 500MB of data and describes its contents,c005,"Time of publication, converted from UTC."
+t003,2026-11-09,,"Mon Nov 9, 2026",stated,Wiz and Sentra publish research on an attack that used Qubole's AWS access to take data from its customers,c008,Date only. The attack ran Oct 14 to 26. Neither names Expedia.
+t004,2026-11-20T10:58:00-05:00,,"10:58 AM ET, Fri Nov 20, 2026",stated,"BleepingComputer reports that JPMorgan Chase, Visa and Mastercard confirmed incidents at third-party providers after n0n listed them",c012,Time on the article.
