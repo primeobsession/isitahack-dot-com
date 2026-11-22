@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-kepco-customer-data-breach",
+      "title": "KEPCO customer data breach, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T06:47:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-kepco-customer-data-breach.md",
+        "html": "incidents/2026-11-kepco-customer-data-breach.html",
+        "data": "data/incidents/2026-11-kepco-customer-data-breach/"
+      }
+    },
+    {
       "slug": "2026-11-glinet-cloud-malware",
       "title": "GL.iNet cloud malware incident, Nov 20, 2026",
       "status": "monitoring",
@@ -9,17 +20,6 @@
         "page": "incidents/2026-11-glinet-cloud-malware.md",
         "html": "incidents/2026-11-glinet-cloud-malware.html",
         "data": "data/incidents/2026-11-glinet-cloud-malware/"
-      }
-    },
-    {
-      "slug": "2026-11-kepco-customer-data-breach",
-      "title": "KEPCO customer data breach, Nov 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-22T06:17:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-kepco-customer-data-breach.md",
-        "html": "incidents/2026-11-kepco-customer-data-breach.html",
-        "data": "data/incidents/2026-11-kepco-customer-data-breach/"
       }
     },
     {

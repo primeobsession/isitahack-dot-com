@@ -1,6 +1,6 @@
-We looked for these and did not find them as of the time of this report on Nov 22, 2026.
+We looked for these and did not find them as of Nov 22, 2026.
 
-- KEPCO's own notice or apology page. We read only outlets relaying it, which is why the main claim is Reported, not Confirmed.
+- KEPCO's press release attachment (we read its title and KEPCO's two website notices, not the attached file).
 - A cause report or any detail of how the attacker got in.
 - Any claim of responsibility, or any attacker named.
 - A de-duplicated count of distinct people affected.
