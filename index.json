@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-ntt-docomo-customer-data-breach",
+      "title": "NTT Docomo customer data breach, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T06:48:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-ntt-docomo-customer-data-breach.md",
+        "html": "incidents/2026-11-ntt-docomo-customer-data-breach.html",
+        "data": "data/incidents/2026-11-ntt-docomo-customer-data-breach/"
+      }
+    },
+    {
       "slug": "2026-11-kepco-customer-data-breach",
       "title": "KEPCO customer data breach, Nov 2026",
       "status": "monitoring",
@@ -44,17 +55,6 @@
         "data": "data/incidents/2026-11-faa-ground-stop/",
         "raw_dir": "data/incidents/2026-11-faa-ground-stop/raw/",
         "manifest": "data/incidents/2026-11-faa-ground-stop/MANIFEST.txt"
-      }
-    },
-    {
-      "slug": "2026-11-ntt-docomo-customer-data-breach",
-      "title": "NTT Docomo customer data breach, Nov 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-22T04:53:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-ntt-docomo-customer-data-breach.md",
-        "html": "incidents/2026-11-ntt-docomo-customer-data-breach.html",
-        "data": "data/incidents/2026-11-ntt-docomo-customer-data-breach/"
       }
     },
     {
