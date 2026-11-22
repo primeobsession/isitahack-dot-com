@@ -9,3 +9,5 @@ t005,2026-11-20,,"Fri Nov 20, 2026",stated,ZOZO publishes its notice with the co
 t006,2026-11-20T21:03:00+09:00,,"9:03 PM JST, Fri Nov 20, 2026",stated,Nikkei reports the 15.18 million figure,c003,Time on the article.
 t009,2026-11-17,,"Tue Nov 17, 2026",stated,"Shimamura publishes its first report: birth dates, gender, prefecture and postal code of about 7 million members leaked through KARTE",c013,"Date only, from the company's notice."
 t010,2026-11-18,,"Wed Nov 18, 2026",stated,"DHC publishes its notice: about 19.11 million customer records, including names and emails, leaked through KARTE",c013,"Date only, from the company's notice."
+t011,2026-11-20,,"Fri Nov 20, 2026",stated,"SMBC publishes its notice: up to about 14 million records of customer birth dates and similar attributes, not linked to names, leaked through KARTE",c013,"Date only, from the company's notice."
+t012,2026-11-20,,"Fri Nov 20, 2026",stated,Marui Group publishes its notice: about 8.83 million online-store records and about 8.5 million Epos card records leaked through KARTE,c013,"Date only, from the company's notice."

@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-zozo-plaid-karte-breach",
+      "title": "ZOZO customer data leak via PLAID KARTE, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T16:45:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-zozo-plaid-karte-breach.md",
+        "html": "incidents/2026-11-zozo-plaid-karte-breach.html",
+        "data": "data/incidents/2026-11-zozo-plaid-karte-breach/"
+      }
+    },
+    {
       "slug": "2026-11-wellington-it-credit-union-breach",
       "title": "Wellington IT credit union breach, Nov 2026",
       "status": "monitoring",
@@ -9,17 +20,6 @@
         "page": "incidents/2026-11-wellington-it-credit-union-breach.md",
         "html": "incidents/2026-11-wellington-it-credit-union-breach.html",
         "data": "data/incidents/2026-11-wellington-it-credit-union-breach/"
-      }
-    },
-    {
-      "slug": "2026-11-zozo-plaid-karte-breach",
-      "title": "ZOZO customer data leak via PLAID KARTE, Nov 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-22T15:50:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-zozo-plaid-karte-breach.md",
-        "html": "incidents/2026-11-zozo-plaid-karte-breach.html",
-        "data": "data/incidents/2026-11-zozo-plaid-karte-breach/"
       }
     },
     {
