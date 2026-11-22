@@ -1,6 +1,6 @@
 event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
-t001,2026-10-02T00:00:00+01:00,2026-10-04T23:59:00+01:00,"Oct 2 to Oct 4, 2026",approximate,"Malicious requests hit Wellington IT's CU Online platform: about 1.4 million per the league, about five million per Wellington's correspondence (Irish Examiner)",c006,"Whole days, Irish time. The Irish Times gives Oct 6 for the exploit."
-t002,2026-10-06,,"Oct 6, 2026",stated,Wellington IT closes the vulnerability,c007,Date from the league; the department says only that it is closed.
+t001,2026-10-02T00:00:00+01:00,2026-10-04T23:59:00+01:00,"Oct 2 to Oct 4, 2026",approximate,"Malicious requests hit Wellington IT's CU Online platform: about 1.4 million per the league, about five million per Wellington's correspondence (Irish Examiner)",c006,"Whole days, Irish time. Capital and Wexford credit unions' notices give Oct 2 to 4; The Irish Times gives Oct 6 for the exploit."
+t002,2026-10-06,,"Oct 6, 2026",stated,Wellington IT closes the vulnerability,c007,Date from the league and from Capital and Wexford credit unions' notices; the department says only that it is closed.
 t003,2026-11-15,,"Sun Nov 15, 2026",stated,"Wellington IT detects a possible breach, per the league",c008,Date only.
 t004,2026-11-16,,"Mon Nov 16, 2026",stated,Wellington IT emails affected credit unions,c008,The Irish Times says the email went out Monday.
 t005,2026-11-17,,"Tue Nov 17, 2026",stated,The Department of Finance first becomes aware of the incident,c009,From the department's statement.
