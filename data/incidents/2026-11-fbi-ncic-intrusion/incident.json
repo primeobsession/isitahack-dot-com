@@ -21,7 +21,7 @@
   "who_is_affected": "Potentially police and courts that rely on NCIC, and people with records in it. No source says whose records, if any, were reached, and there is no notice for the public to act on.",
   "known": [
     {
-      "text": "CNN and NBC News, each citing their own sources, report the FBI is investigating an apparent breach of NCIC.",
+      "text": "CNN, NBC News, AP and ABC News, each citing their own unnamed sources, report the FBI is investigating an apparent breach of NCIC.",
       "claim_id": "c001"
     },
     {
@@ -29,8 +29,12 @@
       "claim_id": "c006"
     },
     {
-      "text": "The FBI has not commented on the CNN or NBC News reports.",
+      "text": "The FBI has not commented on the reports.",
       "claim_id": "c003"
+    },
+    {
+      "text": "the President called the reported hack 'not good' on Nov 21 but gave no details.",
+      "claim_id": "c013"
     },
     {
       "text": "A separate breach hit the FBI jobs site in September; the FBI blamed a contractor's missed patch.",
@@ -39,7 +43,7 @@
   ],
   "not_known": [
     {
-      "text": "Whether the FBI confirms the breach. Both reports call it 'apparent' and rest on unnamed people briefed on the matter."
+      "text": "Whether the FBI confirms the breach. The reports rest on unnamed sources, and the President's remarks gave no details."
     },
     {
       "text": "What part of NCIC was reached, how the intruders got in, and who they are."

@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-fbi-ncic-intrusion",
+      "title": "FBI crime database (NCIC) intrusion, reported Nov 20, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-21T20:19:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-fbi-ncic-intrusion.md",
+        "html": "incidents/2026-11-fbi-ncic-intrusion.html",
+        "data": "data/incidents/2026-11-fbi-ncic-intrusion/"
+      }
+    },
+    {
       "slug": "2026-11-glinet-cloud-malware",
       "title": "GL.iNet cloud malware incident, Nov 20, 2026",
       "status": "monitoring",
@@ -242,17 +253,6 @@
         "page": "incidents/2026-11-opm-usa-staffing-access.md",
         "html": "incidents/2026-11-opm-usa-staffing-access.html",
         "data": "data/incidents/2026-11-opm-usa-staffing-access/"
-      }
-    },
-    {
-      "slug": "2026-11-fbi-ncic-intrusion",
-      "title": "FBI crime database (NCIC) intrusion, reported Nov 20, 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-21T00:10:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-fbi-ncic-intrusion.md",
-        "html": "incidents/2026-11-fbi-ncic-intrusion.html",
-        "data": "data/incidents/2026-11-fbi-ncic-intrusion/"
       }
     },
     {
