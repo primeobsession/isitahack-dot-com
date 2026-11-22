@@ -1,0 +1,94 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-expedia-vendor-breach",
+  "title": "Expedia third-party vendor breach, Nov 2026",
+  "subject": {
+    "name": "Expedia",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "the Expedia supply chain attack",
+    "the Expedia data leak"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-12",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Expedia, Skift, Cybernews, The Seattle Times or any other company, news outlet, government agency, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Regional",
+  "size_basis": "Unconfirmed. A group claims about a billion records; roughly 500MB has been posted, per Cybernews. Expedia has not said what was exposed.",
+  "who_is_affected": "Not yet clear. A posted dataset is said to hold traveler emails, bookings and loyalty details. Expedia has not confirmed that. Watch for fake booking emails.",
+  "known": [
+    {
+      "text": "Expedia confirmed attackers got in through a compromised third-party data platform provider.",
+      "claim_id": "c001"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether the billion-record claim is true.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Whether customer data was taken, and whose.",
+      "question_id": "q003"
+    },
+    {
+      "text": "Which vendor, and how the attacker got in.",
+      "question_id": "q004"
+    }
+  ],
+  "figures": [
+    {
+      "value": "1B",
+      "label": "Records claimed",
+      "detail": "Unverified; by n0n, per Cybernews",
+      "claim_id": "c004"
+    },
+    {
+      "value": "500MB+",
+      "label": "Posted so far",
+      "detail": "Per Cybernews",
+      "claim_id": "c005"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How did they get in?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Expedia vendor breach"
+    },
+    {
+      "type": "claims",
+      "title": "What data was involved?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
