@@ -1,6 +1,6 @@
-We looked for these and did not find them as of the latest update (Nov 21, 9 PM ET).
+We looked for these and did not find them as of the latest update (Nov 22, 9 AM ET).
 
-- A Ticketmaster or Live Nation statement giving the cause of the Nov 20 outage or the Nov 19 disruption. Its Nov 21 all-clear gives none.
+- A Ticketmaster or Live Nation statement giving the cause of the Nov 20 outage or the Nov 19 disruption. Its Nov 21 all-clear and its Saturday advice to fans give none.
 - A Ticketmaster status page or incident notice. We did not find a public one.
 - Any vendor, cloud provider or software update named as involved.
 - Any claim of responsibility or credible report of a hack.
