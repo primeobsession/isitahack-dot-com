@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-expedia-vendor-breach",
+      "title": "Expedia third-party vendor breach, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T15:31:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-expedia-vendor-breach.md",
+        "html": "incidents/2026-11-expedia-vendor-breach.html",
+        "data": "data/incidents/2026-11-expedia-vendor-breach/"
+      }
+    },
+    {
       "slug": "2026-11-glinet-cloud-malware",
       "title": "GL.iNet cloud malware incident, Nov 20, 2026",
       "status": "monitoring",
@@ -42,17 +53,6 @@
         "page": "incidents/2026-11-zozo-plaid-karte-breach.md",
         "html": "incidents/2026-11-zozo-plaid-karte-breach.html",
         "data": "data/incidents/2026-11-zozo-plaid-karte-breach/"
-      }
-    },
-    {
-      "slug": "2026-11-expedia-vendor-breach",
-      "title": "Expedia third-party vendor breach, Nov 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-22T14:30:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-expedia-vendor-breach.md",
-        "html": "incidents/2026-11-expedia-vendor-breach.html",
-        "data": "data/incidents/2026-11-expedia-vendor-breach/"
       }
     },
     {
