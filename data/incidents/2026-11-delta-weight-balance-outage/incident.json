@@ -18,7 +18,7 @@
   "verdict": null,
   "verdict_approved_at": null,
   "size": "Large",
-  "size_basis": "More than 1,300 Delta flights were delayed on Nov 22, per ABC citing Delta, during the start of Thanksgiving travel. Delta says about 5,000 flights were scheduled that day.",
+  "size_basis": "More than 1,600 Delta flights were delayed on Nov 22, per ABC citing Delta, during the start of Thanksgiving travel. Delta says about 5,000 flights were scheduled that day.",
   "who_is_affected": "Delta and Delta Connection passengers on Sunday, Nov 22, mainly at Atlanta and on flights into it. Delta says it is rebooking customers and offering meals, hotels and refunds.",
   "known": [
     {
@@ -43,7 +43,7 @@
   ],
   "figures": [
     {
-      "value": "1,300+",
+      "value": "1,600+",
       "label": "Delta flights delayed",
       "detail": "ABC, citing Delta",
       "claim_id": "c006"
