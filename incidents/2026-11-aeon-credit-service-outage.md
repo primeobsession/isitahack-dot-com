@@ -5,7 +5,7 @@ question: "Was AEON Credit Service hacked?"
 status: monitoring
 incident_date: 2026-11-18
 first_published: 2026-11-22T00:13:00-05:00
-last_updated: 2026-11-22T03:35:05-05:00
+last_updated: 2026-11-22T12:39:41-05:00
 size: "Local"
 data_dir: data/incidents/2026-11-aeon-credit-service-outage
 generated: true
@@ -18,7 +18,7 @@ disclaimer: "Made for entertainment using AI. Not endorsed by AEON Credit Servic
 
 **Confirmed.** Yes, by the company's own notice: AEON says it detected unauthorized access to its system. It has not said that this caused the outage, how the access happened, or who did it.
 
-Incident: AEON Credit Service outage and unauthorized access, Nov 2026. Also reported as the AEON credit card outage and the AEON Credit Service hack. First published Nov 22, 2026; last updated Nov 22, 2026, 3:35 AM ET.
+Incident: AEON Credit Service outage and unauthorized access, Nov 2026. Also reported as the AEON credit card outage and the AEON Credit Service hack. First published Nov 22, 2026; last updated Nov 22, 2026, 12:39 PM ET.
 
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by AEON Credit Service, any government agency, news outlet, company, or anyone else named.
 
@@ -26,7 +26,7 @@ This is the current answer, not a final verdict.
 
 ## The latest
 
-Nov 22, 2026, 3:35 AM ET: **Sing Tao Headline reports AEON's notice; an IT industry figure calls the shutdown a standard isolation step.** Added Sing Tao Headline (s009, Tier 2, Nov 21 HK time), which reports AEON's notice and that the portal and app came back on Nov 21; added to c001, c002 and c004, labels unchanged. New claim c010 (Reported): the honorary president of a Hong Kong IT trade group told Sing Tao Headline the two-day shutdown was a standard emergency isolation step, and said the two-day delay before confirming unauthorized access could weaken trust. That is an outside reading; c003 and q003 stay Not established because AEON has not tied the outage to the intrusion. AEON's notice is unchanged. No stock exchange announcement (latest Nov 16), no statement from the privacy commissioner's office, HKMA or police, no data types, count, cause or attacker. Staleness check done. Privacy check done: no names of people, no handles, no contact details.
+Nov 22, 2026, 12:39 PM ET: **AEON's Japanese parent reported a separate group website intrusion in October; no source links it to Hong Kong.** Added AEON Co., Ltd.'s Nov 10 notice (s010, Tier 1, in Japanese): some AEON group company websites were accessed without authorization (first announced Oct 21) and personal information leaked; it names only one Japanese group company as notifying. New claim c011 (Not established): no source we read connects that incident to AEON Credit Service (Asia)'s notice, and neither notice refers to the other. Other labels unchanged. AEON Hong Kong's notice is unchanged. No stock exchange announcement, no statement from the privacy commissioner's office, HKMA or police, no data types, count, cause or attacker, and AEON still has not tied the outage to the intrusion. Staleness check done. Privacy check done: no names of people, no handles, no contact details.
 
 ## At a glance
 
@@ -64,6 +64,7 @@ Nov 22, 2026, 3:35 AM ET: **Sing Tao Headline reports AEON's notice; an IT indus
 | Claim | Label | What we know | Why it supports, and more detail | Sources |
 |---|---|---|---|---|
 | How the intruder got in, and who did it | Not established | No source says how the access was gained, whether ransomware was involved, or who was behind it. | The notice and the news reports give no cause and no actor. No group has claimed responsibility in any source we read. | [AEON Credit Service (Asia): Important Notice on its homepage (company notice)](https://www.aeon.com.hk/en/index.html), [Dimsum Daily: AEON Credit Service reports unauthorised system access after two-day online outage](https://www.dimsumdaily.hk/aeon-credit-service-reports-unauthorised-system-access-after-two-day-online-outage/) |
+| Whether this is linked to the AEON group website intrusion reported in Japan | Not established | AEON's Japanese parent said on Nov 10 that some group company websites were accessed without authorization (first announced Oct 21) and personal information leaked. No source we read connects that to the Hong Kong incident. | The parent's notice confirms the Japanese incident in its own words but names no Hong Kong company; the Hong Kong notice does not refer to it. The Japanese notice names only one Japanese group company as notifying and does not mention Hong Kong. AEON Credit Service (Asia)'s own notice does not mention the Japanese incident. The two are separate notices from different companies in the same group; a link would need AEON to say so. | [AEON Co., Ltd. (Japan): unauthorized access to some AEON group websites and personal data leak (in Japanese)](https://www.aeon.info/wp-content/uploads/news/important/pdf/2026/11/20261110_1.pdf), [AEON Credit Service (Asia): Important Notice on its homepage (company notice)](https://www.aeon.com.hk/en/index.html) |
 
 ## Questions people are asking
 
@@ -109,7 +110,7 @@ Nov 22, 2026, 3:35 AM ET: **Sing Tao Headline reports AEON's notice; an IT indus
 
 ## What we checked and did not find
 
-We looked for these and did not find them as of 3:35 AM ET on Nov 22, 2026.
+We looked for these and did not find them as of 12:39 PM ET on Nov 22, 2026.
 
 - A statement from Hong Kong's privacy commissioner's office, the Hong Kong Monetary Authority or the police about this incident.
 - A stock exchange announcement by AEON Credit about the incident (checked on AEON's own announcements page).
@@ -122,6 +123,7 @@ We looked for these and did not find them as of 3:35 AM ET on Nov 22, 2026.
 
 | When | Update | Type |
 |---|---|---|
+| Nov 22, 2026, 12:39 PM ET | **AEON's Japanese parent reported a separate group website intrusion in October; no source links it to Hong Kong.** Added AEON Co., Ltd.'s Nov 10 notice (s010, Tier 1, in Japanese): some AEON group company websites were accessed without authorization (first announced Oct 21) and personal information leaked; it names only one Japanese group company as notifying. New claim c011 (Not established): no source we read connects that incident to AEON Credit Service (Asia)'s notice, and neither notice refers to the other. Other labels unchanged. AEON Hong Kong's notice is unchanged. No stock exchange announcement, no statement from the privacy commissioner's office, HKMA or police, no data types, count, cause or attacker, and AEON still has not tied the outage to the intrusion. Staleness check done. Privacy check done: no names of people, no handles, no contact details. | Updated |
 | Nov 22, 2026, 3:35 AM ET | **Sing Tao Headline reports AEON's notice; an IT industry figure calls the shutdown a standard isolation step.** Added Sing Tao Headline (s009, Tier 2, Nov 21 HK time), which reports AEON's notice and that the portal and app came back on Nov 21; added to c001, c002 and c004, labels unchanged. New claim c010 (Reported): the honorary president of a Hong Kong IT trade group told Sing Tao Headline the two-day shutdown was a standard emergency isolation step, and said the two-day delay before confirming unauthorized access could weaken trust. That is an outside reading; c003 and q003 stay Not established because AEON has not tied the outage to the intrusion. AEON's notice is unchanged. No stock exchange announcement (latest Nov 16), no statement from the privacy commissioner's office, HKMA or police, no data types, count, cause or attacker. Staleness check done. Privacy check done: no names of people, no handles, no contact details. | Updated |
 | Nov 22, 2026, 1:38 AM ET | **The Hong Kong Economic Journal also reports AEON's notice and that services came back on Nov 21.** Added the Hong Kong Economic Journal (s008, Tier 2, Nov 22 HK time), which reports AEON's notice of unauthorized access and that the card portal and app came back on Sat Nov 21; added to c001 and c002, labels unchanged. AEON's notice is unchanged. No stock exchange announcement (AEON's announcements page still shows Nov 16 as the latest), no statement from the privacy commissioner's office, HKMA or police, no data types, count, cause or attacker, and AEON still has not tied the outage to the intrusion. Staleness check done. Privacy check done: no names of people, no handles, no contact details. | Updated |
 | Nov 22, 2026, 12:43 AM ET | **AEON's card portal and app were already down more than 40 hours by Nov 20 and came back on Nov 21.** Correction: c002 and timeline row t002 said the 40-hour outage count was as of 2 PM on Nov 21 (HK time). Dimsum Daily's article published Nov 20 (s006) gives that count as of 2 PM on Nov 20; HK01's page was republished on Nov 22 and kept the earlier caption. Fixed both and added t004 for services coming back on Nov 21. Added Metro Radio (s007, Tier 2, Nov 21), which reports the notice and the Nov 21 restoration; added to c001 and c002, labels unchanged. AEON's notice is unchanged; no HKEX announcement (latest on AEON's investor page is Nov 16), no statement from the privacy commissioner's office, HKMA or police, no data types, count, cause or attacker. Other new reports (Commercial Radio, Bastille Post) repeat the notice. Staleness check done. Privacy check done: no names of people, no handles, no contact details. | Correction |
@@ -138,6 +140,7 @@ We looked for these and did not find them as of 3:35 AM ET on Nov 22, 2026.
 - [Metro Radio (Hong Kong): AEON Credit system accessed without authorization, company investigating (in Chinese)](https://www.metroradio.com.hk/news/details.aspx?NewsId=20261121220150) (News outlet, Nov 21, 2026)
 - [Hong Kong Economic Journal: AEON system accessed without authorization, no evidence so far of data misuse (in Chinese)](https://www.hkej.com/instantnews/current/article/4571210) (News outlet, Nov 22, 2026)
 - [Sing Tao Headline (Hong Kong): AEON portal and app down two days; IT figure calls it standard isolation (in Chinese)](https://www.stheadline.com/society/3639687/AEON%E4%BF%A1%E7%94%A8%E5%8D%A1%E7%B6%B2%E4%B8%8A%E5%B9%B3%E5%8F%B0%E5%8F%8A%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F%E6%9A%AB%E5%81%9C%E6%9C%8D%E5%8B%99%E9%80%BE%E5%85%A9%E6%97%A5-%E6%96%B9%E4%BF%9D%E5%83%91%E5%B1%AC%E6%96%BC%E6%A8%99%E6%BA%96%E7%B7%8A%E6%80%A5%E9%9A%94%E9%9B%A2%E6%8E%AA%E6%96%BD) (News outlet, Nov 21, 2026)
+- [AEON Co., Ltd. (Japan): unauthorized access to some AEON group websites and personal data leak (in Japanese)](https://www.aeon.info/wp-content/uploads/news/important/pdf/2026/11/20261110_1.pdf) (Official source, Nov 10, 2026)
 
 ## Data files
 
