@@ -1,0 +1,129 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-zozo-plaid-karte-breach",
+  "title": "ZOZO customer data leak via PLAID KARTE, Nov 2026",
+  "subject": {
+    "name": "ZOZO",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "the ZOZOTOWN data leak",
+    "the WEAR data leak",
+    "the PLAID KARTE breach"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-13",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by ZOZO, PLAID, Nikkei, CNET Japan or any other company, news outlet, government agency, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "About 15.18 million ZOZOTOWN users and 13.93 million WEAR users, per ZOZO. The two groups overlap by an unpublished amount. The same vendor breach hit hundreds of other companies.",
+  "who_is_affected": "ZOZOTOWN and WEAR by ZOZO users, including former ZOZOTOWN members, and current and former staff of brands on ZOZOTOWN. Leaked: member ID, age, gender, postal code; for about 47,000, also display name, email and phone. Passwords were not, per ZOZO. Expect fake emails and texts.",
+  "known": [
+    {
+      "text": "An outside party got into PLAID's KARTE service on Nov 13, and ZOZO data held there leaked.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "About 15.18M ZOZOTOWN users (former members too) had member ID, age, gender and postal code leaked.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "About 13.93M WEAR users and about 24,000 brand staff were also hit.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "Passwords were not exposed, per ZOZO.",
+      "claim_id": "c006"
+    },
+    {
+      "text": "PLAID says the intrusion hit many other companies, and KARTE has been off since Nov 13.",
+      "claim_id": "c011"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Who the attacker was.",
+      "question_id": "q006"
+    },
+    {
+      "text": "Whether the data has been used against people, or whether more was taken.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Whether PLAID's account of the method holds up to independent review.",
+      "question_id": "q005"
+    }
+  ],
+  "figures": [
+    {
+      "value": "15.18M",
+      "label": "ZOZOTOWN users",
+      "detail": "Former members included, per ZOZO",
+      "claim_id": "c003"
+    },
+    {
+      "value": "13.93M",
+      "label": "WEAR users",
+      "detail": "Member ID, age, gender",
+      "claim_id": "c004"
+    },
+    {
+      "value": "47K",
+      "label": "Also had email and phone",
+      "detail": "Within the ZOZOTOWN group",
+      "claim_id": "c003"
+    },
+    {
+      "value": "24K",
+      "label": "Brand staff",
+      "detail": "Current and former",
+      "claim_id": "c005"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How did they get in?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the ZOZO and PLAID KARTE breach"
+    },
+    {
+      "type": "claims",
+      "title": "What data was involved?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
