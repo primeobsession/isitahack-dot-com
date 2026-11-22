@@ -39,7 +39,7 @@
   ],
   "not_known": [
     {
-      "text": "Exactly which card details were taken; a notice says CVV/CVC too.",
+      "text": "Exactly which card details were taken; notices differ on whether the CVV/CVC or contact details were copied.",
       "question_id": "q002"
     },
     {
