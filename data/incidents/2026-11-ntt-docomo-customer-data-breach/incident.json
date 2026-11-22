@@ -12,12 +12,12 @@
   ],
   "status": "monitoring",
   "incident_date": "2026-11-04",
-  "disclaimer": "Made for entertainment using AI. Not endorsed by NTT Docomo, Jiji Press, Nippon.com, Nippon TV, Cybersecurity.com, any government agency, news outlet, company, or anyone else named.",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by NTT Docomo, Jiji Press, Nippon.com, Nippon TV, ITmedia, Cybersecurity.com, any government agency, news outlet, company, or anyone else named.",
   "main_question_id": "q001",
   "verdict": null,
   "verdict_approved_at": null,
   "size": "Large",
-  "size_basis": "Up to about 300,000 phone lines, per Docomo; one outlet gives 294,839 (204,157 personal, 90,682 corporate).",
+  "size_basis": "Up to about 300,000 phone lines, per Docomo; two outlets report the briefing figure of 294,839 (204,157 personal).",
   "who_is_affected": "Docomo customers, personal and corporate, whose data was held by My docomo and the online shop, including some who had already cancelled.",
   "known": [
     {
@@ -63,8 +63,8 @@
     },
     {
       "value": "294,839",
-      "label": "Exact count, one outlet",
-      "detail": "204,157 personal, 90,682 corporate",
+      "label": "Exact count, press briefing",
+      "detail": "204,157 of them personal",
       "claim_id": "c004"
     },
     {
