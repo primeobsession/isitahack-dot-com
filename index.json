@@ -12,6 +12,17 @@
       }
     },
     {
+      "slug": "2026-11-glinet-cloud-malware",
+      "title": "GL.iNet cloud malware incident, Nov 20, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T12:15:01-05:00",
+      "files": {
+        "page": "incidents/2026-11-glinet-cloud-malware.md",
+        "html": "incidents/2026-11-glinet-cloud-malware.html",
+        "data": "data/incidents/2026-11-glinet-cloud-malware/"
+      }
+    },
+    {
       "slug": "2026-11-tower-records-japan-breach",
       "title": "Tower Records Japan data breach, Nov 2026",
       "status": "monitoring",
@@ -97,17 +108,6 @@
         "page": "incidents/2026-11-ntt-docomo-customer-data-breach.md",
         "html": "incidents/2026-11-ntt-docomo-customer-data-breach.html",
         "data": "data/incidents/2026-11-ntt-docomo-customer-data-breach/"
-      }
-    },
-    {
-      "slug": "2026-11-glinet-cloud-malware",
-      "title": "GL.iNet cloud malware incident, Nov 20, 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-22T06:21:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-glinet-cloud-malware.md",
-        "html": "incidents/2026-11-glinet-cloud-malware.html",
-        "data": "data/incidents/2026-11-glinet-cloud-malware/"
       }
     },
     {
