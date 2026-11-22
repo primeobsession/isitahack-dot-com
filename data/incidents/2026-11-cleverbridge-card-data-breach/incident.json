@@ -1,0 +1,107 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-cleverbridge-card-data-breach",
+  "title": "Cleverbridge payment card breach, Nov 2026",
+  "subject": {
+    "name": "Cleverbridge",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "the Cleverbridge data breach",
+    "the Cleverbridge card theft"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-04",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Cleverbridge, BleepingComputer, Malwarebytes, Red Hat, SUSE, Tenable, Veeam, Jamf, Sony, Parallels or any other company, news outlet, government agency, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Regional",
+  "size_basis": "A payment platform used by many software sellers. No count of affected cards is published; one seller says a small subset of its customers were hit.",
+  "who_is_affected": "People who paid for software through Cleverbridge and got a notice. Check card statements, tell the card issuer about unknown charges, and ask whether a new card is needed.",
+  "known": [
+    {
+      "text": "A third party copied payment card data stored on Cleverbridge's platform.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Cleverbridge detected the activity on Nov 4 and had systems back online that day.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "Cleverbridge began notifying affected people on Nov 20.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "The company says it was not ransomware: no systems were encrypted.",
+      "claim_id": "c005"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Exactly which card details were taken; a notice says CVV/CVC too.",
+      "question_id": "q002"
+    },
+    {
+      "text": "How many people, and whose customers, were affected.",
+      "question_id": "q004"
+    },
+    {
+      "text": "How the attacker got in, and who they were.",
+      "question_id": "q005"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 4",
+      "label": "Activity detected",
+      "detail": "Systems back online the same day",
+      "claim_id": "c002"
+    },
+    {
+      "value": "Nov 20",
+      "label": "Notices began",
+      "detail": "Sent via an outside notification firm",
+      "claim_id": "c003"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How did they get in?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Cleverbridge breach"
+    },
+    {
+      "type": "claims",
+      "title": "What data was involved?",
+      "group": "impact"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

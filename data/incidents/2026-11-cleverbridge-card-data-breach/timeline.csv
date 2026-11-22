@@ -1,0 +1,4 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-04,,"Wed Nov 4, 2026",stated,"Cleverbridge detects unauthorised activity in its platform, takes systems offline, and brings them back online the same day",c002,Date only. The company does not say when the third party first got in.
+t002,2026-11-20,,"Fri Nov 20, 2026",stated,Cleverbridge begins notifying affected people,c003,Date only.
+t003,2026-11-22T10:43:00-05:00,,"10:43 AM ET, Sun Nov 22, 2026",stated,"BleepingComputer reports the card number, expiry date and CVV/CVC were taken, per a customer notice",c004,Time on the article.

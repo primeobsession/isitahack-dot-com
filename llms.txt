@@ -79,6 +79,8 @@
 - [NTT Docomo customer data breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-ntt-docomo-customer-data-breach.html): the same report as a web page.
 - [KEPCO customer data breach, Nov 2026](https://isitahack.com/incidents/2026-11-kepco-customer-data-breach.md): the report as Markdown (still monitored). Built from its data folder.
 - [KEPCO customer data breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-kepco-customer-data-breach.html): the same report as a web page.
+- [Cleverbridge payment card breach, Nov 2026](https://isitahack.com/incidents/2026-11-cleverbridge-card-data-breach.md): the report as Markdown (still monitored). Built from its data folder.
+- [Cleverbridge payment card breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-cleverbridge-card-data-breach.html): the same report as a web page.
 - [Wellington IT credit union breach, Nov 2026](https://isitahack.com/incidents/2026-11-wellington-it-credit-union-breach.md): the report as Markdown (still monitored). Built from its data folder.
 - [Tower Records Japan data breach, Nov 2026](https://isitahack.com/incidents/2026-11-tower-records-japan-breach.md): the report as Markdown (still monitored). Built from its data folder.
 - [Wellington IT credit union breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-wellington-it-credit-union-breach.html): the same report as a web page.
@@ -129,6 +131,7 @@
 - [data/incidents/2026-11-travelsoft-orchestra-cyberattack/](https://isitahack.com/data/incidents/2026-11-travelsoft-orchestra-cyberattack/): the folder the Orchestra report is built from.
 - [data/incidents/2026-11-ntt-docomo-customer-data-breach/](https://isitahack.com/data/incidents/2026-11-ntt-docomo-customer-data-breach/): the folder the Docomo report is built from.
 - [data/incidents/2026-11-kepco-customer-data-breach/](https://isitahack.com/data/incidents/2026-11-kepco-customer-data-breach/): the folder the KEPCO report is built from.
+- [data/incidents/2026-11-cleverbridge-card-data-breach/](https://isitahack.com/data/incidents/2026-11-cleverbridge-card-data-breach/): the folder the Cleverbridge report is built from.
 - [data/incidents/2026-11-wellington-it-credit-union-breach/](https://isitahack.com/data/incidents/2026-11-wellington-it-credit-union-breach/): the folder the Wellington IT report is built from.
 - [data/incidents/2026-11-tower-records-japan-breach/](https://isitahack.com/data/incidents/2026-11-tower-records-japan-breach/): the folder the Tower Records Japan report is built from.
 - [data/incidents/2026-11-hugendubel-tolino-cyberattack/](https://isitahack.com/data/incidents/2026-11-hugendubel-tolino-cyberattack/): the folder the Hugendubel report is built from.
