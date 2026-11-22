@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-zozo-plaid-karte-breach",
+      "title": "ZOZO customer data leak via PLAID KARTE, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T12:25:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-zozo-plaid-karte-breach.md",
+        "html": "incidents/2026-11-zozo-plaid-karte-breach.html",
+        "data": "data/incidents/2026-11-zozo-plaid-karte-breach/"
+      }
+    },
+    {
       "slug": "2026-11-tower-records-japan-breach",
       "title": "Tower Records Japan data breach, Nov 2026",
       "status": "monitoring",

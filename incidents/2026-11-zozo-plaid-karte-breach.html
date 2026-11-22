@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<title>Was the ZOZO data leak a hack? | Is It a Hack?</title>
+<meta name="description" content="Was the ZOZO data leak a hack? Yes, but at a supplier: an outside party got into PLAID&#39;s KARTE service on Nov 13 and took data, including customer data ZOZO kept there. Neither company says ZOZO&#39;s own systems were breached.">
+<link rel="canonical" href="https://isitahack.com/incidents/2026-11-zozo-plaid-karte-breach.html">
+<meta property="og:site_name" content="Is It a Hack?">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Was the ZOZO data leak a hack?">
+<meta property="og:description" content="Was the ZOZO data leak a hack? Yes, but at a supplier: an outside party got into PLAID&#39;s KARTE service on Nov 13 and took data, including customer data ZOZO kept there. Neither company says ZOZO&#39;s own systems were breached.">
+<meta property="og:url" content="https://isitahack.com/incidents/2026-11-zozo-plaid-karte-breach.html">
+<meta property="og:image" content="https://isitahack.com/assets/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Is it a hack? Public-source fact-checks of security news, with every claim labelled and linked to its source.">
+<meta property="article:published_time" content="2026-11-22T12:25:00-05:00">
+<meta property="article:modified_time" content="2026-11-22T12:25:00-05:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@isitahack">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-zozo-plaid-karte-breach.html#article","headline":"Was the ZOZO data leak a hack?","alternativeHeadline":"ZOZO customer data leak via PLAID KARTE, Nov 2026","description":"Was the ZOZO data leak a hack? Yes, but at a supplier: an outside party got into PLAID's KARTE service on Nov 13 and took data, including customer data ZOZO kept there. Neither company says ZOZO's own systems were breached.","abstract":"Yes, but at a supplier: an outside party got into PLAID's KARTE service on Nov 13 and took data, including customer data ZOZO kept there. Neither company says ZOZO's own systems were breached.","url":"https://isitahack.com/incidents/2026-11-zozo-plaid-karte-breach.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-zozo-plaid-karte-breach.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-22T12:25:00-05:00","dateModified":"2026-11-22T12:25:00-05:00","image":["https://isitahack.com/assets/social-card.png"],"about":{"@type":"Event","name":"ZOZO customer data leak via PLAID KARTE, Nov 2026","startDate":"2026-11-13"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"ZOZO customer data leak via PLAID KARTE, Nov 2026","item":"https://isitahack.com/incidents/2026-11-zozo-plaid-karte-breach.html"}]}</script>
+<link rel="alternate" type="text/markdown" href="2026-11-zozo-plaid-karte-breach.md" title="This report as Markdown">
+<link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<!-- AI assistants and other programs: this report is also available as plain Markdown at 2026-11-zozo-plaid-karte-breach.md (same folder). ../llms.txt maps the whole site. -->
+<a class="skip" href="#main">Skip to content</a>
+<div class="status-banner status-monitoring" role="status">
+<div class="wrap"><strong><span class="status-dot" aria-hidden="true"></span>Monitoring</strong><span>Last updated <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></span><span>Coverage is not final</span></div>
+</div>
+<header class="site-header wrap">
+<a class="brand" href="../"><svg class="mark" aria-hidden="true" width="32" height="32" viewBox="0 0 28 28" fill="none"><path d="M14 3 A11 11 0 0 1 14 25" stroke-width="2.6" stroke-linecap="round"/><path d="M14 25 A11 11 0 0 1 14 3" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="0.1 4.2"/><text x="14" y="19.4" text-anchor="middle" font-weight="800" font-size="15">?</text></svg><span class="wordmark"><span>isita</span><b>hack</b><span class="tld">.com</span></span></a>
+<nav class="site-nav" aria-label="Main">
+<a href="../#incidents">Incidents</a>
+<a href="../how-it-works.html">How it works</a>
+<a href="../about.html">About</a>
+<a href="https://github.com/primeobsession/isitahack-dot-com" rel="noopener">GitHub</a>
+</nav>
+<button class="theme-toggle" type="button" hidden aria-label="Switch to dark theme"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.1" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 1.900a7.100 7.100 0 0 1 0 14.200z" fill="currentColor"/></svg></button>
+</header>
+<main id="main" class="incident">
+<div class="wrap page-grid">
+<header class="page-head has-media">
+<div class="head-text">
+<p class="crumb"><a href="../#incidents">Incidents</a> / ZOZO customer data leak via PLAID KARTE, Nov 2026 · Incident date <time datetime="2026-11-13">Nov 13, 2026</time> · First published <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026</time></p>
+<h1 id="the-question">Was the ZOZO data leak a hack?</h1>
+<p class="aka">Also reported as the ZOZOTOWN data leak, the WEAR data leak and the PLAID KARTE breach.</p>
+</div>
+<figure class="head-media"><svg class="plate" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" role="img" aria-label="ZOZO: online service">
+<rect class="plate-bg" width="640" height="360"/>
+<path class="plate-rule" d="M36 72H604"/>
+<g class="plate-art" transform="translate(352 22) scale(0.78)"><path class="tint" d="M85 235H245a55 55 0 0 0 5-110a82 82 0 0 0-155-25a68 68 0 0 0-10 135z"/><path d="M85 235H245a55 55 0 0 0 5-110a82 82 0 0 0-155-25a68 68 0 0 0-10 135z"/><path class="faint" d="M120 265V300M165 265V318M210 265V300"/><circle class="solid" cx="120" cy="312" r="6"/><circle class="solid" cx="210" cy="312" r="6"/></g>
+<text class="plate-kind" x="36" y="52">Online service</text>
+<text class="plate-name" x="34" y="322" font-size="132">ZOZO</text>
+</svg></figure>
+<section class="answer-box" aria-labelledby="the-question">
+<div class="answer-head"><p class="kicker">Is it a hack? The short answer</p><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></div>
+<p class="answer">Yes, but at a supplier: an outside party got into PLAID&#39;s KARTE service on Nov 13 and took data, including customer data ZOZO kept there. Neither company says ZOZO&#39;s own systems were breached.</p>
+<p class="answer-refs"><span class="field">Rests on</span> <a href="#c001">An outside party got into PLAID&#39;s KARTE service without authorisation, and ZOZO customer data held there leaked</a> · <a href="#c002">PLAID detected the intrusion on Nov 13; ZOZO cut its data link to KARTE that day; PLAID&#39;s probe showed ZOZO&#39;s data had leaked by Nov 15</a></p>
+<p class="answer-note">This is the current answer, not a final verdict. A final verdict is published only after the site's owner has reviewed the evidence.</p>
+</section>
+<p class="byline">By the isitahack.com desk. AI agents research public sources and label each claim; a person decides only the final verdict. <a href="../how-it-works.html">How it works</a></p>
+</header>
+<nav class="toc" aria-label="On this page">
+<p class="kicker">On this page</p>
+<ol>
+<li><a href="#glance"><span class="toc-n">01</span><span class="toc-name">At a glance</span></a></li>
+<li><a href="#was-it-a-hack-what-has-been-said"><span class="toc-n">02</span><span class="toc-name">Was it a hack? What has been said</span><span class="count">1</span></a></li>
+<li><a href="#how-did-they-get-in"><span class="toc-n">03</span><span class="toc-name">How did they get in?</span><span class="count">2</span></a></li>
+<li><a href="#questions-people-are-asking"><span class="toc-n">04</span><span class="toc-name">Questions people are asking</span><span class="count">6</span></a></li>
+<li><a href="#what-happened"><span class="toc-n">05</span><span class="toc-name">What happened?</span><span class="count">1</span></a></li>
+<li><a href="#timeline-of-the-zozo-and-plaid-karte-breach"><span class="toc-n">06</span><span class="toc-name">Timeline of the ZOZO and PLAID KARTE breach</span><span class="count">6</span></a></li>
+<li><a href="#what-data-was-involved"><span class="toc-n">07</span><span class="toc-name">What data was involved?</span><span class="count">6</span></a></li>
+<li><a href="#related"><span class="toc-n">08</span><span class="toc-name">Related</span><span class="count">2</span></a></li>
+<li><a href="#what-we-checked-and-did-not-find"><span class="toc-n">09</span><span class="toc-name">What we checked and did not find</span></a></li>
+<li><a href="#update-log"><span class="toc-n">10</span><span class="toc-name">Update log</span><span class="count">1</span></a></li>
+<li><a href="#sources"><span class="toc-n">11</span><span class="toc-name">Sources</span><span class="count">5</span></a></li>
+</ol>
+</nav>
+<div class="page-main">
+<aside class="note">
+<p><strong>Not verified: initial investigation only.</strong> Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them.</p>
+<p>Made for entertainment using AI. Not endorsed by ZOZO, PLAID, Nikkei, CNET Japan or any other company, news outlet, government agency, or anyone else named.</p>
+</aside>
+<section class="block" id="glance">
+<div class="block-head"><span class="sec-n">01</span><h2>At a glance</h2></div>
+<ul class="tiles">
+<li class="tile"><a href="#c003"><span class="tile-value">15.18M</span><span class="tile-label">ZOZOTOWN users</span><span class="tile-detail">Former members included, per ZOZO</span></a></li>
+<li class="tile"><a href="#c004"><span class="tile-value">13.93M</span><span class="tile-label">WEAR users</span><span class="tile-detail">Member ID, age, gender</span></a></li>
+<li class="tile"><a href="#c003"><span class="tile-value">47K</span><span class="tile-label">Also had email and phone</span><span class="tile-detail">Within the ZOZOTOWN group</span></a></li>
+<li class="tile"><a href="#c005"><span class="tile-value">24K</span><span class="tile-label">Brand staff</span><span class="tile-detail">Current and former</span></a></li>
+</ul>
+<div class="known-grid">
+<div class="known"><h3>Known so far</h3><ul>
+<li>An outside party got into PLAID&#39;s KARTE service on Nov 13, and ZOZO data held there leaked. <a class="ref" href="#c001">evidence</a></li>
+<li>About 15.18M ZOZOTOWN users (former members too) had member ID, age, gender and postal code leaked. <a class="ref" href="#c003">evidence</a></li>
+<li>About 13.93M WEAR users and about 24,000 brand staff were also hit. <a class="ref" href="#c004">evidence</a></li>
+<li>Passwords were not exposed, per ZOZO. <a class="ref" href="#c006">evidence</a></li>
+<li>PLAID says the intrusion hit many other companies, and KARTE has been off since Nov 13. <a class="ref" href="#c011">evidence</a></li>
+</ul></div>
+<div class="not-known"><h3>Not known yet</h3><ul>
+<li>Who the attacker was. <a class="ref" href="#q006">open question</a></li>
+<li>Whether the data has been used against people, or whether more was taken. <a class="ref" href="#q004">open question</a></li>
+<li>Whether PLAID&#39;s account of the method holds up to independent review. <a class="ref" href="#q005">open question</a></li>
+</ul></div>
+</div>
+</section>
+
+<section class="block" id="was-it-a-hack-what-has-been-said">
+<details class="fold" open>
+<summary><span class="sec-n">02</span><h2>Was it a hack? What has been said</h2><span class="count">1</span></summary>
+<div class="fold-body">
+<div class="rows">
+<details class="row" id="c001">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">An outside party got into PLAID&#39;s KARTE service without authorisation, and ZOZO customer data held there leaked</span><span class="row-sub">ZOZO says PLAID, which runs the external service KARTE, reported unauthorised access by a third party, and that some customer data ZOZO managed on KARTE leaked. PLAID&#39;s own notices confirm the access to KARTE and date it to Nov 13.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> ZOZO (Tier 1) and PLAID (Tier 1) each state the access; Nikkei and CNET Japan repeat ZOZO&#39;s notice.</p>
+<p>Two separate companies&#39; own notices (ZOZO and PLAID) state the access. Nikkei and CNET Japan relay ZOZO&#39;s notice, so for sourcing they count as one source behind it. ZOZO&#39;s notice describes data it kept on the KARTE service; it does not say ZOZO&#39;s own systems were breached.</p>
+<ul class="source-lines">
+<li><a href="https://corp.zozo.com/information/20261120-482917/" rel="noopener">ZOZO: notice on unauthorised access to the external service KARTE (Japanese; dated Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://plaid.co.jp/news/20261116/" rel="noopener">PLAID: notice on leak of information that may include personal data (Japanese; Nov 16, updated Nov 20)</a> <span class="meta">Official source · Nov 16, 2026</span></li>
+<li><a href="https://plaid.co.jp/news/20261120/" rel="noopener">PLAID: investigation results on the KARTE unauthorised access and outlook for restart (Japanese; Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.nikkei.com/article/DGXZQOUC20APN0Q6A121C2000000/" rel="noopener">Nikkei: ZOZO says 15.18 million records leaked after contractor hacked (Japanese; free part read)</a> <span class="meta">News outlet · Nov 20, 2026, 9:03 PM UTC+09:00</span></li>
+<li><a href="https://japan.cnet.com/article/35255260/" rel="noopener">CNET Japan: ZOZOTOWN, 15.18 million records leaked incl. former members; contractor KARTE hit (Japanese)</a> <span class="meta">News outlet · Nov 22, 2026, 5:10 AM UTC+09:00</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="how-did-they-get-in">
+<details class="fold" open>
+<summary><span class="sec-n">03</span><h2>How did they get in?</h2><span class="count">2</span></summary>
+<div class="fold-body">
+<div class="rows">
+<details class="row" id="c009">
+<summary><span class="row-lead"><span class="pill pill-reported" data-label="Reported">Reported</span></span><span class="row-main"><span class="row-title">How the attacker got in: PLAID says they used a flaw in an internal process on a public-facing route to take data, then used stolen credentials to reach KARTE&#39;s admin console</span><span class="row-sub">PLAID says that on Nov 13 a third party tried several routes and exploited a weakness in internal handling on a publicly reachable path. That let them take data and credentials, which they then used to reach the KARTE admin screen.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> PLAID&#39;s own notices (Tier 1) give the method; it is one company&#39;s account of its own incident, with independent review still pending.</p>
+<p>This is the vendor&#39;s own account of its own breach. No outside forensic report has been published. PLAID says it plans an external security investigation and third-party verification and will publish prevention measures from the results. The notice does not name the flaw.</p>
+<ul class="source-lines">
+<li><a href="https://plaid.co.jp/news/20261116/" rel="noopener">PLAID: notice on leak of information that may include personal data (Japanese; Nov 16, updated Nov 20)</a> <span class="meta">Official source · Nov 16, 2026</span></li>
+<li><a href="https://plaid.co.jp/news/20261120/" rel="noopener">PLAID: investigation results on the KARTE unauthorised access and outlook for restart (Japanese; Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+<details class="row" id="c010">
+<summary><span class="row-lead"><span class="pill pill-not-established" data-label="Not established">Not established</span></span><span class="row-main"><span class="row-title">Who is behind the PLAID KARTE attack</span><span class="row-sub">Neither ZOZO, PLAID, Nikkei nor CNET Japan names an attacker or a claim of responsibility.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> None of the five sources names an attacker.</p>
+<p>PLAID says it is reporting to Japan&#39;s personal information protection regulator and consulting police. We did not look at leak sites or forums for claims, and would cite such claims only through press.</p>
+<ul class="source-lines">
+<li><a href="https://corp.zozo.com/information/20261120-482917/" rel="noopener">ZOZO: notice on unauthorised access to the external service KARTE (Japanese; dated Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://plaid.co.jp/news/20261116/" rel="noopener">PLAID: notice on leak of information that may include personal data (Japanese; Nov 16, updated Nov 20)</a> <span class="meta">Official source · Nov 16, 2026</span></li>
+<li><a href="https://plaid.co.jp/news/20261120/" rel="noopener">PLAID: investigation results on the KARTE unauthorised access and outlook for restart (Japanese; Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.nikkei.com/article/DGXZQOUC20APN0Q6A121C2000000/" rel="noopener">Nikkei: ZOZO says 15.18 million records leaked after contractor hacked (Japanese; free part read)</a> <span class="meta">News outlet · Nov 20, 2026, 9:03 PM UTC+09:00</span></li>
+<li><a href="https://japan.cnet.com/article/35255260/" rel="noopener">CNET Japan: ZOZOTOWN, 15.18 million records leaked incl. former members; contractor KARTE hit (Japanese)</a> <span class="meta">News outlet · Nov 22, 2026, 5:10 AM UTC+09:00</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="questions-people-are-asking">
+<details class="fold" open>
+<summary><span class="sec-n">04</span><h2>Questions people are asking</h2><span class="count">6</span></summary>
+<div class="fold-body">
+<div class="rows">
+<details class="row" id="q001">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">Was the ZOZO data leak a hack?</span><span class="row-sub">Yes, but at a supplier: an outside party got into PLAID&#39;s KARTE service on Nov 13 and took data, including customer data ZOZO kept there. Neither company says ZOZO&#39;s own systems were breached.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Rests on</span> <a href="#c001">An outside party got into PLAID&#39;s KARTE service without authorisation, and ZOZO customer data held there leaked</a> · <a href="#c002">PLAID detected the intrusion on Nov 13; ZOZO cut its data link to KARTE that day; PLAID&#39;s probe showed ZOZO&#39;s data had leaked by Nov 15</a></p>
+<p class="meta">Question recorded <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time> · answered <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+<details class="row" id="q002">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">What data did the ZOZO leak expose?</span><span class="row-sub">Per ZOZO: about 15.18M ZOZOTOWN users (member ID, age, gender, postal code; about 47,000 also display name, email, phone), about 13.93M WEAR users (member ID, age, gender) and about 24,000 brand staff (member ID, company, name).</span></span></summary>
+<div class="row-body">
+<p><span class="field">Rests on</span> <a href="#c003">About 15.18 million ZOZOTOWN users, including former members, had member ID, age, gender and postal code leaked; about 47,000 also had display name, email and phone number</a> · <a href="#c004">About 13.93 million WEAR by ZOZO users had member ID, age and gender leaked</a> · <a href="#c005">About 24,000 current and former staff of brands selling on ZOZOTOWN had member ID, company name and name leaked</a></p>
+<p class="meta">Question recorded <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time> · answered <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+<details class="row" id="q003">
+<summary><span class="row-lead"><span class="pill pill-reported" data-label="Reported">Reported</span></span><span class="row-main"><span class="row-title">Were passwords or credit cards exposed in the ZOZO leak?</span><span class="row-sub">Passwords no, per ZOZO: it does not keep them on KARTE. Cards: none found so far, per ZOZO&#39;s Nov 20 notice.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Rests on</span> <a href="#c006">No passwords were exposed</a> · <a href="#c007">No credit card leak has been found so far</a></p>
+<p class="meta">Question recorded <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time> · answered <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+<details class="row" id="q004">
+<summary><span class="row-lead"><span class="pill pill-reported" data-label="Reported">Reported</span></span><span class="row-main"><span class="row-title">Has the leaked ZOZO data been used against customers?</span><span class="row-sub">Not as of Nov 20, per ZOZO, which warns about fake emails, texts and calls. That is the company&#39;s own snapshot.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Rests on</span> <a href="#c008">No secondary harm from the leak was known as of Nov 20, per ZOZO, which warns of fake emails, texts and calls</a></p>
+<p class="meta">Question recorded <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time> · answered <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+<details class="row" id="q005">
+<summary><span class="row-lead"><span class="pill pill-reported" data-label="Reported">Reported</span></span><span class="row-main"><span class="row-title">How did the attacker get into PLAID&#39;s KARTE?</span><span class="row-sub">PLAID says they exploited a flaw in internal handling on a public-facing route to pull data, then used stolen credentials to reach the admin console. That is the vendor&#39;s own account; independent review is pending.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Rests on</span> <a href="#c009">How the attacker got in: PLAID says they used a flaw in an internal process on a public-facing route to take data, then used stolen credentials to reach KARTE&#39;s admin console</a></p>
+<p class="meta">Question recorded <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time> · answered <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+<details class="row" id="q006">
+<summary><span class="row-lead"><span class="chip">Open</span></span><span class="row-main"><span class="row-title">Who is behind the PLAID KARTE attack?</span><span class="row-sub">Not answered yet.</span></span></summary>
+<div class="row-body">
+<p><span class="field">What would settle it</span> A police or regulator attribution, or a claim of responsibility reported by reliable press.</p>
+<p><span class="field">Rests on</span> <a href="#c010">Who is behind the PLAID KARTE attack</a></p>
+<p class="meta">Question recorded <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="what-happened">
+<details class="fold" open>
+<summary><span class="sec-n">05</span><h2>What happened?</h2><span class="count">1</span></summary>
+<div class="fold-body">
+<div class="rows">
+<details class="row" id="c002">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">PLAID detected the intrusion on Nov 13; ZOZO cut its data link to KARTE that day; PLAID&#39;s probe showed ZOZO&#39;s data had leaked by Nov 15</span><span class="row-sub">PLAID says it detected the access at 8:59 AM JST on Nov 13 and had blocked the attacker by about 3:23 PM. ZOZO says PLAID told it that day, it cut the data link at once, and PLAID found on Nov 15 that ZOZO&#39;s data had leaked.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> ZOZO&#39;s notice gives the Nov 13 and Nov 15 dates; PLAID&#39;s notice gives the detection time and containment steps; Nikkei and CNET Japan repeat ZOZO.</p>
+<p>PLAID says it revoked the stolen credentials, began stopping servers from about 2:27 PM and switched KARTE off for all customers on Nov 13. The times are from its Nov 16 notice. ZOZO published its own notice on Nov 20.</p>
+<ul class="source-lines">
+<li><a href="https://corp.zozo.com/information/20261120-482917/" rel="noopener">ZOZO: notice on unauthorised access to the external service KARTE (Japanese; dated Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://plaid.co.jp/news/20261116/" rel="noopener">PLAID: notice on leak of information that may include personal data (Japanese; Nov 16, updated Nov 20)</a> <span class="meta">Official source · Nov 16, 2026</span></li>
+<li><a href="https://www.nikkei.com/article/DGXZQOUC20APN0Q6A121C2000000/" rel="noopener">Nikkei: ZOZO says 15.18 million records leaked after contractor hacked (Japanese; free part read)</a> <span class="meta">News outlet · Nov 20, 2026, 9:03 PM UTC+09:00</span></li>
+<li><a href="https://japan.cnet.com/article/35255260/" rel="noopener">CNET Japan: ZOZOTOWN, 15.18 million records leaked incl. former members; contractor KARTE hit (Japanese)</a> <span class="meta">News outlet · Nov 22, 2026, 5:10 AM UTC+09:00</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="timeline-of-the-zozo-and-plaid-karte-breach">
+<details class="fold">
+<summary><span class="sec-n">06</span><h2>Timeline of the ZOZO and PLAID KARTE breach</h2><span class="count">6</span></summary>
+<div class="fold-body">
+<p class="meta">Times are UTC+09:00. Each row opens to show its evidence and source.</p>
+<div class="rows rows-timeline">
+<details class="row" id="t001">
+<summary><span class="row-lead"><span class="row-day">Nov 13</span> <time datetime="2026-11-13T08:59:00+09:00">8:59 AM JST, Fri Nov 13, 2026</time></span><span class="row-main"><span class="row-title">PLAID detects the unauthorised access, which began in the early hours, and starts stopping all KARTE services</span></span><span class="row-trail"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span></summary>
+<div class="row-body">
+<p>PLAID says it detected the access at 8:59 AM JST on Nov 13 and had blocked the attacker by about 3:23 PM. ZOZO says PLAID told it that day, it cut the data link at once, and PLAID found on Nov 15 that ZOZO&#39;s data had leaked.</p>
+<p class="meta">Time from PLAID&#39;s Nov 16 notice. That is 6:59 PM Eastern on Thu Nov 12.</p>
+<p><span class="field">Why it supports</span> ZOZO&#39;s notice gives the Nov 13 and Nov 15 dates; PLAID&#39;s notice gives the detection time and containment steps; Nikkei and CNET Japan repeat ZOZO.</p>
+<p>PLAID says it revoked the stolen credentials, began stopping servers from about 2:27 PM and switched KARTE off for all customers on Nov 13. The times are from its Nov 16 notice. ZOZO published its own notice on Nov 20.</p>
+<ul class="source-lines">
+<li><a href="https://corp.zozo.com/information/20261120-482917/" rel="noopener">ZOZO: notice on unauthorised access to the external service KARTE (Japanese; dated Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://plaid.co.jp/news/20261116/" rel="noopener">PLAID: notice on leak of information that may include personal data (Japanese; Nov 16, updated Nov 20)</a> <span class="meta">Official source · Nov 16, 2026</span></li>
+<li><a href="https://www.nikkei.com/article/DGXZQOUC20APN0Q6A121C2000000/" rel="noopener">Nikkei: ZOZO says 15.18 million records leaked after contractor hacked (Japanese; free part read)</a> <span class="meta">News outlet · Nov 20, 2026, 9:03 PM UTC+09:00</span></li>
+<li><a href="https://japan.cnet.com/article/35255260/" rel="noopener">CNET Japan: ZOZOTOWN, 15.18 million records leaked incl. former members; contractor KARTE hit (Japanese)</a> <span class="meta">News outlet · Nov 22, 2026, 5:10 AM UTC+09:00</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+<details class="row" id="t002">
+<summary><span class="row-lead"><span class="row-day">Nov 13</span> <time datetime="2026-11-13">Fri Nov 13, 2026</time></span><span class="row-main"><span class="row-title">PLAID tells ZOZO; ZOZO stops its data link to KARTE</span></span><span class="row-trail"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span></summary>
+<div class="row-body">
+<p>PLAID says it detected the access at 8:59 AM JST on Nov 13 and had blocked the attacker by about 3:23 PM. ZOZO says PLAID told it that day, it cut the data link at once, and PLAID found on Nov 15 that ZOZO&#39;s data had leaked.</p>
+<p class="meta">Date only, from ZOZO&#39;s notice.</p>
+<p><span class="field">Why it supports</span> ZOZO&#39;s notice gives the Nov 13 and Nov 15 dates; PLAID&#39;s notice gives the detection time and containment steps; Nikkei and CNET Japan repeat ZOZO.</p>
+<p>PLAID says it revoked the stolen credentials, began stopping servers from about 2:27 PM and switched KARTE off for all customers on Nov 13. The times are from its Nov 16 notice. ZOZO published its own notice on Nov 20.</p>
+<ul class="source-lines">
+<li><a href="https://corp.zozo.com/information/20261120-482917/" rel="noopener">ZOZO: notice on unauthorised access to the external service KARTE (Japanese; dated Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://plaid.co.jp/news/20261116/" rel="noopener">PLAID: notice on leak of information that may include personal data (Japanese; Nov 16, updated Nov 20)</a> <span class="meta">Official source · Nov 16, 2026</span></li>
+<li><a href="https://www.nikkei.com/article/DGXZQOUC20APN0Q6A121C2000000/" rel="noopener">Nikkei: ZOZO says 15.18 million records leaked after contractor hacked (Japanese; free part read)</a> <span class="meta">News outlet · Nov 20, 2026, 9:03 PM UTC+09:00</span></li>
+<li><a href="https://japan.cnet.com/article/35255260/" rel="noopener">CNET Japan: ZOZOTOWN, 15.18 million records leaked incl. former members; contractor KARTE hit (Japanese)</a> <span class="meta">News outlet · Nov 22, 2026, 5:10 AM UTC+09:00</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+<details class="row" id="t003">
+<summary><span class="row-lead"><span class="row-day">Nov 15</span> <time datetime="2026-11-15">Sun Nov 15, 2026</time></span><span class="row-main"><span class="row-title">PLAID&#39;s investigation finds that data ZOZO managed on KARTE had leaked</span></span><span class="row-trail"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span></summary>
+<div class="row-body">
+<p>PLAID says it detected the access at 8:59 AM JST on Nov 13 and had blocked the attacker by about 3:23 PM. ZOZO says PLAID told it that day, it cut the data link at once, and PLAID found on Nov 15 that ZOZO&#39;s data had leaked.</p>
+<p class="meta">Date only, from ZOZO&#39;s notice.</p>
+<p><span class="field">Why it supports</span> ZOZO&#39;s notice gives the Nov 13 and Nov 15 dates; PLAID&#39;s notice gives the detection time and containment steps; Nikkei and CNET Japan repeat ZOZO.</p>
+<p>PLAID says it revoked the stolen credentials, began stopping servers from about 2:27 PM and switched KARTE off for all customers on Nov 13. The times are from its Nov 16 notice. ZOZO published its own notice on Nov 20.</p>
+<ul class="source-lines">
+<li><a href="https://corp.zozo.com/information/20261120-482917/" rel="noopener">ZOZO: notice on unauthorised access to the external service KARTE (Japanese; dated Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://plaid.co.jp/news/20261116/" rel="noopener">PLAID: notice on leak of information that may include personal data (Japanese; Nov 16, updated Nov 20)</a> <span class="meta">Official source · Nov 16, 2026</span></li>
+<li><a href="https://www.nikkei.com/article/DGXZQOUC20APN0Q6A121C2000000/" rel="noopener">Nikkei: ZOZO says 15.18 million records leaked after contractor hacked (Japanese; free part read)</a> <span class="meta">News outlet · Nov 20, 2026, 9:03 PM UTC+09:00</span></li>
+<li><a href="https://japan.cnet.com/article/35255260/" rel="noopener">CNET Japan: ZOZOTOWN, 15.18 million records leaked incl. former members; contractor KARTE hit (Japanese)</a> <span class="meta">News outlet · Nov 22, 2026, 5:10 AM UTC+09:00</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+<details class="row" id="t004">
+<summary><span class="row-lead"><span class="row-day">Nov 16</span> <time datetime="2026-11-16">Mon Nov 16, 2026</time></span><span class="row-main"><span class="row-title">PLAID publishes its first notice confirming that data leaked, and that the attacker took credentials</span></span><span class="row-trail"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span></summary>
+<div class="row-body">
+<p>ZOZO says PLAID, which runs the external service KARTE, reported unauthorised access by a third party, and that some customer data ZOZO managed on KARTE leaked. PLAID&#39;s own notices confirm the access to KARTE and date it to Nov 13.</p>
+<p class="meta">Date only.</p>
+<p><span class="field">Why it supports</span> ZOZO (Tier 1) and PLAID (Tier 1) each state the access; Nikkei and CNET Japan repeat ZOZO&#39;s notice.</p>
+<p>Two separate companies&#39; own notices (ZOZO and PLAID) state the access. Nikkei and CNET Japan relay ZOZO&#39;s notice, so for sourcing they count as one source behind it. ZOZO&#39;s notice describes data it kept on the KARTE service; it does not say ZOZO&#39;s own systems were breached.</p>
+<ul class="source-lines">
+<li><a href="https://corp.zozo.com/information/20261120-482917/" rel="noopener">ZOZO: notice on unauthorised access to the external service KARTE (Japanese; dated Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://plaid.co.jp/news/20261116/" rel="noopener">PLAID: notice on leak of information that may include personal data (Japanese; Nov 16, updated Nov 20)</a> <span class="meta">Official source · Nov 16, 2026</span></li>
+<li><a href="https://plaid.co.jp/news/20261120/" rel="noopener">PLAID: investigation results on the KARTE unauthorised access and outlook for restart (Japanese; Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.nikkei.com/article/DGXZQOUC20APN0Q6A121C2000000/" rel="noopener">Nikkei: ZOZO says 15.18 million records leaked after contractor hacked (Japanese; free part read)</a> <span class="meta">News outlet · Nov 20, 2026, 9:03 PM UTC+09:00</span></li>
+<li><a href="https://japan.cnet.com/article/35255260/" rel="noopener">CNET Japan: ZOZOTOWN, 15.18 million records leaked incl. former members; contractor KARTE hit (Japanese)</a> <span class="meta">News outlet · Nov 22, 2026, 5:10 AM UTC+09:00</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+<details class="row" id="t005">
+<summary><span class="row-lead"><span class="row-day">Nov 20</span> <time datetime="2026-11-20">Fri Nov 20, 2026</time></span><span class="row-main"><span class="row-title">ZOZO publishes its notice with the counts; PLAID publishes its investigation results and a mid-January restart target</span></span><span class="row-trail"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span></summary>
+<div class="row-body">
+<p>ZOZO lists about 15.18 million ZOZOTOWN customers (former members too) with member ID, age, gender and postal code leaked. About 47,000 more also had display name, email and phone number leaked.</p>
+<p class="meta">Date only for both notices.</p>
+<p><span class="field">Why it supports</span> ZOZO&#39;s notice gives the counts and fields; Nikkei and CNET Japan repeat them.</p>
+<p>ZOZO says the exact items differ person to person, and any one or several of the listed items may apply. The member ID is an internal management number, not a login. The display name is not a login either. Nikkei and CNET Japan repeat the main figures.</p>
+<ul class="source-lines">
+<li><a href="https://corp.zozo.com/information/20261120-482917/" rel="noopener">ZOZO: notice on unauthorised access to the external service KARTE (Japanese; dated Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.nikkei.com/article/DGXZQOUC20APN0Q6A121C2000000/" rel="noopener">Nikkei: ZOZO says 15.18 million records leaked after contractor hacked (Japanese; free part read)</a> <span class="meta">News outlet · Nov 20, 2026, 9:03 PM UTC+09:00</span></li>
+<li><a href="https://japan.cnet.com/article/35255260/" rel="noopener">CNET Japan: ZOZOTOWN, 15.18 million records leaked incl. former members; contractor KARTE hit (Japanese)</a> <span class="meta">News outlet · Nov 22, 2026, 5:10 AM UTC+09:00</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+<details class="row" id="t006">
+<summary><span class="row-lead"><span class="row-day">Nov 20</span> <time datetime="2026-11-20T21:03:00+09:00">9:03 PM JST, Fri Nov 20, 2026</time></span><span class="row-main"><span class="row-title">Nikkei reports the 15.18 million figure</span></span><span class="row-trail"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span></summary>
+<div class="row-body">
+<p>ZOZO lists about 15.18 million ZOZOTOWN customers (former members too) with member ID, age, gender and postal code leaked. About 47,000 more also had display name, email and phone number leaked.</p>
+<p class="meta">Time on the article.</p>
+<p><span class="field">Why it supports</span> ZOZO&#39;s notice gives the counts and fields; Nikkei and CNET Japan repeat them.</p>
+<p>ZOZO says the exact items differ person to person, and any one or several of the listed items may apply. The member ID is an internal management number, not a login. The display name is not a login either. Nikkei and CNET Japan repeat the main figures.</p>
+<ul class="source-lines">
+<li><a href="https://corp.zozo.com/information/20261120-482917/" rel="noopener">ZOZO: notice on unauthorised access to the external service KARTE (Japanese; dated Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.nikkei.com/article/DGXZQOUC20APN0Q6A121C2000000/" rel="noopener">Nikkei: ZOZO says 15.18 million records leaked after contractor hacked (Japanese; free part read)</a> <span class="meta">News outlet · Nov 20, 2026, 9:03 PM UTC+09:00</span></li>
+<li><a href="https://japan.cnet.com/article/35255260/" rel="noopener">CNET Japan: ZOZOTOWN, 15.18 million records leaked incl. former members; contractor KARTE hit (Japanese)</a> <span class="meta">News outlet · Nov 22, 2026, 5:10 AM UTC+09:00</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="what-data-was-involved">
+<details class="fold">
+<summary><span class="sec-n">07</span><h2>What data was involved?</h2><span class="count">6</span></summary>
+<div class="fold-body">
+<div class="rows">
+<details class="row" id="c003">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">About 15.18 million ZOZOTOWN users, including former members, had member ID, age, gender and postal code leaked; about 47,000 also had display name, email and phone number</span><span class="row-sub">ZOZO lists about 15.18 million ZOZOTOWN customers (former members too) with member ID, age, gender and postal code leaked. About 47,000 more also had display name, email and phone number leaked.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> ZOZO&#39;s notice gives the counts and fields; Nikkei and CNET Japan repeat them.</p>
+<p>ZOZO says the exact items differ person to person, and any one or several of the listed items may apply. The member ID is an internal management number, not a login. The display name is not a login either. Nikkei and CNET Japan repeat the main figures.</p>
+<ul class="source-lines">
+<li><a href="https://corp.zozo.com/information/20261120-482917/" rel="noopener">ZOZO: notice on unauthorised access to the external service KARTE (Japanese; dated Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.nikkei.com/article/DGXZQOUC20APN0Q6A121C2000000/" rel="noopener">Nikkei: ZOZO says 15.18 million records leaked after contractor hacked (Japanese; free part read)</a> <span class="meta">News outlet · Nov 20, 2026, 9:03 PM UTC+09:00</span></li>
+<li><a href="https://japan.cnet.com/article/35255260/" rel="noopener">CNET Japan: ZOZOTOWN, 15.18 million records leaked incl. former members; contractor KARTE hit (Japanese)</a> <span class="meta">News outlet · Nov 22, 2026, 5:10 AM UTC+09:00</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+<details class="row" id="c004">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">About 13.93 million WEAR by ZOZO users had member ID, age and gender leaked</span><span class="row-sub">ZOZO&#39;s notice lists about 13,930,000 users of its WEAR styling app whose member ID, age and gender leaked.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> ZOZO&#39;s notice gives the count and fields; Nikkei and CNET Japan repeat it.</p>
+<p>The notice does not say how many people are in both the WEAR and ZOZOTOWN groups, so the two numbers should not be added together.</p>
+<ul class="source-lines">
+<li><a href="https://corp.zozo.com/information/20261120-482917/" rel="noopener">ZOZO: notice on unauthorised access to the external service KARTE (Japanese; dated Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.nikkei.com/article/DGXZQOUC20APN0Q6A121C2000000/" rel="noopener">Nikkei: ZOZO says 15.18 million records leaked after contractor hacked (Japanese; free part read)</a> <span class="meta">News outlet · Nov 20, 2026, 9:03 PM UTC+09:00</span></li>
+<li><a href="https://japan.cnet.com/article/35255260/" rel="noopener">CNET Japan: ZOZOTOWN, 15.18 million records leaked incl. former members; contractor KARTE hit (Japanese)</a> <span class="meta">News outlet · Nov 22, 2026, 5:10 AM UTC+09:00</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+<details class="row" id="c005">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">About 24,000 current and former staff of brands selling on ZOZOTOWN had member ID, company name and name leaked</span><span class="row-sub">ZOZO&#39;s notice lists about 24,000 current and former contacts at brands that sell on ZOZOTOWN, with member ID, company name and name leaked.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> ZOZO&#39;s notice gives the count and fields; Nikkei and CNET Japan repeat it.</p>
+<p>ZOZO says it will contact affected customers and brand staff individually.</p>
+<ul class="source-lines">
+<li><a href="https://corp.zozo.com/information/20261120-482917/" rel="noopener">ZOZO: notice on unauthorised access to the external service KARTE (Japanese; dated Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.nikkei.com/article/DGXZQOUC20APN0Q6A121C2000000/" rel="noopener">Nikkei: ZOZO says 15.18 million records leaked after contractor hacked (Japanese; free part read)</a> <span class="meta">News outlet · Nov 20, 2026, 9:03 PM UTC+09:00</span></li>
+<li><a href="https://japan.cnet.com/article/35255260/" rel="noopener">CNET Japan: ZOZOTOWN, 15.18 million records leaked incl. former members; contractor KARTE hit (Japanese)</a> <span class="meta">News outlet · Nov 22, 2026, 5:10 AM UTC+09:00</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+<details class="row" id="c006">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">No passwords were exposed</span><span class="row-sub">ZOZO&#39;s notice says passwords are not managed on KARTE and are not part of the leak.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> ZOZO&#39;s notice states it; CNET Japan repeats it.</p>
+<p>This is ZOZO&#39;s own statement about what it keeps on the service. CNET Japan repeats it. No outside check has been published.</p>
+<ul class="source-lines">
+<li><a href="https://corp.zozo.com/information/20261120-482917/" rel="noopener">ZOZO: notice on unauthorised access to the external service KARTE (Japanese; dated Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://japan.cnet.com/article/35255260/" rel="noopener">CNET Japan: ZOZOTOWN, 15.18 million records leaked incl. former members; contractor KARTE hit (Japanese)</a> <span class="meta">News outlet · Nov 22, 2026, 5:10 AM UTC+09:00</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+<details class="row" id="c007">
+<summary><span class="row-lead"><span class="pill pill-reported" data-label="Reported">Reported</span></span><span class="row-main"><span class="row-title">No credit card leak has been found so far</span><span class="row-sub">ZOZO says leaks of credit card information have not been confirmed as of its Nov 20 notice.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> Company&#39;s own snapshot as of Nov 20; it cannot be checked from outside and may change.</p>
+<p>The notice words it as &#39;not confirmed at this time&#39;, not as proof none leaked. PLAID is still working through what else was on KARTE and ZOZO says it will announce anything new.</p>
+<ul class="source-lines">
+<li><a href="https://corp.zozo.com/information/20261120-482917/" rel="noopener">ZOZO: notice on unauthorised access to the external service KARTE (Japanese; dated Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://japan.cnet.com/article/35255260/" rel="noopener">CNET Japan: ZOZOTOWN, 15.18 million records leaked incl. former members; contractor KARTE hit (Japanese)</a> <span class="meta">News outlet · Nov 22, 2026, 5:10 AM UTC+09:00</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+<details class="row" id="c008">
+<summary><span class="row-lead"><span class="pill pill-reported" data-label="Reported">Reported</span></span><span class="row-main"><span class="row-title">No secondary harm from the leak was known as of Nov 20, per ZOZO, which warns of fake emails, texts and calls</span><span class="row-sub">ZOZO says no secondary harm had been confirmed. It warns of suspicious emails, SMS or calls posing as ZOZO and asks people not to open links or attachments. It says it never asks for passwords or card details by email.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> Both give the company&#39;s own statement as of Nov 20.</p>
+<p>Nikkei repeats the &#39;no secondary harm confirmed&#39; line. This is a snapshot from the company, not a finding that none will occur.</p>
+<ul class="source-lines">
+<li><a href="https://corp.zozo.com/information/20261120-482917/" rel="noopener">ZOZO: notice on unauthorised access to the external service KARTE (Japanese; dated Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.nikkei.com/article/DGXZQOUC20APN0Q6A121C2000000/" rel="noopener">Nikkei: ZOZO says 15.18 million records leaked after contractor hacked (Japanese; free part read)</a> <span class="meta">News outlet · Nov 20, 2026, 9:03 PM UTC+09:00</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="related">
+<details class="fold">
+<summary><span class="sec-n">08</span><h2>Related</h2><span class="count">2</span></summary>
+<div class="fold-body">
+<div class="rows">
+<details class="row" id="c011">
+<summary><span class="row-lead"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></span><span class="row-main"><span class="row-title">The same KARTE intrusion hit many other companies, not only ZOZO</span><span class="row-sub">PLAID&#39;s Nov 20 notice counts companies hit in four data groups: 570, 487, up to 409 and 754. A company can be in more than one group. PLAID does not name them.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> PLAID&#39;s own notice (Tier 1) gives the company counts.</p>
+<p>PLAID does not name the companies. It says some were former customers whose data should have been deleted after their contracts ended but was kept because of human operation and management failures. Nothing in the notices says that applies to ZOZO.</p>
+<ul class="source-lines">
+<li><a href="https://plaid.co.jp/news/20261120/" rel="noopener">PLAID: investigation results on the KARTE unauthorised access and outlook for restart (Japanese; Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+<details class="row" id="c012">
+<summary><span class="row-lead"><span class="pill pill-reported" data-label="Reported">Reported</span></span><span class="row-main"><span class="row-title">KARTE is expected to restart in stages from mid-January 2027</span><span class="row-sub">PLAID says all KARTE services have been stopped since Nov 13 and sets a staged restart target of mid-January 2027, after rebuilding parts of the system and an outside check.</span></span></summary>
+<div class="row-body">
+<p><span class="field">Why it supports</span> PLAID&#39;s notice states the plan; it may change.</p>
+<p>This is a plan, not a completed step. PLAID says it will not bill customers for the stopped period and will hand affected companies detailed data from Nov 24.</p>
+<ul class="source-lines">
+<li><a href="https://plaid.co.jp/news/20261120/" rel="noopener">PLAID: investigation results on the KARTE unauthorised access and outlook for restart (Japanese; Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+</ul>
+<p class="meta">Last checked <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+</div>
+</details>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="what-we-checked-and-did-not-find">
+<details class="fold">
+<summary><span class="sec-n">09</span><h2>What we checked and did not find</h2></summary>
+<div class="fold-body">
+<div class="prose">
+<p>We looked for these and did not find them as of the time of this report on Nov 22, 2026.</p>
+<ul>
+<li>Any attacker named, any claim of responsibility, or any police or regulator statement naming one.</li>
+<li>An independent forensic report on how the attacker got into KARTE. PLAID&#39;s account of the method comes from its own notices.</li>
+<li>Which flaw was exploited.</li>
+<li>How many people are in both the ZOZOTOWN and WEAR groups.</li>
+<li>Any report of the leaked data being used for fraud or scams.</li>
+<li>Any new count or item from PLAID&#39;s continuing investigation beyond the Nov 20 notices.</li>
+</ul>
+<p>Nikkei&#39;s article was read only in part; the rest is behind a subscription.</p>
+</div>
+</div>
+</details>
+</section>
+
+<section class="block" id="update-log">
+<details class="fold">
+<summary><span class="sec-n">10</span><h2>Update log</h2><span class="count">1</span></summary>
+<div class="fold-body">
+<p class="meta">Every check and change, newest first.</p>
+<ol class="log">
+<li class="log-row" id="u001">
+<span class="log-when"><time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></span>
+<span class="log-what"><strong>ZOZO says data on about 15.18 million ZOZOTOWN users leaked after a hack of its supplier PLAID&#39;s KARTE service; passwords not included.</strong> First build from ZOZO&#39;s own notice (Tier 1), PLAID&#39;s Nov 16 and Nov 20 notices (Tier 1, separate company), Nikkei and CNET Japan (both relay ZOZO&#39;s notice, so one source behind it). c001 to c006 and c011 Confirmed from the company notices; c007, c008, c009 and c012 Reported (company snapshots, plans and the vendor&#39;s own account of the method). Attacker Not established. Nikkei read in part (subscription). Privacy check done: no staff, officials or contacts named; help-desk, press and support contact details left out. <span class="meta">Added · Research agent</span></span>
+</li>
+</ol>
+</div>
+</details>
+</section>
+
+<section class="block" id="sources">
+<details class="fold">
+<summary><span class="sec-n">11</span><h2>Sources</h2><span class="count">5</span></summary>
+<div class="fold-body">
+<ol class="source-lines numbered">
+<li><a href="https://corp.zozo.com/information/20261120-482917/" rel="noopener">ZOZO: notice on unauthorised access to the external service KARTE (Japanese; dated Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://plaid.co.jp/news/20261116/" rel="noopener">PLAID: notice on leak of information that may include personal data (Japanese; Nov 16, updated Nov 20)</a> <span class="meta">Official source · Nov 16, 2026</span></li>
+<li><a href="https://plaid.co.jp/news/20261120/" rel="noopener">PLAID: investigation results on the KARTE unauthorised access and outlook for restart (Japanese; Nov 20)</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://www.nikkei.com/article/DGXZQOUC20APN0Q6A121C2000000/" rel="noopener">Nikkei: ZOZO says 15.18 million records leaked after contractor hacked (Japanese; free part read)</a> <span class="meta">News outlet · Nov 20, 2026, 9:03 PM UTC+09:00</span></li>
+<li><a href="https://japan.cnet.com/article/35255260/" rel="noopener">CNET Japan: ZOZOTOWN, 15.18 million records leaked incl. former members; contractor KARTE hit (Japanese)</a> <span class="meta">News outlet · Nov 22, 2026, 5:10 AM UTC+09:00</span></li>
+</ol>
+</div>
+</details>
+</section>
+<footer class="page-foot">
+<p><a href="2026-11-zozo-plaid-karte-breach.md">Markdown version</a><a href="https://github.com/primeobsession/isitahack-dot-com/commits/main/data/incidents/2026-11-zozo-plaid-karte-breach" rel="noopener">Edit history</a><a href="../about.html#contact">Report an error</a></p>
+<p class="meta">Reading this as an AI assistant or a program? The same report is available as plain Markdown at <a href="2026-11-zozo-plaid-karte-breach.md">2026-11-zozo-plaid-karte-breach.md</a>, and <a href="../llms.txt">llms.txt</a> maps the whole site.</p>
+</footer>
+</div>
+<aside class="side" aria-label="Summary and other incidents">
+<div class="side-facts">
+<section class="side-block latest">
+<p class="kicker accent">The latest · <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
+<p class="latest-headline">ZOZO says data on about 15.18 million ZOZOTOWN users leaked after a hack of its supplier PLAID&#39;s KARTE service; passwords not included.</p>
+<p class="latest-summary">First build from ZOZO&#39;s own notice (Tier 1), PLAID&#39;s Nov 16 and Nov 20 notices (Tier 1, separate company), Nikkei and CNET Japan (both relay ZOZO&#39;s notice, so one source behind it). c001 to c006 and c011 Confirmed from the company notices; c007, c008, c009 and c012 Reported (company snapshots, plans and the vendor&#39;s own account of the method). Attacker Not established. Nikkei read in part (subscription). Privacy check done: no staff, officials or contacts named; help-desk, press and support contact details left out.</p>
+<p><a href="#update-log">All 1 updates</a></p>
+</section>
+<section class="side-block">
+<dl class="reach">
+<div><dt>Size</dt><dd><strong>Large.</strong> About 15.18 million ZOZOTOWN users and 13.93 million WEAR users, per ZOZO. The two groups overlap by an unpublished amount. The same vendor breach hit hundreds of other companies.</dd></div>
+<div><dt>Who is affected</dt><dd>ZOZOTOWN and WEAR by ZOZO users, including former ZOZOTOWN members, and current and former staff of brands on ZOZOTOWN. Leaked: member ID, age, gender, postal code; for about 47,000, also display name, email and phone. Passwords were not, per ZOZO. Expect fake emails and texts.</dd></div>
+</dl>
+</section>
+<section class="side-block">
+<div class="evidence">
+<p class="kicker">Was it a hack? What has been said · 1</p>
+<div class="evidence-bar" role="img" aria-label="Confirmed 1"><span class="seg seg-confirmed" style="flex-grow:1"></span></div>
+<ul class="evidence-key"><li><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span class="count">1</span></li></ul>
+</div>
+</section>
+</div>
+<div class="side-more">
+<section class="side-block">
+<p class="kicker">Other incidents</p>
+<ul class="others">
+<li><a href="2026-11-tower-records-japan-breach.html">Tower Records Japan data breach, Nov 2026</a><span class="meta">Monitoring · updated <time datetime="2026-11-22T12:05:00-05:00">Nov 22, 2026</time></span></li>
+<li><a href="2026-11-wellington-it-credit-union-breach.html">Wellington IT credit union breach, Nov 2026</a><span class="meta">Monitoring · updated <time datetime="2026-11-22T11:56:00-05:00">Nov 22, 2026</time></span></li>
+<li><a href="2026-11-kepco-customer-data-breach.html">KEPCO customer data breach, Nov 2026</a><span class="meta">Monitoring · updated <time datetime="2026-11-22T11:39:00-05:00">Nov 22, 2026</time></span></li>
+<li><a href="2026-11-hugendubel-tolino-cyberattack.html">Hugendubel tolino cyberattack, Nov 2026</a><span class="meta">Monitoring · updated <time datetime="2026-11-22T11:31:00-05:00">Nov 22, 2026</time></span></li>
+<li><a href="2026-11-cleverbridge-card-data-breach.html">Cleverbridge payment card breach, Nov 2026</a><span class="meta">Monitoring · updated <time datetime="2026-11-22T11:18:00-05:00">Nov 22, 2026</time></span></li>
+</ul>
+<p><a href="../#incidents">All incidents</a></p>
+</section>
+</div>
+</aside>
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap footer-grid">
+<div>
+<span class="wordmark"><span>isita</span><b>hack</b><span class="tld">.com</span></span>
+<p class="disclaimer-short">Made for entertainment using AI. Not endorsed by ZOZO, PLAID, Nikkei, CNET Japan or any other company, news outlet, government agency, or anyone else named.</p>
+<p class="meta">Researched and organized by AI agents from public sources. Not security, legal, financial or safety advice.</p>
+</div>
+<nav class="footer-nav" aria-label="Footer">
+<a href="../#incidents">Incidents</a>
+<a href="../how-it-works.html">How it works</a>
+<a href="../about.html">About</a>
+<a href="https://github.com/primeobsession/isitahack-dot-com" rel="noopener">GitHub repository</a>
+<a href="https://x.com/isitahack" rel="noopener">isitahack on X</a>
+<a href="../about.html#contact">Report an error</a>
+<a class="mono" href="../index.json">index.json</a>
+<a class="mono" href="../llms.txt">llms.txt</a>
+</nav>
+</div>
+</footer>
+<script>(function(){var r=document.documentElement,b=document.querySelector(".theme-toggle");function cur(){return r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function paint(){var d=cur()==="dark";b.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme");b.setAttribute("aria-pressed",d?"true":"false")}if(b){b.hidden=false;paint();b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}paint()})}function reveal(){var id=decodeURIComponent(location.hash.slice(1));var el=id&&document.getElementById(id);if(!el)return;for(var p=el;p;p=p.parentElement)if(p.tagName==="DETAILS")p.open=true;el.scrollIntoView()}addEventListener("hashchange",reveal);reveal();var links=[].slice.call(document.querySelectorAll(".toc a"));if(links.length&&"IntersectionObserver"in window){var seen={};var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id]=e.isIntersecting});var on=null;links.forEach(function(a){var id=a.getAttribute("href").slice(1);if(!on&&seen[id])on=a});if(on)links.forEach(function(a){if(a===on)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")})},{rootMargin:"-10% 0px -60% 0px"});links.forEach(function(a){var s=document.getElementById(a.getAttribute("href").slice(1));if(s)io.observe(s)})}})();</script>
+</body>
+</html>
