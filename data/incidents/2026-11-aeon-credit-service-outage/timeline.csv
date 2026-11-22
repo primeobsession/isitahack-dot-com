@@ -1,4 +1,5 @@
 event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
 t001,2026-11-18T18:00:00+08:00,,Evening of Wed Nov 18 (HK time),approximate,AEON's online services and app go into 'system maintenance',c002,Time given only as 'evening'; 6 PM HK time is our placeholder for the start.
-t002,2026-11-21T14:00:00+08:00,,About 2 PM Nov 21 (HK time),stated,"HK01 counts more than 40 hours of outage, still not restored",c002,From HK01's screenshot caption.
+t002,2026-11-20T14:00:00+08:00,,About 2 PM Fri Nov 20 (HK time),stated,"Dimsum Daily reports the portal and app still down, more than 40 hours after the outage began",c002,From Dimsum Daily's Nov 20 article. Corrected Nov 22: this was earlier dated Nov 21.
+t004,2026-11-21,,Sat Nov 21,approximate,"Online services and the app come back, The Standard and Metro Radio report",c002,Outlets give the day only.
 t003,2026-11-21T23:13:00+08:00,,11:13 PM Nov 21 (HK time),stated,RTHK reports AEON's notice of unauthorized access,c001,RTHK's own time stamp.
