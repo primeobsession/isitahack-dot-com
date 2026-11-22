@@ -1,0 +1,121 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-ntt-docomo-customer-data-breach",
+  "title": "NTT Docomo customer data breach, Nov 2026",
+  "subject": {
+    "name": "NTT Docomo",
+    "kind": "telecom"
+  },
+  "also_called": [
+    "the Docomo data leak",
+    "the My docomo hack"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-04",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by NTT Docomo, Jiji Press, Nippon.com, Nippon TV, Cybersecurity.com, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Up to about 300,000 phone lines, per Docomo; one outlet gives 294,839 (204,157 personal, 90,682 corporate).",
+  "who_is_affected": "Docomo customers, personal and corporate, whose data was held by My docomo and the online shop, including some who had already cancelled.",
+  "known": [
+    {
+      "text": "Docomo says outside parties got into My docomo and the online shop.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Customer information leaked, for up to about 300,000 lines.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "Names, birth dates, contact details, ID-document numbers and contract details leaked; for some, bank details.",
+      "claim_id": "c005"
+    },
+    {
+      "text": "My docomo is partly back as of Nov 22; the online shop and the iOS app are still in emergency maintenance.",
+      "claim_id": "c011"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Who the attacker was."
+    },
+    {
+      "text": "The full root cause."
+    },
+    {
+      "text": "Whether the leaked data has been misused or sold."
+    },
+    {
+      "text": "How much compensation will be paid, and to whom."
+    },
+    {
+      "text": "When the online shop and iOS app return."
+    }
+  ],
+  "figures": [
+    {
+      "value": "300,000",
+      "label": "Lines affected, at most",
+      "detail": "Docomo: up to about 300,000",
+      "claim_id": "c003"
+    },
+    {
+      "value": "294,839",
+      "label": "Exact count, one outlet",
+      "detail": "204,157 personal, 90,682 corporate",
+      "claim_id": "c004"
+    },
+    {
+      "value": "1:05 AM",
+      "label": "Services shut down",
+      "detail": "Thu Nov 5, Japan time",
+      "claim_id": "c002"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How did they get in?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Docomo data breach"
+    },
+    {
+      "type": "claims",
+      "title": "What data was involved?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
