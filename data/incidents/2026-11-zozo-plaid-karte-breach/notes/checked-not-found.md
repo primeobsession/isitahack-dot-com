@@ -6,6 +6,6 @@ We looked for these and did not find them as of our latest check on Nov 22, 2026
 - Which flaw was exploited.
 - How many people are in both the ZOZOTOWN and WEAR groups.
 - Any report of the leaked data being used for fraud or scams.
-- Any new ZOZO or PLAID notice after Nov 20, or any new count or item from PLAID's continuing work.
+- Any new ZOZO or PLAID notice after Nov 20, or any new count or item from PLAID's continuing work. PLAID says it will start giving each affected company detailed data from Nov 24.
 
 Nikkei's article was read only in part; the rest is behind a subscription.
