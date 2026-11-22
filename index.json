@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-glinet-cloud-malware",
+      "title": "GL.iNet cloud malware incident, Nov 20, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T13:14:23-05:00",
+      "files": {
+        "page": "incidents/2026-11-glinet-cloud-malware.md",
+        "html": "incidents/2026-11-glinet-cloud-malware.html",
+        "data": "data/incidents/2026-11-glinet-cloud-malware/"
+      }
+    },
+    {
       "slug": "2026-11-wellington-it-credit-union-breach",
       "title": "Wellington IT credit union breach, Nov 2026",
       "status": "monitoring",
@@ -88,17 +99,6 @@
         "page": "incidents/2026-11-cleverbridge-card-data-breach.md",
         "html": "incidents/2026-11-cleverbridge-card-data-breach.html",
         "data": "data/incidents/2026-11-cleverbridge-card-data-breach/"
-      }
-    },
-    {
-      "slug": "2026-11-glinet-cloud-malware",
-      "title": "GL.iNet cloud malware incident, Nov 20, 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-22T12:15:01-05:00",
-      "files": {
-        "page": "incidents/2026-11-glinet-cloud-malware.md",
-        "html": "incidents/2026-11-glinet-cloud-malware.html",
-        "data": "data/incidents/2026-11-glinet-cloud-malware/"
       }
     },
     {
