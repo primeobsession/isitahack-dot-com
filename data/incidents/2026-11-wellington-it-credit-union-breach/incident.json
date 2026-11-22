@@ -1,0 +1,128 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-wellington-it-credit-union-breach",
+  "title": "Wellington IT credit union breach, Nov 2026",
+  "subject": {
+    "name": "Wellington IT",
+    "kind": "finance"
+  },
+  "also_called": [
+    "the Irish credit union data breach",
+    "the CU Online breach"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-10-02",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Wellington IT, the Department of Finance, RTÉ, The Record, The Register, The Irish Times, credit unions, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "About 40 to 43 Irish credit unions, roughly a quarter of the country's, are affected; outlets say potentially hundreds of thousands of app users. No exact count yet.",
+  "who_is_affected": "Members of about 40 Irish credit unions who use the credit union banking app or online banking. Their saved payees' details were exposed; their own balances and logins were not, per Wellington.",
+  "known": [
+    {
+      "text": "An outside party got unauthorised access to saved-payee details on Wellington IT's platform.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Only payee details for users of credit union mobile banking apps are involved, per the Department of Finance.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "Wellington IT says the vulnerability is closed.",
+      "claim_id": "c007"
+    },
+    {
+      "text": "The Department of Finance first learned of the incident on Nov 17.",
+      "claim_id": "c009"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether any money was taken.",
+      "question_id": "q003"
+    },
+    {
+      "text": "Who the attacker was.",
+      "question_id": "q004"
+    },
+    {
+      "text": "How many members are affected.",
+      "question_id": "q005"
+    },
+    {
+      "text": "How the attacker got in.",
+      "question_id": "q006"
+    }
+  ],
+  "figures": [
+    {
+      "value": "43",
+      "label": "Credit unions affected",
+      "detail": "Of about 170, per the league",
+      "claim_id": "c004"
+    },
+    {
+      "value": "1.4M",
+      "label": "Malicious requests",
+      "detail": "Oct 2 to 4, per Wellington and the league",
+      "claim_id": "c006"
+    },
+    {
+      "value": "Oct 6",
+      "label": "Vulnerability closed",
+      "detail": "Per the league",
+      "claim_id": "c007"
+    },
+    {
+      "value": "Nov 16",
+      "label": "Credit unions told",
+      "detail": "Six weeks after the activity",
+      "claim_id": "c008"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How did they get in?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the credit union breach"
+    },
+    {
+      "type": "claims",
+      "title": "What data was involved?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
