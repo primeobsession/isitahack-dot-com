@@ -1,0 +1,4 @@
+source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
+s001,https://grow.cleverbridge.com/incident-update,"Cleverbridge: Incident Update & FAQs (company page, undated)",1,,,2026-11-22T11:18:00-05:00,,ok,2026-11-22T11:18:00-05:00
+s002,https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/,"BleepingComputer: Cleverbridge warns hackers stole credit card numbers, CVVs in data breach",2,bleepingcomputer,2026-11-22T10:43:00-05:00,2026-11-22T11:18:00-05:00,,ok,2026-11-22T11:18:00-05:00
+s003,https://forums.malwarebytes.com/topic/342132-cleverbridge-data-breach/,Malwarebytes support forum thread: Cleverbridge Data Breach (reply from the forum's admin account),4,malwarebytes-forum,,2026-11-22T11:18:00-05:00,,ok,2026-11-22T11:18:00-05:00
