@@ -1,0 +1,125 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-together-ai-prompt-leak",
+  "title": "Together AI prompt leak, Nov 2026",
+  "subject": {
+    "name": "Together AI",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "the Together AI security event",
+    "the Together AI prompt leakage"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-21",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Together AI, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Regional",
+  "size_basis": "Together AI has not said how many customers or prompts were affected. The stored samples came from test requests to three models on four main days in June and July. The same week, OpenRouter dropped three providers over related findings.",
+  "who_is_affected": "Together AI customers whose serverless requests to MiniMax M3, GLM-5.2 or Kimi K2.6 were sampled, mainly on Jun 24, Jul 4, Jul 8 and Jul 14. The company says it will contact affected customers directly.",
+  "known": [
+    {
+      "text": "An unauthorized party downloaded stored prompt samples from Together AI's serverless service.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The way in was a credential for a private repository, committed by an AI coding agent to a public one.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "The samples were from requests mainly on Jun 24, Jul 4, Jul 8 and Jul 14, 2026.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "The party searched the prompts for credentials and tested them; five were Dragos bait keys.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "OpenRouter dropped three providers and removed 125 endpoints from its zero-data-retention list, and says it was not breached.",
+      "claim_id": "c011"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Who the unauthorized party was."
+    },
+    {
+      "text": "How many customers or prompts were affected."
+    },
+    {
+      "text": "Whether real customer credentials were used."
+    },
+    {
+      "text": "How long the credential was exposed."
+    },
+    {
+      "text": "Whether the Together AI intruder is tied to the other compromised providers."
+    }
+  ],
+  "figures": [
+    {
+      "value": "4",
+      "label": "Main sample days",
+      "detail": "Jun 24, Jul 4, Jul 8, Jul 14",
+      "claim_id": "c003"
+    },
+    {
+      "value": "5",
+      "label": "Bait credentials tested",
+      "detail": "Dragos canaries, per Together AI",
+      "claim_id": "c004"
+    },
+    {
+      "value": "125",
+      "label": "Endpoints pulled by OpenRouter",
+      "detail": "Removed from its zero-data-retention list",
+      "claim_id": "c011"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How did they get in?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Together AI prompt leak"
+    },
+    {
+      "type": "claims",
+      "title": "Who and what was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "How does it connect to OpenRouter and the other providers?",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-06-24,,"Jun 24, 2026",stated,"First of the main dates for the stored prompt samples, which also include July 4, 8 and 14",c003,Together AI says the samples are 'primarily' from these dates.
+t002,2026-11-19,,"Nov 19, 2026",stated,Dragos publishes its canary-token research,c009,Posted 8:00 AM per Dragos.
+t003,2026-11-21,,"Nov 21, 2026",stated,Together AI publishes its security notice,c001,The post says it is notifying customers.
+t004,2026-11-22,,"Nov 22, 2026",stated,"OpenRouter publishes its post on data processing incidents, linking Together AI's notice",c011,Date as printed on OpenRouter's post.
