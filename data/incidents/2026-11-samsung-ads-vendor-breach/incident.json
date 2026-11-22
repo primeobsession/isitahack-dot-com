@@ -1,0 +1,104 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-samsung-ads-vendor-breach",
+  "title": "Samsung Ads North America vendor breach, Nov 2026",
+  "subject": {
+    "name": "Samsung Ads",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "the Samsung smart TV data leak",
+    "the Samsung Ads vendor breach"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-14",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Samsung, Cybernews, Android Headlines, DailySecu or any other company, news outlet, government agency, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Regional",
+  "size_basis": "About 220MB posted, per Cybernews: roughly 150,000 TV viewing events, 42,600 political ad records and 99,100 AI training records. Samsung has not said how much was affected.",
+  "who_is_affected": "Not yet clear. The dump is said to hold smart TV viewing events with city and ZIP code, and political ad records, from Samsung's North America advertising business. Samsung says scope is still being worked out with the vendor.",
+  "known": [
+    {
+      "text": "Samsung says a third-party vendor for Samsung Ads North America was involved.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Samsung says the vendor's early findings show some Samsung information may have been affected.",
+      "claim_id": "c001"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "What data was really taken; the contents come from Cybernews, not Samsung.",
+      "question_id": "q003"
+    },
+    {
+      "text": "Which vendor, and how the attacker got in.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Whether Samsung's own systems were accessed.",
+      "question_id": "q005"
+    }
+  ],
+  "figures": [
+    {
+      "value": "220MB",
+      "label": "Posted by n0n",
+      "detail": "Per Cybernews",
+      "claim_id": "c002"
+    },
+    {
+      "value": "150K",
+      "label": "TV viewing events",
+      "detail": "2024; no titles; per Cybernews",
+      "claim_id": "c003"
+    },
+    {
+      "value": "42.6K",
+      "label": "Political ad records",
+      "detail": "Sept to Oct 2026; per Cybernews",
+      "claim_id": "c004"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How did they get in?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Samsung Ads vendor breach"
+    },
+    {
+      "type": "claims",
+      "title": "What data was involved?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
