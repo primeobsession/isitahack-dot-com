@@ -1,6 +1,6 @@
 event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
 t001,2026-11-04,,"Nov 4, 2026 (Japan)",stated,Docomo confirms unauthorized access from outside to its online shop and My docomo,c001,"Docomo's notice gives the date, not a time."
-t008,2026-11-04T10:30:00+09:00,,About 10:30 AM Wed Nov 4 (Japan time),approximate,A mass-access alert flags the attack on My docomo,c014,"ITmedia Mobile, from the Nov 6 briefing."
+t008,2026-11-04T10:30:00+09:00,,About 10:30 AM Wed Nov 4 (Japan time),approximate,A mass-access alert flags the attack on My docomo,c014,"ITmedia Mobile and CNET Japan, from the Nov 6 briefing."
 t002,2026-11-05T01:05:00+09:00,,About 1:05 AM Thu Nov 5 (Japan time),stated,Docomo stops procedures on the online shop and My docomo,c002,Time from Docomo's notice.
 t003,2026-11-05T11:00:00+09:00,2026-11-06T01:20:00+09:00,"Nov 5, 11 AM to Nov 6, 1:20 AM JST",approximate,Separate nationwide 5G SA service disruption; Docomo finds no sign of a cyberattack,c012,Start given as 'around 11 a.m.'
 t004,2026-11-06,,"Nov 6, 2026",stated,"Press reports say up to about 300,000 customer records leaked and that bank details were among the data",c003,"Jiji Press and Nippon TV, both dated Nov 6."
