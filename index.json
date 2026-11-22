@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-usda-farm-payment-system-cyberattack",
+      "title": "USDA farm payment system cyberattack, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T09:04:02-05:00",
+      "files": {
+        "page": "incidents/2026-11-usda-farm-payment-system-cyberattack.md",
+        "html": "incidents/2026-11-usda-farm-payment-system-cyberattack.html",
+        "data": "data/incidents/2026-11-usda-farm-payment-system-cyberattack/"
+      }
+    },
+    {
       "slug": "2026-11-wellington-it-credit-union-breach",
       "title": "Wellington IT credit union breach, Nov 2026",
       "status": "monitoring",
@@ -231,17 +242,6 @@
         "page": "incidents/2026-11-ochsner-health-breach.md",
         "html": "incidents/2026-11-ochsner-health-breach.html",
         "data": "data/incidents/2026-11-ochsner-health-breach/"
-      }
-    },
-    {
-      "slug": "2026-11-usda-farm-payment-system-cyberattack",
-      "title": "USDA farm payment system cyberattack, Nov 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-21T08:56:34-05:00",
-      "files": {
-        "page": "incidents/2026-11-usda-farm-payment-system-cyberattack.md",
-        "html": "incidents/2026-11-usda-farm-payment-system-cyberattack.html",
-        "data": "data/incidents/2026-11-usda-farm-payment-system-cyberattack/"
       }
     },
     {
