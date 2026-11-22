@@ -1,4 +1,4 @@
-We looked for these and did not find them as of 10:37 AM ET on Nov 22, 2026.
+We looked for these and did not find them as of 11:31 AM ET on Nov 22, 2026.
 
 - Any statement from Hugendubel on its own web notices or help pages that calls the outage an attack. They say only 'technical disruption'; the attack wording comes from the spokesperson's statement to dpa.
 - Any independent confirmation of the attack or of the 'no customer data stolen' claim.
