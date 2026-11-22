@@ -12,6 +12,19 @@
       }
     },
     {
+      "slug": "2026-11-faa-ground-stop",
+      "title": "FAA nationwide ground stop",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T12:20:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-faa-ground-stop.md",
+        "html": "incidents/2026-11-faa-ground-stop.html",
+        "data": "data/incidents/2026-11-faa-ground-stop/",
+        "raw_dir": "data/incidents/2026-11-faa-ground-stop/raw/",
+        "manifest": "data/incidents/2026-11-faa-ground-stop/MANIFEST.txt"
+      }
+    },
+    {
       "slug": "2026-11-tower-records-japan-breach",
       "title": "Tower Records Japan data breach, Nov 2026",
       "status": "monitoring",
@@ -108,19 +121,6 @@
         "page": "incidents/2026-11-glinet-cloud-malware.md",
         "html": "incidents/2026-11-glinet-cloud-malware.html",
         "data": "data/incidents/2026-11-glinet-cloud-malware/"
-      }
-    },
-    {
-      "slug": "2026-11-faa-ground-stop",
-      "title": "FAA nationwide ground stop",
-      "status": "monitoring",
-      "last_updated": "2026-11-22T06:09:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-faa-ground-stop.md",
-        "html": "incidents/2026-11-faa-ground-stop.html",
-        "data": "data/incidents/2026-11-faa-ground-stop/",
-        "raw_dir": "data/incidents/2026-11-faa-ground-stop/raw/",
-        "manifest": "data/incidents/2026-11-faa-ground-stop/MANIFEST.txt"
       }
     },
     {
