@@ -16,7 +16,7 @@ disclaimer: "Made for entertainment using AI. Not endorsed by KEPCO, Yonhap, Cho
 
 # Was the KEPCO customer data breach a hack?
 
-**Reported.** KEPCO's own notices say an outside cyber intrusion leaked data on about 1.52 million users of its KEPCO ON and SRM systems. How the attacker got in, and who it was, are not established.
+**Confirmed.** KEPCO's own notices say an outside cyber intrusion leaked data on about 1.52 million users of its KEPCO ON and SRM systems. How the attacker got in, and who it was, are not established.
 
 Incident: KEPCO customer data breach, Nov 2026. Also reported as the KEPCO ON leak and KEPCO's second breach. First published Nov 22, 2026; last updated Nov 22, 2026, 6:47 AM ET.
 
@@ -26,7 +26,7 @@ This is the current answer, not a final verdict.
 
 ## The latest
 
-Nov 22, 2026, 6:47 AM ET: **KEPCO's own notices say a cyber intrusion caused the leak; police were asked to investigate.** Found KEPCO's own apology and KEPCO ON leak notice (Tier 1) on kepco.co.kr. They state a cyber intrusion and outside illegal access attempts, list the leaked KEPCO ON items, and say police were asked to investigate, settling an earlier conflict. c001, c003, c005, c006 and c011 move from Reported to Confirmed; c007 updated; c012 added (Aju Press: registration and card numbers stored encrypted, Reported). 6 new sources (2 Tier 1, 4 Tier 2). The main answer stays Reported pending editor review. Privacy check done.
+Nov 22, 2026, 6:47 AM ET: **KEPCO's own notices say a cyber intrusion caused the leak; police were asked to investigate.** Found KEPCO's own apology and KEPCO ON leak notice (Tier 1) on kepco.co.kr. They state a cyber intrusion and outside illegal access attempts, list the leaked KEPCO ON items, and say police were asked to investigate, settling an earlier conflict. c001, c003, c005, c006 and c011 move from Reported to Confirmed; c007 updated; c012 added (Aju Press: registration and card numbers stored encrypted, Reported). 6 new sources (2 Tier 1, 4 Tier 2). On editor review, the main answer (q001) moves from Reported to Confirmed because KEPCO's own notices state a cyber intrusion; how the attacker got in and who it was remain not established. Privacy check done.
 
 ## At a glance
 
@@ -72,7 +72,7 @@ Nov 22, 2026, 6:47 AM ET: **KEPCO's own notices say a cyber intrusion caused the
 
 | Question | Answer | Label |
 |---|---|---|
-| Was the KEPCO customer data breach a hack? | KEPCO's own notices say an outside cyber intrusion leaked data on about 1.52 million users of its KEPCO ON and SRM systems. How the attacker got in, and who it was, are not established. | Reported |
+| Was the KEPCO customer data breach a hack? | KEPCO's own notices say an outside cyber intrusion leaked data on about 1.52 million users of its KEPCO ON and SRM systems. How the attacker got in, and who it was, are not established. | Confirmed |
 | What data did the KEPCO breach expose? | For KEPCO ON users: names, resident registration numbers, contact details, bank account and card numbers, and billing records. For SRM: names, registration numbers and contact details of company representatives and staff. | Reported |
 | How did the attacker get into KEPCO's systems? | Not answered yet. KEPCO or the National Intelligence Service publishing a cause report. | Open |
 | Who is behind the KEPCO breach? | Not answered yet. A government attribution, a police finding or a verified claim of responsibility. | Open |
@@ -128,7 +128,7 @@ We looked for these and did not find them as of Nov 22, 2026.
 
 | When | Update | Type |
 |---|---|---|
-| Nov 22, 2026, 6:47 AM ET | **KEPCO's own notices say a cyber intrusion caused the leak; police were asked to investigate.** Found KEPCO's own apology and KEPCO ON leak notice (Tier 1) on kepco.co.kr. They state a cyber intrusion and outside illegal access attempts, list the leaked KEPCO ON items, and say police were asked to investigate, settling an earlier conflict. c001, c003, c005, c006 and c011 move from Reported to Confirmed; c007 updated; c012 added (Aju Press: registration and card numbers stored encrypted, Reported). 6 new sources (2 Tier 1, 4 Tier 2). The main answer stays Reported pending editor review. Privacy check done. | Label change |
+| Nov 22, 2026, 6:47 AM ET | **KEPCO's own notices say a cyber intrusion caused the leak; police were asked to investigate.** Found KEPCO's own apology and KEPCO ON leak notice (Tier 1) on kepco.co.kr. They state a cyber intrusion and outside illegal access attempts, list the leaked KEPCO ON items, and say police were asked to investigate, settling an earlier conflict. c001, c003, c005, c006 and c011 move from Reported to Confirmed; c007 updated; c012 added (Aju Press: registration and card numbers stored encrypted, Reported). 6 new sources (2 Tier 1, 4 Tier 2). On editor review, the main answer (q001) moves from Reported to Confirmed because KEPCO's own notices state a cyber intrusion; how the attacker got in and who it was remain not established. Privacy check done. | Label change |
 | Nov 22, 2026, 6:17 AM ET | **KEPCO says an outside attacker took data on about 1.52 million users; claims are Reported, cause not established.** First draft. 7 sources (all Tier 2), 11 claims, 5 questions. KEPCO says an outside attacker took data on about 1.52 million users from KEPCO ON and the SRM procurement system. All of it is Reported, since we read only outlets relaying the company's statement. The method, attacker and any link to the October breach are Not established. Privacy check done: no names of people, no handles, no contact details. | Added |
 
 ## Sources
