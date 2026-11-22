@@ -12,7 +12,7 @@
   ],
   "status": "monitoring",
   "incident_date": "2026-10-02",
-  "disclaimer": "Made for entertainment using AI. Not endorsed by Wellington IT, the Department of Finance, RTÉ, The Record, The Register, The Irish Times, credit unions, any government agency, news outlet, company, or anyone else named.",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Wellington IT, the Department of Finance, RTÉ, The Record, The Register, The Irish Times, the Irish Examiner, BleepingComputer, TheJournal.ie, North East Credit Union or any other credit union, any government agency, news outlet, company, or anyone else named.",
   "main_question_id": "q001",
   "verdict": null,
   "verdict_approved_at": null,
@@ -29,12 +29,20 @@
       "claim_id": "c002"
     },
     {
+      "text": "Payee names, IBANs, BICs, addresses and payment references may have been accessed, per a credit union's own notice.",
+      "claim_id": "c003"
+    },
+    {
       "text": "Wellington IT says the vulnerability is closed.",
       "claim_id": "c007"
     },
     {
       "text": "The Department of Finance first learned of the incident on Nov 17.",
       "claim_id": "c009"
+    },
+    {
+      "text": "Wellington IT spotted the possible breach on Nov 15 and told credit unions on Nov 16.",
+      "claim_id": "c008"
     }
   ],
   "not_known": [
@@ -65,7 +73,7 @@
     {
       "value": "1.4M",
       "label": "Malicious requests",
-      "detail": "Oct 2 to 4, per Wellington and the league",
+      "detail": "Oct 2 to 4, per the league; Wellington's letter says about 5M",
       "claim_id": "c006"
     },
     {
