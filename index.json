@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-glinet-cloud-malware",
+      "title": "GL.iNet cloud malware incident, Nov 20, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T06:21:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-glinet-cloud-malware.md",
+        "html": "incidents/2026-11-glinet-cloud-malware.html",
+        "data": "data/incidents/2026-11-glinet-cloud-malware/"
+      }
+    },
+    {
       "slug": "2026-11-faa-ground-stop",
       "title": "FAA nationwide ground stop",
       "status": "monitoring",
@@ -99,17 +110,6 @@
         "page": "incidents/2026-11-ticketmaster-outage.md",
         "html": "incidents/2026-11-ticketmaster-outage.html",
         "data": "data/incidents/2026-11-ticketmaster-outage/"
-      }
-    },
-    {
-      "slug": "2026-11-glinet-cloud-malware",
-      "title": "GL.iNet cloud malware incident, Nov 20, 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-21T20:14:04-05:00",
-      "files": {
-        "page": "incidents/2026-11-glinet-cloud-malware.md",
-        "html": "incidents/2026-11-glinet-cloud-malware.html",
-        "data": "data/incidents/2026-11-glinet-cloud-malware/"
       }
     },
     {
