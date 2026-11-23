@@ -22,7 +22,7 @@
   "who_is_affected": "Rockstar Games and Take-Two, whose build is said to be leaked. People who download fake copies could be hit by malware, per the outlets' warnings.",
   "known": [
     {
-      "text": "Take-Two asked a court in August for subpoenas to Microsoft and Discord to identify infringers.",
+      "text": "A court ordered subpoenas issued to Microsoft and Discord in August at Take-Two's request, over earlier leaks.",
       "claim_id": "c009"
     }
   ],
@@ -32,8 +32,8 @@
       "question_id": "q001"
     },
     {
-      "text": "Whether the leaker really posted the executable on Nov 23.",
-      "question_id": "q003"
+      "text": "Whether the files, including the executable the leaker says it posted on Nov 23, are genuine.",
+      "question_id": "q002"
     },
     {
       "text": "How the leaker got the build, and who is behind it. The root cause is not published.",
