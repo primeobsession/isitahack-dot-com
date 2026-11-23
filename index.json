@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-gta6-xbox-build-leak",
+      "title": "GTA 6 Xbox build leak: was Rockstar hacked? Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-23T12:07:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-gta6-xbox-build-leak.md",
+        "html": "incidents/2026-11-gta6-xbox-build-leak.html",
+        "data": "data/incidents/2026-11-gta6-xbox-build-leak/"
+      }
+    },
+    {
       "slug": "2026-11-next-supplier-data-breach",
       "title": "Was Next hacked? Supplier data breach, Nov 2026",
       "status": "monitoring",
@@ -31,17 +42,6 @@
         "page": "incidents/2026-11-glinet-cloud-malware.md",
         "html": "incidents/2026-11-glinet-cloud-malware.html",
         "data": "data/incidents/2026-11-glinet-cloud-malware/"
-      }
-    },
-    {
-      "slug": "2026-11-gta6-xbox-build-leak",
-      "title": "GTA 6 Xbox build leak: was Rockstar hacked? Nov 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-23T11:07:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-gta6-xbox-build-leak.md",
-        "html": "incidents/2026-11-gta6-xbox-build-leak.html",
-        "data": "data/incidents/2026-11-gta6-xbox-build-leak/"
       }
     },
     {
