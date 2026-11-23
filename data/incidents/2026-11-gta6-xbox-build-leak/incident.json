@@ -1,0 +1,85 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-gta6-xbox-build-leak",
+  "title": "GTA 6 Xbox build leak: was Rockstar hacked? Nov 2026",
+  "subject": {
+    "name": "Rockstar Games",
+    "kind": "other"
+  },
+  "also_called": [
+    "GTA 6 leak",
+    "Cyberleek leak",
+    "GTA VI Xbox build leak"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-19",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Rockstar Games, Take-Two, Microsoft, Discord, any news outlet, court, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "No count of affected people applies. Large rests on potential reach, not a measured impact: the best-selling game launch is the subject, the files are widely shared, and fake copies may carry malware. Revisit if Rockstar or Take-Two confirms what was taken.",
+  "who_is_affected": "Rockstar Games and Take-Two, whose build is said to be leaked. People who download fake copies could be hit by malware, per the outlets' warnings.",
+  "known": [
+    {
+      "text": "Take-Two asked a court in August for subpoenas to Microsoft and Discord to identify infringers.",
+      "claim_id": "c009"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether Rockstar or Take-Two says the files are real or that it was breached.",
+      "question_id": "q001"
+    },
+    {
+      "text": "Whether the leaker really posted the executable on Nov 23.",
+      "question_id": "q003"
+    },
+    {
+      "text": "How the leaker got the build, and who is behind it. The root cause is not published.",
+      "question_id": "q004"
+    }
+  ],
+  "figures": [
+    {
+      "value": "about 209 GB",
+      "label": "Size of the claimed Xbox build",
+      "detail": "Per the leaker and outlets",
+      "claim_id": "c001"
+    },
+    {
+      "value": "No statement",
+      "label": "Rockstar or Take-Two on the build",
+      "detail": "None found",
+      "claim_id": "c007"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the GTA 6 leak"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
