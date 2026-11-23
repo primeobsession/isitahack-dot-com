@@ -1,0 +1,92 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-laliga-fan-platform-cyberattack",
+  "title": "LALIGA fan platform cyberattack, Nov 2026",
+  "subject": {
+    "name": "LALIGA",
+    "kind": "other"
+  },
+  "also_called": [
+    "LALIGA data breach",
+    "LaLiga cyberattack"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-14",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by LALIGA, any club, the AEPD, the National Police, any news outlet, government agency, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "LALIGA has not said how many people were affected. Large rests on potential reach, not a count: a national league whose fan platform also serves some clubs. Revisit when a count is published.",
+  "who_is_affected": "Users registered in digital services of LALIGA and of some clubs, per LALIGA. How many is not stated.",
+  "known": [
+    {
+      "text": "LALIGA says it suffered a cyberattack on one of its fan-services platforms.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "LALIGA says personal data of registered users was extracted.",
+      "claim_id": "c002"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "How many people were affected, and which data was taken.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Who was behind it, and how they got in. The root cause is not published.",
+      "question_id": "q003"
+    },
+    {
+      "text": "Whether anyone besides LALIGA has checked its account."
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 14 to 16",
+      "label": "Attacker access window",
+      "detail": "Per LALIGA",
+      "claim_id": "c003"
+    },
+    {
+      "value": "Not stated",
+      "label": "People affected",
+      "detail": "No count published",
+      "claim_id": "c006"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the LALIGA attack"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
