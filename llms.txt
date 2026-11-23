@@ -95,6 +95,8 @@
 - [Expedia third-party vendor breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-expedia-vendor-breach.html): the same report as a web page.
 - [GTA 6 Xbox build leak: was Rockstar hacked? Nov 2026](https://isitahack.com/incidents/2026-11-gta6-xbox-build-leak.md): the report as Markdown (still monitored). Built from its data folder.
 - [GTA 6 Xbox build leak: was Rockstar hacked? Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-gta6-xbox-build-leak.html): the same report as a web page.
+- [Was Next hacked? Supplier data breach, Nov 2026](https://isitahack.com/incidents/2026-11-next-supplier-data-breach.md): the report as Markdown (still monitored). Built from its data folder.
+- [Was Next hacked? Supplier data breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-next-supplier-data-breach.html): the same report as a web page.
 
 ## Data (typed incident format: UTF-8, RFC 4180 CSV with a header row; see Format below)
 - [data/incidents/2026-11-microsoft-365-outage/](https://isitahack.com/data/incidents/2026-11-microsoft-365-outage/): the folder the Microsoft 365 report is built from: incident.json, claims.csv, sources.csv, timeline.csv, questions.csv, update_log.csv and notes/.
@@ -147,6 +149,7 @@
 - [data/incidents/2026-11-samsung-ads-vendor-breach/](https://isitahack.com/data/incidents/2026-11-samsung-ads-vendor-breach/): the folder the Samsung Ads report is built from.
 - [data/incidents/2026-11-expedia-vendor-breach/](https://isitahack.com/data/incidents/2026-11-expedia-vendor-breach/): the folder the Expedia report is built from.
 - [data/incidents/2026-11-gta6-xbox-build-leak/](https://isitahack.com/data/incidents/2026-11-gta6-xbox-build-leak/): the folder the GTA 6 leak report is built from.
+- [data/incidents/2026-11-next-supplier-data-breach/](https://isitahack.com/data/incidents/2026-11-next-supplier-data-breach/): the folder the Next supplier incident report is built from.
 
 ## For search engines
 - [sitemap.xml](https://isitahack.com/sitemap.xml): every page, with each incident's last update.
