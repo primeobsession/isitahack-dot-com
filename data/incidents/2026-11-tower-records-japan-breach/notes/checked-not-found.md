@@ -1,4 +1,4 @@
-We looked for these and did not find them as of the time of this report on Nov 22, 2026.
+We looked for these and did not find them as of the time of this report on Nov 23, 2026.
 
 - How the attacker got in, or any technical write-up of the flaw.
 - Any attacker named, any claim of responsibility, or any police or regulator statement.
