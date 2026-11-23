@@ -1,0 +1,95 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-kurly-data-breach",
+  "title": "Was Kurly hacked? Curator and employee data breach, Nov 2026",
+  "subject": {
+    "name": "Kurly",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "Kurly data leak",
+    "Market Kurly personal information leak"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-17",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Kurly, any news outlet, regulator, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Regional",
+  "size_basis": "About 10,900 people, by Kurly's own counts: 10,699 curators, 199 current and former employees and 4 customers. Some curators' bank and ID numbers were included. Revisit if Kurly or a regulator gives new numbers.",
+  "who_is_affected": "Kurly's 'curators' (people who promote Kurly products on social media for a fee), 199 current and former employees, and 4 ordinary customers. Kurly says it is notifying them. Be wary of calls, texts or emails asking for bank or ID details.",
+  "known": [],
+  "not_known": [
+    {
+      "text": "Who the attacker was and how the login credentials were stolen.",
+      "question_id": "q002"
+    },
+    {
+      "text": "How many curators had bank or ID numbers exposed, and whether those were encrypted.",
+      "question_id": "q003"
+    },
+    {
+      "text": "Whether the stolen data has been published or misused.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Whether the privacy regulator has opened an investigation.",
+      "question_id": "q006"
+    }
+  ],
+  "figures": [
+    {
+      "value": "10,699",
+      "label": "Curators whose data leaked",
+      "detail": "Kurly's count, Nov 20",
+      "claim_id": "c002"
+    },
+    {
+      "value": "199",
+      "label": "Current and former employees",
+      "detail": "Added by Kurly on Nov 23",
+      "claim_id": "c004"
+    },
+    {
+      "value": "4",
+      "label": "Ordinary customers",
+      "detail": "2 on Nov 20, 2 more on Nov 23",
+      "claim_id": "c005"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What was taken, and from whom?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What Kurly and the authorities are doing",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Kurly breach"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-kurly-data-breach",
+      "title": "Was Kurly hacked? Curator and employee data breach, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-23T12:15:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-kurly-data-breach.md",
+        "html": "incidents/2026-11-kurly-data-breach.html",
+        "data": "data/incidents/2026-11-kurly-data-breach/"
+      }
+    },
+    {
       "slug": "2026-11-tower-records-japan-breach",
       "title": "Tower Records Japan data breach, Nov 2026",
       "status": "monitoring",
