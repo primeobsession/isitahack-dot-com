@@ -6,6 +6,7 @@
     "name": "OPM",
     "kind": "government"
   },
+  "lead_image": "opm-headquarters",
   "also_called": [
     "the OPM job-offer breach",
     "the USA Staffing breach"
@@ -58,6 +59,21 @@
       "label": "Reported access dates",
       "detail": "Blocked by Nov 14, per the email",
       "claim_id": "c001"
+    }
+  ],
+  "images": [
+    {
+      "id": "opm-headquarters",
+      "title": "OPM headquarters",
+      "file": "images/opm-headquarters.jpg",
+      "alt": "A stone sign reading Theodore Roosevelt Building, 1900 E Street NW, U.S. Office of Personnel Management, in front of the agency's headquarters in Washington, DC.",
+      "caption": "The Theodore Roosevelt Federal Building, headquarters of the US Office of Personnel Management, in February 2025.",
+      "credit": "G. Edward Johnson, CC BY 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:OPM_Theodore_Roosevelt_Building_Washington_DC_2025-02-10_11-37-56_1.jpg",
+      "sha256": "0f00f12990bb50fdbd9d67cf73f969fcba1349c8b5557815a664e70b50e9cf9c",
+      "width": 1920,
+      "height": 1280
     }
   ],
   "sections": [

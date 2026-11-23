@@ -6,6 +6,7 @@
     "name": "GoFundMe, DonorPerfect",
     "kind": "online-service"
   },
+  "lead_image": "gofundme-logo",
   "also_called": [
     "GoFundMe Pro data breach",
     "DonorPerfect cyberattack",
@@ -115,6 +116,21 @@
       "type": "note",
       "title": "What we checked and did not find",
       "file": "notes/checked-not-found.md"
+    }
+  ],
+  "images": [
+    {
+      "id": "gofundme-logo",
+      "title": "GoFundMe logo",
+      "file": "images/gofundme-logo.png",
+      "alt": "GoFundMe logo",
+      "caption": "GoFundMe logo (used for identification; GoFundMe is not affiliated with isitahack.com).",
+      "credit": "GoFundMe logo, trademark of GoFundMe, public domain on Wikimedia Commons",
+      "rights": "logo",
+      "source_url": "https://commons.wikimedia.org/wiki/File:GoFundMe_logo.svg",
+      "sha256": "9fd7f45aeb2a6ac76dd84ef8c59c08c10071f350fba85ef967627c13f6bdca25",
+      "width": 1600,
+      "height": 1200
     }
   ]
 }

@@ -6,6 +6,7 @@
     "name": "Steam",
     "kind": "online-service"
   },
+  "lead_image": "steam-deck-oled",
   "also_called": [
     "the Steam outage",
     "Steam down",
@@ -56,6 +57,21 @@
       "label": "Reports in an hour, Nov 20-21",
       "detail": "Tracker figure from about 11:47 PM ET, per IBTimes AU",
       "claim_id": "c006"
+    }
+  ],
+  "images": [
+    {
+      "id": "steam-deck-oled",
+      "title": "A Steam Deck",
+      "file": "images/steam-deck-oled.jpg",
+      "alt": "A Steam Deck OLED handheld games console lying on a table, its screen showing the Steam home screen with game tiles.",
+      "caption": "A Steam Deck OLED showing the Steam home screen (cropped).",
+      "credit": "SparklesTrainNerd, CC BY-SA 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Steam_Deck_OLED_framsida_hemsk%C3%A4rm.jpg",
+      "sha256": "9530ae3da5540bc89988ab2fa4de589b30d91e789175582ad85fb32790f6bcf2",
+      "width": 1920,
+      "height": 960
     }
   ],
   "sections": [

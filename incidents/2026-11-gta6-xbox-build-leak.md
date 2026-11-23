@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Rockstar Games, Ta
 
 Incident: GTA 6 Xbox build leak: was Rockstar hacked? Nov 2026. Also reported as GTA 6 leak, Cyberleek leak and GTA VI Xbox build leak. First published Nov 23, 2026; last updated Nov 23, 2026, 11:07 AM ET.
 
+Picture: The office of Rockstar North, the Rockstar Games studio in Edinburgh, in October 2023. Image: Discott, CC0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:20231022_Rockstar_North.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Rockstar Games, Take-Two, Microsoft, Discord, any news outlet, court, company, or anyone else named.
 
 This is the current answer, not a final verdict.

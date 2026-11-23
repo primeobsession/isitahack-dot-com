@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Rakuten Securities
 
 Incident: Rakuten Securities breach, Nov 2026. Also reported as Rakuten Securities data leak, Rakuten Securities unauthorized access and 楽天証券 情報漏えい. First published Nov 21, 2026; last updated Nov 21, 2026, 11:50 PM ET.
 
+Picture: Rakuten Crimson House in Tokyo, headquarters of the Rakuten group, of which Rakuten Securities is part. Image: Kamo31, CC BY-SA 4.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:%E6%A5%BD%E5%A4%A9%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E6%9C%AC%E7%A4%BE.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Rakuten Securities, Rakuten Group, Japan's Financial Services Agency, any news outlet, government agency, company, or anyone else named.
 
 This is the current answer, not a final verdict.

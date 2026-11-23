@@ -6,6 +6,7 @@
     "name": "Premise Health",
     "kind": "health"
   },
+  "lead_image": "premise-health-logo",
   "also_called": [
     "the Premise Health data breach",
     "the Premise Health insider breach"
@@ -117,6 +118,21 @@
       "type": "note",
       "title": "What we checked and did not find",
       "file": "notes/checked-not-found.md"
+    }
+  ],
+  "images": [
+    {
+      "id": "premise-health-logo",
+      "title": "Premise Health logo",
+      "file": "images/premise-health-logo.png",
+      "alt": "Premise Health logo",
+      "caption": "Premise Health logo (used for identification; Premise Health is not affiliated with isitahack.com).",
+      "credit": "Premise Health logo, trademark of Premise Health, from premisehealth.com",
+      "rights": "logo",
+      "source_url": "https://www.premisehealth.com/",
+      "sha256": "42149027504eb29089da032daedc357c9fae7aae2b69c890b4f7ea83d135bafc",
+      "width": 1600,
+      "height": 1200
     }
   ]
 }

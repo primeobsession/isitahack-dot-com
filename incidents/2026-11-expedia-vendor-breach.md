@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Expedia, Skift, Cy
 
 Incident: Expedia third-party vendor breach, Nov 2026. Also reported as the Expedia supply chain attack and the Expedia data leak. First published Nov 22, 2026; last updated Nov 22, 2026, 3:31 PM ET.
 
+Picture: The south entrance of Expedia Group's headquarters in Seattle. Image: T014y, CC BY-SA 4.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Expedia_Group_south_entrance.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Expedia, Skift, Cybernews, The Seattle Times or any other company, news outlet, government agency, or anyone else named.
 
 This is the current answer, not a final verdict.

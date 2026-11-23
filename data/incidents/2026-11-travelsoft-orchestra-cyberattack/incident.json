@@ -6,6 +6,7 @@
     "name": "Orchestra",
     "kind": "online-service"
   },
+  "lead_image": "havas-voyages-agency",
   "also_called": [
     "the Orchestra outage",
     "the Travelsoft hack"
@@ -59,6 +60,21 @@
       "label": "Restoration begins",
       "detail": "Fri Nov 20, Paris time",
       "claim_id": "c004"
+    }
+  ],
+  "images": [
+    {
+      "id": "havas-voyages-agency",
+      "title": "A Havas Voyages travel agency",
+      "file": "images/havas-voyages-agency.jpg",
+      "alt": "A Havas Voyages travel agency shop front on a French street, with the brand's name on a blue sign above its window.",
+      "caption": "A Havas Voyages agency in Issy-les-Moulineaux, France. Havas Voyages is one of the travel brands that use Orchestra.",
+      "credit": "Mickael Denet, CC BY-SA 3.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Agence_Havas_Voyages_-_Issy.jpg",
+      "sha256": "13fac2575dcc7bc130c380257c534e9e7f512869c887ede029b5641677a06818",
+      "width": 1920,
+      "height": 1440
     }
   ],
   "sections": [

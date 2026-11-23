@@ -6,6 +6,7 @@
     "name": "Next",
     "kind": "other"
   },
+  "lead_image": "next-store-truro",
   "also_called": [
     "Next supplier cyber incident",
     "Next third-party data incident"
@@ -51,6 +52,21 @@
       "label": "The supplier",
       "detail": "Next has not said",
       "claim_id": "c005"
+    }
+  ],
+  "images": [
+    {
+      "id": "next-store-truro",
+      "title": "A Next store",
+      "file": "images/next-store-truro.jpg",
+      "alt": "A large grey Next store with the brand name in white capital letters above its glass entrance, with cars parked in front.",
+      "caption": "A Next store at Treliske Retail Park in Truro, Cornwall, in July 2024.",
+      "credit": "Mutney, CC0, via Wikimedia Commons",
+      "rights": "public-domain",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Next,_Treliske_Retail_Park,_Truro,_Cornwall_-_July_2024_(2).jpg",
+      "sha256": "7a46db11dd3bcf90248b010157bf0fdbafc241d8aaa21d0f0998dd6b17fd342e",
+      "width": 1920,
+      "height": 1125
     }
   ],
   "sections": [

@@ -6,6 +6,7 @@
     "name": "Expedia",
     "kind": "online-service"
   },
+  "lead_image": "expedia-group-campus",
   "also_called": [
     "the Expedia supply chain attack",
     "the Expedia data leak"
@@ -51,6 +52,21 @@
       "label": "Posted so far",
       "detail": "Per Cybernews",
       "claim_id": "c005"
+    }
+  ],
+  "images": [
+    {
+      "id": "expedia-group-campus",
+      "title": "Expedia Group's headquarters",
+      "file": "images/expedia-group-campus.jpg",
+      "alt": "The modern glass and white-panelled south entrance of Expedia Group's headquarters campus in Seattle, seen from a footbridge.",
+      "caption": "The south entrance of Expedia Group's headquarters in Seattle.",
+      "credit": "T014y, CC BY-SA 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Expedia_Group_south_entrance.jpg",
+      "sha256": "39cd546afb1264a2eb530a5b5462f9d2073b01d868e9098b9000b58cadcbc28f",
+      "width": 1920,
+      "height": 933
     }
   ],
   "sections": [

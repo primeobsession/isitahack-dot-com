@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Cleverbridge, Blee
 
 Incident: Cleverbridge payment card breach, Nov 2026. Also reported as the Cleverbridge data breach and the Cleverbridge card theft. First published Nov 22, 2026; last updated Nov 22, 2026, 12:19 PM ET.
 
+Picture: Cleverbridge logo (used for identification; Cleverbridge is not affiliated with isitahack.com). Image: Cleverbridge logo, trademark of Cleverbridge, from cleverbridge.com (the white version, shown on a dark background) (https://www.cleverbridge.com/).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Cleverbridge, BleepingComputer, Malwarebytes, Red Hat, SUSE, Tenable, Veeam, Jamf, Sony, Parallels or any other company, news outlet, government agency, or anyone else named.
 
 This is the current answer, not a final verdict.

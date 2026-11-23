@@ -6,6 +6,7 @@
     "name": "ZOZO",
     "kind": "online-service"
   },
+  "lead_image": "zozotown-box",
   "also_called": [
     "the ZOZOTOWN data leak",
     "the WEAR data leak",
@@ -80,6 +81,21 @@
       "label": "Brand staff",
       "detail": "Current and former",
       "claim_id": "c005"
+    }
+  ],
+  "images": [
+    {
+      "id": "zozotown-box",
+      "title": "A ZOZOTOWN delivery box",
+      "file": "images/zozotown-box.jpg",
+      "alt": "A black cardboard ZOZOTOWN delivery box with the brand name printed in white on its side.",
+      "caption": "A ZOZOTOWN delivery box, as used for orders from the ZOZO online fashion store.",
+      "credit": "kobakou, CC BY 2.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:ZOZOTOWN_box_%E9%BB%92%E6%AE%B5%E3%83%9C%E3%83%BC%E3%83%AB%E7%AE%B1_Sep_15,_2018.jpg",
+      "sha256": "f642f6468e8efa36ca20f38fb8f4bc1cbba6666dfc0cdacde49255586a3f3d45",
+      "width": 1920,
+      "height": 1280
     }
   ],
   "sections": [

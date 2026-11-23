@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by ZOZO, PLAID, JINS,
 
 Incident: ZOZO customer data leak via PLAID KARTE, Nov 2026. Also reported as the ZOZOTOWN data leak, the WEAR data leak and the PLAID KARTE breach. First published Nov 22, 2026; last updated Nov 22, 2026, 3:50 PM ET.
 
+Picture: A ZOZOTOWN delivery box, as used for orders from the ZOZO online fashion store. Image: kobakou, CC BY 2.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:ZOZOTOWN_box_%E9%BB%92%E6%AE%B5%E3%83%9C%E3%83%BC%E3%83%AB%E7%AE%B1_Sep_15,_2018.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by ZOZO, PLAID, JINS, MUFG Bank, RIZAP, Optage, KOSE, Nikkei, CNET Japan, NHK, ITmedia, Yomiuri Shimbun or any other company, news outlet, government agency, or anyone else named.
 
 This is the current answer, not a final verdict.

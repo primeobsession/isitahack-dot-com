@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Airbyte, Salesforc
 
 Incident: Airbyte Cloud security incident, Nov 2026. Also reported as the Airbyte Cloud outage and the Airbyte cyberattack. First published Nov 21, 2026; last updated Nov 21, 2026, 4:35 PM ET.
 
+Picture: Airbyte logo (used for identification; Airbyte is not affiliated with isitahack.com). Image: Airbyte logo, trademark of Airbyte, from airbyte.com (https://airbyte.com/).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Airbyte, Salesforce, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

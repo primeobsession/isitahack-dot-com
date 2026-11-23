@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Project Gutenberg,
 
 Incident: Project Gutenberg website vandalism, Nov 15, 2026. Also reported as the Gutenberg hack and Project Gutenberg down. First published Nov 21, 2026; last updated Nov 21, 2026, 5:14 AM ET.
 
+Picture: Project Gutenberg logo (used for identification; Project Gutenberg is not affiliated with isitahack.com). Image: Project Gutenberg logo, public domain on Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Project_Gutenberg_logo.svg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Project Gutenberg, the Project Gutenberg Literary Archive Foundation, ibiblio, any news outlet, government agency, company, or anyone else named.
 
 This is the current answer, not a final verdict.

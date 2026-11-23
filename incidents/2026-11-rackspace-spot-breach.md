@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Rackspace, Platfor
 
 Incident: Rackspace Spot breach, Nov 2026. Also reported as the Rackspace Spot outage and the Rackspace Spot Kubernetes breach. First published Nov 21, 2026; last updated Nov 21, 2026, 6:34 PM ET.
 
+Picture: Rackspace logo (used for identification; Rackspace is not affiliated with isitahack.com). Image: Rackspace Technology logo, trademark of Rackspace, public domain on Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Rackspace_Technology.svg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Rackspace, Platform9, BleepingComputer, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

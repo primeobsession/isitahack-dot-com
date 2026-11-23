@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Premise Health, an
 
 Incident: Premise Health patient data taken by an employee, 2026. Also reported as the Premise Health data breach and the Premise Health insider breach. First published Nov 20, 2026; last updated Nov 21, 2026, 7:08 AM ET.
 
+Picture: Premise Health logo (used for identification; Premise Health is not affiliated with isitahack.com). Image: Premise Health logo, trademark of Premise Health, from premisehealth.com (https://www.premisehealth.com/).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Premise Health, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

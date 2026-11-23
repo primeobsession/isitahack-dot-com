@@ -6,6 +6,7 @@
     "name": "DoorDash",
     "kind": "online-service"
   },
+  "lead_image": "doordash-logo",
   "also_called": [
     "the DoorDash outage"
   ],
@@ -113,6 +114,21 @@
       "type": "note",
       "title": "What we checked and did not find",
       "file": "notes/checked-not-found.md"
+    }
+  ],
+  "images": [
+    {
+      "id": "doordash-logo",
+      "title": "DoorDash logo",
+      "file": "images/doordash-logo.png",
+      "alt": "DoorDash logo",
+      "caption": "DoorDash logo (used for identification; DoorDash is not affiliated with isitahack.com).",
+      "credit": "DoorDash logo, trademark of DoorDash, public domain on Wikimedia Commons",
+      "rights": "logo",
+      "source_url": "https://commons.wikimedia.org/wiki/File:DoorDash_Logo.svg",
+      "sha256": "2fd5fe8301654ff06bf56966c412cb23543e31396036b15c2028f6fd17dabfbf",
+      "width": 1600,
+      "height": 1200
     }
   ]
 }

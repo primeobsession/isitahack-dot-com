@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Charleston County,
 
 Incident: Charleston County, SC cyberattack, Nov 16, 2026. Also reported as Charleston County cybersecurity incident and Charleston County data breach. First published Nov 21, 2026; last updated Nov 21, 2026, 11:29 AM ET.
 
+Picture: The Charleston County Courthouse in Charleston, South Carolina, in 2013. Image: ProfReader, CC BY-SA 3.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Charleston_County_Courthouse_2013.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Charleston County, SLED, any news outlet, government agency, company, or anyone else named.
 
 This is the current answer, not a final verdict.

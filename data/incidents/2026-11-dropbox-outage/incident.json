@@ -6,6 +6,7 @@
     "name": "Dropbox",
     "kind": "online-service"
   },
+  "lead_image": "dropbox-app-phone",
   "also_called": [
     "the Dropbox outage"
   ],
@@ -64,6 +65,21 @@
       "label": "Components in major outage",
       "detail": "Website, apps, API and more",
       "claim_id": "c002"
+    }
+  ],
+  "images": [
+    {
+      "id": "dropbox-app-phone",
+      "title": "The Dropbox app on a phone",
+      "file": "images/dropbox-app-phone.jpg",
+      "alt": "A hand holding a smartphone showing the blue Dropbox app start screen, with a laptop blurred in the background.",
+      "caption": "The Dropbox app open on a smartphone.",
+      "credit": "Ian Lamont, CC BY 2.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dropbox_(7463062672).jpg",
+      "sha256": "d19d4eefe3ead41b0f0ca1986a0429297503c89fe81f8e52096a463b027b9612",
+      "width": 1920,
+      "height": 1440
     }
   ],
   "sections": [

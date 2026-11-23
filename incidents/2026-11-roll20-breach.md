@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Roll20, any govern
 
 Incident: Roll20 account data breach, Nov 2026. Also reported as the Roll20 hack and the Roll20 security incident. First published Nov 20, 2026; last updated Nov 20, 2026, 11:46 PM ET.
 
+Picture: Roll20 logo (used for identification; Roll20 is not affiliated with isitahack.com). Image: Roll20 logo, trademark of Roll20, from roll20.net (https://roll20.net/).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Roll20, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

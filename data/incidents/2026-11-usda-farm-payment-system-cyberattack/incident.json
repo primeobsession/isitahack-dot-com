@@ -6,6 +6,7 @@
     "name": "USDA",
     "kind": "government"
   },
+  "lead_image": "usda-whitten-building",
   "also_called": [
     "the USDA hack",
     "the USDA cybersecurity incident"
@@ -63,6 +64,21 @@
       "label": "Personal data, USDA says",
       "detail": "An official's statement",
       "claim_id": "c009"
+    }
+  ],
+  "images": [
+    {
+      "id": "usda-whitten-building",
+      "title": "USDA headquarters",
+      "file": "images/usda-whitten-building.jpg",
+      "alt": "The Jamie L. Whitten Building, the US Department of Agriculture's headquarters in Washington, DC, lit up at dusk across a snowy lawn and framed by bare trees.",
+      "caption": "The Jamie L. Whitten Building, headquarters of the US Department of Agriculture, in Washington, DC.",
+      "credit": "USDA, public domain, via Wikimedia Commons",
+      "rights": "public-domain",
+      "source_url": "https://commons.wikimedia.org/wiki/File:USDA_Whitten_Building_(39033221524).jpg",
+      "sha256": "b8b9ea01374738b56060e70954fb0c84d63b0bb8c904469d0277bcffd4ae3a4a",
+      "width": 1920,
+      "height": 1280
     }
   ],
   "sections": [

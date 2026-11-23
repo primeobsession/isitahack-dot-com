@@ -6,6 +6,7 @@
     "name": "Microsoft Entra",
     "kind": "online-service"
   },
+  "lead_image": "microsoft-redmond-campus",
   "also_called": [
     "Entra Connect Health breach",
     "Microsoft Entra Connect Health flaw"
@@ -80,6 +81,21 @@
       "label": "Investigation done, notices sent",
       "detail": "Per Microsoft",
       "claim_id": "c004"
+    }
+  ],
+  "images": [
+    {
+      "id": "microsoft-redmond-campus",
+      "title": "Microsoft's Redmond campus",
+      "file": "images/microsoft-redmond-campus.jpg",
+      "alt": "A white office building among tall evergreen trees on Microsoft's campus, seen past the corner of a neighbouring building.",
+      "caption": "Part of Microsoft's headquarters campus in Redmond, Washington.",
+      "credit": "Runner1928, CC BY-SA 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:View_of_Microsoft_campus_from_building_36.jpg",
+      "sha256": "ca22a0879a22507a89e4262abd04dcb5ae0eba69b8327d910a5f5ea8bc45f660",
+      "width": 1920,
+      "height": 1421
     }
   ],
   "sections": [

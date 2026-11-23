@@ -6,6 +6,7 @@
     "name": "Together AI",
     "kind": "online-service"
   },
+  "lead_image": "together-ai-logo",
   "also_called": [
     "the Together AI security event",
     "the Together AI prompt leakage"
@@ -123,6 +124,21 @@
       "type": "note",
       "title": "What we checked and did not find",
       "file": "notes/checked-not-found.md"
+    }
+  ],
+  "images": [
+    {
+      "id": "together-ai-logo",
+      "title": "Together AI logo",
+      "file": "images/together-ai-logo.png",
+      "alt": "Together AI logo",
+      "caption": "Together AI logo (used for identification; Together AI is not affiliated with isitahack.com).",
+      "credit": "Together AI logo, trademark of Together AI, from together.ai",
+      "rights": "logo",
+      "source_url": "https://www.together.ai/",
+      "sha256": "607c847e7d4a25ac9f6382b4c3fc6213f7b23f7b4a1488366a9d376d5ee4d116",
+      "width": 1600,
+      "height": 1200
     }
   ]
 }

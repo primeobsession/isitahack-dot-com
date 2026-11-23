@@ -6,6 +6,7 @@
     "name": "Airbyte",
     "kind": "online-service"
   },
+  "lead_image": "airbyte-logo",
   "also_called": [
     "the Airbyte Cloud outage",
     "the Airbyte cyberattack"
@@ -128,6 +129,21 @@
       "type": "note",
       "title": "What we checked and did not find",
       "file": "notes/checked-not-found.md"
+    }
+  ],
+  "images": [
+    {
+      "id": "airbyte-logo",
+      "title": "Airbyte logo",
+      "file": "images/airbyte-logo.png",
+      "alt": "Airbyte logo",
+      "caption": "Airbyte logo (used for identification; Airbyte is not affiliated with isitahack.com).",
+      "credit": "Airbyte logo, trademark of Airbyte, from airbyte.com",
+      "rights": "logo",
+      "source_url": "https://airbyte.com/",
+      "sha256": "241b8f08f0ecd14025fd4732cc026a81795d76cf1901c5eca5f12b5addb88992",
+      "width": 1600,
+      "height": 1200
     }
   ]
 }

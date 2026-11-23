@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by KEPCO, Yonhap, Cho
 
 Incident: KEPCO customer data breach, Nov 2026. Also reported as the KEPCO ON leak and KEPCO's second breach. First published Nov 22, 2026; last updated Nov 22, 2026, 2:44 PM ET.
 
+Picture: A local branch office of KEPCO (Korea Electric Power Corporation) in Hadong, South Korea. Image: hyolee2, CC BY-SA 3.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Korea_Electric_Power_Corporation_Hadong_branch.JPG).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by KEPCO, Yonhap, Chosunbiz, Financial News, Electronic Times, Aju Press, Newsis, Digital Times, Chosun Ilbo, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.
