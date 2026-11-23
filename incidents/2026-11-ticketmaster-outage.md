@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Ticketmaster, Live
 
 Incident: Ticketmaster outage, Nov 20, 2026. Also reported as the Ticketmaster outage and Ticketmaster down. First published Nov 21, 2026; last updated Nov 22, 2026, 9:03 AM ET.
 
+Picture: A printed Ticketmaster ticket. Image: Public domain, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Ticketmaster_paper_ticket.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Ticketmaster, Live Nation, any venue, government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

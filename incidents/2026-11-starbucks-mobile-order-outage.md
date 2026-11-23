@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Starbucks, any gov
 
 Incident: Starbucks Mobile Order & Pay outage, Nov 20, 2026. Also reported as the Starbucks app outage and Starbucks app down. First published Nov 20, 2026; last updated Nov 20, 2026, 7:49 PM ET.
 
+Picture: A Starbucks store at Barton Creek Square mall in Austin, Texas. Image: CC0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Starbucks_Store_Barton_Creek_Mall_Austin_Texas.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Starbucks, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

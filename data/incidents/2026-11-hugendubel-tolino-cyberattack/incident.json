@@ -6,6 +6,7 @@
     "name": "Hugendubel",
     "kind": "online-service"
   },
+  "lead_image": "hugendubel-marienplatz",
   "also_called": [
     "the Hugendubel hack",
     "the tolino cloud outage"
@@ -75,6 +76,21 @@
       "label": "Hugendubel stores",
       "detail": "Stores remain open, per the company",
       "claim_id": "c013"
+    }
+  ],
+  "images": [
+    {
+      "id": "hugendubel-marienplatz",
+      "title": "Hugendubel bookshop, Munich",
+      "file": "images/hugendubel-marienplatz.jpg",
+      "alt": "The tall modern front of the Hugendubel bookshop on a city square, with the shop's name above its ground-floor windows and a church tower beside it.",
+      "caption": "The Hugendubel bookshop on Marienplatz in Munich.",
+      "credit": "Hugendubel Buchhandlung, CC BY-SA 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fassade_Hugendubel_Marienplatz.jpg",
+      "sha256": "c925056245d78a370e70d5ca2e2b53231a12fc47ac5bc9b28cada8b8e21803ef",
+      "width": 1920,
+      "height": 1349
     }
   ],
   "sections": [

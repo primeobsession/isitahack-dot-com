@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Dropbox, any gover
 
 Incident: Dropbox outage, Nov 20, 2026. Also reported as the Dropbox outage. First published Nov 21, 2026; last updated Nov 21, 2026, 1:23 AM ET.
 
+Picture: The Dropbox app open on a smartphone. Image: Ian Lamont, CC BY 2.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Dropbox_(7463062672).jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Dropbox, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

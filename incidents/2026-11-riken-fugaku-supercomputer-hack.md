@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by RIKEN, any governm
 
 Incident: RIKEN Fugaku supercomputer break-in, Nov 2026. Also reported as the Fugaku hack and the RIKEN supercomputer cyberattack. First published Nov 21, 2026; last updated Nov 21, 2026, 1:18 AM ET.
 
+Picture: The Fugaku supercomputer at the RIKEN Center for Computational Science in Kobe, Japan. Image: Barsaka2, CC0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:RIKEN_R-CCS_Fugaku.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by RIKEN, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

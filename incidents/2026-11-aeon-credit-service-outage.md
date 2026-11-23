@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by AEON Credit Servic
 
 Incident: AEON Credit Service outage and unauthorized access, Nov 2026. Also reported as the AEON credit card outage and the AEON Credit Service hack. First published Nov 22, 2026; last updated Nov 22, 2026, 12:39 PM ET.
 
+Picture: An AEON Credit Service shop in Causeway Bay, Hong Kong, in October 2021. Image: Weizshaum KIAMZOU 300, CC BY-SA 4.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:HK_WCD_CWB_%E9%8A%85%E9%91%BC%E7%81%A3_Causeway_Bay_%E6%80%A1%E5%92%8C%E8%A1%97_Yee_Wo_Street_%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%BB%88_Hong_Kong_Mansion_shop_AEON_Credit_Service_TSL_October_2021_SS2_01.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by AEON Credit Service, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

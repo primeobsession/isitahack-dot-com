@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by the FBI, any gover
 
 Incident: FBI crime database (NCIC) intrusion, reported Nov 20, 2026. Also reported as the NCIC breach and the FBI crime database hack. First published Nov 20, 2026; last updated Nov 21, 2026, 9:07 PM ET.
 
+Picture: The FBI's Criminal Justice Information Services complex near Clarksburg, West Virginia, the division that runs NCIC. Image: FBI, public domain, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:FBI_Criminal_Justice_Information_Services.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by the FBI, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

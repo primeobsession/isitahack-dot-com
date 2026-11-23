@@ -6,6 +6,7 @@
     "name": "Charleston County",
     "kind": "government"
   },
+  "lead_image": "charleston-county-courthouse",
   "also_called": [
     "Charleston County cybersecurity incident",
     "Charleston County data breach"
@@ -70,6 +71,21 @@
       "label": "SLED's treatment",
       "detail": "Per the county's Nov 19 release",
       "claim_id": "c004"
+    }
+  ],
+  "images": [
+    {
+      "id": "charleston-county-courthouse",
+      "title": "Charleston County Courthouse",
+      "file": "images/charleston-county-courthouse.jpg",
+      "alt": "A three-storey white classical building with tall windows and a columned upper front, on a street corner in Charleston under a blue sky.",
+      "caption": "The Charleston County Courthouse in Charleston, South Carolina, in 2013.",
+      "credit": "ProfReader, CC BY-SA 3.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Charleston_County_Courthouse_2013.jpg",
+      "sha256": "8f232aec0a5b71a5ff02fa8dfea5e31576613005e03c3175d777d58855c08ca6",
+      "width": 1920,
+      "height": 1404
     }
   ],
   "sections": [

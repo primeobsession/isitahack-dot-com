@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Atlassian, any gov
 
 Incident: Atlassian Bitbucket and login outage, Nov 23, 2026. Also reported as the Bitbucket outage and the Atlassian login outage. First published Nov 23, 2026; last updated Nov 23, 2026, 11:12 AM ET.
 
+Picture: Atlassian's former Japanese office in Yokohama, in 2014. Image: Thirteen-fri, CC BY-SA 3.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Atlassian_(Japanese_branch_office)_in_Marinos_Town.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Atlassian, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

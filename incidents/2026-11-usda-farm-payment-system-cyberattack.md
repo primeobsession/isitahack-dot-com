@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by USDA, any governme
 
 Incident: USDA farm payment system cyberattack, Nov 2026. Also reported as the USDA hack and the USDA cybersecurity incident. First published Nov 21, 2026; last updated Nov 22, 2026, 9:04 AM ET.
 
+Picture: The Jamie L. Whitten Building, headquarters of the US Department of Agriculture, in Washington, DC. Image: USDA, public domain, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:USDA_Whitten_Building_(39033221524).jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by USDA, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

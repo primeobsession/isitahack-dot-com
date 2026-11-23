@@ -6,6 +6,7 @@
     "name": "Ochsner Health",
     "kind": "health"
   },
+  "lead_image": "ochsner-medical-center",
   "also_called": [
     "Ochsner data incident",
     "Ochsner Microsoft 365 breach",
@@ -70,6 +71,21 @@
       "label": "Files Vortex claims",
       "detail": "A group's claim, not verified",
       "claim_id": "c005"
+    }
+  ],
+  "images": [
+    {
+      "id": "ochsner-medical-center",
+      "title": "Ochsner Medical Center",
+      "file": "images/ochsner-medical-center.jpg",
+      "alt": "The multi-storey buildings of Ochsner Medical Center's main campus behind a lawn with palm trees and a car park.",
+      "caption": "Ochsner Medical Center's main campus near New Orleans, Louisiana, in April 2023.",
+      "credit": "Infrogmation of New Orleans, CC BY-SA 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ochsner_Medical_Center,_Main_Campus,_April_2023_-_01.jpg",
+      "sha256": "c14067e536b83336a2923e26c3219e93863b2b33a28a0bf1daac9ab0ec64a8aa",
+      "width": 1920,
+      "height": 1440
     }
   ],
   "sections": [

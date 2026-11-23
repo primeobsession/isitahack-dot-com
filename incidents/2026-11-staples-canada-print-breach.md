@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Staples, any gover
 
 Incident: Staples Canada print website breach, Nov 2026. Also reported as the staplesprint.ca breach and the Staples Print hack. First published Nov 21, 2026; last updated Nov 21, 2026, 12:36 AM ET.
 
+Picture: A Staples store in Bowmanville, Ontario, in June 2025. Image: Dillan Payne, CC BY-SA 4.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Staples_store_in_Bowmanville,_June_22_2025.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Staples, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

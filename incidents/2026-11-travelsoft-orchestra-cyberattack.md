@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Travelsoft, Orches
 
 Incident: Travelsoft Orchestra cyberattack, Nov 2026. Also reported as the Orchestra outage and the Travelsoft hack. First published Nov 22, 2026; last updated Nov 22, 2026, 12:13 AM ET.
 
+Picture: A Havas Voyages agency in Issy-les-Moulineaux, France. Havas Voyages is one of the travel brands that use Orchestra. Image: Mickael Denet, CC BY-SA 3.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Agence_Havas_Voyages_-_Issy.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Travelsoft, Orchestra, Voyages E.Leclerc, Carrefour Voyages, Selectour, Havas Voyages, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

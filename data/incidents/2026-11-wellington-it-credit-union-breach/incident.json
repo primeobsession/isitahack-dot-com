@@ -6,6 +6,7 @@
     "name": "Wellington IT",
     "kind": "finance"
   },
+  "lead_image": "irish-credit-union-branch",
   "also_called": [
     "the Irish credit union data breach",
     "the CU Online breach"
@@ -87,6 +88,21 @@
       "label": "Credit unions told",
       "detail": "Six weeks after the activity",
       "claim_id": "c008"
+    }
+  ],
+  "images": [
+    {
+      "id": "irish-credit-union-branch",
+      "title": "An Irish credit union branch",
+      "file": "images/irish-credit-union-branch.jpg",
+      "alt": "A small white single-storey credit union branch with a blue sign and canopy over its entrance, behind a low wall, railings and shrubs.",
+      "caption": "A credit union branch in Inniskeen, County Monaghan, Ireland. It is not known to be one of the affected credit unions.",
+      "credit": "Eric Jones, CC BY-SA 2.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_Inniskeen_branch_of_the_Inniskeen_Credit_Union_-_geograph.org.uk_-_5008861.jpg",
+      "sha256": "15f1dd1793622b510e634e969661f868bbaf8c46f91da6faf716cd4c53052796",
+      "width": 1920,
+      "height": 1362
     }
   ],
   "sections": [

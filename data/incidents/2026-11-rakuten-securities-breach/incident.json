@@ -6,6 +6,7 @@
     "name": "Rakuten Securities",
     "kind": "finance"
   },
+  "lead_image": "rakuten-crimson-house",
   "also_called": [
     "Rakuten Securities data leak",
     "Rakuten Securities unauthorized access",
@@ -84,6 +85,21 @@
       "label": "Date data may have leaked",
       "detail": "Per the company",
       "claim_id": "c002"
+    }
+  ],
+  "images": [
+    {
+      "id": "rakuten-crimson-house",
+      "title": "Rakuten Crimson House",
+      "file": "images/rakuten-crimson-house.jpg",
+      "alt": "A tall glass office tower with a red Rakuten sign at the top, seen from below against a blue sky with clouds.",
+      "caption": "Rakuten Crimson House in Tokyo, headquarters of the Rakuten group, of which Rakuten Securities is part.",
+      "credit": "Kamo31, CC BY-SA 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%E6%A5%BD%E5%A4%A9%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E6%9C%AC%E7%A4%BE.jpg",
+      "sha256": "29e90004f53b9dc0ca915996464fc0878466475e9e575c1a79b1ada4927f77e5",
+      "width": 1920,
+      "height": 1280
     }
   ],
   "sections": [

@@ -6,6 +6,7 @@
     "name": "Ticketmaster",
     "kind": "online-service"
   },
+  "lead_image": "ticketmaster-paper-ticket",
   "also_called": [
     "the Ticketmaster outage",
     "Ticketmaster down"
@@ -74,6 +75,21 @@
       "label": "Nights with disruption reported",
       "detail": "Nov 19 and Nov 20",
       "claim_id": "c009"
+    }
+  ],
+  "images": [
+    {
+      "id": "ticketmaster-paper-ticket",
+      "title": "A Ticketmaster ticket",
+      "file": "images/ticketmaster-paper-ticket.jpg",
+      "alt": "A printed Ticketmaster paper ticket for a 2021 concert at the Savannah Civic Center, with seat details and the Ticketmaster name on its stub, on a plain white background.",
+      "caption": "A printed Ticketmaster ticket.",
+      "credit": "Public domain, via Wikimedia Commons",
+      "rights": "public-domain",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ticketmaster_paper_ticket.jpg",
+      "sha256": "f2d731307f829b27370f4d44790d3ed5ae45d46092f2ac374bc2abda16e24186",
+      "width": 1920,
+      "height": 960
     }
   ],
   "sections": [

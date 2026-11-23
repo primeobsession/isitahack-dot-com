@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Wellington IT, the
 
 Incident: Wellington IT credit union breach, Nov 2026. Also reported as the Irish credit union data breach and the CU Online breach. First published Nov 22, 2026; last updated Nov 22, 2026, 3:58 PM ET.
 
+Picture: A credit union branch in Inniskeen, County Monaghan, Ireland. It is not known to be one of the affected credit unions. Image: Eric Jones, CC BY-SA 2.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:The_Inniskeen_branch_of_the_Inniskeen_Credit_Union_-_geograph.org.uk_-_5008861.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Wellington IT, the Department of Finance, RTÉ, The Record, The Register, The Irish Times, the Irish Examiner, BleepingComputer, TheJournal.ie, North East Credit Union or any other credit union, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

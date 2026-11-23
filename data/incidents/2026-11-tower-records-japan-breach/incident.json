@@ -6,6 +6,7 @@
     "name": "Tower Records",
     "kind": "online-service"
   },
+  "lead_image": "tower-records-shibuya",
   "also_called": [
     "the Tower Records Online breach",
     "the Tower Records Japan leak"
@@ -79,6 +80,21 @@
       "label": "Shipping records",
       "detail": "Address, name, phone",
       "claim_id": "c006"
+    }
+  ],
+  "images": [
+    {
+      "id": "tower-records-shibuya",
+      "title": "Tower Records Shibuya",
+      "file": "images/tower-records-shibuya.jpg",
+      "alt": "The tall Tower Records Shibuya building in Tokyo, with a yellow and red Tower Records sign running up its front, seen from the street.",
+      "caption": "Tower Records Shibuya, the chain's flagship store in Tokyo.",
+      "credit": "DeepSkyBlue, CC BY-SA 3.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:TOWER_RECORDS_Shibuya.jpg",
+      "sha256": "e50cb153c3ef5a59d35e382a97b48faa0e677db60e14997d2a59fc703a7214de",
+      "width": 1920,
+      "height": 1280
     }
   ],
   "sections": [

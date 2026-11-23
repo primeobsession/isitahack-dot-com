@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Microsoft, any new
 
 Incident: Microsoft Entra Connect Health data exposure, Nov 2026. Also reported as Entra Connect Health breach and Microsoft Entra Connect Health flaw. First published Nov 21, 2026; last updated Nov 21, 2026, 1:17 PM ET.
 
+Picture: Part of Microsoft's headquarters campus in Redmond, Washington. Image: Runner1928, CC BY-SA 4.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:View_of_Microsoft_campus_from_building_36.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Microsoft, any news outlet, government agency, company, or anyone else named.
 
 This is the current answer, not a final verdict.

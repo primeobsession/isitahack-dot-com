@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Samsung, Cybernews
 
 Incident: Samsung Ads North America vendor breach, Nov 2026. Also reported as the Samsung smart TV data leak and the Samsung Ads vendor breach. First published Nov 22, 2026; last updated Nov 22, 2026, 12:25 PM ET.
 
+Picture: Samsung smart TVs on display in a shop. Image: Raysonho, CC0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:SamsungSmartTV.JPG).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Samsung, Cybernews, Android Headlines, DailySecu or any other company, news outlet, government agency, or anyone else named.
 
 This is the current answer, not a final verdict.

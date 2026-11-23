@@ -6,6 +6,7 @@
     "name": "FBI NCIC",
     "kind": "government"
   },
+  "lead_image": "fbi-cjis-complex",
   "also_called": [
     "the NCIC breach",
     "the FBI crime database hack"
@@ -70,6 +71,21 @@
       "label": "Officials knew by",
       "detail": "Per CNN's two sources; discovery date not given",
       "claim_id": "c002"
+    }
+  ],
+  "images": [
+    {
+      "id": "fbi-cjis-complex",
+      "title": "The FBI's CJIS complex",
+      "file": "images/fbi-cjis-complex.jpg",
+      "alt": "A long, low modern office complex set in wide lawns, with autumn-coloured wooded hills behind it.",
+      "caption": "The FBI's Criminal Justice Information Services complex near Clarksburg, West Virginia, the division that runs NCIC.",
+      "credit": "FBI, public domain, via Wikimedia Commons",
+      "rights": "public-domain",
+      "source_url": "https://commons.wikimedia.org/wiki/File:FBI_Criminal_Justice_Information_Services.jpg",
+      "sha256": "a80c4e132589830c9f60937b9ee82f289b6c29664f381d920818b864a5a910e5",
+      "width": 1920,
+      "height": 983
     }
   ],
   "sections": [

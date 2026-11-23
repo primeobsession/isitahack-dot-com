@@ -6,6 +6,7 @@
     "name": "Rockstar Games",
     "kind": "other"
   },
+  "lead_image": "rockstar-north-office",
   "also_called": [
     "GTA 6 leak",
     "Cyberleek leak",
@@ -52,6 +53,21 @@
       "label": "Rockstar or Take-Two on the build",
       "detail": "None found",
       "claim_id": "c007"
+    }
+  ],
+  "images": [
+    {
+      "id": "rockstar-north-office",
+      "title": "Rockstar North's studio",
+      "file": "images/rockstar-north-office.jpg",
+      "alt": "A stone and glass office building with a tall glass entrance, behind a paved courtyard and trees, under a blue sky.",
+      "caption": "The office of Rockstar North, the Rockstar Games studio in Edinburgh, in October 2023.",
+      "credit": "Discott, CC0, via Wikimedia Commons",
+      "rights": "public-domain",
+      "source_url": "https://commons.wikimedia.org/wiki/File:20231022_Rockstar_North.jpg",
+      "sha256": "aa57214d95449266418d713aad1a521fd8dcec8f3c29e65e0d3c86aa28872740",
+      "width": 1920,
+      "height": 1164
     }
   ],
   "sections": [
