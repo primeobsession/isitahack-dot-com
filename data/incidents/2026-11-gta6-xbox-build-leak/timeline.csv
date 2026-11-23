@@ -1,0 +1,6 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-08-20,,"Aug 20, 2026",stated,Take-Two files court requests for DMCA subpoenas to Microsoft and Discord over GTA 6 leaks,c009,Per the court filings; concerns the August leaks.
+t002,2026-08-26,,"Aug 26, 2026",stated,Rockstar publishes a letter calling the leaked gameplay videos 'heartbreaking for our team',c008,Per the letter as printed by outlets.
+t003,2026-11-19,,"Nov 19, 2026",stated,"GTA 6 goes on sale; the leaker announces it is sharing a near-complete Xbox build, about 209 GB, minus the executable",c001,"Per the leaker's own post as reported; GameGPU, Kotaku and PC Gamer date it Nov 19."
+t004,2026-11-23T08:07:36-05:00,,"8:07 AM ET, Nov 23, 2026",stated,TechRadar reports the executable is due to be released that day,c004,Publication time of the TechRadar article.
+t005,2026-11-23,,"Nov 23, 2026",stated,GameGPU reports the leaker posted the executable about three hours ahead of its countdown,c003,One outlet; time of day not stated.
