@@ -1,0 +1,4 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-17,,"Nov 17, 2026",stated,"An unknown party gains unauthorized access to an internal Virgin Plus system, per the company",c001,Date as given by Virgin Plus; no time stated.
+t002,2026-11-17,,"Nov 17, 2026",stated,Bell says a separate intrusion into its enterprise ordering systems happened the same day,c010,Per CBC and BleepingComputer; not tied to Virgin Plus.
+t003,2026-11-22,,"Nov 22, 2026",stated,Virgin Plus's cyber security notice is live on its support site,c001,The notice has no publication date; first read by us on this date.

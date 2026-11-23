@@ -1,0 +1,5 @@
+source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
+s001,https://www.virginplus.ca/en/support/cyber-security.html,Virgin Plus: Important Cyber Security Update (company notice),1,,,2026-11-22T21:40:00-05:00,,ok,2026-11-22T21:40:00-05:00
+s002,https://www.cbc.ca/news/business/bell-agentic-cyber-attack-9.7430468,CBC News: Bell says it's investigating cyberattack that led to potential theft of business customer data,2,cbc,2026-11-20T16:54:00-05:00,2026-11-22T21:40:00-05:00,,ok,2026-11-22T21:40:00-05:00
+s003,https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/,BleepingComputer: Bell Canada says 'agentic' hacker stole enterprise customer data,2,bleepingcomputer,2026-11-20T13:51:00-05:00,2026-11-22T21:40:00-05:00,,ok,2026-11-22T21:40:00-05:00
+s004,https://www.cbc.ca/news/canada/nova-scotia/cellphone-number-sim-swapping-security-risks-1.7456092,"CBC News: This woman's cellphone number was given to another customer, without her consent",2,cbc-2025,2025-02-13T05:00:00-05:00,2026-11-22T21:40:00-05:00,,ok,2026-11-22T21:40:00-05:00
