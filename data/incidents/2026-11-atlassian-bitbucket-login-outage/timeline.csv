@@ -2,3 +2,6 @@ event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,note
 t001,2026-11-23T09:53:00-05:00,,,approximate,"Downdetector says user reports of Bitbucket problems begin, per an Australian outlet",c004,Second-hand; we have not seen the tracker data.
 t002,2026-11-23T10:19:00-05:00,,,stated,Atlassian opens a Bitbucket status incident: OAuth token requests may fail or time out,c001,15:19 UTC on the status page.
 t003,2026-11-23T11:08:00-05:00,,,stated,Atlassian says it has identified the cause and teams are working on a mitigation; it does not say what the cause is,c007,16:08 UTC.
+t004,2026-11-23T11:08:00-05:00,,,stated,"Atlassian posts the same incident on its Jira Service Management, Trello and Developer status pages",c011,16:08 UTC. The Jira status page carried it from 10:19 AM.
+t005,2026-11-23T11:33:00-05:00,,,stated,Atlassian says it has applied a mitigation and sees signs of recovery; the incident moves to monitoring,c010,16:33 UTC. Repeated at 11:57 AM ET (Bitbucket) and 12:26 PM ET (Jira); not resolved at 1:35 PM ET.
+t006,2026-11-23T13:07:00-05:00,,,stated,"Atlassian adds the same incident to its Confluence status page, dated from 10:19 AM, and moves it to monitoring at 1:10 PM",c011,18:07 UTC; monitoring at 18:10 UTC.
