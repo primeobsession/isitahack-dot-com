@@ -1,0 +1,3 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-21,,"Afternoon, Nov 21, 2026 (Korea time)",stated,Samsung Securities says an unauthorized outside party reached its VOC system and it found the intrusion traces,c001,Saturday afternoon per the company's apology as quoted by Hankyoreh.
+t002,2026-11-22T20:26:00-05:00,,,approximate,"Samsung Securities tells press about the leak of 8,241 clients' data (Monday morning, Korea time)",c002,"Earliest article we read, from The Herald Business, 10:26 AM Nov 23 Korea time."
