@@ -1,0 +1,102 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-atlassian-bitbucket-login-outage",
+  "title": "Atlassian Bitbucket and login outage, Nov 23, 2026",
+  "subject": {
+    "name": "Atlassian Bitbucket",
+    "kind": "online-service"
+  },
+  "also_called": [
+    "the Bitbucket outage",
+    "the Atlassian login outage"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-23",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Atlassian, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Potential reach is broad among developers: Bitbucket and Atlassian sign-in are widely used by software teams. Atlassian lists only a partial outage, and it had run about an hour at last check. It has not said how many customers were hit.",
+  "who_is_affected": "Developers and teams who sign in through Atlassian's OAuth service or run Bitbucket Pipelines, from 10:19 AM ET on Monday, Nov 23. The incident was still open at our last check.",
+  "known": [
+    {
+      "text": "Atlassian's Bitbucket status page opened an incident at 10:19 AM ET on Nov 23 for failing OAuth token requests, and it was still open at 11:12 AM ET.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The incident lists Authentication and user management and Pipelines as partial outages; the Bitbucket website, API and Git access show operational.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "Atlassian says it has identified the cause and is working on a mitigation. It has not said what the cause is.",
+      "claim_id": "c009"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "What caused the outage. Atlassian has not said."
+    },
+    {
+      "text": "Whether it was an attack. No one has claimed one and Atlassian has not addressed it."
+    },
+    {
+      "text": "How many customers were affected."
+    },
+    {
+      "text": "When it will be fixed."
+    }
+  ],
+  "figures": [
+    {
+      "value": "10:19 AM",
+      "label": "Incident opened (ET)",
+      "detail": "Per Atlassian's status page",
+      "claim_id": "c001"
+    },
+    {
+      "value": "2",
+      "label": "Components in partial outage",
+      "detail": "Authentication and Pipelines",
+      "claim_id": "c002"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Atlassian Bitbucket outage"
+    },
+    {
+      "type": "claims",
+      "title": "What caused it?",
+      "group": "cause"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
