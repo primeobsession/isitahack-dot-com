@@ -17,7 +17,7 @@
   "verdict": null,
   "verdict_approved_at": null,
   "size": "Regional",
-  "size_basis": "A booking platform behind 'dozens' of French travel sites and agency tools, per the company's president. No count of travelers or agencies has been given.",
+  "size_basis": "A booking platform behind about 60 business customers, per the company's president, including major French travel brands and agency tools. No count of travelers has been given.",
   "who_is_affected": "Customers and staff of travel brands that use Orchestra, including Voyages E.Leclerc, Carrefour Voyages, Selectour and Havas Voyages, and the travel agents who book through it.",
   "known": [
     {
@@ -44,10 +44,16 @@
       "text": "How the attackers got in, and who they are."
     },
     {
-      "text": "Whether all services are fully restored."
+      "text": "What the company's investigation finds, and whether it will publish it."
     }
   ],
   "figures": [
+    {
+      "value": "About 60",
+      "label": "Business customers affected",
+      "detail": "Per the company, Nov 23",
+      "claim_id": "c010"
+    },
     {
       "value": "4",
       "label": "Brands named as hit",
@@ -55,9 +61,9 @@
       "claim_id": "c003"
     },
     {
-      "value": "10 PM",
-      "label": "Restoration begins",
-      "detail": "Fri Nov 20, Paris time",
+      "value": "All",
+      "label": "Customer platforms back",
+      "detail": "Mon Nov 23, per the company",
       "claim_id": "c004"
     }
   ],
