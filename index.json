@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-together-ai-prompt-leak",
+      "title": "Together AI prompt leak, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-23T12:49:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-together-ai-prompt-leak.md",
+        "html": "incidents/2026-11-together-ai-prompt-leak.html",
+        "data": "data/incidents/2026-11-together-ai-prompt-leak/"
+      }
+    },
+    {
       "slug": "2026-11-tower-records-japan-breach",
       "title": "Tower Records Japan data breach, Nov 2026",
       "status": "monitoring",
@@ -187,17 +198,6 @@
         "page": "incidents/2026-11-ntt-docomo-customer-data-breach.md",
         "html": "incidents/2026-11-ntt-docomo-customer-data-breach.html",
         "data": "data/incidents/2026-11-ntt-docomo-customer-data-breach/"
-      }
-    },
-    {
-      "slug": "2026-11-together-ai-prompt-leak",
-      "title": "Together AI prompt leak, Nov 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-22T01:52:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-together-ai-prompt-leak.md",
-        "html": "incidents/2026-11-together-ai-prompt-leak.html",
-        "data": "data/incidents/2026-11-together-ai-prompt-leak/"
       }
     },
     {
