@@ -17,20 +17,24 @@
   "verdict": null,
   "verdict_approved_at": null,
   "size": "Large",
-  "size_basis": "Potential reach is broad among developers: Bitbucket and Atlassian sign-in are widely used by software teams. Atlassian lists only a partial outage, and it had run about an hour at last check. It has not said how many customers were hit.",
-  "who_is_affected": "Developers and teams who sign in through Atlassian's OAuth service or run Bitbucket Pipelines, from 10:19 AM ET on Monday, Nov 23. The incident was still open at our last check.",
+  "size_basis": "Potential reach is broad: the failing sign-in service is shared by Bitbucket, Jira, Jira Service Management and Trello, which are widely used by software and business teams. Atlassian lists only partial outages, applied a fix about 75 minutes in, and has not said how many customers were hit.",
+  "who_is_affected": "People and teams who sign in to Bitbucket, Jira, Jira Service Management or Trello through Atlassian's OAuth service, or run Bitbucket Pipelines, from 10:19 AM ET on Monday, Nov 23. Atlassian reported signs of recovery from 11:33 AM ET; the incident was not marked resolved at our last check.",
   "known": [
     {
-      "text": "Atlassian's Bitbucket status page opened an incident at 10:19 AM ET on Nov 23 for failing OAuth token requests, and it was still open at 11:12 AM ET.",
+      "text": "Atlassian's Bitbucket status page opened an incident at 10:19 AM ET on Nov 23 for failing OAuth token requests, and it was still open at 12:36 PM ET.",
       "claim_id": "c001"
     },
     {
-      "text": "The incident lists Authentication and user management and Pipelines as partial outages; the Bitbucket website, API and Git access show operational.",
+      "text": "On Bitbucket, Authentication and user management and Pipelines are listed as partial outages; the website, API and Git access show operational.",
       "claim_id": "c002"
     },
     {
-      "text": "Atlassian says it has identified the cause and is working on a mitigation. It has not said what the cause is.",
-      "claim_id": "c009"
+      "text": "The same sign-in incident is posted on Atlassian's Jira, Jira Service Management, Trello and Developer status pages.",
+      "claim_id": "c011"
+    },
+    {
+      "text": "Atlassian says it identified the cause at 11:08 AM ET and applied a mitigation at 11:33 AM ET, with signs of recovery. It has not said what the cause is.",
+      "claim_id": "c010"
     }
   ],
   "not_known": [
@@ -44,7 +48,7 @@
       "text": "How many customers were affected."
     },
     {
-      "text": "When it will be fixed."
+      "text": "When it will be marked fully resolved. Atlassian was still monitoring recovery at our last check."
     }
   ],
   "figures": [
@@ -59,6 +63,12 @@
       "label": "Components in partial outage",
       "detail": "Authentication and Pipelines",
       "claim_id": "c002"
+    },
+    {
+      "value": "11:33 AM",
+      "label": "Mitigation applied (ET)",
+      "detail": "Per Atlassian's status page",
+      "claim_id": "c010"
     }
   ],
   "sections": [
