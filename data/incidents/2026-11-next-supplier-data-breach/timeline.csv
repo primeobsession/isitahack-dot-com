@@ -1,0 +1,4 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-23T06:00:00-05:00,,"11:00 GMT (6:00 AM ET), Nov 23, 2026",stated,Next publishes its Third-Party Data Incident notice to the London Stock Exchange,c001,Release time shown on the notice.
+t002,2026-11-23T06:53:00-05:00,,"6:53 AM ET, Nov 23, 2026",stated,The Guardian first publishes its report,c004,Publication time shown on the article.
+t003,2026-11-23T10:09:00-05:00,,"10:09 AM ET, Nov 23, 2026",stated,"The Register reports that Next would not say what was accessed, how much, or who the supplier is",c005,Published 15:09 UTC per the article.

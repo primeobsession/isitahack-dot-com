@@ -1,0 +1,84 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-next-supplier-data-breach",
+  "title": "Was Next hacked? Supplier data breach, Nov 2026",
+  "subject": {
+    "name": "Next",
+    "kind": "other"
+  },
+  "also_called": [
+    "Next supplier cyber incident",
+    "Next third-party data incident"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-23",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Next, the London Stock Exchange, any news outlet, regulator, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "No count of affected people applies. Large rests on potential reach, not a measured impact: Next has 800+ stores in the UK and Ireland and sells online, and the supplier is unnamed. Next says no customer personal data is known to be affected. Revisit if more is disclosed.",
+  "who_is_affected": "Next, whose data a supplier held. Next says no customer personal data is known to be affected; the supplier is unnamed and its other customers are unknown. Be wary of unexpected emails, texts or calls claiming to be from Next, as an outside security firm advised.",
+  "known": [
+    {
+      "text": "Next told the stock exchange that a supplier's cyber incident gave outsiders access to certain Next data.",
+      "claim_id": "c001"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether any customer personal data was taken.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Which supplier was hit and what data was accessed.",
+      "question_id": "q003"
+    },
+    {
+      "text": "Who did it and how. The root cause is not published.",
+      "question_id": "q004"
+    }
+  ],
+  "figures": [
+    {
+      "value": "800+",
+      "label": "Next stores in the UK and Ireland",
+      "detail": "Per The Guardian",
+      "claim_id": "c004"
+    },
+    {
+      "value": "Not named",
+      "label": "The supplier",
+      "detail": "Next has not said",
+      "claim_id": "c005"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Next supplier incident"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
