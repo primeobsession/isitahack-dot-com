@@ -1,6 +1,17 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-chu-guadeloupe-hospital-cyberattack",
+      "title": "CHU de la Guadeloupe hospital cyberattack, Nov 21, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T19:12:04-05:00",
+      "files": {
+        "page": "incidents/2026-11-chu-guadeloupe-hospital-cyberattack.md",
+        "html": "incidents/2026-11-chu-guadeloupe-hospital-cyberattack.html",
+        "data": "data/incidents/2026-11-chu-guadeloupe-hospital-cyberattack/"
+      }
+    },
+    {
       "slug": "2026-11-wellington-it-credit-union-breach",
       "title": "Wellington IT credit union breach, Nov 2026",
       "status": "monitoring",
