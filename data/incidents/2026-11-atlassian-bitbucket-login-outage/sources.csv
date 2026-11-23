@@ -1,0 +1,7 @@
+source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
+s001,https://bitbucket.status.atlassian.com/incidents/s1l5qlhvlplh,Atlassian Bitbucket Status: Authentication service degraded (incident page),1,atlassian-status,2026-11-23T11:08:00-05:00,2026-11-23T11:12:00-05:00,,ok,2026-11-23T11:12:00-05:00
+s002,https://bitbucket.status.atlassian.com/,Atlassian Bitbucket Status: current component status and past incidents,1,atlassian-status,2026-11-23,2026-11-23T11:12:00-05:00,,ok,2026-11-23T11:12:00-05:00
+s003,https://pulsetic.com/status/circleci/incidents/167738/,CircleCI status (via Pulsetic): Issues logging in for BitBucket users,3,circleci-status,2026-11-23T09:51:00-05:00,2026-11-23T11:12:00-05:00,,ok,2026-11-23T11:12:00-05:00
+s004,https://www.ibtimes.com.au/bitbucket-users-report-atlassian-service-disruption-1879249,IBTimes Australia: Bitbucket Down? Developers Report Outage Problems,3,ibtimes-au,2026-11-23T10:49:00-05:00,2026-11-23T11:12:00-05:00,,ok,2026-11-23T11:12:00-05:00
+s005,https://flarewarden.com/status/bitbucket,FlareWarden: Is Bitbucket down? (automated status-page recap),3,flarewarden,2026-11-23,2026-11-23T11:12:00-05:00,,ok,2026-11-23T11:12:00-05:00
+s006,https://bitbucket.status.atlassian.com/api/v2/incidents/unresolved.json,Atlassian Bitbucket Status: unresolved incidents feed (public API),1,atlassian-status,2026-11-23T11:08:00-05:00,2026-11-23T11:12:00-05:00,,ok,2026-11-23T11:12:00-05:00
