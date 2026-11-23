@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Hugendubel, tolino
 
 Incident: Hugendubel tolino cyberattack, Nov 2026. Also reported as the Hugendubel hack and the tolino cloud outage. First published Nov 22, 2026; last updated Nov 22, 2026, 11:31 AM ET.
 
+Picture: The Hugendubel bookshop on Marienplatz in Munich. Image: Hugendubel Buchhandlung, CC BY-SA 4.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Fassade_Hugendubel_Marienplatz.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Hugendubel, tolino, dpa, Golem.de, retail-news.de, Netzwelt, DerWesten, Handelsblatt, DIE ZEIT, DER SPIEGEL, BR24, Süddeutsche Zeitung, TAG24, LovelyBooks, ebook.de, Caschys Blog, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

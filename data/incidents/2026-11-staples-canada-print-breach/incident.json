@@ -6,6 +6,7 @@
     "name": "Staples Canada",
     "kind": "online-service"
   },
+  "lead_image": "staples-canada-store",
   "also_called": [
     "the staplesprint.ca breach",
     "the Staples Print hack"
@@ -73,6 +74,21 @@
       "label": "Customers affected",
       "detail": "Staples has not said",
       "claim_id": "c008"
+    }
+  ],
+  "images": [
+    {
+      "id": "staples-canada-store",
+      "title": "A Staples Canada store",
+      "file": "images/staples-canada-store.jpg",
+      "alt": "A Staples store in Ontario with a red sign above the entrance and a car park in front, under a blue sky.",
+      "caption": "A Staples store in Bowmanville, Ontario, in June 2025.",
+      "credit": "Dillan Payne, CC BY-SA 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Staples_store_in_Bowmanville,_June_22_2025.jpg",
+      "sha256": "29481f9a2a0b7e813cee90f306ede2bf07abeaf1e7b723cb86bb5680a0d92945",
+      "width": 1920,
+      "height": 1280
     }
   ],
   "sections": [

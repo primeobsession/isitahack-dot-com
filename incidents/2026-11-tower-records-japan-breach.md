@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Tower Records Japa
 
 Incident: Tower Records Japan data breach, Nov 2026. Also reported as the Tower Records Online breach and the Tower Records Japan leak. First published Nov 22, 2026; last updated Nov 23, 2026, 12:08 PM ET.
 
+Picture: Tower Records Shibuya, the chain's flagship store in Tokyo. Image: DeepSkyBlue, CC BY-SA 3.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:TOWER_RECORDS_Shibuya.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Tower Records Japan, Nikkei, Investing.com, NHK, Asahi Shimbun, Sankei Shimbun, Yomiuri Shimbun, Bloomberg, The Japan Times, Fuji TV (FNN) or any other company, news outlet, government agency, or anyone else named.
 
 This is the current answer, not a final verdict.

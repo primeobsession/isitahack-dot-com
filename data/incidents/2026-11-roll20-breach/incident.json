@@ -6,6 +6,7 @@
     "name": "Roll20",
     "kind": "online-service"
   },
+  "lead_image": "roll20-logo",
   "also_called": [
     "the Roll20 hack",
     "the Roll20 security incident"
@@ -116,6 +117,21 @@
       "type": "note",
       "title": "What we checked and did not find",
       "file": "notes/checked-not-found.md"
+    }
+  ],
+  "images": [
+    {
+      "id": "roll20-logo",
+      "title": "Roll20 logo",
+      "file": "images/roll20-logo.png",
+      "alt": "Roll20 logo",
+      "caption": "Roll20 logo (used for identification; Roll20 is not affiliated with isitahack.com).",
+      "credit": "Roll20 logo, trademark of Roll20, from roll20.net",
+      "rights": "logo",
+      "source_url": "https://roll20.net/",
+      "sha256": "677fcfa6a75e789dacfbd21444a4a61ad1e47a66bd92a6c5bff8c25e6fe79141",
+      "width": 1600,
+      "height": 1200
     }
   ]
 }

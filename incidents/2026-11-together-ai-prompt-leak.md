@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Together AI, any g
 
 Incident: Together AI prompt leak, Nov 2026. Also reported as the Together AI security event and the Together AI prompt leakage. First published Nov 22, 2026; last updated Nov 22, 2026, 1:52 AM ET.
 
+Picture: Together AI logo (used for identification; Together AI is not affiliated with isitahack.com). Image: Together AI logo, trademark of Together AI, from together.ai (https://www.together.ai/).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Together AI, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

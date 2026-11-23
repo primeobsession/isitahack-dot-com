@@ -6,6 +6,7 @@
     "name": "NTT Docomo",
     "kind": "telecom"
   },
+  "lead_image": "ntt-docomo-yoyogi",
   "also_called": [
     "the Docomo data leak",
     "the My docomo hack"
@@ -72,6 +73,21 @@
       "label": "Services shut down",
       "detail": "Thu Nov 5, Japan time",
       "claim_id": "c002"
+    }
+  ],
+  "images": [
+    {
+      "id": "ntt-docomo-yoyogi",
+      "title": "NTT Docomo Yoyogi Building",
+      "file": "images/ntt-docomo-yoyogi.jpg",
+      "alt": "The pointed spire of the NTT Docomo Yoyogi Building in Tokyo, rising above the trees of a park.",
+      "caption": "The NTT Docomo Yoyogi Building in Tokyo.",
+      "credit": "Zairon, CC BY-SA 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:NTT_Docomo_Yoyogi_Building_2.jpg",
+      "sha256": "4bb044af887e363dcc9c4987dbbf416dace4c98f8488a6247f779819bf19438e",
+      "width": 1920,
+      "height": 1442
     }
   ],
   "sections": [

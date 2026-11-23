@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Journal Technologi
 
 Incident: Journal Technologies court portal outage, Nov 13, 2026. Also reported as court portal outage, California court portals down and eCourt portal outage. First published Nov 21, 2026; last updated Nov 21, 2026, 6:26 PM ET.
 
+Picture: Journal Technologies logo (used for identification; Journal Technologies is not affiliated with isitahack.com). Image: Journal Technologies logo, trademark of Journal Technologies, from journaltech.com (https://www.journaltech.com/).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Journal Technologies, any court, news outlet, government agency, company, or anyone else named.
 
 This is the current answer, not a final verdict.

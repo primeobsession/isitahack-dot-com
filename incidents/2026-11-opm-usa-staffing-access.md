@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by OPM, any governmen
 
 Incident: OPM USA Staffing unauthorized access, Nov 12-13, 2026. Also reported as the OPM job-offer breach and the USA Staffing breach. First published Nov 20, 2026; last updated Nov 21, 2026, 12:35 AM ET.
 
+Picture: The Theodore Roosevelt Federal Building, headquarters of the US Office of Personnel Management, in February 2025. Image: G. Edward Johnson, CC BY 4.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:OPM_Theodore_Roosevelt_Building_Washington_DC_2025-02-10_11-37-56_1.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by OPM, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

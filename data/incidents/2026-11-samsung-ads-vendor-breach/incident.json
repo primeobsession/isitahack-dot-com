@@ -6,6 +6,7 @@
     "name": "Samsung Ads",
     "kind": "online-service"
   },
+  "lead_image": "samsung-smart-tv",
   "also_called": [
     "the Samsung smart TV data leak",
     "the Samsung Ads vendor breach"
@@ -61,6 +62,21 @@
       "label": "Political ad records",
       "detail": "Sept to Oct 2026; per Cybernews",
       "claim_id": "c004"
+    }
+  ],
+  "images": [
+    {
+      "id": "samsung-smart-tv",
+      "title": "Samsung smart TVs",
+      "file": "images/samsung-smart-tv.jpg",
+      "alt": "A shop display wall of Samsung smart TVs showing landscape pictures, under a Samsung sign.",
+      "caption": "Samsung smart TVs on display in a shop.",
+      "credit": "Raysonho, CC0, via Wikimedia Commons",
+      "rights": "public-domain",
+      "source_url": "https://commons.wikimedia.org/wiki/File:SamsungSmartTV.JPG",
+      "sha256": "4024bfbc73d491e7975bb1e22131a3bc180ab7dade30dcb596466a67f8f31de5",
+      "width": 1920,
+      "height": 1272
     }
   ],
   "sections": [

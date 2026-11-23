@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Valve, Steam, any 
 
 Incident: Steam outages, Nov 17 and Nov 20-21, 2026. Also reported as the Steam outage, Steam down and Valve Steam outage. First published Nov 21, 2026; last updated Nov 21, 2026, 3:12 AM ET.
 
+Picture: A Steam Deck OLED showing the Steam home screen (cropped). Image: SparklesTrainNerd, CC BY-SA 4.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Steam_Deck_OLED_framsida_hemsk%C3%A4rm.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Valve, Steam, any news outlet, government agency, company, or anyone else named.
 
 This is the current answer, not a final verdict.

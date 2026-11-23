@@ -6,6 +6,7 @@
     "name": "Fugaku",
     "kind": "government"
   },
+  "lead_image": "riken-fugaku",
   "also_called": [
     "the Fugaku hack",
     "the RIKEN supercomputer cyberattack"
@@ -77,6 +78,21 @@
       "label": "Fugaku taken offline",
       "detail": "4:30 AM Japan time",
       "claim_id": "c011"
+    }
+  ],
+  "images": [
+    {
+      "id": "riken-fugaku",
+      "title": "The Fugaku supercomputer",
+      "file": "images/riken-fugaku.jpg",
+      "alt": "Rows of Fugaku supercomputer cabinets with sky-blue end panels in a long white machine room, behind a rope barrier.",
+      "caption": "The Fugaku supercomputer at the RIKEN Center for Computational Science in Kobe, Japan.",
+      "credit": "Barsaka2, CC0, via Wikimedia Commons",
+      "rights": "public-domain",
+      "source_url": "https://commons.wikimedia.org/wiki/File:RIKEN_R-CCS_Fugaku.jpg",
+      "sha256": "089404097d7b62bb339cfd7378d0c60e34979376efbe1a6ab675d7616e9a3261",
+      "width": 1920,
+      "height": 1440
     }
   ],
   "sections": [

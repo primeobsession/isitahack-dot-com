@@ -6,6 +6,7 @@
     "name": "Starbucks",
     "kind": "online-service"
   },
+  "lead_image": "starbucks-store",
   "also_called": [
     "the Starbucks app outage",
     "Starbucks app down"
@@ -54,6 +55,21 @@
       "label": "Peak vs normal reports",
       "detail": "One tracker; not a count of customers",
       "claim_id": "c004"
+    }
+  ],
+  "images": [
+    {
+      "id": "starbucks-store",
+      "title": "A Starbucks store",
+      "file": "images/starbucks-store.jpg",
+      "alt": "A Starbucks Coffee store front inside a shopping mall, with the name in white letters above a wood-panelled glass entrance.",
+      "caption": "A Starbucks store at Barton Creek Square mall in Austin, Texas.",
+      "credit": "CC0, via Wikimedia Commons",
+      "rights": "public-domain",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Starbucks_Store_Barton_Creek_Mall_Austin_Texas.jpg",
+      "sha256": "735b20755da9b51a942c4453c79951ccb966fc51e30cd4615e83e6cbcbe7b459",
+      "width": 1920,
+      "height": 1440
     }
   ],
   "sections": [

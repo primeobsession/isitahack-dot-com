@@ -6,6 +6,7 @@
     "name": "Project Gutenberg",
     "kind": "online-service"
   },
+  "lead_image": "project-gutenberg-logo",
   "also_called": [
     "the Gutenberg hack",
     "Project Gutenberg down"
@@ -101,6 +102,21 @@
       "type": "note",
       "title": "What we checked and did not find",
       "file": "notes/checked-not-found.md"
+    }
+  ],
+  "images": [
+    {
+      "id": "project-gutenberg-logo",
+      "title": "Project Gutenberg logo",
+      "file": "images/project-gutenberg-logo.png",
+      "alt": "Project Gutenberg logo",
+      "caption": "Project Gutenberg logo (used for identification; Project Gutenberg is not affiliated with isitahack.com).",
+      "credit": "Project Gutenberg logo, public domain on Wikimedia Commons",
+      "rights": "logo",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Project_Gutenberg_logo.svg",
+      "sha256": "7db5e87a3108330fb44c33ed5665c421ead5a8094e4c031987c66fa4b394120d",
+      "width": 1600,
+      "height": 1200
     }
   ]
 }

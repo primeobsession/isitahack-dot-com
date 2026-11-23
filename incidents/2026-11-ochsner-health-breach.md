@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Ochsner Health, Or
 
 Incident: Ochsner Health data breach, Nov 19, 2026. Also reported as Ochsner data incident, Ochsner Microsoft 365 breach and Ochsner Vortex claim. First published Nov 21, 2026; last updated Nov 21, 2026, 9:40 AM ET.
 
+Picture: Ochsner Medical Center's main campus near New Orleans, Louisiana, in April 2023. Image: Infrogmation of New Orleans, CC BY-SA 4.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Ochsner_Medical_Center,_Main_Campus,_April_2023_-_01.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Ochsner Health, Orlando Health, any news outlet, government agency, company, or anyone else named.
 
 This is the current answer, not a final verdict.

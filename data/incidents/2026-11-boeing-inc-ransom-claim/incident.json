@@ -6,6 +6,7 @@
     "name": "Boeing",
     "kind": "aviation"
   },
+  "lead_image": "boeing-everett-factory",
   "also_called": [
     "the Boeing leak-site claim",
     "the Boeing helicopter unit claim"
@@ -62,6 +63,21 @@
       "label": "Screenshots released",
       "detail": "Per Cybernews",
       "claim_id": "c003"
+    }
+  ],
+  "images": [
+    {
+      "id": "boeing-everett-factory",
+      "title": "Boeing's Everett factory",
+      "file": "images/boeing-everett-factory.jpg",
+      "alt": "A huge curved blue wall inside Boeing's Everett factory, painted with the words 'The future is built here' in white letters.",
+      "caption": "Boeing's factory in Everett, Washington.",
+      "credit": "Buiobuione, CC BY-SA 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Boeing_Everett_Factory_Seattle_Washington_Buiobuione_01.jpg",
+      "sha256": "da028e6137bd5509b40f90f09496f33f6b5e5e42268773d93e5187af237b2095",
+      "width": 1920,
+      "height": 1280
     }
   ],
   "sections": [

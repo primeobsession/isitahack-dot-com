@@ -6,6 +6,7 @@
     "name": "Algonquin Dam",
     "kind": "government"
   },
+  "lead_image": "illinois-dnr-logo",
   "also_called": [
     "the Algonquin Dam hack",
     "Fox River dam cyberattack"
@@ -97,6 +98,21 @@
       "type": "note",
       "title": "What we checked and did not find",
       "file": "notes/checked-not-found.md"
+    }
+  ],
+  "images": [
+    {
+      "id": "illinois-dnr-logo",
+      "title": "Illinois Department of Natural Resources logo",
+      "file": "images/illinois-dnr-logo.png",
+      "alt": "Illinois Department of Natural Resources logo",
+      "caption": "Illinois Department of Natural Resources logo (used for identification; the Illinois Department of Natural Resources is not affiliated with isitahack.com).",
+      "credit": "Illinois Department of Natural Resources logo, from dnr.illinois.gov",
+      "rights": "logo",
+      "source_url": "https://dnr.illinois.gov/",
+      "sha256": "8f704b77a5b80a28c7efe1481bf56b85ca9be14e021b1a1f6509a06fa0c223ff",
+      "width": 1600,
+      "height": 1200
     }
   ]
 }

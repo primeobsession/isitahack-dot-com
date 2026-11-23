@@ -6,6 +6,7 @@
     "name": "Journal Technologies",
     "kind": "online-service"
   },
+  "lead_image": "journal-technologies-logo",
   "also_called": [
     "court portal outage",
     "California court portals down",
@@ -108,6 +109,21 @@
       "type": "note",
       "title": "What we checked and did not find",
       "file": "notes/checked-not-found.md"
+    }
+  ],
+  "images": [
+    {
+      "id": "journal-technologies-logo",
+      "title": "Journal Technologies logo",
+      "file": "images/journal-technologies-logo.png",
+      "alt": "Journal Technologies logo",
+      "caption": "Journal Technologies logo (used for identification; Journal Technologies is not affiliated with isitahack.com).",
+      "credit": "Journal Technologies logo, trademark of Journal Technologies, from journaltech.com",
+      "rights": "logo",
+      "source_url": "https://www.journaltech.com/",
+      "sha256": "f7772525babf89b89a1ba2fcd753207ff115e9ea3920c365dfe840b01b7c9552",
+      "width": 1600,
+      "height": 1200
     }
   ]
 }

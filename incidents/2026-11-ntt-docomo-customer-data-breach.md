@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by NTT Docomo, Jiji P
 
 Incident: NTT Docomo customer data breach, Nov 2026. Also reported as the Docomo data leak and the My docomo hack. First published Nov 22, 2026; last updated Nov 22, 2026, 7:45 AM ET.
 
+Picture: The NTT Docomo Yoyogi Building in Tokyo. Image: Zairon, CC BY-SA 4.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:NTT_Docomo_Yoyogi_Building_2.jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by NTT Docomo, Jiji Press, Nippon.com, Nippon TV, ITmedia, Cybersecurity.com, Nikkei, CNET Japan, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

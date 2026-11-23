@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by the Illinois Depar
 
 Incident: Algonquin Dam apparent cyberattack, Nov 16, 2026. Also reported as the Algonquin Dam hack and Fox River dam cyberattack. First published Nov 21, 2026; last updated Nov 21, 2026, 5:37 AM ET.
 
+Picture: Illinois Department of Natural Resources logo (used for identification; the Illinois Department of Natural Resources is not affiliated with isitahack.com). Image: Illinois Department of Natural Resources logo, from dnr.illinois.gov (https://dnr.illinois.gov/).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by the Illinois Department of Natural Resources, CISA, any news outlet, government agency, company, or anyone else named.
 
 This is the current answer, not a final verdict.

@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by DoorDash, any gove
 
 Incident: DoorDash app and website outage, Nov 21, 2026. Also reported as the DoorDash outage. First published Nov 21, 2026; last updated Nov 21, 2026, 2:54 PM ET.
 
+Picture: DoorDash logo (used for identification; DoorDash is not affiliated with isitahack.com). Image: DoorDash logo, trademark of DoorDash, public domain on Wikimedia Commons (https://commons.wikimedia.org/wiki/File:DoorDash_Logo.svg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by DoorDash, any government agency, news outlet, company, or anyone else named.
 
 This is the current answer, not a final verdict.

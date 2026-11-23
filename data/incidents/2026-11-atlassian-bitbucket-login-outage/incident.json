@@ -6,6 +6,7 @@
     "name": "Atlassian Bitbucket",
     "kind": "online-service"
   },
+  "lead_image": "atlassian-office-yokohama",
   "also_called": [
     "the Bitbucket outage",
     "the Atlassian login outage"
@@ -59,6 +60,21 @@
       "label": "Components in partial outage",
       "detail": "Authentication and Pipelines",
       "claim_id": "c002"
+    }
+  ],
+  "images": [
+    {
+      "id": "atlassian-office-yokohama",
+      "title": "An Atlassian office",
+      "file": "images/atlassian-office-yokohama.jpg",
+      "alt": "A low white office building with an Atlassian sign on its dark ground-floor wall, beside a paved plaza and a tall glass tower.",
+      "caption": "Atlassian's former Japanese office in Yokohama, in 2014.",
+      "credit": "Thirteen-fri, CC BY-SA 3.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Atlassian_(Japanese_branch_office)_in_Marinos_Town.jpg",
+      "sha256": "dde7fdc4c8fcbaa7fcaebc95b3d803f75f3e83e10bc031d0cf036b34b8f84d99",
+      "width": 1920,
+      "height": 1327
     }
   ],
   "sections": [

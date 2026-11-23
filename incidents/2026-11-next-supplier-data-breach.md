@@ -20,6 +20,8 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Next, the London S
 
 Incident: Was Next hacked? Supplier data breach, Nov 2026. Also reported as Next supplier cyber incident and Next third-party data incident. First published Nov 23, 2026; last updated Nov 23, 2026, 11:13 AM ET.
 
+Picture: A Next store at Treliske Retail Park in Truro, Cornwall, in July 2024. Image: Mutney, CC0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Next,_Treliske_Retail_Park,_Truro,_Cornwall_-_July_2024_(2).jpg).
+
 > **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. Made for entertainment using AI. Not endorsed by Next, the London Stock Exchange, any news outlet, regulator, company, or anyone else named.
 
 This is the current answer, not a final verdict.

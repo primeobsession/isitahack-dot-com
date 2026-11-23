@@ -6,6 +6,7 @@
     "name": "Rackspace Spot",
     "kind": "online-service"
   },
+  "lead_image": "rackspace-logo",
   "also_called": [
     "the Rackspace Spot outage",
     "the Rackspace Spot Kubernetes breach"
@@ -112,6 +113,21 @@
       "type": "note",
       "title": "What we checked and did not find",
       "file": "notes/checked-not-found.md"
+    }
+  ],
+  "images": [
+    {
+      "id": "rackspace-logo",
+      "title": "Rackspace logo",
+      "file": "images/rackspace-logo.png",
+      "alt": "Rackspace logo",
+      "caption": "Rackspace logo (used for identification; Rackspace is not affiliated with isitahack.com).",
+      "credit": "Rackspace Technology logo, trademark of Rackspace, public domain on Wikimedia Commons",
+      "rights": "logo",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rackspace_Technology.svg",
+      "sha256": "d46be76ff2fe4f27696689b392ef3ef1651b63d59dbecc6002142a5e7d684507",
+      "width": 1600,
+      "height": 1200
     }
   ]
 }

@@ -6,6 +6,7 @@
     "name": "KEPCO",
     "kind": "energy"
   },
+  "lead_image": "kepco-hadong-branch",
   "also_called": [
     "the KEPCO ON leak",
     "KEPCO's second breach"
@@ -77,6 +78,21 @@
       "label": "October breach, people",
       "detail": "A separate earlier leak",
       "claim_id": "c009"
+    }
+  ],
+  "images": [
+    {
+      "id": "kepco-hadong-branch",
+      "title": "A KEPCO branch office",
+      "file": "images/kepco-hadong-branch.jpg",
+      "alt": "A glass-fronted KEPCO office building with the company's name in Korean on top, behind a small car park with parked cars and trucks.",
+      "caption": "A local branch office of KEPCO (Korea Electric Power Corporation) in Hadong, South Korea.",
+      "credit": "hyolee2, CC BY-SA 3.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Korea_Electric_Power_Corporation_Hadong_branch.JPG",
+      "sha256": "68fbe462b536433d957815fd366e440890d3f3629053b7a796ab730aad913ce3",
+      "width": 1920,
+      "height": 1440
     }
   ],
   "sections": [

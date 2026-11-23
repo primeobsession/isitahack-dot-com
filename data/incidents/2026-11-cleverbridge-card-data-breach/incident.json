@@ -6,6 +6,7 @@
     "name": "Cleverbridge",
     "kind": "online-service"
   },
+  "lead_image": "cleverbridge-logo",
   "also_called": [
     "the Cleverbridge data breach",
     "the Cleverbridge card theft"
@@ -102,6 +103,21 @@
       "type": "note",
       "title": "What we checked and did not find",
       "file": "notes/checked-not-found.md"
+    }
+  ],
+  "images": [
+    {
+      "id": "cleverbridge-logo",
+      "title": "Cleverbridge logo",
+      "file": "images/cleverbridge-logo.png",
+      "alt": "Cleverbridge logo",
+      "caption": "Cleverbridge logo (used for identification; Cleverbridge is not affiliated with isitahack.com).",
+      "credit": "Cleverbridge logo, trademark of Cleverbridge, from cleverbridge.com (the white version, shown on a dark background)",
+      "rights": "logo",
+      "source_url": "https://www.cleverbridge.com/",
+      "sha256": "1917f3c60f4a47e270679f709010433e4394c112c67b9a631e3e28a6f75a87b7",
+      "width": 1600,
+      "height": 1200
     }
   ]
 }

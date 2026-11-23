@@ -6,6 +6,7 @@
     "name": "Workday",
     "kind": "online-service"
   },
+  "lead_image": "workday-headquarters",
   "also_called": [
     "the Workday outage",
     "the Workday payroll outage"
@@ -80,6 +81,21 @@
       "label": "Organizations Workday serves",
       "detail": "Total customers, not the number affected",
       "claim_id": "c005"
+    }
+  ],
+  "images": [
+    {
+      "id": "workday-headquarters",
+      "title": "Workday headquarters",
+      "file": "images/workday-headquarters.jpg",
+      "alt": "Workday's glass-walled headquarters building in Pleasanton, California, with the company's name on top, beside a plaza with young trees.",
+      "caption": "Workday's headquarters in Pleasanton, California.",
+      "credit": "Coolcaesar, CC BY-SA 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Workday_Headquarters.jpg",
+      "sha256": "a91da128dde050dc6aa0acf5449578cb545e2a4712a76fb9dc9d724fa718c5ff",
+      "width": 1920,
+      "height": 1288
     }
   ],
   "sections": [
