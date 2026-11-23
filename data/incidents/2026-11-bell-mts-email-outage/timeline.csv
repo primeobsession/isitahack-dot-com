@@ -1,0 +1,7 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-16T00:00:00-05:00,,"As early as Monday, Nov 16",approximate,"Some Bell MTS customers say their email stopped working, per the Free Press",c003,Customer accounts only; start dates in the stories range from Nov 12 to Nov 18.
+t002,2026-11-17T00:00:00-05:00,,"Tuesday, Nov 17",approximate,Bell says its Bell Canada breach happened; one Bell MTS customer tells CBC the last email arrived Tuesday night,c010,Date as given by Bell for the Bell Canada incident; no time stated.
+t003,2026-11-18T00:00:00-05:00,,"Wednesday, Nov 18",approximate,Bell MTS posts on social media that some Manitoba customers may be experiencing an email service interruption,c003,No clock time given.
+t004,2026-11-19T00:00:00-05:00,,"Thursday, Nov 19",approximate,"Bell MTS posts a follow-up telling customers to reset passwords and use webmail, per the Free Press",c003,No clock time given.
+t005,2026-11-20T14:30:00-05:00,,"Around 2:30 PM, Friday, Nov 20",approximate,Bell MTS says email service is restored and customers may need to reset passwords,c003,"CBC: ""shortly before 2:30 p.m."""
+t006,2026-11-22T18:11:00-05:00,,"By 6:11 PM, Sunday, Nov 22",approximate,Bell MTS tells the Free Press a cyberattack on its email provider caused the outage; the story was posted at 6:11 PM ET,c001,Time is the story posting time; the statement time is not given.
