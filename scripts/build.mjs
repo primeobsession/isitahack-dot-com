@@ -214,7 +214,6 @@ function writeTyped(i, others, out) {
     url, mainEntityOfPage: url, inLanguage: "en", isAccessibleForFree: true,
     datePublished: i.first_published, dateModified: i.last_updated,
     image: [card ? card.url : `${SITE.url}/${SITE.card.path}`],
-    about: { "@type": "Event", name: i.title, startDate: i.incident_date },
     author: { "@type": "Organization", name: `${SITE.name} desk`, url: `${SITE.url}/how-it-works.html` },
     publisher: ORG,
   }, {
