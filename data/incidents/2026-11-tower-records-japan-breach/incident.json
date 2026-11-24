@@ -8,6 +8,10 @@
   },
   "incident_type": "breach",
   "answer_group": "hack-stated",
+  "service": {
+    "state": "down",
+    "claim_id": "c002"
+  },
   "lead_image": "tower-records-shibuya",
   "also_called": [
     "the Tower Records Online breach",
@@ -15,7 +19,7 @@
   ],
   "status": "monitoring",
   "incident_date": "2026-11-19",
-  "disclaimer": "Made for entertainment using AI. Not endorsed by Tower Records Japan, Nikkei, Investing.com, NHK, Asahi Shimbun, Sankei Shimbun, Yomiuri Shimbun, Bloomberg, The Japan Times, Fuji TV (FNN) or any other company, news outlet, government agency, or anyone else named.",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Tower Records Japan, Nikkei, Investing.com, NHK, Asahi Shimbun, Sankei Shimbun, Yomiuri Shimbun, Bloomberg, The Japan Times, Fuji TV (FNN), Kyodo News, ASCII, Impress Watch or any other company, news outlet, government agency, or anyone else named.",
   "main_question_id": "q001",
   "verdict": null,
   "verdict_approved_at": null,
