@@ -1,4 +1,4 @@
-We looked for these and did not find them as of 6:39 AM ET on Nov 24, 2026.
+We looked for these and did not find them as of 12:40 PM ET on Nov 24, 2026.
 
 - A notice from Travelsoft or Orchestra on its own site.
 - A statement from the French data protection authority (CNIL) or the national cybersecurity agency (ANSSI).
