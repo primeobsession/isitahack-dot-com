@@ -21,19 +21,19 @@
   "verdict": null,
   "verdict_approved_at": null,
   "size": "Large",
-  "size_basis": "Rakuten Securities says up to about 15.72 million accounts may be affected, about 4.47 million with personal and financial details. Press calls it the largest breach at a Japanese securities firm so far.",
-  "who_is_affected": "Current and former Rakuten Securities customers. The company says it has identified them and will tell them individually; it urges caution about phishing and suggests setting a passkey.",
+  "size_basis": "Rakuten Securities' Nov 24 second report says personal details of about 4.41 million people and login IDs of about 11.98 million accounts leaked. Press called it the largest breach at a Japanese securities firm so far.",
+  "who_is_affected": "Current and former Rakuten Securities customers, and people who applied for an account but never opened one. The company says it has identified them and will tell them individually; it urges caution about phishing and suggests setting a passkey.",
   "known": [
     {
       "text": "Rakuten Securities says a third party gained unauthorized access to some of its systems, detected on Nov 16.",
       "claim_id": "c001"
     },
     {
-      "text": "It says information in its test environment leaked on Nov 11 (first described as a possible leak).",
+      "text": "It says information in its test environment leaked, first reported on Nov 17 as a possible leak on Nov 11.",
       "claim_id": "c002"
     },
     {
-      "text": "It says up to about 4.47 million accounts had personal and financial details exposed, including birth dates, addresses and withdrawal bank accounts.",
+      "text": "Its Nov 24 second report says details of about 4.41 million people leaked, including birth dates and addresses, plus login IDs of 11.98 million accounts.",
       "claim_id": "c003"
     },
     {
@@ -71,16 +71,16 @@
   ],
   "figures": [
     {
-      "value": "15.72M",
-      "label": "Accounts, at most",
-      "detail": "4.47M with details plus 11.25M with IDs only, per the company and press",
-      "claim_id": "c004"
+      "value": "4.41M",
+      "label": "People with personal details leaked",
+      "detail": "Per the company, Nov 24; 3.22M account holders, 1.19M non-customers",
+      "claim_id": "c003"
     },
     {
-      "value": "4.47M",
-      "label": "Accounts with personal/financial data",
-      "detail": "Per the company, maximum",
-      "claim_id": "c003"
+      "value": "11.98M",
+      "label": "Accounts with login IDs only leaked",
+      "detail": "Per the company, Nov 24 (was up to 11.25M)",
+      "claim_id": "c004"
     },
     {
       "value": "Nov 11",
