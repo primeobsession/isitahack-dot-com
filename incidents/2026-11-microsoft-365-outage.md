@@ -16,7 +16,7 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Microsoft, any gov
 
 # Was the Microsoft 365 outage a cyberattack?
 
-**Debunked.** All the public evidence says no. Microsoft says it was a technical failure, and the US government said on Nov 18 that the outage was not a cyberattack. Microsoft's final report, dated Nov 20, also says it was not a cyberattack.
+**Confirmed.** All the public evidence says no. Microsoft says it was a technical failure, and the US government said on Nov 18 that the outage was not a cyberattack. Microsoft's final report, dated Nov 20, also says it was not a cyberattack.
 
 Incident: Microsoft 365 outage, Nov 12-13, 2026. Also reported as the Microsoft outage. First published Nov 18, 2026; last updated Nov 22, 2026, 1:50 AM ET.
 
@@ -78,7 +78,7 @@ Nov 22, 2026, 1:50 AM ET: **The Guardian, an established outlet, now describes t
 
 | Question | Answer | Label |
 |---|---|---|
-| Was the Microsoft 365 outage a cyberattack? | All the public evidence says no. Microsoft says it was a technical failure, and the US government said on Nov 18 that the outage was not a cyberattack. Microsoft's final report, dated Nov 20, also says it was not a cyberattack. | Debunked |
+| Was the Microsoft 365 outage a cyberattack? | All the public evidence says no. Microsoft says it was a technical failure, and the US government said on Nov 18 that the outage was not a cyberattack. Microsoft's final report, dated Nov 20, also says it was not a cyberattack. | Confirmed |
 | Was there a global Microsoft 365 outage on Nov 12 to 13? | Yes, about 24 hours, per Microsoft's own report. | Confirmed |
 | What caused it, according to Microsoft? | A latent defect from a July update, set off by reduced capacity, extra load from a Teams failover and peak North American traffic, all at once. | Confirmed |
 | Was it caused by AI-written code or AI agents? | Microsoft says no. No one else has addressed it. | Rumor |
@@ -165,6 +165,7 @@ Nov 22, 2026, 1:50 AM ET: **The Guardian, an established outlet, now describes t
 
 | When | Update | Type |
 |---|---|---|
+| Nov 24, 2026, 11:07 AM ET | **The answer is unchanged: all the public evidence says the outage was not a cyberattack. Its label now reads Confirmed.** A labelling rule decided by the owner on Nov 24: a story's main answer carries Confirmed, Reported or Not established, and the label says how well the answer shown is supported. This answer carried Debunked, which is the label of the claim that the outage was an attack. It now carries Confirmed, because Microsoft's final report and a US government statement both say it was not an attack. That claim itself stays Debunked. No finding and no source changed. | Wording or layout only |
 | Nov 22, 2026, 1:50 AM ET | **The Guardian, an established outlet, now describes the cause given in Microsoft's final report.** The Guardian published an explainer on Nov 22 about the recent run of outages. It says a July upgrade left a software bug in place that lay dormant for months until a string of coincidences triggered it and overwhelmed Microsoft's servers, which matches Microsoft's final report. Added as a further source for c020 (the final report's account of the cause). No label changed and the main answer is unchanged. | Added |
 | Nov 22, 2026, 12:50 AM ET | **A third established outlet, Neowin, now reports on Microsoft's final report.** Neowin reported on Microsoft's final post-incident report on Nov 22, giving the same account of the cause: a July 2026 software defect, reduced server capacity and extra Teams traffic, which together left more than 80% of the gateway servers unresponsive at one point. Added as a further source for c020 (the final report's account of the cause). No label changed and the main answer is unchanged. | Added |
 | Nov 21, 2026, 6:45 PM ET | **A second established outlet, KIRO 7, now reports on Microsoft's final report.** KIRO 7 News Seattle reported on Microsoft's final post-incident report on Nov 21, giving the same account: a months-old software defect that testing missed, spread by systems meant to keep the network running, and not related to a cyberattack. Added as a further source for c020 (the final report's account of the cause) and c021 (the final report says it was not a cyberattack). No label changed and the main answer is unchanged. | Added |

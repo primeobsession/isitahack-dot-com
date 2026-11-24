@@ -102,10 +102,11 @@ rule("a likely verdict named in a note", (t) => t.swap("notes/background.md", "\
 rule("an incident with no answer group", (t) => t.head((h) => { delete h.answer_group; }), /answer_group: missing \(required\)/);
 rule("an incident with no incident type", (t) => t.head((h) => { delete h.incident_type; }), /incident_type: missing \(required\)/);
 rule("an incident type outside the three", (t) => t.head((h) => { h.incident_type = "ransomware"; }), /incident\.json\.incident_type: "ransomware" is not one of/);
-rule("filed as a stated hack while the main answer is not Confirmed", (t) => t.head((h) => { h.answer_group = "hack-stated"; }), /answer_group: "hack-stated" needs the main question to be labelled Confirmed; it is labelled Unverified/);
-rule("filed as a reported hack while the main answer is not Reported", (t) => t.head((h) => { h.answer_group = "hack-reported"; }), /answer_group: "hack-reported" needs the main question to be labelled Reported/);
-rule("filed as unclear while the main answer is Confirmed", (t) => { t.swap("questions.csv", ",Unverified,", ",Confirmed,"); t.head((h) => { h.answer_group = "unclear"; }); }, /answer_group: "unclear" does not fit a main question labelled Confirmed/);
-rule("filed as no sign of a hack while the main answer is Not established", (t) => t.swap("questions.csv", ",Unverified,", ",Not established,"), /answer_group: "no-sign-of-hack" does not fit a main question labelled Not established/);
+rule("a main answer labelled with a claim-only label", (t) => t.swap("questions.csv", ",Reported,c004;c001", ",Debunked,c004;c001"), /label: the main question is labelled Debunked; a main answer is Confirmed, Reported or Not established/);
+rule("filed as a stated hack while the main answer is not Confirmed", (t) => t.head((h) => { h.answer_group = "hack-stated"; }), /answer_group: "hack-stated" needs the main question to be labelled Confirmed; it is labelled Reported/);
+rule("filed as a reported hack while the main answer is not Reported", (t) => { t.swap("questions.csv", ",Reported,c004;c001", ",Not established,c004;c001"); t.head((h) => { h.answer_group = "hack-reported"; }); }, /answer_group: "hack-reported" needs the main question to be labelled Reported; it is labelled Not established/);
+rule("filed as unclear while the main answer is Confirmed", (t) => { t.swap("questions.csv", ",Reported,c004;c001", ",Confirmed,c004;c001"); t.head((h) => { h.answer_group = "unclear"; }); }, /answer_group: "unclear" needs the main question to be labelled Not established; it is labelled Confirmed/);
+rule("filed as no sign of a hack while the main answer is Not established", (t) => t.swap("questions.csv", ",Reported,c004;c001", ",Not established,c004;c001"), /answer_group: "no-sign-of-hack" needs the main question to be labelled Confirmed or Reported; it is labelled Not established/);
 rule("a service state resting on a claim that does not exist", (t) => t.head((h) => { h.service.claim_id = "c099"; }), /service\.claim_id: "c099" is not in claims\.csv/);
 rule("a service state resting on a rumor", (t) => t.head((h) => { h.service.claim_id = "c003"; }), /service: rests on c003, which is labelled Rumor; whether a service is back can only rest on a Confirmed or Reported claim/);
 rule("a service state outside the three", (t) => t.head((h) => { h.service.state = "fine"; }), /incident\.json\.service\.state: "fine" is not one of/);
@@ -186,7 +187,7 @@ test("the build is repeatable and writes the pages search engines need", () => {
     // the page reads at three depths, and every depth is in the page itself, so it is all
     // there without the script: the short answer, the full story, the evidence
     assert.match(page, /<div class="answer-head"><p class="kicker">Is it a hack\? The short answer<\/p><span class="pill pill-no-sign answer-pill">No sign of a hack<\/span><\/div>/, "the plain answer leads the answer box");
-    assert.match(page, /<span class="field">How well supported<\/span> <span class="pill pill-unverified"/, "the evidence label follows it");
+    assert.match(page, /<span class="field">How well supported<\/span> <span class="pill pill-reported"/, "the evidence label follows it");
     const depthAt = (cls) => page.indexOf(`<section class="depth ${cls}"`);
     assert.ok(depthAt("depth-short") > 0 && depthAt("depth-short") < depthAt("depth-story") && depthAt("depth-story") < depthAt("depth-evidence"), "the three depths come in order");
     const storyPart = page.slice(depthAt("depth-story"), depthAt("depth-evidence")), evidencePart = page.slice(depthAt("depth-evidence"));

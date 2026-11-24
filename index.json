@@ -769,7 +769,7 @@
         "data": "data/incidents/2026-11-workday-outage/"
       },
       "incident_type": "outage",
-      "answer_group": "unclear",
+      "answer_group": "no-sign-of-hack",
       "service": {
         "state": "back",
         "as_of": "2026-11-20T11:00:00-05:00"

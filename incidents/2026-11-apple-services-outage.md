@@ -16,7 +16,7 @@ disclaimer: "Made for entertainment using AI. Not endorsed by Apple, any governm
 
 # Was the Apple services outage a cyberattack?
 
-**Rumor.** No credible source says it was, and we found no evidence that it was. Apple says an internal update caused the outage and that it was not a cyberattack; that rests on Apple's word alone.
+**Reported.** No credible source says it was, and we found no evidence that it was. Apple says an internal update caused the outage and that it was not a cyberattack; that rests on Apple's word alone.
 
 Incident: Apple services outage, Nov 17, 2026. Also reported as the Apple outage. First published Nov 18, 2026; last updated Nov 20, 2026, 8:02 PM ET.
 
@@ -73,7 +73,7 @@ Nov 20, 2026, 8:02 PM ET: **Apple's status-page sourcing now separates the Nov 1
 
 | Question | Answer | Label |
 |---|---|---|
-| Was the Apple services outage a cyberattack? | No credible source says it was, and we found no evidence that it was. Apple says an internal update caused the outage and that it was not a cyberattack; that rests on Apple's word alone. | Rumor |
+| Was the Apple services outage a cyberattack? | No credible source says it was, and we found no evidence that it was. Apple says an internal update caused the outage and that it was not a cyberattack; that rests on Apple's word alone. | Reported |
 | Did Apple services really go down on Nov 17? | Yes. Apple's own status page lists the outages. | Confirmed |
 | Did Apple say an internal update caused it? | Yes, in a statement given to several outlets. | Confirmed |
 | Did an internal update cause it? | That is Apple's explanation. Apple has given no technical detail and no one has checked it independently. | Reported |
@@ -153,6 +153,7 @@ Nov 20, 2026, 8:02 PM ET: **Apple's status-page sourcing now separates the Nov 1
 
 | When | Update | Type |
 |---|---|---|
+| Nov 24, 2026, 11:07 AM ET | **The answer is unchanged: Apple says an internal update caused the outage, not an attack. Its label now reads Reported.** A labelling rule decided by the owner on Nov 24: a story's main answer carries Confirmed, Reported or Not established, and the label says how well the answer shown is supported. This answer carried Rumor, which is the label of the claim that the outage was an attack. It now carries Reported, because the answer rests on Apple's own account and no independent source backs it. No finding and no source changed. | Wording or layout only |
 | Nov 20, 2026, 8:02 PM ET | **Apple's status-page sourcing now separates the Nov 18 read, which showed the outage entries, from the Nov 20 read, which no longer does.** Correction: source s001 had been re-stamped Nov 20, but c002 (start times) and c003 (end times) rest on the Nov 18 read, when the Nov 17 entries were still on the page. Restored s001 to its Nov 18 read (20:57 ET) and added s022 for the Nov 20 12:50 PM ET re-read of the same URL. c001, c018 and c020 now cite s022 for what the page showed on Nov 20; c002 and c003 are reworded in the past tense and stay Confirmed. c019 now names the developer status data-file URL. No labels changed. | Correction |
 | Nov 20, 2026, 2:35 PM ET | **Australian retailers reported Apple Pay trouble during the outage; an Australian outlet repeats Apple's no-cyberattack statement.** Scheduled check. New source s021: SmartCompany, an Australian business outlet, reports that some Australian retailers' customers had Apple Pay problems on the morning of Nov 18 local time (Nov 17 in the US) during Black Friday sales (new claim c021, Reported: one outlet and the business's own account; Apple's status page did not list Apple Pay). It also reports Apple said the outages were not the result of a cyber attack, added as a third independent source for c010 (label unchanged, Confirmed). Apple's System Status and Developer System Status data re-read at 2:30 PM ET: unchanged (Nov 18 Stocks; Nov 19 App Store Server APIs and Advanced Commerce API, all resolved). Checked, not found: no Apple newsroom post, root cause or post-mortem; no new government statement naming Apple; no credible claim of a hack. Staleness check done: the main answer, size, who is affected and the not-known list are still accurate. No labels changed. | Added |
 | Nov 20, 2026, 12:50 PM ET | **Users report new Apple Pay problems on Nov 20; Apple has not confirmed a new outage.** Scheduled check. International Business Times Australia reported a fresh rise in Apple Pay problem reports on outage trackers on Friday, Nov 20 (new source s020). Apple's System Status page, re-read at 12:50 PM ET, lists no Apple Pay issue, so the new claim c020 is Unverified. No source links the reports to the Nov 17 outage or to an attack. Checked, not found: no Apple newsroom post, root cause or post-mortem; no new government statement naming Apple; no credible claim of a hack. Staleness check done: the main answer, size and not-known list are still accurate. No labels changed on existing claims. | Added |

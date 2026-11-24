@@ -110,10 +110,12 @@ The home page groups incidents by a plain answer, so a reader who knows nothing 
 
 | `answer_group` | The home page says | Use it when | The main question's label |
 |---|---|---|---|
-| `unclear` | Still unclear | Nobody has shown whether it was an attack | Anything but Confirmed or Debunked |
+| `unclear` | Still unclear | Nobody has shown whether it was an attack | Not established |
 | `hack-stated` | Hacked, by its own account | The organisation itself, or an official source, says someone got in | Confirmed |
 | `hack-reported` | Reported as a hack | News outlets or a single official say so, and nothing confirms it | Reported |
-| `no-sign-of-hack` | No sign of a hack | The organisation says it was not an attack, or the claim of one was shown false | Anything but Not established |
+| `no-sign-of-hack` | No sign of a hack | The organisation says it was not an attack, or the claim of one was shown false | Reported when it rests on the organisation's word alone; Confirmed when an official or independent source backs it |
+
+**A main answer carries one of three labels: Confirmed, Reported or Not established.** The label says how well the answer shown is supported, whichever way the answer points: "Dropbox says it was not an attack" is Reported, because it is Dropbox's word alone. Unverified, Rumor and Debunked are for individual claims, never for the main answer. The validator enforces this. *Decided by the owner, Nov 24, 2026.*
 
 It restates the main question's answer and is not a verdict, so it needs no approval. Change it in the same change as the main answer, never let it say more than the answer does, and when in doubt use `unclear`. Once the owner approves a verdict, it must match it.
 
@@ -167,7 +169,7 @@ To check one folder while you work: `node scripts/validate.mjs data/incidents/<s
 - that a verdict has an approval time and a closed status, and a closed incident has a verdict;
 - that no text uses the words of a final verdict ("Confirmed hack", "Confirmed not a hack") before one is approved;
 - that `service`, when present, rests on a Confirmed or Reported claim;
-- that `answer_group` says no more than the main question's label does, and matches the verdict once there is one;
+- that the main question is labelled Confirmed, Reported or Not established, that `answer_group` agrees with that label, and that it matches the verdict once there is one;
 - that the update log is newest first;
 - that chart columns exist and hold numbers, image files exist and match their SHA-256, and SVGs contain no scripts;
 - that a `lead_image` is a defined image, landscape, at least 1200 pixels wide and not an SVG;

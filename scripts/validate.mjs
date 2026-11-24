@@ -272,16 +272,14 @@ export function loadIncident(dir) {
     if (!c) errs.push(`incident.json.service.claim_id: ${show(head.service.claim_id)} is not in claims.csv`);
     else if (c.label !== "Confirmed" && c.label !== "Reported") errs.push(`incident.json.service: rests on ${head.service.claim_id}, which is labelled ${c.label}; whether a service is back can only rest on a Confirmed or Reported claim`);
   }
-  // The plain answer the home page files the incident under may not say more than the
-  // main question's label does, and must follow a verdict once there is one.
+  // A main answer carries one of three labels: Confirmed, Reported or Not established (decided
+  // by the owner, Nov 24, 2026). It says how well the answer shown is supported, whichever way
+  // the answer points; Unverified, Rumor and Debunked are for individual claims. The plain
+  // answer the home page files the incident under must agree with it, and with a verdict.
   const group = head.answer_group, mainLabel = main && main.label;
-  if (group && mainLabel) {
-    const needs = { "hack-stated": "Confirmed", "hack-reported": "Reported" }[group];
-    const at = `incident.json.answer_group: ${show(group)}`;
-    if (needs && mainLabel !== needs) errs.push(`${at} needs the main question to be labelled ${needs}; it is labelled ${mainLabel}`);
-    if (group === "unclear" && (mainLabel === "Confirmed" || mainLabel === "Debunked")) errs.push(`${at} does not fit a main question labelled ${mainLabel}: that answer is settled one way or the other`);
-    if (group === "no-sign-of-hack" && mainLabel === "Not established") errs.push(`${at} does not fit a main question labelled Not established; use "unclear"`);
-  }
+  const MAIN_LABELS = { unclear: ["Not established"], "hack-stated": ["Confirmed"], "hack-reported": ["Reported"], "no-sign-of-hack": ["Confirmed", "Reported"] };
+  if (mainLabel && !["Confirmed", "Reported", "Not established"].includes(mainLabel)) errs.push(`questions.csv row ${main._row}, label: the main question is labelled ${mainLabel}; a main answer is Confirmed, Reported or Not established (the other labels are for claims)`);
+  else if (group && mainLabel && MAIN_LABELS[group] && !MAIN_LABELS[group].includes(mainLabel)) errs.push(`incident.json.answer_group: ${show(group)} needs the main question to be labelled ${MAIN_LABELS[group].join(" or ")}; it is labelled ${mainLabel}`);
   const verdictGroup = { "Confirmed hack": "hack-stated", "Confirmed not a hack": "no-sign-of-hack" }[head.verdict];
   if (verdictGroup && group && group !== verdictGroup) errs.push(`incident.json.answer_group: must be ${show(verdictGroup)} once the verdict is ${show(head.verdict)}`);
 

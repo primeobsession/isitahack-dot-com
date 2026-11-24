@@ -7,7 +7,7 @@
     "kind": "online-service"
   },
   "incident_type": "outage",
-  "answer_group": "unclear",
+  "answer_group": "no-sign-of-hack",
   "service": {
     "state": "back",
     "claim_id": "c006"
