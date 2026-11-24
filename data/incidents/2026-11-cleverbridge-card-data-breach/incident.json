@@ -20,12 +20,16 @@
   "verdict": null,
   "verdict_approved_at": null,
   "size": "Regional",
-  "size_basis": "A payment platform used by many software sellers. No count of affected cards is published; one seller says a small subset of its customers were hit.",
+  "size_basis": "A payment platform used by many software sellers. No count of affected cards is published; the company calls it a small amount of card data, and one seller says a small subset of its customers were hit.",
   "who_is_affected": "People who paid for software through Cleverbridge and got a notice. Check card statements, tell the card issuer about unknown charges, and ask whether a new card is needed.",
   "known": [
     {
-      "text": "A third party copied payment card data stored on Cleverbridge's platform.",
+      "text": "A third party copied personal data, including payment card data, stored on Cleverbridge's platform.",
       "claim_id": "c001"
+    },
+    {
+      "text": "Cleverbridge says CVV security codes were taken in a minority of cases.",
+      "claim_id": "c014"
     },
     {
       "text": "Cleverbridge detected the activity on Nov 4 and had systems back online that day.",
@@ -42,7 +46,7 @@
   ],
   "not_known": [
     {
-      "text": "Exactly which card details were taken; notices differ on whether the CVV/CVC or contact details were copied.",
+      "text": "Which card details were taken for whom: the company says the CVV was taken only in a minority of cases, and notices differ on contact details.",
       "question_id": "q002"
     },
     {

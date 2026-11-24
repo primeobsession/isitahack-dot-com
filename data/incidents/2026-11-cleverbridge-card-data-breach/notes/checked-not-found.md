@@ -1,8 +1,8 @@
-We looked for these and did not find them as of the time of this report on Nov 23, 2026 (last checked 12:12 PM ET).
+We looked for these and did not find them as of the time of this report on Nov 23, 2026 (last checked 6:13 PM ET).
 
 - The number of affected cards or people, including any filing on the California or Washington attorneys general public breach lists.
 - A list of businesses whose customers were affected, from Cleverbridge or the businesses.
-- A company statement on exactly which card details were taken, or why customer notices differ (some list the CVV/CVC, others say it was not copied; one lists both the CVV/CVC and contact details).
+- A company explanation of why customer notices differ on contact details, or how many people had their CVV/CVC taken (the company says only 'a minority of cases').
 - How the third party got in, how long they were there, or any technical write-up.
 - Any attacker named or claim of responsibility.
 - A statement from a regulator or card network.
