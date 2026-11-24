@@ -1,0 +1,136 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-checkpoint-management-server-intrusions",
+  "title": "Check Point management server intrusions (GT13), Nov 2026",
+  "subject": {
+    "name": "Check Point",
+    "kind": "network"
+  },
+  "incident_type": "attack",
+  "answer_group": "hack-reported",
+  "lead_image": "check-point-hq-tel-aviv",
+  "also_called": [
+    "the GT13 campaign",
+    "the Check Point server hack"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-10-17",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Check Point, GreyNoise, CISA, any news outlet, company, government agency, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "GreyNoise counts 24 servers at 22 organisations in 17 countries, including government, energy and finance. The servers control company firewalls, so the reach inside each victim could be wide. No victim has been named.",
+  "who_is_affected": "Organisations that run Check Point Security Management servers, mainly ones reachable from the internet. GreyNoise counts 22 victims in 17 countries. Ordinary consumers are not directly affected. Check Point customers should install the July 2026 fix and limit who can log in to management servers.",
+  "known": [
+    {
+      "text": "Check Point confirmed in July 2026 that attackers exploited a login-bypass flaw in its management servers (CVE-2026-16232), and CISA lists it as exploited.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "Check Point released a fix for that flaw on July 22, 2026.",
+      "claim_id": "c012"
+    },
+    {
+      "text": "Check Point says a separate wave from Oct 30 compromised a couple of dozen unpatched Check Point firewalls through a PHP flaw.",
+      "claim_id": "c011"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether Check Point, a victim or a government confirms GreyNoise's count of 22 organisations hit.",
+      "question_id": "q001"
+    },
+    {
+      "text": "How the attacker first got into the Check Point servers. The root cause is not published.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Which organisations were hit.",
+      "question_id": "q003"
+    },
+    {
+      "text": "Who is behind the attacks.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Whether the attacks are still going on after Nov 2.",
+      "question_id": "q005"
+    }
+  ],
+  "figures": [
+    {
+      "value": "22",
+      "label": "Organisations hit, per GreyNoise",
+      "detail": "Reported, not confirmed",
+      "claim_id": "c001"
+    },
+    {
+      "value": "24",
+      "label": "Check Point servers controlled",
+      "detail": "Per GreyNoise",
+      "claim_id": "c001"
+    },
+    {
+      "value": "17",
+      "label": "Countries with victims",
+      "detail": "Per GreyNoise",
+      "claim_id": "c006"
+    },
+    {
+      "value": "Jul 22",
+      "label": "Check Point fix released",
+      "detail": "Jumbo Hotfix, sk185169",
+      "claim_id": "c012"
+    }
+  ],
+  "images": [
+    {
+      "id": "check-point-hq-tel-aviv",
+      "title": "Check Point's headquarters",
+      "file": "images/check-point-hq-tel-aviv.jpg",
+      "alt": "A dark glass office building with a purple Check Point sign near the roof, in front of a tall residential tower, with a construction crane and parked cars.",
+      "caption": "Check Point's headquarters in Tel Aviv, in August 2015.",
+      "credit": "דוד שי, CC BY-SA 3.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Check_point_hq.jpg",
+      "sha256": "cefffdaaac633f9c78a8a7ccf1fe4e3dde3f719057b241c1f037bf263d97969b",
+      "width": 1600,
+      "height": 1212
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Are they breaking in? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Is there a fix?",
+      "group": "fix",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Check Point server intrusions"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
