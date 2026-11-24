@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://isitahack.com/</loc><lastmod>2026-11-24T10:29:15-05:00</lastmod></url>
+<url><loc>https://isitahack.com/</loc><lastmod>2026-11-24T10:45:50-05:00</lastmod></url>
+<url><loc>https://isitahack.com/incidents/2026-11-spotify-login-outage.html</loc><lastmod>2026-11-24T10:45:50-05:00</lastmod></url>
 <url><loc>https://isitahack.com/incidents/2026-11-atlassian-bitbucket-login-outage.html</loc><lastmod>2026-11-24T10:29:15-05:00</lastmod></url>
 <url><loc>https://isitahack.com/incidents/2026-11-hugendubel-tolino-cyberattack.html</loc><lastmod>2026-11-24T10:29:15-05:00</lastmod></url>
-<url><loc>https://isitahack.com/incidents/2026-11-spotify-login-outage.html</loc><lastmod>2026-11-24T07:30:00-05:00</lastmod></url>
 <url><loc>https://isitahack.com/incidents/2026-11-gta6-xbox-build-leak.html</loc><lastmod>2026-11-23T13:01:00-05:00</lastmod></url>
 <url><loc>https://isitahack.com/incidents/2026-11-together-ai-prompt-leak.html</loc><lastmod>2026-11-23T12:49:00-05:00</lastmod></url>
 <url><loc>https://isitahack.com/incidents/2026-11-travelsoft-orchestra-cyberattack.html</loc><lastmod>2026-11-23T12:45:00-05:00</lastmod></url>
@@ -54,7 +54,7 @@
 <url><loc>https://isitahack.com/incidents/2026-11-boeing-inc-ransom-claim.html</loc><lastmod>2026-11-20T19:49:00-05:00</lastmod></url>
 <url><loc>https://isitahack.com/incidents/2026-11-starbucks-mobile-order-outage.html</loc><lastmod>2026-11-20T19:49:00-05:00</lastmod></url>
 <url><loc>https://isitahack.com/incidents/2026-11-workday-outage.html</loc><lastmod>2026-11-20T18:55:00-05:00</lastmod></url>
-<url><loc>https://isitahack.com/status.html</loc><lastmod>2026-11-24T10:29:15-05:00</lastmod></url>
+<url><loc>https://isitahack.com/status.html</loc><lastmod>2026-11-24T10:45:50-05:00</lastmod></url>
 <url><loc>https://isitahack.com/how-it-works.html</loc></url>
 <url><loc>https://isitahack.com/about.html</loc></url>
 </urlset>
