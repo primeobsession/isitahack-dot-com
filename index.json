@@ -70,6 +70,19 @@
       "answer_group": "unclear"
     },
     {
+      "slug": "2026-11-samsung-ads-vendor-breach",
+      "title": "Samsung Ads North America vendor breach, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T22:48:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-samsung-ads-vendor-breach.md",
+        "html": "incidents/2026-11-samsung-ads-vendor-breach.html",
+        "data": "data/incidents/2026-11-samsung-ads-vendor-breach/"
+      },
+      "incident_type": "breach",
+      "answer_group": "hack-stated"
+    },
+    {
       "slug": "2026-11-faa-ground-stop",
       "title": "FAA nationwide ground stop",
       "status": "monitoring",
@@ -149,19 +162,6 @@
         "page": "incidents/2026-11-kepco-customer-data-breach.md",
         "html": "incidents/2026-11-kepco-customer-data-breach.html",
         "data": "data/incidents/2026-11-kepco-customer-data-breach/"
-      },
-      "incident_type": "breach",
-      "answer_group": "hack-stated"
-    },
-    {
-      "slug": "2026-11-samsung-ads-vendor-breach",
-      "title": "Samsung Ads North America vendor breach, Nov 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-22T12:25:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-samsung-ads-vendor-breach.md",
-        "html": "incidents/2026-11-samsung-ads-vendor-breach.html",
-        "data": "data/incidents/2026-11-samsung-ads-vendor-breach/"
       },
       "incident_type": "breach",
       "answer_group": "hack-stated"
