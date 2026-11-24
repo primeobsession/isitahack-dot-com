@@ -1,10 +1,10 @@
 source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
-s001,https://status.airbyte.com/cmwklryol00620wpc0n44i9hn,"Airbyte Status (official incident page, Tier 1)",1,airbyte,2026-11-21,2026-11-21T16:35:26-05:00,,ok,2026-11-21T16:35:26-05:00
-s002,https://status.salesforce.com/generalmessages/20000278,"Salesforce Trust Status: Security Advisory, Airbyte Connected Applications",1,salesforce,2026-11-20,2026-11-21T16:35:26-05:00,,ok,2026-11-21T16:35:26-05:00
+s001,https://status.airbyte.com/cmwklryol00620wpc0n44i9hn,"Airbyte Status (official incident page, Tier 1)",1,airbyte,2026-11-23,2026-11-23T20:40:52-05:00,,ok,2026-11-23T20:40:52-05:00
+s002,https://status.salesforce.com/generalmessages/20000278,"Salesforce Trust Status: Security Advisory, Airbyte Connected Applications",1,salesforce,2026-11-20,2026-11-21T16:35:26-05:00,,ok,2026-11-23T20:40:52-05:00
 s003,https://xitter.gq/airbytehq,Airbyte's own posts on X (read through a third-party mirror),4,airbyte,2026-11-20,2026-11-21T16:16:05-05:00,,ok,2026-11-21T16:16:05-05:00
 s004,https://cybersixt.com/originals/airbyte-cloud-security-incident,"CyberSIXT: Airbyte Cloud taken offline after cyberattack, syncs halted",3,cybersixt,2026-11-18,,,blocked,2026-11-21T16:16:05-05:00
 s005,https://sesamedisk.com/airbyte-cloud-offline-security-incident/,Sesame Disk: Airbyte Cloud Offline After Security Incident,3,sesamedisk,2026-11-18,2026-11-21T16:16:05-05:00,,ok,2026-11-21T16:16:05-05:00
 s006,https://theweatherreport.ai/incidents/2026-11-17-airbyte/,"The Weather Report: Airbyte systems breached, Airbyte Cloud taken offline",3,weatherreport,2026-11-20,2026-11-21T16:16:05-05:00,,ok,2026-11-21T16:16:05-05:00
 s007,https://anassahel.com/en/watch/2026-airbyte-cloud-security-incident/,Anas Sahel threat watch: Airbyte Cloud security incident,3,anassahel,2026-11-21,2026-11-21T16:16:05-05:00,,ok,2026-11-21T16:16:05-05:00
-s008,https://x.com/AirbyteHQ/status/2122797250275578017,Airbyte's own post on X: security incident statement (Nov 17),4,airbyte,2026-11-17,2026-11-21T16:35:26-05:00,,ok,2026-11-21T16:35:26-05:00
-s009,https://x.com/AirbyteHQ/status/2123686439942857087,"Airbyte's own post on X: Airbyte Cloud back online, full report to follow (Nov 20)",4,airbyte,2026-11-20,2026-11-21T16:35:26-05:00,,ok,2026-11-21T16:35:26-05:00
+s008,https://x.com/AirbyteHQ/status/2122797250275578017,Airbyte's own post on X: security incident statement (Nov 17),4,airbyte,2026-11-17,2026-11-21T16:35:26-05:00,,ok,2026-11-23T20:40:52-05:00
+s009,https://x.com/AirbyteHQ/status/2123686439942857087,"Airbyte's own post on X: Airbyte Cloud back online, full report to follow (Nov 20)",4,airbyte,2026-11-20,2026-11-21T16:35:26-05:00,,ok,2026-11-23T20:40:52-05:00
