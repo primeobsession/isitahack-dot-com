@@ -70,6 +70,19 @@
       "answer_group": "unclear"
     },
     {
+      "slug": "2026-11-wellington-it-credit-union-breach",
+      "title": "Wellington IT credit union breach, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T16:55:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-wellington-it-credit-union-breach.md",
+        "html": "incidents/2026-11-wellington-it-credit-union-breach.html",
+        "data": "data/incidents/2026-11-wellington-it-credit-union-breach/"
+      },
+      "incident_type": "breach",
+      "answer_group": "hack-stated"
+    },
+    {
       "slug": "2026-11-aeon-credit-service-outage",
       "title": "AEON Credit Service outage and unauthorized access, Nov 2026",
       "status": "monitoring",
@@ -80,19 +93,6 @@
         "data": "data/incidents/2026-11-aeon-credit-service-outage/"
       },
       "incident_type": "outage",
-      "answer_group": "hack-stated"
-    },
-    {
-      "slug": "2026-11-wellington-it-credit-union-breach",
-      "title": "Wellington IT credit union breach, Nov 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-22T15:58:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-wellington-it-credit-union-breach.md",
-        "html": "incidents/2026-11-wellington-it-credit-union-breach.html",
-        "data": "data/incidents/2026-11-wellington-it-credit-union-breach/"
-      },
-      "incident_type": "breach",
       "answer_group": "hack-stated"
     },
     {
