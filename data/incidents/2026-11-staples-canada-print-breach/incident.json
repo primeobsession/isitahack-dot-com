@@ -6,6 +6,8 @@
     "name": "Staples Canada",
     "kind": "online-service"
   },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
   "lead_image": "staples-canada-store",
   "also_called": [
     "the staplesprint.ca breach",

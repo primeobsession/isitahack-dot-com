@@ -3,6 +3,8 @@
   "slug": "2026-11-microsoft-365-outage",
   "title": "Microsoft 365 outage, Nov 12-13, 2026",
   "subject": { "name": "Microsoft 365", "kind": "online-service" },
+  "incident_type": "outage",
+  "answer_group": "no-sign-of-hack",
   "lead_image": "microsoft-building-92",
   "also_called": ["the Microsoft outage"],
   "status": "monitoring",

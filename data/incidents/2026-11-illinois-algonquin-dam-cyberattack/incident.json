@@ -6,6 +6,8 @@
     "name": "Algonquin Dam",
     "kind": "government"
   },
+  "incident_type": "attack",
+  "answer_group": "hack-reported",
   "lead_image": "illinois-dnr-logo",
   "also_called": [
     "the Algonquin Dam hack",

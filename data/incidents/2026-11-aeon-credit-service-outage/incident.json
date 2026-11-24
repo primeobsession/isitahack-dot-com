@@ -6,6 +6,8 @@
     "name": "AEON Credit",
     "kind": "finance"
   },
+  "incident_type": "outage",
+  "answer_group": "hack-stated",
   "lead_image": "aeon-credit-hong-kong",
   "also_called": [
     "the AEON credit card outage",

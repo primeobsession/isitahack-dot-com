@@ -6,6 +6,8 @@
     "name": "Workday",
     "kind": "online-service"
   },
+  "incident_type": "outage",
+  "answer_group": "unclear",
   "lead_image": "workday-headquarters",
   "also_called": [
     "the Workday outage",

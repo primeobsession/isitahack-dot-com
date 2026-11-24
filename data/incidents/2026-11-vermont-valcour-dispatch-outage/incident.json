@@ -6,6 +6,8 @@
     "name": "Valcour",
     "kind": "government"
   },
+  "incident_type": "outage",
+  "answer_group": "unclear",
   "also_called": [
     "the Vermont police software outage",
     "the Vermont dispatch system breach"

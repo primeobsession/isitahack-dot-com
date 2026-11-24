@@ -6,6 +6,8 @@
     "name": "Samsung Ads",
     "kind": "online-service"
   },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
   "lead_image": "samsung-smart-tv",
   "also_called": [
     "the Samsung smart TV data leak",

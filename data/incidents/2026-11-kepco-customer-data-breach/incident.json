@@ -6,6 +6,8 @@
     "name": "KEPCO",
     "kind": "energy"
   },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
   "lead_image": "kepco-hadong-branch",
   "also_called": [
     "the KEPCO ON leak",

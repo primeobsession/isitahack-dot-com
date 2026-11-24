@@ -6,6 +6,8 @@
     "name": "GoFundMe, DonorPerfect",
     "kind": "online-service"
   },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
   "lead_image": "gofundme-logo",
   "also_called": [
     "GoFundMe Pro data breach",

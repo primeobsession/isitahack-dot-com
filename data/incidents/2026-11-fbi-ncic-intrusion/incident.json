@@ -6,6 +6,8 @@
     "name": "FBI NCIC",
     "kind": "government"
   },
+  "incident_type": "attack",
+  "answer_group": "unclear",
   "lead_image": "fbi-cjis-complex",
   "also_called": [
     "the NCIC breach",

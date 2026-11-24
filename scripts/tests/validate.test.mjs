@@ -98,6 +98,16 @@ rule("a likely verdict named in a claim", (t) => t.swap("claims.csv", "No outsid
 rule("a likely verdict named in the head", (t) => t.head((h) => { h.not_known[0].text = "Whether this ends as a confirmed hack."; }), /uses the words of a final verdict/);
 rule("a likely verdict named in a note", (t) => t.swap("notes/background.md", "\n", "\nLikely confirmed not a hack.\n"), /notes\/background\.md line \d+: uses the words of a final verdict/);
 
+// ---------- the plain answer on the home page may not say more than the main answer ----------
+rule("an incident with no answer group", (t) => t.head((h) => { delete h.answer_group; }), /answer_group: missing \(required\)/);
+rule("an incident with no incident type", (t) => t.head((h) => { delete h.incident_type; }), /incident_type: missing \(required\)/);
+rule("an incident type outside the three", (t) => t.head((h) => { h.incident_type = "ransomware"; }), /incident\.json\.incident_type: "ransomware" is not one of/);
+rule("filed as a stated hack while the main answer is not Confirmed", (t) => t.head((h) => { h.answer_group = "hack-stated"; }), /answer_group: "hack-stated" needs the main question to be labelled Confirmed; it is labelled Unverified/);
+rule("filed as a reported hack while the main answer is not Reported", (t) => t.head((h) => { h.answer_group = "hack-reported"; }), /answer_group: "hack-reported" needs the main question to be labelled Reported/);
+rule("filed as unclear while the main answer is Confirmed", (t) => { t.swap("questions.csv", ",Unverified,", ",Confirmed,"); t.head((h) => { h.answer_group = "unclear"; }); }, /answer_group: "unclear" does not fit a main question labelled Confirmed/);
+rule("filed as no sign of a hack while the main answer is Not established", (t) => t.swap("questions.csv", ",Unverified,", ",Not established,"), /answer_group: "no-sign-of-hack" does not fit a main question labelled Not established/);
+rule("an answer group that contradicts the verdict", (t) => t.head((h) => { h.verdict = "Confirmed hack"; h.verdict_approved_at = "2026-01-20T09:00:00-05:00"; h.status = "closed"; }), /answer_group: must be "hack-stated" once the verdict is "Confirmed hack"/);
+
 // ---------- update log ----------
 rule("an update log that is not newest first", (t) => t.swap("update_log.csv", "u003,2026-01-12T17:30:00-05:00", "u003,2026-01-14T17:30:00-05:00"), /update_log\.csv: rows must be newest first/);
 rule("a role outside the list as author", (t) => t.swap("update_log.csv", ",Research agent\n", ",Intern\n"), /author: "Intern" is not one of/);
@@ -171,9 +181,19 @@ test("the build is repeatable and writes the pages search engines need", () => {
     assert.match(page, /<figure class="head-media"><img src="\.\.\/data\/incidents\/[^"]+\/images\/water-tower\.png"[^>]*><figcaption>Image: isitahack\.com<\/figcaption>/);
     assert.match(page, /<meta property="og:image" content="https:\/\/isitahack\.com\/data\/incidents\/[^"]+\/images\/water-tower\.png">/);
     const home = readFileSync(join(a, "index.html"), "utf8");
-    assert.equal(home.match(/<li class="story lead">/g).length, 1, "the home page has one lead story");
-    assert.doesNotMatch(home, /<svg class="plate"[^>]*aria-label="Example City Water/, "the sample's photograph replaces its plate");
-    assert.match(home, /<img src="data\/incidents\/[^"]+\/images\/water-tower\.png"[^>]*><span class="credit">Image: isitahack\.com<\/span>/, "the sample's photograph and credit are on the home page");
+    // the home page lists every incident once, as a row under its plain answer
+    const listed = JSON.parse(readFileSync(join(a, "index.json"), "utf8")).incidents;
+    const rows = home.match(/<li class="irow"/g).length;
+    assert.equal(rows, listed.length, "the home page has one row for every incident");
+    const counts = [...home.matchAll(/<span class="group-n" data-count>(\d+)<\/span>/g)].map((m) => Number(m[1]));
+    assert.equal(counts.length, 4, "the home page has the four answer groups");
+    assert.equal(counts.reduce((sum, n) => sum + n, 0), rows, "the group counts add up to the rows");
+    const group = (id) => home.slice(home.indexOf(`<section class="group" id="${id}"`)).split("</section>")[0];
+    const sampleRow = new RegExp(`<li class="irow" data-type="outage"[^>]*><a href="incidents/${SLUG}\\.html">`);
+    assert.match(group("no-sign-of-hack"), sampleRow, "the sample is filed under its answer group, with its kind");
+    assert.doesNotMatch(group("unclear") + group("hack-stated") + group("hack-reported"), sampleRow, "and under no other group");
+    assert.equal(listed.find((i) => i.slug === SLUG).answer_group, "no-sign-of-hack", "index.json says which answer an incident is filed under");
+    assert.doesNotMatch(home, /<img /, "the home page lists incidents as text; photographs stay on the incident pages");
   } finally {
     rmSync(base, { recursive: true, force: true });
   }

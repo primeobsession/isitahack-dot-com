@@ -6,6 +6,8 @@
     "name": "Rackspace Spot",
     "kind": "online-service"
   },
+  "incident_type": "breach",
+  "answer_group": "hack-reported",
   "lead_image": "rackspace-logo",
   "also_called": [
     "the Rackspace Spot outage",

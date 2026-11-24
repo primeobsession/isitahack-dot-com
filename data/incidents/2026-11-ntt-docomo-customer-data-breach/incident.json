@@ -6,6 +6,8 @@
     "name": "NTT Docomo",
     "kind": "telecom"
   },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
   "lead_image": "ntt-docomo-yoyogi",
   "also_called": [
     "the Docomo data leak",

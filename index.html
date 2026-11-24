@@ -57,490 +57,133 @@
 
 <section class="wrap home-intro">
 <div class="intro-copy">
-<p class="kicker accent">A different kind of news desk</p>
-<h1>Is it a hack? <span class="soft">Here is what is actually known.</span></h1>
-<p class="lede">When something big breaks, rumors arrive before facts. We check every claim against public sources and say which are confirmed, which are only reported and which are false.</p>
+<p class="kicker accent">Public-source fact-checks of security news</p>
+<h1>Heard that something got hacked?</h1>
+<p class="lede">Look it up. We read what public sources actually say and give you a straight answer in plain words, with the evidence underneath.</p>
+<div class="finder" role="search" hidden>
+<label for="find">Search by company, service or agency</label>
+<input id="find" type="search" autocomplete="off" spellcheck="false" placeholder="FAA, Ticketmaster, Microsoft 365">
 </div>
-<div class="is-isnt">
-<div>
-<h2 class="kicker">What this is</h2>
-<ul>
-<li>A running fact-check of outages, breaches and security scares.</li>
-<li>Researched and organized by AI agents, from public sources only.</li>
-<li>Every claim labelled and linked to its source. Every edit public.</li>
-</ul>
+<p class="meta newest">Newest: <a href="incidents/2026-11-next-supplier-data-breach.html">Was Next hacked? Supplier data breach</a>, <a href="incidents/2026-11-atlassian-bitbucket-login-outage.html">Atlassian Bitbucket and login outage</a>, <a href="incidents/2026-11-together-ai-prompt-leak.html">Together AI prompt leak</a>, <a href="incidents/2026-11-doordash-outage.html">DoorDash app and website outage</a></p>
 </div>
-<div>
-<h2 class="kicker">What it is not</h2>
-<ul>
-<li>Not breaking news. We wait for sources, so we are often slower.</li>
-<li>Not an official source, and not endorsed by anyone named here.</li>
-<li>Not advice. Made for entertainment using AI. <a href="about.html#what-this-is-not">What that means</a></li>
-</ul>
-</div>
-</div>
+<aside class="answers-key" aria-labelledby="answers-key">
+<h2 class="kicker" id="answers-key">Every incident gets one of four answers</h2>
+<dl>
+<div><dt><span class="pill pill-not-established">Still unclear</span></dt><dd>Nobody has shown whether it was an attack or not.</dd></div>
+<div><dt><span class="pill pill-confirmed">Says it was hacked</span></dt><dd>The organization itself, or an official source, says someone got in.</dd></div>
+<div><dt><span class="pill pill-reported">Reported as a hack</span></dt><dd>News outlets say it was a hack. It is not officially confirmed.</dd></div>
+<div><dt><span class="pill pill-no-sign">No sign of a hack</span></dt><dd>The organization says it was not an attack, or the claim was shown to be false.</dd></div>
+</dl>
+<p class="meta">These sum up each page. Inside, every claim carries its own evidence label and source. AI agents do the research; a person approves only the final verdict. <a href="how-it-works.html">How it works</a></p>
+</aside>
 </section>
 
-<section class="wrap headlines" id="incidents">
-<div class="list-head">
-<h2>The latest fact-checks</h2>
-<span class="meta">Monitoring 44 incidents · latest update <time datetime="2026-11-23T12:08:00-05:00">Nov 23, 2026, 12:08 PM ET</time></span>
+<section class="wrap board" id="incidents">
+<div class="board-head">
+<div>
+<h2>Everything we are following</h2>
+<p class="meta">44 incidents, grouped by the answer so far. Each date is the day the incident happened.</p>
 </div>
-<ul class="stories cols-3">
-<li class="story lead">
-<a class="story-media" href="incidents/2026-11-tower-records-japan-breach.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-tower-records-japan-breach/images/tower-records-shibuya.jpg" width="1920" height="1280" alt="The tall Tower Records Shibuya building in Tokyo, with a yellow and red Tower Records sign running up its front, seen from the street."><span class="credit">Image: DeepSkyBlue, CC BY-SA 3.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Tower Records Japan data breach, Nov 2026 · Updated <time datetime="2026-11-23T12:08:00-05:00">Nov 23, 2026, 12:08 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-tower-records-japan-breach.html">Was the Tower Records Japan data breach a hack?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes: Tower Records says an outside party got into Tower Records Online without authorisation on Nov 19 and customer data leaked. How they got in and who they are are not established.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-23T12:08:00-05:00">Nov 23, 2026, 12:08 PM ET</time></span> Sourcing notes corrected to count nine outlets; still no cause or attacker named.</p>
-<div class="story-evidence">
-<div class="evidence">
-<p class="kicker">Was it a hack? What has been said · 1</p>
-<div class="evidence-bar" role="img" aria-label="Confirmed 1"><span class="seg seg-confirmed" style="flex-grow:1"></span></div>
-<ul class="evidence-key"><li><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span class="count">1</span></li></ul>
+<div class="filters" role="group" aria-label="Filter by kind of incident" hidden>
+<button type="button" class="pick" data-type="all" aria-pressed="true">All <span class="n">44</span></button>
+<button type="button" class="pick" data-type="outage" aria-pressed="false">Outages <span class="n">16</span></button>
+<button type="button" class="pick" data-type="breach" aria-pressed="false">Data breaches <span class="n">19</span></button>
+<button type="button" class="pick" data-type="attack" aria-pressed="false">Attacks <span class="n">9</span></button>
 </div>
 </div>
-<p class="card-links"><a class="button" href="incidents/2026-11-tower-records-japan-breach.html">Read the fact-check</a> <span class="meta">10 sources · 5 updates</span></p>
+<section class="group" id="unclear" data-group aria-labelledby="g-unclear">
+<div class="group-head">
+<span class="group-n" data-count>12</span>
+<h3 id="g-unclear">Still unclear</h3>
+<span class="pill pill-not-established">Still unclear</span>
+<p class="meta">Open questions. Nobody has shown whether these were attacks, and we keep checking.</p>
 </div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-next-supplier-data-breach.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-next-supplier-data-breach/images/next-store-truro.jpg" width="1920" height="1125" alt="A large grey Next store with the brand name in white capital letters above its glass entrance, with cars parked in front." loading="lazy" decoding="async"><span class="credit">Image: Mutney, CC0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Was Next hacked? Supplier data breach, Nov 2026 · Updated <time datetime="2026-11-23T11:13:00-05:00">Nov 23, 2026, 11:13 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-next-supplier-data-breach.html">Was Next hacked in the supplier data breach?</a></h3>
-<p class="story-answer"><span class="pill pill-reported" data-label="Reported">Reported</span><span>Reported. Next says outsiders reached some Next data at a supplier, not in Next&#39;s own systems, and that no customer data is known affected. No outside party has checked this.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-23T11:13:00-05:00">Nov 23, 2026, 11:13 AM ET</time></span> Next says a supplier was breached and outsiders reached some Next data; customer data taken is Not established.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-next-supplier-data-breach.html">Read the fact-check</a> <span class="meta">7 sources · 1 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-atlassian-bitbucket-login-outage.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-atlassian-bitbucket-login-outage/images/atlassian-office-yokohama.jpg" width="1920" height="1327" alt="A low white office building with an Atlassian sign on its dark ground-floor wall, beside a paved plaza and a tall glass tower." loading="lazy" decoding="async"><span class="credit">Image: Thirteen-fri, CC BY-SA 3.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Atlassian Bitbucket and login outage, Nov 23, 2026 · Updated <time datetime="2026-11-23T11:12:00-05:00">Nov 23, 2026, 11:12 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-atlassian-bitbucket-login-outage.html">Was the Atlassian Bitbucket and login outage on Nov 23 a hack?</a></h3>
-<p class="story-answer"><span class="pill pill-not-established" data-label="Not established">Not established</span><span>Not established. Atlassian says only that it has identified the cause and is working on a fix, and it has not said what the cause is. No one has claimed an attack and we found no report calling it one, but no source has ruled one out.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-23T11:12:00-05:00">Nov 23, 2026, 11:12 AM ET</time></span> Atlassian&#39;s Bitbucket and sign-in outage has been going since 10:19 AM ET on Nov 23. Atlassian has not said what caused it.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-atlassian-bitbucket-login-outage.html">Read the fact-check</a> <span class="meta">6 sources · 1 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-glinet-cloud-malware.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-glinet-cloud-malware/images/glinet-ar150-router.jpg" width="1905" height="1188" alt="A small white GL.iNet travel router seen end-on, showing its WAN, LAN and power ports, on a light wooden surface." loading="lazy" decoding="async"><span class="credit">Image: L3u, CC0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">GL.iNet cloud malware incident, Nov 20, 2026 · Updated <time datetime="2026-11-23T11:08:26-05:00">Nov 23, 2026, 11:08 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-glinet-cloud-malware.html">Were GL.iNet routers and KVM devices hacked?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes, by the company&#39;s own account: GL.iNet says an unauthorized party exploited a flaw in its cloud remote management and installed malicious software on some routers and KVMs. How many, who and what it does are not stated.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-23T11:08:26-05:00">Nov 23, 2026, 11:08 AM ET</time></span> Another news outlet, Help Net Security, now covers the incident; no new facts and no label change.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-glinet-cloud-malware.html">Read the fact-check</a> <span class="meta">49 sources · 25 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-gta6-xbox-build-leak.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-gta6-xbox-build-leak/images/rockstar-north-office.jpg" width="1920" height="1164" alt="A stone and glass office building with a tall glass entrance, behind a paved courtyard and trees, under a blue sky." loading="lazy" decoding="async"><span class="credit">Image: Discott, CC0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">GTA 6 Xbox build leak: was Rockstar hacked? Nov 2026 · Updated <time datetime="2026-11-23T11:07:00-05:00">Nov 23, 2026, 11:07 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-gta6-xbox-build-leak.html">Was Rockstar hacked in the GTA 6 Xbox build leak?</a></h3>
-<p class="story-answer"><span class="pill pill-not-established" data-label="Not established">Not established</span><span>Not established. A leaker says it has a near-complete Xbox build, and an outside group says the files look real, but Rockstar and Take-Two have not said the files are real or that they were breached, and how the leaker got them is unknown.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-23T11:07:00-05:00">Nov 23, 2026, 11:07 AM ET</time></span> Outlets now report the leaker posted the GTA 6 executable; court orders show the August subpoenas were granted.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-gta6-xbox-build-leak.html">Read the fact-check</a> <span class="meta">15 sources · 2 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-wellington-it-credit-union-breach.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-wellington-it-credit-union-breach/images/irish-credit-union-branch.jpg" width="1920" height="1362" alt="A small white single-storey credit union branch with a blue sign and canopy over its entrance, behind a low wall, railings and shrubs." loading="lazy" decoding="async"><span class="credit">Image: Eric Jones, CC BY-SA 2.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Wellington IT credit union breach, Nov 2026 · Updated <time datetime="2026-11-22T15:58:00-05:00">Nov 22, 2026, 3:58 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-wellington-it-credit-union-breach.html">Was the Wellington IT credit union breach a hack?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes: an outside party got unauthorised access to saved-payee details on Wellington IT&#39;s banking platform, per the department, Wellington IT and the credit union league. Money taken and the attacker are not established.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-22T15:58:00-05:00">Nov 22, 2026, 3:58 PM ET</time></span> A credit union that stopped using Wellington IT about six years ago says some of its old payee data is included.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-wellington-it-credit-union-breach.html">Read the fact-check</a> <span class="meta">36 sources · 11 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-zozo-plaid-karte-breach.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-zozo-plaid-karte-breach/images/zozotown-box.jpg" width="1920" height="1280" alt="A black cardboard ZOZOTOWN delivery box with the brand name printed in white on its side." loading="lazy" decoding="async"><span class="credit">Image: kobakou, CC BY 2.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">ZOZO customer data leak via PLAID KARTE, Nov 2026 · Updated <time datetime="2026-11-22T15:50:00-05:00">Nov 22, 2026, 3:50 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-zozo-plaid-karte-breach.html">Was the ZOZO data leak a hack?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes, but at a supplier: an outside party got into PLAID&#39;s KARTE service on Nov 13 and took data, including customer data ZOZO kept there. Neither company says ZOZO&#39;s own systems were breached.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-22T15:50:00-05:00">Nov 22, 2026, 3:50 PM ET</time></span> DHC says about 19.11 million customer records, including names and emails, leaked via KARTE; Shimamura says about 7 million did.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-zozo-plaid-karte-breach.html">Read the fact-check</a> <span class="meta">18 sources · 5 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-expedia-vendor-breach.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-expedia-vendor-breach/images/expedia-group-campus.jpg" width="1920" height="933" alt="The modern glass and white-panelled south entrance of Expedia Group&#39;s headquarters campus in Seattle, seen from a footbridge." loading="lazy" decoding="async"><span class="credit">Image: T014y, CC BY-SA 4.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Expedia third-party vendor breach, Nov 2026 · Updated <time datetime="2026-11-22T15:31:00-05:00">Nov 22, 2026, 3:31 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-expedia-vendor-breach.html">Was the Expedia data breach a hack?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>A vendor-side attack, yes: Expedia confirmed, per Skift, that attackers got in through a compromised third-party data platform provider. What was taken is not established.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-22T15:31:00-05:00">Nov 22, 2026, 3:31 PM ET</time></span> A second outlet describes the group&#39;s posted Expedia files: hundreds of thousands of emails, possibly old; still not confirmed by Expedia.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-expedia-vendor-breach.html">Read the fact-check</a> <span class="meta">8 sources · 4 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-kepco-customer-data-breach.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-kepco-customer-data-breach/images/kepco-hadong-branch.jpg" width="1920" height="1440" alt="A glass-fronted KEPCO office building with the company&#39;s name in Korean on top, behind a small car park with parked cars and trucks." loading="lazy" decoding="async"><span class="credit">Image: hyolee2, CC BY-SA 3.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">KEPCO customer data breach, Nov 2026 · Updated <time datetime="2026-11-22T14:44:00-05:00">Nov 22, 2026, 2:44 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-kepco-customer-data-breach.html">Was the KEPCO customer data breach a hack?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>KEPCO&#39;s own notices say an outside cyber intrusion leaked data on about 1.52 million users of its KEPCO ON and SRM systems. How the attacker got in, and who it was, are not established.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-22T14:44:00-05:00">Nov 22, 2026, 2:44 PM ET</time></span> More on KEPCO&#39;s October breach: the intelligence service found the exposed staff data on a cloud-hosted page; its cause is not public.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-kepco-customer-data-breach.html">Read the fact-check</a> <span class="meta">31 sources · 8 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-aeon-credit-service-outage.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-aeon-credit-service-outage/images/aeon-credit-hong-kong.jpg" width="1920" height="1440" alt="A street-level AEON Credit Service shop front in Hong Kong, with the company&#39;s name in white letters on a dark blue sign above a glass entrance, next to other shops." loading="lazy" decoding="async"><span class="credit">Image: Weizshaum KIAMZOU 300, CC BY-SA 4.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">AEON Credit Service outage and unauthorized access, Nov 2026 · Updated <time datetime="2026-11-22T12:39:41-05:00">Nov 22, 2026, 12:39 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-aeon-credit-service-outage.html">Was AEON Credit Service hacked?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes, by the company&#39;s own notice: AEON says it detected unauthorized access to its system. It has not said that this caused the outage, how the access happened, or who did it.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-22T12:39:41-05:00">Nov 22, 2026, 12:39 PM ET</time></span> AEON&#39;s Japanese parent reported a separate group website intrusion in October; no source links it to Hong Kong.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-aeon-credit-service-outage.html">Read the fact-check</a> <span class="meta">10 sources · 5 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-samsung-ads-vendor-breach.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-samsung-ads-vendor-breach/images/samsung-smart-tv.jpg" width="1920" height="1272" alt="A shop display wall of Samsung smart TVs showing landscape pictures, under a Samsung sign." loading="lazy" decoding="async"><span class="credit">Image: Raysonho, CC0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Samsung Ads North America vendor breach, Nov 2026 · Updated <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-samsung-ads-vendor-breach.html">Was the Samsung Ads data breach a hack?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>A vendor incident, yes: Samsung says a third-party vendor that handled Samsung Ads North America advertising data was involved. Whether Samsung&#39;s own systems were hacked is not established.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></span> Samsung says a third-party vendor for Samsung Ads North America was involved; a ransomware group says it posted 220MB.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-samsung-ads-vendor-breach.html">Read the fact-check</a> <span class="meta">3 sources · 1 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-faa-ground-stop.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-faa-ground-stop/images/faa-radar-bennett-colorado.jpg" width="1920" height="1256" alt="A white radar dome on a steel lattice tower beside a small building, standing in a dry field under a pale blue sky." loading="lazy" decoding="async"><span class="credit">Image: Jeffrey Beall, CC BY 4.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">FAA nationwide ground stop · Updated <time datetime="2026-11-22T12:20:00-05:00">Nov 22, 2026, 12:20 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-faa-ground-stop.html">Was the FAA ground stop a cyberattack?</a></h3>
-<p class="story-answer"><span class="pill pill-unverified" data-label="Unverified">Unverified</span><span>Not supported by any public evidence; not formally ruled out. The FAA says it has no indication of a cyberattack, and the root cause is still not determined.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-22T12:20:00-05:00">Nov 22, 2026, 12:20 PM ET</time></span> The intelligence director told ABC the week&#39;s outages, the FAA&#39;s included, were not coordinated or state-sponsored; cause still pending.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-faa-ground-stop.html">Read the fact-check</a> <span class="meta">274 sources · 70 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-cleverbridge-card-data-breach.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-cleverbridge-card-data-breach/images/cleverbridge-logo.png" width="1600" height="1200" alt="Cleverbridge logo" loading="lazy" decoding="async"><span class="credit">Image: Cleverbridge logo, trademark of Cleverbridge, from cleverbridge.com (the white version, shown on a dark background)</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Cleverbridge payment card breach, Nov 2026 · Updated <time datetime="2026-11-22T12:19:10-05:00">Nov 22, 2026, 12:19 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-cleverbridge-card-data-breach.html">Was the Cleverbridge payment card breach a hack?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes: Cleverbridge says a third party got into its platform and copied stored payment card data. How they got in and who they are are not established.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-22T12:19:10-05:00">Nov 22, 2026, 12:19 PM ET</time></span> Cleverbridge customer notices do not all list the same data: some say the CVV was copied, others say it was not but contact details were.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-cleverbridge-card-data-breach.html">Read the fact-check</a> <span class="meta">5 sources · 2 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-hugendubel-tolino-cyberattack.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-hugendubel-tolino-cyberattack/images/hugendubel-marienplatz.jpg" width="1920" height="1349" alt="The tall modern front of the Hugendubel bookshop on a city square, with the shop&#39;s name above its ground-floor windows and a church tower beside it." loading="lazy" decoding="async"><span class="credit">Image: Hugendubel Buchhandlung, CC BY-SA 4.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Hugendubel tolino cyberattack, Nov 2026 · Updated <time datetime="2026-11-22T11:31:00-05:00">Nov 22, 2026, 11:31 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-hugendubel-tolino-cyberattack.html">Was the Hugendubel outage a hack?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes, per the company: a spokesperson told dpa it was a hacker attack on Nov 18 to 19. Its own web notices say only &#39;technical disruption&#39;. No outside confirmation yet. Attacker, method and ransomware are not established.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-22T11:31:00-05:00">Nov 22, 2026, 11:31 AM ET</time></span> ebook.de, a second shop run by Hugendubel&#39;s online company, is also offline with the same notice; the shop and tolino cloud are still down.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-hugendubel-tolino-cyberattack.html">Read the fact-check</a> <span class="meta">15 sources · 5 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-usda-farm-payment-system-cyberattack.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-usda-farm-payment-system-cyberattack/images/usda-whitten-building.jpg" width="1920" height="1280" alt="The Jamie L. Whitten Building, the US Department of Agriculture&#39;s headquarters in Washington, DC, lit up at dusk across a snowy lawn and framed by bare trees." loading="lazy" decoding="async"><span class="credit">Image: USDA, public domain, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">USDA farm payment system cyberattack, Nov 2026 · Updated <time datetime="2026-11-22T09:04:02-05:00">Nov 22, 2026, 9:04 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-usda-farm-payment-system-cyberattack.html">Was the USDA farm payment system outage a hack?</a></h3>
-<p class="story-answer"><span class="pill pill-reported" data-label="Reported">Reported</span><span>A USDA under secretary calls it a cyberthreat. NBC and ABC sources say outsiders got in, but he says defenses worked. Whether anyone actually got in is not settled.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-22T09:04:02-05:00">Nov 22, 2026, 9:04 AM ET</time></span> On Saturday the FSA chief said technicians were still working to restore service; still no USDA statement or word that systems are back.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-usda-farm-payment-system-cyberattack.html">Read the fact-check</a> <span class="meta">8 sources · 5 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-ticketmaster-outage.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-ticketmaster-outage/images/ticketmaster-paper-ticket.jpg" width="1920" height="960" alt="A printed Ticketmaster paper ticket for a 2021 concert at the Savannah Civic Center, with seat details and the Ticketmaster name on its stub, on a plain white background." loading="lazy" decoding="async"><span class="credit">Image: Public domain, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Ticketmaster outage, Nov 20, 2026 · Updated <time datetime="2026-11-22T09:03:01-05:00">Nov 22, 2026, 9:03 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-ticketmaster-outage.html">Was the Ticketmaster outage on Nov 20 a cyberattack?</a></h3>
-<p class="story-answer"><span class="pill pill-not-established" data-label="Not established">Not established</span><span>Ticketmaster has not given a cause, and no source we read says the outage was an attack or rules one out. Nobody has claimed responsibility. The only suggestion of one is an anonymous comment with no evidence.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-22T09:03:01-05:00">Nov 22, 2026, 9:03 AM ET</time></span> Ticketmaster told fans on Saturday to save tickets to a phone wallet and said the problem was fixed. Still no cause, and no sign of a hack.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-ticketmaster-outage.html">Read the fact-check</a> <span class="meta">20 sources · 5 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-ntt-docomo-customer-data-breach.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-ntt-docomo-customer-data-breach/images/ntt-docomo-yoyogi.jpg" width="1920" height="1442" alt="The pointed spire of the NTT Docomo Yoyogi Building in Tokyo, rising above the trees of a park." loading="lazy" decoding="async"><span class="credit">Image: Zairon, CC BY-SA 4.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">NTT Docomo customer data breach, Nov 2026 · Updated <time datetime="2026-11-22T07:45:00-05:00">Nov 22, 2026, 7:45 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-ntt-docomo-customer-data-breach.html">Was the Docomo customer data leak a hack?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes. Docomo says outside parties got into My docomo and its online shop, and that customer information leaked. Jiji Press and Nippon TV report the same. The cause and the attacker are not established.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-22T07:45:00-05:00">Nov 22, 2026, 7:45 AM ET</time></span> A second outlet backs the overseas-IP alert account, and card data not leaking; both now Confirmed.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-ntt-docomo-customer-data-breach.html">Read the fact-check</a> <span class="meta">7 sources · 4 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-together-ai-prompt-leak.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-together-ai-prompt-leak/images/together-ai-logo.png" width="1600" height="1200" alt="Together AI logo" loading="lazy" decoding="async"><span class="credit">Image: Together AI logo, trademark of Together AI, from together.ai</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Together AI prompt leak, Nov 2026 · Updated <time datetime="2026-11-22T01:52:00-05:00">Nov 22, 2026, 1:52 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-together-ai-prompt-leak.html">Was the Together AI prompt leak a hack?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes, by the company&#39;s own statement: an unauthorized party used an exposed credential to download stored prompt samples and then tested credentials found in them. The company has not named who did it.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-22T01:52:00-05:00">Nov 22, 2026, 1:52 AM ET</time></span> Together AI removed its line saying the stolen data was deleted; we no longer report it.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-together-ai-prompt-leak.html">Read the fact-check</a> <span class="meta">8 sources · 2 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-microsoft-365-outage.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-microsoft-365-outage/images/microsoft-building-92.jpg" width="1920" height="1280" alt="A low glass and concrete office building with trees in front and a Microsoft sign at the edge of a paved plaza, under a clear blue sky." loading="lazy" decoding="async"><span class="credit">Image: Coolcaesar, CC BY-SA 4.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Microsoft 365 outage, Nov 12-13, 2026 · Updated <time datetime="2026-11-22T01:50:00-05:00">Nov 22, 2026, 1:50 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-microsoft-365-outage.html">Was the Microsoft 365 outage a cyberattack?</a></h3>
-<p class="story-answer"><span class="pill pill-debunked" data-label="Debunked">Debunked</span><span>All the public evidence says no. Microsoft says it was a technical failure, and the US government said on Nov 18 that the outage was not a cyberattack. Microsoft&#39;s final report, dated Nov 20, also says it was not a cyberattack.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-22T01:50:00-05:00">Nov 22, 2026, 1:50 AM ET</time></span> The Guardian, an established outlet, now describes the cause given in Microsoft&#39;s final report.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-microsoft-365-outage.html">Read the fact-check</a> <span class="meta">28 sources · 11 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-travelsoft-orchestra-cyberattack.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-travelsoft-orchestra-cyberattack/images/havas-voyages-agency.jpg" width="1920" height="1440" alt="A Havas Voyages travel agency shop front on a French street, with the brand&#39;s name on a blue sign above its window." loading="lazy" decoding="async"><span class="credit">Image: Mickael Denet, CC BY-SA 3.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Travelsoft Orchestra cyberattack, Nov 2026 · Updated <time datetime="2026-11-22T00:13:00-05:00">Nov 22, 2026, 12:13 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-travelsoft-orchestra-cyberattack.html">Was the Travelsoft Orchestra outage a hack?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes, by the company&#39;s own account: its president says Orchestra was the victim of a cyberattack with illicit access, and that it shut its systems down. How they got in and who did it are not known.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-22T00:13:00-05:00">Nov 22, 2026, 12:13 AM ET</time></span> Travelsoft says its Orchestra booking platform was hit by a cyberattack; French travel sites went offline Nov 20.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-travelsoft-orchestra-cyberattack.html">Read the fact-check</a> <span class="meta">2 sources · 1 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-rakuten-securities-breach.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-rakuten-securities-breach/images/rakuten-crimson-house.jpg" width="1920" height="1280" alt="A tall glass office tower with a red Rakuten sign at the top, seen from below against a blue sky with clouds." loading="lazy" decoding="async"><span class="credit">Image: Kamo31, CC BY-SA 4.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Rakuten Securities breach, Nov 2026 · Updated <time datetime="2026-11-21T23:50:43-05:00">Nov 21, 2026, 11:50 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-rakuten-securities-breach.html">Was Rakuten Securities hacked?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes, by the company&#39;s own account: it says a third party gained unauthorized access to its systems and information in a test environment may have leaked on Nov 11. How the attacker got in and who it was are not established.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-21T23:50:43-05:00">Nov 21, 2026, 11:50 PM ET</time></span> Rakuten Securities says it will report its investigation results, but has not said how or when.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-rakuten-securities-breach.html">Read the fact-check</a> <span class="meta">22 sources · 9 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-fbi-ncic-intrusion.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-fbi-ncic-intrusion/images/fbi-cjis-complex.jpg" width="1920" height="983" alt="A long, low modern office complex set in wide lawns, with autumn-coloured wooded hills behind it." loading="lazy" decoding="async"><span class="credit">Image: FBI, public domain, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">FBI crime database (NCIC) intrusion, reported Nov 20, 2026 · Updated <time datetime="2026-11-21T21:07:00-05:00">Nov 21, 2026, 9:07 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-fbi-ncic-intrusion.html">Was the FBI&#39;s NCIC crime database hacked?</a></h3>
-<p class="story-answer"><span class="pill pill-not-established" data-label="Not established">Not established</span><span>CNN, NBC News, AP, ABC News, MS NOW and Fox News, each citing their own unnamed sources, report an apparent hack the FBI is investigating. The President called it &#39;not good&#39; without details. The FBI has not commented.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-21T21:07:00-05:00">Nov 21, 2026, 9:07 PM ET</time></span> MS NOW and Fox News separately report hackers got into NCIC; still no word on what was reached; the FBI has not commented.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-fbi-ncic-intrusion.html">Read the fact-check</a> <span class="meta">17 sources · 4 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-rackspace-spot-breach.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-rackspace-spot-breach/images/rackspace-logo.png" width="1600" height="1200" alt="Rackspace logo" loading="lazy" decoding="async"><span class="credit">Image: Rackspace Technology logo, trademark of Rackspace, public domain on Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Rackspace Spot breach, Nov 2026 · Updated <time datetime="2026-11-21T18:34:58-05:00">Nov 21, 2026, 6:34 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-rackspace-spot-breach.html">Was Rackspace Spot hacked?</a></h3>
-<p class="story-answer"><span class="pill pill-reported" data-label="Reported">Reported</span><span>Reportedly yes: Rackspace&#39;s customer notice, quoted by BleepingComputer, says leaked credentials let someone into Spot on Nov 17, and a Spot team member said the same on Spot&#39;s GitHub forum. No Rackspace-hosted statement yet.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-21T18:34:58-05:00">Nov 21, 2026, 6:34 PM ET</time></span> A Spot team member wrote on Spot&#39;s GitHub forum that an observability system was breached via a compromised credential; still Reported.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-rackspace-spot-breach.html">Read the fact-check</a> <span class="meta">4 sources · 2 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-journal-technologies-court-portals.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-journal-technologies-court-portals/images/journal-technologies-logo.png" width="1600" height="1200" alt="Journal Technologies logo" loading="lazy" decoding="async"><span class="credit">Image: Journal Technologies logo, trademark of Journal Technologies, from journaltech.com</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Journal Technologies court portal outage, Nov 13, 2026 · Updated <time datetime="2026-11-21T18:26:46-05:00">Nov 21, 2026, 6:26 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-journal-technologies-court-portals.html">Was the Journal Technologies court portal outage a cyberattack?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes, by the vendor&#39;s own account: it says malicious automated activity targeted its public portal software on Nov 13. Who did it, how far it got and whether data was taken are not established.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-21T18:26:46-05:00">Nov 21, 2026, 6:26 PM ET</time></span> Correction: Kern County&#39;s court alert is dated Nov 20, the day of the vendor&#39;s new build; it still gives no restoration time.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-journal-technologies-court-portals.html">Read the fact-check</a> <span class="meta">19 sources · 6 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-airbyte-cloud-security-incident.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-airbyte-cloud-security-incident/images/airbyte-logo.png" width="1600" height="1200" alt="Airbyte logo" loading="lazy" decoding="async"><span class="credit">Image: Airbyte logo, trademark of Airbyte, from airbyte.com</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Airbyte Cloud security incident, Nov 2026 · Updated <time datetime="2026-11-21T16:35:26-05:00">Nov 21, 2026, 4:35 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-airbyte-cloud-security-incident.html">Was Airbyte Cloud hacked in the Nov 2026 security incident?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes, by Airbyte&#39;s own account: it says an attacker had access to its systems before it blocked them. How they got in, who they are and what they reached are not established.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-21T16:35:26-05:00">Nov 21, 2026, 4:35 PM ET</time></span> Airbyte&#39;s X posts now linked directly; no new facts.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-airbyte-cloud-security-incident.html">Read the fact-check</a> <span class="meta">9 sources · 2 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-doordash-outage.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-doordash-outage/images/doordash-logo.png" width="1600" height="1200" alt="DoorDash logo" loading="lazy" decoding="async"><span class="credit">Image: DoorDash logo, trademark of DoorDash, public domain on Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">DoorDash app and website outage, Nov 21, 2026 · Updated <time datetime="2026-11-21T14:54:58-05:00">Nov 21, 2026, 2:54 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-doordash-outage.html">Was the DoorDash outage on Nov 21 a cyberattack?</a></h3>
-<p class="story-answer"><span class="pill pill-not-established" data-label="Not established">Not established</span><span>Not established. DoorDash has not given a cause or said anything about an attack. People on social media asked if it was a hack, but no one has shown evidence of one.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-21T14:54:58-05:00">Nov 21, 2026, 2:54 PM ET</time></span> DoorDash marked both status incidents resolved and says a post mortem will be posted later; the cause is still not given.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-doordash-outage.html">Read the fact-check</a> <span class="meta">9 sources · 3 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-microsoft-entra-connect-health-breach.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-microsoft-entra-connect-health-breach/images/microsoft-redmond-campus.jpg" width="1920" height="1421" alt="A white office building among tall evergreen trees on Microsoft&#39;s campus, seen past the corner of a neighbouring building." loading="lazy" decoding="async"><span class="credit">Image: Runner1928, CC BY-SA 4.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Microsoft Entra Connect Health data exposure, Nov 2026 · Updated <time datetime="2026-11-21T13:17:54-05:00">Nov 21, 2026, 1:17 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-microsoft-entra-connect-health-breach.html">Was Microsoft Entra Connect Health hacked?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes, by Microsoft&#39;s own account: unauthorized parties exploited a flaw in the Connect Health API and read tenant metadata, including administrator emails. Who did it and how many were hit are not established.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-21T13:17:54-05:00">Nov 21, 2026, 1:17 PM ET</time></span> Microsoft says attackers exploited a Connect Health flaw to read tenant metadata; who and how many are not established.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-microsoft-entra-connect-health-breach.html">Read the fact-check</a> <span class="meta">6 sources · 1 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-gofundme-pro-donorperfect-breach.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-gofundme-pro-donorperfect-breach/images/gofundme-logo.png" width="1600" height="1200" alt="GoFundMe logo" loading="lazy" decoding="async"><span class="credit">Image: GoFundMe logo, trademark of GoFundMe, public domain on Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">GoFundMe Pro and DonorPerfect breaches, Nov 2026 · Updated <time datetime="2026-11-21T12:53:54-05:00">Nov 21, 2026, 12:53 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-gofundme-pro-donorperfect-breach.html">Were GoFundMe Pro and DonorPerfect hacked?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes, by both companies&#39; own accounts: GoFundMe says an unauthorized party accessed GoFundMe Pro data; DonorPerfect says it found unauthorized activity and went offline. Who did it, and whether one attacker, is not established.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-21T12:53:54-05:00">Nov 21, 2026, 12:53 PM ET</time></span> Salesforce&#39;s own public advisory found: it disabled the GoFundMe Pro connection over suspicious token use, not a Salesforce flaw.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-gofundme-pro-donorperfect-breach.html">Read the fact-check</a> <span class="meta">11 sources · 2 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-charleston-county-sc-cyberattack.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-charleston-county-sc-cyberattack/images/charleston-county-courthouse.jpg" width="1920" height="1404" alt="A three-storey white classical building with tall windows and a columned upper front, on a street corner in Charleston under a blue sky." loading="lazy" decoding="async"><span class="credit">Image: ProfReader, CC BY-SA 3.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Charleston County, SC cyberattack, Nov 16, 2026 · Updated <time datetime="2026-11-21T11:29:09-05:00">Nov 21, 2026, 11:29 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-charleston-county-sc-cyberattack.html">Was Charleston County&#39;s network incident a cyberattack?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes, by the county&#39;s own account: it calls it a &quot;sophisticated cyberattack&quot; identified Nov 16, says data was copied from its systems, and says SLED is treating it as a criminal investigation. Who, how and what data: not established.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-21T11:29:09-05:00">Nov 21, 2026, 11:29 AM ET</time></span> SLED confirmed its role to WCIV; state breach-notice rule added. No label change.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-charleston-county-sc-cyberattack.html">Read the fact-check</a> <span class="meta">9 sources · 2 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-ochsner-health-breach.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-ochsner-health-breach/images/ochsner-medical-center.jpg" width="1920" height="1440" alt="The multi-storey buildings of Ochsner Medical Center&#39;s main campus behind a lawn with palm trees and a car park." loading="lazy" decoding="async"><span class="credit">Image: Infrogmation of New Orleans, CC BY-SA 4.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Ochsner Health data breach, Nov 19, 2026 · Updated <time datetime="2026-11-21T09:40:33-05:00">Nov 21, 2026, 9:40 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-ochsner-health-breach.html">Was the Ochsner Health data breach a cyberattack?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes, by Ochsner&#39;s own account: an unauthorized party accessed two employee accounts on Sept 18 to 21 and downloaded files from one. How, by whom and how many people are affected are not established.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-21T09:40:33-05:00">Nov 21, 2026, 9:40 AM ET</time></span> Researchers describe a healthcare extortion cluster called Vortex; it is not tied to Ochsner, and the method is still unknown.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-ochsner-health-breach.html">Read the fact-check</a> <span class="meta">12 sources · 2 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-premise-health-insider-theft.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-premise-health-insider-theft/images/premise-health-logo.png" width="1600" height="1200" alt="Premise Health logo" loading="lazy" decoding="async"><span class="credit">Image: Premise Health logo, trademark of Premise Health, from premisehealth.com</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Premise Health patient data taken by an employee, 2026 · Updated <time datetime="2026-11-21T07:08:00-05:00">Nov 21, 2026, 7:08 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-premise-health-insider-theft.html">Was the Premise Health data breach a hack?</a></h3>
-<p class="story-answer"><span class="pill pill-reported" data-label="Reported">Reported</span><span>No outside hack is known. Premise Health says an employee copied the data from around March 26 and that &#39;this was not a hacking or ransomware event.&#39; That is the company&#39;s account; no independent investigation has confirmed it.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-21T07:08:00-05:00">Nov 21, 2026, 7:08 AM ET</time></span> One lawsuit alleges an outside hack but offers no evidence beyond the company&#39;s own notice, which says it was an employee.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-premise-health-insider-theft.html">Read the fact-check</a> <span class="meta">9 sources · 4 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-illinois-algonquin-dam-cyberattack.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-illinois-algonquin-dam-cyberattack/images/illinois-dnr-logo.png" width="1600" height="1200" alt="Illinois Department of Natural Resources logo" loading="lazy" decoding="async"><span class="credit">Image: Illinois Department of Natural Resources logo, from dnr.illinois.gov</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Algonquin Dam apparent cyberattack, Nov 16, 2026 · Updated <time datetime="2026-11-21T05:37:15-05:00">Nov 21, 2026, 5:37 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-illinois-algonquin-dam-cyberattack.html">Was the Algonquin Dam on the Fox River hacked?</a></h3>
-<p class="story-answer"><span class="pill pill-reported" data-label="Reported">Reported</span><span>Illinois DNR calls it an “apparent cyberattack”, an attempt at unauthorized access that staff blocked, and says the dam kept running. It has given no technical detail, so the attack itself is not independently shown.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-21T05:37:15-05:00">Nov 21, 2026, 5:37 AM ET</time></span> The Chicago Tribune&#39;s first report adds no new detail. IDNR still has not said who was behind it or whether any system was reached.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-illinois-algonquin-dam-cyberattack.html">Read the fact-check</a> <span class="meta">8 sources · 2 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-project-gutenberg-vandalism.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-project-gutenberg-vandalism/images/project-gutenberg-logo.png" width="1600" height="1200" alt="Project Gutenberg logo" loading="lazy" decoding="async"><span class="credit">Image: Project Gutenberg logo, public domain on Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Project Gutenberg website vandalism, Nov 15, 2026 · Updated <time datetime="2026-11-21T05:14:24-05:00">Nov 21, 2026, 5:14 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-project-gutenberg-vandalism.html">Was Project Gutenberg&#39;s website hacked?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes, by its own account: the foundation says outside attackers vandalized the site, injected code and got root access, then returned on Monday. It calls this “vandalism” and has not said what was taken.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-21T05:14:24-05:00">Nov 21, 2026, 5:14 AM ET</time></span> Project Gutenberg says attackers vandalized its site and got root access. It is still offline. Who and why are unknown.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-project-gutenberg-vandalism.html">Read the fact-check</a> <span class="meta">6 sources · 1 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-steam-outage.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-steam-outage/images/steam-deck-oled.jpg" width="1920" height="960" alt="A Steam Deck OLED handheld games console lying on a table, its screen showing the Steam home screen with game tiles." loading="lazy" decoding="async"><span class="credit">Image: SparklesTrainNerd, CC BY-SA 4.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Steam outages, Nov 17 and Nov 20-21, 2026 · Updated <time datetime="2026-11-21T03:12:31-05:00">Nov 21, 2026, 3:12 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-steam-outage.html">Was the Steam outage a cyberattack?</a></h3>
-<p class="story-answer"><span class="pill pill-not-established" data-label="Not established">Not established</span><span>No source we read says either Steam disruption was an attack, and none rules one out. Valve has not given a cause. A spike in user reports does not show an attack.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-21T03:12:31-05:00">Nov 21, 2026, 3:12 AM ET</time></span> Valve has not said what caused Steam&#39;s Nov 17 outage or the Nov 20-21 problems. Nobody has reported a hack.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-steam-outage.html">Read the fact-check</a> <span class="meta">6 sources · 1 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-dropbox-outage.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-dropbox-outage/images/dropbox-app-phone.jpg" width="1920" height="1440" alt="A hand holding a smartphone showing the blue Dropbox app start screen, with a laptop blurred in the background." loading="lazy" decoding="async"><span class="credit">Image: Ian Lamont, CC BY 2.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Dropbox outage, Nov 20, 2026 · Updated <time datetime="2026-11-21T01:23:54-05:00">Nov 21, 2026, 1:23 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-dropbox-outage.html">Was the Dropbox outage on Nov 20 a cyberattack?</a></h3>
-<p class="story-answer"><span class="pill pill-reported" data-label="Reported">Reported</span><span>Reported, on Dropbox&#39;s own account: its status page says the outage was not caused by a cyberattack or by AI acting on its own. No independent source has confirmed that, and Dropbox has not given a cause.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-21T01:23:54-05:00">Nov 21, 2026, 1:23 AM ET</time></span> Dropbox says its 45-minute outage on Nov 20 was not a cyberattack. It has not said what caused it.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-dropbox-outage.html">Read the fact-check</a> <span class="meta">5 sources · 1 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-riken-fugaku-supercomputer-hack.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-riken-fugaku-supercomputer-hack/images/riken-fugaku.jpg" width="1920" height="1440" alt="Rows of Fugaku supercomputer cabinets with sky-blue end panels in a long white machine room, behind a rope barrier." loading="lazy" decoding="async"><span class="credit">Image: Barsaka2, CC0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">RIKEN Fugaku supercomputer break-in, Nov 2026 · Updated <time datetime="2026-11-21T01:18:35-05:00">Nov 21, 2026, 1:18 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-riken-fugaku-supercomputer-hack.html">Was the RIKEN Fugaku supercomputer break-in a hack?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes, by RIKEN&#39;s own account: an outside party got into Fugaku&#39;s operational network from Nov 10 to 13, installed malicious programs on some servers and took users&#39; files, including private keys. Who did it is not known.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-21T01:18:35-05:00">Nov 21, 2026, 1:18 AM ET</time></span> No new statement from RIKEN since its Nov 20 second notice; Fugaku stays offline with no restart date.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-riken-fugaku-supercomputer-hack.html">Read the fact-check</a> <span class="meta">9 sources · 3 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-staples-canada-print-breach.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-staples-canada-print-breach/images/staples-canada-store.jpg" width="1920" height="1280" alt="A Staples store in Ontario with a red sign above the entrance and a car park in front, under a blue sky." loading="lazy" decoding="async"><span class="credit">Image: Dillan Payne, CC BY-SA 4.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Staples Canada print website breach, Nov 2026 · Updated <time datetime="2026-11-21T00:36:34-05:00">Nov 21, 2026, 12:36 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-staples-canada-print-breach.html">Was the Staples Canada print website breach a hack?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes, by Staples&#39; own account: an unknown party got into staplesprint.ca without permission between Nov 1 and Nov 5 and had access to customer information. Who did it is not known.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-21T00:36:34-05:00">Nov 21, 2026, 12:36 AM ET</time></span> Staples says it removed the intruder and secured all accounts, and that no other Staples website was affected.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-staples-canada-print-breach.html">Read the fact-check</a> <span class="meta">7 sources · 2 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-opm-usa-staffing-access.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-opm-usa-staffing-access/images/opm-headquarters.jpg" width="1920" height="1280" alt="A stone sign reading Theodore Roosevelt Building, 1900 E Street NW, U.S. Office of Personnel Management, in front of the agency&#39;s headquarters in Washington, DC." loading="lazy" decoding="async"><span class="credit">Image: G. Edward Johnson, CC BY 4.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">OPM USA Staffing unauthorized access, Nov 12-13, 2026 · Updated <time datetime="2026-11-21T00:35:58-05:00">Nov 21, 2026, 12:35 AM ET</time></span></p>
-<h3><a href="incidents/2026-11-opm-usa-staffing-access.html">Was OPM&#39;s USA Staffing system hacked in November 2026?</a></h3>
-<p class="story-answer"><span class="pill pill-not-established" data-label="Not established">Not established</span><span>Not established. One outlet says an internal OPM email describes outside access to 403 job offers on Nov 12-13. OPM has published nothing, and how the party got in and who it was are unknown, so a hack is not settled.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-21T00:35:58-05:00">Nov 21, 2026, 12:35 AM ET</time></span> OPM still has not commented on the reported USA Staffing access, and no second outlet has confirmed it.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-opm-usa-staffing-access.html">Read the fact-check</a> <span class="meta">4 sources · 3 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-roll20-breach.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-roll20-breach/images/roll20-logo.png" width="1600" height="1200" alt="Roll20 logo" loading="lazy" decoding="async"><span class="credit">Image: Roll20 logo, trademark of Roll20, from roll20.net</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Roll20 account data breach, Nov 2026 · Updated <time datetime="2026-11-20T23:46:00-05:00">Nov 20, 2026, 11:46 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-roll20-breach.html">Was the Roll20 data breach a hack?</a></h3>
-<p class="story-answer"><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span>Yes, by Roll20&#39;s own account: an unauthorized third party got into its system on Nov 16 and reached account records. Who did it is not known.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-20T23:46:00-05:00">Nov 20, 2026, 11:46 PM ET</time></span> Roll20 says an outsider reached account records for under 1% of users on Nov 16, including password hashes.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-roll20-breach.html">Read the fact-check</a> <span class="meta">2 sources · 1 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-vermont-valcour-dispatch-outage.html" tabindex="-1" aria-hidden="true"><svg class="plate" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Valcour: government">
-<rect class="plate-bg" width="640" height="360"/>
-<path class="plate-rule" d="M36 72H604"/>
-<g class="plate-art" transform="translate(352 22) scale(0.78)"><path class="tint" d="M30 128L170 48L310 128Z"/><path d="M30 128L170 48L310 128Z"/><path d="M42 150H298"/><path d="M72 164V268M121 164V268M170 164V268M219 164V268M268 164V268"/><path d="M30 284H310"/><path class="faint" d="M14 310H326"/></g>
-<text class="plate-kind" x="36" y="52">Government</text>
-<text class="plate-name" x="34" y="322" font-size="90">Valcour</text>
-</svg></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Vermont Valcour police dispatch system outage, Nov 2026 · Updated <time datetime="2026-11-20T23:29:00-05:00">Nov 20, 2026, 11:29 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-vermont-valcour-dispatch-outage.html">Was Vermont&#39;s Valcour police dispatch outage a cyberattack?</a></h3>
-<p class="story-answer"><span class="pill pill-not-established" data-label="Not established">Not established</span><span>The vendor reported a potential security incident and the state calls it a security incident, but no official has said an attacker got in, what was hit, or who did it. The FBI has been notified.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-20T23:29:00-05:00">Nov 20, 2026, 11:29 PM ET</time></span> Vermont took its Valcour police dispatch system offline after its vendor reported a potential security incident; no attack is confirmed.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-vermont-valcour-dispatch-outage.html">Read the fact-check</a> <span class="meta">10 sources · 1 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-apple-services-outage.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-apple-services-outage/images/apple-park-aerial-2024.jpg" width="1920" height="1440" alt="An aerial view of Apple Park, the ring-shaped Apple headquarters building, surrounded by trees and low buildings at sunset." loading="lazy" decoding="async"><span class="credit">Image: Nils Huenerfuerst, CC0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Apple services outage, Nov 17, 2026 · Updated <time datetime="2026-11-20T20:02:24-05:00">Nov 20, 2026, 8:02 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-apple-services-outage.html">Was the Apple services outage a cyberattack?</a></h3>
-<p class="story-answer"><span class="pill pill-rumor" data-label="Rumor">Rumor</span><span>No credible source says it was, and we found no evidence that it was. Apple says an internal update caused the outage and that it was not a cyberattack; that rests on Apple&#39;s word alone.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-20T20:02:24-05:00">Nov 20, 2026, 8:02 PM ET</time></span> Apple&#39;s status-page sourcing now separates the Nov 18 read, which showed the outage entries, from the Nov 20 read, which no longer does.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-apple-services-outage.html">Read the fact-check</a> <span class="meta">22 sources · 9 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-boeing-inc-ransom-claim.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-boeing-inc-ransom-claim/images/boeing-everett-factory.jpg" width="1920" height="1280" alt="A huge curved blue wall inside Boeing&#39;s Everett factory, painted with the words &#39;The future is built here&#39; in white letters." loading="lazy" decoding="async"><span class="credit">Image: Buiobuione, CC BY-SA 4.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Boeing ransomware claim by INC Ransom, Nov 20, 2026 · Updated <time datetime="2026-11-20T19:49:00-05:00">Nov 20, 2026, 7:49 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-boeing-inc-ransom-claim.html">Was Boeing hacked by the INC Ransom group?</a></h3>
-<p class="story-answer"><span class="pill pill-not-established" data-label="Not established">Not established</span><span>Not established. INC Ransom claims it took 3.6 million files from a Boeing helicopter support unit. Boeing has said nothing, no filing exists, and no one independent has verified the claim.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-20T19:49:00-05:00">Nov 20, 2026, 7:49 PM ET</time></span> INC Ransom claims a Boeing helicopter support unit breach on Nov 20; Boeing has said nothing and no one has verified it.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-boeing-inc-ransom-claim.html">Read the fact-check</a> <span class="meta">5 sources · 1 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-starbucks-mobile-order-outage.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-starbucks-mobile-order-outage/images/starbucks-store.jpg" width="1920" height="1440" alt="A Starbucks Coffee store front inside a shopping mall, with the name in white letters above a wood-panelled glass entrance." loading="lazy" decoding="async"><span class="credit">Image: CC0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Starbucks Mobile Order &amp; Pay outage, Nov 20, 2026 · Updated <time datetime="2026-11-20T19:49:00-05:00">Nov 20, 2026, 7:49 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-starbucks-mobile-order-outage.html">Was the Starbucks Mobile Order &amp; Pay outage a cyberattack?</a></h3>
-<p class="story-answer"><span class="pill pill-not-established" data-label="Not established">Not established</span><span>Not established. Starbucks said only that there was &#39;an issue&#39; and gave no cause. No source reports an attack or a claim of one, but nothing has ruled one out.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-20T19:49:00-05:00">Nov 20, 2026, 7:49 PM ET</time></span> Starbucks acknowledged a Mobile Order &amp; Pay issue on Nov 20; no cause has been given and no source reports a hack.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-starbucks-mobile-order-outage.html">Read the fact-check</a> <span class="meta">5 sources · 1 updates</span></p>
-</div>
-</li>
-<li class="story">
-<a class="story-media" href="incidents/2026-11-workday-outage.html" tabindex="-1" aria-hidden="true"><img src="data/incidents/2026-11-workday-outage/images/workday-headquarters.jpg" width="1920" height="1288" alt="Workday&#39;s glass-walled headquarters building in Pleasanton, California, with the company&#39;s name on top, beside a plaza with young trees." loading="lazy" decoding="async"><span class="credit">Image: Coolcaesar, CC BY-SA 4.0, via Wikimedia Commons</span></a>
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-monitoring"><span class="status-dot" aria-hidden="true"></span>Monitoring</span><span class="meta">Workday HR and payroll outage, Nov 13-14, 2026 · Updated <time datetime="2026-11-20T18:55:00-05:00">Nov 20, 2026, 6:55 PM ET</time></span></p>
-<h3><a href="incidents/2026-11-workday-outage.html">Was the Workday outage a hack?</a></h3>
-<p class="story-answer"><span class="pill pill-not-established" data-label="Not established">Not established</span><span>Not established. Workday says it was not a cyber incident and describes a fault in its own disaster-recovery setup. No independent source confirms that, and Workday has published no root-cause report.</span></p>
-<p class="card-latest"><span class="kicker accent">The latest · <time datetime="2026-11-20T18:55:00-05:00">Nov 20, 2026, 6:55 PM ET</time></span> Axios reports that suspected bots wrote about a third of the conspiracy posts during the Workday outage; the cause is unchanged.</p>
-<p class="card-links"><a class="button secondary" href="incidents/2026-11-workday-outage.html">Read the fact-check</a> <span class="meta">17 sources · 3 updates</span></p>
-</div>
-</li>
+<div class="group-body">
+<ul class="group-rows">
+<li class="irow" data-type="outage" data-text="atlassian bitbucket and login outage, nov 23, 2026 atlassian bitbucket was the atlassian bitbucket and login outage on nov 23 a hack? the bitbucket outage the atlassian login outage"><a href="incidents/2026-11-atlassian-bitbucket-login-outage.html"><span class="irow-top"><span class="irow-name">Atlassian Bitbucket and login outage</span><time class="irow-when" datetime="2026-11-23">Nov 23</time></span><span class="irow-answer">Not established. Atlassian says only that it has identified the cause and is working on a fix, and it has not said what the cause is. No one has claimed an attack and we found no report calling it one, but no source has ruled one out.</span></a></li>
+<li class="irow" data-type="outage" data-text="doordash app and website outage, nov 21, 2026 doordash was the doordash outage on nov 21 a cyberattack? the doordash outage"><a href="incidents/2026-11-doordash-outage.html"><span class="irow-top"><span class="irow-name">DoorDash app and website outage</span><time class="irow-when" datetime="2026-11-21">Nov 21</time></span><span class="irow-answer">Not established. DoorDash has not given a cause or said anything about an attack. People on social media asked if it was a hack, but no one has shown evidence of one.</span></a></li>
+<li class="irow" data-type="outage" data-text="ticketmaster outage, nov 20, 2026 ticketmaster was the ticketmaster outage on nov 20 a cyberattack? the ticketmaster outage ticketmaster down"><a href="incidents/2026-11-ticketmaster-outage.html"><span class="irow-top"><span class="irow-name">Ticketmaster outage</span><time class="irow-when" datetime="2026-11-20">Nov 20</time></span><span class="irow-answer">Ticketmaster has not given a cause, and no source we read says the outage was an attack or rules one out. Nobody has claimed responsibility. The only suggestion of one is an anonymous comment with no evidence.</span></a></li>
+<li class="irow" data-type="attack" data-text="fbi crime database (ncic) intrusion, reported nov 20, 2026 fbi ncic was the fbi&#39;s ncic crime database hacked? the ncic breach the fbi crime database hack"><a href="incidents/2026-11-fbi-ncic-intrusion.html"><span class="irow-top"><span class="irow-name">FBI crime database (NCIC) intrusion</span><time class="irow-when" datetime="2026-11-20">Nov 20</time></span><span class="irow-answer">CNN, NBC News, AP, ABC News, MS NOW and Fox News, each citing their own unnamed sources, report an apparent hack the FBI is investigating. The President called it &#39;not good&#39; without details. The FBI has not commented.</span></a></li>
+<li class="irow" data-type="attack" data-text="boeing ransomware claim by inc ransom, nov 20, 2026 boeing was boeing hacked by the inc ransom group? the boeing leak-site claim the boeing helicopter unit claim"><a href="incidents/2026-11-boeing-inc-ransom-claim.html"><span class="irow-top"><span class="irow-name">Boeing ransomware claim by INC Ransom</span><time class="irow-when" datetime="2026-11-20">Nov 20</time></span><span class="irow-answer">Not established. INC Ransom claims it took 3.6 million files from a Boeing helicopter support unit. Boeing has said nothing, no filing exists, and no one independent has verified the claim.</span></a></li>
+<li class="irow" data-type="outage" data-text="starbucks mobile order &amp; pay outage, nov 20, 2026 starbucks was the starbucks mobile order &amp; pay outage a cyberattack? the starbucks app outage starbucks app down"><a href="incidents/2026-11-starbucks-mobile-order-outage.html"><span class="irow-top"><span class="irow-name">Starbucks Mobile Order &amp; Pay outage</span><time class="irow-when" datetime="2026-11-20">Nov 20</time></span><span class="irow-answer">Not established. Starbucks said only that there was &#39;an issue&#39; and gave no cause. No source reports an attack or a claim of one, but nothing has ruled one out.</span></a></li>
+<li class="irow" data-type="breach" data-text="gta 6 xbox build leak: was rockstar hacked? nov 2026 rockstar games was rockstar hacked in the gta 6 xbox build leak? gta 6 leak cyberleek leak gta vi xbox build leak"><a href="incidents/2026-11-gta6-xbox-build-leak.html"><span class="irow-top"><span class="irow-name">GTA 6 Xbox build leak: was Rockstar hacked? Nov 2026</span><time class="irow-when" datetime="2026-11-19">Nov 19</time></span><span class="irow-answer">Not established. A leaker says it has a near-complete Xbox build, and an outside group says the files look real, but Rockstar and Take-Two have not said the files are real or that they were breached, and how the leaker got them is unknown.</span></a></li>
+<li class="irow" data-type="outage" data-text="steam outages, nov 17 and nov 20-21, 2026 steam was the steam outage a cyberattack? the steam outage steam down valve steam outage"><a href="incidents/2026-11-steam-outage.html"><span class="irow-top"><span class="irow-name">Steam outages, Nov 17 and Nov 20-21, 2026</span><time class="irow-when" datetime="2026-11-17">Nov 17</time></span><span class="irow-answer">No source we read says either Steam disruption was an attack, and none rules one out. Valve has not given a cause. A spike in user reports does not show an attack.</span></a></li>
+<li class="irow" data-type="outage" data-text="vermont valcour police dispatch system outage, nov 2026 valcour was vermont&#39;s valcour police dispatch outage a cyberattack? the vermont police software outage the vermont dispatch system breach"><a href="incidents/2026-11-vermont-valcour-dispatch-outage.html"><span class="irow-top"><span class="irow-name">Vermont Valcour police dispatch system outage</span><time class="irow-when" datetime="2026-11-16">Nov 16</time></span><span class="irow-answer">The vendor reported a potential security incident and the state calls it a security incident, but no official has said an attacker got in, what was hit, or who did it. The FBI has been notified.</span></a></li>
+<li class="irow" data-type="outage" data-text="faa nationwide ground stop faa was the faa ground stop a cyberattack? the faa outage the air traffic control outage the nationwide flight grounding"><a href="incidents/2026-11-faa-ground-stop.html"><span class="irow-top"><span class="irow-name">FAA nationwide ground stop</span><time class="irow-when" datetime="2026-11-13">Nov 13</time></span><span class="irow-answer">Not supported by any public evidence; not formally ruled out. The FAA says it has no indication of a cyberattack, and the root cause is still not determined.</span></a></li>
+<li class="irow" data-type="outage" data-text="workday hr and payroll outage, nov 13-14, 2026 workday was the workday outage a hack? the workday outage the workday payroll outage"><a href="incidents/2026-11-workday-outage.html"><span class="irow-top"><span class="irow-name">Workday HR and payroll outage</span><time class="irow-when" datetime="2026-11-13">Nov 13</time></span><span class="irow-answer">Not established. Workday says it was not a cyber incident and describes a fault in its own disaster-recovery setup. No independent source confirms that, and Workday has published no root-cause report.</span></a></li>
+<li class="irow" data-type="attack" data-text="opm usa staffing unauthorized access, nov 12-13, 2026 opm was opm&#39;s usa staffing system hacked in november 2026? the opm job-offer breach the usa staffing breach"><a href="incidents/2026-11-opm-usa-staffing-access.html"><span class="irow-top"><span class="irow-name">OPM USA Staffing unauthorized access</span><time class="irow-when" datetime="2026-11-12">Nov 12</time></span><span class="irow-answer">Not established. One outlet says an internal OPM email describes outside access to 403 job offers on Nov 12-13. OPM has published nothing, and how the party got in and who it was are unknown, so a hack is not settled.</span></a></li>
 </ul>
+</div>
+</section>
+<section class="group" id="hack-stated" data-group aria-labelledby="g-hack-stated">
+<div class="group-head">
+<span class="group-n" data-count>24</span>
+<h3 id="g-hack-stated">Hacked, by its own account</h3>
+<span class="pill pill-confirmed">Says it was hacked</span>
+<p class="meta">The organization itself, or an official source, says someone got in. Who did it is often still unknown.</p>
+</div>
+<div class="group-body">
+<ul class="group-rows">
+<li class="irow" data-type="breach" data-text="together ai prompt leak, nov 2026 together ai was the together ai prompt leak a hack? the together ai security event the together ai prompt leakage"><a href="incidents/2026-11-together-ai-prompt-leak.html"><span class="irow-top"><span class="irow-name">Together AI prompt leak</span><time class="irow-when" datetime="2026-11-21">Nov 21</time></span><span class="irow-answer">Yes, by the company&#39;s own statement: an unauthorized party used an exposed credential to download stored prompt samples and then tested credentials found in them. The company has not named who did it.</span></a></li>
+<li class="irow" data-type="attack" data-text="gl.inet cloud malware incident, nov 20, 2026 gl.inet were gl.inet routers and kvm devices hacked? gl.inet hack gl.inet router and kvm malware goodcloud hack"><a href="incidents/2026-11-glinet-cloud-malware.html"><span class="irow-top"><span class="irow-name">GL.iNet cloud malware incident</span><time class="irow-when" datetime="2026-11-20">Nov 20</time></span><span class="irow-answer">Yes, by the company&#39;s own account: GL.iNet says an unauthorized party exploited a flaw in its cloud remote management and installed malicious software on some routers and KVMs. How many, who and what it does are not stated.</span></a></li>
+<li class="irow" data-type="breach" data-text="kepco customer data breach, nov 2026 kepco was the kepco customer data breach a hack? the kepco on leak kepco&#39;s second breach"><a href="incidents/2026-11-kepco-customer-data-breach.html"><span class="irow-top"><span class="irow-name">KEPCO customer data breach</span><time class="irow-when" datetime="2026-11-20">Nov 20</time></span><span class="irow-answer">KEPCO&#39;s own notices say an outside cyber intrusion leaked data on about 1.52 million users of its KEPCO ON and SRM systems. How the attacker got in, and who it was, are not established.</span></a></li>
+<li class="irow" data-type="outage" data-text="travelsoft orchestra cyberattack, nov 2026 orchestra was the travelsoft orchestra outage a hack? the orchestra outage the travelsoft hack"><a href="incidents/2026-11-travelsoft-orchestra-cyberattack.html"><span class="irow-top"><span class="irow-name">Travelsoft Orchestra cyberattack</span><time class="irow-when" datetime="2026-11-20">Nov 20</time></span><span class="irow-answer">Yes, by the company&#39;s own account: its president says Orchestra was the victim of a cyberattack with illicit access, and that it shut its systems down. How they got in and who did it are not known.</span></a></li>
+<li class="irow" data-type="breach" data-text="microsoft entra connect health data exposure, nov 2026 microsoft entra was microsoft entra connect health hacked? entra connect health breach microsoft entra connect health flaw"><a href="incidents/2026-11-microsoft-entra-connect-health-breach.html"><span class="irow-top"><span class="irow-name">Microsoft Entra Connect Health data exposure</span><time class="irow-when" datetime="2026-11-20">Nov 20</time></span><span class="irow-answer">Yes, by Microsoft&#39;s own account: unauthorized parties exploited a flaw in the Connect Health API and read tenant metadata, including administrator emails. Who did it and how many were hit are not established.</span></a></li>
+<li class="irow" data-type="breach" data-text="tower records japan data breach, nov 2026 tower records was the tower records japan data breach a hack? the tower records online breach the tower records japan leak"><a href="incidents/2026-11-tower-records-japan-breach.html"><span class="irow-top"><span class="irow-name">Tower Records Japan data breach</span><time class="irow-when" datetime="2026-11-19">Nov 19</time></span><span class="irow-answer">Yes: Tower Records says an outside party got into Tower Records Online without authorisation on Nov 19 and customer data leaked. How they got in and who they are are not established.</span></a></li>
+<li class="irow" data-type="outage" data-text="hugendubel tolino cyberattack, nov 2026 hugendubel was the hugendubel outage a hack? the hugendubel hack the tolino cloud outage"><a href="incidents/2026-11-hugendubel-tolino-cyberattack.html"><span class="irow-top"><span class="irow-name">Hugendubel tolino cyberattack</span><time class="irow-when" datetime="2026-11-19">Nov 19</time></span><span class="irow-answer">Yes, per the company: a spokesperson told dpa it was a hacker attack on Nov 18 to 19. Its own web notices say only &#39;technical disruption&#39;. No outside confirmation yet. Attacker, method and ransomware are not established.</span></a></li>
+<li class="irow" data-type="breach" data-text="ochsner health data breach, nov 19, 2026 ochsner health was the ochsner health data breach a cyberattack? ochsner data incident ochsner microsoft 365 breach ochsner vortex claim"><a href="incidents/2026-11-ochsner-health-breach.html"><span class="irow-top"><span class="irow-name">Ochsner Health data breach</span><time class="irow-when" datetime="2026-11-19">Nov 19</time></span><span class="irow-answer">Yes, by Ochsner&#39;s own account: an unauthorized party accessed two employee accounts on Sept 18 to 21 and downloaded files from one. How, by whom and how many people are affected are not established.</span></a></li>
+<li class="irow" data-type="outage" data-text="aeon credit service outage and unauthorized access, nov 2026 aeon credit was aeon credit service hacked? the aeon credit card outage the aeon credit service hack"><a href="incidents/2026-11-aeon-credit-service-outage.html"><span class="irow-top"><span class="irow-name">AEON Credit Service outage and unauthorized access</span><time class="irow-when" datetime="2026-11-18">Nov 18</time></span><span class="irow-answer">Yes, by the company&#39;s own notice: AEON says it detected unauthorized access to its system. It has not said that this caused the outage, how the access happened, or who did it.</span></a></li>
+<li class="irow" data-type="attack" data-text="airbyte cloud security incident, nov 2026 airbyte was airbyte cloud hacked in the nov 2026 security incident? the airbyte cloud outage the airbyte cyberattack"><a href="incidents/2026-11-airbyte-cloud-security-incident.html"><span class="irow-top"><span class="irow-name">Airbyte Cloud security incident</span><time class="irow-when" datetime="2026-11-17">Nov 17</time></span><span class="irow-answer">Yes, by Airbyte&#39;s own account: it says an attacker had access to its systems before it blocked them. How they got in, who they are and what they reached are not established.</span></a></li>
+<li class="irow" data-type="attack" data-text="charleston county, sc cyberattack, nov 16, 2026 charleston county was charleston county&#39;s network incident a cyberattack? charleston county cybersecurity incident charleston county data breach"><a href="incidents/2026-11-charleston-county-sc-cyberattack.html"><span class="irow-top"><span class="irow-name">Charleston County, SC cyberattack</span><time class="irow-when" datetime="2026-11-16">Nov 16</time></span><span class="irow-answer">Yes, by the county&#39;s own account: it calls it a &quot;sophisticated cyberattack&quot; identified Nov 16, says data was copied from its systems, and says SLED is treating it as a criminal investigation. Who, how and what data: not established.</span></a></li>
+<li class="irow" data-type="breach" data-text="roll20 account data breach, nov 2026 roll20 was the roll20 data breach a hack? the roll20 hack the roll20 security incident"><a href="incidents/2026-11-roll20-breach.html"><span class="irow-top"><span class="irow-name">Roll20 account data breach</span><time class="irow-when" datetime="2026-11-16">Nov 16</time></span><span class="irow-answer">Yes, by Roll20&#39;s own account: an unauthorized third party got into its system on Nov 16 and reached account records. Who did it is not known.</span></a></li>
+<li class="irow" data-type="attack" data-text="project gutenberg website vandalism, nov 15, 2026 project gutenberg was project gutenberg&#39;s website hacked? the gutenberg hack project gutenberg down"><a href="incidents/2026-11-project-gutenberg-vandalism.html"><span class="irow-top"><span class="irow-name">Project Gutenberg website vandalism</span><time class="irow-when" datetime="2026-11-15">Nov 15</time></span><span class="irow-answer">Yes, by its own account: the foundation says outside attackers vandalized the site, injected code and got root access, then returned on Monday. It calls this “vandalism” and has not said what was taken.</span></a></li>
+<li class="irow" data-type="breach" data-text="samsung ads north america vendor breach, nov 2026 samsung ads was the samsung ads data breach a hack? the samsung smart tv data leak the samsung ads vendor breach"><a href="incidents/2026-11-samsung-ads-vendor-breach.html"><span class="irow-top"><span class="irow-name">Samsung Ads North America vendor breach</span><time class="irow-when" datetime="2026-11-14">Nov 14</time></span><span class="irow-answer">A vendor incident, yes: Samsung says a third-party vendor that handled Samsung Ads North America advertising data was involved. Whether Samsung&#39;s own systems were hacked is not established.</span></a></li>
+<li class="irow" data-type="breach" data-text="zozo customer data leak via plaid karte, nov 2026 zozo was the zozo data leak a hack? the zozotown data leak the wear data leak the plaid karte breach"><a href="incidents/2026-11-zozo-plaid-karte-breach.html"><span class="irow-top"><span class="irow-name">ZOZO customer data leak via PLAID KARTE</span><time class="irow-when" datetime="2026-11-13">Nov 13</time></span><span class="irow-answer">Yes, but at a supplier: an outside party got into PLAID&#39;s KARTE service on Nov 13 and took data, including customer data ZOZO kept there. Neither company says ZOZO&#39;s own systems were breached.</span></a></li>
+<li class="irow" data-type="outage" data-text="journal technologies court portal outage, nov 13, 2026 journal technologies was the journal technologies court portal outage a cyberattack? court portal outage california court portals down ecourt portal outage"><a href="incidents/2026-11-journal-technologies-court-portals.html"><span class="irow-top"><span class="irow-name">Journal Technologies court portal outage</span><time class="irow-when" datetime="2026-11-13">Nov 13</time></span><span class="irow-answer">Yes, by the vendor&#39;s own account: it says malicious automated activity targeted its public portal software on Nov 13. Who did it, how far it got and whether data was taken are not established.</span></a></li>
+<li class="irow" data-type="breach" data-text="expedia third-party vendor breach, nov 2026 expedia was the expedia data breach a hack? the expedia supply chain attack the expedia data leak"><a href="incidents/2026-11-expedia-vendor-breach.html"><span class="irow-top"><span class="irow-name">Expedia third-party vendor breach</span><time class="irow-when" datetime="2026-11-12">Nov 12</time></span><span class="irow-answer">A vendor-side attack, yes: Expedia confirmed, per Skift, that attackers got in through a compromised third-party data platform provider. What was taken is not established.</span></a></li>
+<li class="irow" data-type="breach" data-text="rakuten securities breach, nov 2026 rakuten securities was rakuten securities hacked? rakuten securities data leak rakuten securities unauthorized access 楽天証券 情報漏えい"><a href="incidents/2026-11-rakuten-securities-breach.html"><span class="irow-top"><span class="irow-name">Rakuten Securities breach</span><time class="irow-when" datetime="2026-11-11">Nov 11</time></span><span class="irow-answer">Yes, by the company&#39;s own account: it says a third party gained unauthorized access to its systems and information in a test environment may have leaked on Nov 11. How the attacker got in and who it was are not established.</span></a></li>
+<li class="irow" data-type="breach" data-text="gofundme pro and donorperfect breaches, nov 2026 gofundme, donorperfect were gofundme pro and donorperfect hacked? gofundme pro data breach donorperfect cyberattack nonprofit fundraising platform attacks"><a href="incidents/2026-11-gofundme-pro-donorperfect-breach.html"><span class="irow-top"><span class="irow-name">GoFundMe Pro and DonorPerfect breaches</span><time class="irow-when" datetime="2026-11-10">Nov 10</time></span><span class="irow-answer">Yes, by both companies&#39; own accounts: GoFundMe says an unauthorized party accessed GoFundMe Pro data; DonorPerfect says it found unauthorized activity and went offline. Who did it, and whether one attacker, is not established.</span></a></li>
+<li class="irow" data-type="attack" data-text="riken fugaku supercomputer break-in, nov 2026 fugaku was the riken fugaku supercomputer break-in a hack? the fugaku hack the riken supercomputer cyberattack"><a href="incidents/2026-11-riken-fugaku-supercomputer-hack.html"><span class="irow-top"><span class="irow-name">RIKEN Fugaku supercomputer break-in</span><time class="irow-when" datetime="2026-11-10">Nov 10</time></span><span class="irow-answer">Yes, by RIKEN&#39;s own account: an outside party got into Fugaku&#39;s operational network from Nov 10 to 13, installed malicious programs on some servers and took users&#39; files, including private keys. Who did it is not known.</span></a></li>
+<li class="irow" data-type="breach" data-text="cleverbridge payment card breach, nov 2026 cleverbridge was the cleverbridge payment card breach a hack? the cleverbridge data breach the cleverbridge card theft"><a href="incidents/2026-11-cleverbridge-card-data-breach.html"><span class="irow-top"><span class="irow-name">Cleverbridge payment card breach</span><time class="irow-when" datetime="2026-11-04">Nov 4</time></span><span class="irow-answer">Yes: Cleverbridge says a third party got into its platform and copied stored payment card data. How they got in and who they are are not established.</span></a></li>
+<li class="irow" data-type="breach" data-text="ntt docomo customer data breach, nov 2026 ntt docomo was the docomo customer data leak a hack? the docomo data leak the my docomo hack"><a href="incidents/2026-11-ntt-docomo-customer-data-breach.html"><span class="irow-top"><span class="irow-name">NTT Docomo customer data breach</span><time class="irow-when" datetime="2026-11-04">Nov 4</time></span><span class="irow-answer">Yes. Docomo says outside parties got into My docomo and its online shop, and that customer information leaked. Jiji Press and Nippon TV report the same. The cause and the attacker are not established.</span></a></li>
+<li class="irow" data-type="breach" data-text="staples canada print website breach, nov 2026 staples canada was the staples canada print website breach a hack? the staplesprint.ca breach the staples print hack"><a href="incidents/2026-11-staples-canada-print-breach.html"><span class="irow-top"><span class="irow-name">Staples Canada print website breach</span><time class="irow-when" datetime="2026-11-01">Nov 1</time></span><span class="irow-answer">Yes, by Staples&#39; own account: an unknown party got into staplesprint.ca without permission between Nov 1 and Nov 5 and had access to customer information. Who did it is not known.</span></a></li>
+<li class="irow" data-type="breach" data-text="wellington it credit union breach, nov 2026 wellington it was the wellington it credit union breach a hack? the irish credit union data breach the cu online breach"><a href="incidents/2026-11-wellington-it-credit-union-breach.html"><span class="irow-top"><span class="irow-name">Wellington IT credit union breach</span><time class="irow-when" datetime="2026-10-02">Oct 2</time></span><span class="irow-answer">Yes: an outside party got unauthorised access to saved-payee details on Wellington IT&#39;s banking platform, per the department, Wellington IT and the credit union league. Money taken and the attacker are not established.</span></a></li>
+</ul>
+</div>
+</section>
+<section class="group" id="hack-reported" data-group aria-labelledby="g-hack-reported">
+<div class="group-head">
+<span class="group-n" data-count>4</span>
+<h3 id="g-hack-reported">Reported as a hack</h3>
+<span class="pill pill-reported">Reported as a hack</span>
+<p class="meta">News outlets or a single official say it was a hack. Nothing independent confirms it yet.</p>
+</div>
+<div class="group-body">
+<ul class="group-rows">
+<li class="irow" data-type="breach" data-text="was next hacked? supplier data breach, nov 2026 next was next hacked in the supplier data breach? next supplier cyber incident next third-party data incident"><a href="incidents/2026-11-next-supplier-data-breach.html"><span class="irow-top"><span class="irow-name">Was Next hacked? Supplier data breach</span><time class="irow-when" datetime="2026-11-23">Nov 23</time></span><span class="irow-answer">Reported. Next says outsiders reached some Next data at a supplier, not in Next&#39;s own systems, and that no customer data is known affected. No outside party has checked this.</span></a></li>
+<li class="irow" data-type="breach" data-text="rackspace spot breach, nov 2026 rackspace spot was rackspace spot hacked? the rackspace spot outage the rackspace spot kubernetes breach"><a href="incidents/2026-11-rackspace-spot-breach.html"><span class="irow-top"><span class="irow-name">Rackspace Spot breach</span><time class="irow-when" datetime="2026-11-17">Nov 17</time></span><span class="irow-answer">Reportedly yes: Rackspace&#39;s customer notice, quoted by BleepingComputer, says leaked credentials let someone into Spot on Nov 17, and a Spot team member said the same on Spot&#39;s GitHub forum. No Rackspace-hosted statement yet.</span></a></li>
+<li class="irow" data-type="outage" data-text="usda farm payment system cyberattack, nov 2026 usda was the usda farm payment system outage a hack? the usda hack the usda cybersecurity incident"><a href="incidents/2026-11-usda-farm-payment-system-cyberattack.html"><span class="irow-top"><span class="irow-name">USDA farm payment system cyberattack</span><time class="irow-when" datetime="2026-11-16">Nov 16</time></span><span class="irow-answer">A USDA under secretary calls it a cyberthreat. NBC and ABC sources say outsiders got in, but he says defenses worked. Whether anyone actually got in is not settled.</span></a></li>
+<li class="irow" data-type="attack" data-text="algonquin dam apparent cyberattack, nov 16, 2026 algonquin dam was the algonquin dam on the fox river hacked? the algonquin dam hack fox river dam cyberattack"><a href="incidents/2026-11-illinois-algonquin-dam-cyberattack.html"><span class="irow-top"><span class="irow-name">Algonquin Dam apparent cyberattack</span><time class="irow-when" datetime="2026-11-16">Nov 16</time></span><span class="irow-answer">Illinois DNR calls it an “apparent cyberattack”, an attempt at unauthorized access that staff blocked, and says the dam kept running. It has given no technical detail, so the attack itself is not independently shown.</span></a></li>
+</ul>
+</div>
+</section>
+<section class="group" id="no-sign-of-hack" data-group aria-labelledby="g-no-sign-of-hack">
+<div class="group-head">
+<span class="group-n" data-count>4</span>
+<h3 id="g-no-sign-of-hack">No sign of a hack</h3>
+<span class="pill pill-no-sign">No sign of a hack</span>
+<p class="meta">The organization says it was not an attack, or the claim of one was shown to be false. Some rest on the company&#39;s word alone.</p>
+</div>
+<div class="group-body">
+<ul class="group-rows">
+<li class="irow" data-type="outage" data-text="dropbox outage, nov 20, 2026 dropbox was the dropbox outage on nov 20 a cyberattack? the dropbox outage"><a href="incidents/2026-11-dropbox-outage.html"><span class="irow-top"><span class="irow-name">Dropbox outage</span><time class="irow-when" datetime="2026-11-20">Nov 20</time></span><span class="irow-answer">Reported, on Dropbox&#39;s own account: its status page says the outage was not caused by a cyberattack or by AI acting on its own. No independent source has confirmed that, and Dropbox has not given a cause.</span></a></li>
+<li class="irow" data-type="outage" data-text="apple services outage, nov 17, 2026 apple was the apple services outage a cyberattack? the apple outage"><a href="incidents/2026-11-apple-services-outage.html"><span class="irow-top"><span class="irow-name">Apple services outage</span><time class="irow-when" datetime="2026-11-17">Nov 17</time></span><span class="irow-answer">No credible source says it was, and we found no evidence that it was. Apple says an internal update caused the outage and that it was not a cyberattack; that rests on Apple&#39;s word alone.</span></a></li>
+<li class="irow" data-type="outage" data-text="microsoft 365 outage, nov 12-13, 2026 microsoft 365 was the microsoft 365 outage a cyberattack? the microsoft outage"><a href="incidents/2026-11-microsoft-365-outage.html"><span class="irow-top"><span class="irow-name">Microsoft 365 outage</span><time class="irow-when" datetime="2026-11-12">Nov 12</time></span><span class="irow-answer">All the public evidence says no. Microsoft says it was a technical failure, and the US government said on Nov 18 that the outage was not a cyberattack. Microsoft&#39;s final report, dated Nov 20, also says it was not a cyberattack.</span></a></li>
+<li class="irow" data-type="breach" data-text="premise health patient data taken by an employee, 2026 premise health was the premise health data breach a hack? the premise health data breach the premise health insider breach"><a href="incidents/2026-11-premise-health-insider-theft.html"><span class="irow-top"><span class="irow-name">Premise Health patient data taken by an employee, 2026</span><time class="irow-when" datetime="2026-03-26">Mar 26</time></span><span class="irow-answer">No outside hack is known. Premise Health says an employee copied the data from around March 26 and that &#39;this was not a hacking or ransomware event.&#39; That is the company&#39;s account; no independent investigation has confirmed it.</span></a></li>
+</ul>
+</div>
+</section>
+<p class="board-none" hidden>Nothing we are following matches that. Try a shorter name, or <a href="about.html#contact">tell us what we are missing</a>.</p>
 </section>
 
 <section class="wrap band">
@@ -576,42 +219,6 @@
 </aside>
 </section>
 
-<section class="wrap band">
-<div class="band-head">
-<h2>Who does the work</h2>
-<p>A small desk of AI agents, each with one job, hands work down the line. One person makes the call that closes a case.</p>
-</div>
-<ol class="grid steps">
-<li class="panel step"><span class="kicker">Step 1 · AI agent</span><h3>Research</h3><p>Watches public sources on a schedule and logs what it finds, with links.</p></li>
-<li class="panel step"><span class="kicker">Step 2 · AI agent</span><h3>Verification</h3><p>Checks each claim against the sourcing rules and proposes a label.</p></li>
-<li class="panel step"><span class="kicker">Step 3 · AI agent</span><h3>Writing</h3><p>Turns verified facts into the page, with a source on every claim.</p></li>
-<li class="panel step"><span class="kicker">Step 4 · AI agent</span><h3>Editor-in-Chief</h3><p>Reviews the draft against the rulebook, then publishes it.</p></li>
-</ol>
-<div class="inverse row-box">
-<div>
-<p class="kicker">Above the desk · A person</p>
-<h3>The final verdict is a person's call</h3>
-<p>The agents label individual claims as the evidence comes in. The verdict on a whole incident, Confirmed hack or Confirmed not a hack, is published only after the site's owner has reviewed the evidence and approved it. The agents never contact anyone, never log in anywhere and never use leaked data.</p>
-</div>
-<a class="button on-dark" href="how-it-works.html">Read the full method</a>
-</div>
-</section>
-
-<section class="wrap band">
-<div class="band-head">
-<h2>Six labels, in plain words</h2>
-<p>Every claim carries exactly one. The fuller the dot, the firmer the footing.</p>
-</div>
-<dl class="label-key">
-<div><dt><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></dt><dd>An official document states it, or at least two independent sources report it. Outlets repeating one source count as one.</dd></div>
-<div><dt><span class="pill pill-reported" data-label="Reported">Reported</span></dt><dd>Sourced journalism that has not been officially confirmed. One outlet, or several relying on the same source.</dd></div>
-<div><dt><span class="pill pill-unverified" data-label="Unverified">Unverified</span></dt><dd>Claimed in public, but not yet checked or checkable, or the accounts conflict.</dd></div>
-<div><dt><span class="pill pill-rumor" data-label="Rumor">Rumor</span></dt><dd>Circulating with weak or no provenance. Shown clearly as a rumor, never as fact.</dd></div>
-<div><dt><span class="pill pill-debunked" data-label="Debunked">Debunked</span></dt><dd>Shown to be false by an official source or independent evidence. The original claim stays visible, with the evidence.</dd></div>
-<div><dt><span class="pill pill-not-established" data-label="Not established">Not established</span></dt><dd>The evidence does not settle it either way. Used for headline questions such as whether something was a cyberattack.</dd></div>
-</dl>
-</section>
-
 <section class="wrap band last">
 <div class="inverse repo-block">
 <div>
@@ -633,6 +240,10 @@
 </section>
 
 </main>
+<script>
+/* Optional: search, the kind-of-incident filter, and folding long groups (shorter on a phone). Without it every incident is listed. */
+(function(){var board=document.getElementById("incidents"),find=document.getElementById("find");if(!board||!find)return;var filters=board.querySelector(".filters"),none=board.querySelector(".board-none"),groups=[].slice.call(board.querySelectorAll("[data-group]")),type="all",small=window.matchMedia&&matchMedia("(max-width: 639px)").matches,SHOW=small?5:10,FOLD=small?7:14;groups.forEach(function(g){var b=document.createElement("button");b.type="button";b.className="button secondary group-more";b.hidden=true;b.addEventListener("click",function(){g.setAttribute("data-open","");apply()});g.querySelector(".group-body").appendChild(b);g.more=b});function apply(){var q=find.value.trim().toLowerCase(),total=0,counts={all:0};groups.forEach(function(g){var n=0,shown=0;g.big=[].filter.call(g.querySelectorAll(".irow"),function(r){return type==="all"||r.getAttribute("data-type")===type}).length>FOLD;[].forEach.call(g.querySelectorAll(".irow"),function(r){var hit=!q||r.getAttribute("data-text").indexOf(q)>-1,t=r.getAttribute("data-type");if(hit){counts.all++;counts[t]=(counts[t]||0)+1}var ok=hit&&(type==="all"||t===type);if(ok)n++;var cut=ok&&!q&&!g.hasAttribute("data-open")&&g.big&&n>SHOW;r.hidden=!ok||cut;if(ok&&!cut)shown++});g.querySelector("[data-count]").textContent=n;g.hidden=n===0;g.more.hidden=shown>=n;g.more.textContent="Show all "+n;total+=n});none.hidden=total>0;[].forEach.call(filters.querySelectorAll("button"),function(b){var t=b.getAttribute("data-type");b.setAttribute("aria-pressed",t===type?"true":"false");b.querySelector(".n").textContent=counts[t]||0})}filters.addEventListener("click",function(e){var b=e.target.closest("button");if(b){type=b.getAttribute("data-type");apply()}});find.addEventListener("input",apply);find.parentNode.hidden=false;filters.hidden=false;apply()})();
+</script>
 
 <footer class="site-footer">
 <div class="wrap footer-grid">

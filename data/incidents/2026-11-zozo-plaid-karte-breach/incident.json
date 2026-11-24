@@ -6,6 +6,8 @@
     "name": "ZOZO",
     "kind": "online-service"
   },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
   "lead_image": "zozotown-box",
   "also_called": [
     "the ZOZOTOWN data leak",

@@ -6,6 +6,8 @@
     "name": "Hugendubel",
     "kind": "online-service"
   },
+  "incident_type": "outage",
+  "answer_group": "hack-stated",
   "lead_image": "hugendubel-marienplatz",
   "also_called": [
     "the Hugendubel hack",

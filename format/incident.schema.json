@@ -5,7 +5,7 @@
   "description": "The head of one incident: what it is, how big it is, the short summary a reader sees first, and the order of the sections below it. Row data lives in the CSV files beside it. Every 'description' is written for the agent filling the field in.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["format_version", "slug", "title", "subject", "status", "incident_date", "disclaimer", "main_question_id", "size", "size_basis", "who_is_affected", "known", "not_known", "sections"],
+  "required": ["format_version", "slug", "title", "subject", "incident_type", "answer_group", "status", "incident_date", "disclaimer", "main_question_id", "size", "size_basis", "who_is_affected", "known", "not_known", "sections"],
   "properties": {
     "format_version": { "const": 1, "description": "Version of this format. Always 1 until the format itself changes." },
     "slug": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[a-z0-9]+(-[a-z0-9]+)*$", "description": "The incident's permanent short name: year, month, then a few words (2026-11-faa-ground-stop). Must equal the folder name." },
@@ -20,6 +20,8 @@
       }
     },
     "lead_image": { "$ref": "#/$defs/id", "description": "Optional. The id of an entry in images to use as the incident's picture instead of the drawn one: on the home page, at the top of the page and when the page is shared. It must be a photograph or illustration the rules allow (own work, public domain or licensed), at least 1200 pixels wide, landscape, and a png, jpg or webp. A company logo or state seal is allowed only with rights logo, when no usable photograph exists." },
+    "incident_type": { "enum": ["outage", "breach", "attack"], "description": "What kind of event this is, in a reader's words. outage: something stopped working. breach: data was exposed, copied or leaked. attack: someone broke in, tampered or tried to, and that is the story rather than lost data. Choose by what happened, not by the suspected cause: an outage that turns out to be an attack stays an outage. The home page lets readers filter by it." },
+    "answer_group": { "enum": ["unclear", "hack-stated", "hack-reported", "no-sign-of-hack"], "description": "Which of four plain answers the home page files this incident under. It restates the main question's current answer for someone who has not opened the page. unclear: nobody has shown whether it was an attack. hack-stated: the organisation itself, or an official source, says someone got in (the main question is labelled Confirmed). hack-reported: news outlets or a single official say it was a hack, and nothing confirms it (labelled Reported). no-sign-of-hack: the organisation says it was not an attack, or the claim of one was shown to be false. It is not a verdict and needs no approval: change it whenever the main answer changes, and never let it say more than the answer does. When in doubt, unclear." },
     "status": { "enum": ["monitoring", "resolved", "closed"], "description": "monitoring while the desk is still checking, resolved once the event is over but the cause is not settled, closed only with an approved verdict." },
     "incident_date": { "type": "string", "format": "date", "description": "The day the incident began." },
     "disclaimer": { "type": "string", "minLength": 1, "description": "The entertainment and AI disclaimer for this page, naming the kinds of organisation it mentions." },

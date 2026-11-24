@@ -6,6 +6,8 @@
     "name": "Ochsner Health",
     "kind": "health"
   },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
   "lead_image": "ochsner-medical-center",
   "also_called": [
     "Ochsner data incident",

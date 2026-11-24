@@ -6,6 +6,8 @@
     "name": "Starbucks",
     "kind": "online-service"
   },
+  "incident_type": "outage",
+  "answer_group": "unclear",
   "lead_image": "starbucks-store",
   "also_called": [
     "the Starbucks app outage",

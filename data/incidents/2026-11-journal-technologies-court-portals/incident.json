@@ -6,6 +6,8 @@
     "name": "Journal Technologies",
     "kind": "online-service"
   },
+  "incident_type": "outage",
+  "answer_group": "hack-stated",
   "lead_image": "journal-technologies-logo",
   "also_called": [
     "court portal outage",

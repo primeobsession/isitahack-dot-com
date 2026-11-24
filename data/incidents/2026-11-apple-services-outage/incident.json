@@ -3,6 +3,8 @@
   "slug": "2026-11-apple-services-outage",
   "title": "Apple services outage, Nov 17, 2026",
   "subject": { "name": "Apple", "kind": "devices" },
+  "incident_type": "outage",
+  "answer_group": "no-sign-of-hack",
   "lead_image": "apple-park",
   "also_called": ["the Apple outage"],
   "status": "monitoring",

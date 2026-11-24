@@ -6,6 +6,8 @@
     "name": "Microsoft Entra",
     "kind": "online-service"
   },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
   "lead_image": "microsoft-redmond-campus",
   "also_called": [
     "Entra Connect Health breach",

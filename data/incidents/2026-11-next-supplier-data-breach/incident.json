@@ -6,6 +6,8 @@
     "name": "Next",
     "kind": "other"
   },
+  "incident_type": "breach",
+  "answer_group": "hack-reported",
   "lead_image": "next-store-truro",
   "also_called": [
     "Next supplier cyber incident",

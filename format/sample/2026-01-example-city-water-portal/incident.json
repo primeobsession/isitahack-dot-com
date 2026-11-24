@@ -3,6 +3,8 @@
   "slug": "2026-01-example-city-water-portal",
   "title": "Example City water billing portal outage",
   "subject": { "name": "Example City Water", "kind": "other" },
+  "incident_type": "outage",
+  "answer_group": "no-sign-of-hack",
   "lead_image": "water-tower",
   "also_called": ["the Example City water outage"],
   "status": "monitoring",

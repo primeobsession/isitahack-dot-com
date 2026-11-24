@@ -6,6 +6,8 @@
     "name": "Fugaku",
     "kind": "government"
   },
+  "incident_type": "attack",
+  "answer_group": "hack-stated",
   "lead_image": "riken-fugaku",
   "also_called": [
     "the Fugaku hack",

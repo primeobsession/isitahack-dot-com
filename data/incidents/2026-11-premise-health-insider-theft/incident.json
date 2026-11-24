@@ -6,6 +6,8 @@
     "name": "Premise Health",
     "kind": "health"
   },
+  "incident_type": "breach",
+  "answer_group": "no-sign-of-hack",
   "lead_image": "premise-health-logo",
   "also_called": [
     "the Premise Health data breach",

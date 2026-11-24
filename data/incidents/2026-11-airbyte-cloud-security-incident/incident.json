@@ -6,6 +6,8 @@
     "name": "Airbyte",
     "kind": "online-service"
   },
+  "incident_type": "attack",
+  "answer_group": "hack-stated",
   "lead_image": "airbyte-logo",
   "also_called": [
     "the Airbyte Cloud outage",

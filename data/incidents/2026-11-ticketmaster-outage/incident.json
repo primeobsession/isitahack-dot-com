@@ -6,6 +6,8 @@
     "name": "Ticketmaster",
     "kind": "online-service"
   },
+  "incident_type": "outage",
+  "answer_group": "unclear",
   "lead_image": "ticketmaster-paper-ticket",
   "also_called": [
     "the Ticketmaster outage",

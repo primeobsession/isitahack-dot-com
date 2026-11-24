@@ -6,6 +6,8 @@
     "name": "Orchestra",
     "kind": "online-service"
   },
+  "incident_type": "outage",
+  "answer_group": "hack-stated",
   "lead_image": "havas-voyages-agency",
   "also_called": [
     "the Orchestra outage",

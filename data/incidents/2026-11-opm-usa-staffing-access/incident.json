@@ -6,6 +6,8 @@
     "name": "OPM",
     "kind": "government"
   },
+  "incident_type": "attack",
+  "answer_group": "unclear",
   "lead_image": "opm-headquarters",
   "also_called": [
     "the OPM job-offer breach",

@@ -3,6 +3,8 @@
   "slug": "2026-11-faa-ground-stop",
   "title": "FAA nationwide ground stop",
   "subject": { "name": "FAA", "kind": "aviation" },
+  "incident_type": "outage",
+  "answer_group": "unclear",
   "lead_image": "faa-radar-site",
   "also_called": [
     "the FAA outage",

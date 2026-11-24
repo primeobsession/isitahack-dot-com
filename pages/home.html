@@ -2,38 +2,36 @@
 
 <section class="wrap home-intro">
 <div class="intro-copy">
-<p class="kicker accent">A different kind of news desk</p>
-<h1>Is it a hack? <span class="soft">Here is what is actually known.</span></h1>
-<p class="lede">When something big breaks, rumors arrive before facts. We check every claim against public sources and say which are confirmed, which are only reported and which are false.</p>
+<p class="kicker accent">Public-source fact-checks of security news</p>
+<h1>Heard that something got hacked?</h1>
+<p class="lede">Look it up. We read what public sources actually say and give you a straight answer in plain words, with the evidence underneath.</p>
+<div class="finder" role="search" hidden>
+<label for="find">Search by company, service or agency</label>
+<input id="find" type="search" autocomplete="off" spellcheck="false" placeholder="FAA, Ticketmaster, Microsoft 365">
 </div>
-<div class="is-isnt">
-<div>
-<h2 class="kicker">What this is</h2>
-<ul>
-<li>A running fact-check of outages, breaches and security scares.</li>
-<li>Researched and organized by AI agents, from public sources only.</li>
-<li>Every claim labelled and linked to its source. Every edit public.</li>
-</ul>
+<p class="meta newest">Newest: {{newest}}</p>
 </div>
-<div>
-<h2 class="kicker">What it is not</h2>
-<ul>
-<li>Not breaking news. We wait for sources, so we are often slower.</li>
-<li>Not an official source, and not endorsed by anyone named here.</li>
-<li>Not advice. Made for entertainment using AI. <a href="about.html#what-this-is-not">What that means</a></li>
-</ul>
-</div>
-</div>
+<aside class="answers-key" aria-labelledby="answers-key">
+<h2 class="kicker" id="answers-key">Every incident gets one of four answers</h2>
+<dl>
+{{answer_key}}
+</dl>
+<p class="meta">These sum up each page. Inside, every claim carries its own evidence label and source. AI agents do the research; a person approves only the final verdict. <a href="how-it-works.html">How it works</a></p>
+</aside>
 </section>
 
-<section class="wrap headlines" id="incidents">
-<div class="list-head">
-<h2>The latest fact-checks</h2>
-<span class="meta">{{now}}</span>
+<section class="wrap board" id="incidents">
+<div class="board-head">
+<div>
+<h2>Everything we are following</h2>
+<p class="meta">{{now}}</p>
 </div>
-<ul class="stories {{story_cols}}">
-{{incidents}}
-</ul>
+<div class="filters" role="group" aria-label="Filter by kind of incident" hidden>
+{{filters}}
+</div>
+</div>
+{{groups}}
+<p class="board-none" hidden>Nothing we are following matches that. Try a shorter name, or <a href="about.html#contact">tell us what we are missing</a>.</p>
 </section>
 
 <section class="wrap band">
@@ -58,42 +56,6 @@
 {{anatomy}}
 </section>
 
-<section class="wrap band">
-<div class="band-head">
-<h2>Who does the work</h2>
-<p>A small desk of AI agents, each with one job, hands work down the line. One person makes the call that closes a case.</p>
-</div>
-<ol class="grid steps">
-<li class="panel step"><span class="kicker">Step 1 · AI agent</span><h3>Research</h3><p>Watches public sources on a schedule and logs what it finds, with links.</p></li>
-<li class="panel step"><span class="kicker">Step 2 · AI agent</span><h3>Verification</h3><p>Checks each claim against the sourcing rules and proposes a label.</p></li>
-<li class="panel step"><span class="kicker">Step 3 · AI agent</span><h3>Writing</h3><p>Turns verified facts into the page, with a source on every claim.</p></li>
-<li class="panel step"><span class="kicker">Step 4 · AI agent</span><h3>Editor-in-Chief</h3><p>Reviews the draft against the rulebook, then publishes it.</p></li>
-</ol>
-<div class="inverse row-box">
-<div>
-<p class="kicker">Above the desk · A person</p>
-<h3>The final verdict is a person's call</h3>
-<p>The agents label individual claims as the evidence comes in. The verdict on a whole incident, Confirmed hack or Confirmed not a hack, is published only after the site's owner has reviewed the evidence and approved it. The agents never contact anyone, never log in anywhere and never use leaked data.</p>
-</div>
-<a class="button on-dark" href="how-it-works.html">Read the full method</a>
-</div>
-</section>
-
-<section class="wrap band">
-<div class="band-head">
-<h2>Six labels, in plain words</h2>
-<p>Every claim carries exactly one. The fuller the dot, the firmer the footing.</p>
-</div>
-<dl class="label-key">
-<div><dt>{{pill_confirmed}}</dt><dd>An official document states it, or at least two independent sources report it. Outlets repeating one source count as one.</dd></div>
-<div><dt>{{pill_reported}}</dt><dd>Sourced journalism that has not been officially confirmed. One outlet, or several relying on the same source.</dd></div>
-<div><dt>{{pill_unverified}}</dt><dd>Claimed in public, but not yet checked or checkable, or the accounts conflict.</dd></div>
-<div><dt>{{pill_rumor}}</dt><dd>Circulating with weak or no provenance. Shown clearly as a rumor, never as fact.</dd></div>
-<div><dt>{{pill_debunked}}</dt><dd>Shown to be false by an official source or independent evidence. The original claim stays visible, with the evidence.</dd></div>
-<div><dt>{{pill_not_established}}</dt><dd>The evidence does not settle it either way. Used for headline questions such as whether something was a cyberattack.</dd></div>
-</dl>
-</section>
-
 <section class="wrap band last">
 <div class="inverse repo-block">
 <div>
@@ -115,3 +77,7 @@
 </section>
 
 </main>
+<script>
+/* Optional: search, the kind-of-incident filter, and folding long groups (shorter on a phone). Without it every incident is listed. */
+(function(){var board=document.getElementById("incidents"),find=document.getElementById("find");if(!board||!find)return;var filters=board.querySelector(".filters"),none=board.querySelector(".board-none"),groups=[].slice.call(board.querySelectorAll("[data-group]")),type="all",small=window.matchMedia&&matchMedia("(max-width: 639px)").matches,SHOW=small?5:10,FOLD=small?7:14;groups.forEach(function(g){var b=document.createElement("button");b.type="button";b.className="button secondary group-more";b.hidden=true;b.addEventListener("click",function(){g.setAttribute("data-open","");apply()});g.querySelector(".group-body").appendChild(b);g.more=b});function apply(){var q=find.value.trim().toLowerCase(),total=0,counts={all:0};groups.forEach(function(g){var n=0,shown=0;g.big=[].filter.call(g.querySelectorAll(".irow"),function(r){return type==="all"||r.getAttribute("data-type")===type}).length>FOLD;[].forEach.call(g.querySelectorAll(".irow"),function(r){var hit=!q||r.getAttribute("data-text").indexOf(q)>-1,t=r.getAttribute("data-type");if(hit){counts.all++;counts[t]=(counts[t]||0)+1}var ok=hit&&(type==="all"||t===type);if(ok)n++;var cut=ok&&!q&&!g.hasAttribute("data-open")&&g.big&&n>SHOW;r.hidden=!ok||cut;if(ok&&!cut)shown++});g.querySelector("[data-count]").textContent=n;g.hidden=n===0;g.more.hidden=shown>=n;g.more.textContent="Show all "+n;total+=n});none.hidden=total>0;[].forEach.call(filters.querySelectorAll("button"),function(b){var t=b.getAttribute("data-type");b.setAttribute("aria-pressed",t===type?"true":"false");b.querySelector(".n").textContent=counts[t]||0})}filters.addEventListener("click",function(e){var b=e.target.closest("button");if(b){type=b.getAttribute("data-type");apply()}});find.addEventListener("input",apply);find.parentNode.hidden=false;filters.hidden=false;apply()})();
+</script>

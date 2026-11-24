@@ -6,6 +6,8 @@
     "name": "Tower Records",
     "kind": "online-service"
   },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
   "lead_image": "tower-records-shibuya",
   "also_called": [
     "the Tower Records Online breach",

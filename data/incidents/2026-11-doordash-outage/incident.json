@@ -6,6 +6,8 @@
     "name": "DoorDash",
     "kind": "online-service"
   },
+  "incident_type": "outage",
+  "answer_group": "unclear",
   "lead_image": "doordash-logo",
   "also_called": [
     "the DoorDash outage"

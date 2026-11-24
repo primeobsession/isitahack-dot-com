@@ -6,6 +6,8 @@
     "name": "Project Gutenberg",
     "kind": "online-service"
   },
+  "incident_type": "attack",
+  "answer_group": "hack-stated",
   "lead_image": "project-gutenberg-logo",
   "also_called": [
     "the Gutenberg hack",

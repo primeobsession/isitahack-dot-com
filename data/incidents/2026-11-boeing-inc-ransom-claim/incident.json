@@ -6,6 +6,8 @@
     "name": "Boeing",
     "kind": "aviation"
   },
+  "incident_type": "attack",
+  "answer_group": "unclear",
   "lead_image": "boeing-everett-factory",
   "also_called": [
     "the Boeing leak-site claim",

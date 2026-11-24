@@ -43,6 +43,8 @@ Each field has a `description` saying what it is for. Those two files are the fi
 | A key number or time for the top of the page | `incident.json` `figures` |
 | A picture or diagram | `images/` plus an entry in `incident.json` `images` |
 | Who or what the incident is about | `incident.json` `subject` (the build draws the incident's picture from it) |
+| Whether it is an outage, a breach or an attack | `incident.json` `incident_type`, chosen by what happened, not by the suspected cause |
+| Which plain answer the home page files it under | `incident.json` `answer_group` (see "The home page's four answers") |
 | A reference table with no labels (who runs what) | `tables/<id>.csv` plus an entry in `incident.json` `tables` |
 | Background that is none of the above | `notes/<name>.md` |
 | A check you ran, whatever it found | `update_log.csv` |
@@ -89,6 +91,21 @@ Leave it empty; never guess. A source's `source_date` may be empty when the sour
 
 A claim is labelled Confirmed by the agents when it meets the evidence bar. The verdict on a whole incident (`verdict`: Confirmed hack or Confirmed not a hack) is different: it needs the owner's personal approval, recorded in `verdict_approved_at`, and setting it closes the case.
 
+## The home page's four answers
+
+The home page groups incidents by a plain answer, so a reader who knows nothing about labels can see where each one stands. `answer_group` in `incident.json` says which group:
+
+| `answer_group` | The home page says | Use it when | The main question's label |
+|---|---|---|---|
+| `unclear` | Still unclear | Nobody has shown whether it was an attack | Anything but Confirmed or Debunked |
+| `hack-stated` | Hacked, by its own account | The organisation itself, or an official source, says someone got in | Confirmed |
+| `hack-reported` | Reported as a hack | News outlets or a single official say so, and nothing confirms it | Reported |
+| `no-sign-of-hack` | No sign of a hack | The organisation says it was not an attack, or the claim of one was shown false | Anything but Not established |
+
+It restates the main question's answer and is not a verdict, so it needs no approval. Change it in the same change as the main answer, never let it say more than the answer does, and when in doubt use `unclear`. Once the owner approves a verdict, it must match it.
+
+`incident_type` (outage, breach or attack) is what readers filter the home page by. Choose by what happened, not by the suspected cause: a service that went down is an outage even if an attack turns out to be behind it.
+
 ## Charts
 
 A chart is a CSV of numbers plus a short description in `incident.json`: its type (`line` or `bar`), which column is the horizontal axis, which columns are the series, the unit, where the numbers came from, and an `alt` sentence that states the trend in words. The build draws the chart and prints the same numbers as a table under it. Agents never draw a chart or save a picture of one. All series on one chart share one scale, so they must be the same kind of quantity; two different quantities need two charts.
@@ -127,6 +144,7 @@ To check one folder while you work: `node scripts/validate.mjs data/incidents/<s
 - that an answered question has an answer, a label and its claims, and an open one says what would settle it;
 - that a verdict has an approval time and a closed status, and a closed incident has a verdict;
 - that no text uses the words of a final verdict ("Confirmed hack", "Confirmed not a hack") before one is approved;
+- that `answer_group` says no more than the main question's label does, and matches the verdict once there is one;
 - that the update log is newest first;
 - that chart columns exist and hold numbers, image files exist and match their SHA-256, and SVGs contain no scripts;
 - that a `lead_image` is a defined image, landscape, at least 1200 pixels wide and not an SVG;

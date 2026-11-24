@@ -6,6 +6,8 @@
     "name": "Rakuten Securities",
     "kind": "finance"
   },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
   "lead_image": "rakuten-crimson-house",
   "also_called": [
     "Rakuten Securities data leak",

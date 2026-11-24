@@ -6,6 +6,8 @@
     "name": "Wellington IT",
     "kind": "finance"
   },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
   "lead_image": "irish-credit-union-branch",
   "also_called": [
     "the Irish credit union data breach",

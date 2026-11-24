@@ -6,6 +6,8 @@
     "name": "Steam",
     "kind": "online-service"
   },
+  "incident_type": "outage",
+  "answer_group": "unclear",
   "lead_image": "steam-deck-oled",
   "also_called": [
     "the Steam outage",

@@ -6,6 +6,8 @@
     "name": "USDA",
     "kind": "government"
   },
+  "incident_type": "outage",
+  "answer_group": "hack-reported",
   "lead_image": "usda-whitten-building",
   "also_called": [
     "the USDA hack",

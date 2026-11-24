@@ -6,6 +6,8 @@
     "name": "Roll20",
     "kind": "online-service"
   },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
   "lead_image": "roll20-logo",
   "also_called": [
     "the Roll20 hack",

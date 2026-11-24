@@ -292,28 +292,30 @@ function writeLegacy(i, others, out) {
 }
 
 // ---------- home and the static pages ----------
-// One headline on the home page. The newest is the lead story; the rest are smaller.
-function incidentCard(i, lead) {
-  const status = STATUSES[i.status] || String(i.status);
+// The home page files every incident under one of four plain answers (format/README.md,
+// "The home page's four answers"). The wording stays clear of the two final verdicts,
+// which only the owner gives.
+const ANSWER_GROUPS = [
+  { key: "unclear", title: "Still unclear", short: "Still unclear", pill: "pill-not-established", means: "Nobody has shown whether it was an attack or not.", gloss: "Open questions. Nobody has shown whether these were attacks, and we keep checking." },
+  { key: "hack-stated", title: "Hacked, by its own account", short: "Says it was hacked", pill: "pill-confirmed", means: "The organization itself, or an official source, says someone got in.", gloss: "The organization itself, or an official source, says someone got in. Who did it is often still unknown." },
+  { key: "hack-reported", title: "Reported as a hack", short: "Reported as a hack", pill: "pill-reported", means: "News outlets say it was a hack. It is not officially confirmed.", gloss: "News outlets or a single official say it was a hack. Nothing independent confirms it yet." },
+  { key: "no-sign-of-hack", title: "No sign of a hack", short: "No sign of a hack", pill: "pill-no-sign", means: "The organization says it was not an attack, or the claim was shown to be false.", gloss: "The organization says it was not an attack, or the claim of one was shown to be false. Some rest on the company's word alone." },
+];
+const INCIDENT_TYPES = [["outage", "Outages"], ["breach", "Data breaches"], ["attack", "Attacks"]];
+const answerPill = (g) => `<span class="pill ${g.pill}">${esc(g.short)}</span>`;
+// A row shows the day in its own column, so a date at the end of the title is dropped.
+const TITLE_DATE = /,\s*(?:reported\s+)?(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?(?:\s+\d{1,2}(?:\s*(?:to|-|–)\s*\d{1,2})?)?,?\s+\d{4}$/;
+const rowName = (i) => i.title.replace(TITLE_DATE, "");
+// "Nov 13", with the year only when it is not the newest incident's year.
+const rowDay = (iso, year) => { const full = fmtDate(String(iso).slice(0, 10)); return full.endsWith(`, ${year}`) ? full.slice(0, -6) : full; };
+// One incident on the home page: its name, the day it happened and the answer so far.
+function incidentRow(i, year) {
   const href = `incidents/${esc(i.slug)}.html`;
-  // Only the lead story's photograph is on the first screen; the rest load as the reader reaches them.
-  const picture = i.typed ? incidentPicture(i.loaded.head, i.dataPath, { lazy: !lead }) : null;
-  const media = picture ? `<a class="story-media" href="${href}" tabindex="-1" aria-hidden="true">${picture.html}${picture.credit ? `<span class="credit">${esc(picture.credit)}</span>` : ""}</a>` : "";
-  const headline = i.question ? i.question.text : i.title;
-  const answer = i.question ? `<p class="story-answer">${pill(i.question.label)}<span>${esc(i.question.answer)}</span></p>` : "";
-  const verdict = i.verdict ? `<p class="verdict"><span class="verdict-badge">${esc(i.verdict)}</span> Final verdict.</p>` : "";
-  const latest = i.typed ? `<p class="card-latest"><span class="kicker accent">The latest · ${timeTag(i.latest.at)}</span> ${esc(i.latest.headline)}</p>`
-    : i.latestLine ? `<p class="card-latest"><span class="kicker accent">The latest · ${timeTag(i.last_updated)}</span> ${esc(i.latestLine)}</p>` : "";
-  const tally = lead && i.tally ? `<div class="story-evidence">\n${evidenceBar(i.tally, i.tally_title)}\n</div>` : "";
-  return `<li class="story${lead ? " lead" : ""}">
-${media}
-<div class="story-body">
-<p class="card-meta"><span class="card-status status-${esc(slugify(String(i.status)))}"><span class="status-dot" aria-hidden="true"></span>${esc(status)}</span><span class="meta">${i.question ? `${esc(i.title)} · ` : ""}Updated ${timeTag(i.last_updated)}</span></p>
-<h3><a href="${href}">${esc(headline)}</a></h3>
-${[answer, verdict, latest, tally].filter(Boolean).join("\n")}
-<p class="card-links"><a class="button${lead ? "" : " secondary"}" href="${href}">Read the fact-check</a>${i.typed ? ` <span class="meta">${i.counts.sources} sources · ${i.counts.updates} updates</span>` : ""}</p>
-</div>
-</li>`;
+  const words = [i.title, i.subject?.name, i.question?.text, ...(i.also_names || [])].filter(Boolean).join(" ").toLowerCase();
+  const when = i.incident_date ? `<time class="irow-when" datetime="${esc(i.incident_date)}">${esc(rowDay(i.incident_date, year))}</time>` : "";
+  const verdict = i.verdict ? `<span class="irow-verdict"><span class="verdict-badge">${esc(i.verdict)}</span> Final verdict.</span>` : "";
+  const answer = i.question ? `<span class="irow-answer">${esc(i.question.answer)}</span>` : i.latestLine ? `<span class="irow-answer">${esc(i.latestLine)}</span>` : "";
+  return `<li class="irow" data-type="${esc(i.incident_type || "")}" data-text="${esc(words)}"><a href="${href}"><span class="irow-top"><span class="irow-name">${esc(rowName(i))}</span>${when}</span>${verdict}${answer}</a></li>`;
 }
 function anatomyCard(i) {
   const { claim, source } = i.anatomy;
@@ -342,15 +344,35 @@ function buildHome(incidents, out) {
     ? statusBanner({ status: monitoring.length ? "monitoring" : "resolved", last_updated: latest.last_updated },
         monitoring.length ? `Monitoring ${monitoring.length} incident${monitoring.length === 1 ? "" : "s"}` : "No incidents being monitored")
     : "";
+  // Within a group the incident that happened most recently comes first.
+  const byDay = [...incidents].sort((a, b) => String(b.incident_date || "").localeCompare(String(a.incident_date || "")) || String(b.last_updated).localeCompare(String(a.last_updated)) || a.slug.localeCompare(b.slug));
+  const year = String(byDay[0]?.incident_date || "").slice(0, 4);
+  const groups = ANSWER_GROUPS.map((g) => {
+    const rows = byDay.filter((i) => (i.answer_group || "unclear") === g.key);
+    return `<section class="group" id="${g.key}" data-group aria-labelledby="g-${g.key}">
+<div class="group-head">
+<span class="group-n" data-count>${rows.length}</span>
+<h3 id="g-${g.key}">${esc(g.title)}</h3>
+${answerPill(g)}
+<p class="meta">${esc(g.gloss)}</p>
+</div>
+<div class="group-body">
+<ul class="group-rows">
+${rows.map((i) => incidentRow(i, year)).join("\n")}
+</ul>
+</div>
+</section>`;
+  }).join("\n");
+  const chip = (type, text, n, on) => `<button type="button" class="pick" data-type="${type}" aria-pressed="${on ? "true" : "false"}">${text} <span class="n">${n}</span></button>`;
+  const filters = [chip("all", "All", incidents.length, true), ...INCIDENT_TYPES.map(([type, text]) => chip(type, text, incidents.filter((i) => i.incident_type === type).length))].join("\n");
   const body = fill(readPage("home"), {
     root: "", repo: SITE.repo, x: SITE.x, ...pillMap,
     latest: latest ? `incidents/${esc(latest.slug)}.html` : "#incidents",
     anatomy: typed ? anatomyCard(typed) : "",
-    count: `${incidents.length} tracked, newest update first`,
-    // The stories under the lead sit two or three to a row, whichever leaves no gap.
-    story_cols: incidents.length - 1 <= 1 ? "cols-1" : incidents.length - 1 === 2 || incidents.length - 1 === 4 ? "cols-2" : "cols-3",
-    now: latest ? `${monitoring.length ? `Monitoring ${monitoring.length} incident${monitoring.length === 1 ? "" : "s"}` : "Nothing being monitored"} · latest update ${timeTag(latest.last_updated)}` : "",
-    incidents: incidents.length ? incidents.map((i, n) => incidentCard(i, n === 0)).join("\n") : `<li class="story"><div class="story-body"><p>No incidents are being tracked yet.</p></div></li>`,
+    now: latest ? `${incidents.length} incident${incidents.length === 1 ? "" : "s"}, grouped by the answer so far. Each date is the day the incident happened.` : "No incidents are being tracked yet.",
+    newest: byDay.slice(0, 4).map((i) => `<a href="incidents/${esc(i.slug)}.html">${esc(rowName(i))}</a>`).join(", "),
+    answer_key: ANSWER_GROUPS.map((g) => `<div><dt>${answerPill(g)}</dt><dd>${esc(g.means)}</dd></div>`).join("\n"),
+    filters, groups,
   });
   const data = [
     { "@context": "https://schema.org", "@type": "WebSite", "@id": `${SITE.url}/#site`, name: SITE.title, alternateName: ["isitahack", SITE.name], url: `${SITE.url}/`, description: SITE.tagline, publisher: { "@id": ORG["@id"] } },
@@ -380,7 +402,8 @@ function buildSitemap(incidents, out) {
   writeFileSync(join(out, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`);
 }
 
-// index.json: keep every existing field, refresh title/status/last_updated, and list each incident's files.
+// index.json: keep every existing field, refresh title/status/last_updated, say what kind of incident it is
+// and which plain answer it is filed under, and list each incident's files.
 function updateIndexJson(incidents, out) {
   const path = join(ROOT, "index.json");
   const existing = existsSync(path) ? JSON.parse(readFileSync(path, "utf8")) : { incidents: [] };
@@ -389,7 +412,8 @@ function updateIndexJson(incidents, out) {
     const prev = bySlug.get(i.slug) || {};
     const files = { ...i.files };
     for (const [k, v] of Object.entries(prev.files || {})) if (!(k in files)) files[k] = v;
-    return { ...prev, slug: i.slug, title: i.title, status: i.status, last_updated: i.last_updated, files };
+    const filed = i.typed ? { incident_type: i.incident_type, answer_group: i.answer_group } : {};
+    return { ...prev, slug: i.slug, title: i.title, status: i.status, last_updated: i.last_updated, ...filed, files };
   });
   writeFileSync(join(out, "index.json"), JSON.stringify({ ...existing, incidents: list }, null, 2) + "\n");
 }

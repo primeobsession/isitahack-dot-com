@@ -266,6 +266,18 @@ export function loadIncident(dir) {
     if (!head.verdict_approved_at) errs.push(`incident.json.verdict_approved_at: required when a verdict is set (the owner approves every verdict)`);
     if (head.status !== "closed") errs.push(`incident.json.status: must be closed once a verdict is set`);
   } else if (head.status === "closed") errs.push(`incident.json.verdict: a closed incident needs an approved verdict`);
+  // The plain answer the home page files the incident under may not say more than the
+  // main question's label does, and must follow a verdict once there is one.
+  const group = head.answer_group, mainLabel = main && main.label;
+  if (group && mainLabel) {
+    const needs = { "hack-stated": "Confirmed", "hack-reported": "Reported" }[group];
+    const at = `incident.json.answer_group: ${show(group)}`;
+    if (needs && mainLabel !== needs) errs.push(`${at} needs the main question to be labelled ${needs}; it is labelled ${mainLabel}`);
+    if (group === "unclear" && (mainLabel === "Confirmed" || mainLabel === "Debunked")) errs.push(`${at} does not fit a main question labelled ${mainLabel}: that answer is settled one way or the other`);
+    if (group === "no-sign-of-hack" && mainLabel === "Not established") errs.push(`${at} does not fit a main question labelled Not established; use "unclear"`);
+  }
+  const verdictGroup = { "Confirmed hack": "hack-stated", "Confirmed not a hack": "no-sign-of-hack" }[head.verdict];
+  if (verdictGroup && group && group !== verdictGroup) errs.push(`incident.json.answer_group: must be ${show(verdictGroup)} once the verdict is ${show(head.verdict)}`);
 
   // charts
   const numeric = /^-?\d+(\.\d+)?$/;

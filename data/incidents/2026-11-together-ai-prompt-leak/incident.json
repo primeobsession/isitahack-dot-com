@@ -6,6 +6,8 @@
     "name": "Together AI",
     "kind": "online-service"
   },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
   "lead_image": "together-ai-logo",
   "also_called": [
     "the Together AI security event",

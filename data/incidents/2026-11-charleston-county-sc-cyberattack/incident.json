@@ -6,6 +6,8 @@
     "name": "Charleston County",
     "kind": "government"
   },
+  "incident_type": "attack",
+  "answer_group": "hack-stated",
   "lead_image": "charleston-county-courthouse",
   "also_called": [
     "Charleston County cybersecurity incident",

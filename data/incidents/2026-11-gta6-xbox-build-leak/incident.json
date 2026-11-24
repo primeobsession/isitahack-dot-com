@@ -6,6 +6,8 @@
     "name": "Rockstar Games",
     "kind": "other"
   },
+  "incident_type": "breach",
+  "answer_group": "unclear",
   "lead_image": "rockstar-north-office",
   "also_called": [
     "GTA 6 leak",

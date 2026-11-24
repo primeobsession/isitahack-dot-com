@@ -10,12 +10,11 @@ import { renderPlate } from "./plate.mjs";
 
 // The incident's picture: its photograph when it has one, otherwise the drawn plate.
 // `base` is where the incident's data folder is, as seen from the page.
-// `lazy` is for a picture below the first screen: it loads when the reader gets near it.
-export function incidentPicture(head, base, { lazy = false } = {}) {
+export function incidentPicture(head, base) {
   const image = head.lead_image && (head.images || []).find((x) => x.id === head.lead_image);
   if (!image) return { html: renderPlate(head.subject), credit: "", caption: "", image: null };
   return {
-    html: `<img src="${esc(`${base}/${image.file}`)}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}"${lazy ? ' loading="lazy" decoding="async"' : ""}>`,
+    html: `<img src="${esc(`${base}/${image.file}`)}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}">`,
     credit: `Image: ${image.credit}`, caption: image.caption || "", image,
   };
 }
@@ -50,7 +49,7 @@ export function summarize({ head, t }) {
     latest: { at: latest.logged_at, headline: latest.headline, summary: latest.summary },
     question: { text: main.question_text, answer: main.answer_text, label: main.label, claim_ids: main.claim_ids },
     verdict: head.verdict || null, verdict_approved_at: head.verdict_approved_at || null,
-    size: head.size, subject: head.subject,
+    size: head.size, subject: head.subject, incident_type: head.incident_type, answer_group: head.answer_group, also_names: head.also_called || [],
     tally: Object.fromEntries(LABELS.map((l) => [l, inGroup.filter((c) => c.label === l).length])),
     tally_title: head.sections.find((s) => s.type === "claims")?.title || "Claims",
     counts: { sources: t.sources.length, updates: t.update_log.length, events: t.timeline.length },

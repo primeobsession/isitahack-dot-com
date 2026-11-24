@@ -6,6 +6,8 @@
     "name": "Dropbox",
     "kind": "online-service"
   },
+  "incident_type": "outage",
+  "answer_group": "no-sign-of-hack",
   "lead_image": "dropbox-app-phone",
   "also_called": [
     "the Dropbox outage"
