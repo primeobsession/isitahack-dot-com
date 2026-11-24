@@ -120,6 +120,8 @@
 - [Spotify login outage, Nov 24 2026 (HTML)](https://isitahack.com/incidents/2026-11-spotify-login-outage.html): the same report as a web page.
 - [NSA internal network disruption, Nov 17 2026](https://isitahack.com/incidents/2026-11-nsa-network-disruption.md): the report as Markdown (still monitored). Built from its data folder.
 - [NSA internal network disruption, Nov 17 2026 (HTML)](https://isitahack.com/incidents/2026-11-nsa-network-disruption.html): the same report as a web page.
+- [Check Point management server intrusions (GT13), Nov 2026](https://isitahack.com/incidents/2026-11-checkpoint-management-server-intrusions.md): the report as Markdown (still monitored). Built from its data folder.
+- [Check Point management server intrusions (GT13), Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-checkpoint-management-server-intrusions.html): the same report as a web page.
 
 ## Data (typed incident format: UTF-8, RFC 4180 CSV with a header row; see Format below)
 - [data/incidents/2026-11-microsoft-365-outage/](https://isitahack.com/data/incidents/2026-11-microsoft-365-outage/): the folder the Microsoft 365 report is built from: incident.json, claims.csv, sources.csv, timeline.csv, questions.csv, update_log.csv and notes/.
@@ -186,6 +188,7 @@
 - [data/incidents/2026-11-laliga-fan-platform-cyberattack/](https://isitahack.com/data/incidents/2026-11-laliga-fan-platform-cyberattack/): the folder the LALIGA report is built from.
 - [data/incidents/2026-11-spotify-login-outage/](https://isitahack.com/data/incidents/2026-11-spotify-login-outage/): the folder the Spotify report is built from.
 - [data/incidents/2026-11-nsa-network-disruption/](https://isitahack.com/data/incidents/2026-11-nsa-network-disruption/): the folder the NSA report is built from: incident.json, claims.csv, sources.csv, timeline.csv, questions.csv, update_log.csv and notes/.
+- [data/incidents/2026-11-checkpoint-management-server-intrusions/](https://isitahack.com/data/incidents/2026-11-checkpoint-management-server-intrusions/): the folder the Check Point management server report is built from.
 
 ## For search engines
 - [sitemap.xml](https://isitahack.com/sitemap.xml): every page, with each incident's last update.

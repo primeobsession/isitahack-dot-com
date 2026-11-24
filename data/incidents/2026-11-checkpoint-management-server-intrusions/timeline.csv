@@ -1,0 +1,10 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-07-22T00:00:00-04:00,,"July 22, 2026",approximate,"Check Point publishes its advisory and fix for CVE-2026-16232, saying it was exploited against a handful of customers; CISA adds it to its exploited-flaws catalog the same day",c002,Date shown on the advisory and in CISA's catalog; no time given.
+t002,2026-10-17T00:00:00-04:00,,"Oct 17, 2026",approximate,Start of the attack activity on Check Point servers that GreyNoise says it confirmed,c001,Date from the GreyNoise report; no time given.
+t003,2026-10-20T09:54:30-04:00,,"9:54 AM ET, Oct 20, 2026",stated,GreyNoise says the attacker first used its CVE-2026-16232 script against a victim's Check Point server,c005,13:54:30 UTC per the GreyNoise report.
+t004,2026-10-25T22:17:30-04:00,,"10:17 PM ET, Oct 25, 2026",stated,GreyNoise says a bulk task sent to all 24 compromised Check Point servers fails,c005,02:17:30 UTC Oct 26 per the GreyNoise report.
+t005,2026-10-30T00:00:00-04:00,,"Oct 30, 2026",approximate,"A separate PHP2Shell attack wave against Check Point firewalls begins, per Check Point",c011,Date from Check Point's Nov 12 advisory.
+t006,2026-11-01T22:19:46-05:00,,"10:19 PM ET, Nov 1, 2026",stated,GreyNoise's last sight of the GT13 attacker,c010,03:19:46 UTC Nov 2 per the GreyNoise report.
+t007,2026-11-23T00:00:00-05:00,,"Nov 23, 2026",approximate,GreyNoise publishes its report on the campaign,c001,Date on the blog post; no time given.
+t008,2026-11-24T09:21:00-05:00,,"9:21 AM ET, Nov 24, 2026",stated,SecurityWeek reports the campaign,c001,Time shown on the article.
+t009,2026-11-24T11:15:00-05:00,,"11:15 AM ET, Nov 24, 2026",stated,BleepingComputer reports the campaign and says it is waiting for Check Point's answer,c004,Time shown on the article.
