@@ -4,3 +4,4 @@ t002,2026-11-19,,"Nov 19, 2026",stated,Dragos publishes its canary-token researc
 t003,2026-11-21,,"Nov 21, 2026",stated,Together AI publishes its security notice,c001,The post says it is notifying customers.
 t004,2026-11-22,,"Nov 22, 2026",stated,"OpenRouter publishes its post on data processing incidents, linking Together AI's notice",c011,Date as printed on OpenRouter's post.
 t005,2026-11-22T18:28:37-05:00,,"6:28 PM ET, Nov 22, 2026",stated,Atlas Cloud posts a notice saying prompts sent to MiniMax's official API were opened by a third party and that it has taken its models off OpenRouter; OpenRouter adds it to its list of provider notices,c015,Time from the post metadata.
+t006,2026-11-23T20:58:27-05:00,,"8:58 PM ET, Nov 23, 2026",stated,MiniMax posts a statement saying its own security system opened links in requests forwarded by OpenRouter and other providers; OpenRouter adds it to its list of provider notices,c017,Time from the post metadata.

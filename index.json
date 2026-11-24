@@ -35,6 +35,19 @@
       }
     },
     {
+      "slug": "2026-11-together-ai-prompt-leak",
+      "title": "Together AI prompt leak, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-24T07:49:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-together-ai-prompt-leak.md",
+        "html": "incidents/2026-11-together-ai-prompt-leak.html",
+        "data": "data/incidents/2026-11-together-ai-prompt-leak/"
+      },
+      "incident_type": "breach",
+      "answer_group": "hack-stated"
+    },
+    {
       "slug": "2026-11-spotify-login-outage",
       "title": "Spotify login outage, Nov 24 2026",
       "status": "monitoring",
@@ -59,19 +72,6 @@
       },
       "incident_type": "breach",
       "answer_group": "unclear"
-    },
-    {
-      "slug": "2026-11-together-ai-prompt-leak",
-      "title": "Together AI prompt leak, Nov 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-23T12:49:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-together-ai-prompt-leak.md",
-        "html": "incidents/2026-11-together-ai-prompt-leak.html",
-        "data": "data/incidents/2026-11-together-ai-prompt-leak/"
-      },
-      "incident_type": "breach",
-      "answer_group": "hack-stated"
     },
     {
       "slug": "2026-11-travelsoft-orchestra-cyberattack",
