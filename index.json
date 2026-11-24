@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-journal-technologies-court-portals",
+      "title": "Journal Technologies court portal outage, Nov 13, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-24T10:30:34-05:00",
+      "files": {
+        "page": "incidents/2026-11-journal-technologies-court-portals.md",
+        "html": "incidents/2026-11-journal-technologies-court-portals.html",
+        "data": "data/incidents/2026-11-journal-technologies-court-portals/"
+      },
+      "incident_type": "outage",
+      "answer_group": "hack-stated",
+      "service": {
+        "state": "partly-back",
+        "as_of": "2026-11-24T07:24:06-05:00"
+      }
+    },
+    {
       "slug": "2026-11-atlassian-bitbucket-login-outage",
       "title": "Atlassian Bitbucket and login outage, Nov 23, 2026",
       "status": "monitoring",
@@ -209,23 +226,6 @@
         "page": "incidents/2026-11-laliga-fan-platform-cyberattack.md",
         "html": "incidents/2026-11-laliga-fan-platform-cyberattack.html",
         "data": "data/incidents/2026-11-laliga-fan-platform-cyberattack/"
-      }
-    },
-    {
-      "slug": "2026-11-journal-technologies-court-portals",
-      "title": "Journal Technologies court portal outage, Nov 13, 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-22T23:22:16-05:00",
-      "files": {
-        "page": "incidents/2026-11-journal-technologies-court-portals.md",
-        "html": "incidents/2026-11-journal-technologies-court-portals.html",
-        "data": "data/incidents/2026-11-journal-technologies-court-portals/"
-      },
-      "incident_type": "outage",
-      "answer_group": "hack-stated",
-      "service": {
-        "state": "partly-back",
-        "as_of": "2026-11-21T16:30:24-05:00"
       }
     },
     {
