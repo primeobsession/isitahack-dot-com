@@ -1,0 +1,6 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-24T06:15:00-05:00,,About 6:15 AM,approximate,Downdetector reports of Spotify login problems start to spike,c001,Time as given by TechRadar. Numerama gives 6:34 AM ET and RIA Novosti 6:32 AM ET; see c008.
+t002,2026-11-24T06:58:00-05:00,,6:58 AM,stated,"Downdetector passes 16,500 reports in the US and 8,000 in the UK",c002,Time of TechRadar's live-blog entry (11:58 UTC).
+t003,2026-11-24T07:00:00-05:00,,7:00 AM,stated,Spotify's status account says it is aware of issues and checking them out,c004,Time of TechRadar's entry reporting the post (12:00 UTC); the post itself may be slightly earlier.
+t004,2026-11-24T07:15:00-05:00,,7:15 AM,stated,TechRadar reports sign-ins working again for its reporter and many others,c005,Time of TechRadar's entry (12:15 UTC).
+t005,2026-11-24,,Later that morning,approximate,Spotify's status account says everything is looking much better,c005,"Numerama gives only 'early afternoon' Paris time, which is morning in the eastern US."

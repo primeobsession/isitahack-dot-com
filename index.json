@@ -1,6 +1,19 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-spotify-login-outage",
+      "title": "Spotify login outage, Nov 24 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-24T07:30:00-05:00",
+      "incident_type": "outage",
+      "answer_group": "unclear",
+      "files": {
+        "page": "incidents/2026-11-spotify-login-outage.md",
+        "html": "incidents/2026-11-spotify-login-outage.html",
+        "data": "data/incidents/2026-11-spotify-login-outage/"
+      }
+    },
+    {
       "slug": "2026-11-atlassian-bitbucket-login-outage",
       "title": "Atlassian Bitbucket and login outage, Nov 23, 2026",
       "status": "monitoring",

@@ -1,0 +1,125 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-spotify-login-outage",
+  "title": "Spotify login outage, Nov 24 2026",
+  "subject": {
+    "name": "Spotify",
+    "kind": "online-service"
+  },
+  "incident_type": "outage",
+  "answer_group": "unclear",
+  "lead_image": "spotify-app-on-phone",
+  "also_called": [
+    "the Spotify outage",
+    "Spotify down",
+    "Spotify logged me out"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-24",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Spotify, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Spotify users in at least a dozen countries reported login problems, with more than 16,500 Downdetector reports in the US alone. Spotify has not said how many people were affected.",
+  "who_is_affected": "Spotify users on the morning of Nov 24 (US time) who were logged out and could not sign back in. Sign-ins were working again for many by about 7:15 AM ET. Users still having trouble can contact Spotify support.",
+  "known": [
+    {
+      "text": "On the morning of Nov 24, many Spotify users were logged out and could not sign back in.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Spotify's status account said it was aware of issues and checking them out. It gave no cause.",
+      "claim_id": "c004"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "What caused the outage. Spotify has not said.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Whether it was a cyberattack. No one has claimed one, reported one, or ruled one out."
+    },
+    {
+      "text": "How many people were affected.",
+      "question_id": "q004"
+    },
+    {
+      "text": "When the problem was fully fixed. Spotify has not given an end time."
+    }
+  ],
+  "figures": [
+    {
+      "value": "16,500+",
+      "label": "US Downdetector reports",
+      "detail": "Plus 8,000+ in the UK, per TechRadar",
+      "claim_id": "c002"
+    },
+    {
+      "value": "~6:15 AM ET",
+      "label": "Problems began",
+      "detail": "Other outlets say 6:32-6:34 AM ET",
+      "claim_id": "c008"
+    },
+    {
+      "value": "~7:15 AM ET",
+      "label": "Sign-ins working again",
+      "detail": "Per TechRadar; Spotify gave no end time",
+      "claim_id": "c005"
+    }
+  ],
+  "images": [
+    {
+      "id": "spotify-app-on-phone",
+      "title": "Spotify on a phone",
+      "file": "images/spotify-app-on-phone.jpg",
+      "alt": "A hand holding a smartphone against a plain grey wall, the screen showing the Spotify app playing a song.",
+      "caption": "The Spotify app playing music on a smartphone (resized). Not taken during this outage.",
+      "credit": "Unsplash, CC0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Spotify_on_smartphone_(Unsplash).jpg",
+      "sha256": "34853332d0b5866d52dead428f76ca35df8c8c07b249bc3fd2722a728f653251",
+      "width": 1920,
+      "height": 1280
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was Spotify hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Spotify outage"
+    },
+    {
+      "type": "claims",
+      "title": "What caused it?",
+      "group": "cause"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
