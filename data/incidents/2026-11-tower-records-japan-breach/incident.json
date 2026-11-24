@@ -8,6 +8,10 @@
   },
   "incident_type": "breach",
   "answer_group": "hack-stated",
+  "service": {
+    "state": "down",
+    "claim_id": "c002"
+  },
   "lead_image": "tower-records-shibuya",
   "also_called": [
     "the Tower Records Online breach",
