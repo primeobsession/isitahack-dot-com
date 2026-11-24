@@ -1,4 +1,4 @@
-We looked for these and did not find them as of our 12:36 PM ET check on Nov 23.
+We looked for these and did not find them. The last look was at 10:27 AM ET on Nov 24, after Atlassian had marked the incident resolved.
 
 - An Atlassian post-incident report or blog post on the cause.
 - Any statement from Atlassian that the problem was or was not an attack.

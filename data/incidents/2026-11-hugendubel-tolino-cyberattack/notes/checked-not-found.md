@@ -1,6 +1,5 @@
-We looked for these and did not find them as of 6:38 AM ET on Nov 23, 2026.
+We looked for these and did not find them. The last look was at 10:28 AM ET on Nov 24, 2026. One item left this list that day: the company's own notices now call the outage a cyberattack.
 
-- Any statement from Hugendubel on its own web notices or help pages that calls the outage an attack. They say only 'technical disruption'; the attack wording comes from the spokesperson's statement to dpa.
 - Any independent confirmation of the attack or of the 'no customer data stolen' claim.
 - A claim of responsibility, or any attacker named, in the press.
 - Any report of ransomware, encryption or a ransom demand.

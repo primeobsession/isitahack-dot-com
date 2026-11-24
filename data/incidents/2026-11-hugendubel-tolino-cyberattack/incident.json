@@ -32,8 +32,12 @@
       "claim_id": "c001"
     },
     {
-      "text": "The company's own notices call it a 'technical disruption' and do not mention an attack.",
-      "claim_id": "c002"
+      "text": "The company's own website notice now says it was the target of a cyberattack. Until Nov 23 it said only 'technical disruption'.",
+      "claim_id": "c018"
+    },
+    {
+      "text": "The notice says that, as of Nov 24, no sensitive or personal customer data is affected. That is the company's own statement.",
+      "claim_id": "c019"
     },
     {
       "text": "The web shop, the tolino cloud and the service center are offline.",
@@ -46,10 +50,6 @@
     {
       "text": "Free return labels are available again through a link on Hugendubel's help page, and return deadlines are extended.",
       "claim_id": "c014"
-    },
-    {
-      "text": "ebook.de, a second shop run by the same Hugendubel company, shows the same outage notice.",
-      "claim_id": "c016"
     }
   ],
   "not_known": [
