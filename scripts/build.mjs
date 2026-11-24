@@ -512,10 +512,12 @@ function updateIndexJson(incidents, out) {
     const prev = bySlug.get(i.slug) || {};
     const files = { ...i.files };
     for (const [k, v] of Object.entries(prev.files || {})) if (!(k in files)) files[k] = v;
+    // Keys go in one fixed order, whatever the last build left behind, so that building twice
+    // gives the same file: the entry's other fields, then these, with the files last.
+    const { incident_type: _t, answer_group: _g, service: _s, files: _f, ...rest } = prev;
     const filed = i.typed ? { incident_type: i.incident_type, answer_group: i.answer_group } : {};
-    delete prev.service;
     if (i.service) filed.service = { state: i.service.state, as_of: i.service.as_of };
-    return { ...prev, slug: i.slug, title: i.title, status: i.status, last_updated: i.last_updated, ...filed, files };
+    return { ...rest, slug: i.slug, title: i.title, status: i.status, last_updated: i.last_updated, ...filed, files };
   });
   writeFileSync(join(out, "index.json"), JSON.stringify({ ...existing, incidents: list }, null, 2) + "\n");
 }

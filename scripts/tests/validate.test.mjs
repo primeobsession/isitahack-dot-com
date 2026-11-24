@@ -209,6 +209,8 @@ test("the build is repeatable and writes the pages search engines need", () => {
     assert.match(group("no-sign-of-hack"), sampleRow, "the sample is filed under its answer group, with its kind");
     assert.doesNotMatch(group("unclear") + group("hack-stated") + group("hack-reported"), sampleRow, "and under no other group");
     assert.equal(listed.find((i) => i.slug === SLUG).answer_group, "no-sign-of-hack", "index.json says which answer an incident is filed under");
+    // index.json is built from the last index.json, so its key order must not depend on how many times the build has run
+    for (const entry of listed) assert.equal(Object.keys(entry).at(-1), "files", `index.json entry ${entry.slug}: files comes last, whatever the previous build wrote`);
     assert.doesNotMatch(home, /<img /, "the home page lists incidents as text; photographs stay on the incident pages");
     // the status board counts the same incidents: one row each, and tiles that add up
     const board = readFileSync(join(a, "status.html"), "utf8");

@@ -7,14 +7,14 @@
       "last_updated": "2026-11-24T10:45:50-05:00",
       "incident_type": "outage",
       "answer_group": "unclear",
+      "service": {
+        "state": "back",
+        "as_of": "2026-11-24T10:45:50-05:00"
+      },
       "files": {
         "page": "incidents/2026-11-spotify-login-outage.md",
         "html": "incidents/2026-11-spotify-login-outage.html",
         "data": "data/incidents/2026-11-spotify-login-outage/"
-      },
-      "service": {
-        "state": "back",
-        "as_of": "2026-11-24T10:45:50-05:00"
       }
     },
     {
@@ -22,16 +22,16 @@
       "title": "Journal Technologies court portal outage, Nov 13, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-24T10:30:34-05:00",
-      "files": {
-        "page": "incidents/2026-11-journal-technologies-court-portals.md",
-        "html": "incidents/2026-11-journal-technologies-court-portals.html",
-        "data": "data/incidents/2026-11-journal-technologies-court-portals/"
-      },
       "incident_type": "outage",
       "answer_group": "hack-stated",
       "service": {
         "state": "partly-back",
         "as_of": "2026-11-24T07:24:06-05:00"
+      },
+      "files": {
+        "page": "incidents/2026-11-journal-technologies-court-portals.md",
+        "html": "incidents/2026-11-journal-technologies-court-portals.html",
+        "data": "data/incidents/2026-11-journal-technologies-court-portals/"
       }
     },
     {
@@ -39,16 +39,16 @@
       "title": "Atlassian Bitbucket and login outage, Nov 23, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-24T10:29:15-05:00",
-      "files": {
-        "page": "incidents/2026-11-atlassian-bitbucket-login-outage.md",
-        "html": "incidents/2026-11-atlassian-bitbucket-login-outage.html",
-        "data": "data/incidents/2026-11-atlassian-bitbucket-login-outage/"
-      },
       "incident_type": "outage",
       "answer_group": "unclear",
       "service": {
         "state": "back",
         "as_of": "2026-11-24T10:27:00-05:00"
+      },
+      "files": {
+        "page": "incidents/2026-11-atlassian-bitbucket-login-outage.md",
+        "html": "incidents/2026-11-atlassian-bitbucket-login-outage.html",
+        "data": "data/incidents/2026-11-atlassian-bitbucket-login-outage/"
       }
     },
     {
@@ -56,16 +56,16 @@
       "title": "Hugendubel tolino cyberattack, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-24T10:29:15-05:00",
-      "files": {
-        "page": "incidents/2026-11-hugendubel-tolino-cyberattack.md",
-        "html": "incidents/2026-11-hugendubel-tolino-cyberattack.html",
-        "data": "data/incidents/2026-11-hugendubel-tolino-cyberattack/"
-      },
       "incident_type": "outage",
       "answer_group": "hack-stated",
       "service": {
         "state": "down",
         "as_of": "2026-11-24T10:28:00-05:00"
+      },
+      "files": {
+        "page": "incidents/2026-11-hugendubel-tolino-cyberattack.md",
+        "html": "incidents/2026-11-hugendubel-tolino-cyberattack.html",
+        "data": "data/incidents/2026-11-hugendubel-tolino-cyberattack/"
       }
     },
     {
@@ -73,18 +73,18 @@
       "title": "FAA nationwide ground stop",
       "status": "monitoring",
       "last_updated": "2026-11-24T10:28:00-05:00",
+      "incident_type": "outage",
+      "answer_group": "unclear",
+      "service": {
+        "state": "back",
+        "as_of": null
+      },
       "files": {
         "page": "incidents/2026-11-faa-ground-stop.md",
         "html": "incidents/2026-11-faa-ground-stop.html",
         "data": "data/incidents/2026-11-faa-ground-stop/",
         "raw_dir": "data/incidents/2026-11-faa-ground-stop/raw/",
         "manifest": "data/incidents/2026-11-faa-ground-stop/MANIFEST.txt"
-      },
-      "incident_type": "outage",
-      "answer_group": "unclear",
-      "service": {
-        "state": "back",
-        "as_of": null
       }
     },
     {
@@ -92,42 +92,42 @@
       "title": "Together AI prompt leak, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-24T07:49:00-05:00",
+      "incident_type": "breach",
+      "answer_group": "hack-stated",
       "files": {
         "page": "incidents/2026-11-together-ai-prompt-leak.md",
         "html": "incidents/2026-11-together-ai-prompt-leak.html",
         "data": "data/incidents/2026-11-together-ai-prompt-leak/"
-      },
-      "incident_type": "breach",
-      "answer_group": "hack-stated"
+      }
     },
     {
       "slug": "2026-11-gta6-xbox-build-leak",
       "title": "GTA 6 Xbox build leak: was Rockstar hacked? Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-23T13:01:00-05:00",
+      "incident_type": "breach",
+      "answer_group": "unclear",
       "files": {
         "page": "incidents/2026-11-gta6-xbox-build-leak.md",
         "html": "incidents/2026-11-gta6-xbox-build-leak.html",
         "data": "data/incidents/2026-11-gta6-xbox-build-leak/"
-      },
-      "incident_type": "breach",
-      "answer_group": "unclear"
+      }
     },
     {
       "slug": "2026-11-travelsoft-orchestra-cyberattack",
       "title": "Travelsoft Orchestra cyberattack, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-23T12:45:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-travelsoft-orchestra-cyberattack.md",
-        "html": "incidents/2026-11-travelsoft-orchestra-cyberattack.html",
-        "data": "data/incidents/2026-11-travelsoft-orchestra-cyberattack/"
-      },
       "incident_type": "outage",
       "answer_group": "hack-stated",
       "service": {
         "state": "back",
         "as_of": "2026-11-23T12:45:00-05:00"
+      },
+      "files": {
+        "page": "incidents/2026-11-travelsoft-orchestra-cyberattack.md",
+        "html": "incidents/2026-11-travelsoft-orchestra-cyberattack.html",
+        "data": "data/incidents/2026-11-travelsoft-orchestra-cyberattack/"
       }
     },
     {
@@ -135,13 +135,13 @@
       "title": "KEPCO customer data breach, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-23T12:44:00-05:00",
+      "incident_type": "breach",
+      "answer_group": "hack-stated",
       "files": {
         "page": "incidents/2026-11-kepco-customer-data-breach.md",
         "html": "incidents/2026-11-kepco-customer-data-breach.html",
         "data": "data/incidents/2026-11-kepco-customer-data-breach/"
-      },
-      "incident_type": "breach",
-      "answer_group": "hack-stated"
+      }
     },
     {
       "slug": "2026-11-kurly-data-breach",
@@ -161,68 +161,68 @@
       "title": "Cleverbridge payment card breach, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-23T12:12:23-05:00",
+      "incident_type": "breach",
+      "answer_group": "hack-stated",
       "files": {
         "page": "incidents/2026-11-cleverbridge-card-data-breach.md",
         "html": "incidents/2026-11-cleverbridge-card-data-breach.html",
         "data": "data/incidents/2026-11-cleverbridge-card-data-breach/"
-      },
-      "incident_type": "breach",
-      "answer_group": "hack-stated"
+      }
     },
     {
       "slug": "2026-11-tower-records-japan-breach",
       "title": "Tower Records Japan data breach, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-23T12:08:00-05:00",
+      "incident_type": "breach",
+      "answer_group": "hack-stated",
       "files": {
         "page": "incidents/2026-11-tower-records-japan-breach.md",
         "html": "incidents/2026-11-tower-records-japan-breach.html",
         "data": "data/incidents/2026-11-tower-records-japan-breach/"
-      },
-      "incident_type": "breach",
-      "answer_group": "hack-stated"
+      }
     },
     {
       "slug": "2026-11-next-supplier-data-breach",
       "title": "Was Next hacked? Supplier data breach, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-23T11:13:00-05:00",
+      "incident_type": "breach",
+      "answer_group": "hack-reported",
       "files": {
         "page": "incidents/2026-11-next-supplier-data-breach.md",
         "html": "incidents/2026-11-next-supplier-data-breach.html",
         "data": "data/incidents/2026-11-next-supplier-data-breach/"
-      },
-      "incident_type": "breach",
-      "answer_group": "hack-reported"
+      }
     },
     {
       "slug": "2026-11-glinet-cloud-malware",
       "title": "GL.iNet cloud malware incident, Nov 20, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-23T11:08:26-05:00",
+      "incident_type": "attack",
+      "answer_group": "hack-stated",
       "files": {
         "page": "incidents/2026-11-glinet-cloud-malware.md",
         "html": "incidents/2026-11-glinet-cloud-malware.html",
         "data": "data/incidents/2026-11-glinet-cloud-malware/"
-      },
-      "incident_type": "attack",
-      "answer_group": "hack-stated"
+      }
     },
     {
       "slug": "2026-11-ticketmaster-outage",
       "title": "Ticketmaster outage, Nov 20, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-23T08:59:16-05:00",
-      "files": {
-        "page": "incidents/2026-11-ticketmaster-outage.md",
-        "html": "incidents/2026-11-ticketmaster-outage.html",
-        "data": "data/incidents/2026-11-ticketmaster-outage/"
-      },
       "incident_type": "outage",
       "answer_group": "unclear",
       "service": {
         "state": "back",
         "as_of": "2026-11-21T21:06:19-05:00"
+      },
+      "files": {
+        "page": "incidents/2026-11-ticketmaster-outage.md",
+        "html": "incidents/2026-11-ticketmaster-outage.html",
+        "data": "data/incidents/2026-11-ticketmaster-outage/"
       }
     },
     {
@@ -230,13 +230,13 @@
       "title": "FBI crime database (NCIC) intrusion, reported Nov 20, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-23T08:19:00-05:00",
+      "incident_type": "attack",
+      "answer_group": "unclear",
       "files": {
         "page": "incidents/2026-11-fbi-ncic-intrusion.md",
         "html": "incidents/2026-11-fbi-ncic-intrusion.html",
         "data": "data/incidents/2026-11-fbi-ncic-intrusion/"
-      },
-      "incident_type": "attack",
-      "answer_group": "unclear"
+      }
     },
     {
       "slug": "2026-11-laliga-fan-platform-cyberattack",
@@ -256,13 +256,13 @@
       "title": "Samsung Ads North America vendor breach, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-22T22:48:00-05:00",
+      "incident_type": "breach",
+      "answer_group": "hack-stated",
       "files": {
         "page": "incidents/2026-11-samsung-ads-vendor-breach.md",
         "html": "incidents/2026-11-samsung-ads-vendor-breach.html",
         "data": "data/incidents/2026-11-samsung-ads-vendor-breach/"
-      },
-      "incident_type": "breach",
-      "answer_group": "hack-stated"
+      }
     },
     {
       "slug": "2026-11-samsung-securities-customer-data-breach",
@@ -310,14 +310,14 @@
       "last_updated": "2026-11-22T19:12:01-05:00",
       "incident_type": "attack",
       "answer_group": "hack-reported",
+      "service": {
+        "state": "down",
+        "as_of": "2026-11-22T19:12:01-05:00"
+      },
       "files": {
         "page": "incidents/2026-11-cranston-ri-police-network-intrusion.md",
         "html": "incidents/2026-11-cranston-ri-police-network-intrusion.html",
         "data": "data/incidents/2026-11-cranston-ri-police-network-intrusion/"
-      },
-      "service": {
-        "state": "down",
-        "as_of": "2026-11-22T19:12:01-05:00"
       }
     },
     {
@@ -327,14 +327,14 @@
       "last_updated": "2026-11-22T19:11:01-05:00",
       "incident_type": "outage",
       "answer_group": "hack-reported",
+      "service": {
+        "state": "back",
+        "as_of": "2026-11-22T19:11:01-05:00"
+      },
       "files": {
         "page": "incidents/2026-11-bell-mts-email-outage.md",
         "html": "incidents/2026-11-bell-mts-email-outage.html",
         "data": "data/incidents/2026-11-bell-mts-email-outage/"
-      },
-      "service": {
-        "state": "back",
-        "as_of": "2026-11-22T19:11:01-05:00"
       }
     },
     {
@@ -342,26 +342,26 @@
       "title": "ZOZO customer data leak via PLAID KARTE, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-22T17:45:00-05:00",
+      "incident_type": "breach",
+      "answer_group": "hack-stated",
       "files": {
         "page": "incidents/2026-11-zozo-plaid-karte-breach.md",
         "html": "incidents/2026-11-zozo-plaid-karte-breach.html",
         "data": "data/incidents/2026-11-zozo-plaid-karte-breach/"
-      },
-      "incident_type": "breach",
-      "answer_group": "hack-stated"
+      }
     },
     {
       "slug": "2026-11-wellington-it-credit-union-breach",
       "title": "Wellington IT credit union breach, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-22T16:55:00-05:00",
+      "incident_type": "breach",
+      "answer_group": "hack-stated",
       "files": {
         "page": "incidents/2026-11-wellington-it-credit-union-breach.md",
         "html": "incidents/2026-11-wellington-it-credit-union-breach.html",
         "data": "data/incidents/2026-11-wellington-it-credit-union-breach/"
-      },
-      "incident_type": "breach",
-      "answer_group": "hack-stated"
+      }
     },
     {
       "slug": "2026-11-delta-weight-balance-outage",
@@ -381,42 +381,42 @@
       "title": "AEON Credit Service outage and unauthorized access, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-22T16:34:04-05:00",
+      "incident_type": "outage",
+      "answer_group": "hack-stated",
       "files": {
         "page": "incidents/2026-11-aeon-credit-service-outage.md",
         "html": "incidents/2026-11-aeon-credit-service-outage.html",
         "data": "data/incidents/2026-11-aeon-credit-service-outage/"
-      },
-      "incident_type": "outage",
-      "answer_group": "hack-stated"
+      }
     },
     {
       "slug": "2026-11-expedia-vendor-breach",
       "title": "Expedia third-party vendor breach, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-22T15:31:00-05:00",
+      "incident_type": "breach",
+      "answer_group": "hack-stated",
       "files": {
         "page": "incidents/2026-11-expedia-vendor-breach.md",
         "html": "incidents/2026-11-expedia-vendor-breach.html",
         "data": "data/incidents/2026-11-expedia-vendor-breach/"
-      },
-      "incident_type": "breach",
-      "answer_group": "hack-stated"
+      }
     },
     {
       "slug": "2026-11-usda-farm-payment-system-cyberattack",
       "title": "USDA farm payment system cyberattack, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-22T09:04:02-05:00",
-      "files": {
-        "page": "incidents/2026-11-usda-farm-payment-system-cyberattack.md",
-        "html": "incidents/2026-11-usda-farm-payment-system-cyberattack.html",
-        "data": "data/incidents/2026-11-usda-farm-payment-system-cyberattack/"
-      },
       "incident_type": "outage",
       "answer_group": "hack-reported",
       "service": {
         "state": "down",
         "as_of": "2026-11-22T09:04:02-05:00"
+      },
+      "files": {
+        "page": "incidents/2026-11-usda-farm-payment-system-cyberattack.md",
+        "html": "incidents/2026-11-usda-farm-payment-system-cyberattack.html",
+        "data": "data/incidents/2026-11-usda-farm-payment-system-cyberattack/"
       }
     },
     {
@@ -424,16 +424,16 @@
       "title": "NTT Docomo customer data breach, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-22T07:45:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-ntt-docomo-customer-data-breach.md",
-        "html": "incidents/2026-11-ntt-docomo-customer-data-breach.html",
-        "data": "data/incidents/2026-11-ntt-docomo-customer-data-breach/"
-      },
       "incident_type": "breach",
       "answer_group": "hack-stated",
       "service": {
         "state": "partly-back",
         "as_of": "2026-11-22T06:48:00-05:00"
+      },
+      "files": {
+        "page": "incidents/2026-11-ntt-docomo-customer-data-breach.md",
+        "html": "incidents/2026-11-ntt-docomo-customer-data-breach.html",
+        "data": "data/incidents/2026-11-ntt-docomo-customer-data-breach/"
       }
     },
     {
@@ -441,42 +441,42 @@
       "title": "Microsoft 365 outage, Nov 12-13, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-22T01:50:00-05:00",
+      "incident_type": "outage",
+      "answer_group": "no-sign-of-hack",
       "files": {
         "page": "incidents/2026-11-microsoft-365-outage.md",
         "html": "incidents/2026-11-microsoft-365-outage.html",
         "data": "data/incidents/2026-11-microsoft-365-outage/"
-      },
-      "incident_type": "outage",
-      "answer_group": "no-sign-of-hack"
+      }
     },
     {
       "slug": "2026-11-rakuten-securities-breach",
       "title": "Rakuten Securities breach, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-21T23:50:43-05:00",
+      "incident_type": "breach",
+      "answer_group": "hack-stated",
       "files": {
         "page": "incidents/2026-11-rakuten-securities-breach.md",
         "html": "incidents/2026-11-rakuten-securities-breach.html",
         "data": "data/incidents/2026-11-rakuten-securities-breach/"
-      },
-      "incident_type": "breach",
-      "answer_group": "hack-stated"
+      }
     },
     {
       "slug": "2026-11-rackspace-spot-breach",
       "title": "Rackspace Spot breach, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-21T18:34:58-05:00",
-      "files": {
-        "page": "incidents/2026-11-rackspace-spot-breach.md",
-        "html": "incidents/2026-11-rackspace-spot-breach.html",
-        "data": "data/incidents/2026-11-rackspace-spot-breach/"
-      },
       "incident_type": "breach",
       "answer_group": "hack-reported",
       "service": {
         "state": "back",
         "as_of": "2026-11-21T18:34:58-05:00"
+      },
+      "files": {
+        "page": "incidents/2026-11-rackspace-spot-breach.md",
+        "html": "incidents/2026-11-rackspace-spot-breach.html",
+        "data": "data/incidents/2026-11-rackspace-spot-breach/"
       }
     },
     {
@@ -484,16 +484,16 @@
       "title": "Airbyte Cloud security incident, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-21T16:35:26-05:00",
-      "files": {
-        "page": "incidents/2026-11-airbyte-cloud-security-incident.md",
-        "html": "incidents/2026-11-airbyte-cloud-security-incident.html",
-        "data": "data/incidents/2026-11-airbyte-cloud-security-incident/"
-      },
       "incident_type": "attack",
       "answer_group": "hack-stated",
       "service": {
         "state": "partly-back",
         "as_of": "2026-11-21T16:35:26-05:00"
+      },
+      "files": {
+        "page": "incidents/2026-11-airbyte-cloud-security-incident.md",
+        "html": "incidents/2026-11-airbyte-cloud-security-incident.html",
+        "data": "data/incidents/2026-11-airbyte-cloud-security-incident/"
       }
     },
     {
@@ -501,16 +501,16 @@
       "title": "DoorDash app and website outage, Nov 21, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-21T14:54:58-05:00",
-      "files": {
-        "page": "incidents/2026-11-doordash-outage.md",
-        "html": "incidents/2026-11-doordash-outage.html",
-        "data": "data/incidents/2026-11-doordash-outage/"
-      },
       "incident_type": "outage",
       "answer_group": "unclear",
       "service": {
         "state": "back",
         "as_of": "2026-11-21T14:54:58-05:00"
+      },
+      "files": {
+        "page": "incidents/2026-11-doordash-outage.md",
+        "html": "incidents/2026-11-doordash-outage.html",
+        "data": "data/incidents/2026-11-doordash-outage/"
       }
     },
     {
@@ -518,29 +518,29 @@
       "title": "Microsoft Entra Connect Health data exposure, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-21T13:17:54-05:00",
+      "incident_type": "breach",
+      "answer_group": "hack-stated",
       "files": {
         "page": "incidents/2026-11-microsoft-entra-connect-health-breach.md",
         "html": "incidents/2026-11-microsoft-entra-connect-health-breach.html",
         "data": "data/incidents/2026-11-microsoft-entra-connect-health-breach/"
-      },
-      "incident_type": "breach",
-      "answer_group": "hack-stated"
+      }
     },
     {
       "slug": "2026-11-gofundme-pro-donorperfect-breach",
       "title": "GoFundMe Pro and DonorPerfect breaches, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-21T12:53:54-05:00",
-      "files": {
-        "page": "incidents/2026-11-gofundme-pro-donorperfect-breach.md",
-        "html": "incidents/2026-11-gofundme-pro-donorperfect-breach.html",
-        "data": "data/incidents/2026-11-gofundme-pro-donorperfect-breach/"
-      },
       "incident_type": "breach",
       "answer_group": "hack-stated",
       "service": {
         "state": "partly-back",
         "as_of": "2026-11-21T12:53:54-05:00"
+      },
+      "files": {
+        "page": "incidents/2026-11-gofundme-pro-donorperfect-breach.md",
+        "html": "incidents/2026-11-gofundme-pro-donorperfect-breach.html",
+        "data": "data/incidents/2026-11-gofundme-pro-donorperfect-breach/"
       }
     },
     {
@@ -548,68 +548,68 @@
       "title": "Charleston County, SC cyberattack, Nov 16, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-21T11:29:09-05:00",
+      "incident_type": "attack",
+      "answer_group": "hack-stated",
       "files": {
         "page": "incidents/2026-11-charleston-county-sc-cyberattack.md",
         "html": "incidents/2026-11-charleston-county-sc-cyberattack.html",
         "data": "data/incidents/2026-11-charleston-county-sc-cyberattack/"
-      },
-      "incident_type": "attack",
-      "answer_group": "hack-stated"
+      }
     },
     {
       "slug": "2026-11-ochsner-health-breach",
       "title": "Ochsner Health data breach, Nov 19, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-21T09:40:33-05:00",
+      "incident_type": "breach",
+      "answer_group": "hack-stated",
       "files": {
         "page": "incidents/2026-11-ochsner-health-breach.md",
         "html": "incidents/2026-11-ochsner-health-breach.html",
         "data": "data/incidents/2026-11-ochsner-health-breach/"
-      },
-      "incident_type": "breach",
-      "answer_group": "hack-stated"
+      }
     },
     {
       "slug": "2026-11-premise-health-insider-theft",
       "title": "Premise Health patient data taken by an employee, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-21T07:08:00-05:00",
+      "incident_type": "breach",
+      "answer_group": "no-sign-of-hack",
       "files": {
         "page": "incidents/2026-11-premise-health-insider-theft.md",
         "html": "incidents/2026-11-premise-health-insider-theft.html",
         "data": "data/incidents/2026-11-premise-health-insider-theft/"
-      },
-      "incident_type": "breach",
-      "answer_group": "no-sign-of-hack"
+      }
     },
     {
       "slug": "2026-11-illinois-algonquin-dam-cyberattack",
       "title": "Algonquin Dam apparent cyberattack, Nov 16, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-21T05:37:15-05:00",
+      "incident_type": "attack",
+      "answer_group": "hack-reported",
       "files": {
         "page": "incidents/2026-11-illinois-algonquin-dam-cyberattack.md",
         "html": "incidents/2026-11-illinois-algonquin-dam-cyberattack.html",
         "data": "data/incidents/2026-11-illinois-algonquin-dam-cyberattack/"
-      },
-      "incident_type": "attack",
-      "answer_group": "hack-reported"
+      }
     },
     {
       "slug": "2026-11-project-gutenberg-vandalism",
       "title": "Project Gutenberg website vandalism, Nov 15, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-21T05:14:24-05:00",
-      "files": {
-        "page": "incidents/2026-11-project-gutenberg-vandalism.md",
-        "html": "incidents/2026-11-project-gutenberg-vandalism.html",
-        "data": "data/incidents/2026-11-project-gutenberg-vandalism/"
-      },
       "incident_type": "attack",
       "answer_group": "hack-stated",
       "service": {
         "state": "down",
         "as_of": "2026-11-21T05:14:24-05:00"
+      },
+      "files": {
+        "page": "incidents/2026-11-project-gutenberg-vandalism.md",
+        "html": "incidents/2026-11-project-gutenberg-vandalism.html",
+        "data": "data/incidents/2026-11-project-gutenberg-vandalism/"
       }
     },
     {
@@ -617,29 +617,29 @@
       "title": "Steam outages, Nov 17 and Nov 20-21, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-21T03:12:31-05:00",
+      "incident_type": "outage",
+      "answer_group": "unclear",
       "files": {
         "page": "incidents/2026-11-steam-outage.md",
         "html": "incidents/2026-11-steam-outage.html",
         "data": "data/incidents/2026-11-steam-outage/"
-      },
-      "incident_type": "outage",
-      "answer_group": "unclear"
+      }
     },
     {
       "slug": "2026-11-dropbox-outage",
       "title": "Dropbox outage, Nov 20, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-21T01:23:54-05:00",
-      "files": {
-        "page": "incidents/2026-11-dropbox-outage.md",
-        "html": "incidents/2026-11-dropbox-outage.html",
-        "data": "data/incidents/2026-11-dropbox-outage/"
-      },
       "incident_type": "outage",
       "answer_group": "no-sign-of-hack",
       "service": {
         "state": "back",
         "as_of": "2026-11-21T01:23:54-05:00"
+      },
+      "files": {
+        "page": "incidents/2026-11-dropbox-outage.md",
+        "html": "incidents/2026-11-dropbox-outage.html",
+        "data": "data/incidents/2026-11-dropbox-outage/"
       }
     },
     {
@@ -647,16 +647,16 @@
       "title": "RIKEN Fugaku supercomputer break-in, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-21T01:18:35-05:00",
-      "files": {
-        "page": "incidents/2026-11-riken-fugaku-supercomputer-hack.md",
-        "html": "incidents/2026-11-riken-fugaku-supercomputer-hack.html",
-        "data": "data/incidents/2026-11-riken-fugaku-supercomputer-hack/"
-      },
       "incident_type": "attack",
       "answer_group": "hack-stated",
       "service": {
         "state": "down",
         "as_of": "2026-11-21T00:24:56-05:00"
+      },
+      "files": {
+        "page": "incidents/2026-11-riken-fugaku-supercomputer-hack.md",
+        "html": "incidents/2026-11-riken-fugaku-supercomputer-hack.html",
+        "data": "data/incidents/2026-11-riken-fugaku-supercomputer-hack/"
       }
     },
     {
@@ -664,55 +664,55 @@
       "title": "Staples Canada print website breach, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-21T00:36:34-05:00",
+      "incident_type": "breach",
+      "answer_group": "hack-stated",
       "files": {
         "page": "incidents/2026-11-staples-canada-print-breach.md",
         "html": "incidents/2026-11-staples-canada-print-breach.html",
         "data": "data/incidents/2026-11-staples-canada-print-breach/"
-      },
-      "incident_type": "breach",
-      "answer_group": "hack-stated"
+      }
     },
     {
       "slug": "2026-11-opm-usa-staffing-access",
       "title": "OPM USA Staffing unauthorized access, Nov 12-13, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-21T00:35:58-05:00",
+      "incident_type": "attack",
+      "answer_group": "unclear",
       "files": {
         "page": "incidents/2026-11-opm-usa-staffing-access.md",
         "html": "incidents/2026-11-opm-usa-staffing-access.html",
         "data": "data/incidents/2026-11-opm-usa-staffing-access/"
-      },
-      "incident_type": "attack",
-      "answer_group": "unclear"
+      }
     },
     {
       "slug": "2026-11-roll20-breach",
       "title": "Roll20 account data breach, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-20T23:46:00-05:00",
+      "incident_type": "breach",
+      "answer_group": "hack-stated",
       "files": {
         "page": "incidents/2026-11-roll20-breach.md",
         "html": "incidents/2026-11-roll20-breach.html",
         "data": "data/incidents/2026-11-roll20-breach/"
-      },
-      "incident_type": "breach",
-      "answer_group": "hack-stated"
+      }
     },
     {
       "slug": "2026-11-vermont-valcour-dispatch-outage",
       "title": "Vermont Valcour police dispatch system outage, Nov 2026",
       "status": "monitoring",
       "last_updated": "2026-11-20T23:29:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-vermont-valcour-dispatch-outage.md",
-        "html": "incidents/2026-11-vermont-valcour-dispatch-outage.html",
-        "data": "data/incidents/2026-11-vermont-valcour-dispatch-outage/"
-      },
       "incident_type": "outage",
       "answer_group": "unclear",
       "service": {
         "state": "down",
         "as_of": "2026-11-20T23:29:00-05:00"
+      },
+      "files": {
+        "page": "incidents/2026-11-vermont-valcour-dispatch-outage.md",
+        "html": "incidents/2026-11-vermont-valcour-dispatch-outage.html",
+        "data": "data/incidents/2026-11-vermont-valcour-dispatch-outage/"
       }
     },
     {
@@ -720,16 +720,16 @@
       "title": "Apple services outage, Nov 17, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-20T20:02:24-05:00",
-      "files": {
-        "page": "incidents/2026-11-apple-services-outage.md",
-        "html": "incidents/2026-11-apple-services-outage.html",
-        "data": "data/incidents/2026-11-apple-services-outage/"
-      },
       "incident_type": "outage",
       "answer_group": "no-sign-of-hack",
       "service": {
         "state": "back",
         "as_of": "2026-11-18T20:57:00-05:00"
+      },
+      "files": {
+        "page": "incidents/2026-11-apple-services-outage.md",
+        "html": "incidents/2026-11-apple-services-outage.html",
+        "data": "data/incidents/2026-11-apple-services-outage/"
       }
     },
     {
@@ -737,29 +737,29 @@
       "title": "Boeing ransomware claim by INC Ransom, Nov 20, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-20T19:49:00-05:00",
+      "incident_type": "attack",
+      "answer_group": "unclear",
       "files": {
         "page": "incidents/2026-11-boeing-inc-ransom-claim.md",
         "html": "incidents/2026-11-boeing-inc-ransom-claim.html",
         "data": "data/incidents/2026-11-boeing-inc-ransom-claim/"
-      },
-      "incident_type": "attack",
-      "answer_group": "unclear"
+      }
     },
     {
       "slug": "2026-11-starbucks-mobile-order-outage",
       "title": "Starbucks Mobile Order & Pay outage, Nov 20, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-20T19:49:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-starbucks-mobile-order-outage.md",
-        "html": "incidents/2026-11-starbucks-mobile-order-outage.html",
-        "data": "data/incidents/2026-11-starbucks-mobile-order-outage/"
-      },
       "incident_type": "outage",
       "answer_group": "unclear",
       "service": {
         "state": "back",
         "as_of": "2026-11-20T19:49:00-05:00"
+      },
+      "files": {
+        "page": "incidents/2026-11-starbucks-mobile-order-outage.md",
+        "html": "incidents/2026-11-starbucks-mobile-order-outage.html",
+        "data": "data/incidents/2026-11-starbucks-mobile-order-outage/"
       }
     },
     {
@@ -767,16 +767,16 @@
       "title": "Workday HR and payroll outage, Nov 13-14, 2026",
       "status": "monitoring",
       "last_updated": "2026-11-20T18:55:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-workday-outage.md",
-        "html": "incidents/2026-11-workday-outage.html",
-        "data": "data/incidents/2026-11-workday-outage/"
-      },
       "incident_type": "outage",
       "answer_group": "no-sign-of-hack",
       "service": {
         "state": "back",
         "as_of": "2026-11-20T11:00:00-05:00"
+      },
+      "files": {
+        "page": "incidents/2026-11-workday-outage.md",
+        "html": "incidents/2026-11-workday-outage.html",
+        "data": "data/incidents/2026-11-workday-outage/"
       }
     },
     {
