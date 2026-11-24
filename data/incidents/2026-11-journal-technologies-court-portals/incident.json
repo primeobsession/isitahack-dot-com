@@ -9,7 +9,7 @@
   "incident_type": "outage",
   "answer_group": "hack-stated",
   "service": {
-    "state": "down",
+    "state": "partly-back",
     "claim_id": "c021"
   },
   "lead_image": "journal-technologies-logo",

@@ -56,7 +56,7 @@
       "incident_type": "outage",
       "answer_group": "hack-stated",
       "service": {
-        "state": "partly-back",
+        "state": "back",
         "as_of": "2026-11-23T12:45:00-05:00"
       }
     },
@@ -185,7 +185,7 @@
       "incident_type": "outage",
       "answer_group": "hack-stated",
       "service": {
-        "state": "down",
+        "state": "partly-back",
         "as_of": "2026-11-21T16:30:24-05:00"
       }
     },

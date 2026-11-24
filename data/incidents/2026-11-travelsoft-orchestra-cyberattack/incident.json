@@ -9,7 +9,7 @@
   "incident_type": "outage",
   "answer_group": "hack-stated",
   "service": {
-    "state": "partly-back",
+    "state": "back",
     "claim_id": "c004"
   },
   "lead_image": "havas-voyages-agency",
