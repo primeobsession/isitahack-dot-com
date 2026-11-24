@@ -20,7 +20,7 @@
   "verdict_approved_at": null,
   "size": "Large",
   "size_basis": "LALIGA has not said how many people were affected. Large rests on potential reach, not a count: a national league whose fan platform also serves some clubs. Revisit when a count is published.",
-  "who_is_affected": "Users registered in digital services of LALIGA and of some clubs, per LALIGA. How many is not stated.",
+  "who_is_affected": "Users registered in digital services of LALIGA and of some clubs. At least six clubs, including Getafe CF, Real Oviedo and Girona FC, say their fans are among them. How many people is not stated.",
   "known": [
     {
       "text": "LALIGA says it suffered a cyberattack on one of its fan-services platforms.",
@@ -29,15 +29,19 @@
     {
       "text": "LALIGA says personal data of registered users was extracted.",
       "claim_id": "c002"
+    },
+    {
+      "text": "At least six clubs say their fans' data was among that taken from the LALIGA-run platform.",
+      "claim_id": "c008"
     }
   ],
   "not_known": [
     {
-      "text": "How many people were affected, and which data was taken.",
+      "text": "How many people were affected. Clubs say the data are contact and ID details, not passwords or bank data, but LALIGA has not published a list.",
       "question_id": "q002"
     },
     {
-      "text": "Who was behind it, and how they got in. The root cause is not published.",
+      "text": "Who was behind it, and how they got in. LALIGA says it found the origin of the access but has not said what it was.",
       "question_id": "q003"
     },
     {
@@ -56,6 +60,12 @@
       "label": "People affected",
       "detail": "No count published",
       "claim_id": "c006"
+    },
+    {
+      "value": "At least 6",
+      "label": "Clubs saying their fans are affected",
+      "detail": "Club statements",
+      "claim_id": "c008"
     }
   ],
   "sections": [
