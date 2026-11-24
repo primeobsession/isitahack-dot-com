@@ -59,7 +59,9 @@
 - [Delta weight-and-balance outage, Nov 22 2026 (HTML)](https://isitahack.com/incidents/2026-11-delta-weight-balance-outage.html): the same report as a web page.
 - [Journal Technologies court portal outage, Nov 13 2026 (HTML)](https://isitahack.com/incidents/2026-11-journal-technologies-court-portals.html): the same report as a web page.
 - [Ochsner Health data breach, Nov 19 2026](https://isitahack.com/incidents/2026-11-ochsner-health-breach.md): the report as Markdown (still monitored). Built from its data folder.
+- [CHU de la Guadeloupe hospital cyberattack, Nov 21 2026](https://isitahack.com/incidents/2026-11-chu-guadeloupe-hospital-cyberattack.md): the report as Markdown (still monitored). Built from its data folder.
 - [Ochsner Health data breach, Nov 19 2026 (HTML)](https://isitahack.com/incidents/2026-11-ochsner-health-breach.html): the same report as a web page.
+- [CHU de la Guadeloupe hospital cyberattack, Nov 21 2026 (HTML)](https://isitahack.com/incidents/2026-11-chu-guadeloupe-hospital-cyberattack.html): the same report as a web page.
 - [Charleston County, SC cyberattack, Nov 16 2026](https://isitahack.com/incidents/2026-11-charleston-county-sc-cyberattack.md): the report as Markdown (still monitored). Built from its data folder.
 - [Charleston County, SC cyberattack, Nov 16 2026 (HTML)](https://isitahack.com/incidents/2026-11-charleston-county-sc-cyberattack.html): the same report as a web page.
 - [GoFundMe Pro and DonorPerfect breaches, Nov 2026](https://isitahack.com/incidents/2026-11-gofundme-pro-donorperfect-breach.md): the report as Markdown (still monitored). Built from its data folder.
@@ -134,6 +136,7 @@
 - [data/incidents/2026-11-delta-weight-balance-outage/](https://isitahack.com/data/incidents/2026-11-delta-weight-balance-outage/): the folder the Delta report is built from.
 - [data/incidents/2026-11-journal-technologies-court-portals/](https://isitahack.com/data/incidents/2026-11-journal-technologies-court-portals/): the folder the Journal Technologies report is built from.
 - [data/incidents/2026-11-ochsner-health-breach/](https://isitahack.com/data/incidents/2026-11-ochsner-health-breach/): the folder the Ochsner Health report is built from.
+- [data/incidents/2026-11-chu-guadeloupe-hospital-cyberattack/](https://isitahack.com/data/incidents/2026-11-chu-guadeloupe-hospital-cyberattack/): the folder the CHU de la Guadeloupe report is built from.
 - [data/incidents/2026-11-charleston-county-sc-cyberattack/](https://isitahack.com/data/incidents/2026-11-charleston-county-sc-cyberattack/): the folder the Charleston County report is built from.
 - [data/incidents/2026-11-gofundme-pro-donorperfect-breach/](https://isitahack.com/data/incidents/2026-11-gofundme-pro-donorperfect-breach/): the folder the GoFundMe Pro and DonorPerfect report is built from.
 - [data/incidents/2026-11-rakuten-securities-breach/](https://isitahack.com/data/incidents/2026-11-rakuten-securities-breach/): the folder the Rakuten Securities report is built from.

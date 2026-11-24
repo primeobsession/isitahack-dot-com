@@ -203,6 +203,19 @@
       "answer_group": "hack-stated"
     },
     {
+      "slug": "2026-11-chu-guadeloupe-hospital-cyberattack",
+      "title": "CHU de la Guadeloupe hospital cyberattack, Nov 21, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T19:12:04-05:00",
+      "incident_type": "outage",
+      "answer_group": "hack-stated",
+      "files": {
+        "page": "incidents/2026-11-chu-guadeloupe-hospital-cyberattack.md",
+        "html": "incidents/2026-11-chu-guadeloupe-hospital-cyberattack.html",
+        "data": "data/incidents/2026-11-chu-guadeloupe-hospital-cyberattack/"
+      }
+    },
+    {
       "slug": "2026-11-faa-ground-stop",
       "title": "FAA nationwide ground stop",
       "status": "monitoring",
