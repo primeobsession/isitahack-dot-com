@@ -5,3 +5,5 @@ t002,2026-11-24T06:58:00-05:00,,6:58 AM,stated,"Downdetector passes 16,500 repor
 t005,2026-11-24T07:08:00-05:00,,7:08 AM,stated,Spotify's status account says everything is looking much better,c005,"Time of Spotify's own post (s007, 12:08 UTC)."
 t004,2026-11-24T07:15:00-05:00,,7:15 AM,stated,TechRadar reports sign-ins working again for its reporter and many others,c005,Time of TechRadar's entry (12:15 UTC).
 t006,2026-11-24T07:17:00-05:00,,7:17 AM,stated,"Downdetector reports have fallen to about 600, according to Reuters",c005,"Reuters, carried by Khaleej Times (s008)."
+t007,2026-11-24T10:53:00-05:00,,10:53 AM,stated,"Spotify's status account says Spotify is up and running after an earlier issue was resolved, and tells logged-out users to sign back in with their original login details",c005,"Time of Spotify's own post (s012, 15:53 UTC). Also supports c010."
+t008,2026-11-24T11:59:00-05:00,,11:59 AM,stated,"The Verge reports some users are still logged out and getting a ""something went wrong, try again"" message when they try to sign back in",c005,"Time of The Verge's post (s014, 16:59 UTC)."
