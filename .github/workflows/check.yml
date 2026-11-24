@@ -1,6 +1,6 @@
 # Runs the same checks an agent runs before handing off: validate every incident,
-# test the checks themselves, rebuild, and fail if the committed pages differ from
-# a fresh build. See scripts/check.mjs.
+# test the checks themselves and build the site. See scripts/check.mjs. Publishing is
+# a separate workflow (deploy.yml), on main only.
 name: Check
 
 on:
@@ -23,5 +23,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Validate, test, rebuild and compare
-        run: node scripts/check.mjs --ci
+      - name: Validate, test and build
+        run: node scripts/check.mjs

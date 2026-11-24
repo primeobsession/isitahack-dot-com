@@ -1,2 +1,5 @@
+# The built site (node scripts/build.mjs). GitHub builds and publishes it; it is never committed.
+_site/
+
 # Preview builds (node scripts/build.mjs --out _preview)
 _preview/

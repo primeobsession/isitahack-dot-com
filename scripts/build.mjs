@@ -1,20 +1,26 @@
 #!/usr/bin/env node
 // isitahack.com static build. Plain Node, zero dependencies.
 //
-//   node scripts/build.mjs                       build the site in place
-//   node scripts/build.mjs --out _preview        build a copy into a folder
-//   node scripts/build.mjs --out _preview --sample   ...including the made-up sample incident
+//   node scripts/build.mjs                        build the whole site into _site/
+//   node scripts/build.mjs --out <dir>            build it into another folder
+//   node scripts/build.mjs --out <dir> --sample   ...including the made-up sample incident
+//
+// Nothing the build writes is committed. GitHub builds the site the same way on every push to
+// main and publishes the folder (.github/workflows/deploy.yml), so a change to a story is a
+// change to its data and nothing else.
 //
 // Incidents come from two places:
 //   data/incidents/<slug>/incident.json  the typed format (format/README.md). It is checked by
 //                                        scripts/validate.mjs first; any problem stops the build.
 //                                        The build writes incidents/<slug>.html and <slug>.md.
-//   incidents/<slug>.md                  a hand-written page, for incidents not yet converted.
-// It also writes index.html, status.html, how-it-works.html and about.html from pages/*.html, 404.html and
-// sitemap.xml, and updates index.json. Output depends only on the input files: no clock, no locale, no randomness, so
-// the same input always produces byte-identical output.
+//   incidents/<slug>.md                  a hand-written page, for an incident not yet converted
+//                                        (there are none today).
+// The folder also gets index.html, status.html, how-it-works.html and about.html from
+// pages/*.html, 404.html, sitemap.xml, index.json, and copies of assets/, each incident's data,
+// format/, llms.txt and robots.txt. Output depends only on the input files: no clock, no
+// locale, no randomness, so the same input always produces byte-identical output.
 
-import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync, cpSync } from "node:fs";
+import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync, cpSync, rmSync } from "node:fs";
 import { join, dirname, basename, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { LABELS, ANSWER_GROUPS, answerPill, esc, slugify, pill, inline, linkTag, fmtDate, fmtDay, timeTag, renderBody, warnings, warn, setCurrent } from "./html.mjs";
@@ -502,24 +508,15 @@ function buildSitemap(incidents, out) {
   writeFileSync(join(out, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`);
 }
 
-// index.json: keep every existing field, refresh title/status/last_updated, say what kind of incident it is
-// and which plain answer it is filed under, and list each incident's files.
+// index.json: every incident with what kind it is, which plain answer it is filed under,
+// whether the service is back, and where its files are. Made fresh on every build.
 function updateIndexJson(incidents, out) {
-  const path = join(ROOT, "index.json");
-  const existing = existsSync(path) ? JSON.parse(readFileSync(path, "utf8")) : { incidents: [] };
-  const bySlug = new Map((existing.incidents || []).map((e) => [e.slug, e]));
   const list = incidents.map((i) => {
-    const prev = bySlug.get(i.slug) || {};
-    const files = { ...i.files };
-    for (const [k, v] of Object.entries(prev.files || {})) if (!(k in files)) files[k] = v;
-    // Keys go in one fixed order, whatever the last build left behind, so that building twice
-    // gives the same file: the entry's other fields, then these, with the files last.
-    const { incident_type: _t, answer_group: _g, service: _s, files: _f, ...rest } = prev;
     const filed = i.typed ? { incident_type: i.incident_type, answer_group: i.answer_group } : {};
     if (i.service) filed.service = { state: i.service.state, as_of: i.service.as_of };
-    return { ...rest, slug: i.slug, title: i.title, status: i.status, last_updated: i.last_updated, ...filed, files };
+    return { slug: i.slug, title: i.title, status: i.status, last_updated: i.last_updated, ...filed, files: { ...i.files } };
   });
-  writeFileSync(join(out, "index.json"), JSON.stringify({ ...existing, incidents: list }, null, 2) + "\n");
+  writeFileSync(join(out, "index.json"), JSON.stringify({ incidents: list }, null, 2) + "\n");
 }
 // llms.txt is written by hand. It must list every page and every incident's files;
 // a missing entry stops the build. The sample incident is never listed.
@@ -537,11 +534,14 @@ function checkLlms(incidents) {
 if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
   const args = process.argv.slice(2);
   const outArg = args.includes("--out") ? args[args.indexOf("--out") + 1] : null;
-  const out = outArg ? resolve(outArg) : ROOT;
-  const inPlace = out === resolve(ROOT);
-  if (args.includes("--sample") && inPlace) { console.error("--sample needs --out: the sample incident is made up and is never built into the real site."); process.exit(1); }
+  const SITE_DIR = join(ROOT, "_site");
+  const out = outArg ? resolve(outArg) : SITE_DIR;
+  if (out === resolve(ROOT)) { console.error("The build no longer writes into the repository itself. Leave --out off to build into _site/."); process.exit(1); }
+  if (args.includes("--sample") && out === SITE_DIR) { console.error("--sample needs --out: the sample incident is made up and is never built into the real site."); process.exit(1); }
+  // _site/ is the build's own folder, so it starts empty each time and holds nothing stale.
+  if (out === SITE_DIR) rmSync(SITE_DIR, { recursive: true, force: true });
   mkdirSync(join(out, "incidents"), { recursive: true });
-  if (!inPlace) cpSync(join(ROOT, "assets"), join(out, "assets"), { recursive: true });
+  cpSync(join(ROOT, "assets"), join(out, "assets"), { recursive: true });
 
   const folders = (base) => (existsSync(base) ? readdirSync(base).sort().map((d) => join(base, d)).filter((d) => existsSync(join(d, "incident.json"))) : []);
   const typedDirs = [...folders(join(ROOT, "data", "incidents")), ...(args.includes("--sample") ? folders(join(ROOT, "format", "sample")) : [])];
@@ -549,7 +549,7 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1
   for (const i of typed) if (i && i.loaded.dir.startsWith(join(ROOT, "format"))) i.sample = true;
   if (typed.includes(null)) { console.error("Build stopped: fix the problems above. A failed check is never bypassed."); process.exit(1); }
   const typedSlugs = new Set(typed.map((i) => i.slug));
-  const legacy = readdirSync(join(ROOT, "incidents")).filter((f) => f.endsWith(".md") && !typedSlugs.has(basename(f, ".md"))).sort()
+  const legacy = (existsSync(join(ROOT, "incidents")) ? readdirSync(join(ROOT, "incidents")) : []).filter((f) => f.endsWith(".md") && !typedSlugs.has(basename(f, ".md"))).sort()
     .map((f) => loadLegacy(join(ROOT, "incidents", f)));
   const incidents = [...typed, ...legacy].sort((a, b) => String(b.last_updated).localeCompare(String(a.last_updated)) || a.slug.localeCompare(b.slug));
 
@@ -565,8 +565,12 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1
   buildPages(out);
   buildSitemap(incidents, out);
   updateIndexJson(incidents, out);
-  if (!inPlace) for (const f of ["llms.txt", "robots.txt"]) cpSync(join(ROOT, f), join(out, f));
+  // The rest of what the site serves: the map for programs, the crawler rules, the custom
+  // domain, and the format files that the schemas' own addresses point at.
+  for (const f of ["llms.txt", "robots.txt", "CNAME", ".nojekyll"]) if (existsSync(join(ROOT, f))) cpSync(join(ROOT, f), join(out, f));
+  cpSync(join(ROOT, "format"), join(out, "format"), { recursive: true });
   for (const i of incidents) console.log(`wrote incidents/${i.slug}.html${i.typed ? ` and ${i.slug}.md` : ""}`);
   console.log(`wrote index.html, status.html, ${PAGES.map((p) => `${p.file}.html`).join(", ")}, 404.html, sitemap.xml, index.json`);
+  console.log(`site built in ${out}`);
   for (const w of warnings) console.warn(`warning: ${w}`);
 }
