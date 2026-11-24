@@ -248,6 +248,19 @@
       "answer_group": "hack-stated"
     },
     {
+      "slug": "2026-11-delta-weight-balance-outage",
+      "title": "Delta weight-and-balance outage, Nov 22, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T16:46:08-05:00",
+      "incident_type": "outage",
+      "answer_group": "unclear",
+      "files": {
+        "page": "incidents/2026-11-delta-weight-balance-outage.md",
+        "html": "incidents/2026-11-delta-weight-balance-outage.html",
+        "data": "data/incidents/2026-11-delta-weight-balance-outage/"
+      }
+    },
+    {
       "slug": "2026-11-aeon-credit-service-outage",
       "title": "AEON Credit Service outage and unauthorized access, Nov 2026",
       "status": "monitoring",

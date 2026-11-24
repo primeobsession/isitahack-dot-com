@@ -53,8 +53,10 @@
 - [Project Gutenberg website vandalism, Nov 15 2026](https://isitahack.com/incidents/2026-11-project-gutenberg-vandalism.md): the report as Markdown (still monitored). Built from its data folder.
 - [Project Gutenberg website vandalism, Nov 15 2026 (HTML)](https://isitahack.com/incidents/2026-11-project-gutenberg-vandalism.html): the same report as a web page.
 - [GL.iNet cloud malware incident, Nov 20 2026](https://isitahack.com/incidents/2026-11-glinet-cloud-malware.md): the report as Markdown (still monitored). Built from its data folder.
+- [Delta weight-and-balance outage, Nov 22 2026](https://isitahack.com/incidents/2026-11-delta-weight-balance-outage.md): the report as Markdown (still monitored). Built from its data folder.
 - [Journal Technologies court portal outage, Nov 13 2026](https://isitahack.com/incidents/2026-11-journal-technologies-court-portals.md): the report as Markdown (still monitored). Built from its data folder.
 - [GL.iNet cloud malware incident, Nov 20 2026 (HTML)](https://isitahack.com/incidents/2026-11-glinet-cloud-malware.html): the same report as a web page.
+- [Delta weight-and-balance outage, Nov 22 2026 (HTML)](https://isitahack.com/incidents/2026-11-delta-weight-balance-outage.html): the same report as a web page.
 - [Journal Technologies court portal outage, Nov 13 2026 (HTML)](https://isitahack.com/incidents/2026-11-journal-technologies-court-portals.html): the same report as a web page.
 - [Ochsner Health data breach, Nov 19 2026](https://isitahack.com/incidents/2026-11-ochsner-health-breach.md): the report as Markdown (still monitored). Built from its data folder.
 - [Ochsner Health data breach, Nov 19 2026 (HTML)](https://isitahack.com/incidents/2026-11-ochsner-health-breach.html): the same report as a web page.
@@ -129,6 +131,7 @@
 - [data/incidents/2026-11-illinois-algonquin-dam-cyberattack/](https://isitahack.com/data/incidents/2026-11-illinois-algonquin-dam-cyberattack/): the folder the Algonquin Dam report is built from.
 - [data/incidents/2026-11-project-gutenberg-vandalism/](https://isitahack.com/data/incidents/2026-11-project-gutenberg-vandalism/): the folder the Project Gutenberg report is built from.
 - [data/incidents/2026-11-glinet-cloud-malware/](https://isitahack.com/data/incidents/2026-11-glinet-cloud-malware/): the folder the GL.iNet report is built from.
+- [data/incidents/2026-11-delta-weight-balance-outage/](https://isitahack.com/data/incidents/2026-11-delta-weight-balance-outage/): the folder the Delta report is built from.
 - [data/incidents/2026-11-journal-technologies-court-portals/](https://isitahack.com/data/incidents/2026-11-journal-technologies-court-portals/): the folder the Journal Technologies report is built from.
 - [data/incidents/2026-11-ochsner-health-breach/](https://isitahack.com/data/incidents/2026-11-ochsner-health-breach/): the folder the Ochsner Health report is built from.
 - [data/incidents/2026-11-charleston-county-sc-cyberattack/](https://isitahack.com/data/incidents/2026-11-charleston-county-sc-cyberattack/): the folder the Charleston County report is built from.
