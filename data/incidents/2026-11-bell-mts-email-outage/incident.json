@@ -1,0 +1,118 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-bell-mts-email-outage",
+  "title": "Bell MTS email outage, Nov 2026",
+  "subject": {
+    "name": "Bell MTS",
+    "kind": "telecom"
+  },
+  "incident_type": "outage",
+  "answer_group": "hack-reported",
+  "service": { "state": "back", "claim_id": "c003" },
+  "also_called": [
+    "Bell MTS email lockout",
+    "Manitoba Bell MTS email outage"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-18",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Bell MTS, Bell Canada, any news outlet, government agency, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Regional",
+  "size_basis": "Bell MTS email customers across Manitoba were locked out for more than two days, per CBC and the Free Press. Bell has not said how many customers or accounts were affected, so size rests on reach, not a count.",
+  "who_is_affected": "Bell MTS email customers in Manitoba, many locked out from about Nov 17 to Nov 20 and some for longer. Bell says it will contact customers whose data may have been affected.",
+  "known": [
+    {
+      "text": "Bell MTS email customers in Manitoba were locked out for days, and Bell said on Nov 20 that service was restored.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "Bell gave no cause for the outage until Nov 22.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "Bell says an agentic attacker stole enterprise customer data from its systems on Nov 17.",
+      "claim_id": "c010"
+    },
+    {
+      "text": "Bell says it shared details with the Canadian Centre for Cyber Security and is working with the RCMP's cybercrime unit.",
+      "claim_id": "c011"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether a second outlet or Bell's own notice carries the cyberattack statement."
+    },
+    {
+      "text": "How many customers or accounts were affected, and what data was reachable.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Who was behind it.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Whether it is the same attack as Bell Canada's Nov 17 breach.",
+      "question_id": "q003"
+    }
+  ],
+  "figures": [
+    {
+      "value": "2+ days",
+      "label": "Customers locked out of email",
+      "detail": "CBC, from customer accounts",
+      "claim_id": "c003"
+    },
+    {
+      "value": "Nov 22",
+      "label": "Bell names a cyberattack",
+      "detail": "To the Free Press",
+      "claim_id": "c001"
+    },
+    {
+      "value": "Nov 17",
+      "label": "Bell Canada breach date",
+      "detail": "Per Bell; separate system",
+      "claim_id": "c010"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Bell MTS email outage"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

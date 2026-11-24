@@ -216,6 +216,23 @@
       }
     },
     {
+      "slug": "2026-11-bell-mts-email-outage",
+      "title": "Bell MTS email outage, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T19:11:01-05:00",
+      "incident_type": "outage",
+      "answer_group": "hack-reported",
+      "service": {
+        "state": "back",
+        "as_of": "2026-11-22T19:11:01-05:00"
+      },
+      "files": {
+        "page": "incidents/2026-11-bell-mts-email-outage.md",
+        "html": "incidents/2026-11-bell-mts-email-outage.html",
+        "data": "data/incidents/2026-11-bell-mts-email-outage/"
+      }
+    },
+    {
       "slug": "2026-11-faa-ground-stop",
       "title": "FAA nationwide ground stop",
       "status": "monitoring",
