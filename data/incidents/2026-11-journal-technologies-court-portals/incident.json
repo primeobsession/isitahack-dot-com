@@ -43,6 +43,10 @@
     {
       "text": "Kern's court says its portal is offline and gives no estimated restoration time.",
       "claim_id": "c009"
+    },
+    {
+      "text": "Riverside's court says its portal is restored and users must reset their passwords.",
+      "claim_id": "c022"
     }
   ],
   "not_known": [
@@ -75,7 +79,7 @@
     {
       "value": "No ETA",
       "label": "Kern court portal",
-      "detail": "As read on Nov 21",
+      "detail": "As read on Nov 22",
       "claim_id": "c009"
     }
   ],
