@@ -1,5 +1,5 @@
 source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
-s001,https://status.airbyte.com/cmwklryol00620wpc0n44i9hn,"Airbyte Status (official incident page, Tier 1)",1,airbyte,2026-11-23,2026-11-23T20:40:52-05:00,,ok,2026-11-23T20:40:52-05:00
+s001,https://status.airbyte.com/cmwklryol00620wpc0n44i9hn,"Airbyte Status (official incident page, Tier 1)",1,airbyte,2026-11-24,2026-11-24T15:43:31-05:00,,ok,2026-11-24T15:43:31-05:00
 s002,https://status.salesforce.com/generalmessages/20000278,"Salesforce Trust Status: Security Advisory, Airbyte Connected Applications",1,salesforce,2026-11-20,2026-11-21T16:35:26-05:00,,ok,2026-11-23T20:40:52-05:00
 s003,https://xitter.gq/airbytehq,Airbyte's own posts on X (read through a third-party mirror),4,airbyte,2026-11-20,2026-11-21T16:16:05-05:00,,ok,2026-11-21T16:16:05-05:00
 s004,https://cybersixt.com/originals/airbyte-cloud-security-incident,"CyberSIXT: Airbyte Cloud taken offline after cyberattack, syncs halted",3,cybersixt,2026-11-18,,,blocked,2026-11-21T16:16:05-05:00
