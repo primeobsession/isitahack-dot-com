@@ -1,0 +1,5 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-17,,,stated,"An outside attacker reaches Kurly's systems and steals login credentials, by Kurly's account",c001,Date only; no time given.
+t002,2026-11-18,,,stated,Kurly reports the breach to the authorities,c007,Date only.
+t003,2026-11-20T03:15:00-05:00,,"5:15 PM KST, Nov 20 (3:15 AM ET)",stated,"Kurly publishes its apology notice: 10,699 curators and 2 customers' data leaked",c002,Time on the reprint of the notice; Kurly's own posting time not seen.
+t004,2026-11-22T20:39:00-05:00,,"10:39 AM KST Nov 23 (8:39 PM ET Nov 22)",stated,Yonhap reports Kurly's added finding: 199 employees and 2 more customers,c004,Send time on the Yonhap article.

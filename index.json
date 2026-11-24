@@ -91,6 +91,19 @@
       }
     },
     {
+      "slug": "2026-11-kurly-data-breach",
+      "title": "Was Kurly hacked? Curator and employee data breach, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-23T12:15:00-05:00",
+      "incident_type": "breach",
+      "answer_group": "hack-reported",
+      "files": {
+        "page": "incidents/2026-11-kurly-data-breach.md",
+        "html": "incidents/2026-11-kurly-data-breach.html",
+        "data": "data/incidents/2026-11-kurly-data-breach/"
+      }
+    },
+    {
       "slug": "2026-11-cleverbridge-card-data-breach",
       "title": "Cleverbridge payment card breach, Nov 2026",
       "status": "monitoring",
