@@ -298,7 +298,7 @@ ol.doc-main, ul.doc-main { list-style: none; padding: 0; }
 .page-grid > *, .side > * { min-width: 0; }
 .side { display: contents; }
 .page-head { order: 1; display: grid; gap: 1.1rem; }
-.side-facts { order: 2; }
+.side-facts { order: 5; }
 .toc { order: 3; }
 .page-main { order: 4; display: grid; gap: 2.75rem; align-content: start; }
 .page-main > * { min-width: 0; }
@@ -307,7 +307,8 @@ ol.doc-main, ul.doc-main { list-style: none; padding: 0; }
 .head-text { display: grid; gap: 1.1rem; align-content: start; min-width: 0; }
 .head-media { margin: 0; display: grid; gap: 0.3rem; align-content: start; }
 .head-media img, .head-media .plate { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--rule); }
-@media (max-width: 699px) { .head-media { max-width: 16rem; order: -1; } }
+/* on a phone the answer comes before the picture */
+@media (max-width: 699px) { .head-media { max-width: 16rem; order: 1; } }
 @media (min-width: 700px) {
   .page-head.has-media { grid-template-columns: minmax(0, 1fr) clamp(190px, 24%, 300px); column-gap: 2rem; }
   .page-head.has-media > * { grid-column: 1 / -1; }
@@ -366,11 +367,54 @@ ol.doc-main, ul.doc-main { list-style: none; padding: 0; }
   .toc a { display: grid; grid-template-columns: 1.5rem minmax(0, 1fr) auto; align-items: baseline; gap: 0.25rem; min-height: 0; padding: 0.42rem 0; white-space: normal; }
 }
 
+/* An incident page reads at three depths: the short answer, the full story, the evidence.
+   The switch and the folding need the page script; without it every depth shows. */
+.depth { display: grid; gap: 2.25rem; align-content: start; }
+.depth > * { min-width: 0; }
+.depth-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0.25rem 0.75rem; align-items: baseline; border-top: 2px solid var(--strong); padding-top: 1rem; scroll-margin-top: 1rem; }
+.depth-head h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); letter-spacing: -0.03em; }
+.depth-head .meta { grid-column: 2; max-width: 44em; }
+.depth-switch { display: none; gap: 0.6rem; }
+html[data-depth] .depth-switch { display: grid; }
+.depth-picks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; }
+.depth-picks button { display: grid; gap: 0.15rem; align-content: center; min-height: 56px; padding: 0.5rem 0.9rem; text-align: left; background: var(--surface); color: var(--ink); border: 1.5px solid var(--rule); border-radius: var(--radius); font: inherit; cursor: pointer; }
+.depth-picks b { font-size: 0.92rem; font-weight: 700; line-height: 1.25; }
+.depth-picks span { font-size: 0.76rem; line-height: 1.35; color: var(--muted); }
+.depth-picks button:hover { border-color: var(--neutral); }
+.depth-picks button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.depth-picks button[aria-pressed="true"] span { color: inherit; opacity: 0.85; }
+@media (max-width: 599px) {
+  .depth-picks span { display: none; }
+  .depth-picks button { min-height: 48px; padding: 0.4rem 0.4rem; text-align: center; }
+  .depth-picks b { font-size: 0.82rem; }
+}
+html[data-depth="short"] .depth-story, html[data-depth="short"] .depth-evidence, html[data-depth="story"] .depth-evidence { display: none; }
+.keep-going { display: none; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.2rem; border-top: 1px solid var(--rule); padding-top: 1.25rem; }
+html[data-depth="short"] .keep-story, html[data-depth="story"] .keep-evidence { display: flex; }
+button.button { font-family: inherit; cursor: pointer; }
+.brief { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.4rem 2.25rem; }
+.brief-item { display: grid; gap: 0.4rem; align-content: start; border-top: 1px solid var(--rule); padding-top: 0.8rem; font-size: 0.92rem; line-height: 1.55; }
+.brief-item.latest { border-top-color: var(--accent); }
+.answer-pill { font-size: 0.82rem; min-height: 32px; padding: 3px 12px 3px 10px; }
+.raw-files { display: grid; gap: 0.4rem; padding: 1.1rem 1.25rem; background: var(--surface-2); border-radius: 8px; font-size: 0.9rem; }
+.raw-files h3 { font-size: 1rem; }
+.raw-links { display: flex; flex-wrap: wrap; gap: 0 1.5rem; font: 600 0.8rem/1.5 var(--mono); }
+.raw-links a { display: inline-flex; align-items: center; min-height: 44px; }
+.toc-top a { color: var(--ink); font-weight: 700; }
+/* the contents list shows the sections of the depths being read */
+html[data-depth="short"] .toc-sub, html[data-depth="story"] .toc-in-evidence { display: none; }
+/* below the three-column width the switch does the contents list's job for a first-time reader */
+@media (max-width: 1239px) { html[data-depth="short"] .toc { display: none; } .toc-top a { text-transform: none; } }
+@media (min-width: 1240px) {
+  .toc-top:not(:first-child) a { margin-top: 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
+  .toc-sub a { grid-template-columns: minmax(0, 1fr) auto; padding-left: 1.75rem; font-size: 0.8rem; }
+}
+
 /* sections of a report */
 .block, .section { display: grid; gap: 1.1rem; }
 .block > *, .section > * { min-width: 0; }
 .block-head, .fold > summary { display: flex; align-items: baseline; gap: 0.75rem; border-top: 1px solid var(--strong); padding-top: 0.9rem; }
-.block-head h2, .fold > summary h2 { font-size: clamp(1.3rem, 2.2vw, 1.65rem); letter-spacing: -0.025em; }
+.block-head h2, .fold > summary h2, .fold > summary h3 { font-size: clamp(1.3rem, 2.2vw, 1.65rem); letter-spacing: -0.025em; }
 .fold > summary .count { font-weight: 400; color: var(--muted); }
 .tiles { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 0 2rem; }
 .tile a { height: 100%; display: grid; gap: 0.1rem; align-content: start; padding: 0.8rem 0 1rem; border-top: 1px solid var(--rule); color: var(--ink); text-decoration: none; }
@@ -381,7 +425,7 @@ ol.doc-main, ul.doc-main { list-style: none; padding: 0; }
 .known-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem 2.5rem; }
 .known, .not-known { display: grid; gap: 0.6rem; align-content: start; border-top: 2px solid var(--accent); padding-top: 0.8rem; }
 .not-known { border-top: 2px dashed var(--muted); }
-.known h3, .not-known h3 { font-size: 0.98rem; }
+.known h2, .not-known h2, .known h3, .not-known h3 { font-size: 0.98rem; }
 .known ul, .not-known ul { list-style: none; padding: 0; display: grid; font-size: 0.92rem; line-height: 1.5; }
 .known li, .not-known li { padding: 0.55rem 0; border-bottom: 1px solid var(--rule-2); }
 .ref { font-size: 0.78rem; white-space: nowrap; }
@@ -506,7 +550,8 @@ ul.tasks { list-style: none; padding: 0; border-top: 1px solid var(--rule); }
   .data-table.compact { width: auto; min-width: 50%; }
 }
 @media print {
-  .skip, .site-nav, .toc, .theme-toggle, .side-more { display: none; }
+  .skip, .site-nav, .toc, .theme-toggle, .side-more, .depth-switch, .keep-going { display: none !important; }
+  html[data-depth] .depth { display: grid !important; }
   details > :not(summary) { display: block !important; }
   .inverse { background: none; color: inherit; border-color: #000; }
 }

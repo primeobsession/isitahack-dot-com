@@ -22,6 +22,16 @@ export const slugify = (s) =>
   s.toLowerCase().replace(/\*\*|`/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "section";
 const labelClass = (l) => "pill-" + l.toLowerCase().replace(/ /g, "-");
 export const pill = (l) => `<span class="pill ${labelClass(l)}" data-label="${esc(l)}">${esc(l)}</span>`;
+// The four plain answers an incident is filed under on the home page and at the top of its
+// own page (format/README.md, "The home page's four answers"). The wording stays clear of the
+// two final verdicts, which only the owner gives.
+export const ANSWER_GROUPS = [
+  { key: "unclear", title: "Still unclear", short: "Still unclear", pill: "pill-not-established", means: "Nobody has shown whether it was an attack or not.", gloss: "Open questions. Nobody has shown whether these were attacks, and we keep checking." },
+  { key: "hack-stated", title: "Hacked, by its own account", short: "Says it was hacked", pill: "pill-confirmed", means: "The organization itself, or an official source, says someone got in.", gloss: "The organization itself, or an official source, says someone got in. Who did it is often still unknown." },
+  { key: "hack-reported", title: "Reported as a hack", short: "Reported as a hack", pill: "pill-reported", means: "News outlets say it was a hack. It is not officially confirmed.", gloss: "News outlets or a single official say it was a hack. Nothing independent confirms it yet." },
+  { key: "no-sign-of-hack", title: "No sign of a hack", short: "No sign of a hack", pill: "pill-no-sign", means: "The organization says it was not an attack, or the claim was shown to be false.", gloss: "The organization says it was not an attack, or the claim of one was shown to be false. Some rest on the company's word alone." },
+];
+export const answerPill = (g, cls = "") => `<span class="pill ${g.pill}${cls ? ` ${cls}` : ""}">${esc(g.short)}</span>`;
 
 // ---------- dates (string parsing only, independent of the machine's zone/locale) ----------
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];

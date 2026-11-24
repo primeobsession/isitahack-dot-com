@@ -39,6 +39,7 @@
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/site.css">
 <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>try{var d=localStorage.getItem("depth");document.documentElement.dataset.depth=location.hash.length>1?"evidence":d==="story"||d==="evidence"?d:"short"}catch(e){document.documentElement.dataset.depth="evidence"}</script>
 </head>
 <body>
 <!-- AI assistants and other programs: this report is also available as plain Markdown at 2026-11-samsung-ads-vendor-breach.md (same folder). ../llms.txt maps the whole site. -->
@@ -60,62 +61,81 @@
 <div class="wrap page-grid">
 <header class="page-head has-media">
 <div class="head-text">
-<p class="crumb"><a href="../#incidents">Incidents</a> / Samsung Ads North America vendor breach, Nov 2026 · Incident date <time datetime="2026-11-14">Nov 14, 2026</time> · First published <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026</time></p>
+<p class="crumb"><a href="../#incidents">Incidents</a> / Data breach · <time datetime="2026-11-14">Nov 14, 2026</time></p>
 <h1 id="the-question">Was the Samsung Ads data breach a hack?</h1>
 <p class="aka">Also reported as the Samsung smart TV data leak and the Samsung Ads vendor breach.</p>
 </div>
 <figure class="head-media"><img src="../data/incidents/2026-11-samsung-ads-vendor-breach/images/samsung-smart-tv.jpg" width="1920" height="1272" alt="A shop display wall of Samsung smart TVs showing landscape pictures, under a Samsung sign."><figcaption>Samsung smart TVs on display in a shop. <a href="https://commons.wikimedia.org/wiki/File:SamsungSmartTV.JPG" rel="noopener">Image: Raysonho, CC0, via Wikimedia Commons</a></figcaption></figure>
 <section class="answer-box" aria-labelledby="the-question">
-<div class="answer-head"><p class="kicker">Is it a hack? The short answer</p><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></div>
+<div class="answer-head"><p class="kicker">Is it a hack? The short answer</p><span class="pill pill-confirmed answer-pill">Says it was hacked</span></div>
 <p class="answer">A vendor incident, yes: Samsung says a third-party vendor that handled Samsung Ads North America advertising data was involved. Whether Samsung&#39;s own systems were hacked is not established.</p>
+<p class="answer-refs"><span class="field">How well supported</span> <span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></p>
 <p class="answer-refs"><span class="field">Rests on</span> <a href="#c001">Samsung says a third-party vendor that handled advertising data for Samsung Ads North America was involved in a cyber incident</a> · <a href="#c006">Samsung&#39;s own systems were hacked</a></p>
 <p class="answer-note">This is the current answer, not a final verdict. A final verdict is published only after the site's owner has reviewed the evidence.</p>
 </section>
-<p class="byline">By the isitahack.com desk. AI agents research public sources and label each claim; a person decides only the final verdict. <a href="../how-it-works.html">How it works</a></p>
+<p class="byline">By the isitahack.com desk. First published <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026</time>. AI agents research public sources and label each claim; a person decides only the final verdict. <a href="../how-it-works.html">How it works</a></p>
 </header>
 <nav class="toc" aria-label="On this page">
 <p class="kicker">On this page</p>
 <ol>
-<li><a href="#glance"><span class="toc-n">01</span><span class="toc-name">At a glance</span></a></li>
-<li><a href="#was-it-a-hack-what-has-been-said"><span class="toc-n">02</span><span class="toc-name">Was it a hack? What has been said</span><span class="count">2</span></a></li>
-<li><a href="#how-did-they-get-in"><span class="toc-n">03</span><span class="toc-name">How did they get in?</span><span class="count">2</span></a></li>
-<li><a href="#questions-people-are-asking"><span class="toc-n">04</span><span class="toc-name">Questions people are asking</span><span class="count">5</span></a></li>
-<li><a href="#timeline-of-the-samsung-ads-vendor-breach"><span class="toc-n">05</span><span class="toc-name">Timeline of the Samsung Ads vendor breach</span><span class="count">5</span></a></li>
-<li><a href="#what-data-was-involved"><span class="toc-n">06</span><span class="toc-name">What data was involved?</span><span class="count">3</span></a></li>
-<li><a href="#related"><span class="toc-n">07</span><span class="toc-name">Related</span><span class="count">1</span></a></li>
-<li><a href="#what-we-checked-and-did-not-find"><span class="toc-n">08</span><span class="toc-name">What we checked and did not find</span></a></li>
-<li><a href="#update-log"><span class="toc-n">09</span><span class="toc-name">Update log</span><span class="count">1</span></a></li>
-<li><a href="#sources"><span class="toc-n">10</span><span class="toc-name">Sources</span><span class="count">3</span></a></li>
+<li class="toc-top"><a href="#the-question"><span class="toc-n">01</span><span class="toc-name">The short answer</span></a></li>
+<li class="toc-top"><a href="#full-story"><span class="toc-n">02</span><span class="toc-name">The full story</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#was-it-a-hack-what-has-been-said"><span class="toc-name">Was it a hack? What has been said</span><span class="count">2</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#how-did-they-get-in"><span class="toc-name">How did they get in?</span><span class="count">2</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#questions-people-are-asking"><span class="toc-name">Questions people are asking</span><span class="count">5</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#timeline-of-the-samsung-ads-vendor-breach"><span class="toc-name">Timeline of the Samsung Ads vendor breach</span><span class="count">5</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#what-data-was-involved"><span class="toc-name">What data was involved?</span><span class="count">3</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#related"><span class="toc-name">Related</span><span class="count">1</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#what-we-checked-and-did-not-find"><span class="toc-name">What we checked and did not find</span></a></li>
+<li class="toc-top"><a href="#evidence"><span class="toc-n">03</span><span class="toc-name">The evidence</span></a></li>
+<li class="toc-sub toc-in-evidence"><a href="#update-log"><span class="toc-name">Update log</span><span class="count">1</span></a></li>
+<li class="toc-sub toc-in-evidence"><a href="#sources"><span class="toc-name">Sources</span><span class="count">3</span></a></li>
 </ol>
 </nav>
 <div class="page-main">
-<aside class="note">
-<p><strong>Not verified: initial investigation only.</strong> Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them.</p>
-<p>Made for entertainment using AI. Not endorsed by Samsung, Cybernews, Android Headlines, DailySecu or any other company, news outlet, government agency, or anyone else named.</p>
-</aside>
-<section class="block" id="glance">
-<div class="block-head"><span class="sec-n">01</span><h2>At a glance</h2></div>
-<ul class="tiles">
-<li class="tile"><a href="#c002"><span class="tile-value">220MB</span><span class="tile-label">Posted by n0n</span><span class="tile-detail">Per Cybernews</span></a></li>
-<li class="tile"><a href="#c003"><span class="tile-value">150K</span><span class="tile-label">TV viewing events</span><span class="tile-detail">2024; no titles; per Cybernews</span></a></li>
-<li class="tile"><a href="#c004"><span class="tile-value">42.6K</span><span class="tile-label">Political ad records</span><span class="tile-detail">Sept to Oct 2026; per Cybernews</span></a></li>
-</ul>
-<div class="known-grid">
-<div class="known"><h3>Known so far</h3><ul>
+<div class="depth-switch" role="group" aria-label="How much do you want to read?">
+<p class="kicker">How much do you want to read?</p>
+<div class="depth-picks">
+<button type="button" data-depth="short" aria-pressed="false"><b>The short answer</b><span>Is it a hack, how big, and who it affects</span></button>
+<button type="button" data-depth="story" aria-pressed="false"><b>The full story</b><span>Adds the timeline and every claim</span></button>
+<button type="button" data-depth="evidence" aria-pressed="false"><b>The evidence</b><span>Adds every source and every update</span></button>
+</div>
+</div>
+
+<section class="depth depth-short" aria-label="The short answer, continued">
+<div class="brief">
+<div class="brief-item latest"><h2 class="kicker accent">The latest · <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></h2><p class="latest-headline">Samsung says a third-party vendor for Samsung Ads North America was involved; a ransomware group says it posted 220MB.</p></div>
+<div class="brief-item"><h2 class="kicker">How big is it?</h2><p><strong>Regional.</strong> About 220MB posted, per Cybernews: roughly 150,000 TV viewing events, 42,600 political ad records and 99,100 AI training records. Samsung has not said how much was affected.</p></div>
+<div class="brief-item"><h2 class="kicker">Who is affected?</h2><p>Not yet clear. The dump is said to hold smart TV viewing events with city and ZIP code, and political ad records, from Samsung&#39;s North America advertising business. Samsung says scope is still being worked out with the vendor.</p></div>
+</div>
+<div class="known-grid" id="glance">
+<div class="known"><h2>Known so far</h2><ul>
 <li>Samsung says a third-party vendor for Samsung Ads North America was involved. <a class="ref" href="#c001">evidence</a></li>
 <li>Samsung says the vendor&#39;s early findings show some Samsung information may have been affected. <a class="ref" href="#c001">evidence</a></li>
 </ul></div>
-<div class="not-known"><h3>Not known yet</h3><ul>
+<div class="not-known"><h2>Not known yet</h2><ul>
 <li>What data was really taken; the contents come from Cybernews, not Samsung. <a class="ref" href="#q003">open question</a></li>
 <li>Which vendor, and how the attacker got in. <a class="ref" href="#q004">open question</a></li>
 <li>Whether Samsung&#39;s own systems were accessed. <a class="ref" href="#q005">open question</a></li>
 </ul></div>
 </div>
+<aside class="note">
+<p><strong>Not verified: initial investigation only.</strong> Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them.</p>
+<p>Made for entertainment using AI. Not endorsed by Samsung, Cybernews, Android Headlines, DailySecu or any other company, news outlet, government agency, or anyone else named.</p>
+</aside>
+<p class="keep-going keep-story"><button type="button" class="button" data-depth="story">Keep going: the full story</button><span class="meta">The key numbers, the timeline and 8 claims, each with a label saying how well it is supported.</span></p>
 </section>
 
+<section class="depth depth-story" id="full-story" data-level="story">
+<div class="depth-head"><span class="sec-n">02</span><h2>The full story</h2><p class="meta">What happened and what has been said about it. Every claim carries a label, and opens to show its sources.</p></div>
+<ul class="tiles" id="numbers">
+<li class="tile"><a href="#c002"><span class="tile-value">220MB</span><span class="tile-label">Posted by n0n</span><span class="tile-detail">Per Cybernews</span></a></li>
+<li class="tile"><a href="#c003"><span class="tile-value">150K</span><span class="tile-label">TV viewing events</span><span class="tile-detail">2024; no titles; per Cybernews</span></a></li>
+<li class="tile"><a href="#c004"><span class="tile-value">42.6K</span><span class="tile-label">Political ad records</span><span class="tile-detail">Sept to Oct 2026; per Cybernews</span></a></li>
+</ul>
 <section class="block" id="was-it-a-hack-what-has-been-said">
 <details class="fold" open>
-<summary><span class="sec-n">02</span><h2>Was it a hack? What has been said</h2><span class="count">2</span></summary>
+<summary><h3>Was it a hack? What has been said</h3><span class="count">2</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c001">
@@ -151,7 +171,7 @@
 
 <section class="block" id="how-did-they-get-in">
 <details class="fold" open>
-<summary><span class="sec-n">03</span><h2>How did they get in?</h2><span class="count">2</span></summary>
+<summary><h3>How did they get in?</h3><span class="count">2</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c006">
@@ -187,7 +207,7 @@
 
 <section class="block" id="questions-people-are-asking">
 <details class="fold" open>
-<summary><span class="sec-n">04</span><h2>Questions people are asking</h2><span class="count">5</span></summary>
+<summary><h3>Questions people are asking</h3><span class="count">5</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="q001">
@@ -234,7 +254,7 @@
 
 <section class="block" id="timeline-of-the-samsung-ads-vendor-breach">
 <details class="fold">
-<summary><span class="sec-n">05</span><h2>Timeline of the Samsung Ads vendor breach</h2><span class="count">5</span></summary>
+<summary><h3>Timeline of the Samsung Ads vendor breach</h3><span class="count">5</span></summary>
 <div class="fold-body">
 <p class="meta">Times are 2026. Each row opens to show its evidence and source.</p>
 <div class="rows rows-timeline">
@@ -320,7 +340,7 @@
 
 <section class="block" id="what-data-was-involved">
 <details class="fold">
-<summary><span class="sec-n">06</span><h2>What data was involved?</h2><span class="count">3</span></summary>
+<summary><h3>What data was involved?</h3><span class="count">3</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c003">
@@ -366,7 +386,7 @@
 
 <section class="block" id="related">
 <details class="fold">
-<summary><span class="sec-n">07</span><h2>Related</h2><span class="count">1</span></summary>
+<summary><h3>Related</h3><span class="count">1</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c008">
@@ -387,7 +407,7 @@
 
 <section class="block" id="what-we-checked-and-did-not-find">
 <details class="fold">
-<summary><span class="sec-n">08</span><h2>What we checked and did not find</h2></summary>
+<summary><h3>What we checked and did not find</h3></summary>
 <div class="fold-body">
 <div class="prose">
 <p>We looked for these and did not find them as of the time of this report on Nov 22, 2026.</p>
@@ -404,10 +424,32 @@
 </div>
 </details>
 </section>
+<p class="keep-going keep-evidence"><button type="button" class="button" data-depth="evidence">Keep going: the evidence</button><span class="meta">3 sources and 1 dated update.</span></p>
+</section>
+
+<section class="depth depth-evidence" id="evidence" data-level="evidence">
+<div class="depth-head"><span class="sec-n">03</span><h2>The evidence</h2><p class="meta">Everything this page rests on. Every claim cites a source, and every change is dated.</p></div>
+<div class="evidence">
+<p class="kicker">Every claim on this page, by label · 8</p>
+<div class="evidence-bar" role="img" aria-label="Confirmed 1, Reported 5, Not established 2"><span class="seg seg-confirmed" style="flex-grow:1"></span><span class="seg seg-reported" style="flex-grow:5"></span><span class="seg seg-not-established" style="flex-grow:2"></span></div>
+<ul class="evidence-key"><li><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span class="count">1</span></li><li><span class="pill pill-reported" data-label="Reported">Reported</span><span class="count">5</span></li><li><span class="pill pill-not-established" data-label="Not established">Not established</span><span class="count">2</span></li></ul>
+</div>
+<section class="block" id="sources">
+<details class="fold">
+<summary><h3>Sources</h3><span class="count">3</span></summary>
+<div class="fold-body">
+<ol class="source-lines numbered">
+<li><a href="https://cybernews.com/security/samsung-smart-tv-data-breach/" rel="noopener">Cybernews: Samsung confirms data breach after hackers leak smart TV data (Nov 19, updated Nov 20)</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
+<li><a href="https://www.androidheadlines.com/2026/11/samsung-confirms-data-breach-as-hackers-dump-220mb-of-data.html" rel="noopener">Android Headlines: Samsung confirms data breach as hackers dump 220MB of data (relays the Cybernews report)</a> <span class="meta">News outlet · Nov 20, 2026, 9:14 AM ET</span></li>
+<li><a href="https://www.dailysecu.com/news/articleView.html?idxno=209534" rel="noopener">DailySecu (Korea): Samsung says North America vendor had an incident (Korean; Nov 15, updated Nov 16)</a> <span class="meta">News outlet · Nov 16, 2026, 8:06 PM UTC+09:00</span></li>
+</ol>
+</div>
+</details>
+</section>
 
 <section class="block" id="update-log">
 <details class="fold">
-<summary><span class="sec-n">09</span><h2>Update log</h2><span class="count">1</span></summary>
+<summary><h3>Update log</h3><span class="count">1</span></summary>
 <div class="fold-body">
 <p class="meta">Every check and change, newest first.</p>
 <ol class="log">
@@ -419,18 +461,11 @@
 </div>
 </details>
 </section>
-
-<section class="block" id="sources">
-<details class="fold">
-<summary><span class="sec-n">10</span><h2>Sources</h2><span class="count">3</span></summary>
-<div class="fold-body">
-<ol class="source-lines numbered">
-<li><a href="https://cybernews.com/security/samsung-smart-tv-data-breach/" rel="noopener">Cybernews: Samsung confirms data breach after hackers leak smart TV data (Nov 19, updated Nov 20)</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
-<li><a href="https://www.androidheadlines.com/2026/11/samsung-confirms-data-breach-as-hackers-dump-220mb-of-data.html" rel="noopener">Android Headlines: Samsung confirms data breach as hackers dump 220MB of data (relays the Cybernews report)</a> <span class="meta">News outlet · Nov 20, 2026, 9:14 AM ET</span></li>
-<li><a href="https://www.dailysecu.com/news/articleView.html?idxno=209534" rel="noopener">DailySecu (Korea): Samsung says North America vendor had an incident (Korean; Nov 15, updated Nov 16)</a> <span class="meta">News outlet · Nov 16, 2026, 8:06 PM UTC+09:00</span></li>
-</ol>
-</div>
-</details>
+<section class="raw-files" id="raw-files">
+<h3>The raw files</h3>
+<p>For people and programs that want the data itself. Nothing on this page exists only here.</p>
+<p class="raw-links"><a href="2026-11-samsung-ads-vendor-breach.md">This report as Markdown</a><a href="https://github.com/primeobsession/isitahack-dot-com/tree/main/data/incidents/2026-11-samsung-ads-vendor-breach" rel="noopener">The data folder on GitHub</a><a href="https://github.com/primeobsession/isitahack-dot-com/commits/main/data/incidents/2026-11-samsung-ads-vendor-breach" rel="noopener">Every change to this page</a></p>
+</section>
 </section>
 <footer class="page-foot">
 <p><a href="2026-11-samsung-ads-vendor-breach.md">Markdown version</a><a href="https://github.com/primeobsession/isitahack-dot-com/commits/main/data/incidents/2026-11-samsung-ads-vendor-breach" rel="noopener">Edit history</a><a href="../about.html#contact">Report an error</a></p>
@@ -439,23 +474,13 @@
 </div>
 <aside class="side" aria-label="Summary and other incidents">
 <div class="side-facts">
-<section class="side-block latest">
-<p class="kicker accent">The latest · <time datetime="2026-11-22T12:25:00-05:00">Nov 22, 2026, 12:25 PM ET</time></p>
-<p class="latest-headline">Samsung says a third-party vendor for Samsung Ads North America was involved; a ransomware group says it posted 220MB.</p>
-<p><a href="#update-log">Update log</a></p>
-</section>
-<section class="side-block">
-<dl class="reach">
-<div><dt>Size</dt><dd><strong>Regional.</strong> About 220MB posted, per Cybernews: roughly 150,000 TV viewing events, 42,600 political ad records and 99,100 AI training records. Samsung has not said how much was affected.</dd></div>
-<div><dt>Who is affected</dt><dd>Not yet clear. The dump is said to hold smart TV viewing events with city and ZIP code, and political ad records, from Samsung&#39;s North America advertising business. Samsung says scope is still being worked out with the vendor.</dd></div>
-</dl>
-</section>
 <section class="side-block">
 <div class="evidence">
 <p class="kicker">Was it a hack? What has been said · 2</p>
 <div class="evidence-bar" role="img" aria-label="Confirmed 1, Reported 1"><span class="seg seg-confirmed" style="flex-grow:1"></span><span class="seg seg-reported" style="flex-grow:1"></span></div>
 <ul class="evidence-key"><li><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span class="count">1</span></li><li><span class="pill pill-reported" data-label="Reported">Reported</span><span class="count">1</span></li></ul>
 </div>
+<p><a href="../how-it-works.html">What the labels mean</a></p>
 </section>
 </div>
 <div class="side-more">
@@ -493,6 +518,6 @@
 </nav>
 </div>
 </footer>
-<script>(function(){var r=document.documentElement,b=document.querySelector(".theme-toggle");function cur(){return r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function paint(){var d=cur()==="dark";b.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme");b.setAttribute("aria-pressed",d?"true":"false")}if(b){b.hidden=false;paint();b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}paint()})}function reveal(){var id=decodeURIComponent(location.hash.slice(1));var el=id&&document.getElementById(id);if(!el)return;for(var p=el;p;p=p.parentElement)if(p.tagName==="DETAILS")p.open=true;el.scrollIntoView()}addEventListener("hashchange",reveal);reveal();var links=[].slice.call(document.querySelectorAll(".toc a"));if(links.length&&"IntersectionObserver"in window){var seen={};var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id]=e.isIntersecting});var on=null;links.forEach(function(a){var id=a.getAttribute("href").slice(1);if(!on&&seen[id])on=a});if(on)links.forEach(function(a){if(a===on)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")})},{rootMargin:"-10% 0px -60% 0px"});links.forEach(function(a){var s=document.getElementById(a.getAttribute("href").slice(1));if(s)io.observe(s)})}})();</script>
+<script>(function(){var r=document.documentElement,b=document.querySelector(".theme-toggle");function cur(){return r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function paint(){var d=cur()==="dark";b.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme");b.setAttribute("aria-pressed",d?"true":"false")}if(b){b.hidden=false;paint();b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}paint()})}var sw=document.querySelector(".depth-switch"),RANK={short:0,story:1,evidence:2};function setDepth(d,keep){if(!sw)return;r.dataset.depth=d;[].forEach.call(sw.querySelectorAll("button"),function(x){x.setAttribute("aria-pressed",x.getAttribute("data-depth")===d?"true":"false")});if(keep)try{localStorage.setItem("depth",d)}catch(e){}}if(sw){setDepth(r.dataset.depth||"evidence");document.addEventListener("click",function(e){var x=e.target.closest&&e.target.closest("button[data-depth]");if(x)setDepth(x.getAttribute("data-depth"),true)})}function reveal(){var id=decodeURIComponent(location.hash.slice(1));var el=id&&document.getElementById(id);if(!el)return;for(var p=el;p;p=p.parentElement){if(p.tagName==="DETAILS")p.open=true;var lv=p.getAttribute&&p.getAttribute("data-level");if(lv&&RANK[lv]>RANK[r.dataset.depth||"evidence"])setDepth(lv)}el.scrollIntoView()}addEventListener("hashchange",reveal);reveal();document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(a&&a.getAttribute("href")===location.hash)reveal()});var links=[].slice.call(document.querySelectorAll(".toc a"));if(links.length&&"IntersectionObserver"in window){var seen={};var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id]=e.isIntersecting});var on=null;links.forEach(function(a){var id=a.getAttribute("href").slice(1);if(!on&&seen[id])on=a});if(on)links.forEach(function(a){if(a===on)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")})},{rootMargin:"-10% 0px -60% 0px"});links.forEach(function(a){var s=document.getElementById(a.getAttribute("href").slice(1));if(s)io.observe(s)})}})();</script>
 </body>
 </html>

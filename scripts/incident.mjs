@@ -4,7 +4,7 @@
 
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { LABELS, esc, slugify, pill, inline, linkTag, fmtDate, fmtTime, fmtDay, timeTag, renderBody, tableHtml } from "./html.mjs";
+import { LABELS, ANSWER_GROUPS, answerPill, esc, slugify, pill, inline, linkTag, fmtDate, fmtTime, fmtDay, timeTag, renderBody, tableHtml } from "./html.mjs";
 import { renderChart, fmtNumber } from "./chart.mjs";
 import { renderPlate } from "./plate.mjs";
 
@@ -83,7 +83,8 @@ ${others.length
 // the report in the middle, and a side rail with the latest and other incidents.
 // `toc` is [{ id, name, count }]; `lead`, `main` and `facts` are ready-made HTML.
 export function incidentLayout({ root, slug, crumb, title, titleId = "", aka = "", media = "", lead = "", toc, main, facts = "", others, repo, historyPath }) {
-  const tocHtml = toc.map((s, i) => `<li><a href="#${esc(s.id)}"><span class="toc-n">${two(i + 1)}</span><span class="toc-name">${esc(s.name)}</span>${s.count !== undefined && s.count !== "" ? `<span class="count">${esc(s.count)}</span>` : ""}</a></li>`).join("\n");
+  // An entry with `n` is one of the page's depths; one with `sub` is a section inside that depth.
+  const tocHtml = toc.map((s, i) => `<li${s.sub ? ` class="toc-sub toc-in-${esc(s.sub)}"` : s.n ? ' class="toc-top"' : ""}><a href="#${esc(s.id)}">${s.sub ? "" : `<span class="toc-n">${esc(s.n || two(i + 1))}</span>`}<span class="toc-name">${esc(s.name)}</span>${s.count !== undefined && s.count !== "" ? `<span class="count">${esc(s.count)}</span>` : ""}</a></li>`).join("\n");
   return `<main id="main" class="incident">
 <div class="wrap page-grid">
 <header class="page-head${media ? " has-media" : ""}">
@@ -161,14 +162,16 @@ ${c.source_ids.map(sourceLine).join("\n")}
   // ---------- sections ----------
   const ids = new Map();
   const uniqueId = (text) => { const base = slugify(text); const n = (ids.get(base) || 0) + 1; ids.set(base, n); return n === 1 ? base : `${base}-${n}`; };
-  for (const reserved of ["glance", "update-log", "sources", "main"]) ids.set(reserved, 1);
-  const toc = [{ id: "glance", name: "At a glance" }];
+  for (const reserved of ["glance", "update-log", "sources", "main", "the-question", "full-story", "evidence", "numbers", "raw-files"]) ids.set(reserved, 1);
+  // The page reads at three depths: the short answer, the full story, the evidence.
+  const toc = [{ id: "the-question", name: "The short answer", n: "01" }, { id: "full-story", name: "The full story", n: "02" }];
+  let tocDepth = "story";
   const fold = ({ title, count = "", open, body, id }) => {
     const sid = id || uniqueId(title);
-    toc.push({ id: sid, name: title, count });
+    toc.push({ id: sid, name: title, count, sub: tocDepth });
     return `<section class="block" id="${esc(sid)}">
 <details class="fold"${open ? " open" : ""}>
-<summary><span class="sec-n">${two(toc.length)}</span><h2>${esc(title)}</h2>${count !== "" ? `<span class="count">${esc(count)}</span>` : ""}</summary>
+<summary><h3>${esc(title)}</h3>${count !== "" ? `<span class="count">${esc(count)}</span>` : ""}</summary>
 <div class="fold-body">
 ${body}
 </div>
@@ -254,6 +257,8 @@ ${tableHtml(headRow, body)}
   };
   const sectionsHtml = head.sections.map((s) => renderers[s.type](s)).join("\n\n");
 
+  toc.push({ id: "evidence", name: "The evidence", n: "03" });
+  tocDepth = "evidence";
   const logRows = t.update_log.map((u) => `<li class="log-row${QUIET.has(u.change_type) ? " quiet" : ""}" id="${esc(u.log_id)}">
 <span class="log-when">${timeTag(u.logged_at)}</span>
 <span class="log-what"><strong>${esc(u.headline)}</strong> ${esc(u.summary)} <span class="meta">${esc(CHANGES[u.change_type])} · ${esc(u.author)}</span></span>
@@ -272,55 +277,83 @@ ${tableHtml(headRow, body)}
   const pictureFrom = picture.image && (picture.image.source_url || (picture.image.source_id && sources.get(picture.image.source_id).source_url));
   const pictureCredit = picture.credit ? (pictureFrom ? linkTag(pictureFrom, esc(picture.credit)) : esc(picture.credit)) : "";
   const media = `<figure class="head-media">${picture.html}${pictureCredit ? `<figcaption>${picture.caption ? `${esc(picture.caption)} ` : ""}${pictureCredit}</figcaption>` : ""}</figure>`;
+  // The plain answer comes first; the evidence label says how well it is supported.
+  const group = ANSWER_GROUPS.find((g) => g.key === head.answer_group);
   const lead = `<section class="answer-box" aria-labelledby="the-question">
-<div class="answer-head"><p class="kicker">Is it a hack? The short answer</p>${pill(q.label)}</div>
+<div class="answer-head"><p class="kicker">Is it a hack? The short answer</p>${answerPill(group, "answer-pill")}</div>
 <p class="answer">${esc(q.answer)}</p>
+<p class="answer-refs"><span class="field">How well supported</span> ${pill(q.label)}</p>
 <p class="answer-refs"><span class="field">Rests on</span> ${q.claim_ids.map((id) => `<a href="${esc(claimHref(id))}">${esc(claims.get(id).claim_text)}</a>`).join(" · ")}</p>
 ${verdictNote}
 </section>
-<p class="byline">By the isitahack.com desk. AI agents research public sources and label each claim; a person decides only the final verdict. <a href="${root}how-it-works.html">How it works</a></p>`;
+<p class="byline">By the isitahack.com desk. First published ${timeTag(sum.first_published, fmtDay(sum.first_published))}. AI agents research public sources and label each claim; a person decides only the final verdict. <a href="${root}how-it-works.html">How it works</a></p>`;
   const tiles = (head.figures || []).map((f) => `<li class="tile"><a href="${esc(claimHref(f.claim_id))}"><span class="tile-value">${esc(f.value)}</span><span class="tile-label">${esc(f.label)}</span>${f.detail ? `<span class="tile-detail">${esc(f.detail)}</span>` : ""}</a></li>`).join("\n");
   const known = head.known.map((k) => `<li>${esc(k.text)} <a class="ref" href="${esc(claimHref(k.claim_id))}">evidence</a></li>`).join("\n");
   const notKnown = head.not_known.map((k) => `<li>${esc(k.text)}${k.question_id ? ` <a class="ref" href="#${esc(k.question_id)}">open question</a>` : ""}</li>`).join("\n");
 
-  const facts = `<section class="side-block latest">
-<p class="kicker accent">The latest · ${timeTag(sum.latest.at)}</p>
-<p class="latest-headline">${esc(sum.latest.headline)}</p>
-<p><a href="#update-log">${t.update_log.length === 1 ? "Update log" : `All ${t.update_log.length} updates`}</a></p>
-</section>
-<section class="side-block">
-<dl class="reach">
-<div><dt>Size</dt><dd><strong>${esc(head.size)}.</strong> ${esc(head.size_basis)}</dd></div>
-<div><dt>Who is affected</dt><dd>${esc(head.who_is_affected)}</dd></div>
-</dl>
-</section>
-<section class="side-block">
+  const facts = `<section class="side-block">
 ${evidenceBar(sum.tally, sum.tally_title)}
+<p><a href="${root}how-it-works.html">What the labels mean</a></p>
 </section>`;
 
-  const main = `<aside class="note">
+  // The reader chooses how deep to go. Without the page script all three depths show.
+  const depthSwitch = `<div class="depth-switch" role="group" aria-label="How much do you want to read?">
+<p class="kicker">How much do you want to read?</p>
+<div class="depth-picks">
+<button type="button" data-depth="short" aria-pressed="false"><b>The short answer</b><span>Is it a hack, how big, and who it affects</span></button>
+<button type="button" data-depth="story" aria-pressed="false"><b>The full story</b><span>Adds the timeline and every claim</span></button>
+<button type="button" data-depth="evidence" aria-pressed="false"><b>The evidence</b><span>Adds every source and every update</span></button>
+</div>
+</div>`;
+  const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+  const short = `<section class="depth depth-short" aria-label="The short answer, continued">
+<div class="brief">
+<div class="brief-item latest"><h2 class="kicker accent">The latest · ${timeTag(sum.latest.at)}</h2><p class="latest-headline">${esc(sum.latest.headline)}</p></div>
+<div class="brief-item"><h2 class="kicker">How big is it?</h2><p><strong>${esc(head.size)}.</strong> ${esc(head.size_basis)}</p></div>
+<div class="brief-item"><h2 class="kicker">Who is affected?</h2><p>${esc(head.who_is_affected)}</p></div>
+</div>
+<div class="known-grid" id="glance">
+<div class="known"><h2>Known so far</h2>${known ? `<ul>\n${known}\n</ul>` : `<p>Nothing is established yet.</p>`}</div>
+<div class="not-known"><h2>Not known yet</h2>${notKnown ? `<ul>\n${notKnown}\n</ul>` : `<p>No open questions are recorded.</p>`}</div>
+</div>
+<aside class="note">
 <p>${STANDARD_NOTE}</p>
 <p>${esc(head.disclaimer)}</p>
 </aside>
-<section class="block" id="glance">
-<div class="block-head"><span class="sec-n">01</span><h2>At a glance</h2></div>
-${tiles ? `<ul class="tiles">\n${tiles}\n</ul>` : ""}
-<div class="known-grid">
-<div class="known"><h3>Known so far</h3>${known ? `<ul>\n${known}\n</ul>` : `<p>Nothing is established yet.</p>`}</div>
-<div class="not-known"><h3>Not known yet</h3>${notKnown ? `<ul>\n${notKnown}\n</ul>` : `<p>No open questions are recorded.</p>`}</div>
-</div>
-</section>
-
-${sectionsHtml}
+<p class="keep-going keep-story"><button type="button" class="button" data-depth="story">Keep going: the full story</button><span class="meta">${tiles ? "The key numbers, the" : "The"} timeline and ${plural(t.claims.length, "claim", "claims")}, each with a label saying how well it is supported.</span></p>
+</section>`;
+  const story = `<section class="depth depth-story" id="full-story" data-level="story">
+<div class="depth-head"><span class="sec-n">02</span><h2>The full story</h2><p class="meta">What happened and what has been said about it. Every claim carries a label, and opens to show its sources.</p></div>
+${tiles ? `<ul class="tiles" id="numbers">\n${tiles}\n</ul>\n` : ""}${sectionsHtml}
+<p class="keep-going keep-evidence"><button type="button" class="button" data-depth="evidence">Keep going: the evidence</button><span class="meta">${plural(t.sources.length, "source", "sources")} and ${plural(t.update_log.length, "dated update", "dated updates")}.</span></p>
+</section>`;
+  const allTally = Object.fromEntries(LABELS.map((l) => [l, t.claims.filter((c) => c.label === l).length]));
+  const evidence = `<section class="depth depth-evidence" id="evidence" data-level="evidence">
+<div class="depth-head"><span class="sec-n">03</span><h2>The evidence</h2><p class="meta">Everything this page rests on. Every claim cites a source, and every change is dated.</p></div>
+${evidenceBar(allTally, "Every claim on this page, by label")}
+${sourcesHtml}
 
 ${logHtml}
+<section class="raw-files" id="raw-files">
+<h3>The raw files</h3>
+<p>For people and programs that want the data itself. Nothing on this page exists only here.</p>
+<p class="raw-links"><a href="${esc(head.slug)}.md">This report as Markdown</a><a href="${esc(`${repo}/tree/main/data/incidents/${head.slug}`)}" rel="noopener">The data folder on GitHub</a><a href="${esc(`${repo}/commits/main/data/incidents/${head.slug}`)}" rel="noopener">Every change to this page</a></p>
+</section>
+</section>`;
 
-${sourcesHtml}`;
+  const main = `${depthSwitch}
 
+${short}
+
+${story}
+
+${evidence}`;
+
+  const TYPES = { outage: "Outage", breach: "Data breach", attack: "Attack" };
   const html = incidentLayout({
     root, slug: head.slug, repo, others, toc, lead, main, facts, media,
     aka: sum.also_called ? `<p class="aka">${esc(sum.also_called)}</p>` : "",
-    crumb: `<a href="${root}#incidents">Incidents</a> / ${esc(head.title)} · Incident date ${timeTag(head.incident_date)} · First published ${timeTag(sum.first_published, fmtDay(sum.first_published))}`,
+    crumb: `<a href="${root}#incidents">Incidents</a> / ${esc(TYPES[head.incident_type])} · ${timeTag(head.incident_date)}`,
     title: esc(q.text), titleId: "the-question", historyPath: `data/incidents/${head.slug}`,
   });
   return { main: html, sum };

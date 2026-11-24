@@ -66,6 +66,18 @@ If something carries a label, it is a claim. Do not put labelled statements in a
 | At a glance | `incident.json` `figures` |
 | Final verdict | `incident.json` `verdict`, only after the owner approves it |
 
+## The page's three depths
+
+A reader chooses how much to read, and each depth adds to the one before. You do not mark anything for a depth: the build places each part of the data.
+
+| Depth | What it holds | Comes from |
+|---|---|---|
+| The short answer | The plain answer and its evidence label, the latest, how big it is, who is affected, what is known and not known | `answer_group`, the main question, the newest `update_log.csv` row that changed a finding, `size`, `size_basis`, `who_is_affected`, `known`, `not_known` |
+| The full story | The key numbers, then every section in `sections`, in your order | `figures` and `sections` |
+| The evidence | A count of every claim by label, every source, the update log and links to the raw files | `claims.csv`, `sources.csv`, `update_log.csv` |
+
+So write the short-answer fields for someone who will read nothing else: plain words, no source ids, no jargon. Without the page script all three depths show, one after the other.
+
 ## Being found
 
 People type a question into a search box or ask an AI assistant: "is the FAA outage a hack?". The page has to be the obvious answer to that question without reading like bait.

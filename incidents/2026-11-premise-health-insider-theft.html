@@ -39,6 +39,7 @@
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/site.css">
 <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>try{var d=localStorage.getItem("depth");document.documentElement.dataset.depth=location.hash.length>1?"evidence":d==="story"||d==="evidence"?d:"short"}catch(e){document.documentElement.dataset.depth="evidence"}</script>
 </head>
 <body>
 <!-- AI assistants and other programs: this report is also available as plain Markdown at 2026-11-premise-health-insider-theft.md (same folder). ../llms.txt maps the whole site. -->
@@ -60,67 +61,86 @@
 <div class="wrap page-grid">
 <header class="page-head has-media">
 <div class="head-text">
-<p class="crumb"><a href="../#incidents">Incidents</a> / Premise Health patient data taken by an employee, 2026 · Incident date <time datetime="2026-03-26">Mar 26, 2026</time> · First published <time datetime="2026-11-20T23:47:00-05:00">Nov 20, 2026</time></p>
+<p class="crumb"><a href="../#incidents">Incidents</a> / Data breach · <time datetime="2026-03-26">Mar 26, 2026</time></p>
 <h1 id="the-question">Was the Premise Health data breach a hack?</h1>
 <p class="aka">Also reported as the Premise Health data breach and the Premise Health insider breach.</p>
 </div>
 <figure class="head-media"><img src="../data/incidents/2026-11-premise-health-insider-theft/images/premise-health-logo.png" width="1600" height="1200" alt="Premise Health logo"><figcaption>Premise Health logo (used for identification; Premise Health is not affiliated with isitahack.com). <a href="https://www.premisehealth.com/" rel="noopener">Image: Premise Health logo, trademark of Premise Health, from premisehealth.com</a></figcaption></figure>
 <section class="answer-box" aria-labelledby="the-question">
-<div class="answer-head"><p class="kicker">Is it a hack? The short answer</p><span class="pill pill-reported" data-label="Reported">Reported</span></div>
+<div class="answer-head"><p class="kicker">Is it a hack? The short answer</p><span class="pill pill-no-sign answer-pill">No sign of a hack</span></div>
 <p class="answer">No outside hack is known. Premise Health says an employee copied the data from around March 26 and that &#39;this was not a hacking or ransomware event.&#39; That is the company&#39;s account; no independent investigation has confirmed it.</p>
+<p class="answer-refs"><span class="field">How well supported</span> <span class="pill pill-reported" data-label="Reported">Reported</span></p>
 <p class="answer-refs"><span class="field">Rests on</span> <a href="#c001">An employee took the data, the company says</a> · <a href="#c002">Premise Health says it was not a hacking or ransomware event</a></p>
 <p class="answer-note">This is the current answer, not a final verdict. A final verdict is published only after the site's owner has reviewed the evidence.</p>
 </section>
-<p class="byline">By the isitahack.com desk. AI agents research public sources and label each claim; a person decides only the final verdict. <a href="../how-it-works.html">How it works</a></p>
+<p class="byline">By the isitahack.com desk. First published <time datetime="2026-11-20T23:47:00-05:00">Nov 20, 2026</time>. AI agents research public sources and label each claim; a person decides only the final verdict. <a href="../how-it-works.html">How it works</a></p>
 </header>
 <nav class="toc" aria-label="On this page">
 <p class="kicker">On this page</p>
 <ol>
-<li><a href="#glance"><span class="toc-n">01</span><span class="toc-name">At a glance</span></a></li>
-<li><a href="#was-it-a-hack-what-has-been-said"><span class="toc-n">02</span><span class="toc-name">Was it a hack? What has been said</span><span class="count">2</span></a></li>
-<li><a href="#what-caused-it"><span class="toc-n">03</span><span class="toc-name">What caused it?</span><span class="count">2</span></a></li>
-<li><a href="#questions-people-are-asking"><span class="toc-n">04</span><span class="toc-name">Questions people are asking</span><span class="count">8</span></a></li>
-<li><a href="#what-happened"><span class="toc-n">05</span><span class="toc-name">What happened?</span><span class="count">5</span></a></li>
-<li><a href="#timeline-of-the-premise-health-breach"><span class="toc-n">06</span><span class="toc-name">Timeline of the Premise Health breach</span><span class="count">6</span></a></li>
-<li><a href="#is-anyone-suing"><span class="toc-n">07</span><span class="toc-name">Is anyone suing?</span><span class="count">2</span></a></li>
-<li><a href="#who-is-affected-and-what-was-taken"><span class="toc-n">08</span><span class="toc-name">Who is affected, and what was taken?</span><span class="count">7</span></a></li>
-<li><a href="#what-we-checked-and-did-not-find"><span class="toc-n">09</span><span class="toc-name">What we checked and did not find</span></a></li>
-<li><a href="#update-log"><span class="toc-n">10</span><span class="toc-name">Update log</span><span class="count">4</span></a></li>
-<li><a href="#sources"><span class="toc-n">11</span><span class="toc-name">Sources</span><span class="count">9</span></a></li>
+<li class="toc-top"><a href="#the-question"><span class="toc-n">01</span><span class="toc-name">The short answer</span></a></li>
+<li class="toc-top"><a href="#full-story"><span class="toc-n">02</span><span class="toc-name">The full story</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#was-it-a-hack-what-has-been-said"><span class="toc-name">Was it a hack? What has been said</span><span class="count">2</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#what-caused-it"><span class="toc-name">What caused it?</span><span class="count">2</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#questions-people-are-asking"><span class="toc-name">Questions people are asking</span><span class="count">8</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#what-happened"><span class="toc-name">What happened?</span><span class="count">5</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#timeline-of-the-premise-health-breach"><span class="toc-name">Timeline of the Premise Health breach</span><span class="count">6</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#is-anyone-suing"><span class="toc-name">Is anyone suing?</span><span class="count">2</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#who-is-affected-and-what-was-taken"><span class="toc-name">Who is affected, and what was taken?</span><span class="count">7</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#what-we-checked-and-did-not-find"><span class="toc-name">What we checked and did not find</span></a></li>
+<li class="toc-top"><a href="#evidence"><span class="toc-n">03</span><span class="toc-name">The evidence</span></a></li>
+<li class="toc-sub toc-in-evidence"><a href="#update-log"><span class="toc-name">Update log</span><span class="count">4</span></a></li>
+<li class="toc-sub toc-in-evidence"><a href="#sources"><span class="toc-name">Sources</span><span class="count">9</span></a></li>
 </ol>
 </nav>
 <div class="page-main">
-<aside class="note">
-<p><strong>Not verified: initial investigation only.</strong> Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them.</p>
-<p>Made for entertainment using AI. Not endorsed by Premise Health, any government agency, news outlet, company, or anyone else named.</p>
-</aside>
-<section class="block" id="glance">
-<div class="block-head"><span class="sec-n">01</span><h2>At a glance</h2></div>
-<ul class="tiles">
-<li class="tile"><a href="#c010"><span class="tile-value">2.76M</span><span class="tile-label">People affected</span><span class="tile-detail">Company&#39;s filing, Oregon list</span></a></li>
-<li class="tile"><a href="#c006"><span class="tile-value">Mar 26</span><span class="tile-label">Taking began</span><span class="tile-detail">On or about, per the company</span></a></li>
-<li class="tile"><a href="#c005"><span class="tile-value">Sep 18</span><span class="tile-label">Discovered</span><span class="tile-detail">Access revoked that day</span></a></li>
-</ul>
-<div class="known-grid">
-<div class="known"><h3>Known so far</h3><ul>
+<div class="depth-switch" role="group" aria-label="How much do you want to read?">
+<p class="kicker">How much do you want to read?</p>
+<div class="depth-picks">
+<button type="button" data-depth="short" aria-pressed="false"><b>The short answer</b><span>Is it a hack, how big, and who it affects</span></button>
+<button type="button" data-depth="story" aria-pressed="false"><b>The full story</b><span>Adds the timeline and every claim</span></button>
+<button type="button" data-depth="evidence" aria-pressed="false"><b>The evidence</b><span>Adds every source and every update</span></button>
+</div>
+</div>
+
+<section class="depth depth-short" aria-label="The short answer, continued">
+<div class="brief">
+<div class="brief-item latest"><h2 class="kicker accent">The latest · <time datetime="2026-11-21T07:08:00-05:00">Nov 21, 2026, 7:08 AM ET</time></h2><p class="latest-headline">One lawsuit alleges an outside hack but offers no evidence beyond the company&#39;s own notice, which says it was an employee.</p></div>
+<div class="brief-item"><h2 class="kicker">How big is it?</h2><p><strong>Large.</strong> About 2.76 million people across the US, per the company&#39;s state filing, with Social Security numbers and health details for many. Care itself was not disrupted.</p></div>
+<div class="brief-item"><h2 class="kicker">Who is affected?</h2><p>People whose data Premise Health held, mostly members of employer-sponsored health centers. Those affected are getting letters from Nov 6, 2026.</p></div>
+</div>
+<div class="known-grid" id="glance">
+<div class="known"><h2>Known so far</h2><ul>
 <li>Premise Health says an employee misappropriated company data starting on or about March 26, 2026. <a class="ref" href="#c001">evidence</a></li>
 <li>The company says it was not a hacking or ransomware event. <a class="ref" href="#c002">evidence</a></li>
 <li>It was found on Sept 18, 2026; the employee was fired and the case reported to law enforcement. <a class="ref" href="#c004">evidence</a></li>
 <li>About 2.76 million people are affected, per the company&#39;s filing listed by Oregon. <a class="ref" href="#c010">evidence</a></li>
 <li>The data may include names, birth dates, Social Security numbers, insurance and treatment information. <a class="ref" href="#c012">evidence</a></li>
 </ul></div>
-<div class="not-known"><h3>Not known yet</h3><ul>
+<div class="not-known"><h2>Not known yet</h2><ul>
 <li>Why the employee took the data, or where it went.</li>
 <li>Whether any of it has been misused.</li>
 <li>Why Oregon&#39;s listing ends the breach dates on March 30.</li>
 <li>Whether law enforcement has taken any action.</li>
 </ul></div>
 </div>
+<aside class="note">
+<p><strong>Not verified: initial investigation only.</strong> Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them.</p>
+<p>Made for entertainment using AI. Not endorsed by Premise Health, any government agency, news outlet, company, or anyone else named.</p>
+</aside>
+<p class="keep-going keep-story"><button type="button" class="button" data-depth="story">Keep going: the full story</button><span class="meta">The key numbers, the timeline and 18 claims, each with a label saying how well it is supported.</span></p>
 </section>
 
+<section class="depth depth-story" id="full-story" data-level="story">
+<div class="depth-head"><span class="sec-n">02</span><h2>The full story</h2><p class="meta">What happened and what has been said about it. Every claim carries a label, and opens to show its sources.</p></div>
+<ul class="tiles" id="numbers">
+<li class="tile"><a href="#c010"><span class="tile-value">2.76M</span><span class="tile-label">People affected</span><span class="tile-detail">Company&#39;s filing, Oregon list</span></a></li>
+<li class="tile"><a href="#c006"><span class="tile-value">Mar 26</span><span class="tile-label">Taking began</span><span class="tile-detail">On or about, per the company</span></a></li>
+<li class="tile"><a href="#c005"><span class="tile-value">Sep 18</span><span class="tile-label">Discovered</span><span class="tile-detail">Access revoked that day</span></a></li>
+</ul>
 <section class="block" id="was-it-a-hack-what-has-been-said">
 <details class="fold" open>
-<summary><span class="sec-n">02</span><h2>Was it a hack? What has been said</h2><span class="count">2</span></summary>
+<summary><h3>Was it a hack? What has been said</h3><span class="count">2</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c001">
@@ -153,7 +173,7 @@
 
 <section class="block" id="what-caused-it">
 <details class="fold" open>
-<summary><span class="sec-n">03</span><h2>What caused it?</h2><span class="count">2</span></summary>
+<summary><h3>What caused it?</h3><span class="count">2</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c003">
@@ -188,7 +208,7 @@
 
 <section class="block" id="questions-people-are-asking">
 <details class="fold" open>
-<summary><span class="sec-n">04</span><h2>Questions people are asking</h2><span class="count">8</span></summary>
+<summary><h3>Questions people are asking</h3><span class="count">8</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="q001">
@@ -255,7 +275,7 @@
 
 <section class="block" id="what-happened">
 <details class="fold" open>
-<summary><span class="sec-n">05</span><h2>What happened?</h2><span class="count">5</span></summary>
+<summary><h3>What happened?</h3><span class="count">5</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c005">
@@ -323,7 +343,7 @@
 
 <section class="block" id="timeline-of-the-premise-health-breach">
 <details class="fold">
-<summary><span class="sec-n">06</span><h2>Timeline of the Premise Health breach</h2><span class="count">6</span></summary>
+<summary><h3>Timeline of the Premise Health breach</h3><span class="count">6</span></summary>
 <div class="fold-body">
 <p class="meta">Times are 2026. Each row opens to show its evidence and source.</p>
 <div class="rows rows-timeline">
@@ -412,7 +432,7 @@
 
 <section class="block" id="is-anyone-suing">
 <details class="fold">
-<summary><span class="sec-n">07</span><h2>Is anyone suing?</h2><span class="count">2</span></summary>
+<summary><h3>Is anyone suing?</h3><span class="count">2</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c017">
@@ -445,7 +465,7 @@
 
 <section class="block" id="who-is-affected-and-what-was-taken">
 <details class="fold">
-<summary><span class="sec-n">08</span><h2>Who is affected, and what was taken?</h2><span class="count">7</span></summary>
+<summary><h3>Who is affected, and what was taken?</h3><span class="count">7</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c010">
@@ -536,7 +556,7 @@
 
 <section class="block" id="what-we-checked-and-did-not-find">
 <details class="fold">
-<summary><span class="sec-n">09</span><h2>What we checked and did not find</h2></summary>
+<summary><h3>What we checked and did not find</h3></summary>
 <div class="fold-body">
 <div class="prose">
 <p>We looked for these and did not find them as of 7:08 AM ET on Nov 21, 2026.</p>
@@ -554,10 +574,38 @@
 </div>
 </details>
 </section>
+<p class="keep-going keep-evidence"><button type="button" class="button" data-depth="evidence">Keep going: the evidence</button><span class="meta">9 sources and 4 dated updates.</span></p>
+</section>
+
+<section class="depth depth-evidence" id="evidence" data-level="evidence">
+<div class="depth-head"><span class="sec-n">03</span><h2>The evidence</h2><p class="meta">Everything this page rests on. Every claim cites a source, and every change is dated.</p></div>
+<div class="evidence">
+<p class="kicker">Every claim on this page, by label · 18</p>
+<div class="evidence-bar" role="img" aria-label="Confirmed 16, Unverified 1, Not established 1"><span class="seg seg-confirmed" style="flex-grow:16"></span><span class="seg seg-unverified" style="flex-grow:1"></span><span class="seg seg-not-established" style="flex-grow:1"></span></div>
+<ul class="evidence-key"><li><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span class="count">16</span></li><li><span class="pill pill-unverified" data-label="Unverified">Unverified</span><span class="count">1</span></li><li><span class="pill pill-not-established" data-label="Not established">Not established</span><span class="count">1</span></li></ul>
+</div>
+<section class="block" id="sources">
+<details class="fold">
+<summary><h3>Sources</h3><span class="count">9</span></summary>
+<div class="fold-body">
+<ol class="source-lines numbered">
+<li><a href="https://www.premisehealth.com/notice-of-data-security-incident/" rel="noopener">Premise Health: Notice of Data Security Incident (company website)</a> <span class="meta">Official source</span></li>
+<li><a href="https://agportal-s3bucket.s3.amazonaws.com/databreach/BreachA43681.pdf" rel="noopener">Premise Health sample notice letter filed with the Washington Attorney General (Nov 6)</a> <span class="meta">Official source · Nov 6, 2026</span></li>
+<li><a href="https://justice.oregon.gov/consumer/databreach/" rel="noopener">Oregon Department of Justice: data breach notifications list (Premise Health entry)</a> <span class="meta">Official source · Nov 6, 2026</span></li>
+<li><a href="https://www.atg.wa.gov/data-breach-notifications" rel="noopener">Washington Attorney General: data breach notifications list (Premise Health entry)</a> <span class="meta">Official source · Nov 6, 2026</span></li>
+<li><a href="https://www.hipaajournal.com/premise-health-telecare-corp-enara-health-data-breaches/" rel="noopener">The HIPAA Journal: Insider data theft incident reported by Premise Health</a> <span class="meta">News outlet · Nov 11, 2026</span></li>
+<li><a href="https://www.healthcareinfosecurity.com/premise-health-insider-breach-could-affect-millions-a-33377" rel="noopener">Healthcare Info Security (ISMG): Premise Health insider breach could affect millions</a> <span class="meta">News outlet · Nov 12, 2026</span></li>
+<li><a href="https://www.courtlistener.com/?q=%22Premise+Health+Holding%22&amp;type=r&amp;order_by=dateFiled+desc" rel="noopener">CourtListener (RECAP archive): federal court dockets naming Premise Health Holding Corp. as defendant, M.D. Tenn.</a> <span class="meta">Official source · Nov 20, 2026</span></li>
+<li><a href="https://dockets.justia.com/docket/tennessee/tnmdce/3:2026cv01819/112822" rel="noopener">Justia Dockets: case 3:26-cv-01819 against Premise Health Holding Corp. (M.D. Tenn., filed Nov 11)</a> <span class="meta">Official source · Nov 11, 2026</span></li>
+<li><a href="https://storage.courtlistener.com/recap/gov.uscourts.tnmd.112854/gov.uscourts.tnmd.112854.1.0.pdf" rel="noopener">Class action complaint, case 3:26-cv-01843 v. Premise Health Holding Corp. (M.D. Tenn., Nov 13), CourtListener RECAP</a> <span class="meta">Official source · Nov 13, 2026</span></li>
+</ol>
+</div>
+</details>
+</section>
 
 <section class="block" id="update-log">
 <details class="fold">
-<summary><span class="sec-n">10</span><h2>Update log</h2><span class="count">4</span></summary>
+<summary><h3>Update log</h3><span class="count">4</span></summary>
 <div class="fold-body">
 <p class="meta">Every check and change, newest first.</p>
 <ol class="log">
@@ -581,24 +629,11 @@
 </div>
 </details>
 </section>
-
-<section class="block" id="sources">
-<details class="fold">
-<summary><span class="sec-n">11</span><h2>Sources</h2><span class="count">9</span></summary>
-<div class="fold-body">
-<ol class="source-lines numbered">
-<li><a href="https://www.premisehealth.com/notice-of-data-security-incident/" rel="noopener">Premise Health: Notice of Data Security Incident (company website)</a> <span class="meta">Official source</span></li>
-<li><a href="https://agportal-s3bucket.s3.amazonaws.com/databreach/BreachA43681.pdf" rel="noopener">Premise Health sample notice letter filed with the Washington Attorney General (Nov 6)</a> <span class="meta">Official source · Nov 6, 2026</span></li>
-<li><a href="https://justice.oregon.gov/consumer/databreach/" rel="noopener">Oregon Department of Justice: data breach notifications list (Premise Health entry)</a> <span class="meta">Official source · Nov 6, 2026</span></li>
-<li><a href="https://www.atg.wa.gov/data-breach-notifications" rel="noopener">Washington Attorney General: data breach notifications list (Premise Health entry)</a> <span class="meta">Official source · Nov 6, 2026</span></li>
-<li><a href="https://www.hipaajournal.com/premise-health-telecare-corp-enara-health-data-breaches/" rel="noopener">The HIPAA Journal: Insider data theft incident reported by Premise Health</a> <span class="meta">News outlet · Nov 11, 2026</span></li>
-<li><a href="https://www.healthcareinfosecurity.com/premise-health-insider-breach-could-affect-millions-a-33377" rel="noopener">Healthcare Info Security (ISMG): Premise Health insider breach could affect millions</a> <span class="meta">News outlet · Nov 12, 2026</span></li>
-<li><a href="https://www.courtlistener.com/?q=%22Premise+Health+Holding%22&amp;type=r&amp;order_by=dateFiled+desc" rel="noopener">CourtListener (RECAP archive): federal court dockets naming Premise Health Holding Corp. as defendant, M.D. Tenn.</a> <span class="meta">Official source · Nov 20, 2026</span></li>
-<li><a href="https://dockets.justia.com/docket/tennessee/tnmdce/3:2026cv01819/112822" rel="noopener">Justia Dockets: case 3:26-cv-01819 against Premise Health Holding Corp. (M.D. Tenn., filed Nov 11)</a> <span class="meta">Official source · Nov 11, 2026</span></li>
-<li><a href="https://storage.courtlistener.com/recap/gov.uscourts.tnmd.112854/gov.uscourts.tnmd.112854.1.0.pdf" rel="noopener">Class action complaint, case 3:26-cv-01843 v. Premise Health Holding Corp. (M.D. Tenn., Nov 13), CourtListener RECAP</a> <span class="meta">Official source · Nov 13, 2026</span></li>
-</ol>
-</div>
-</details>
+<section class="raw-files" id="raw-files">
+<h3>The raw files</h3>
+<p>For people and programs that want the data itself. Nothing on this page exists only here.</p>
+<p class="raw-links"><a href="2026-11-premise-health-insider-theft.md">This report as Markdown</a><a href="https://github.com/primeobsession/isitahack-dot-com/tree/main/data/incidents/2026-11-premise-health-insider-theft" rel="noopener">The data folder on GitHub</a><a href="https://github.com/primeobsession/isitahack-dot-com/commits/main/data/incidents/2026-11-premise-health-insider-theft" rel="noopener">Every change to this page</a></p>
+</section>
 </section>
 <footer class="page-foot">
 <p><a href="2026-11-premise-health-insider-theft.md">Markdown version</a><a href="https://github.com/primeobsession/isitahack-dot-com/commits/main/data/incidents/2026-11-premise-health-insider-theft" rel="noopener">Edit history</a><a href="../about.html#contact">Report an error</a></p>
@@ -607,23 +642,13 @@
 </div>
 <aside class="side" aria-label="Summary and other incidents">
 <div class="side-facts">
-<section class="side-block latest">
-<p class="kicker accent">The latest · <time datetime="2026-11-21T07:08:00-05:00">Nov 21, 2026, 7:08 AM ET</time></p>
-<p class="latest-headline">One lawsuit alleges an outside hack but offers no evidence beyond the company&#39;s own notice, which says it was an employee.</p>
-<p><a href="#update-log">All 4 updates</a></p>
-</section>
-<section class="side-block">
-<dl class="reach">
-<div><dt>Size</dt><dd><strong>Large.</strong> About 2.76 million people across the US, per the company&#39;s state filing, with Social Security numbers and health details for many. Care itself was not disrupted.</dd></div>
-<div><dt>Who is affected</dt><dd>People whose data Premise Health held, mostly members of employer-sponsored health centers. Those affected are getting letters from Nov 6, 2026.</dd></div>
-</dl>
-</section>
 <section class="side-block">
 <div class="evidence">
 <p class="kicker">Was it a hack? What has been said · 2</p>
 <div class="evidence-bar" role="img" aria-label="Confirmed 2"><span class="seg seg-confirmed" style="flex-grow:2"></span></div>
 <ul class="evidence-key"><li><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span class="count">2</span></li></ul>
 </div>
+<p><a href="../how-it-works.html">What the labels mean</a></p>
 </section>
 </div>
 <div class="side-more">
@@ -661,6 +686,6 @@
 </nav>
 </div>
 </footer>
-<script>(function(){var r=document.documentElement,b=document.querySelector(".theme-toggle");function cur(){return r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function paint(){var d=cur()==="dark";b.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme");b.setAttribute("aria-pressed",d?"true":"false")}if(b){b.hidden=false;paint();b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}paint()})}function reveal(){var id=decodeURIComponent(location.hash.slice(1));var el=id&&document.getElementById(id);if(!el)return;for(var p=el;p;p=p.parentElement)if(p.tagName==="DETAILS")p.open=true;el.scrollIntoView()}addEventListener("hashchange",reveal);reveal();var links=[].slice.call(document.querySelectorAll(".toc a"));if(links.length&&"IntersectionObserver"in window){var seen={};var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id]=e.isIntersecting});var on=null;links.forEach(function(a){var id=a.getAttribute("href").slice(1);if(!on&&seen[id])on=a});if(on)links.forEach(function(a){if(a===on)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")})},{rootMargin:"-10% 0px -60% 0px"});links.forEach(function(a){var s=document.getElementById(a.getAttribute("href").slice(1));if(s)io.observe(s)})}})();</script>
+<script>(function(){var r=document.documentElement,b=document.querySelector(".theme-toggle");function cur(){return r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function paint(){var d=cur()==="dark";b.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme");b.setAttribute("aria-pressed",d?"true":"false")}if(b){b.hidden=false;paint();b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}paint()})}var sw=document.querySelector(".depth-switch"),RANK={short:0,story:1,evidence:2};function setDepth(d,keep){if(!sw)return;r.dataset.depth=d;[].forEach.call(sw.querySelectorAll("button"),function(x){x.setAttribute("aria-pressed",x.getAttribute("data-depth")===d?"true":"false")});if(keep)try{localStorage.setItem("depth",d)}catch(e){}}if(sw){setDepth(r.dataset.depth||"evidence");document.addEventListener("click",function(e){var x=e.target.closest&&e.target.closest("button[data-depth]");if(x)setDepth(x.getAttribute("data-depth"),true)})}function reveal(){var id=decodeURIComponent(location.hash.slice(1));var el=id&&document.getElementById(id);if(!el)return;for(var p=el;p;p=p.parentElement){if(p.tagName==="DETAILS")p.open=true;var lv=p.getAttribute&&p.getAttribute("data-level");if(lv&&RANK[lv]>RANK[r.dataset.depth||"evidence"])setDepth(lv)}el.scrollIntoView()}addEventListener("hashchange",reveal);reveal();document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(a&&a.getAttribute("href")===location.hash)reveal()});var links=[].slice.call(document.querySelectorAll(".toc a"));if(links.length&&"IntersectionObserver"in window){var seen={};var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id]=e.isIntersecting});var on=null;links.forEach(function(a){var id=a.getAttribute("href").slice(1);if(!on&&seen[id])on=a});if(on)links.forEach(function(a){if(a===on)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")})},{rootMargin:"-10% 0px -60% 0px"});links.forEach(function(a){var s=document.getElementById(a.getAttribute("href").slice(1));if(s)io.observe(s)})}})();</script>
 </body>
 </html>

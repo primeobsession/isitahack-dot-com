@@ -74,7 +74,7 @@ Shared `<head>` snippet inserted verbatim into every generated page. It holds th
 
 ## Page scripts
 
-Two small inline scripts, both optional: one applies a stored light or dark choice before the page paints, the other wires up the theme toggle, opens a collapsed row when a link points at it, and marks the section being read in an incident page's contents list. With JavaScript off the toggle stays hidden, the page follows the system theme, and everything is readable.
+Small inline scripts, all optional. In the head, one applies a stored light or dark choice before the page paints, and on an incident page another applies how deep the reader last chose to read (the short answer by default; everything when the address points at a place on the page). At the end of the body, one wires up the theme toggle and the reading-depth switch, opens a collapsed row (and the depth it sits in) when a link points at it, and marks the section being read in an incident page's contents list. The home page has its own for search, the kind-of-incident filter and folding long groups. With JavaScript off the toggle and the depth switch stay hidden, the page follows the system theme, every depth of an incident shows and every incident is listed.
 
 ## Not built yet
 

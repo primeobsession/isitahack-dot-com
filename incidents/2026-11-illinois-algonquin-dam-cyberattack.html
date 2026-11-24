@@ -39,6 +39,7 @@
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/site.css">
 <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>try{var d=localStorage.getItem("depth");document.documentElement.dataset.depth=location.hash.length>1?"evidence":d==="story"||d==="evidence"?d:"short"}catch(e){document.documentElement.dataset.depth="evidence"}</script>
 </head>
 <body>
 <!-- AI assistants and other programs: this report is also available as plain Markdown at 2026-11-illinois-algonquin-dam-cyberattack.md (same folder). ../llms.txt maps the whole site. -->
@@ -60,63 +61,82 @@
 <div class="wrap page-grid">
 <header class="page-head has-media">
 <div class="head-text">
-<p class="crumb"><a href="../#incidents">Incidents</a> / Algonquin Dam apparent cyberattack, Nov 16, 2026 · Incident date <time datetime="2026-11-16">Nov 16, 2026</time> · First published <time datetime="2026-11-21T05:13:25-05:00">Nov 21, 2026</time></p>
+<p class="crumb"><a href="../#incidents">Incidents</a> / Attack · <time datetime="2026-11-16">Nov 16, 2026</time></p>
 <h1 id="the-question">Was the Algonquin Dam on the Fox River hacked?</h1>
 <p class="aka">Also reported as the Algonquin Dam hack and Fox River dam cyberattack.</p>
 </div>
 <figure class="head-media"><img src="../data/incidents/2026-11-illinois-algonquin-dam-cyberattack/images/illinois-dnr-logo.png" width="1600" height="1200" alt="Illinois Department of Natural Resources logo"><figcaption>Illinois Department of Natural Resources logo (used for identification; the Illinois Department of Natural Resources is not affiliated with isitahack.com). <a href="https://dnr.illinois.gov/" rel="noopener">Image: Illinois Department of Natural Resources logo, from dnr.illinois.gov</a></figcaption></figure>
 <section class="answer-box" aria-labelledby="the-question">
-<div class="answer-head"><p class="kicker">Is it a hack? The short answer</p><span class="pill pill-reported" data-label="Reported">Reported</span></div>
+<div class="answer-head"><p class="kicker">Is it a hack? The short answer</p><span class="pill pill-reported answer-pill">Reported as a hack</span></div>
 <p class="answer">Illinois DNR calls it an “apparent cyberattack”, an attempt at unauthorized access that staff blocked, and says the dam kept running. It has given no technical detail, so the attack itself is not independently shown.</p>
+<p class="answer-refs"><span class="field">How well supported</span> <span class="pill pill-reported" data-label="Reported">Reported</span></p>
 <p class="answer-refs"><span class="field">Rests on</span> <a href="#c001">Illinois DNR says staff spotted an “apparent cyberattack”, an attempt at unauthorized access, at the Algonquin Dam on Monday, Nov 16</a> · <a href="#c003">IDNR says staff blocked unauthorized access and the dam kept operating</a> · <a href="#c008">Attackers gained access to the dam&#39;s control or operating systems</a></p>
 <p class="answer-note">This is the current answer, not a final verdict. A final verdict is published only after the site's owner has reviewed the evidence.</p>
 </section>
-<p class="byline">By the isitahack.com desk. AI agents research public sources and label each claim; a person decides only the final verdict. <a href="../how-it-works.html">How it works</a></p>
+<p class="byline">By the isitahack.com desk. First published <time datetime="2026-11-21T05:13:25-05:00">Nov 21, 2026</time>. AI agents research public sources and label each claim; a person decides only the final verdict. <a href="../how-it-works.html">How it works</a></p>
 </header>
 <nav class="toc" aria-label="On this page">
 <p class="kicker">On this page</p>
 <ol>
-<li><a href="#glance"><span class="toc-n">01</span><span class="toc-name">At a glance</span></a></li>
-<li><a href="#was-it-a-hack-what-has-been-said"><span class="toc-n">02</span><span class="toc-name">Was it a hack? What has been said</span><span class="count">3</span></a></li>
-<li><a href="#questions-people-are-asking"><span class="toc-n">03</span><span class="toc-name">Questions people are asking</span><span class="count">5</span></a></li>
-<li><a href="#what-happened"><span class="toc-n">04</span><span class="toc-name">What happened?</span><span class="count">2</span></a></li>
-<li><a href="#timeline-of-the-algonquin-dam-incident"><span class="toc-n">05</span><span class="toc-name">Timeline of the Algonquin Dam incident</span><span class="count">4</span></a></li>
-<li><a href="#effect-on-the-dam"><span class="toc-n">06</span><span class="toc-name">Effect on the dam</span><span class="count">3</span></a></li>
-<li><a href="#related-but-separate"><span class="toc-n">07</span><span class="toc-name">Related, but separate</span><span class="count">3</span></a></li>
-<li><a href="#what-we-checked-and-did-not-find"><span class="toc-n">08</span><span class="toc-name">What we checked and did not find</span></a></li>
-<li><a href="#update-log"><span class="toc-n">09</span><span class="toc-name">Update log</span><span class="count">2</span></a></li>
-<li><a href="#sources"><span class="toc-n">10</span><span class="toc-name">Sources</span><span class="count">8</span></a></li>
+<li class="toc-top"><a href="#the-question"><span class="toc-n">01</span><span class="toc-name">The short answer</span></a></li>
+<li class="toc-top"><a href="#full-story"><span class="toc-n">02</span><span class="toc-name">The full story</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#was-it-a-hack-what-has-been-said"><span class="toc-name">Was it a hack? What has been said</span><span class="count">3</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#questions-people-are-asking"><span class="toc-name">Questions people are asking</span><span class="count">5</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#what-happened"><span class="toc-name">What happened?</span><span class="count">2</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#timeline-of-the-algonquin-dam-incident"><span class="toc-name">Timeline of the Algonquin Dam incident</span><span class="count">4</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#effect-on-the-dam"><span class="toc-name">Effect on the dam</span><span class="count">3</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#related-but-separate"><span class="toc-name">Related, but separate</span><span class="count">3</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#what-we-checked-and-did-not-find"><span class="toc-name">What we checked and did not find</span></a></li>
+<li class="toc-top"><a href="#evidence"><span class="toc-n">03</span><span class="toc-name">The evidence</span></a></li>
+<li class="toc-sub toc-in-evidence"><a href="#update-log"><span class="toc-name">Update log</span><span class="count">2</span></a></li>
+<li class="toc-sub toc-in-evidence"><a href="#sources"><span class="toc-name">Sources</span><span class="count">8</span></a></li>
 </ol>
 </nav>
 <div class="page-main">
-<aside class="note">
-<p><strong>Not verified: initial investigation only.</strong> Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them.</p>
-<p>Made for entertainment using AI. Not endorsed by the Illinois Department of Natural Resources, CISA, any news outlet, government agency, company, or anyone else named.</p>
-</aside>
-<section class="block" id="glance">
-<div class="block-head"><span class="sec-n">01</span><h2>At a glance</h2></div>
-<ul class="tiles">
-<li class="tile"><a href="#c001"><span class="tile-value">Nov 16</span><span class="tile-label">Date it was spotted</span><span class="tile-detail">Announced Friday, Nov 20</span></a></li>
-<li class="tile"><a href="#c004"><span class="tile-value">4</span><span class="tile-label">Agencies helping IDNR</span><span class="tile-detail">Three state, plus CISA</span></a></li>
-</ul>
-<div class="known-grid">
-<div class="known"><h3>Known so far</h3><ul>
+<div class="depth-switch" role="group" aria-label="How much do you want to read?">
+<p class="kicker">How much do you want to read?</p>
+<div class="depth-picks">
+<button type="button" data-depth="short" aria-pressed="false"><b>The short answer</b><span>Is it a hack, how big, and who it affects</span></button>
+<button type="button" data-depth="story" aria-pressed="false"><b>The full story</b><span>Adds the timeline and every claim</span></button>
+<button type="button" data-depth="evidence" aria-pressed="false"><b>The evidence</b><span>Adds every source and every update</span></button>
+</div>
+</div>
+
+<section class="depth depth-short" aria-label="The short answer, continued">
+<div class="brief">
+<div class="brief-item latest"><h2 class="kicker accent">The latest · <time datetime="2026-11-21T05:37:15-05:00">Nov 21, 2026, 5:37 AM ET</time></h2><p class="latest-headline">The Chicago Tribune&#39;s first report adds no new detail. IDNR still has not said who was behind it or whether any system was reached.</p></div>
+<div class="brief-item"><h2 class="kicker">How big is it?</h2><p><strong>Local.</strong> A small dam in McHenry County, Illinois. IDNR says staff blocked access and it kept operating. No effect on river levels or the public has been reported. Several state agencies and CISA are investigating.</p></div>
+<div class="brief-item"><h2 class="kicker">Who is affected?</h2><p>No one is reported affected. Residents near the Fox River need do nothing. IDNR says the dam stayed secure and fully operational.</p></div>
+</div>
+<div class="known-grid" id="glance">
+<div class="known"><h2>Known so far</h2><ul>
 <li>Illinois DNR announced on Friday, Nov 20 that it is investigating an apparent cyberattack at the dam, with state police, IEMA, Illinois DoIT and CISA helping. <a class="ref" href="#c002">evidence</a></li>
 <li>IDNR says it has no indication the incident is connected to other recent cyber events or nationwide outages. <a class="ref" href="#c005">evidence</a></li>
 <li>The White House said on Nov 18 that it sees no indication of a cyberattack behind recent tech outages. It does not mention the dam. <a class="ref" href="#c010">evidence</a></li>
 </ul></div>
-<div class="not-known"><h3>Not known yet</h3><ul>
+<div class="not-known"><h2>Not known yet</h2><ul>
 <li>Who did it, and how. No one has said.</li>
 <li>Whether any dam system was actually reached. IDNR says access was blocked.</li>
 <li>Whether it connects to the outages of recent weeks. IDNR says no indication.</li>
 <li>Whether investigators will publish findings.</li>
 </ul></div>
 </div>
+<aside class="note">
+<p><strong>Not verified: initial investigation only.</strong> Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them.</p>
+<p>Made for entertainment using AI. Not endorsed by the Illinois Department of Natural Resources, CISA, any news outlet, government agency, company, or anyone else named.</p>
+</aside>
+<p class="keep-going keep-story"><button type="button" class="button" data-depth="story">Keep going: the full story</button><span class="meta">The key numbers, the timeline and 11 claims, each with a label saying how well it is supported.</span></p>
 </section>
 
+<section class="depth depth-story" id="full-story" data-level="story">
+<div class="depth-head"><span class="sec-n">02</span><h2>The full story</h2><p class="meta">What happened and what has been said about it. Every claim carries a label, and opens to show its sources.</p></div>
+<ul class="tiles" id="numbers">
+<li class="tile"><a href="#c001"><span class="tile-value">Nov 16</span><span class="tile-label">Date it was spotted</span><span class="tile-detail">Announced Friday, Nov 20</span></a></li>
+<li class="tile"><a href="#c004"><span class="tile-value">4</span><span class="tile-label">Agencies helping IDNR</span><span class="tile-detail">Three state, plus CISA</span></a></li>
+</ul>
 <section class="block" id="was-it-a-hack-what-has-been-said">
 <details class="fold" open>
-<summary><span class="sec-n">02</span><h2>Was it a hack? What has been said</h2><span class="count">3</span></summary>
+<summary><h3>Was it a hack? What has been said</h3><span class="count">3</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c001">
@@ -168,7 +188,7 @@
 
 <section class="block" id="questions-people-are-asking">
 <details class="fold" open>
-<summary><span class="sec-n">03</span><h2>Questions people are asking</h2><span class="count">5</span></summary>
+<summary><h3>Questions people are asking</h3><span class="count">5</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="q001">
@@ -217,7 +237,7 @@
 
 <section class="block" id="what-happened">
 <details class="fold" open>
-<summary><span class="sec-n">04</span><h2>What happened?</h2><span class="count">2</span></summary>
+<summary><h3>What happened?</h3><span class="count">2</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c002">
@@ -257,7 +277,7 @@
 
 <section class="block" id="timeline-of-the-algonquin-dam-incident">
 <details class="fold">
-<summary><span class="sec-n">05</span><h2>Timeline of the Algonquin Dam incident</h2><span class="count">4</span></summary>
+<summary><h3>Timeline of the Algonquin Dam incident</h3><span class="count">4</span></summary>
 <div class="fold-body">
 <p class="meta">Times are Eastern. Each row opens to show its evidence and source.</p>
 <div class="rows rows-timeline">
@@ -330,7 +350,7 @@
 
 <section class="block" id="effect-on-the-dam">
 <details class="fold">
-<summary><span class="sec-n">06</span><h2>Effect on the dam</h2><span class="count">3</span></summary>
+<summary><h3>Effect on the dam</h3><span class="count">3</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c003">
@@ -377,7 +397,7 @@
 
 <section class="block" id="related-but-separate">
 <details class="fold">
-<summary><span class="sec-n">07</span><h2>Related, but separate</h2><span class="count">3</span></summary>
+<summary><h3>Related, but separate</h3><span class="count">3</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c005">
@@ -427,7 +447,7 @@
 
 <section class="block" id="what-we-checked-and-did-not-find">
 <details class="fold">
-<summary><span class="sec-n">08</span><h2>What we checked and did not find</h2></summary>
+<summary><h3>What we checked and did not find</h3></summary>
 <div class="fold-body">
 <div class="prose">
 <p>We looked for these and did not find them as of Nov 21, 2026, 5:37 AM ET.</p>
@@ -443,10 +463,37 @@
 </div>
 </details>
 </section>
+<p class="keep-going keep-evidence"><button type="button" class="button" data-depth="evidence">Keep going: the evidence</button><span class="meta">8 sources and 2 dated updates.</span></p>
+</section>
+
+<section class="depth depth-evidence" id="evidence" data-level="evidence">
+<div class="depth-head"><span class="sec-n">03</span><h2>The evidence</h2><p class="meta">Everything this page rests on. Every claim cites a source, and every change is dated.</p></div>
+<div class="evidence">
+<p class="kicker">Every claim on this page, by label · 11</p>
+<div class="evidence-bar" role="img" aria-label="Confirmed 4, Reported 4, Not established 3"><span class="seg seg-confirmed" style="flex-grow:4"></span><span class="seg seg-reported" style="flex-grow:4"></span><span class="seg seg-not-established" style="flex-grow:3"></span></div>
+<ul class="evidence-key"><li><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span class="count">4</span></li><li><span class="pill pill-reported" data-label="Reported">Reported</span><span class="count">4</span></li><li><span class="pill pill-not-established" data-label="Not established">Not established</span><span class="count">3</span></li></ul>
+</div>
+<section class="block" id="sources">
+<details class="fold">
+<summary><h3>Sources</h3><span class="count">8</span></summary>
+<div class="fold-body">
+<ol class="source-lines numbered">
+<li><a href="https://www.cbsnews.com/chicago/news/algonquin-dam-fox-river-cyberattack/" rel="noopener">CBS Chicago: Illinois officials investigating “apparent cyberattack” on Monday at Algonquin Dam on Fox River</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
+<li><a href="https://abc7chicago.com/post/illinois-department-natural-resources-investigating-apparent-cyberattack-attempt-algonquin-dam-fox-river/20061537/" rel="noopener">ABC7 Chicago: IDNR investigating apparent cyberattack attempt at Algonquin Dam on Fox River</a> <span class="meta">News outlet · Nov 21, 2026</span></li>
+<li><a href="https://www.shawlocal.com/northwest-herald/2026/11/21/idnr-investigates-apparent-cyberattack-at-algonquin-dam-on-fox-river/" rel="noopener">Shaw Local: IDNR investigates ‘apparent cyberattack’ at Algonquin Dam (quotes IDNR release)</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
+<li><a href="https://gizmodo.com/illinois-officials-investigating-cyberattack-at-algonquin-dam-2000843422" rel="noopener">Gizmodo: Illinois Officials Investigating Cyberattack at Algonquin Dam</a> <span class="meta">News outlet · Nov 21, 2026</span></li>
+<li><a href="https://www.hindustantimes.com/world-news/us-news/illinois-investigates-apparent-cyberattack-on-algonquin-dam-on-fox-river-101795231315136.html" rel="noopener">Hindustan Times: Illinois investigates apparent cyberattack on Algonquin Dam on Fox River</a> <span class="meta">Researcher or analysis · Nov 21, 2026</span></li>
+<li><a href="https://www.whitehouse.gov/releases/2026/11/no-indication-of-a-cyberattack-dni-clayton-and-secretary-rubio-on-recent-tech-outages/" rel="noopener">The White House: “No Indication of a Cyberattack” on recent tech outages</a> <span class="meta">Official source · Nov 18, 2026</span></li>
+<li><a href="https://www.chicagotribune.com/2026/11/20/state-officials-investigating-attempted-cyberattack-on-algonquin-dam/" rel="noopener">Chicago Tribune: State officials investigating attempted cyberattack on Algonquin Dam</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
+<li><a href="https://dnr.illinois.gov/waterresources/strattonlockanddam.html" rel="noopener">Illinois DNR Office of Water Resources: Stratton Lock and Dam, public information for Stratton and Algonquin Dams</a> <span class="meta">Official source</span></li>
+</ol>
+</div>
+</details>
+</section>
 
 <section class="block" id="update-log">
 <details class="fold">
-<summary><span class="sec-n">09</span><h2>Update log</h2><span class="count">2</span></summary>
+<summary><h3>Update log</h3><span class="count">2</span></summary>
 <div class="fold-body">
 <p class="meta">Every check and change, newest first.</p>
 <ol class="log">
@@ -462,23 +509,11 @@
 </div>
 </details>
 </section>
-
-<section class="block" id="sources">
-<details class="fold">
-<summary><span class="sec-n">10</span><h2>Sources</h2><span class="count">8</span></summary>
-<div class="fold-body">
-<ol class="source-lines numbered">
-<li><a href="https://www.cbsnews.com/chicago/news/algonquin-dam-fox-river-cyberattack/" rel="noopener">CBS Chicago: Illinois officials investigating “apparent cyberattack” on Monday at Algonquin Dam on Fox River</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
-<li><a href="https://abc7chicago.com/post/illinois-department-natural-resources-investigating-apparent-cyberattack-attempt-algonquin-dam-fox-river/20061537/" rel="noopener">ABC7 Chicago: IDNR investigating apparent cyberattack attempt at Algonquin Dam on Fox River</a> <span class="meta">News outlet · Nov 21, 2026</span></li>
-<li><a href="https://www.shawlocal.com/northwest-herald/2026/11/21/idnr-investigates-apparent-cyberattack-at-algonquin-dam-on-fox-river/" rel="noopener">Shaw Local: IDNR investigates ‘apparent cyberattack’ at Algonquin Dam (quotes IDNR release)</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
-<li><a href="https://gizmodo.com/illinois-officials-investigating-cyberattack-at-algonquin-dam-2000843422" rel="noopener">Gizmodo: Illinois Officials Investigating Cyberattack at Algonquin Dam</a> <span class="meta">News outlet · Nov 21, 2026</span></li>
-<li><a href="https://www.hindustantimes.com/world-news/us-news/illinois-investigates-apparent-cyberattack-on-algonquin-dam-on-fox-river-101795231315136.html" rel="noopener">Hindustan Times: Illinois investigates apparent cyberattack on Algonquin Dam on Fox River</a> <span class="meta">Researcher or analysis · Nov 21, 2026</span></li>
-<li><a href="https://www.whitehouse.gov/releases/2026/11/no-indication-of-a-cyberattack-dni-clayton-and-secretary-rubio-on-recent-tech-outages/" rel="noopener">The White House: “No Indication of a Cyberattack” on recent tech outages</a> <span class="meta">Official source · Nov 18, 2026</span></li>
-<li><a href="https://www.chicagotribune.com/2026/11/20/state-officials-investigating-attempted-cyberattack-on-algonquin-dam/" rel="noopener">Chicago Tribune: State officials investigating attempted cyberattack on Algonquin Dam</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
-<li><a href="https://dnr.illinois.gov/waterresources/strattonlockanddam.html" rel="noopener">Illinois DNR Office of Water Resources: Stratton Lock and Dam, public information for Stratton and Algonquin Dams</a> <span class="meta">Official source</span></li>
-</ol>
-</div>
-</details>
+<section class="raw-files" id="raw-files">
+<h3>The raw files</h3>
+<p>For people and programs that want the data itself. Nothing on this page exists only here.</p>
+<p class="raw-links"><a href="2026-11-illinois-algonquin-dam-cyberattack.md">This report as Markdown</a><a href="https://github.com/primeobsession/isitahack-dot-com/tree/main/data/incidents/2026-11-illinois-algonquin-dam-cyberattack" rel="noopener">The data folder on GitHub</a><a href="https://github.com/primeobsession/isitahack-dot-com/commits/main/data/incidents/2026-11-illinois-algonquin-dam-cyberattack" rel="noopener">Every change to this page</a></p>
+</section>
 </section>
 <footer class="page-foot">
 <p><a href="2026-11-illinois-algonquin-dam-cyberattack.md">Markdown version</a><a href="https://github.com/primeobsession/isitahack-dot-com/commits/main/data/incidents/2026-11-illinois-algonquin-dam-cyberattack" rel="noopener">Edit history</a><a href="../about.html#contact">Report an error</a></p>
@@ -487,23 +522,13 @@
 </div>
 <aside class="side" aria-label="Summary and other incidents">
 <div class="side-facts">
-<section class="side-block latest">
-<p class="kicker accent">The latest · <time datetime="2026-11-21T05:37:15-05:00">Nov 21, 2026, 5:37 AM ET</time></p>
-<p class="latest-headline">The Chicago Tribune&#39;s first report adds no new detail. IDNR still has not said who was behind it or whether any system was reached.</p>
-<p><a href="#update-log">All 2 updates</a></p>
-</section>
-<section class="side-block">
-<dl class="reach">
-<div><dt>Size</dt><dd><strong>Local.</strong> A small dam in McHenry County, Illinois. IDNR says staff blocked access and it kept operating. No effect on river levels or the public has been reported. Several state agencies and CISA are investigating.</dd></div>
-<div><dt>Who is affected</dt><dd>No one is reported affected. Residents near the Fox River need do nothing. IDNR says the dam stayed secure and fully operational.</dd></div>
-</dl>
-</section>
 <section class="side-block">
 <div class="evidence">
 <p class="kicker">Was it a hack? What has been said · 3</p>
 <div class="evidence-bar" role="img" aria-label="Reported 1, Not established 2"><span class="seg seg-reported" style="flex-grow:1"></span><span class="seg seg-not-established" style="flex-grow:2"></span></div>
 <ul class="evidence-key"><li><span class="pill pill-reported" data-label="Reported">Reported</span><span class="count">1</span></li><li><span class="pill pill-not-established" data-label="Not established">Not established</span><span class="count">2</span></li></ul>
 </div>
+<p><a href="../how-it-works.html">What the labels mean</a></p>
 </section>
 </div>
 <div class="side-more">
@@ -541,6 +566,6 @@
 </nav>
 </div>
 </footer>
-<script>(function(){var r=document.documentElement,b=document.querySelector(".theme-toggle");function cur(){return r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function paint(){var d=cur()==="dark";b.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme");b.setAttribute("aria-pressed",d?"true":"false")}if(b){b.hidden=false;paint();b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}paint()})}function reveal(){var id=decodeURIComponent(location.hash.slice(1));var el=id&&document.getElementById(id);if(!el)return;for(var p=el;p;p=p.parentElement)if(p.tagName==="DETAILS")p.open=true;el.scrollIntoView()}addEventListener("hashchange",reveal);reveal();var links=[].slice.call(document.querySelectorAll(".toc a"));if(links.length&&"IntersectionObserver"in window){var seen={};var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id]=e.isIntersecting});var on=null;links.forEach(function(a){var id=a.getAttribute("href").slice(1);if(!on&&seen[id])on=a});if(on)links.forEach(function(a){if(a===on)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")})},{rootMargin:"-10% 0px -60% 0px"});links.forEach(function(a){var s=document.getElementById(a.getAttribute("href").slice(1));if(s)io.observe(s)})}})();</script>
+<script>(function(){var r=document.documentElement,b=document.querySelector(".theme-toggle");function cur(){return r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function paint(){var d=cur()==="dark";b.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme");b.setAttribute("aria-pressed",d?"true":"false")}if(b){b.hidden=false;paint();b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}paint()})}var sw=document.querySelector(".depth-switch"),RANK={short:0,story:1,evidence:2};function setDepth(d,keep){if(!sw)return;r.dataset.depth=d;[].forEach.call(sw.querySelectorAll("button"),function(x){x.setAttribute("aria-pressed",x.getAttribute("data-depth")===d?"true":"false")});if(keep)try{localStorage.setItem("depth",d)}catch(e){}}if(sw){setDepth(r.dataset.depth||"evidence");document.addEventListener("click",function(e){var x=e.target.closest&&e.target.closest("button[data-depth]");if(x)setDepth(x.getAttribute("data-depth"),true)})}function reveal(){var id=decodeURIComponent(location.hash.slice(1));var el=id&&document.getElementById(id);if(!el)return;for(var p=el;p;p=p.parentElement){if(p.tagName==="DETAILS")p.open=true;var lv=p.getAttribute&&p.getAttribute("data-level");if(lv&&RANK[lv]>RANK[r.dataset.depth||"evidence"])setDepth(lv)}el.scrollIntoView()}addEventListener("hashchange",reveal);reveal();document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(a&&a.getAttribute("href")===location.hash)reveal()});var links=[].slice.call(document.querySelectorAll(".toc a"));if(links.length&&"IntersectionObserver"in window){var seen={};var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id]=e.isIntersecting});var on=null;links.forEach(function(a){var id=a.getAttribute("href").slice(1);if(!on&&seen[id])on=a});if(on)links.forEach(function(a){if(a===on)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")})},{rootMargin:"-10% 0px -60% 0px"});links.forEach(function(a){var s=document.getElementById(a.getAttribute("href").slice(1));if(s)io.observe(s)})}})();</script>
 </body>
 </html>

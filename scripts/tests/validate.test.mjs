@@ -180,6 +180,18 @@ test("the build is repeatable and writes the pages search engines need", () => {
     // pictures: a photograph where the incident has one, the drawn plate where it does not
     assert.match(page, /<figure class="head-media"><img src="\.\.\/data\/incidents\/[^"]+\/images\/water-tower\.png"[^>]*><figcaption>Image: isitahack\.com<\/figcaption>/);
     assert.match(page, /<meta property="og:image" content="https:\/\/isitahack\.com\/data\/incidents\/[^"]+\/images\/water-tower\.png">/);
+    // the page reads at three depths, and every depth is in the page itself, so it is all
+    // there without the script: the short answer, the full story, the evidence
+    assert.match(page, /<div class="answer-head"><p class="kicker">Is it a hack\? The short answer<\/p><span class="pill pill-no-sign answer-pill">No sign of a hack<\/span><\/div>/, "the plain answer leads the answer box");
+    assert.match(page, /<span class="field">How well supported<\/span> <span class="pill pill-unverified"/, "the evidence label follows it");
+    const depthAt = (cls) => page.indexOf(`<section class="depth ${cls}"`);
+    assert.ok(depthAt("depth-short") > 0 && depthAt("depth-short") < depthAt("depth-story") && depthAt("depth-story") < depthAt("depth-evidence"), "the three depths come in order");
+    const storyPart = page.slice(depthAt("depth-story"), depthAt("depth-evidence")), evidencePart = page.slice(depthAt("depth-evidence"));
+    assert.match(page.slice(depthAt("depth-short"), depthAt("depth-story")), /<h2>Known so far<\/h2>[\s\S]*<h2>Not known yet<\/h2>/, "the short answer says what is and is not known");
+    assert.match(storyPart, /<details class="row" id="c001"/, "claims are part of the full story");
+    assert.match(evidencePart, /id="sources"[\s\S]*id="update-log"[\s\S]*id="raw-files"/, "sources, the update log and the raw files are the evidence");
+    assert.equal(page.match(/<button type="button" data-depth="(short|story|evidence)" aria-pressed="false">/g).length, 3, "the switch offers the three depths");
+    assert.doesNotMatch(page, /<html[^>]*data-depth/, "nothing is hidden until the script says how deep to read");
     const home = readFileSync(join(a, "index.html"), "utf8");
     // the home page lists every incident once, as a row under its plain answer
     const listed = JSON.parse(readFileSync(join(a, "index.json"), "utf8")).incidents;

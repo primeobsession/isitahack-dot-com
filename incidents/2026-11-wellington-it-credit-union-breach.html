@@ -39,6 +39,7 @@
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/site.css">
 <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>try{var d=localStorage.getItem("depth");document.documentElement.dataset.depth=location.hash.length>1?"evidence":d==="story"||d==="evidence"?d:"short"}catch(e){document.documentElement.dataset.depth="evidence"}</script>
 </head>
 <body>
 <!-- AI assistants and other programs: this report is also available as plain Markdown at 2026-11-wellington-it-credit-union-breach.md (same folder). ../llms.txt maps the whole site. -->
@@ -60,50 +61,56 @@
 <div class="wrap page-grid">
 <header class="page-head has-media">
 <div class="head-text">
-<p class="crumb"><a href="../#incidents">Incidents</a> / Wellington IT credit union breach, Nov 2026 · Incident date <time datetime="2026-10-02">Oct 2, 2026</time> · First published <time datetime="2026-11-22T06:17:00-05:00">Nov 22, 2026</time></p>
+<p class="crumb"><a href="../#incidents">Incidents</a> / Data breach · <time datetime="2026-10-02">Oct 2, 2026</time></p>
 <h1 id="the-question">Was the Wellington IT credit union breach a hack?</h1>
 <p class="aka">Also reported as the Irish credit union data breach and the CU Online breach.</p>
 </div>
 <figure class="head-media"><img src="../data/incidents/2026-11-wellington-it-credit-union-breach/images/irish-credit-union-branch.jpg" width="1920" height="1362" alt="A small white single-storey credit union branch with a blue sign and canopy over its entrance, behind a low wall, railings and shrubs."><figcaption>A credit union branch in Inniskeen, County Monaghan, Ireland. It is not known to be one of the affected credit unions. <a href="https://commons.wikimedia.org/wiki/File:The_Inniskeen_branch_of_the_Inniskeen_Credit_Union_-_geograph.org.uk_-_5008861.jpg" rel="noopener">Image: Eric Jones, CC BY-SA 2.0, via Wikimedia Commons</a></figcaption></figure>
 <section class="answer-box" aria-labelledby="the-question">
-<div class="answer-head"><p class="kicker">Is it a hack? The short answer</p><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></div>
+<div class="answer-head"><p class="kicker">Is it a hack? The short answer</p><span class="pill pill-confirmed answer-pill">Says it was hacked</span></div>
 <p class="answer">Yes: an outside party got unauthorised access to saved-payee details on Wellington IT&#39;s banking platform, per the department, Wellington IT and the credit union league. Money taken and the attacker are not established.</p>
+<p class="answer-refs"><span class="field">How well supported</span> <span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span></p>
 <p class="answer-refs"><span class="field">Rests on</span> <a href="#c001">Hackers got unauthorised access to saved-payee data on Wellington IT&#39;s platform</a> · <a href="#c002">Saved-payee details of credit union app users were exposed</a></p>
 <p class="answer-note">This is the current answer, not a final verdict. A final verdict is published only after the site's owner has reviewed the evidence.</p>
 </section>
-<p class="byline">By the isitahack.com desk. AI agents research public sources and label each claim; a person decides only the final verdict. <a href="../how-it-works.html">How it works</a></p>
+<p class="byline">By the isitahack.com desk. First published <time datetime="2026-11-22T06:17:00-05:00">Nov 22, 2026</time>. AI agents research public sources and label each claim; a person decides only the final verdict. <a href="../how-it-works.html">How it works</a></p>
 </header>
 <nav class="toc" aria-label="On this page">
 <p class="kicker">On this page</p>
 <ol>
-<li><a href="#glance"><span class="toc-n">01</span><span class="toc-name">At a glance</span></a></li>
-<li><a href="#was-it-a-hack-what-has-been-said"><span class="toc-n">02</span><span class="toc-name">Was it a hack? What has been said</span><span class="count">1</span></a></li>
-<li><a href="#how-did-they-get-in"><span class="toc-n">03</span><span class="toc-name">How did they get in?</span><span class="count">3</span></a></li>
-<li><a href="#questions-people-are-asking"><span class="toc-n">04</span><span class="toc-name">Questions people are asking</span><span class="count">6</span></a></li>
-<li><a href="#what-happened"><span class="toc-n">05</span><span class="toc-name">What happened?</span><span class="count">6</span></a></li>
-<li><a href="#timeline-of-the-credit-union-breach"><span class="toc-n">06</span><span class="toc-name">Timeline of the credit union breach</span><span class="count">8</span></a></li>
-<li><a href="#what-data-was-involved"><span class="toc-n">07</span><span class="toc-name">What data was involved?</span><span class="count">7</span></a></li>
-<li><a href="#related"><span class="toc-n">08</span><span class="toc-name">Related</span><span class="count">5</span></a></li>
-<li><a href="#what-we-checked-and-did-not-find"><span class="toc-n">09</span><span class="toc-name">What we checked and did not find</span></a></li>
-<li><a href="#update-log"><span class="toc-n">10</span><span class="toc-name">Update log</span><span class="count">11</span></a></li>
-<li><a href="#sources"><span class="toc-n">11</span><span class="toc-name">Sources</span><span class="count">36</span></a></li>
+<li class="toc-top"><a href="#the-question"><span class="toc-n">01</span><span class="toc-name">The short answer</span></a></li>
+<li class="toc-top"><a href="#full-story"><span class="toc-n">02</span><span class="toc-name">The full story</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#was-it-a-hack-what-has-been-said"><span class="toc-name">Was it a hack? What has been said</span><span class="count">1</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#how-did-they-get-in"><span class="toc-name">How did they get in?</span><span class="count">3</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#questions-people-are-asking"><span class="toc-name">Questions people are asking</span><span class="count">6</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#what-happened"><span class="toc-name">What happened?</span><span class="count">6</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#timeline-of-the-credit-union-breach"><span class="toc-name">Timeline of the credit union breach</span><span class="count">8</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#what-data-was-involved"><span class="toc-name">What data was involved?</span><span class="count">7</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#related"><span class="toc-name">Related</span><span class="count">5</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#what-we-checked-and-did-not-find"><span class="toc-name">What we checked and did not find</span></a></li>
+<li class="toc-top"><a href="#evidence"><span class="toc-n">03</span><span class="toc-name">The evidence</span></a></li>
+<li class="toc-sub toc-in-evidence"><a href="#update-log"><span class="toc-name">Update log</span><span class="count">11</span></a></li>
+<li class="toc-sub toc-in-evidence"><a href="#sources"><span class="toc-name">Sources</span><span class="count">36</span></a></li>
 </ol>
 </nav>
 <div class="page-main">
-<aside class="note">
-<p><strong>Not verified: initial investigation only.</strong> Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them.</p>
-<p>Made for entertainment using AI. Not endorsed by Wellington IT, the Department of Finance, RTÉ, The Record, The Register, The Irish Times, the Irish Examiner, BleepingComputer, TheJournal.ie, North East Credit Union or any other credit union, any government agency, news outlet, company, or anyone else named.</p>
-</aside>
-<section class="block" id="glance">
-<div class="block-head"><span class="sec-n">01</span><h2>At a glance</h2></div>
-<ul class="tiles">
-<li class="tile"><a href="#c004"><span class="tile-value">43</span><span class="tile-label">Credit unions affected</span><span class="tile-detail">Of about 170, per the league and credit union notices</span></a></li>
-<li class="tile"><a href="#c006"><span class="tile-value">1.4M</span><span class="tile-label">Malicious requests</span><span class="tile-detail">Oct 2 to 4, per the league; Wellington&#39;s letter says about 5M</span></a></li>
-<li class="tile"><a href="#c007"><span class="tile-value">Oct 6</span><span class="tile-label">Vulnerability closed</span><span class="tile-detail">Per the league and credit unions&#39; notices</span></a></li>
-<li class="tile"><a href="#c008"><span class="tile-value">Nov 16</span><span class="tile-label">Credit unions told</span><span class="tile-detail">Six weeks after the activity</span></a></li>
-</ul>
-<div class="known-grid">
-<div class="known"><h3>Known so far</h3><ul>
+<div class="depth-switch" role="group" aria-label="How much do you want to read?">
+<p class="kicker">How much do you want to read?</p>
+<div class="depth-picks">
+<button type="button" data-depth="short" aria-pressed="false"><b>The short answer</b><span>Is it a hack, how big, and who it affects</span></button>
+<button type="button" data-depth="story" aria-pressed="false"><b>The full story</b><span>Adds the timeline and every claim</span></button>
+<button type="button" data-depth="evidence" aria-pressed="false"><b>The evidence</b><span>Adds every source and every update</span></button>
+</div>
+</div>
+
+<section class="depth depth-short" aria-label="The short answer, continued">
+<div class="brief">
+<div class="brief-item latest"><h2 class="kicker accent">The latest · <time datetime="2026-11-22T15:58:00-05:00">Nov 22, 2026, 3:58 PM ET</time></h2><p class="latest-headline">A credit union that stopped using Wellington IT about six years ago says some of its old payee data is included.</p></div>
+<div class="brief-item"><h2 class="kicker">How big is it?</h2><p><strong>Large.</strong> About 40 to 43 Irish credit unions, roughly a quarter of the country&#39;s, are affected; outlets say potentially hundreds of thousands of app users. No exact count yet.</p></div>
+<div class="brief-item"><h2 class="kicker">Who is affected?</h2><p>Members of about 40 Irish credit unions who use the credit union banking app or online banking. Their saved payees&#39; details were exposed; their own balances and logins were not, per Wellington.</p></div>
+</div>
+<div class="known-grid" id="glance">
+<div class="known"><h2>Known so far</h2><ul>
 <li>An outside party got unauthorised access to saved-payee details on Wellington IT&#39;s platform. <a class="ref" href="#c001">evidence</a></li>
 <li>Only payee details for users of credit union mobile banking apps are involved, per the Department of Finance. <a class="ref" href="#c002">evidence</a></li>
 <li>Payee names, IBANs, BICs, addresses and payment references may have been accessed, per a credit union&#39;s own notice. <a class="ref" href="#c003">evidence</a></li>
@@ -111,18 +118,31 @@
 <li>The Department of Finance first learned of the incident on Nov 17. <a class="ref" href="#c009">evidence</a></li>
 <li>Wellington IT spotted the possible breach on Nov 15 and told credit unions on Nov 16. <a class="ref" href="#c008">evidence</a></li>
 </ul></div>
-<div class="not-known"><h3>Not known yet</h3><ul>
+<div class="not-known"><h2>Not known yet</h2><ul>
 <li>Whether any money was taken. <a class="ref" href="#q003">open question</a></li>
 <li>Who the attacker was. <a class="ref" href="#q004">open question</a></li>
 <li>How many members are affected. <a class="ref" href="#q005">open question</a></li>
 <li>How the attacker got in. <a class="ref" href="#q006">open question</a></li>
 </ul></div>
 </div>
+<aside class="note">
+<p><strong>Not verified: initial investigation only.</strong> Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them.</p>
+<p>Made for entertainment using AI. Not endorsed by Wellington IT, the Department of Finance, RTÉ, The Record, The Register, The Irish Times, the Irish Examiner, BleepingComputer, TheJournal.ie, North East Credit Union or any other credit union, any government agency, news outlet, company, or anyone else named.</p>
+</aside>
+<p class="keep-going keep-story"><button type="button" class="button" data-depth="story">Keep going: the full story</button><span class="meta">The key numbers, the timeline and 22 claims, each with a label saying how well it is supported.</span></p>
 </section>
 
+<section class="depth depth-story" id="full-story" data-level="story">
+<div class="depth-head"><span class="sec-n">02</span><h2>The full story</h2><p class="meta">What happened and what has been said about it. Every claim carries a label, and opens to show its sources.</p></div>
+<ul class="tiles" id="numbers">
+<li class="tile"><a href="#c004"><span class="tile-value">43</span><span class="tile-label">Credit unions affected</span><span class="tile-detail">Of about 170, per the league and credit union notices</span></a></li>
+<li class="tile"><a href="#c006"><span class="tile-value">1.4M</span><span class="tile-label">Malicious requests</span><span class="tile-detail">Oct 2 to 4, per the league; Wellington&#39;s letter says about 5M</span></a></li>
+<li class="tile"><a href="#c007"><span class="tile-value">Oct 6</span><span class="tile-label">Vulnerability closed</span><span class="tile-detail">Per the league and credit unions&#39; notices</span></a></li>
+<li class="tile"><a href="#c008"><span class="tile-value">Nov 16</span><span class="tile-label">Credit unions told</span><span class="tile-detail">Six weeks after the activity</span></a></li>
+</ul>
 <section class="block" id="was-it-a-hack-what-has-been-said">
 <details class="fold" open>
-<summary><span class="sec-n">02</span><h2>Was it a hack? What has been said</h2><span class="count">1</span></summary>
+<summary><h3>Was it a hack? What has been said</h3><span class="count">1</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c001">
@@ -146,7 +166,7 @@
 
 <section class="block" id="how-did-they-get-in">
 <details class="fold" open>
-<summary><span class="sec-n">03</span><h2>How did they get in?</h2><span class="count">3</span></summary>
+<summary><h3>How did they get in?</h3><span class="count">3</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c013">
@@ -194,7 +214,7 @@
 
 <section class="block" id="questions-people-are-asking">
 <details class="fold" open>
-<summary><span class="sec-n">04</span><h2>Questions people are asking</h2><span class="count">6</span></summary>
+<summary><h3>Questions people are asking</h3><span class="count">6</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="q001">
@@ -250,7 +270,7 @@
 
 <section class="block" id="what-happened">
 <details class="fold" open>
-<summary><span class="sec-n">05</span><h2>What happened?</h2><span class="count">6</span></summary>
+<summary><h3>What happened?</h3><span class="count">6</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c006">
@@ -356,7 +376,7 @@
 
 <section class="block" id="timeline-of-the-credit-union-breach">
 <details class="fold">
-<summary><span class="sec-n">06</span><h2>Timeline of the credit union breach</h2><span class="count">8</span></summary>
+<summary><h3>Timeline of the credit union breach</h3><span class="count">8</span></summary>
 <div class="fold-body">
 <p class="meta">Times are UTC+01:00. Each row opens to show its evidence and source.</p>
 <div class="rows rows-timeline">
@@ -524,7 +544,7 @@
 
 <section class="block" id="what-data-was-involved">
 <details class="fold">
-<summary><span class="sec-n">07</span><h2>What data was involved?</h2><span class="count">7</span></summary>
+<summary><h3>What data was involved?</h3><span class="count">7</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c002">
@@ -681,7 +701,7 @@
 
 <section class="block" id="related">
 <details class="fold">
-<summary><span class="sec-n">08</span><h2>Related</h2><span class="count">5</span></summary>
+<summary><h3>Related</h3><span class="count">5</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c010">
@@ -753,7 +773,7 @@
 
 <section class="block" id="what-we-checked-and-did-not-find">
 <details class="fold">
-<summary><span class="sec-n">09</span><h2>What we checked and did not find</h2></summary>
+<summary><h3>What we checked and did not find</h3></summary>
 <div class="fold-body">
 <div class="prose">
 <p>We looked for these and did not find them as of the time of this report on Nov 22, 2026.</p>
@@ -770,10 +790,65 @@
 </div>
 </details>
 </section>
+<p class="keep-going keep-evidence"><button type="button" class="button" data-depth="evidence">Keep going: the evidence</button><span class="meta">36 sources and 11 dated updates.</span></p>
+</section>
+
+<section class="depth depth-evidence" id="evidence" data-level="evidence">
+<div class="depth-head"><span class="sec-n">03</span><h2>The evidence</h2><p class="meta">Everything this page rests on. Every claim cites a source, and every change is dated.</p></div>
+<div class="evidence">
+<p class="kicker">Every claim on this page, by label · 22</p>
+<div class="evidence-bar" role="img" aria-label="Confirmed 13, Reported 5, Not established 4"><span class="seg seg-confirmed" style="flex-grow:13"></span><span class="seg seg-reported" style="flex-grow:5"></span><span class="seg seg-not-established" style="flex-grow:4"></span></div>
+<ul class="evidence-key"><li><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span class="count">13</span></li><li><span class="pill pill-reported" data-label="Reported">Reported</span><span class="count">5</span></li><li><span class="pill pill-not-established" data-label="Not established">Not established</span><span class="count">4</span></li></ul>
+</div>
+<section class="block" id="sources">
+<details class="fold">
+<summary><h3>Sources</h3><span class="count">36</span></summary>
+<div class="fold-body">
+<ol class="source-lines numbered">
+<li><a href="https://www.gov.ie/en/department-of-finance/press-releases/statement-from-minister-of-state-robert-troy-following-meeting-with-wellington-it/" rel="noopener">Department of Finance (Ireland): Statement following meeting with Wellington IT (junior finance minister)</a> <span class="meta">Official source · Nov 19, 2026</span></li>
+<li><a href="https://www.rte.ie/news/2026/1118/1599690-credit-union-data-breach/" rel="noopener">RTÉ News: Credit union breach: What is known and is my money safe?</a> <span class="meta">News outlet · Nov 18, 2026</span></li>
+<li><a href="https://www.rte.ie/news/business/2026/1119/1599774-credit-union-breach/" rel="noopener">RTÉ News: Initial probe by provider didn&#39;t identify breach - ILCU</a> <span class="meta">News outlet · Nov 19, 2026</span></li>
+<li><a href="https://therecord.media/dozens-of-credit-unions-hit-by-supplier-breach" rel="noopener">The Record from Recorded Future News: Dozens of credit unions hit by supplier breach that went unnoticed for six weeks</a> <span class="meta">News outlet · Nov 19, 2026</span></li>
+<li><a href="https://www.theregister.com/security/2026/11/19/cyberattack-on-service-provider-exposes-payee-data-at-40-irish-credit-unions/5310979" rel="noopener">The Register: Cyberattack on service provider exposes payee data at 40 Irish credit unions</a> <span class="meta">News outlet · Nov 19, 2026</span></li>
+<li><a href="https://www.irishtimes.com/crime-law/2026/11/18/credit-union-data-breach-minister-concerned-over-delay-in-disclosing-cyberattack/" rel="noopener">The Irish Times: Credit union data breach: Minister concerned over delay in disclosure of cyberattack</a> <span class="meta">News outlet · Nov 18, 2026</span></li>
+<li><a href="https://northeastcu.ie/news_events/importantmembernotice/" rel="noopener">North East Credit Union: Important Notice to Members (cyber security incident)</a> <span class="meta">Official source · Nov 18, 2026</span></li>
+<li><a href="https://www.irishexaminer.com/news/arid-41938989.html" rel="noopener">Irish Examiner: Dozens of credit unions alerted to potential data breach following cyberattack</a> <span class="meta">News outlet · Nov 18, 2026</span></li>
+<li><a href="https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack/" rel="noopener">BleepingComputer: Data breach impacts 40 Irish credit unions in reported IT provider hack</a> <span class="meta">News outlet · Nov 18, 2026</span></li>
+<li><a href="https://www.thejournal.ie/credit-union-wellington-it-robert-troy-7231923-Nov2026/" rel="noopener">TheJournal.ie: Credit unions seek answers on scale of data breach as IT provider says flaw is fixed</a> <span class="meta">News outlet · Nov 19, 2026</span></li>
+<li><a href="https://capitalcu.ie/important-information-for-members-cybersecurity-incident/" rel="noopener">Capital Credit Union: Important Information for Members: Cybersecurity Incident</a> <span class="meta">Official source · Nov 18, 2026</span></li>
+<li><a href="https://www.wexfordcreditunion.ie/credit-union-news/important-notice-regarding-cu-online-platform-security-incident/" rel="noopener">Wexford Credit Union: Important Notice Regarding CU Online Platform Security Incident</a> <span class="meta">Official source · Nov 18, 2026</span></li>
+<li><a href="https://www.hsscu.ie/important-information-for-members-cybersecurity-incident/" rel="noopener">Health Services Staffs Credit Union: Important Information For Members: Cybersecurity Incident</a> <span class="meta">Official source · Nov 18, 2026</span></li>
+<li><a href="https://www.irishexaminer.com/news/arid-41939598.html" rel="noopener">Irish Examiner: Finance minister warns businesses to be prepared for cyberattacks after potential credit union breach</a> <span class="meta">News outlet · Nov 18, 2026</span></li>
+<li><a href="https://mylimerickcu.ie/important-member-information-cybersecurity-incident/" rel="noopener">Limerick &amp; District Credit Union: Important Member Information: Cybersecurity Incident</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+<li><a href="https://malahidecu.ie/important-information-for-members-cybersecurity-incident/" rel="noopener">Malahide Credit Union: Important Information for Members: Cybersecurity Incident</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+<li><a href="https://stpaulscu.ie/category/news/" rel="noopener">St. Paul&#39;s Garda Credit Union: Important Member Information: Cybersecurity Incident (news listing)</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.ardeecu.ie/news/important-notice-for-members/" rel="noopener">Ardee Credit Union: Important Notice For Members</a> <span class="meta">Official source · Nov 18, 2026</span></li>
+<li><a href="https://www.canacu.ie/news/notice-to-cana-credit-union-members/" rel="noopener">CANA Credit Union: Notice to CANA Credit Union Members</a> <span class="meta">Official source · Nov 18, 2026</span></li>
+<li><a href="https://stcanicescu.ie/important-information-for-members-cybersecurity-incident/" rel="noopener">St. Canice&#39;s Credit Union: Important Information for Members: Cybersecurity Incident</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+<li><a href="https://www.1cu.ie/news/important-information-for-members-cybersecurity-incident/" rel="noopener">First South Credit Union: Important Information for Members: Cybersecurity Incident</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+<li><a href="https://www.irishtimes.com/business/2026/11/19/credit-union-customers-told-by-regulator-to-remain-very-vigilant-after-cyber-attack/" rel="noopener">The Irish Times: Credit union customers told by regulator to remain very vigilant after cyberattack</a> <span class="meta">News outlet · Nov 19, 2026</span></li>
+<li><a href="https://www.phoenixcu.ie/important-update-cybersecurity-incident/" rel="noopener">Phoenix Credit Union: Important Update – Cybersecurity Incident</a> <span class="meta">Official source · Nov 18, 2026</span></li>
+<li><a href="https://www.tullamorecu.ie/cyber-incident/" rel="noopener">Tullamore Credit Union: Cyber Incident – Unauthorised Access to Payee Information</a> <span class="meta">Official source · Nov 18, 2026</span></li>
+<li><a href="https://www.mfcu.ie/app/uploads/2026/11/Important-Notice-to-Members-Cybersecurity-Incident-We-wish-to-make-Members-aware-of-a-recent-cybersecurity-incident-involving-a-technology-provider-used-by-Member-First-and-a-number-of-other-credi.pdf" rel="noopener">Member First Credit Union: Important Notice to Members: Cybersecurity Incident (PDF)</a> <span class="meta">Official source · Nov 18, 2026</span></li>
+<li><a href="https://www.northmidlandscu.ie/news/member-update-on-it-security-incident/" rel="noopener">North Midlands Credit Union: Member update on IT Security Incident</a> <span class="meta">Official source · Nov 18, 2026</span></li>
+<li><a href="https://www.lisduggancu.ie/member-information/unauthorised-access-to-payee-information-notice/" rel="noopener">Lisduggan Credit Union: Unauthorised Access to Payee Information Notice</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.claddaghcu.ie/news/member-update-cyber-incident/" rel="noopener">Claddagh Credit Union: Member Update - Cyber Incident</a> <span class="meta">Official source · Nov 18, 2026</span></li>
+<li><a href="https://www.enniscorthycu.ie/credit-union-news/member-notice-third-party-it-incident/" rel="noopener">Enniscorthy Credit Union: Member Notice - Third-Party IT Incident</a> <span class="meta">Official source · Nov 19, 2026</span></li>
+<li><a href="https://loughcu.ie/important-member-information-cybersecurity-incident/" rel="noopener">The Lough Credit Union: Important Member Information: Cybersecurity Incident</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.nrcu.ie/news/unauthorised-access-to-payee-information/" rel="noopener">New Ross Credit Union: Unauthorised Access to Payee Information</a> <span class="meta">Official source · Nov 18, 2026</span></li>
+<li><a href="https://www.caracreditunion.ie/important-members-notice-potential-third-party-it-security-incident/" rel="noopener">Cara Credit Union: Important Members Notice: Cybersecurity Incident Update</a> <span class="meta">Official source · Nov 18, 2026</span></li>
+<li><a href="https://journicu.ie/important-notice-for-members/" rel="noopener">Journi Credit Union: Important Notice for Members</a> <span class="meta">Official source · Nov 18, 2026</span></li>
+<li><a href="https://corecu.ie/important-notice/" rel="noopener">Core Credit Union: Important Information for Members: Cybersecurity Incident</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+<li><a href="https://www.gatewaycreditunion.ie/important-member-information-cybersecurity-incident/" rel="noopener">Gateway Credit Union: Important Member Information: Cybersecurity Incident</a> <span class="meta">Official source · Nov 17, 2026</span></li>
+<li><a href="https://lifecu.ie/security-incident/" rel="noopener">Life Credit Union: Cyber Security Incident: Update for Members</a> <span class="meta">Official source</span></li>
+</ol>
+</div>
+</details>
+</section>
 
 <section class="block" id="update-log">
 <details class="fold">
-<summary><span class="sec-n">10</span><h2>Update log</h2><span class="count">11</span></summary>
+<summary><h3>Update log</h3><span class="count">11</span></summary>
 <div class="fold-body">
 <p class="meta">Every check and change, newest first.</p>
 <ol class="log">
@@ -828,51 +903,11 @@
 </div>
 </details>
 </section>
-
-<section class="block" id="sources">
-<details class="fold">
-<summary><span class="sec-n">11</span><h2>Sources</h2><span class="count">36</span></summary>
-<div class="fold-body">
-<ol class="source-lines numbered">
-<li><a href="https://www.gov.ie/en/department-of-finance/press-releases/statement-from-minister-of-state-robert-troy-following-meeting-with-wellington-it/" rel="noopener">Department of Finance (Ireland): Statement following meeting with Wellington IT (junior finance minister)</a> <span class="meta">Official source · Nov 19, 2026</span></li>
-<li><a href="https://www.rte.ie/news/2026/1118/1599690-credit-union-data-breach/" rel="noopener">RTÉ News: Credit union breach: What is known and is my money safe?</a> <span class="meta">News outlet · Nov 18, 2026</span></li>
-<li><a href="https://www.rte.ie/news/business/2026/1119/1599774-credit-union-breach/" rel="noopener">RTÉ News: Initial probe by provider didn&#39;t identify breach - ILCU</a> <span class="meta">News outlet · Nov 19, 2026</span></li>
-<li><a href="https://therecord.media/dozens-of-credit-unions-hit-by-supplier-breach" rel="noopener">The Record from Recorded Future News: Dozens of credit unions hit by supplier breach that went unnoticed for six weeks</a> <span class="meta">News outlet · Nov 19, 2026</span></li>
-<li><a href="https://www.theregister.com/security/2026/11/19/cyberattack-on-service-provider-exposes-payee-data-at-40-irish-credit-unions/5310979" rel="noopener">The Register: Cyberattack on service provider exposes payee data at 40 Irish credit unions</a> <span class="meta">News outlet · Nov 19, 2026</span></li>
-<li><a href="https://www.irishtimes.com/crime-law/2026/11/18/credit-union-data-breach-minister-concerned-over-delay-in-disclosing-cyberattack/" rel="noopener">The Irish Times: Credit union data breach: Minister concerned over delay in disclosure of cyberattack</a> <span class="meta">News outlet · Nov 18, 2026</span></li>
-<li><a href="https://northeastcu.ie/news_events/importantmembernotice/" rel="noopener">North East Credit Union: Important Notice to Members (cyber security incident)</a> <span class="meta">Official source · Nov 18, 2026</span></li>
-<li><a href="https://www.irishexaminer.com/news/arid-41938989.html" rel="noopener">Irish Examiner: Dozens of credit unions alerted to potential data breach following cyberattack</a> <span class="meta">News outlet · Nov 18, 2026</span></li>
-<li><a href="https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack/" rel="noopener">BleepingComputer: Data breach impacts 40 Irish credit unions in reported IT provider hack</a> <span class="meta">News outlet · Nov 18, 2026</span></li>
-<li><a href="https://www.thejournal.ie/credit-union-wellington-it-robert-troy-7231923-Nov2026/" rel="noopener">TheJournal.ie: Credit unions seek answers on scale of data breach as IT provider says flaw is fixed</a> <span class="meta">News outlet · Nov 19, 2026</span></li>
-<li><a href="https://capitalcu.ie/important-information-for-members-cybersecurity-incident/" rel="noopener">Capital Credit Union: Important Information for Members: Cybersecurity Incident</a> <span class="meta">Official source · Nov 18, 2026</span></li>
-<li><a href="https://www.wexfordcreditunion.ie/credit-union-news/important-notice-regarding-cu-online-platform-security-incident/" rel="noopener">Wexford Credit Union: Important Notice Regarding CU Online Platform Security Incident</a> <span class="meta">Official source · Nov 18, 2026</span></li>
-<li><a href="https://www.hsscu.ie/important-information-for-members-cybersecurity-incident/" rel="noopener">Health Services Staffs Credit Union: Important Information For Members: Cybersecurity Incident</a> <span class="meta">Official source · Nov 18, 2026</span></li>
-<li><a href="https://www.irishexaminer.com/news/arid-41939598.html" rel="noopener">Irish Examiner: Finance minister warns businesses to be prepared for cyberattacks after potential credit union breach</a> <span class="meta">News outlet · Nov 18, 2026</span></li>
-<li><a href="https://mylimerickcu.ie/important-member-information-cybersecurity-incident/" rel="noopener">Limerick &amp; District Credit Union: Important Member Information: Cybersecurity Incident</a> <span class="meta">Official source · Nov 17, 2026</span></li>
-<li><a href="https://malahidecu.ie/important-information-for-members-cybersecurity-incident/" rel="noopener">Malahide Credit Union: Important Information for Members: Cybersecurity Incident</a> <span class="meta">Official source · Nov 17, 2026</span></li>
-<li><a href="https://stpaulscu.ie/category/news/" rel="noopener">St. Paul&#39;s Garda Credit Union: Important Member Information: Cybersecurity Incident (news listing)</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.ardeecu.ie/news/important-notice-for-members/" rel="noopener">Ardee Credit Union: Important Notice For Members</a> <span class="meta">Official source · Nov 18, 2026</span></li>
-<li><a href="https://www.canacu.ie/news/notice-to-cana-credit-union-members/" rel="noopener">CANA Credit Union: Notice to CANA Credit Union Members</a> <span class="meta">Official source · Nov 18, 2026</span></li>
-<li><a href="https://stcanicescu.ie/important-information-for-members-cybersecurity-incident/" rel="noopener">St. Canice&#39;s Credit Union: Important Information for Members: Cybersecurity Incident</a> <span class="meta">Official source · Nov 17, 2026</span></li>
-<li><a href="https://www.1cu.ie/news/important-information-for-members-cybersecurity-incident/" rel="noopener">First South Credit Union: Important Information for Members: Cybersecurity Incident</a> <span class="meta">Official source · Nov 17, 2026</span></li>
-<li><a href="https://www.irishtimes.com/business/2026/11/19/credit-union-customers-told-by-regulator-to-remain-very-vigilant-after-cyber-attack/" rel="noopener">The Irish Times: Credit union customers told by regulator to remain very vigilant after cyberattack</a> <span class="meta">News outlet · Nov 19, 2026</span></li>
-<li><a href="https://www.phoenixcu.ie/important-update-cybersecurity-incident/" rel="noopener">Phoenix Credit Union: Important Update – Cybersecurity Incident</a> <span class="meta">Official source · Nov 18, 2026</span></li>
-<li><a href="https://www.tullamorecu.ie/cyber-incident/" rel="noopener">Tullamore Credit Union: Cyber Incident – Unauthorised Access to Payee Information</a> <span class="meta">Official source · Nov 18, 2026</span></li>
-<li><a href="https://www.mfcu.ie/app/uploads/2026/11/Important-Notice-to-Members-Cybersecurity-Incident-We-wish-to-make-Members-aware-of-a-recent-cybersecurity-incident-involving-a-technology-provider-used-by-Member-First-and-a-number-of-other-credi.pdf" rel="noopener">Member First Credit Union: Important Notice to Members: Cybersecurity Incident (PDF)</a> <span class="meta">Official source · Nov 18, 2026</span></li>
-<li><a href="https://www.northmidlandscu.ie/news/member-update-on-it-security-incident/" rel="noopener">North Midlands Credit Union: Member update on IT Security Incident</a> <span class="meta">Official source · Nov 18, 2026</span></li>
-<li><a href="https://www.lisduggancu.ie/member-information/unauthorised-access-to-payee-information-notice/" rel="noopener">Lisduggan Credit Union: Unauthorised Access to Payee Information Notice</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.claddaghcu.ie/news/member-update-cyber-incident/" rel="noopener">Claddagh Credit Union: Member Update - Cyber Incident</a> <span class="meta">Official source · Nov 18, 2026</span></li>
-<li><a href="https://www.enniscorthycu.ie/credit-union-news/member-notice-third-party-it-incident/" rel="noopener">Enniscorthy Credit Union: Member Notice - Third-Party IT Incident</a> <span class="meta">Official source · Nov 19, 2026</span></li>
-<li><a href="https://loughcu.ie/important-member-information-cybersecurity-incident/" rel="noopener">The Lough Credit Union: Important Member Information: Cybersecurity Incident</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.nrcu.ie/news/unauthorised-access-to-payee-information/" rel="noopener">New Ross Credit Union: Unauthorised Access to Payee Information</a> <span class="meta">Official source · Nov 18, 2026</span></li>
-<li><a href="https://www.caracreditunion.ie/important-members-notice-potential-third-party-it-security-incident/" rel="noopener">Cara Credit Union: Important Members Notice: Cybersecurity Incident Update</a> <span class="meta">Official source · Nov 18, 2026</span></li>
-<li><a href="https://journicu.ie/important-notice-for-members/" rel="noopener">Journi Credit Union: Important Notice for Members</a> <span class="meta">Official source · Nov 18, 2026</span></li>
-<li><a href="https://corecu.ie/important-notice/" rel="noopener">Core Credit Union: Important Information for Members: Cybersecurity Incident</a> <span class="meta">Official source · Nov 17, 2026</span></li>
-<li><a href="https://www.gatewaycreditunion.ie/important-member-information-cybersecurity-incident/" rel="noopener">Gateway Credit Union: Important Member Information: Cybersecurity Incident</a> <span class="meta">Official source · Nov 17, 2026</span></li>
-<li><a href="https://lifecu.ie/security-incident/" rel="noopener">Life Credit Union: Cyber Security Incident: Update for Members</a> <span class="meta">Official source</span></li>
-</ol>
-</div>
-</details>
+<section class="raw-files" id="raw-files">
+<h3>The raw files</h3>
+<p>For people and programs that want the data itself. Nothing on this page exists only here.</p>
+<p class="raw-links"><a href="2026-11-wellington-it-credit-union-breach.md">This report as Markdown</a><a href="https://github.com/primeobsession/isitahack-dot-com/tree/main/data/incidents/2026-11-wellington-it-credit-union-breach" rel="noopener">The data folder on GitHub</a><a href="https://github.com/primeobsession/isitahack-dot-com/commits/main/data/incidents/2026-11-wellington-it-credit-union-breach" rel="noopener">Every change to this page</a></p>
+</section>
 </section>
 <footer class="page-foot">
 <p><a href="2026-11-wellington-it-credit-union-breach.md">Markdown version</a><a href="https://github.com/primeobsession/isitahack-dot-com/commits/main/data/incidents/2026-11-wellington-it-credit-union-breach" rel="noopener">Edit history</a><a href="../about.html#contact">Report an error</a></p>
@@ -881,23 +916,13 @@
 </div>
 <aside class="side" aria-label="Summary and other incidents">
 <div class="side-facts">
-<section class="side-block latest">
-<p class="kicker accent">The latest · <time datetime="2026-11-22T15:58:00-05:00">Nov 22, 2026, 3:58 PM ET</time></p>
-<p class="latest-headline">A credit union that stopped using Wellington IT about six years ago says some of its old payee data is included.</p>
-<p><a href="#update-log">All 11 updates</a></p>
-</section>
-<section class="side-block">
-<dl class="reach">
-<div><dt>Size</dt><dd><strong>Large.</strong> About 40 to 43 Irish credit unions, roughly a quarter of the country&#39;s, are affected; outlets say potentially hundreds of thousands of app users. No exact count yet.</dd></div>
-<div><dt>Who is affected</dt><dd>Members of about 40 Irish credit unions who use the credit union banking app or online banking. Their saved payees&#39; details were exposed; their own balances and logins were not, per Wellington.</dd></div>
-</dl>
-</section>
 <section class="side-block">
 <div class="evidence">
 <p class="kicker">Was it a hack? What has been said · 1</p>
 <div class="evidence-bar" role="img" aria-label="Confirmed 1"><span class="seg seg-confirmed" style="flex-grow:1"></span></div>
 <ul class="evidence-key"><li><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span class="count">1</span></li></ul>
 </div>
+<p><a href="../how-it-works.html">What the labels mean</a></p>
 </section>
 </div>
 <div class="side-more">
@@ -935,6 +960,6 @@
 </nav>
 </div>
 </footer>
-<script>(function(){var r=document.documentElement,b=document.querySelector(".theme-toggle");function cur(){return r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function paint(){var d=cur()==="dark";b.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme");b.setAttribute("aria-pressed",d?"true":"false")}if(b){b.hidden=false;paint();b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}paint()})}function reveal(){var id=decodeURIComponent(location.hash.slice(1));var el=id&&document.getElementById(id);if(!el)return;for(var p=el;p;p=p.parentElement)if(p.tagName==="DETAILS")p.open=true;el.scrollIntoView()}addEventListener("hashchange",reveal);reveal();var links=[].slice.call(document.querySelectorAll(".toc a"));if(links.length&&"IntersectionObserver"in window){var seen={};var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id]=e.isIntersecting});var on=null;links.forEach(function(a){var id=a.getAttribute("href").slice(1);if(!on&&seen[id])on=a});if(on)links.forEach(function(a){if(a===on)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")})},{rootMargin:"-10% 0px -60% 0px"});links.forEach(function(a){var s=document.getElementById(a.getAttribute("href").slice(1));if(s)io.observe(s)})}})();</script>
+<script>(function(){var r=document.documentElement,b=document.querySelector(".theme-toggle");function cur(){return r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function paint(){var d=cur()==="dark";b.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme");b.setAttribute("aria-pressed",d?"true":"false")}if(b){b.hidden=false;paint();b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}paint()})}var sw=document.querySelector(".depth-switch"),RANK={short:0,story:1,evidence:2};function setDepth(d,keep){if(!sw)return;r.dataset.depth=d;[].forEach.call(sw.querySelectorAll("button"),function(x){x.setAttribute("aria-pressed",x.getAttribute("data-depth")===d?"true":"false")});if(keep)try{localStorage.setItem("depth",d)}catch(e){}}if(sw){setDepth(r.dataset.depth||"evidence");document.addEventListener("click",function(e){var x=e.target.closest&&e.target.closest("button[data-depth]");if(x)setDepth(x.getAttribute("data-depth"),true)})}function reveal(){var id=decodeURIComponent(location.hash.slice(1));var el=id&&document.getElementById(id);if(!el)return;for(var p=el;p;p=p.parentElement){if(p.tagName==="DETAILS")p.open=true;var lv=p.getAttribute&&p.getAttribute("data-level");if(lv&&RANK[lv]>RANK[r.dataset.depth||"evidence"])setDepth(lv)}el.scrollIntoView()}addEventListener("hashchange",reveal);reveal();document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(a&&a.getAttribute("href")===location.hash)reveal()});var links=[].slice.call(document.querySelectorAll(".toc a"));if(links.length&&"IntersectionObserver"in window){var seen={};var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id]=e.isIntersecting});var on=null;links.forEach(function(a){var id=a.getAttribute("href").slice(1);if(!on&&seen[id])on=a});if(on)links.forEach(function(a){if(a===on)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")})},{rootMargin:"-10% 0px -60% 0px"});links.forEach(function(a){var s=document.getElementById(a.getAttribute("href").slice(1));if(s)io.observe(s)})}})();</script>
 </body>
 </html>

@@ -39,6 +39,7 @@
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/site.css">
 <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>try{var d=localStorage.getItem("depth");document.documentElement.dataset.depth=location.hash.length>1?"evidence":d==="story"||d==="evidence"?d:"short"}catch(e){document.documentElement.dataset.depth="evidence"}</script>
 </head>
 <body>
 <!-- AI assistants and other programs: this report is also available as plain Markdown at 2026-11-faa-ground-stop.md (same folder). ../llms.txt maps the whole site. -->
@@ -60,56 +61,92 @@
 <div class="wrap page-grid">
 <header class="page-head has-media">
 <div class="head-text">
-<p class="crumb"><a href="../#incidents">Incidents</a> / FAA nationwide ground stop · Incident date <time datetime="2026-11-13">Nov 13, 2026</time> · First published <time datetime="2026-11-13T18:00:00-05:00">Nov 13, 2026</time></p>
+<p class="crumb"><a href="../#incidents">Incidents</a> / Outage · <time datetime="2026-11-13">Nov 13, 2026</time></p>
 <h1 id="the-question">Was the FAA ground stop a cyberattack?</h1>
 <p class="aka">Also reported as the FAA outage, the air traffic control outage and the nationwide flight grounding.</p>
 </div>
 <figure class="head-media"><img src="../data/incidents/2026-11-faa-ground-stop/images/faa-radar-bennett-colorado.jpg" width="1920" height="1256" alt="A white radar dome on a steel lattice tower beside a small building, standing in a dry field under a pale blue sky."><figcaption>An FAA radar tower near Bennett, Colorado, photographed in 2017. It shows what an FAA radar site looks like and was not involved in this incident. <a href="https://commons.wikimedia.org/wiki/File:FAA_radar_(Bennett,_Colorado).JPG" rel="noopener">Image: Jeffrey Beall, CC BY 4.0, via Wikimedia Commons</a></figcaption></figure>
 <section class="answer-box" aria-labelledby="the-question">
-<div class="answer-head"><p class="kicker">Is it a hack? The short answer</p><span class="pill pill-unverified" data-label="Unverified">Unverified</span></div>
+<div class="answer-head"><p class="kicker">Is it a hack? The short answer</p><span class="pill pill-not-established answer-pill">Still unclear</span></div>
 <p class="answer">Not supported by any public evidence; not formally ruled out. The FAA says it has no indication of a cyberattack, and the root cause is still not determined.</p>
+<p class="answer-refs"><span class="field">How well supported</span> <span class="pill pill-unverified" data-label="Unverified">Unverified</span></p>
 <p class="answer-refs"><span class="field">Rests on</span> <a href="#c007">Cyberattack</a></p>
 <p class="answer-note">This is the current answer, not a final verdict. A final verdict is published only after the site's owner has reviewed the evidence.</p>
 </section>
-<p class="byline">By the isitahack.com desk. AI agents research public sources and label each claim; a person decides only the final verdict. <a href="../how-it-works.html">How it works</a></p>
+<p class="byline">By the isitahack.com desk. First published <time datetime="2026-11-13T18:00:00-05:00">Nov 13, 2026</time>. AI agents research public sources and label each claim; a person decides only the final verdict. <a href="../how-it-works.html">How it works</a></p>
 </header>
 <nav class="toc" aria-label="On this page">
 <p class="kicker">On this page</p>
 <ol>
-<li><a href="#glance"><span class="toc-n">01</span><span class="toc-name">At a glance</span></a></li>
-<li><a href="#what-happened-the-story-so-far"><span class="toc-n">02</span><span class="toc-name">What happened: the story so far</span></a></li>
-<li><a href="#what-caused-it-leading-theories"><span class="toc-n">03</span><span class="toc-name">What caused it? Leading theories</span><span class="count">17</span></a></li>
-<li><a href="#cancellations"><span class="toc-n">04</span><span class="toc-name">How many flights were cancelled?</span></a></li>
-<li><a href="#delays"><span class="toc-n">05</span><span class="toc-name">How many flights were delayed?</span></a></li>
-<li><a href="#arrival-metering"><span class="toc-n">06</span><span class="toc-name">Flights in arrival metering</span></a></li>
-<li><a href="#worst-delays"><span class="toc-n">07</span><span class="toc-name">Which airports had the worst delays?</span><span class="count">5</span></a></li>
-<li><a href="#key-events"><span class="toc-n">08</span><span class="toc-name">Key events</span><span class="count">26</span></a></li>
-<li><a href="#figure-sources"><span class="toc-n">09</span><span class="toc-name">Where the key figures come from</span><span class="count">9</span></a></li>
-<li><a href="#timeline-of-the-faa-ground-stop"><span class="toc-n">10</span><span class="toc-name">Timeline of the FAA ground stop</span><span class="count">124</span></a></li>
-<li><a href="#thread-results"><span class="toc-n">11</span><span class="toc-name">What each line of inquiry found</span><span class="count">10</span></a></li>
-<li><a href="#side-questions-smart-air-current-d-c-national"><span class="toc-n">12</span><span class="toc-name">Side questions: SMART, Air Current, D.C. National</span><span class="count">10</span></a></li>
-<li><a href="#community-search"><span class="toc-n">13</span><span class="toc-name">Search for radio recordings and community reports</span><span class="count">6</span></a></li>
-<li><a href="#radio-exchanges-recovered"><span class="toc-n">14</span><span class="toc-name">Radio exchanges recovered</span></a></li>
-<li><a href="#what-officials-have-said"><span class="toc-n">15</span><span class="toc-name">What officials have said</span></a></li>
-<li><a href="#network-and-carriers"><span class="toc-n">16</span><span class="toc-name">FAA network and carriers</span><span class="count">4</span></a></li>
-<li><a href="#ruled-out"><span class="toc-n">17</span><span class="toc-name">What has been ruled out?</span><span class="count">10</span></a></li>
-<li><a href="#what-is-still-being-checked"><span class="toc-n">18</span><span class="toc-name">What is still being checked?</span></a></li>
-<li><a href="#smart-docs"><span class="toc-n">19</span><span class="toc-name">Public SMART documentation</span><span class="count">5</span></a></li>
-<li><a href="#smart-procurement-record"><span class="toc-n">20</span><span class="toc-name">SMART procurement record</span><span class="count">8</span></a></li>
-<li><a href="#smart-not-found"><span class="toc-n">21</span><span class="toc-name">SMART records looked for and not found</span><span class="count">2</span></a></li>
-<li><a href="#items-not-carried-over-as-labelled-claims"><span class="toc-n">22</span><span class="toc-name">Items not carried over as labelled claims</span></a></li>
-<li><a href="#update-log"><span class="toc-n">23</span><span class="toc-name">Update log</span><span class="count">70</span></a></li>
-<li><a href="#sources"><span class="toc-n">24</span><span class="toc-name">Sources</span><span class="count">274</span></a></li>
+<li class="toc-top"><a href="#the-question"><span class="toc-n">01</span><span class="toc-name">The short answer</span></a></li>
+<li class="toc-top"><a href="#full-story"><span class="toc-n">02</span><span class="toc-name">The full story</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#what-happened-the-story-so-far"><span class="toc-name">What happened: the story so far</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#what-caused-it-leading-theories"><span class="toc-name">What caused it? Leading theories</span><span class="count">17</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#cancellations"><span class="toc-name">How many flights were cancelled?</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#delays"><span class="toc-name">How many flights were delayed?</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#arrival-metering"><span class="toc-name">Flights in arrival metering</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#worst-delays"><span class="toc-name">Which airports had the worst delays?</span><span class="count">5</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#key-events"><span class="toc-name">Key events</span><span class="count">26</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#figure-sources"><span class="toc-name">Where the key figures come from</span><span class="count">9</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#timeline-of-the-faa-ground-stop"><span class="toc-name">Timeline of the FAA ground stop</span><span class="count">124</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#thread-results"><span class="toc-name">What each line of inquiry found</span><span class="count">10</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#side-questions-smart-air-current-d-c-national"><span class="toc-name">Side questions: SMART, Air Current, D.C. National</span><span class="count">10</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#community-search"><span class="toc-name">Search for radio recordings and community reports</span><span class="count">6</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#radio-exchanges-recovered"><span class="toc-name">Radio exchanges recovered</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#what-officials-have-said"><span class="toc-name">What officials have said</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#network-and-carriers"><span class="toc-name">FAA network and carriers</span><span class="count">4</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#ruled-out"><span class="toc-name">What has been ruled out?</span><span class="count">10</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#what-is-still-being-checked"><span class="toc-name">What is still being checked?</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#smart-docs"><span class="toc-name">Public SMART documentation</span><span class="count">5</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#smart-procurement-record"><span class="toc-name">SMART procurement record</span><span class="count">8</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#smart-not-found"><span class="toc-name">SMART records looked for and not found</span><span class="count">2</span></a></li>
+<li class="toc-sub toc-in-story"><a href="#items-not-carried-over-as-labelled-claims"><span class="toc-name">Items not carried over as labelled claims</span></a></li>
+<li class="toc-top"><a href="#evidence"><span class="toc-n">03</span><span class="toc-name">The evidence</span></a></li>
+<li class="toc-sub toc-in-evidence"><a href="#update-log"><span class="toc-name">Update log</span><span class="count">70</span></a></li>
+<li class="toc-sub toc-in-evidence"><a href="#sources"><span class="toc-name">Sources</span><span class="count">274</span></a></li>
 </ol>
 </nav>
 <div class="page-main">
+<div class="depth-switch" role="group" aria-label="How much do you want to read?">
+<p class="kicker">How much do you want to read?</p>
+<div class="depth-picks">
+<button type="button" data-depth="short" aria-pressed="false"><b>The short answer</b><span>Is it a hack, how big, and who it affects</span></button>
+<button type="button" data-depth="story" aria-pressed="false"><b>The full story</b><span>Adds the timeline and every claim</span></button>
+<button type="button" data-depth="evidence" aria-pressed="false"><b>The evidence</b><span>Adds every source and every update</span></button>
+</div>
+</div>
+
+<section class="depth depth-short" aria-label="The short answer, continued">
+<div class="brief">
+<div class="brief-item latest"><h2 class="kicker accent">The latest · <time datetime="2026-11-22T12:20:00-05:00">Nov 22, 2026, 12:20 PM ET</time></h2><p class="latest-headline">The intelligence director told ABC the week&#39;s outages, the FAA&#39;s included, were not coordinated or state-sponsored; cause still pending.</p></div>
+<div class="brief-item"><h2 class="kicker">How big is it?</h2><p><strong>Nation-level.</strong> A nationwide FAA ground stop halted departures at all US airports for more than four hours on Nov 13, 2026. The FAA says operators cancelled about 12,462 flights that day.</p></div>
+<div class="brief-item"><h2 class="kicker">Who is affected?</h2><p>Air travelers on US flights on Nov 13 and the weekend after. By Monday, Nov 16, flights were near normal and the FAA status feed listed no ground stops.</p></div>
+</div>
+<div class="known-grid" id="glance">
+<div class="known"><h2>Known so far</h2><ul>
+<li>The FAA ordered a ground stop for all US airports at 3:54 PM ET on Nov 13 (FAA Advisory 111). <a class="ref" href="#t016">evidence</a></li>
+<li>The nationwide stop was cancelled at 8:16 PM ET the same day (FAA Advisory 005). <a class="ref" href="#t048">evidence</a></li>
+<li>Officials&#39; account: legacy telecom switches and routers were overloaded with data. That is what officials said, not an independent finding. <a class="ref" href="#c001">evidence</a></li>
+<li>The FAA&#39;s written Q&amp;A names two sites: a radio site in El Dorado, Ark., and a radar site in Amarillo, Texas. <a class="ref" href="#t091">evidence</a></li>
+<li>A White House release on Nov 18 says the administration sees no indication of a cyberattack behind the recent outages, the FAA&#39;s among them. <a class="ref" href="#t115">evidence</a></li>
+</ul></div>
+<div class="not-known"><h2>Not known yet</h2><ul>
+<li>The root cause. Investigators recreated the overload in a lab, but no root-cause report is out. The FAA chief said Nov. 19 an announcement was expected that week; none was out by Nov. 22.</li>
+<li>Which equipment, site or upgrade set off the overload, and whether the router was faulty or the installation was.</li>
+<li>Which specific frequencies or channels went down. None has been named publicly.</li>
+<li>Whether a written finding from the FBI, CISA, the DOT Inspector General or the NTSB will follow. None had been published at the last check.</li>
+</ul></div>
+</div>
 <aside class="note">
 <p><strong>Not verified: initial investigation only.</strong> Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them.</p>
 <p>Made for entertainment using AI. Not endorsed by the FAA, any government agency, airline, news outlet, company, or anyone else named.</p>
 </aside>
-<section class="block" id="glance">
-<div class="block-head"><span class="sec-n">01</span><h2>At a glance</h2></div>
-<ul class="tiles">
+<p class="keep-going keep-story"><button type="button" class="button" data-depth="story">Keep going: the full story</button><span class="meta">The key numbers, the timeline and 160 claims, each with a label saying how well it is supported.</span></p>
+</section>
+
+<section class="depth depth-story" id="full-story" data-level="story">
+<div class="depth-head"><span class="sec-n">02</span><h2>The full story</h2><p class="meta">What happened and what has been said about it. Every claim carries a label, and opens to show its sources.</p></div>
+<ul class="tiles" id="numbers">
 <li class="tile"><a href="#t004"><span class="tile-value">3:10 PM</span><span class="tile-label">First ground stop</span><span class="tile-detail">O&#39;Hare, comms and equipment</span></a></li>
 <li class="tile"><a href="#t016"><span class="tile-value">3:54 PM</span><span class="tile-label">National ground stop</span><span class="tile-detail">FAA Advisory 111</span></a></li>
 <li class="tile"><a href="#t048"><span class="tile-value">8:16 PM</span><span class="tile-label">National stop cancelled</span><span class="tile-detail">Advisory 005; ended nationwide at once</span></a></li>
@@ -117,26 +154,9 @@
 <li class="tile"><a href="#t091"><span class="tile-value">~12,462</span><span class="tile-label">Friday cancellations</span><span class="tile-detail">FAA Q&amp;A, Nov. 15</span></a></li>
 <li class="tile"><a href="#t097"><span class="tile-value">~18,100</span><span class="tile-label">Fri–Sun cancellations</span><span class="tile-detail">FlightAware count</span></a></li>
 </ul>
-<div class="known-grid">
-<div class="known"><h3>Known so far</h3><ul>
-<li>The FAA ordered a ground stop for all US airports at 3:54 PM ET on Nov 13 (FAA Advisory 111). <a class="ref" href="#t016">evidence</a></li>
-<li>The nationwide stop was cancelled at 8:16 PM ET the same day (FAA Advisory 005). <a class="ref" href="#t048">evidence</a></li>
-<li>Officials&#39; account: legacy telecom switches and routers were overloaded with data. That is what officials said, not an independent finding. <a class="ref" href="#c001">evidence</a></li>
-<li>The FAA&#39;s written Q&amp;A names two sites: a radio site in El Dorado, Ark., and a radar site in Amarillo, Texas. <a class="ref" href="#t091">evidence</a></li>
-<li>A White House release on Nov 18 says the administration sees no indication of a cyberattack behind the recent outages, the FAA&#39;s among them. <a class="ref" href="#t115">evidence</a></li>
-</ul></div>
-<div class="not-known"><h3>Not known yet</h3><ul>
-<li>The root cause. Investigators recreated the overload in a lab, but no root-cause report is out. The FAA chief said Nov. 19 an announcement was expected that week; none was out by Nov. 22.</li>
-<li>Which equipment, site or upgrade set off the overload, and whether the router was faulty or the installation was.</li>
-<li>Which specific frequencies or channels went down. None has been named publicly.</li>
-<li>Whether a written finding from the FBI, CISA, the DOT Inspector General or the NTSB will follow. None had been published at the last check.</li>
-</ul></div>
-</div>
-</section>
-
 <section class="block" id="what-happened-the-story-so-far">
 <details class="fold" open>
-<summary><span class="sec-n">02</span><h2>What happened: the story so far</h2></summary>
+<summary><h3>What happened: the story so far</h3></summary>
 <div class="fold-body">
 <div class="prose">
 <p><strong>Headline</strong> (as of 8:18 AM ET Wed; see source): Monday morning: flights are near normal, with no ground stops on the FAA status feed at 10:16 AM ET. FlightAware counts about 18,100 US cancellations Friday through Sunday. The FAA&#39;s written Q&amp;A traces the Nov. 13 data flood to a new router at an El Dorado, Ark., radio site and a radar site in Amarillo, Texas, both on the L3Harris-run FTI network. Duffy says the Amarillo router, replaced about three weeks earlier, began flooding when the El Dorado router came on. Both routers are in L3Harris&#39;s Florida lab with FAA, Juniper and Cisco engineers; the root cause is still not determined. Router maker HPE says the device worked as the installer configured it (Reported). The FAA says it has no indication of a cyberattack. FAA/DOT staff brief House T&amp;I today on the $30.1 billion request ($10.1 billion for ATC); no hearing date is posted. The ask has grown to up to $50 billion, and government funding runs out Dec. 11.</p>
@@ -151,7 +171,7 @@
 
 <section class="block" id="what-caused-it-leading-theories">
 <details class="fold" open>
-<summary><span class="sec-n">03</span><h2>What caused it? Leading theories</h2><span class="count">17</span></summary>
+<summary><h3>What caused it? Leading theories</h3><span class="count">17</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c001">
@@ -332,7 +352,7 @@
 
 <section class="block" id="cancellations">
 <details class="fold" open>
-<summary><span class="sec-n">04</span><h2>How many flights were cancelled?</h2></summary>
+<summary><h3>How many flights were cancelled?</h3></summary>
 <div class="fold-body">
 <figure class="figure">
 <svg class="chart" viewBox="0 0 720 320" role="img" aria-label="Cancellations rose from 440 at 5:00 PM to 5,000 at 8:30 PM Eastern on Nov 13.">
@@ -387,7 +407,7 @@
 
 <section class="block" id="delays">
 <details class="fold">
-<summary><span class="sec-n">05</span><h2>How many flights were delayed?</h2></summary>
+<summary><h3>How many flights were delayed?</h3></summary>
 <div class="fold-body">
 <figure class="figure">
 <svg class="chart" viewBox="0 0 720 320" role="img" aria-label="Delays stood at 10,000 at 5:30 PM, reached 10,494 at 6:04 PM and were 9,124 at 8:30 PM Eastern on Nov 13.">
@@ -438,7 +458,7 @@
 
 <section class="block" id="arrival-metering">
 <details class="fold">
-<summary><span class="sec-n">06</span><h2>Flights in arrival metering</h2></summary>
+<summary><h3>Flights in arrival metering</h3></summary>
 <div class="fold-body">
 <figure class="figure">
 <ul class="chart-legend"><li><span class="chart-swatch series-1" aria-hidden="true"></span>Nov 13</li><li><span class="chart-swatch series-2" aria-hidden="true"></span>The day before, same time</li></ul>
@@ -498,7 +518,7 @@
 
 <section class="block" id="worst-delays">
 <details class="fold">
-<summary><span class="sec-n">07</span><h2>Which airports had the worst delays?</h2><span class="count">5</span></summary>
+<summary><h3>Which airports had the worst delays?</h3><span class="count">5</span></summary>
 <div class="fold-body">
 <p class="intro">Average minutes, latest public reading.</p>
 <div class="table-wrap" role="region" aria-label="Airport, Time (ET), Average delay (minutes), As reported table" tabindex="0">
@@ -519,7 +539,7 @@
 
 <section class="block" id="key-events">
 <details class="fold">
-<summary><span class="sec-n">08</span><h2>Key events</h2><span class="count">26</span></summary>
+<summary><h3>Key events</h3><span class="count">26</span></summary>
 <div class="fold-body">
 <p class="intro">Eastern time. Full evidence is in the timeline.</p>
 <div class="table-wrap" role="region" aria-label="Time (ET), Event, Detail table" tabindex="0">
@@ -561,7 +581,7 @@
 
 <section class="block" id="figure-sources">
 <details class="fold">
-<summary><span class="sec-n">09</span><h2>Where the key figures come from</h2><span class="count">9</span></summary>
+<summary><h3>Where the key figures come from</h3><span class="count">9</span></summary>
 <div class="fold-body">
 <div class="table-wrap" role="region" aria-label="Figure, Source and why it supports table" tabindex="0">
 <table class="data-table">
@@ -585,7 +605,7 @@
 
 <section class="block" id="timeline-of-the-faa-ground-stop">
 <details class="fold" open>
-<summary><span class="sec-n">10</span><h2>Timeline of the FAA ground stop</h2><span class="count">124</span></summary>
+<summary><h3>Timeline of the FAA ground stop</h3><span class="count">124</span></summary>
 <div class="fold-body">
 <p class="meta">Times are Eastern. Each row opens to show its evidence and source.</p>
 <div class="rows rows-timeline">
@@ -1960,7 +1980,7 @@
 
 <section class="block" id="thread-results">
 <details class="fold">
-<summary><span class="sec-n">11</span><h2>What each line of inquiry found</h2><span class="count">10</span></summary>
+<summary><h3>What each line of inquiry found</h3><span class="count">10</span></summary>
 <div class="fold-body">
 <p class="intro">Findings from the open investigation threads and the Hacker News and Reddit sweep. Confirmed means a public source reports it, not that it is absolutely verified. Sourced reporting is labeled as rumor until the FAA or DOT confirms it.</p>
 <div class="table-wrap" role="region" aria-label="Thread, Verdict, Confidence, Key sources table" tabindex="0">
@@ -1986,7 +2006,7 @@
 
 <section class="block" id="side-questions-smart-air-current-d-c-national">
 <details class="fold">
-<summary><span class="sec-n">12</span><h2>Side questions: SMART, Air Current, D.C. National</h2><span class="count">10</span></summary>
+<summary><h3>Side questions: SMART, Air Current, D.C. National</h3><span class="count">10</span></summary>
 <div class="fold-body">
 <div class="rows">
 <details class="row" id="c018">
@@ -2111,7 +2131,7 @@
 
 <section class="block" id="community-search">
 <details class="fold">
-<summary><span class="sec-n">13</span><h2>Search for radio recordings and community reports</h2><span class="count">6</span></summary>
+<summary><h3>Search for radio recordings and community reports</h3><span class="count">6</span></summary>
 <div class="fold-body">
 <p class="intro">A record of where the desk looked and what it found. These rows are search results, not labelled claims.</p>
 <div class="table-wrap" role="region" aria-label="Where we looked, Result, Label on the earlier page table" tabindex="0">
@@ -2133,7 +2153,7 @@
 
 <section class="block" id="radio-exchanges-recovered">
 <details class="fold">
-<summary><span class="sec-n">14</span><h2>Radio exchanges recovered</h2></summary>
+<summary><h3>Radio exchanges recovered</h3></summary>
 <div class="fold-body">
 <div class="prose">
 <p>Automatically transcribed from edited news and YouTube clips. Call signs other than SkyWest 4792, SkyWest 4179 and Alaska 773 are low confidence.</p>
@@ -2168,7 +2188,7 @@
 
 <section class="block" id="what-officials-have-said">
 <details class="fold">
-<summary><span class="sec-n">15</span><h2>What officials have said</h2></summary>
+<summary><h3>What officials have said</h3></summary>
 <div class="fold-body">
 <div class="prose">
 <figure class="quote">
@@ -2226,7 +2246,7 @@
 
 <section class="block" id="network-and-carriers">
 <details class="fold">
-<summary><span class="sec-n">16</span><h2>FAA network and carriers</h2><span class="count">4</span></summary>
+<summary><h3>FAA network and carriers</h3><span class="count">4</span></summary>
 <div class="fold-body">
 <div class="table-wrap" role="region" aria-label="Item, Detail table" tabindex="0">
 <table class="data-table">
@@ -2245,7 +2265,7 @@
 
 <section class="block" id="ruled-out">
 <details class="fold">
-<summary><span class="sec-n">17</span><h2>What has been ruled out?</h2><span class="count">10</span></summary>
+<summary><h3>What has been ruled out?</h3><span class="count">10</span></summary>
 <div class="fold-body">
 <p class="intro">For 2:45–4:00 PM ET; nothing below lines up in time. Each finding now has a source link or a pending-source note.</p>
 <div class="table-wrap" role="region" aria-label="Area, Finding, Source and why it supports table" tabindex="0">
@@ -2271,7 +2291,7 @@
 
 <section class="block" id="what-is-still-being-checked">
 <details class="fold">
-<summary><span class="sec-n">18</span><h2>What is still being checked?</h2></summary>
+<summary><h3>What is still being checked?</h3></summary>
 <div class="fold-body">
 <div class="prose">
 <p>Status as of 8:18 AM ET Wed. Ticked items have been investigated; the note is the verdict, not a claim that the underlying question can never change.</p>
@@ -2315,7 +2335,7 @@
 
 <section class="block" id="smart-docs">
 <details class="fold">
-<summary><span class="sec-n">19</span><h2>Public SMART documentation</h2><span class="count">5</span></summary>
+<summary><h3>Public SMART documentation</h3><span class="count">5</span></summary>
 <div class="fold-body">
 <p class="intro">Public web sources only. No public status page, API documentation or technical spec was found. Each row links the document that supports the summary.</p>
 <div class="table-wrap" role="region" aria-label="Source, What it says, Source and why it supports table" tabindex="0">
@@ -2336,7 +2356,7 @@
 
 <section class="block" id="smart-procurement-record">
 <details class="fold">
-<summary><span class="sec-n">20</span><h2>SMART procurement record</h2><span class="count">8</span></summary>
+<summary><h3>SMART procurement record</h3><span class="count">8</span></summary>
 <div class="fold-body">
 <p class="intro">Public contract, notice and press records only. Items not found are stated plainly.</p>
 <div class="rows">
@@ -2422,7 +2442,7 @@
 
 <section class="block" id="smart-not-found">
 <details class="fold">
-<summary><span class="sec-n">21</span><h2>SMART records looked for and not found</h2><span class="count">2</span></summary>
+<summary><h3>SMART records looked for and not found</h3><span class="count">2</span></summary>
 <div class="fold-body">
 <div class="table-wrap" role="region" aria-label="Item, What the record shows, Source and why it supports table" tabindex="0">
 <table class="data-table">
@@ -2439,7 +2459,7 @@
 
 <section class="block" id="items-not-carried-over-as-labelled-claims">
 <details class="fold">
-<summary><span class="sec-n">22</span><h2>Items not carried over as labelled claims</h2></summary>
+<summary><h3>Items not carried over as labelled claims</h3></summary>
 <div class="fold-body">
 <div class="prose">
 <p>Two items on the earlier page carried a label but no public link. Every labelled claim needs a source, so they are kept here instead of among the claims.</p>
@@ -2451,10 +2471,303 @@
 </div>
 </details>
 </section>
+<p class="keep-going keep-evidence"><button type="button" class="button" data-depth="evidence">Keep going: the evidence</button><span class="meta">274 sources and 70 dated updates.</span></p>
+</section>
+
+<section class="depth depth-evidence" id="evidence" data-level="evidence">
+<div class="depth-head"><span class="sec-n">03</span><h2>The evidence</h2><p class="meta">Everything this page rests on. Every claim cites a source, and every change is dated.</p></div>
+<div class="evidence">
+<p class="kicker">Every claim on this page, by label · 160</p>
+<div class="evidence-bar" role="img" aria-label="Confirmed 92, Reported 50, Unverified 5, Rumor 10, Debunked 3"><span class="seg seg-confirmed" style="flex-grow:92"></span><span class="seg seg-reported" style="flex-grow:50"></span><span class="seg seg-unverified" style="flex-grow:5"></span><span class="seg seg-rumor" style="flex-grow:10"></span><span class="seg seg-debunked" style="flex-grow:3"></span></div>
+<ul class="evidence-key"><li><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span class="count">92</span></li><li><span class="pill pill-reported" data-label="Reported">Reported</span><span class="count">50</span></li><li><span class="pill pill-unverified" data-label="Unverified">Unverified</span><span class="count">5</span></li><li><span class="pill pill-rumor" data-label="Rumor">Rumor</span><span class="count">10</span></li><li><span class="pill pill-debunked" data-label="Debunked">Debunked</span><span class="count">3</span></li></ul>
+</div>
+<section class="block" id="sources">
+<details class="fold">
+<summary><h3>Sources</h3><span class="count">274</span></summary>
+<div class="fold-body">
+<ol class="source-lines numbered">
+<li><a href="https://nasstatus.faa.gov/api/airport-status-information" rel="noopener">FAA airport status feed</a> <span class="meta">Official source</span></li>
+<li><a href="https://transportation.house.gov/calendar/" rel="noopener">House T&amp;I Committee calendar</a> <span class="meta">Official source</span></li>
+<li><a href="https://transportation.house.gov/calendar/eventsingle.aspx?EventID=410335" rel="noopener">House T&amp;I: BNATCS hearing: postponed until further notice</a> <span class="meta">Official source</span></li>
+<li><a href="https://passnational.org/news/pass-on-the-nationwide-ground-stop/" rel="noopener">PASS On the Nationwide Ground Stop</a> <span class="meta">Official source · Nov 15, 2026, 1:26 AM UTC+00:00</span></li>
+<li><a href="https://abcnews.com/US/live-updates/faa-ground-stop-live-updates-hundreds-flights-canceled/?entryId=138163207&amp;id=138125140" rel="noopener">ABC News: FAA ground stop live updates</a> <span class="meta">News outlet · Nov 16, 2026, 5:16 AM UTC</span></li>
+<li><a href="https://www.fox4news.com/news/faa-ground-stop-routers-texas-arkansas-being-tested-after-outage" rel="noopener">FOX 4: Routers in Texas, Arkansas being tested</a> <span class="meta">News outlet · Nov 15, 2026, 9:58 AM UTC-06:00</span></li>
+<li><a href="https://rollcall.com/2026/11/16/aviation-funding-becomes-political-football-in-lame-duck-session/" rel="noopener">Roll Call: Aviation funding becomes political football</a> <span class="meta">News outlet · Nov 16, 2026, 5:37 AM UTC+00:00</span></li>
+<li><a href="https://approps.ai/analysis/will-there-be-a-government-shutdown-december-2026" rel="noopener">Approps: Will there be a government shutdown in December?</a> <span class="meta">Researcher or analysis · Nov 8, 2026</span></li>
+<li><a href="https://thepointsguy.com/news/faa-groundstop-flights-grounded-nationwide" rel="noopener">The Points Guy: Air travel woes hit day 3</a> <span class="meta">News outlet · Nov 16, 2026, 3:00 PM UTC</span></li>
+<li><a href="https://www.cnbc.com/2026/11/15/flight-delays-ground-faa-stop.html" rel="noopener">CNBC: Flight delays linger, schedule improves Monday</a> <span class="meta">News outlet · Nov 15, 2026</span></li>
+<li><a href="https://fortune.com/2026/11/16/cyberattack-faa-ground-stop-sean-duffy-l3harris-fiber-installation-arkansas/" rel="noopener">Fortune: Did a cyberattack hit the FAA? Probably not</a> <span class="meta">News outlet · Nov 16, 2026, 11:57 AM UTC-00:00</span></li>
+<li><a href="https://www.hindustantimes.com/world-news/us-news/fact-check-posts-falsely-claim-trump-top-white-house-officials-moved-to-bunker-amid-faa-outage-101794679770886.html" rel="noopener">Hindustan Times: Fact check: Trump bunker claim false</a> <span class="meta">News outlet · Nov 15, 2026, 1:12 AM UTC+05:30</span></li>
+<li><a href="https://cyberharpoon.com/insights/faa-ground-stop-influence-campaign/" rel="noopener">Cyber Harpoon: Inside the FAA ground stop influence campaign</a> <span class="meta">Researcher or analysis</span></li>
+<li><a href="https://justthenews.com/politics-policy/transportation/flight-schedules-gradually-returning-normal-after-nationwide-ground" rel="noopener">Just the News: FAA officials expected to brief congressional staff</a> <span class="meta">News outlet · Nov 16, 2026, 8:34 AM ET</span></li>
+<li><a href="https://www.faa.gov/newsroom/nationwide-ground-stop-questions-and-answers" rel="noopener">FAA: Nationwide Ground Stop: Questions and Answers</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.transportation.gov/briefing-room/icymi-trumps-transportation-secretary-sean-p-duffy-provides-update-across-sunday" rel="noopener">US DOT: Duffy update across Sunday shows</a> <span class="meta">Official source · not re-checked: site blocks automated access</span></li>
+<li><a href="https://democrats-transportation.house.gov/news/press-releases/ranking-members-larsen-carson-statement-on-last-nights-nationwide-ground-stop" rel="noopener">House T&amp;I Democrats: Ranking Members Larsen, Carson statement on the ground stop</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://abcnews.com/Politics/transportation-secretary-duffy-atc-routers-ability-broadcast-data/story?id=138155545" rel="noopener">ABC News: Duffy says ATC routers&#39; ability to broadcast data turned off</a> <span class="meta">News outlet · Nov 15, 2026, 3:47 PM UTC</span></li>
+<li><a href="https://www.foxnews.com/us/duffy-investigators-examining-2-routers-nationwide-faa-ground-stop-no-signs-foreign-cyberattack" rel="noopener">Fox News: Duffy says 2 routers being examined</a> <span class="meta">News outlet · Nov 15, 2026, 1:20 PM ET</span></li>
+<li><a href="https://www.l3harris.com/newsroom/press-release/2026/11/l3harris-statement-nov-13-ground-stop" rel="noopener">L3Harris Statement on the Nov. 13 Ground Stop</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.transportation.gov/briefing-room/icymi-us-transportation-secretary-sean-p-duffy-provides-update-restoration-airspace" rel="noopener">US Department of Transportation: ICYMI: Duffy update on restoration of airspace after the ground stop</a> <span class="meta">Official source · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.channelnewsasia.com/world/us-aviation-shutdown-blamed-l3-harris-installed-router-6552171" rel="noopener">CNA: US aviation shutdown blamed on L3Harris installed router (Reuters)</a> <span class="meta">News outlet · Nov 15, 2026, 4:56 AM UTC+08:00</span></li>
+<li><a href="https://www.usatoday.com/story/news/nation/2026/11/14/faa-ground-stop-probe-l3harris/92780406007/" rel="noopener">USA Today: Air traffic probe looks at work of FAA contractor and a single router</a> <span class="meta">News outlet · Nov 14, 2026, 8:53 PM UTC</span></li>
+<li><a href="https://www.npr.org/2026/11/14/nx-s1-6040952/faa-ground-stop-airplane-travel" rel="noopener">NPR: FAA ground stop ends but passengers stuck at airport</a> <span class="meta">News outlet · Nov 14, 2026, 11:53 AM ET</span></li>
+<li><a href="https://www.axios.com/2026/11/14/faa-ground-stop-outage-update" rel="noopener">Axios: FAA back at &quot;full operations&quot; after Friday outage</a> <span class="meta">News outlet · Nov 14, 2026 · not re-checked: site blocks automated access</span></li>
+<li><a href="https://aviationweek.com/air-transport/safety-ops-regulation/faa-says-router-malfunction-led-ground-stop" rel="noopener">Aviation Week: FAA says router malfunction led to ground stop</a> <span class="meta">News outlet · Nov 14, 2026, 7:15 PM UTC+00:00</span></li>
+<li><a href="https://www.yahoo.com/news/us/live/faa-ground-stop-latest-updates-duffy-blames-contractor-l3harris-thousands-more-flights-canceled-saturday-no-sign-of-cyberattack-161329174.html" rel="noopener">Yahoo News: FAA ground stop latest updates: Duffy blames contractor L3Harris</a> <span class="meta">News outlet · Nov 17, 2026, 10:24 PM UTC</span></li>
+<li><a href="https://www.ainvest.com/news/duffy-contractor-l3harris-working-telecommunication-maintenance-time-time-aviation-shutdown-2611/" rel="noopener">AInvest: Duffy: Contractor L3Harris was working on telecommunication maintenance at the time of aviation shutdown</a> <span class="meta">Researcher or analysis · Nov 14, 2026, 11:05 AM ET</span></li>
+<li><a href="https://www.cnbc.com/2026/11/14/faa-ground-stop-flights-resume-delays.html" rel="noopener">CNBC: Flight disruptions continue after FAA lifts ground stop</a> <span class="meta">News outlet · Nov 14, 2026</span></li>
+<li><a href="https://www.aerotime.aero/articles/duffy-congress-atc-funding-nationwide-outage" rel="noopener">AeroTime: Duffy presses Republican Congress on ATC funding after outage</a> <span class="meta">News outlet · Nov 14, 2026, 3:31 AM UTC+00:00</span></li>
+<li><a href="https://www.theverge.com/news/1033489/faa-ground-stop" rel="noopener">The Verge: FAA lifts nationwide ground stop that blocked takeoffs for hours</a> <span class="meta">News outlet · Nov 13, 2026, 9:38 PM UTC+00:00</span></li>
+<li><a href="https://www.wired.com/story/the-faa-nationwide-ground-stop-is-over/" rel="noopener">WIRED: The FAA Nationwide Ground Stop Is Over</a> <span class="meta">News outlet · Nov 14, 2026, 1:46 AM UTC</span></li>
+<li><a href="https://www.securityweek.com/no-signs-of-hacking-in-faa-ground-stop-as-fbi-reportedly-probes-software-update/" rel="noopener">SecurityWeek: No Signs of Hacking in FAA Ground Stop as FBI Reportedly Probes Software Update</a> <span class="meta">News outlet · Nov 14, 2026, 8:40 AM UTC+00:00</span></li>
+<li><a href="https://www.reuters.com/3fec1b0a85a0/world/us/faa-issues-national-ground-stop-due-extraordinary-circumstance-reasons-safety-2026-11-13/" rel="noopener">Reuters: US to resume flights after air traffic network failure</a> <span class="meta">News outlet · Nov 13, 2026, 9:08 PM UTC</span></li>
+<li><a href="https://www.latimes.com/politics/story/2026-11-13/what-caused-national-ground-stop-here-is-what-we-know" rel="noopener">Los Angeles Times: What caused the national ground stop? Here is what we know</a> <span class="meta">News outlet · Nov 14, 2026</span></li>
+<li><a href="https://www.bbc.com/news/articles/cqx2wyvyr3zzo" rel="noopener">BBC: What we know about the US ground stop</a> <span class="meta">News outlet · Nov 14, 2026, 3:10 AM UTC</span></li>
+<li><a href="https://aviationweek.com/air-transport/safety-ops-regulation/faa-lifts-nationwide-ground-stop-points-data-overload-cause" rel="noopener">Aviation Week: FAA Lifts Nationwide Ground Stop, Points To Data Overload As Cause</a> <span class="meta">News outlet · Nov 13, 2026, 10:52 PM UTC+00:00</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=043" rel="noopener">ATCSCC Advisory 043: Saturday operations plan</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://ifrmeter.com/blog/national-ground-stop-2026-11-13" rel="noopener">IFR Meter live blog: national ground stop</a> <span class="meta">Researcher or analysis · Nov 13, 2026</span></li>
+<li><a href="https://apnews.com/live/ground-stop-aviation-flights-news-updates-11-13-2026" rel="noopener">AP News: Live updates: FAA grounds all flights nationwide</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.washingtonpost.com/transportation/2026/11/13/faa-grounds-flights-all-us-airports-citing-communications-issue/" rel="noopener">Washington Post: FAA grounds flights citing telecommunications outage</a> <span class="meta">News outlet · Nov 13, 2026 · not re-checked: site blocks automated access</span></li>
+<li><a href="https://thehill.com/policy/transportation/6219936-mullin-faa-telecommunication-outage-ground-stop/" rel="noopener">The Hill: Mullin: telecom outage grounds flights</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.cbsnews.com/newyork/news/jfk-laguardia-newark-airports-nationwide-ground-stop/" rel="noopener">CBS New York: NYC airports impacted by nationwide ground stop</a> <span class="meta">News outlet · Nov 13, 2026, 5:07 PM ET</span></li>
+<li><a href="https://orcasairband.com" rel="noopener">Orcas Island airband SDR</a> <span class="meta">Social post</span></li>
+<li><a href="https://www.l3harris.com/all-capabilities/faa-telecommunications-infrastructure-fti" rel="noopener">L3Harris: FAA Telecommunications Infrastructure (FTI)</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.androidauthority.com/att-app-down-3735059/" rel="noopener">Android Authority: AT&amp;T app down (earlier outage)</a> <span class="meta">News outlet · Nov 13, 2026, 3:01 PM UTC+00:00</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=111" rel="noopener">FAA Advisory 111, national ground stop</a> <span class="meta">Official source · Nov 13, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=120" rel="noopener">FAA Advisory 120, communications failure and recovery path</a> <span class="meta">Official source · Nov 13, 2026</span></li>
+<li><a href="https://nasstatus.faa.gov/" rel="noopener">NAS status / public airport status</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.wbez.org/transportation/2026/11/13/all-departing-flights-grounded-nationwide-due-to-faa-order" rel="noopener">WBEZ: Duffy: communication issue at all centers</a> <span class="meta">News outlet · Nov 13, 2026, 9:48 PM UTC</span></li>
+<li><a href="https://www.independent.co.uk/bulletin/news/sean-duffy-full-statement-faa-ground-stop-flights-b3084845.html" rel="noopener">The Independent: Duffy&#39;s full statement</a> <span class="meta">News outlet · Nov 13, 2026, 9:50 PM UTC</span></li>
+<li><a href="https://www.foxweather.com/weather-news/nationwide-ground-stop-ordered-faa" rel="noopener">Fox Weather: Ground-stop update with delay counts</a> <span class="meta">News outlet · Nov 13, 2026, 4:10 PM ET</span></li>
+<li><a href="https://radar3pub.ncep.noaa.gov/ftm.txt" rel="noopener">Weather Service radar outage notices (FTM)</a> <span class="meta">Official source</span></li>
+<li><a href="https://kesq.com/news/2026/11/13/weather-service-reports-nationwide-outage/" rel="noopener">KESQ: Weather Service nationwide website outage</a> <span class="meta">News outlet · Nov 13, 2026, 10:36 PM UTC+00:00</span></li>
+<li><a href="https://gizmodo.com/the-faa-is-rolling-out-its-ai-air-traffic-tool-nationwide-2000839347" rel="noopener">Gizmodo on the SMART nationwide rollout</a> <span class="meta">News outlet · Nov 13, 2026, 1:12 AM UTC+00:00</span></li>
+<li><a href="https://www.faa.gov/newsroom/statements/general-statements" rel="noopener">FAA SMART statement, Nov 10</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.faa.gov/newsroom/trumps-transportation-secretary-sean-p-duffy-delivers-state-art-air-traffic-control" rel="noopener">FAA SMART launch, Sept 21</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.faa.gov/newsroom/modern-skies-trumps-transportation-secretary-sean-p-duffy-selects-air-space-intelligence" rel="noopener">FAA FMDS and SMART award, June 22</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.asi.com/news/asi-awarded-faa-contract-fmds-smart" rel="noopener">ASI contract announcement</a> <span class="meta">Official source · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.youtube.com/watch?v=QhnAQ_PCyr8" rel="noopener">YouTube: Flight Follower ATC compilation (Moline and Seattle Ground)</a> <span class="meta">Social post</span></li>
+<li><a href="https://www.youtube.com/watch?v=64qOyjnRDdA" rel="noopener">YouTube: CBS Chicago ATC-zero audio</a> <span class="meta">Social post</span></li>
+<li><a href="https://www.youtube.com/watch?v=iXGZqaF9i68" rel="noopener">YouTube: blancolirio clip with the NBAA notice</a> <span class="meta">Social post</span></li>
+<li><a href="https://www.reuters.com/business/aerospace-defense/us-faa-says-error-messages-telecommunications-circuit-prompted-shift-backup-2026-09-23/" rel="noopener">Reuters: September 2026 FAA circuit errors and fiber cut</a> <span class="meta">News outlet · Sep 23, 2026 · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.cnbc.com/2026/09/21/newark-philadelphia-nyc-flight-disruptions.html" rel="noopener">CNBC: September 2026 backup fiber cut near New Brunswick</a> <span class="meta">News outlet · Sep 21, 2026</span></li>
+<li><a href="https://theaircurrent.com/feed/dispatches/u-s-halts-flight-departures-nationwide-on-air-traffic-communications-outage/" rel="noopener">The Air Current: outages began at Chicago Center</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.oig.dot.gov/library-item/32708" rel="noopener">DOT Inspector General report on the 2014 Chicago Center fire</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.faa.gov/newsroom/trumps-transportation-secretary-sean-p-duffy-begins-retiring-decades-old-floppy-disks-air" rel="noopener">FAA Nov. 5 copper-to-fiber progress</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.l3harris.com/newsroom/editorial/2026/05/l3harris-reaches-over-50-faa-telecommunications-modernization" rel="noopener">L3Harris on low-traffic cutovers</a> <span class="meta">Official source · May 11, 2026</span></li>
+<li><a href="https://www.cbsnews.com/texas/news/faa-ground-stop-halts-flights-at-dfw-and-dallas-love-field-airports/" rel="noopener">CBS Texas on the L3Harris-operated network</a> <span class="meta">News outlet · Nov 13, 2026, 4:07 PM UTC-06:00</span></li>
+<li><a href="https://www.bloomberglinea.com/mundo/estados-unidos/fbi-investiga-si-una-actualizacion-de-software-causo-la-falla-que-afecto-al-trafico-aereo-en-eeuu/" rel="noopener">Bloomberg Línea: FBI looking at a software update</a> <span class="meta">News outlet · Nov 13, 2026, 10:48 PM UTC</span></li>
+<li><a href="https://www.thewellnews.com/homeland-security/dhs-chief-says-faa-outage-shows-no-sign-of-attack/" rel="noopener">The Well News: Mullin on two unaffected areas</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.geekwire.com/2026/dhs-chief-sees-no-microsoft-link-to-faa-ground-stop-says-possible-ai-role-being-investigated/" rel="noopener">GeekWire: Mullin on Microsoft and SMART</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.theverge.com/science/1033581/national-weather-service-radar-operating-normally" rel="noopener">The Verge: NWS radar operating normally</a> <span class="meta">News outlet · Nov 13, 2026, 11:37 PM UTC+00:00</span></li>
+<li><a href="https://www.nco.ncep.noaa.gov/status/messages/" rel="noopener">NCEP operations-center status messages</a> <span class="meta">Official source</span></li>
+<li><a href="https://web.archive.org/web/20251206140913/https://www.weather.gov/lox/WebIssues" rel="noopener">Archived NWS Los Angeles WebIssues page</a> <span class="meta">Official source</span></li>
+<li><a href="https://news.alaskaair.com/on-the-record/alaska-airlines-statement-on-faa-issued-ground-stop/" rel="noopener">Alaska Airlines statement on the ground stop</a> <span class="meta">Official source · Nov 15, 2026, 1:08 PM UTC+00:00</span></li>
+<li><a href="https://www.arlnow.com/2026/11/13/developing-flights-halted-at-reagan-national-and-dulles-amid-nationwide-faa-ground-stop/" rel="noopener">ARLnow: flights halted at Reagan National and Dulles</a> <span class="meta">News outlet · Nov 13, 2026, 9:45 PM UTC+00:00</span></li>
+<li><a href="https://www.cbc.ca/news/canada/montreal/montreal-airport-flight-delays-9.7421497" rel="noopener">CBC Montreal: NAV CANADA systems operating normally</a> <span class="meta">News outlet · Nov 13, 2026, 10:11 PM UTC</span></li>
+<li><a href="https://www.cbc.ca/news/canada/toronto/toronto-pearson-airport-faa-ground-stop-9.7421481" rel="noopener">CBC Toronto: MacKinnon on Canadian systems</a> <span class="meta">News outlet · Nov 13, 2026, 10:08 PM UTC</span></li>
+<li><a href="https://calgaryherald.com/news/yyc-flights-usa-held-faa-nationwide-ground-stop" rel="noopener">Calgary Herald: US-bound flights held at YYC</a> <span class="meta">News outlet · Nov 13, 2026, 11:00 PM UTC+00:00</span></li>
+<li><a href="https://globalnews.ca/news/12150274/faa-usa-ground-stop-order/" rel="noopener">Global News: Porter grounds US-overflight flights</a> <span class="meta">News outlet · Nov 13, 2026, 4:23 PM ET</span></li>
+<li><a href="https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247" rel="noopener">NBC News: officials see no sign of malicious activity</a> <span class="meta">News outlet · Nov 14, 2026, 6:56 AM UTC</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=107" rel="noopener">FAA Advisory 107, first O&#39;Hare ground stop</a> <span class="meta">Official source · Nov 13, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=114" rel="noopener">FAA Advisory 114, Chicago Center equipment outage</a> <span class="meta">Official source · Nov 13, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/summary_pub" rel="noopener">FAA national airspace system status summary</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.fly.faa.gov/restrictions/restrictions?reqFac=ALL&amp;provFac=ALL" rel="noopener">FAA current restrictions list</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.cbsnews.com/news/faa-issues-nationwide-ground-stop/" rel="noopener">CBS News: FAA issues nationwide ground stop</a> <span class="meta">News outlet · Nov 13, 2026, 4:29 PM ET</span></li>
+<li><a href="https://www.bloomberg.com/news/articles/2026-11-13/fbi-said-to-probe-whether-software-update-caused-mass-faa-outage" rel="noopener">Bloomberg: FBI said to probe whether a software update caused the FAA outage</a> <span class="meta">News outlet · Nov 13, 2026, 10:01 PM UTC</span></li>
+<li><a href="https://fedscoop.com/faa-nationwide-ground-stop-tech-telecommunications-issue/" rel="noopener">FedScoop: FAA nationwide ground stop tied to a telecommunications issue</a> <span class="meta">News outlet · Nov 13, 2026, 11:26 PM UTC+00:00</span></li>
+<li><a href="https://sam.gov/workspace/contract/opp/89275702a17c4bc4a1906fd596fe8828/view" rel="noopener">SAM.gov: FAA FENS contract opportunity</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.usaspending.gov/award/CONT_AWD_693KA826F00278_6920_693KA826D00016_6920" rel="noopener">USAspending: AT&amp;T FENS planning task order 693KA826F00278</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.washingtontechnology.com/contracts/2026/08/faa-brings-t-network-modernization-program/415412/" rel="noopener">Washington Technology: FAA brings AT&amp;T onto the FENS network program</a> <span class="meta">News outlet · Aug 13, 2026</span></li>
+<li><a href="https://x.com/downdetector/status/2121362757505130737" rel="noopener">Downdetector: user reports of 911 problems starting 4:13 PM ET</a> <span class="meta">Social post · Nov 13, 2026, 10:01 PM UTC</span></li>
+<li><a href="https://cybernews.com/news/911-line-down-outage/" rel="noopener">Cybernews: 911 line-down outage reports</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
+<li><a href="https://x.com/LancasterCoEMA/status/2121386019539014040" rel="noopener">Lincoln-Lancaster EMA: 911 still working during a non-emergency line outage</a> <span class="meta">Social post · Nov 13, 2026, 11:33 PM UTC</span></li>
+<li><a href="https://www.hawaiinewsnow.com/2026/11/14/dot-all-west-coast-flights-halted-by-spacex-debris-after-faa-ground-stop/" rel="noopener">Hawaii News Now: Hawaii DOT halts West Coast flights over SpaceX debris</a> <span class="meta">News outlet · Nov 13, 2026, 11:56 PM UTC</span></li>
+<li><a href="https://apnews.com/article/flights-halted-airports-faa-f81b0904331dafad6133f291e5f531a8" rel="noopener">AP News: Flights halted at airports across US</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
+<li><a href="https://news.aa.com/news/news-details/2026/Update-on-FAAs-nationwide-ground-stop/default.aspx" rel="noopener">American Airlines: Update on FAA&#39;s nationwide ground stop</a> <span class="meta">Official source · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=005" rel="noopener">FAA Advisory 005, nationwide ground stop cancelled</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=001" rel="noopener">FAA Advisory 001, nationwide ground stop with selective releases</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=002" rel="noopener">FAA Advisory 002, Washington Center NRP suspended</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://abcnews.com/US/live-updates/faa-ground-stop-live-updates-hundreds-flights-canceled/?id=138125140" rel="noopener">ABC News: Live updates: FAA ground stop, cancellations and airline actions</a> <span class="meta">News outlet · Nov 16, 2026, 5:16 AM UTC</span></li>
+<li><a href="https://www.flightaware.com/live/airport/delays_new" rel="noopener">FlightAware: US airport delay board</a> <span class="meta">Researcher or analysis</span></li>
+<li><a href="https://www.space.com/news/live/spacex-starship-flight-15-live-updates-nov-13-2026-starship-first-double-landing-attempt" rel="noopener">Starship Flight 15 live updates</a> <span class="meta">News outlet · Nov 10, 2026, 7:46 PM UTC</span></li>
+<li><a href="https://www.forth.news/lists/ussen-cantwell/Ch1oLQw7wQaGCPebYhSdU" rel="noopener">Forth: Sen. Cantwell: Senate Commerce will be reviewing the outage</a> <span class="meta">Researcher or analysis · not re-checked: site blocks automated access</span></li>
+<li><a href="https://abc7news.com/live-updates/faa-ground-stop-live-updates-what-know-nationwide-flights-are-grounded/20038887/" rel="noopener">ABC7 live updates: ground stop lifted, Mullin briefing</a> <span class="meta">News outlet · Nov 17, 2026, 5:34 PM UTC</span></li>
+<li><a href="https://www.nbcnews.com/news/us-news/live-blog/live-updates-flights-grounded-faa-communications-outage-rcna609268" rel="noopener">NBC News live blog: Duffy and Mullin White House briefing after the lift</a> <span class="meta">News outlet · Nov 13, 2026, 10:20 PM UTC</span></li>
+<li><a href="https://www.bbc.com/news/live/c6z9dwn12037t" rel="noopener">BBC live: Duffy says airspace opened at 8:15 PM ET</a> <span class="meta">News outlet · Nov 13, 2026, 9:19 PM UTC</span></li>
+<li><a href="https://www.c-span.org/program/white-house-event/trump-admin-officials-speak-to-white-house-reporters-about-ground-stop/687918" rel="noopener">C-SPAN: Trump admin officials speak to White House reporters about the ground stop</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.whitehouse.gov/videos/dhs-secretary-markwayne-mullin-speaks-on-faa-ground-stop-everybody-is-safe/" rel="noopener">White House video: Mullin earlier remarks, &quot;Everybody is safe&quot;</a> <span class="meta">Official source · Nov 13, 2026, 11:07 PM UTC+00:00</span></li>
+<li><a href="https://www.huffpost.com/entry/live-updates_n_6af1983ce4b043b6d4e35621/liveblog_6af7800be4b043423791e460/webview" rel="noopener">HuffPost live updates: Mullin and Duffy briefing quotes</a> <span class="meta">News outlet · Nov 9, 2026, 9:57 AM UTC</span></li>
+<li><a href="https://www.thirteen.org/programs/pbs-newshour/flights-halted-1794607120/" rel="noopener">PBS NewsHour transcript excerpt of earlier Mullin remarks</a> <span class="meta">News outlet · Nov 13, 2026, 9:58 PM UTC+00:00</span></li>
+<li><a href="https://www.fox5vegas.com/video/2026/11/14/faa-tells-airlines-problem-started-with-routers-amid-nationwide-ground-stop-source-says/" rel="noopener">Fox 5 Vegas: CNN says FAA told airlines the problem started with routers, possibly at Midway</a> <span class="meta">News outlet · Nov 14, 2026, 12:02 AM UTC</span></li>
+<li><a href="https://www.faa.gov/newsroom/faa-statement-nationwide-ground-stop" rel="noopener">FAA statement on the nationwide ground stop</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.moneycontrol.com/world/fbi-said-to-probe-whether-software-update-caused-mass-faa-outage-article-14079905.html" rel="noopener">Moneycontrol reprint of the Bloomberg FBI software-update article</a> <span class="meta">News outlet · Nov 14, 2026, 6:58 AM UTC+05:30</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=011" rel="noopener">FAA Advisory 011, O&#39;Hare United-only ground stop</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=012" rel="noopener">FAA Advisory 012, Seattle Alaska-only ground stop</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=014" rel="noopener">FAA Advisory 014, San Diego Alaska ground stop</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=016" rel="noopener">FAA Advisory 016, Newark United-only ground stop</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=017" rel="noopener">FAA Advisory 017, Minneapolis Delta-only ground stop</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=013" rel="noopener">FAA Advisory 013, terminal hotline page closed</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=018" rel="noopener">FAA Advisory 018, overnight operations plan</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=019" rel="noopener">FAA Advisory 019, Newark United stop cancelled</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=020" rel="noopener">FAA Advisory 020, O&#39;Hare United stop extended</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=021" rel="noopener">FAA Advisory 021, Los Angeles Alaska ground stop</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=022" rel="noopener">FAA Advisory 022, San Diego Alaska stop extended</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=023" rel="noopener">FAA Advisory 023, Seattle Alaska stop extended</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=024" rel="noopener">FAA Advisory 024, Minneapolis Delta stop extended</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.dhs.gov/news/2026/11/13/icymi-secretary-mullin-and-secretary-duffy-address-nationwide-faa-ground-stop-all" rel="noopener">DHS release: Mullin and Duffy address the nationwide ground stop</a> <span class="meta">Official source · Nov 13, 2026</span></li>
+<li><a href="https://transportation.house.gov/news/documentsingle.aspx?DocumentID=410342" rel="noopener">House T&amp;I Committee: Graves and Larsen joint statement on the FAA ground stop</a> <span class="meta">Official source</span></li>
+<li><a href="https://rollcall.com/2026/11/13/air-travel-halt-prompts-calls-for-faa-communications-upgrades/" rel="noopener">Roll Call: Administration ups ante on aviation funds after ground stop</a> <span class="meta">News outlet · Nov 13, 2026, 7:54 PM UTC+00:00</span></li>
+<li><a href="https://www.latimes.com/politics/story/2026-11-13/democrats-demand-answers-on-faa-outage-question-aging-air-traffic-control" rel="noopener">Los Angeles Times: Democrats demand answers on FAA outage</a> <span class="meta">News outlet · Nov 14, 2026</span></li>
+<li><a href="https://apnews.com/article/ground-stop-flights-airlines-cancellations-faa-1fbf4992f0ddaa4c463b0e4990b6e291" rel="noopener">AP: Airlines dig out from nationwide ground stop</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.jpost.com/international/article-914842" rel="noopener">Jerusalem Post: Duffy: ground stop caused by aging equipment</a> <span class="meta">News outlet · Nov 14, 2026, 4:13 AM UTC+00:00</span></li>
+<li><a href="https://www.flightaware.com/live/cancelled/" rel="noopener">FlightAware live cancellations</a> <span class="meta">Researcher or analysis</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=054" rel="noopener">FAA Advisory 054, extended drop times cancelled</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=117" rel="noopener">FAA Advisory 117, extended drop times for comms failure</a> <span class="meta">Official source · Nov 13, 2026</span></li>
+<li><a href="https://abc7news.com/live-updates/faa-ground-stop-live-updates-what-know-nationwide-flights-are-grounded/20038887/entry/20040148/" rel="noopener">ABC7: Duffy and Bedford to brief at 10:30 AM ET Saturday</a> <span class="meta">News outlet · Nov 17, 2026, 5:34 PM UTC</span></li>
+<li><a href="https://www.washingtonpost.com/transportation/2026/11/14/ground-stop-aftermath-sees-thousands-flights-canceled-delayed-saturday/" rel="noopener">The Washington Post: Travel chaos continues following nationwide ground stop</a> <span class="meta">News outlet · Nov 14, 2026 · not re-checked: site blocks automated access</span></li>
+<li><a href="https://avweb.com/aviation-news/white-house-renews-30b-atc-modernization/" rel="noopener">AvWeb: White House renews push for $30.1 billion ATC and airport plan</a> <span class="meta">News outlet · Nov 13, 2026, 1:13 PM ET</span></li>
+<li><a href="https://avweb.com/aviation-news/faa-nationwide-ground-stop-lifts-smart-ai/" rel="noopener">AvWeb: Duffy says SMART could not have caused the outage</a> <span class="meta">News outlet · Nov 13, 2026, 9:58 PM ET</span></li>
+<li><a href="https://www.al.com/weather/2026/11/national-weather-service-says-no-radar-outages-despite-reports.html" rel="noopener">NWS says no radar outages despite reports</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.foxcarolina.com/2026/11/14/nws-confirms-no-radar-outage-nationwide-ground-stop-flights-continues/" rel="noopener">FOX Carolina: NWS confirms no radar outage during the ground stop</a> <span class="meta">News outlet · Nov 14, 2026, 12:47 AM UTC</span></li>
+<li><a href="https://www.hindustantimes.com/ht-explainers/overloaded-network-that-grounded-us-flights-and-faa-rules-for-flying-without-radar-101794660871954.html" rel="noopener">Hindustan Times: Overloaded network that grounded US flights</a> <span class="meta">News outlet · Nov 14, 2026, 7:29 PM UTC+05:30</span></li>
+<li><a href="https://www.mediaite.com/media/news/cnn-aviation-analyst-says-its-just-too-much-of-a-coincidence-faa-rolled-out-new-ai-traffic-tool-right-before-nationwide-comms-outage/" rel="noopener">Mediaite: Former inspector general on SMART timing and the ground stop</a> <span class="meta">News outlet · Nov 13, 2026, 10:10 PM UTC+00:00</span></li>
+<li><a href="https://www.npr.org/2026/11/14/nx-s1-6040518/former-dot-inspector-general-mary-schiavo-on-fridays-faa-ground-stop" rel="noopener">NPR: Weekend Edition Saturday interview on the FAA ground stop</a> <span class="meta">News outlet · Nov 14, 2026, 7:40 AM ET</span></li>
+<li><a href="https://www.oig.dot.gov/library-item/29670" rel="noopener">DOT IG letter on the 2009 FTI outage (2010)</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.oig.dot.gov/library-item/46181" rel="noopener">DOT IG audit: FAA IT and telecom contracting (2024)</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.cbsnews.com/news/faa-ground-stop-warnings-records/" rel="noopener">CBS News: Before air travel meltdown, officials received years of warnings</a> <span class="meta">News outlet · Nov 16, 2026, 6:00 AM ET</span></li>
+<li><a href="https://punchbowl.news/article/washington/faa-ground-stop-fuels-spending-battle/" rel="noopener">Punchbowl News: FAA ground stop fuels new spending battle</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.investing.com/news/stock-market-news/us-probes-why-a-router-installation-sparked-mass-flight-grounding-5030697" rel="noopener">Reuters (via Investing.com): US probes why a router installation sparked mass flight grounding</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
+<li><a href="https://thenextweb.com/news/faa-ground-stop-router-arkansas-l3harris-duffy-billions" rel="noopener">The Next Web (citing Bloomberg): FAA ground stop cost &#39;billions&#39;, Duffy says</a> <span class="meta">News outlet · Nov 16, 2026, 2:59 PM UTC+00:00</span></li>
+<li><a href="https://subscriber.politicopro.com/article/2026/11/duffy-bedford-briefing-congress-faa-transportation-aviation-01167247" rel="noopener">POLITICO Pro: Duffy, Bedford huddle with Congress following air system meltdown</a> <span class="meta">News outlet</span></li>
+<li><a href="https://www.usatoday.com/story/news/politics/2026/11/16/congress-faa-ground-stop-funding-fight/92808539007/" rel="noopener">USA Today: Congress under pressure to intervene after nationwide ground stop</a> <span class="meta">News outlet · Nov 16, 2026, 6:47 PM UTC</span></li>
+<li><a href="https://money.usnews.com/investing/news/articles/2026-11-17/us-senators-urge-faa-to-pause-new-router-deployment-pending-testing" rel="noopener">Reuters (via U.S. News): US senators urge FAA to pause new router deployment pending testing</a> <span class="meta">News outlet · Nov 17, 2026 · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.commerce.senate.gov/press/dem/release/commerce-committee-democrats-demand-clear-fact-based-answers-from-dot-faa-on-root-cause-of-nov-13th-nationwide-ground-stop/" rel="noopener">U.S. Senate Commerce Committee: Commerce Committee Democrats demand answers on root cause of Nov. 13 ground stop</a> <span class="meta">Official source · Nov 17, 2026, 12:08 PM UTC+00:00</span></li>
+<li><a href="https://www.transportation.gov/briefing-room/trump-administration-calls-congress-fully-fund-air-traffic-control-modernization-501" rel="noopener">U.S. Department of Transportation: Trump Administration calls on Congress to fund ATC modernization with $50.1 billion</a> <span class="meta">Official source · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.transportation.gov/briefing-room/111726-joint-letter-regarding-additional-atc-funding" rel="noopener">U.S. Department of Transportation: 11.17.26 Joint letter regarding additional ATC funding</a> <span class="meta">Official source · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.pbs.org/newshour/politics/trump-administration-details-its-50-billion-request-for-aviation-system-improvements" rel="noopener">PBS News: Trump administration details its $50 billion request</a> <span class="meta">News outlet · Nov 17, 2026, 2:27 PM ET</span></li>
+<li><a href="https://www.cbsnews.com/news/sean-duffy-senate-republicans-faa-ground-stop/" rel="noopener">CBS News: Duffy pitches skeptical Senate GOP on $50 billion for FAA</a> <span class="meta">News outlet · Nov 17, 2026, 4:50 PM ET</span></li>
+<li><a href="https://www.axios.com/2026/11/17/sean-duffy-faa-senate-republicans-50-billion" rel="noopener">Axios: Duffy&#39;s $50 billion request gets chilly reception from Senate GOP</a> <span class="meta">News outlet · Nov 17, 2026 · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.politico.com/news/2026/11/17/senate-duffy-air-traffic-overhaul-01170195" rel="noopener">POLITICO: Duffy faces skeptical Senate GOP on $50B air traffic overhaul ask</a> <span class="meta">News outlet · Nov 17, 2026 · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.washingtonexaminer.com/policy/national-security/4805857/fbi-technical-assistance-faa-outage/" rel="noopener">Washington Examiner: FBI &#39;providing technical assistance&#39; to FAA after air control outage</a> <span class="meta">News outlet · Nov 17, 2026, 3:58 PM UTC+00:00</span></li>
+<li><a href="https://www.axios.com/2026/11/17/faa-air-traffic-control-router-upgrade-ground-stop" rel="noopener">Axios: FAA pauses tech upgrade linked to nationwide ground stop</a> <span class="meta">News outlet · Nov 17, 2026 · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.transportation.gov/briefing-room/icymi-trumps-transportation-secretary-sean-p-duffy-shares-update-nationwide-ground" rel="noopener">U.S. DOT: ICYMI: Duffy shares update on ground stop investigation, briefs senators</a> <span class="meta">Official source · not re-checked: site blocks automated access</span></li>
+<li><a href="https://ca.investing.com/news/stock-market-news/root-cause-of-us-aviation-shutdown-not-yet-determined-duffy-says-4965705" rel="noopener">Reuters via Investing.com: Root cause of US aviation shutdown not yet determined, Duffy says</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.washingtonpost.com/transportation/2026/11/17/faa-oversaw-signed-off-repair-work-before-nationwide-ground-stop/" rel="noopener">Washington Post: FAA oversaw and signed off on repair work before nationwide ground stop</a> <span class="meta">News outlet · Nov 17, 2026 · not re-checked: site blocks automated access</span></li>
+<li><a href="https://katv.com/news/local/internal-documents-reveal-faa-reduced-maintenance-oversight-before-ground-stop-travelers-airlines-contractors-upgrades-sop-telecommunications-sites-national-airspace-system-infrastructure-el-dorado" rel="noopener">KATV: Internal documents reveal FAA reduced maintenance oversight before ground stop</a> <span class="meta">News outlet · Nov 18, 2026, 2:51 AM UTC</span></li>
+<li><a href="https://www.crn.com/news/networking/2026/faa-stops-installation-of-hpe-juniper-routers-in-wake-of-ground-stop-investigation" rel="noopener">CRN: FAA stops installation of HPE Juniper routers in wake of ground stop investigation</a> <span class="meta">News outlet</span></li>
+<li><a href="https://forecast.weather.gov/product.php?issuedby=OKX&amp;product=FTM&amp;site=NWS" rel="noopener">OKX FTM products: National Weather Service</a> <span class="meta">Official source</span></li>
+<li><a href="https://forecast.weather.gov/product.php?issuedby=MKX&amp;product=FTM&amp;site=NWS" rel="noopener">MKX FTM products: National Weather Service</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=109" rel="noopener">Advisory 109: Display Advisory</a> <span class="meta">Official source · Nov 13, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=106" rel="noopener">Advisory 106: Display Advisory</a> <span class="meta">Official source · Nov 13, 2026</span></li>
+<li><a href="https://www.flightaware.com/live/flight/SKW4792" rel="noopener">FlightAware SKW4792: OO4792 (SKW4792) SkyWest Flight Tracking and History</a> <span class="meta">Researcher or analysis</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=108" rel="noopener">Advisory 108: Display Advisory</a> <span class="meta">Official source · Nov 13, 2026</span></li>
+<li><a href="https://www.paddleyourownkanoo.com/2026/11/13/faa-announces-ground-stop-for-all-aircraft-across-the-entire-united-states/" rel="noopener">Paddle Your Own Kanoo: FAA Announces Ground Stop For All Aircraft Across the Entire United States</a> <span class="meta">Researcher or analysis · Nov 13, 2026, 9:08 PM UTC+00:00</span></li>
+<li><a href="https://www.yahoo.com/news/us/article/faa-issues-nationwide-ground-stop-on-all-departing-flights-citing-communication-issue-213136811.html" rel="noopener">Yahoo News: Yahoo</a> <span class="meta">News outlet</span></li>
+<li><a href="https://forecast.weather.gov/product.php?issuedby=BOX&amp;product=FTM&amp;site=NWS" rel="noopener">BOX FTM products: National Weather Service</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=086" rel="noopener">Advisory 086: Display Advisory</a> <span class="meta">Official source · Nov 13, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=091" rel="noopener">Advisory 091: Display Advisory</a> <span class="meta">Official source · Nov 13, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=119" rel="noopener">Advisory 119: Display Advisory</a> <span class="meta">Official source · Nov 13, 2026</span></li>
+<li><a href="https://news.delta.com/delta-statement-faa-nationwide-ground-stop" rel="noopener">Delta</a> <span class="meta">Official source · Nov 15, 2026, 11:15 AM ET</span></li>
+<li><a href="https://news.aa.com/news/news-details/2026/Update-on-FAAs-nationwide-ground-stop/" rel="noopener">American Airlines: American</a> <span class="meta">Official source · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.ktvu.com/news/faa-issues-nationwide-ground-stop-due-to-extraordinary-circumstances" rel="noopener">United via KTVU: Nationwide ground stop lifted, but delays will linger</a> <span class="meta">News outlet · Nov 13, 2026, 4:13 PM ET</span></li>
+<li><a href="https://news.ycombinator.com/item?id=50491429" rel="noopener">HN 50491429: Update, 3:00 P.M.: Pacific bound flights are cleared to depart, including Hawaii...</a> <span class="meta">Rumor source</span></li>
+<li><a href="https://news.ycombinator.com/item?id=50491649" rel="noopener">HN 50491649: Makes sense. CNN reported that international airlines were still departing for N...</a> <span class="meta">Rumor source</span></li>
+<li><a href="https://abc7news.com/live-updates/faa-ground-stop-live-updates-what-know-nationwide-flights-are-grounded/20038887/entry/20039063/" rel="noopener">ABC7: Over 1,000 flights canceled and climbing: FlightAware</a> <span class="meta">News outlet · Nov 17, 2026, 5:34 PM UTC</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=121" rel="noopener">Advisory 121: Display Advisory</a> <span class="meta">Official source · Nov 13, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/adv/advADB" rel="noopener">Advisory database: The Most Recent ATCSCC Advisory</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=123" rel="noopener">Advisory 123: Display Advisory</a> <span class="meta">Official source · Nov 13, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=006" rel="noopener">Advisory 006: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=010" rel="noopener">Advisory 010: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=015" rel="noopener">Advisory 015: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=025" rel="noopener">Advisory 025: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=026" rel="noopener">Advisory 026: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=027" rel="noopener">Advisory 027: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=028" rel="noopener">Advisory 028: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=029" rel="noopener">Advisory 029: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=030" rel="noopener">Advisory 030: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=031" rel="noopener">Advisory 031: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=032" rel="noopener">Advisory 032: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=033" rel="noopener">Advisory 033: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=034" rel="noopener">Advisory 034: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=035" rel="noopener">Advisory 035: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=036" rel="noopener">Advisory 036: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=037" rel="noopener">Advisory 037: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=039" rel="noopener">Advisory 039: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
+<li><a href="https://abcnews.com/US/live-updates/faa-ground-stop-live-updates-hundreds-flights-canceled/?entryId=138138306&amp;id=138125140" rel="noopener">ABC News: FAA ground stop live updates: Flight cancellations continue into Monday</a> <span class="meta">News outlet · Nov 16, 2026, 5:16 AM UTC</span></li>
+<li><a href="https://www.nbcnews.com/news/us-news/live-blog/live-updates-faa-lifts-ground-stops-airports-rcna609302" rel="noopener">NBC News: Flight chaos continues as air travel attempts to get back to normal after ground stop</a> <span class="meta">News outlet · Nov 14, 2026, 2:33 PM UTC</span></li>
+<li><a href="https://www.cnbc.com/2026/11/14/root-cause-of-nationwide-ground-stop-is-unknown-faa-says.html" rel="noopener">CNBC: Root cause’ of nationwide ground stop is unknown, FAA says</a> <span class="meta">News outlet · Nov 14, 2026, 10:54 PM UTC+00:00</span></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/15/what-forced-the-us-to-ground-all-planes-a-router-switch-we-now-know" rel="noopener">Al Jazeera: What forced the US to ground all planes? A router switch, we now know | Aviation News</a> <span class="meta">News outlet · Nov 15, 2026, 9:17 AM UTC</span></li>
+<li><a href="https://www.politico.com/news/2026/11/14/duffy-atc-presser-01166601" rel="noopener">POLITICO</a> <span class="meta">News outlet · Nov 14, 2026 · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.investing.com/news/stock-market-news/faa-router-overload-in-arkansas-triggered-nationwide-flight-grounding--wsj-5027664" rel="noopener">Reuters (via Investing.com): Investing.com (citing WSJ)</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.magnoliareporter.com/news_and_business/union_county/article_14de6a8d-c040-442b-a7ff-578db41b1c7e.html" rel="noopener">Magnolia Reporter: Sorry America, our bad: FAA ground stop traced to possible comm equipment failure in El Dorado |…</a> <span class="meta">News outlet · Nov 14, 2026, 11:56 PM UTC-06:00</span></li>
+<li><a href="https://biz.heraldcorp.com/article/10937583" rel="noopener">Herald Business: Two new routers triggered the US aviation outage. But why?</a> <span class="meta">News outlet · Nov 15, 2026, 5:03 PM UTC+09:00</span></li>
+<li><a href="https://www.thetravel.com/us-flight-cancellations-surpass-15000-disruptions-continue-faa-ground-stop-airports-nationwide/" rel="noopener">TheTravel: U.S. Flight Cancellations Surpass 15,000 As Disruptions Continue Following FAA Ground Stop At All Airports…</a> <span class="meta">Researcher or analysis · Nov 15, 2026, 3:48 AM UTC</span></li>
+<li><a href="https://nypost.com/2026/11/14/us-news/more-than-4k-flights-still-canceled-as-faa-ground-stop-continues-to-snarl-travel/" rel="noopener">NY Post: More than 6K flights still canceled as FAA ground stop continues to snarl travel</a> <span class="meta">News outlet · Nov 14, 2026, 8:42 PM UTC+00:00</span></li>
+<li><a href="https://voxluci.com/federal/congress/faa-ground-stop-investigation-congress-johnson/" rel="noopener">Vox Luci: FAA ground stop investigation: What Congress plans</a> <span class="meta">Researcher or analysis · Nov 15, 2026, 3:35 AM UTC+00:00</span></li>
+<li><a href="https://www.washingtonpost.com/politics/2026/11/11/one-month-shutdown-congress-is-far-deal-fund-government/" rel="noopener">Washington Post</a> <span class="meta">News outlet · Nov 11, 2026 · not re-checked: site blocks automated access</span></li>
+<li><a href="https://fedscoop.com/dot-faa-funding-request-atc-lawmaker-pushback/" rel="noopener">FedScoop: FAA details $50B request as lawmaker pushback grows</a> <span class="meta">News outlet · Nov 17, 2026, 9:07 PM UTC+00:00</span></li>
+<li><a href="https://sea.mashable.com/tech/56956/faa-official-oversaw-router-work-just-before-nationwide-ground-stop-report-claims" rel="noopener">Mashable: FAA official oversaw router work just before nationwide ground stop, report claims</a> <span class="meta">News outlet · Nov 18, 2026, 1:38 AM UTC+00:00</span></li>
+<li><a href="https://kesq.com/news/national-world/cnn-national/2026/11/13/faa-issues-nationwide-ground-stop-for-all-flights/" rel="noopener">CNN audio via KESQ: FAA issues nationwide ground stop for all flights</a> <span class="meta">News outlet · Nov 13, 2026, 10:46 PM UTC+00:00</span></li>
+<li><a href="https://news.ycombinator.com/item?id=50491601" rel="noopener">HN AT&amp;T rumor: AT T is experiencing a massive outage. Appears they are the provider for the Air...</a> <span class="meta">Rumor source</span></li>
+<li><a href="https://news.ycombinator.com/item?id=50491687" rel="noopener">HN 911 rumor: NWS radar and 911 systems are also showing downtime according to https: downdet...</a> <span class="meta">Rumor source</span></li>
+<li><a href="https://www.reddit.com/r/unitedairlines/comments/1xvjl55/" rel="noopener">public Reddit thread (r/unitedairlines)</a> <span class="meta">Rumor source</span></li>
+<li><a href="https://www.click2houston.com/news/local/2026/11/13/faa-investigating-whether-new-ai-technology-contributed-to-nationwide-ground-stop/" rel="noopener">Click2Houston: FAA investigating whether new AI technology contributed to nationwide ground stop</a> <span class="meta">News outlet · Nov 13, 2026, 10:57 PM UTC</span></li>
+<li><a href="https://abcnews.com/US/live-updates/faa-ground-stop-live-updates-hundreds-flights-canceled/?entryId=138132097&amp;id=138125140" rel="noopener">ABC News: FAA ground stop live updates: Flight cancellations continue into Monday</a> <span class="meta">News outlet · Nov 16, 2026, 5:16 AM UTC</span></li>
+<li><a href="https://www.pjm.com" rel="noopener">PJM</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.nerc.com" rel="noopener">NERC: North American Electric Reliability Corp</a> <span class="meta">Official source</span></li>
+<li><a href="https://status.cloud.google.com" rel="noopener">Google Cloud status: Google Cloud Service Health</a> <span class="meta">Official source</span></li>
+<li><a href="https://portal.office.com/servicestatus" rel="noopener">Microsoft 365 status: Microsoft service health status</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.usatoday.com/story/news/politics/2026/11/14/democrats-oversight-congress-investigation-nationwide-ground-stop-trump/92781114007/" rel="noopener">USA Today: Democrats in Congress vow accountability for aviation ground stop</a> <span class="meta">News outlet · Nov 14, 2026, 7:00 PM UTC</span></li>
+<li><a href="https://www.washingtonpost.com/transportation/2026/11/14/faa-was-warned-years-about-repair-risks-leading-nationwide-ground-stop/" rel="noopener">Washington Post</a> <span class="meta">News outlet · Nov 14, 2026 · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.foxnews.com/video/6408377348112" rel="noopener">Fox News: Latest Breaking News Videos</a> <span class="meta">News outlet</span></li>
+<li><a href="https://www.faa.gov/newsroom/SMART_One-Pager.pdf" rel="noopener">FAA: SMART fact sheet</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.prnewswire.com/news-releases/asi-selected-by-faa-to-modernize-the-national-airspace-system-302806855.html" rel="noopener">PR Newswire: ASI Selected by FAA to Modernize the National Airspace System</a> <span class="meta">Official source · Jun 22, 2026, 9:43 PM UTC+01:00</span></li>
+<li><a href="https://fedscoop.com/faa-ai-smart-platform-washington-airpace/" rel="noopener">FedScoop: FAA unveils AI aviation data tool in Washington airspace</a> <span class="meta">News outlet · Sep 21, 2026, 9:38 PM UTC+00:00</span></li>
+<li><a href="https://www.flyingmag.com/smart-faa-contract-asi-air-traffic-management/" rel="noopener">Flying on the award: Get SMART: FAA Picks ASI for Predictive Air Traffic Management</a> <span class="meta">News outlet · Jun 22, 2026, 5:06 PM ET</span></li>
+<li><a href="https://www.flyingmag.com/faa-smart-ai-now-active-at-22-artccs-nationwide/" rel="noopener">Flying on the 22-center activation</a> <span class="meta">News outlet · Nov 10, 2026, 11:30 AM ET</span></li>
+<li><a href="https://www.reuters.com/business/aerospace-defense/us-faa-taps-asi-software-overhaul-improve-flight-schedules-cut-delays-2026-06-22/" rel="noopener">Reuters</a> <span class="meta">News outlet · Jun 22, 2026 · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.usaspending.gov/award/CONT_AWD_693KA726C00064_6920_-NONE-_-NONE-" rel="noopener">USAspending award: USAspending.gov</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.nextgov.com/acquisition/2026/06/faa-awards-software-and-ai-contract-part-air-traffic-control-modernization/414354/" rel="noopener">Nextgov: FAA awards software and AI contract as part of air traffic control modernization</a> <span class="meta">News outlet · Jun 23, 2026</span></li>
+<li><a href="https://www.faa.gov/newsroom/faa-launches-vendor-challenge-modernize-air-traffic-flow-system" rel="noopener">FAA announcement: FAA Launches Vendor Challenge to Modernize Air Traffic Flow System</a> <span class="meta">Official source</span></li>
+<li><a href="https://govtribe.com/opportunity/federal-contract-opportunity/flow-management-data-and-services-fmds-challenge-based-acquisition-fmds2025chba" rel="noopener">Notice FMDS-2025-ChBA</a> <span class="meta">Researcher or analysis · not re-checked: site blocks automated access</span></li>
+<li><a href="https://govtribe.com/opportunity/federal-contract-opportunity/flow-management-data-and-services-fmds-challenge-based-acquisition-update-fmds2025chba1" rel="noopener">Notice update</a> <span class="meta">Researcher or analysis · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.bloomberg.com/news/articles/2026-04-17/palantir-thales-among-companies-competing-on-new-faa-ai-tool" rel="noopener">Bloomberg: Palantir, Thales Among Companies Competing on FAA AI Tool</a> <span class="meta">News outlet · Apr 17, 2026, 6:40 PM UTC</span></li>
+<li><a href="https://theaircurrent.com/air-traffic-control/faa-selecting-asi-smart-ai-atc-palantir-thales/" rel="noopener">The Air Current: FAA close to picking ASI over Palantir, Thales for its AI-powered air traffic management system</a> <span class="meta">News outlet · Jun 13, 2026, 11:15 PM UTC+00:00</span></li>
+<li><a href="https://www.faa.gov/about/office_org/headquarters_offices/agc/practice_areas/adjudication/agc70/Casefiles/RecentCases/" rel="noopener">FAA: ODRA recent cases: Recent ODRA Cases</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.hstoday.us/wp-content/uploads/2026/10/2026_10_13_SMART_GAO_Study_Letter_FINAL.pdf" rel="noopener">Letter to GAO</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.usaspending.gov/award/CONT_AWD_693KA726P00024_6920_-NONE-_-NONE-" rel="noopener">USAspending order: USAspending.gov</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.usaspending.gov/award/CONT_IDV_693KA718D00001_6920" rel="noopener">USAspending contract: USAspending.gov</a> <span class="meta">Official source</span></li>
+<li><a href="https://www.channelnewsasia.com/business/us-senators-urge-faa-pause-new-router-deployment-pending-testing-6559156" rel="noopener">CNA (Reuters): FAA pauses Juniper router deployment after grounding US flights</a> <span class="meta">News outlet · Nov 17, 2026, 8:30 PM UTC+08:00</span></li>
+<li><a href="https://www.reuters.com/3fec1b0a85a0/business/aerospace-defense/thousands-us-flights-canceled-delayed-air-travel-system-recovers-shutdown-2026-11-14/" rel="noopener">Reuters: US air travel disruptions to persist until late on Sunday, FAA head says</a> <span class="meta">News outlet · Nov 14, 2026, 3:56 PM UTC</span></li>
+<li><a href="https://www.whitehouse.gov/releases/2026/11/no-indication-of-a-cyberattack-dni-clayton-and-secretary-rubio-on-recent-tech-outages/" rel="noopener">White House release: “No Indication of a Cyberattack”: DNI Clayton and Secretary Rubio on Recent Tech Outages</a> <span class="meta">Official source · Nov 18, 2026, 3:43 PM UTC+00:00</span></li>
+<li><a href="https://www.investing.com/news/stock-market-news/us-plans-to-announce-cause-of-outage-that-led-to-nationwide-ground-stop-faa-says-5039469" rel="noopener">Reuters (via Investing.com): US plans to announce cause of outage that led to nationwide ground stop, FAA says</a> <span class="meta">News outlet · Nov 19, 2026</span></li>
+<li><a href="https://krdo.com/news/national-world/cnn-national/2026/11/19/faa-pauses-juniper-router-installations-after-nationwide-ground-stop/" rel="noopener">CNN via KRDO: Investigators &#39;very close&#39; to finding cause of nationwide ground stop, FAA chief says</a> <span class="meta">News outlet · Nov 19, 2026</span></li>
+<li><a href="https://www.axios.com/2026/11/19/trump-national-cyber-director-sean-cairncross-leaving" rel="noopener">Axios: Trump names Kirsten Davies as new national cyber director</a> <span class="meta">News outlet · Nov 19, 2026</span></li>
+<li><a href="https://www.theguardian.com/us-news/2026/nov/19/white-house-cyber-director-ousted" rel="noopener">The Guardian (with Reuters): White House cyber director ousted after US hit by wave of tech outages</a> <span class="meta">News outlet · Nov 19, 2026, 8:25 PM ET</span></li>
+<li><a href="https://apnews.com/article/ground-stop-faa-l3harris-94757b1f6aa71c3435c8286e27926786" rel="noopener">AP: US Transportation Secretary says L3Harris should have found ground stop problem sooner</a> <span class="meta">News outlet · Nov 18, 2026</span></li>
+<li><a href="https://www.scrippsnews.com/us-news/sources-dispute-faas-account-of-oversight-before-nationwide-ground-stop" rel="noopener">CNN via Scripps News: Sources dispute FAA&#39;s account of oversight before nationwide ground stop</a> <span class="meta">News outlet</span></li>
+<li><a href="https://www.aviationpros.com/aircraft-maintenance-technology/aircraft-technology/news/55419813/faa-pauses-installation-of-gear-tied-to-messy-flight-halt" rel="noopener">Bloomberg via Aviation Pros: FAA pauses installation of gear tied to messy flight halt</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
+<li><a href="https://www.straitstimes.com/world/united-states/us-aviation-authority-pauses-installation-of-gear-tied-to-messy-flight-halt" rel="noopener">Bloomberg via The Straits Times: US aviation authority pauses router installation</a> <span class="meta">News outlet · Nov 18, 2026</span></li>
+<li><a href="https://www.cbsnews.com/news/ground-stop-l3harris-system-outage/" rel="noopener">CBS News: During nationwide ground stop, L3Harris struggled to find location of system outage</a> <span class="meta">News outlet · Nov 18, 2026</span></li>
+<li><a href="https://arstechnica.com/gadgets/2026/11/how-faa-can-modernize-us-national-airspace-system-without-emergency-ground-stops/" rel="noopener">Ars Technica: US will soon announce root cause behind FAA nationwide ground stop</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
+<li><a href="https://www.techtarget.com/news/experts-look-beyond-hpe-devices-for-answers-on-faa-ground-stop/875209/" rel="noopener">TechTarget: Experts look beyond HPE devices for answers on FAA ground stop</a> <span class="meta">News outlet · Nov 19, 2026</span></li>
+<li><a href="https://www.washingtontimes.com/news/2026/nov/20/trump-says-recent-tech-outages-separate-events/" rel="noopener">The Washington Times: Trump says recent tech outages are &#39;separate events&#39;</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
+<li><a href="https://www.aa.com.tr/en/americas/trump-dismisses-concerns-over-us-outages-blames-companies-system-upgrades/4132529" rel="noopener">Anadolu Agency: Trump dismisses concerns over US outages, blames companies&#39; system upgrades</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
+<li><a href="https://www.bbc.com/news/articles/cr930ney9d1po" rel="noopener">BBC: Trump says US flight systems are &#39;ancient&#39; but &#39;safe&#39; after ground stop</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
+<li><a href="https://www.thenationalnews.com/news/us/2026/11/20/trump-sean-cairncross-fired-resigned/" rel="noopener">The National: Trump didn&#39;t think fired US cyber director Sean Cairncross was &#39;good enough&#39;</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
+<li><a href="https://www.investing.com/news/world-news/white-house-national-cyber-director-cairncross-leaving-his-post-axios-reports-5040251" rel="noopener">Reuters (via Investing.com, updated Nov. 20): Trump ousts cyber director after tech outages spark criticism</a> <span class="meta">News outlet · Nov 20, 2026 · not re-checked: site blocks automated access</span></li>
+<li><a href="https://www.foxnews.com/politics/lawmakers-warn-americans-vulnerable-systems-amid-streak-outages-something-going-on" rel="noopener">Fox News: Lawmakers warn of vulnerable systems amid streak of outages: &#39;Something is going on&#39;</a> <span class="meta">News outlet · Nov 21, 2026, 4:00 AM ET</span></li>
+<li><a href="https://www.theguardian.com/technology/2026/nov/22/hacks-ai-internet-outages-airlines-banks-microsoft-apple" rel="noopener">The Guardian: Hacks, AI and conspiracy theories: why are we having so many outages?</a> <span class="meta">News outlet · Nov 22, 2026, 1:00 AM ET</span></li>
+<li><a href="https://abcnews.com/Politics/week-transcript-11-22-26-director-national-intelligence/story?id=138345755" rel="noopener">ABC News: &#39;This Week&#39; transcript, Nov. 22, 2026 (the Director of National Intelligence)</a> <span class="meta">News outlet · Nov 22, 2026, 9:40 AM ET</span></li>
+<li><a href="https://abcnews.com/Politics/dni-clayton-putin-americas-friend-ukraine/story?id=138356905" rel="noopener">ABC News: the Director of National Intelligence: Putin is &#39;not America&#39;s friend in Ukraine&#39;</a> <span class="meta">News outlet · Nov 22, 2026</span></li>
+</ol>
+</div>
+</details>
+</section>
 
 <section class="block" id="update-log">
 <details class="fold">
-<summary><span class="sec-n">23</span><h2>Update log</h2><span class="count">70</span></summary>
+<summary><h3>Update log</h3><span class="count">70</span></summary>
 <div class="fold-body">
 <p class="meta">Every check and change, newest first.</p>
 <ol class="log">
@@ -2745,289 +3058,11 @@
 </div>
 </details>
 </section>
-
-<section class="block" id="sources">
-<details class="fold">
-<summary><span class="sec-n">24</span><h2>Sources</h2><span class="count">274</span></summary>
-<div class="fold-body">
-<ol class="source-lines numbered">
-<li><a href="https://nasstatus.faa.gov/api/airport-status-information" rel="noopener">FAA airport status feed</a> <span class="meta">Official source</span></li>
-<li><a href="https://transportation.house.gov/calendar/" rel="noopener">House T&amp;I Committee calendar</a> <span class="meta">Official source</span></li>
-<li><a href="https://transportation.house.gov/calendar/eventsingle.aspx?EventID=410335" rel="noopener">House T&amp;I: BNATCS hearing: postponed until further notice</a> <span class="meta">Official source</span></li>
-<li><a href="https://passnational.org/news/pass-on-the-nationwide-ground-stop/" rel="noopener">PASS On the Nationwide Ground Stop</a> <span class="meta">Official source · Nov 15, 2026, 1:26 AM UTC+00:00</span></li>
-<li><a href="https://abcnews.com/US/live-updates/faa-ground-stop-live-updates-hundreds-flights-canceled/?entryId=138163207&amp;id=138125140" rel="noopener">ABC News: FAA ground stop live updates</a> <span class="meta">News outlet · Nov 16, 2026, 5:16 AM UTC</span></li>
-<li><a href="https://www.fox4news.com/news/faa-ground-stop-routers-texas-arkansas-being-tested-after-outage" rel="noopener">FOX 4: Routers in Texas, Arkansas being tested</a> <span class="meta">News outlet · Nov 15, 2026, 9:58 AM UTC-06:00</span></li>
-<li><a href="https://rollcall.com/2026/11/16/aviation-funding-becomes-political-football-in-lame-duck-session/" rel="noopener">Roll Call: Aviation funding becomes political football</a> <span class="meta">News outlet · Nov 16, 2026, 5:37 AM UTC+00:00</span></li>
-<li><a href="https://approps.ai/analysis/will-there-be-a-government-shutdown-december-2026" rel="noopener">Approps: Will there be a government shutdown in December?</a> <span class="meta">Researcher or analysis · Nov 8, 2026</span></li>
-<li><a href="https://thepointsguy.com/news/faa-groundstop-flights-grounded-nationwide" rel="noopener">The Points Guy: Air travel woes hit day 3</a> <span class="meta">News outlet · Nov 16, 2026, 3:00 PM UTC</span></li>
-<li><a href="https://www.cnbc.com/2026/11/15/flight-delays-ground-faa-stop.html" rel="noopener">CNBC: Flight delays linger, schedule improves Monday</a> <span class="meta">News outlet · Nov 15, 2026</span></li>
-<li><a href="https://fortune.com/2026/11/16/cyberattack-faa-ground-stop-sean-duffy-l3harris-fiber-installation-arkansas/" rel="noopener">Fortune: Did a cyberattack hit the FAA? Probably not</a> <span class="meta">News outlet · Nov 16, 2026, 11:57 AM UTC-00:00</span></li>
-<li><a href="https://www.hindustantimes.com/world-news/us-news/fact-check-posts-falsely-claim-trump-top-white-house-officials-moved-to-bunker-amid-faa-outage-101794679770886.html" rel="noopener">Hindustan Times: Fact check: Trump bunker claim false</a> <span class="meta">News outlet · Nov 15, 2026, 1:12 AM UTC+05:30</span></li>
-<li><a href="https://cyberharpoon.com/insights/faa-ground-stop-influence-campaign/" rel="noopener">Cyber Harpoon: Inside the FAA ground stop influence campaign</a> <span class="meta">Researcher or analysis</span></li>
-<li><a href="https://justthenews.com/politics-policy/transportation/flight-schedules-gradually-returning-normal-after-nationwide-ground" rel="noopener">Just the News: FAA officials expected to brief congressional staff</a> <span class="meta">News outlet · Nov 16, 2026, 8:34 AM ET</span></li>
-<li><a href="https://www.faa.gov/newsroom/nationwide-ground-stop-questions-and-answers" rel="noopener">FAA: Nationwide Ground Stop: Questions and Answers</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.transportation.gov/briefing-room/icymi-trumps-transportation-secretary-sean-p-duffy-provides-update-across-sunday" rel="noopener">US DOT: Duffy update across Sunday shows</a> <span class="meta">Official source · not re-checked: site blocks automated access</span></li>
-<li><a href="https://democrats-transportation.house.gov/news/press-releases/ranking-members-larsen-carson-statement-on-last-nights-nationwide-ground-stop" rel="noopener">House T&amp;I Democrats: Ranking Members Larsen, Carson statement on the ground stop</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://abcnews.com/Politics/transportation-secretary-duffy-atc-routers-ability-broadcast-data/story?id=138155545" rel="noopener">ABC News: Duffy says ATC routers&#39; ability to broadcast data turned off</a> <span class="meta">News outlet · Nov 15, 2026, 3:47 PM UTC</span></li>
-<li><a href="https://www.foxnews.com/us/duffy-investigators-examining-2-routers-nationwide-faa-ground-stop-no-signs-foreign-cyberattack" rel="noopener">Fox News: Duffy says 2 routers being examined</a> <span class="meta">News outlet · Nov 15, 2026, 1:20 PM ET</span></li>
-<li><a href="https://www.l3harris.com/newsroom/press-release/2026/11/l3harris-statement-nov-13-ground-stop" rel="noopener">L3Harris Statement on the Nov. 13 Ground Stop</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.transportation.gov/briefing-room/icymi-us-transportation-secretary-sean-p-duffy-provides-update-restoration-airspace" rel="noopener">US Department of Transportation: ICYMI: Duffy update on restoration of airspace after the ground stop</a> <span class="meta">Official source · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.channelnewsasia.com/world/us-aviation-shutdown-blamed-l3-harris-installed-router-6552171" rel="noopener">CNA: US aviation shutdown blamed on L3Harris installed router (Reuters)</a> <span class="meta">News outlet · Nov 15, 2026, 4:56 AM UTC+08:00</span></li>
-<li><a href="https://www.usatoday.com/story/news/nation/2026/11/14/faa-ground-stop-probe-l3harris/92780406007/" rel="noopener">USA Today: Air traffic probe looks at work of FAA contractor and a single router</a> <span class="meta">News outlet · Nov 14, 2026, 8:53 PM UTC</span></li>
-<li><a href="https://www.npr.org/2026/11/14/nx-s1-6040952/faa-ground-stop-airplane-travel" rel="noopener">NPR: FAA ground stop ends but passengers stuck at airport</a> <span class="meta">News outlet · Nov 14, 2026, 11:53 AM ET</span></li>
-<li><a href="https://www.axios.com/2026/11/14/faa-ground-stop-outage-update" rel="noopener">Axios: FAA back at &quot;full operations&quot; after Friday outage</a> <span class="meta">News outlet · Nov 14, 2026 · not re-checked: site blocks automated access</span></li>
-<li><a href="https://aviationweek.com/air-transport/safety-ops-regulation/faa-says-router-malfunction-led-ground-stop" rel="noopener">Aviation Week: FAA says router malfunction led to ground stop</a> <span class="meta">News outlet · Nov 14, 2026, 7:15 PM UTC+00:00</span></li>
-<li><a href="https://www.yahoo.com/news/us/live/faa-ground-stop-latest-updates-duffy-blames-contractor-l3harris-thousands-more-flights-canceled-saturday-no-sign-of-cyberattack-161329174.html" rel="noopener">Yahoo News: FAA ground stop latest updates: Duffy blames contractor L3Harris</a> <span class="meta">News outlet · Nov 17, 2026, 10:24 PM UTC</span></li>
-<li><a href="https://www.ainvest.com/news/duffy-contractor-l3harris-working-telecommunication-maintenance-time-time-aviation-shutdown-2611/" rel="noopener">AInvest: Duffy: Contractor L3Harris was working on telecommunication maintenance at the time of aviation shutdown</a> <span class="meta">Researcher or analysis · Nov 14, 2026, 11:05 AM ET</span></li>
-<li><a href="https://www.cnbc.com/2026/11/14/faa-ground-stop-flights-resume-delays.html" rel="noopener">CNBC: Flight disruptions continue after FAA lifts ground stop</a> <span class="meta">News outlet · Nov 14, 2026</span></li>
-<li><a href="https://www.aerotime.aero/articles/duffy-congress-atc-funding-nationwide-outage" rel="noopener">AeroTime: Duffy presses Republican Congress on ATC funding after outage</a> <span class="meta">News outlet · Nov 14, 2026, 3:31 AM UTC+00:00</span></li>
-<li><a href="https://www.theverge.com/news/1033489/faa-ground-stop" rel="noopener">The Verge: FAA lifts nationwide ground stop that blocked takeoffs for hours</a> <span class="meta">News outlet · Nov 13, 2026, 9:38 PM UTC+00:00</span></li>
-<li><a href="https://www.wired.com/story/the-faa-nationwide-ground-stop-is-over/" rel="noopener">WIRED: The FAA Nationwide Ground Stop Is Over</a> <span class="meta">News outlet · Nov 14, 2026, 1:46 AM UTC</span></li>
-<li><a href="https://www.securityweek.com/no-signs-of-hacking-in-faa-ground-stop-as-fbi-reportedly-probes-software-update/" rel="noopener">SecurityWeek: No Signs of Hacking in FAA Ground Stop as FBI Reportedly Probes Software Update</a> <span class="meta">News outlet · Nov 14, 2026, 8:40 AM UTC+00:00</span></li>
-<li><a href="https://www.reuters.com/3fec1b0a85a0/world/us/faa-issues-national-ground-stop-due-extraordinary-circumstance-reasons-safety-2026-11-13/" rel="noopener">Reuters: US to resume flights after air traffic network failure</a> <span class="meta">News outlet · Nov 13, 2026, 9:08 PM UTC</span></li>
-<li><a href="https://www.latimes.com/politics/story/2026-11-13/what-caused-national-ground-stop-here-is-what-we-know" rel="noopener">Los Angeles Times: What caused the national ground stop? Here is what we know</a> <span class="meta">News outlet · Nov 14, 2026</span></li>
-<li><a href="https://www.bbc.com/news/articles/cqx2wyvyr3zzo" rel="noopener">BBC: What we know about the US ground stop</a> <span class="meta">News outlet · Nov 14, 2026, 3:10 AM UTC</span></li>
-<li><a href="https://aviationweek.com/air-transport/safety-ops-regulation/faa-lifts-nationwide-ground-stop-points-data-overload-cause" rel="noopener">Aviation Week: FAA Lifts Nationwide Ground Stop, Points To Data Overload As Cause</a> <span class="meta">News outlet · Nov 13, 2026, 10:52 PM UTC+00:00</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=043" rel="noopener">ATCSCC Advisory 043: Saturday operations plan</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://ifrmeter.com/blog/national-ground-stop-2026-11-13" rel="noopener">IFR Meter live blog: national ground stop</a> <span class="meta">Researcher or analysis · Nov 13, 2026</span></li>
-<li><a href="https://apnews.com/live/ground-stop-aviation-flights-news-updates-11-13-2026" rel="noopener">AP News: Live updates: FAA grounds all flights nationwide</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.washingtonpost.com/transportation/2026/11/13/faa-grounds-flights-all-us-airports-citing-communications-issue/" rel="noopener">Washington Post: FAA grounds flights citing telecommunications outage</a> <span class="meta">News outlet · Nov 13, 2026 · not re-checked: site blocks automated access</span></li>
-<li><a href="https://thehill.com/policy/transportation/6219936-mullin-faa-telecommunication-outage-ground-stop/" rel="noopener">The Hill: Mullin: telecom outage grounds flights</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.cbsnews.com/newyork/news/jfk-laguardia-newark-airports-nationwide-ground-stop/" rel="noopener">CBS New York: NYC airports impacted by nationwide ground stop</a> <span class="meta">News outlet · Nov 13, 2026, 5:07 PM ET</span></li>
-<li><a href="https://orcasairband.com" rel="noopener">Orcas Island airband SDR</a> <span class="meta">Social post</span></li>
-<li><a href="https://www.l3harris.com/all-capabilities/faa-telecommunications-infrastructure-fti" rel="noopener">L3Harris: FAA Telecommunications Infrastructure (FTI)</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.androidauthority.com/att-app-down-3735059/" rel="noopener">Android Authority: AT&amp;T app down (earlier outage)</a> <span class="meta">News outlet · Nov 13, 2026, 3:01 PM UTC+00:00</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=111" rel="noopener">FAA Advisory 111, national ground stop</a> <span class="meta">Official source · Nov 13, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=120" rel="noopener">FAA Advisory 120, communications failure and recovery path</a> <span class="meta">Official source · Nov 13, 2026</span></li>
-<li><a href="https://nasstatus.faa.gov/" rel="noopener">NAS status / public airport status</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.wbez.org/transportation/2026/11/13/all-departing-flights-grounded-nationwide-due-to-faa-order" rel="noopener">WBEZ: Duffy: communication issue at all centers</a> <span class="meta">News outlet · Nov 13, 2026, 9:48 PM UTC</span></li>
-<li><a href="https://www.independent.co.uk/bulletin/news/sean-duffy-full-statement-faa-ground-stop-flights-b3084845.html" rel="noopener">The Independent: Duffy&#39;s full statement</a> <span class="meta">News outlet · Nov 13, 2026, 9:50 PM UTC</span></li>
-<li><a href="https://www.foxweather.com/weather-news/nationwide-ground-stop-ordered-faa" rel="noopener">Fox Weather: Ground-stop update with delay counts</a> <span class="meta">News outlet · Nov 13, 2026, 4:10 PM ET</span></li>
-<li><a href="https://radar3pub.ncep.noaa.gov/ftm.txt" rel="noopener">Weather Service radar outage notices (FTM)</a> <span class="meta">Official source</span></li>
-<li><a href="https://kesq.com/news/2026/11/13/weather-service-reports-nationwide-outage/" rel="noopener">KESQ: Weather Service nationwide website outage</a> <span class="meta">News outlet · Nov 13, 2026, 10:36 PM UTC+00:00</span></li>
-<li><a href="https://gizmodo.com/the-faa-is-rolling-out-its-ai-air-traffic-tool-nationwide-2000839347" rel="noopener">Gizmodo on the SMART nationwide rollout</a> <span class="meta">News outlet · Nov 13, 2026, 1:12 AM UTC+00:00</span></li>
-<li><a href="https://www.faa.gov/newsroom/statements/general-statements" rel="noopener">FAA SMART statement, Nov 10</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.faa.gov/newsroom/trumps-transportation-secretary-sean-p-duffy-delivers-state-art-air-traffic-control" rel="noopener">FAA SMART launch, Sept 21</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.faa.gov/newsroom/modern-skies-trumps-transportation-secretary-sean-p-duffy-selects-air-space-intelligence" rel="noopener">FAA FMDS and SMART award, June 22</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.asi.com/news/asi-awarded-faa-contract-fmds-smart" rel="noopener">ASI contract announcement</a> <span class="meta">Official source · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.youtube.com/watch?v=QhnAQ_PCyr8" rel="noopener">YouTube: Flight Follower ATC compilation (Moline and Seattle Ground)</a> <span class="meta">Social post</span></li>
-<li><a href="https://www.youtube.com/watch?v=64qOyjnRDdA" rel="noopener">YouTube: CBS Chicago ATC-zero audio</a> <span class="meta">Social post</span></li>
-<li><a href="https://www.youtube.com/watch?v=iXGZqaF9i68" rel="noopener">YouTube: blancolirio clip with the NBAA notice</a> <span class="meta">Social post</span></li>
-<li><a href="https://www.reuters.com/business/aerospace-defense/us-faa-says-error-messages-telecommunications-circuit-prompted-shift-backup-2026-09-23/" rel="noopener">Reuters: September 2026 FAA circuit errors and fiber cut</a> <span class="meta">News outlet · Sep 23, 2026 · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.cnbc.com/2026/09/21/newark-philadelphia-nyc-flight-disruptions.html" rel="noopener">CNBC: September 2026 backup fiber cut near New Brunswick</a> <span class="meta">News outlet · Sep 21, 2026</span></li>
-<li><a href="https://theaircurrent.com/feed/dispatches/u-s-halts-flight-departures-nationwide-on-air-traffic-communications-outage/" rel="noopener">The Air Current: outages began at Chicago Center</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.oig.dot.gov/library-item/32708" rel="noopener">DOT Inspector General report on the 2014 Chicago Center fire</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.faa.gov/newsroom/trumps-transportation-secretary-sean-p-duffy-begins-retiring-decades-old-floppy-disks-air" rel="noopener">FAA Nov. 5 copper-to-fiber progress</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.l3harris.com/newsroom/editorial/2026/05/l3harris-reaches-over-50-faa-telecommunications-modernization" rel="noopener">L3Harris on low-traffic cutovers</a> <span class="meta">Official source · May 11, 2026</span></li>
-<li><a href="https://www.cbsnews.com/texas/news/faa-ground-stop-halts-flights-at-dfw-and-dallas-love-field-airports/" rel="noopener">CBS Texas on the L3Harris-operated network</a> <span class="meta">News outlet · Nov 13, 2026, 4:07 PM UTC-06:00</span></li>
-<li><a href="https://www.bloomberglinea.com/mundo/estados-unidos/fbi-investiga-si-una-actualizacion-de-software-causo-la-falla-que-afecto-al-trafico-aereo-en-eeuu/" rel="noopener">Bloomberg Línea: FBI looking at a software update</a> <span class="meta">News outlet · Nov 13, 2026, 10:48 PM UTC</span></li>
-<li><a href="https://www.thewellnews.com/homeland-security/dhs-chief-says-faa-outage-shows-no-sign-of-attack/" rel="noopener">The Well News: Mullin on two unaffected areas</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.geekwire.com/2026/dhs-chief-sees-no-microsoft-link-to-faa-ground-stop-says-possible-ai-role-being-investigated/" rel="noopener">GeekWire: Mullin on Microsoft and SMART</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.theverge.com/science/1033581/national-weather-service-radar-operating-normally" rel="noopener">The Verge: NWS radar operating normally</a> <span class="meta">News outlet · Nov 13, 2026, 11:37 PM UTC+00:00</span></li>
-<li><a href="https://www.nco.ncep.noaa.gov/status/messages/" rel="noopener">NCEP operations-center status messages</a> <span class="meta">Official source</span></li>
-<li><a href="https://web.archive.org/web/20251206140913/https://www.weather.gov/lox/WebIssues" rel="noopener">Archived NWS Los Angeles WebIssues page</a> <span class="meta">Official source</span></li>
-<li><a href="https://news.alaskaair.com/on-the-record/alaska-airlines-statement-on-faa-issued-ground-stop/" rel="noopener">Alaska Airlines statement on the ground stop</a> <span class="meta">Official source · Nov 15, 2026, 1:08 PM UTC+00:00</span></li>
-<li><a href="https://www.arlnow.com/2026/11/13/developing-flights-halted-at-reagan-national-and-dulles-amid-nationwide-faa-ground-stop/" rel="noopener">ARLnow: flights halted at Reagan National and Dulles</a> <span class="meta">News outlet · Nov 13, 2026, 9:45 PM UTC+00:00</span></li>
-<li><a href="https://www.cbc.ca/news/canada/montreal/montreal-airport-flight-delays-9.7421497" rel="noopener">CBC Montreal: NAV CANADA systems operating normally</a> <span class="meta">News outlet · Nov 13, 2026, 10:11 PM UTC</span></li>
-<li><a href="https://www.cbc.ca/news/canada/toronto/toronto-pearson-airport-faa-ground-stop-9.7421481" rel="noopener">CBC Toronto: MacKinnon on Canadian systems</a> <span class="meta">News outlet · Nov 13, 2026, 10:08 PM UTC</span></li>
-<li><a href="https://calgaryherald.com/news/yyc-flights-usa-held-faa-nationwide-ground-stop" rel="noopener">Calgary Herald: US-bound flights held at YYC</a> <span class="meta">News outlet · Nov 13, 2026, 11:00 PM UTC+00:00</span></li>
-<li><a href="https://globalnews.ca/news/12150274/faa-usa-ground-stop-order/" rel="noopener">Global News: Porter grounds US-overflight flights</a> <span class="meta">News outlet · Nov 13, 2026, 4:23 PM ET</span></li>
-<li><a href="https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247" rel="noopener">NBC News: officials see no sign of malicious activity</a> <span class="meta">News outlet · Nov 14, 2026, 6:56 AM UTC</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=107" rel="noopener">FAA Advisory 107, first O&#39;Hare ground stop</a> <span class="meta">Official source · Nov 13, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=114" rel="noopener">FAA Advisory 114, Chicago Center equipment outage</a> <span class="meta">Official source · Nov 13, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/summary_pub" rel="noopener">FAA national airspace system status summary</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.fly.faa.gov/restrictions/restrictions?reqFac=ALL&amp;provFac=ALL" rel="noopener">FAA current restrictions list</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.cbsnews.com/news/faa-issues-nationwide-ground-stop/" rel="noopener">CBS News: FAA issues nationwide ground stop</a> <span class="meta">News outlet · Nov 13, 2026, 4:29 PM ET</span></li>
-<li><a href="https://www.bloomberg.com/news/articles/2026-11-13/fbi-said-to-probe-whether-software-update-caused-mass-faa-outage" rel="noopener">Bloomberg: FBI said to probe whether a software update caused the FAA outage</a> <span class="meta">News outlet · Nov 13, 2026, 10:01 PM UTC</span></li>
-<li><a href="https://fedscoop.com/faa-nationwide-ground-stop-tech-telecommunications-issue/" rel="noopener">FedScoop: FAA nationwide ground stop tied to a telecommunications issue</a> <span class="meta">News outlet · Nov 13, 2026, 11:26 PM UTC+00:00</span></li>
-<li><a href="https://sam.gov/workspace/contract/opp/89275702a17c4bc4a1906fd596fe8828/view" rel="noopener">SAM.gov: FAA FENS contract opportunity</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.usaspending.gov/award/CONT_AWD_693KA826F00278_6920_693KA826D00016_6920" rel="noopener">USAspending: AT&amp;T FENS planning task order 693KA826F00278</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.washingtontechnology.com/contracts/2026/08/faa-brings-t-network-modernization-program/415412/" rel="noopener">Washington Technology: FAA brings AT&amp;T onto the FENS network program</a> <span class="meta">News outlet · Aug 13, 2026</span></li>
-<li><a href="https://x.com/downdetector/status/2121362757505130737" rel="noopener">Downdetector: user reports of 911 problems starting 4:13 PM ET</a> <span class="meta">Social post · Nov 13, 2026, 10:01 PM UTC</span></li>
-<li><a href="https://cybernews.com/news/911-line-down-outage/" rel="noopener">Cybernews: 911 line-down outage reports</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
-<li><a href="https://x.com/LancasterCoEMA/status/2121386019539014040" rel="noopener">Lincoln-Lancaster EMA: 911 still working during a non-emergency line outage</a> <span class="meta">Social post · Nov 13, 2026, 11:33 PM UTC</span></li>
-<li><a href="https://www.hawaiinewsnow.com/2026/11/14/dot-all-west-coast-flights-halted-by-spacex-debris-after-faa-ground-stop/" rel="noopener">Hawaii News Now: Hawaii DOT halts West Coast flights over SpaceX debris</a> <span class="meta">News outlet · Nov 13, 2026, 11:56 PM UTC</span></li>
-<li><a href="https://apnews.com/article/flights-halted-airports-faa-f81b0904331dafad6133f291e5f531a8" rel="noopener">AP News: Flights halted at airports across US</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
-<li><a href="https://news.aa.com/news/news-details/2026/Update-on-FAAs-nationwide-ground-stop/default.aspx" rel="noopener">American Airlines: Update on FAA&#39;s nationwide ground stop</a> <span class="meta">Official source · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=005" rel="noopener">FAA Advisory 005, nationwide ground stop cancelled</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=001" rel="noopener">FAA Advisory 001, nationwide ground stop with selective releases</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=002" rel="noopener">FAA Advisory 002, Washington Center NRP suspended</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://abcnews.com/US/live-updates/faa-ground-stop-live-updates-hundreds-flights-canceled/?id=138125140" rel="noopener">ABC News: Live updates: FAA ground stop, cancellations and airline actions</a> <span class="meta">News outlet · Nov 16, 2026, 5:16 AM UTC</span></li>
-<li><a href="https://www.flightaware.com/live/airport/delays_new" rel="noopener">FlightAware: US airport delay board</a> <span class="meta">Researcher or analysis</span></li>
-<li><a href="https://www.space.com/news/live/spacex-starship-flight-15-live-updates-nov-13-2026-starship-first-double-landing-attempt" rel="noopener">Starship Flight 15 live updates</a> <span class="meta">News outlet · Nov 10, 2026, 7:46 PM UTC</span></li>
-<li><a href="https://www.forth.news/lists/ussen-cantwell/Ch1oLQw7wQaGCPebYhSdU" rel="noopener">Forth: Sen. Cantwell: Senate Commerce will be reviewing the outage</a> <span class="meta">Researcher or analysis · not re-checked: site blocks automated access</span></li>
-<li><a href="https://abc7news.com/live-updates/faa-ground-stop-live-updates-what-know-nationwide-flights-are-grounded/20038887/" rel="noopener">ABC7 live updates: ground stop lifted, Mullin briefing</a> <span class="meta">News outlet · Nov 17, 2026, 5:34 PM UTC</span></li>
-<li><a href="https://www.nbcnews.com/news/us-news/live-blog/live-updates-flights-grounded-faa-communications-outage-rcna609268" rel="noopener">NBC News live blog: Duffy and Mullin White House briefing after the lift</a> <span class="meta">News outlet · Nov 13, 2026, 10:20 PM UTC</span></li>
-<li><a href="https://www.bbc.com/news/live/c6z9dwn12037t" rel="noopener">BBC live: Duffy says airspace opened at 8:15 PM ET</a> <span class="meta">News outlet · Nov 13, 2026, 9:19 PM UTC</span></li>
-<li><a href="https://www.c-span.org/program/white-house-event/trump-admin-officials-speak-to-white-house-reporters-about-ground-stop/687918" rel="noopener">C-SPAN: Trump admin officials speak to White House reporters about the ground stop</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.whitehouse.gov/videos/dhs-secretary-markwayne-mullin-speaks-on-faa-ground-stop-everybody-is-safe/" rel="noopener">White House video: Mullin earlier remarks, &quot;Everybody is safe&quot;</a> <span class="meta">Official source · Nov 13, 2026, 11:07 PM UTC+00:00</span></li>
-<li><a href="https://www.huffpost.com/entry/live-updates_n_6af1983ce4b043b6d4e35621/liveblog_6af7800be4b043423791e460/webview" rel="noopener">HuffPost live updates: Mullin and Duffy briefing quotes</a> <span class="meta">News outlet · Nov 9, 2026, 9:57 AM UTC</span></li>
-<li><a href="https://www.thirteen.org/programs/pbs-newshour/flights-halted-1794607120/" rel="noopener">PBS NewsHour transcript excerpt of earlier Mullin remarks</a> <span class="meta">News outlet · Nov 13, 2026, 9:58 PM UTC+00:00</span></li>
-<li><a href="https://www.fox5vegas.com/video/2026/11/14/faa-tells-airlines-problem-started-with-routers-amid-nationwide-ground-stop-source-says/" rel="noopener">Fox 5 Vegas: CNN says FAA told airlines the problem started with routers, possibly at Midway</a> <span class="meta">News outlet · Nov 14, 2026, 12:02 AM UTC</span></li>
-<li><a href="https://www.faa.gov/newsroom/faa-statement-nationwide-ground-stop" rel="noopener">FAA statement on the nationwide ground stop</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.moneycontrol.com/world/fbi-said-to-probe-whether-software-update-caused-mass-faa-outage-article-14079905.html" rel="noopener">Moneycontrol reprint of the Bloomberg FBI software-update article</a> <span class="meta">News outlet · Nov 14, 2026, 6:58 AM UTC+05:30</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=011" rel="noopener">FAA Advisory 011, O&#39;Hare United-only ground stop</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=012" rel="noopener">FAA Advisory 012, Seattle Alaska-only ground stop</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=014" rel="noopener">FAA Advisory 014, San Diego Alaska ground stop</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=016" rel="noopener">FAA Advisory 016, Newark United-only ground stop</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=017" rel="noopener">FAA Advisory 017, Minneapolis Delta-only ground stop</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=013" rel="noopener">FAA Advisory 013, terminal hotline page closed</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=018" rel="noopener">FAA Advisory 018, overnight operations plan</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=019" rel="noopener">FAA Advisory 019, Newark United stop cancelled</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=020" rel="noopener">FAA Advisory 020, O&#39;Hare United stop extended</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=021" rel="noopener">FAA Advisory 021, Los Angeles Alaska ground stop</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=022" rel="noopener">FAA Advisory 022, San Diego Alaska stop extended</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=023" rel="noopener">FAA Advisory 023, Seattle Alaska stop extended</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=024" rel="noopener">FAA Advisory 024, Minneapolis Delta stop extended</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.dhs.gov/news/2026/11/13/icymi-secretary-mullin-and-secretary-duffy-address-nationwide-faa-ground-stop-all" rel="noopener">DHS release: Mullin and Duffy address the nationwide ground stop</a> <span class="meta">Official source · Nov 13, 2026</span></li>
-<li><a href="https://transportation.house.gov/news/documentsingle.aspx?DocumentID=410342" rel="noopener">House T&amp;I Committee: Graves and Larsen joint statement on the FAA ground stop</a> <span class="meta">Official source</span></li>
-<li><a href="https://rollcall.com/2026/11/13/air-travel-halt-prompts-calls-for-faa-communications-upgrades/" rel="noopener">Roll Call: Administration ups ante on aviation funds after ground stop</a> <span class="meta">News outlet · Nov 13, 2026, 7:54 PM UTC+00:00</span></li>
-<li><a href="https://www.latimes.com/politics/story/2026-11-13/democrats-demand-answers-on-faa-outage-question-aging-air-traffic-control" rel="noopener">Los Angeles Times: Democrats demand answers on FAA outage</a> <span class="meta">News outlet · Nov 14, 2026</span></li>
-<li><a href="https://apnews.com/article/ground-stop-flights-airlines-cancellations-faa-1fbf4992f0ddaa4c463b0e4990b6e291" rel="noopener">AP: Airlines dig out from nationwide ground stop</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.jpost.com/international/article-914842" rel="noopener">Jerusalem Post: Duffy: ground stop caused by aging equipment</a> <span class="meta">News outlet · Nov 14, 2026, 4:13 AM UTC+00:00</span></li>
-<li><a href="https://www.flightaware.com/live/cancelled/" rel="noopener">FlightAware live cancellations</a> <span class="meta">Researcher or analysis</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=054" rel="noopener">FAA Advisory 054, extended drop times cancelled</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=117" rel="noopener">FAA Advisory 117, extended drop times for comms failure</a> <span class="meta">Official source · Nov 13, 2026</span></li>
-<li><a href="https://abc7news.com/live-updates/faa-ground-stop-live-updates-what-know-nationwide-flights-are-grounded/20038887/entry/20040148/" rel="noopener">ABC7: Duffy and Bedford to brief at 10:30 AM ET Saturday</a> <span class="meta">News outlet · Nov 17, 2026, 5:34 PM UTC</span></li>
-<li><a href="https://www.washingtonpost.com/transportation/2026/11/14/ground-stop-aftermath-sees-thousands-flights-canceled-delayed-saturday/" rel="noopener">The Washington Post: Travel chaos continues following nationwide ground stop</a> <span class="meta">News outlet · Nov 14, 2026 · not re-checked: site blocks automated access</span></li>
-<li><a href="https://avweb.com/aviation-news/white-house-renews-30b-atc-modernization/" rel="noopener">AvWeb: White House renews push for $30.1 billion ATC and airport plan</a> <span class="meta">News outlet · Nov 13, 2026, 1:13 PM ET</span></li>
-<li><a href="https://avweb.com/aviation-news/faa-nationwide-ground-stop-lifts-smart-ai/" rel="noopener">AvWeb: Duffy says SMART could not have caused the outage</a> <span class="meta">News outlet · Nov 13, 2026, 9:58 PM ET</span></li>
-<li><a href="https://www.al.com/weather/2026/11/national-weather-service-says-no-radar-outages-despite-reports.html" rel="noopener">NWS says no radar outages despite reports</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.foxcarolina.com/2026/11/14/nws-confirms-no-radar-outage-nationwide-ground-stop-flights-continues/" rel="noopener">FOX Carolina: NWS confirms no radar outage during the ground stop</a> <span class="meta">News outlet · Nov 14, 2026, 12:47 AM UTC</span></li>
-<li><a href="https://www.hindustantimes.com/ht-explainers/overloaded-network-that-grounded-us-flights-and-faa-rules-for-flying-without-radar-101794660871954.html" rel="noopener">Hindustan Times: Overloaded network that grounded US flights</a> <span class="meta">News outlet · Nov 14, 2026, 7:29 PM UTC+05:30</span></li>
-<li><a href="https://www.mediaite.com/media/news/cnn-aviation-analyst-says-its-just-too-much-of-a-coincidence-faa-rolled-out-new-ai-traffic-tool-right-before-nationwide-comms-outage/" rel="noopener">Mediaite: Former inspector general on SMART timing and the ground stop</a> <span class="meta">News outlet · Nov 13, 2026, 10:10 PM UTC+00:00</span></li>
-<li><a href="https://www.npr.org/2026/11/14/nx-s1-6040518/former-dot-inspector-general-mary-schiavo-on-fridays-faa-ground-stop" rel="noopener">NPR: Weekend Edition Saturday interview on the FAA ground stop</a> <span class="meta">News outlet · Nov 14, 2026, 7:40 AM ET</span></li>
-<li><a href="https://www.oig.dot.gov/library-item/29670" rel="noopener">DOT IG letter on the 2009 FTI outage (2010)</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.oig.dot.gov/library-item/46181" rel="noopener">DOT IG audit: FAA IT and telecom contracting (2024)</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.cbsnews.com/news/faa-ground-stop-warnings-records/" rel="noopener">CBS News: Before air travel meltdown, officials received years of warnings</a> <span class="meta">News outlet · Nov 16, 2026, 6:00 AM ET</span></li>
-<li><a href="https://punchbowl.news/article/washington/faa-ground-stop-fuels-spending-battle/" rel="noopener">Punchbowl News: FAA ground stop fuels new spending battle</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.investing.com/news/stock-market-news/us-probes-why-a-router-installation-sparked-mass-flight-grounding-5030697" rel="noopener">Reuters (via Investing.com): US probes why a router installation sparked mass flight grounding</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
-<li><a href="https://thenextweb.com/news/faa-ground-stop-router-arkansas-l3harris-duffy-billions" rel="noopener">The Next Web (citing Bloomberg): FAA ground stop cost &#39;billions&#39;, Duffy says</a> <span class="meta">News outlet · Nov 16, 2026, 2:59 PM UTC+00:00</span></li>
-<li><a href="https://subscriber.politicopro.com/article/2026/11/duffy-bedford-briefing-congress-faa-transportation-aviation-01167247" rel="noopener">POLITICO Pro: Duffy, Bedford huddle with Congress following air system meltdown</a> <span class="meta">News outlet</span></li>
-<li><a href="https://www.usatoday.com/story/news/politics/2026/11/16/congress-faa-ground-stop-funding-fight/92808539007/" rel="noopener">USA Today: Congress under pressure to intervene after nationwide ground stop</a> <span class="meta">News outlet · Nov 16, 2026, 6:47 PM UTC</span></li>
-<li><a href="https://money.usnews.com/investing/news/articles/2026-11-17/us-senators-urge-faa-to-pause-new-router-deployment-pending-testing" rel="noopener">Reuters (via U.S. News): US senators urge FAA to pause new router deployment pending testing</a> <span class="meta">News outlet · Nov 17, 2026 · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.commerce.senate.gov/press/dem/release/commerce-committee-democrats-demand-clear-fact-based-answers-from-dot-faa-on-root-cause-of-nov-13th-nationwide-ground-stop/" rel="noopener">U.S. Senate Commerce Committee: Commerce Committee Democrats demand answers on root cause of Nov. 13 ground stop</a> <span class="meta">Official source · Nov 17, 2026, 12:08 PM UTC+00:00</span></li>
-<li><a href="https://www.transportation.gov/briefing-room/trump-administration-calls-congress-fully-fund-air-traffic-control-modernization-501" rel="noopener">U.S. Department of Transportation: Trump Administration calls on Congress to fund ATC modernization with $50.1 billion</a> <span class="meta">Official source · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.transportation.gov/briefing-room/111726-joint-letter-regarding-additional-atc-funding" rel="noopener">U.S. Department of Transportation: 11.17.26 Joint letter regarding additional ATC funding</a> <span class="meta">Official source · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.pbs.org/newshour/politics/trump-administration-details-its-50-billion-request-for-aviation-system-improvements" rel="noopener">PBS News: Trump administration details its $50 billion request</a> <span class="meta">News outlet · Nov 17, 2026, 2:27 PM ET</span></li>
-<li><a href="https://www.cbsnews.com/news/sean-duffy-senate-republicans-faa-ground-stop/" rel="noopener">CBS News: Duffy pitches skeptical Senate GOP on $50 billion for FAA</a> <span class="meta">News outlet · Nov 17, 2026, 4:50 PM ET</span></li>
-<li><a href="https://www.axios.com/2026/11/17/sean-duffy-faa-senate-republicans-50-billion" rel="noopener">Axios: Duffy&#39;s $50 billion request gets chilly reception from Senate GOP</a> <span class="meta">News outlet · Nov 17, 2026 · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.politico.com/news/2026/11/17/senate-duffy-air-traffic-overhaul-01170195" rel="noopener">POLITICO: Duffy faces skeptical Senate GOP on $50B air traffic overhaul ask</a> <span class="meta">News outlet · Nov 17, 2026 · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.washingtonexaminer.com/policy/national-security/4805857/fbi-technical-assistance-faa-outage/" rel="noopener">Washington Examiner: FBI &#39;providing technical assistance&#39; to FAA after air control outage</a> <span class="meta">News outlet · Nov 17, 2026, 3:58 PM UTC+00:00</span></li>
-<li><a href="https://www.axios.com/2026/11/17/faa-air-traffic-control-router-upgrade-ground-stop" rel="noopener">Axios: FAA pauses tech upgrade linked to nationwide ground stop</a> <span class="meta">News outlet · Nov 17, 2026 · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.transportation.gov/briefing-room/icymi-trumps-transportation-secretary-sean-p-duffy-shares-update-nationwide-ground" rel="noopener">U.S. DOT: ICYMI: Duffy shares update on ground stop investigation, briefs senators</a> <span class="meta">Official source · not re-checked: site blocks automated access</span></li>
-<li><a href="https://ca.investing.com/news/stock-market-news/root-cause-of-us-aviation-shutdown-not-yet-determined-duffy-says-4965705" rel="noopener">Reuters via Investing.com: Root cause of US aviation shutdown not yet determined, Duffy says</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.washingtonpost.com/transportation/2026/11/17/faa-oversaw-signed-off-repair-work-before-nationwide-ground-stop/" rel="noopener">Washington Post: FAA oversaw and signed off on repair work before nationwide ground stop</a> <span class="meta">News outlet · Nov 17, 2026 · not re-checked: site blocks automated access</span></li>
-<li><a href="https://katv.com/news/local/internal-documents-reveal-faa-reduced-maintenance-oversight-before-ground-stop-travelers-airlines-contractors-upgrades-sop-telecommunications-sites-national-airspace-system-infrastructure-el-dorado" rel="noopener">KATV: Internal documents reveal FAA reduced maintenance oversight before ground stop</a> <span class="meta">News outlet · Nov 18, 2026, 2:51 AM UTC</span></li>
-<li><a href="https://www.crn.com/news/networking/2026/faa-stops-installation-of-hpe-juniper-routers-in-wake-of-ground-stop-investigation" rel="noopener">CRN: FAA stops installation of HPE Juniper routers in wake of ground stop investigation</a> <span class="meta">News outlet</span></li>
-<li><a href="https://forecast.weather.gov/product.php?issuedby=OKX&amp;product=FTM&amp;site=NWS" rel="noopener">OKX FTM products: National Weather Service</a> <span class="meta">Official source</span></li>
-<li><a href="https://forecast.weather.gov/product.php?issuedby=MKX&amp;product=FTM&amp;site=NWS" rel="noopener">MKX FTM products: National Weather Service</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=109" rel="noopener">Advisory 109: Display Advisory</a> <span class="meta">Official source · Nov 13, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=106" rel="noopener">Advisory 106: Display Advisory</a> <span class="meta">Official source · Nov 13, 2026</span></li>
-<li><a href="https://www.flightaware.com/live/flight/SKW4792" rel="noopener">FlightAware SKW4792: OO4792 (SKW4792) SkyWest Flight Tracking and History</a> <span class="meta">Researcher or analysis</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=108" rel="noopener">Advisory 108: Display Advisory</a> <span class="meta">Official source · Nov 13, 2026</span></li>
-<li><a href="https://www.paddleyourownkanoo.com/2026/11/13/faa-announces-ground-stop-for-all-aircraft-across-the-entire-united-states/" rel="noopener">Paddle Your Own Kanoo: FAA Announces Ground Stop For All Aircraft Across the Entire United States</a> <span class="meta">Researcher or analysis · Nov 13, 2026, 9:08 PM UTC+00:00</span></li>
-<li><a href="https://www.yahoo.com/news/us/article/faa-issues-nationwide-ground-stop-on-all-departing-flights-citing-communication-issue-213136811.html" rel="noopener">Yahoo News: Yahoo</a> <span class="meta">News outlet</span></li>
-<li><a href="https://forecast.weather.gov/product.php?issuedby=BOX&amp;product=FTM&amp;site=NWS" rel="noopener">BOX FTM products: National Weather Service</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=086" rel="noopener">Advisory 086: Display Advisory</a> <span class="meta">Official source · Nov 13, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=091" rel="noopener">Advisory 091: Display Advisory</a> <span class="meta">Official source · Nov 13, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=119" rel="noopener">Advisory 119: Display Advisory</a> <span class="meta">Official source · Nov 13, 2026</span></li>
-<li><a href="https://news.delta.com/delta-statement-faa-nationwide-ground-stop" rel="noopener">Delta</a> <span class="meta">Official source · Nov 15, 2026, 11:15 AM ET</span></li>
-<li><a href="https://news.aa.com/news/news-details/2026/Update-on-FAAs-nationwide-ground-stop/" rel="noopener">American Airlines: American</a> <span class="meta">Official source · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.ktvu.com/news/faa-issues-nationwide-ground-stop-due-to-extraordinary-circumstances" rel="noopener">United via KTVU: Nationwide ground stop lifted, but delays will linger</a> <span class="meta">News outlet · Nov 13, 2026, 4:13 PM ET</span></li>
-<li><a href="https://news.ycombinator.com/item?id=50491429" rel="noopener">HN 50491429: Update, 3:00 P.M.: Pacific bound flights are cleared to depart, including Hawaii...</a> <span class="meta">Rumor source</span></li>
-<li><a href="https://news.ycombinator.com/item?id=50491649" rel="noopener">HN 50491649: Makes sense. CNN reported that international airlines were still departing for N...</a> <span class="meta">Rumor source</span></li>
-<li><a href="https://abc7news.com/live-updates/faa-ground-stop-live-updates-what-know-nationwide-flights-are-grounded/20038887/entry/20039063/" rel="noopener">ABC7: Over 1,000 flights canceled and climbing: FlightAware</a> <span class="meta">News outlet · Nov 17, 2026, 5:34 PM UTC</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=121" rel="noopener">Advisory 121: Display Advisory</a> <span class="meta">Official source · Nov 13, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/adv/advADB" rel="noopener">Advisory database: The Most Recent ATCSCC Advisory</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11132026&amp;number=123" rel="noopener">Advisory 123: Display Advisory</a> <span class="meta">Official source · Nov 13, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=006" rel="noopener">Advisory 006: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=010" rel="noopener">Advisory 010: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=015" rel="noopener">Advisory 015: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=025" rel="noopener">Advisory 025: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=026" rel="noopener">Advisory 026: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=027" rel="noopener">Advisory 027: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=028" rel="noopener">Advisory 028: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=029" rel="noopener">Advisory 029: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=030" rel="noopener">Advisory 030: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=031" rel="noopener">Advisory 031: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=032" rel="noopener">Advisory 032: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=033" rel="noopener">Advisory 033: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=034" rel="noopener">Advisory 034: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=035" rel="noopener">Advisory 035: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=036" rel="noopener">Advisory 036: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=037" rel="noopener">Advisory 037: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&amp;number=039" rel="noopener">Advisory 039: Display Advisory</a> <span class="meta">Official source · Nov 14, 2026</span></li>
-<li><a href="https://abcnews.com/US/live-updates/faa-ground-stop-live-updates-hundreds-flights-canceled/?entryId=138138306&amp;id=138125140" rel="noopener">ABC News: FAA ground stop live updates: Flight cancellations continue into Monday</a> <span class="meta">News outlet · Nov 16, 2026, 5:16 AM UTC</span></li>
-<li><a href="https://www.nbcnews.com/news/us-news/live-blog/live-updates-faa-lifts-ground-stops-airports-rcna609302" rel="noopener">NBC News: Flight chaos continues as air travel attempts to get back to normal after ground stop</a> <span class="meta">News outlet · Nov 14, 2026, 2:33 PM UTC</span></li>
-<li><a href="https://www.cnbc.com/2026/11/14/root-cause-of-nationwide-ground-stop-is-unknown-faa-says.html" rel="noopener">CNBC: Root cause’ of nationwide ground stop is unknown, FAA says</a> <span class="meta">News outlet · Nov 14, 2026, 10:54 PM UTC+00:00</span></li>
-<li><a href="https://www.aljazeera.com/news/2026/11/15/what-forced-the-us-to-ground-all-planes-a-router-switch-we-now-know" rel="noopener">Al Jazeera: What forced the US to ground all planes? A router switch, we now know | Aviation News</a> <span class="meta">News outlet · Nov 15, 2026, 9:17 AM UTC</span></li>
-<li><a href="https://www.politico.com/news/2026/11/14/duffy-atc-presser-01166601" rel="noopener">POLITICO</a> <span class="meta">News outlet · Nov 14, 2026 · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.investing.com/news/stock-market-news/faa-router-overload-in-arkansas-triggered-nationwide-flight-grounding--wsj-5027664" rel="noopener">Reuters (via Investing.com): Investing.com (citing WSJ)</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.magnoliareporter.com/news_and_business/union_county/article_14de6a8d-c040-442b-a7ff-578db41b1c7e.html" rel="noopener">Magnolia Reporter: Sorry America, our bad: FAA ground stop traced to possible comm equipment failure in El Dorado |…</a> <span class="meta">News outlet · Nov 14, 2026, 11:56 PM UTC-06:00</span></li>
-<li><a href="https://biz.heraldcorp.com/article/10937583" rel="noopener">Herald Business: Two new routers triggered the US aviation outage. But why?</a> <span class="meta">News outlet · Nov 15, 2026, 5:03 PM UTC+09:00</span></li>
-<li><a href="https://www.thetravel.com/us-flight-cancellations-surpass-15000-disruptions-continue-faa-ground-stop-airports-nationwide/" rel="noopener">TheTravel: U.S. Flight Cancellations Surpass 15,000 As Disruptions Continue Following FAA Ground Stop At All Airports…</a> <span class="meta">Researcher or analysis · Nov 15, 2026, 3:48 AM UTC</span></li>
-<li><a href="https://nypost.com/2026/11/14/us-news/more-than-4k-flights-still-canceled-as-faa-ground-stop-continues-to-snarl-travel/" rel="noopener">NY Post: More than 6K flights still canceled as FAA ground stop continues to snarl travel</a> <span class="meta">News outlet · Nov 14, 2026, 8:42 PM UTC+00:00</span></li>
-<li><a href="https://voxluci.com/federal/congress/faa-ground-stop-investigation-congress-johnson/" rel="noopener">Vox Luci: FAA ground stop investigation: What Congress plans</a> <span class="meta">Researcher or analysis · Nov 15, 2026, 3:35 AM UTC+00:00</span></li>
-<li><a href="https://www.washingtonpost.com/politics/2026/11/11/one-month-shutdown-congress-is-far-deal-fund-government/" rel="noopener">Washington Post</a> <span class="meta">News outlet · Nov 11, 2026 · not re-checked: site blocks automated access</span></li>
-<li><a href="https://fedscoop.com/dot-faa-funding-request-atc-lawmaker-pushback/" rel="noopener">FedScoop: FAA details $50B request as lawmaker pushback grows</a> <span class="meta">News outlet · Nov 17, 2026, 9:07 PM UTC+00:00</span></li>
-<li><a href="https://sea.mashable.com/tech/56956/faa-official-oversaw-router-work-just-before-nationwide-ground-stop-report-claims" rel="noopener">Mashable: FAA official oversaw router work just before nationwide ground stop, report claims</a> <span class="meta">News outlet · Nov 18, 2026, 1:38 AM UTC+00:00</span></li>
-<li><a href="https://kesq.com/news/national-world/cnn-national/2026/11/13/faa-issues-nationwide-ground-stop-for-all-flights/" rel="noopener">CNN audio via KESQ: FAA issues nationwide ground stop for all flights</a> <span class="meta">News outlet · Nov 13, 2026, 10:46 PM UTC+00:00</span></li>
-<li><a href="https://news.ycombinator.com/item?id=50491601" rel="noopener">HN AT&amp;T rumor: AT T is experiencing a massive outage. Appears they are the provider for the Air...</a> <span class="meta">Rumor source</span></li>
-<li><a href="https://news.ycombinator.com/item?id=50491687" rel="noopener">HN 911 rumor: NWS radar and 911 systems are also showing downtime according to https: downdet...</a> <span class="meta">Rumor source</span></li>
-<li><a href="https://www.reddit.com/r/unitedairlines/comments/1xvjl55/" rel="noopener">public Reddit thread (r/unitedairlines)</a> <span class="meta">Rumor source</span></li>
-<li><a href="https://www.click2houston.com/news/local/2026/11/13/faa-investigating-whether-new-ai-technology-contributed-to-nationwide-ground-stop/" rel="noopener">Click2Houston: FAA investigating whether new AI technology contributed to nationwide ground stop</a> <span class="meta">News outlet · Nov 13, 2026, 10:57 PM UTC</span></li>
-<li><a href="https://abcnews.com/US/live-updates/faa-ground-stop-live-updates-hundreds-flights-canceled/?entryId=138132097&amp;id=138125140" rel="noopener">ABC News: FAA ground stop live updates: Flight cancellations continue into Monday</a> <span class="meta">News outlet · Nov 16, 2026, 5:16 AM UTC</span></li>
-<li><a href="https://www.pjm.com" rel="noopener">PJM</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.nerc.com" rel="noopener">NERC: North American Electric Reliability Corp</a> <span class="meta">Official source</span></li>
-<li><a href="https://status.cloud.google.com" rel="noopener">Google Cloud status: Google Cloud Service Health</a> <span class="meta">Official source</span></li>
-<li><a href="https://portal.office.com/servicestatus" rel="noopener">Microsoft 365 status: Microsoft service health status</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.usatoday.com/story/news/politics/2026/11/14/democrats-oversight-congress-investigation-nationwide-ground-stop-trump/92781114007/" rel="noopener">USA Today: Democrats in Congress vow accountability for aviation ground stop</a> <span class="meta">News outlet · Nov 14, 2026, 7:00 PM UTC</span></li>
-<li><a href="https://www.washingtonpost.com/transportation/2026/11/14/faa-was-warned-years-about-repair-risks-leading-nationwide-ground-stop/" rel="noopener">Washington Post</a> <span class="meta">News outlet · Nov 14, 2026 · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.foxnews.com/video/6408377348112" rel="noopener">Fox News: Latest Breaking News Videos</a> <span class="meta">News outlet</span></li>
-<li><a href="https://www.faa.gov/newsroom/SMART_One-Pager.pdf" rel="noopener">FAA: SMART fact sheet</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.prnewswire.com/news-releases/asi-selected-by-faa-to-modernize-the-national-airspace-system-302806855.html" rel="noopener">PR Newswire: ASI Selected by FAA to Modernize the National Airspace System</a> <span class="meta">Official source · Jun 22, 2026, 9:43 PM UTC+01:00</span></li>
-<li><a href="https://fedscoop.com/faa-ai-smart-platform-washington-airpace/" rel="noopener">FedScoop: FAA unveils AI aviation data tool in Washington airspace</a> <span class="meta">News outlet · Sep 21, 2026, 9:38 PM UTC+00:00</span></li>
-<li><a href="https://www.flyingmag.com/smart-faa-contract-asi-air-traffic-management/" rel="noopener">Flying on the award: Get SMART: FAA Picks ASI for Predictive Air Traffic Management</a> <span class="meta">News outlet · Jun 22, 2026, 5:06 PM ET</span></li>
-<li><a href="https://www.flyingmag.com/faa-smart-ai-now-active-at-22-artccs-nationwide/" rel="noopener">Flying on the 22-center activation</a> <span class="meta">News outlet · Nov 10, 2026, 11:30 AM ET</span></li>
-<li><a href="https://www.reuters.com/business/aerospace-defense/us-faa-taps-asi-software-overhaul-improve-flight-schedules-cut-delays-2026-06-22/" rel="noopener">Reuters</a> <span class="meta">News outlet · Jun 22, 2026 · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.usaspending.gov/award/CONT_AWD_693KA726C00064_6920_-NONE-_-NONE-" rel="noopener">USAspending award: USAspending.gov</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.nextgov.com/acquisition/2026/06/faa-awards-software-and-ai-contract-part-air-traffic-control-modernization/414354/" rel="noopener">Nextgov: FAA awards software and AI contract as part of air traffic control modernization</a> <span class="meta">News outlet · Jun 23, 2026</span></li>
-<li><a href="https://www.faa.gov/newsroom/faa-launches-vendor-challenge-modernize-air-traffic-flow-system" rel="noopener">FAA announcement: FAA Launches Vendor Challenge to Modernize Air Traffic Flow System</a> <span class="meta">Official source</span></li>
-<li><a href="https://govtribe.com/opportunity/federal-contract-opportunity/flow-management-data-and-services-fmds-challenge-based-acquisition-fmds2025chba" rel="noopener">Notice FMDS-2025-ChBA</a> <span class="meta">Researcher or analysis · not re-checked: site blocks automated access</span></li>
-<li><a href="https://govtribe.com/opportunity/federal-contract-opportunity/flow-management-data-and-services-fmds-challenge-based-acquisition-update-fmds2025chba1" rel="noopener">Notice update</a> <span class="meta">Researcher or analysis · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.bloomberg.com/news/articles/2026-04-17/palantir-thales-among-companies-competing-on-new-faa-ai-tool" rel="noopener">Bloomberg: Palantir, Thales Among Companies Competing on FAA AI Tool</a> <span class="meta">News outlet · Apr 17, 2026, 6:40 PM UTC</span></li>
-<li><a href="https://theaircurrent.com/air-traffic-control/faa-selecting-asi-smart-ai-atc-palantir-thales/" rel="noopener">The Air Current: FAA close to picking ASI over Palantir, Thales for its AI-powered air traffic management system</a> <span class="meta">News outlet · Jun 13, 2026, 11:15 PM UTC+00:00</span></li>
-<li><a href="https://www.faa.gov/about/office_org/headquarters_offices/agc/practice_areas/adjudication/agc70/Casefiles/RecentCases/" rel="noopener">FAA: ODRA recent cases: Recent ODRA Cases</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.hstoday.us/wp-content/uploads/2026/10/2026_10_13_SMART_GAO_Study_Letter_FINAL.pdf" rel="noopener">Letter to GAO</a> <span class="meta">News outlet · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.usaspending.gov/award/CONT_AWD_693KA726P00024_6920_-NONE-_-NONE-" rel="noopener">USAspending order: USAspending.gov</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.usaspending.gov/award/CONT_IDV_693KA718D00001_6920" rel="noopener">USAspending contract: USAspending.gov</a> <span class="meta">Official source</span></li>
-<li><a href="https://www.channelnewsasia.com/business/us-senators-urge-faa-pause-new-router-deployment-pending-testing-6559156" rel="noopener">CNA (Reuters): FAA pauses Juniper router deployment after grounding US flights</a> <span class="meta">News outlet · Nov 17, 2026, 8:30 PM UTC+08:00</span></li>
-<li><a href="https://www.reuters.com/3fec1b0a85a0/business/aerospace-defense/thousands-us-flights-canceled-delayed-air-travel-system-recovers-shutdown-2026-11-14/" rel="noopener">Reuters: US air travel disruptions to persist until late on Sunday, FAA head says</a> <span class="meta">News outlet · Nov 14, 2026, 3:56 PM UTC</span></li>
-<li><a href="https://www.whitehouse.gov/releases/2026/11/no-indication-of-a-cyberattack-dni-clayton-and-secretary-rubio-on-recent-tech-outages/" rel="noopener">White House release: “No Indication of a Cyberattack”: DNI Clayton and Secretary Rubio on Recent Tech Outages</a> <span class="meta">Official source · Nov 18, 2026, 3:43 PM UTC+00:00</span></li>
-<li><a href="https://www.investing.com/news/stock-market-news/us-plans-to-announce-cause-of-outage-that-led-to-nationwide-ground-stop-faa-says-5039469" rel="noopener">Reuters (via Investing.com): US plans to announce cause of outage that led to nationwide ground stop, FAA says</a> <span class="meta">News outlet · Nov 19, 2026</span></li>
-<li><a href="https://krdo.com/news/national-world/cnn-national/2026/11/19/faa-pauses-juniper-router-installations-after-nationwide-ground-stop/" rel="noopener">CNN via KRDO: Investigators &#39;very close&#39; to finding cause of nationwide ground stop, FAA chief says</a> <span class="meta">News outlet · Nov 19, 2026</span></li>
-<li><a href="https://www.axios.com/2026/11/19/trump-national-cyber-director-sean-cairncross-leaving" rel="noopener">Axios: Trump names Kirsten Davies as new national cyber director</a> <span class="meta">News outlet · Nov 19, 2026</span></li>
-<li><a href="https://www.theguardian.com/us-news/2026/nov/19/white-house-cyber-director-ousted" rel="noopener">The Guardian (with Reuters): White House cyber director ousted after US hit by wave of tech outages</a> <span class="meta">News outlet · Nov 19, 2026, 8:25 PM ET</span></li>
-<li><a href="https://apnews.com/article/ground-stop-faa-l3harris-94757b1f6aa71c3435c8286e27926786" rel="noopener">AP: US Transportation Secretary says L3Harris should have found ground stop problem sooner</a> <span class="meta">News outlet · Nov 18, 2026</span></li>
-<li><a href="https://www.scrippsnews.com/us-news/sources-dispute-faas-account-of-oversight-before-nationwide-ground-stop" rel="noopener">CNN via Scripps News: Sources dispute FAA&#39;s account of oversight before nationwide ground stop</a> <span class="meta">News outlet</span></li>
-<li><a href="https://www.aviationpros.com/aircraft-maintenance-technology/aircraft-technology/news/55419813/faa-pauses-installation-of-gear-tied-to-messy-flight-halt" rel="noopener">Bloomberg via Aviation Pros: FAA pauses installation of gear tied to messy flight halt</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
-<li><a href="https://www.straitstimes.com/world/united-states/us-aviation-authority-pauses-installation-of-gear-tied-to-messy-flight-halt" rel="noopener">Bloomberg via The Straits Times: US aviation authority pauses router installation</a> <span class="meta">News outlet · Nov 18, 2026</span></li>
-<li><a href="https://www.cbsnews.com/news/ground-stop-l3harris-system-outage/" rel="noopener">CBS News: During nationwide ground stop, L3Harris struggled to find location of system outage</a> <span class="meta">News outlet · Nov 18, 2026</span></li>
-<li><a href="https://arstechnica.com/gadgets/2026/11/how-faa-can-modernize-us-national-airspace-system-without-emergency-ground-stops/" rel="noopener">Ars Technica: US will soon announce root cause behind FAA nationwide ground stop</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
-<li><a href="https://www.techtarget.com/news/experts-look-beyond-hpe-devices-for-answers-on-faa-ground-stop/875209/" rel="noopener">TechTarget: Experts look beyond HPE devices for answers on FAA ground stop</a> <span class="meta">News outlet · Nov 19, 2026</span></li>
-<li><a href="https://www.washingtontimes.com/news/2026/nov/20/trump-says-recent-tech-outages-separate-events/" rel="noopener">The Washington Times: Trump says recent tech outages are &#39;separate events&#39;</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
-<li><a href="https://www.aa.com.tr/en/americas/trump-dismisses-concerns-over-us-outages-blames-companies-system-upgrades/4132529" rel="noopener">Anadolu Agency: Trump dismisses concerns over US outages, blames companies&#39; system upgrades</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
-<li><a href="https://www.bbc.com/news/articles/cr930ney9d1po" rel="noopener">BBC: Trump says US flight systems are &#39;ancient&#39; but &#39;safe&#39; after ground stop</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
-<li><a href="https://www.thenationalnews.com/news/us/2026/11/20/trump-sean-cairncross-fired-resigned/" rel="noopener">The National: Trump didn&#39;t think fired US cyber director Sean Cairncross was &#39;good enough&#39;</a> <span class="meta">News outlet · Nov 20, 2026</span></li>
-<li><a href="https://www.investing.com/news/world-news/white-house-national-cyber-director-cairncross-leaving-his-post-axios-reports-5040251" rel="noopener">Reuters (via Investing.com, updated Nov. 20): Trump ousts cyber director after tech outages spark criticism</a> <span class="meta">News outlet · Nov 20, 2026 · not re-checked: site blocks automated access</span></li>
-<li><a href="https://www.foxnews.com/politics/lawmakers-warn-americans-vulnerable-systems-amid-streak-outages-something-going-on" rel="noopener">Fox News: Lawmakers warn of vulnerable systems amid streak of outages: &#39;Something is going on&#39;</a> <span class="meta">News outlet · Nov 21, 2026, 4:00 AM ET</span></li>
-<li><a href="https://www.theguardian.com/technology/2026/nov/22/hacks-ai-internet-outages-airlines-banks-microsoft-apple" rel="noopener">The Guardian: Hacks, AI and conspiracy theories: why are we having so many outages?</a> <span class="meta">News outlet · Nov 22, 2026, 1:00 AM ET</span></li>
-<li><a href="https://abcnews.com/Politics/week-transcript-11-22-26-director-national-intelligence/story?id=138345755" rel="noopener">ABC News: &#39;This Week&#39; transcript, Nov. 22, 2026 (the Director of National Intelligence)</a> <span class="meta">News outlet · Nov 22, 2026, 9:40 AM ET</span></li>
-<li><a href="https://abcnews.com/Politics/dni-clayton-putin-americas-friend-ukraine/story?id=138356905" rel="noopener">ABC News: the Director of National Intelligence: Putin is &#39;not America&#39;s friend in Ukraine&#39;</a> <span class="meta">News outlet · Nov 22, 2026</span></li>
-</ol>
-</div>
-</details>
+<section class="raw-files" id="raw-files">
+<h3>The raw files</h3>
+<p>For people and programs that want the data itself. Nothing on this page exists only here.</p>
+<p class="raw-links"><a href="2026-11-faa-ground-stop.md">This report as Markdown</a><a href="https://github.com/primeobsession/isitahack-dot-com/tree/main/data/incidents/2026-11-faa-ground-stop" rel="noopener">The data folder on GitHub</a><a href="https://github.com/primeobsession/isitahack-dot-com/commits/main/data/incidents/2026-11-faa-ground-stop" rel="noopener">Every change to this page</a></p>
+</section>
 </section>
 <footer class="page-foot">
 <p><a href="2026-11-faa-ground-stop.md">Markdown version</a><a href="https://github.com/primeobsession/isitahack-dot-com/commits/main/data/incidents/2026-11-faa-ground-stop" rel="noopener">Edit history</a><a href="../about.html#contact">Report an error</a></p>
@@ -3036,23 +3071,13 @@
 </div>
 <aside class="side" aria-label="Summary and other incidents">
 <div class="side-facts">
-<section class="side-block latest">
-<p class="kicker accent">The latest · <time datetime="2026-11-22T12:20:00-05:00">Nov 22, 2026, 12:20 PM ET</time></p>
-<p class="latest-headline">The intelligence director told ABC the week&#39;s outages, the FAA&#39;s included, were not coordinated or state-sponsored; cause still pending.</p>
-<p><a href="#update-log">All 70 updates</a></p>
-</section>
-<section class="side-block">
-<dl class="reach">
-<div><dt>Size</dt><dd><strong>Nation-level.</strong> A nationwide FAA ground stop halted departures at all US airports for more than four hours on Nov 13, 2026. The FAA says operators cancelled about 12,462 flights that day.</dd></div>
-<div><dt>Who is affected</dt><dd>Air travelers on US flights on Nov 13 and the weekend after. By Monday, Nov 16, flights were near normal and the FAA status feed listed no ground stops.</dd></div>
-</dl>
-</section>
 <section class="side-block">
 <div class="evidence">
 <p class="kicker">What caused it? Leading theories · 17</p>
 <div class="evidence-bar" role="img" aria-label="Confirmed 2, Reported 5, Unverified 5, Rumor 3, Debunked 2"><span class="seg seg-confirmed" style="flex-grow:2"></span><span class="seg seg-reported" style="flex-grow:5"></span><span class="seg seg-unverified" style="flex-grow:5"></span><span class="seg seg-rumor" style="flex-grow:3"></span><span class="seg seg-debunked" style="flex-grow:2"></span></div>
 <ul class="evidence-key"><li><span class="pill pill-confirmed" data-label="Confirmed">Confirmed</span><span class="count">2</span></li><li><span class="pill pill-reported" data-label="Reported">Reported</span><span class="count">5</span></li><li><span class="pill pill-unverified" data-label="Unverified">Unverified</span><span class="count">5</span></li><li><span class="pill pill-rumor" data-label="Rumor">Rumor</span><span class="count">3</span></li><li><span class="pill pill-debunked" data-label="Debunked">Debunked</span><span class="count">2</span></li></ul>
 </div>
+<p><a href="../how-it-works.html">What the labels mean</a></p>
 </section>
 </div>
 <div class="side-more">
@@ -3090,6 +3115,6 @@
 </nav>
 </div>
 </footer>
-<script>(function(){var r=document.documentElement,b=document.querySelector(".theme-toggle");function cur(){return r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function paint(){var d=cur()==="dark";b.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme");b.setAttribute("aria-pressed",d?"true":"false")}if(b){b.hidden=false;paint();b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}paint()})}function reveal(){var id=decodeURIComponent(location.hash.slice(1));var el=id&&document.getElementById(id);if(!el)return;for(var p=el;p;p=p.parentElement)if(p.tagName==="DETAILS")p.open=true;el.scrollIntoView()}addEventListener("hashchange",reveal);reveal();var links=[].slice.call(document.querySelectorAll(".toc a"));if(links.length&&"IntersectionObserver"in window){var seen={};var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id]=e.isIntersecting});var on=null;links.forEach(function(a){var id=a.getAttribute("href").slice(1);if(!on&&seen[id])on=a});if(on)links.forEach(function(a){if(a===on)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")})},{rootMargin:"-10% 0px -60% 0px"});links.forEach(function(a){var s=document.getElementById(a.getAttribute("href").slice(1));if(s)io.observe(s)})}})();</script>
+<script>(function(){var r=document.documentElement,b=document.querySelector(".theme-toggle");function cur(){return r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function paint(){var d=cur()==="dark";b.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme");b.setAttribute("aria-pressed",d?"true":"false")}if(b){b.hidden=false;paint();b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}paint()})}var sw=document.querySelector(".depth-switch"),RANK={short:0,story:1,evidence:2};function setDepth(d,keep){if(!sw)return;r.dataset.depth=d;[].forEach.call(sw.querySelectorAll("button"),function(x){x.setAttribute("aria-pressed",x.getAttribute("data-depth")===d?"true":"false")});if(keep)try{localStorage.setItem("depth",d)}catch(e){}}if(sw){setDepth(r.dataset.depth||"evidence");document.addEventListener("click",function(e){var x=e.target.closest&&e.target.closest("button[data-depth]");if(x)setDepth(x.getAttribute("data-depth"),true)})}function reveal(){var id=decodeURIComponent(location.hash.slice(1));var el=id&&document.getElementById(id);if(!el)return;for(var p=el;p;p=p.parentElement){if(p.tagName==="DETAILS")p.open=true;var lv=p.getAttribute&&p.getAttribute("data-level");if(lv&&RANK[lv]>RANK[r.dataset.depth||"evidence"])setDepth(lv)}el.scrollIntoView()}addEventListener("hashchange",reveal);reveal();document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(a&&a.getAttribute("href")===location.hash)reveal()});var links=[].slice.call(document.querySelectorAll(".toc a"));if(links.length&&"IntersectionObserver"in window){var seen={};var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id]=e.isIntersecting});var on=null;links.forEach(function(a){var id=a.getAttribute("href").slice(1);if(!on&&seen[id])on=a});if(on)links.forEach(function(a){if(a===on)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")})},{rootMargin:"-10% 0px -60% 0px"});links.forEach(function(a){var s=document.getElementById(a.getAttribute("href").slice(1));if(s)io.observe(s)})}})();</script>
 </body>
 </html>

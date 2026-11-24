@@ -17,7 +17,7 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync, cpSync } from "node:fs";
 import { join, dirname, basename, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { LABELS, esc, slugify, pill, inline, linkTag, fmtDate, timeTag, renderBody, warnings, warn, setCurrent } from "./html.mjs";
+import { LABELS, ANSWER_GROUPS, answerPill, esc, slugify, pill, inline, linkTag, fmtDate, timeTag, renderBody, warnings, warn, setCurrent } from "./html.mjs";
 import { loadIncident } from "./validate.mjs";
 import { renderIncident, incidentMarkdown, incidentLayout, incidentPicture, evidenceBar, summarize } from "./incident.mjs";
 
@@ -82,9 +82,12 @@ const MARK = `<svg class="mark" aria-hidden="true" width="32" height="32" viewBo
 const WORDMARK = `<span class="wordmark"><span>isita</span><b>hack</b><span class="tld">.com</span></span>`;
 // The stored theme is applied before first paint; the rest is wired up at the end of the body.
 const THEME_INIT = `<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>`;
-// Optional enhancements: the theme toggle, opening a collapsed row a link points at,
-// and marking the section being read in the contents list.
-const ENHANCE = `<script>(function(){var r=document.documentElement,b=document.querySelector(".theme-toggle");function cur(){return r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function paint(){var d=cur()==="dark";b.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme");b.setAttribute("aria-pressed",d?"true":"false")}if(b){b.hidden=false;paint();b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}paint()})}function reveal(){var id=decodeURIComponent(location.hash.slice(1));var el=id&&document.getElementById(id);if(!el)return;for(var p=el;p;p=p.parentElement)if(p.tagName==="DETAILS")p.open=true;el.scrollIntoView()}addEventListener("hashchange",reveal);reveal();var links=[].slice.call(document.querySelectorAll(".toc a"));if(links.length&&"IntersectionObserver"in window){var seen={};var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id]=e.isIntersecting});var on=null;links.forEach(function(a){var id=a.getAttribute("href").slice(1);if(!on&&seen[id])on=a});if(on)links.forEach(function(a){if(a===on)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")})},{rootMargin:"-10% 0px -60% 0px"});links.forEach(function(a){var s=document.getElementById(a.getAttribute("href").slice(1));if(s)io.observe(s)})}})();</script>`;
+// Before first paint on an incident page: how deep the reader last chose to read. A link to a
+// place on the page shows everything, so its target is there. Without this script every depth shows.
+const DEPTH_INIT = `<script>try{var d=localStorage.getItem("depth");document.documentElement.dataset.depth=location.hash.length>1?"evidence":d==="story"||d==="evidence"?d:"short"}catch(e){document.documentElement.dataset.depth="evidence"}</script>`;
+// Optional enhancements: the theme toggle, the reading-depth switch, opening a collapsed row
+// (and the depth it sits in) when a link points at it, and marking the section being read.
+const ENHANCE = `<script>(function(){var r=document.documentElement,b=document.querySelector(".theme-toggle");function cur(){return r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function paint(){var d=cur()==="dark";b.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme");b.setAttribute("aria-pressed",d?"true":"false")}if(b){b.hidden=false;paint();b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}paint()})}var sw=document.querySelector(".depth-switch"),RANK={short:0,story:1,evidence:2};function setDepth(d,keep){if(!sw)return;r.dataset.depth=d;[].forEach.call(sw.querySelectorAll("button"),function(x){x.setAttribute("aria-pressed",x.getAttribute("data-depth")===d?"true":"false")});if(keep)try{localStorage.setItem("depth",d)}catch(e){}}if(sw){setDepth(r.dataset.depth||"evidence");document.addEventListener("click",function(e){var x=e.target.closest&&e.target.closest("button[data-depth]");if(x)setDepth(x.getAttribute("data-depth"),true)})}function reveal(){var id=decodeURIComponent(location.hash.slice(1));var el=id&&document.getElementById(id);if(!el)return;for(var p=el;p;p=p.parentElement){if(p.tagName==="DETAILS")p.open=true;var lv=p.getAttribute&&p.getAttribute("data-level");if(lv&&RANK[lv]>RANK[r.dataset.depth||"evidence"])setDepth(lv)}el.scrollIntoView()}addEventListener("hashchange",reveal);reveal();document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(a&&a.getAttribute("href")===location.hash)reveal()});var links=[].slice.call(document.querySelectorAll(".toc a"));if(links.length&&"IntersectionObserver"in window){var seen={};var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id]=e.isIntersecting});var on=null;links.forEach(function(a){var id=a.getAttribute("href").slice(1);if(!on&&seen[id])on=a});if(on)links.forEach(function(a){if(a===on)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")})},{rootMargin:"-10% 0px -60% 0px"});links.forEach(function(a){var s=document.getElementById(a.getAttribute("href").slice(1));if(s)io.observe(s)})}})();</script>`;
 
 // Structured data for search engines. It only restates what the page shows.
 const jsonLd = (data) => `<script type="application/ld+json">${JSON.stringify(data).replace(/</g, "\\u003c")}</script>`;
@@ -92,7 +95,7 @@ const ORG = { "@type": "Organization", "@id": `${SITE.url}/#org`, name: SITE.tit
 
 // `path` is the page's address on the site ("" for the home page); `share` is the
 // title to show when the page is shared, without the site name.
-function shell({ title, share = title, description, root, path, body, banner = "", current = "", disclaimer = SITE.footer, markdown = "", article = null, data = [], noindex = false, card = null }) {
+function shell({ title, share = title, description, root, path, body, banner = "", current = "", disclaimer = SITE.footer, markdown = "", article = null, data = [], noindex = false, card = null, depth = false }) {
   const home = root || "./";
   const url = `${SITE.url}/${path}`;
   const shareImage = card || { url: `${SITE.url}/${SITE.card.path}`, width: SITE.card.width, height: SITE.card.height, alt: SITE.card.alt };
@@ -135,7 +138,7 @@ ${meta}
 ${alternates}
 <link rel="icon" href="${root}assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="${root}assets/site.css">
-${THEME_INIT}
+${THEME_INIT}${depth ? `\n${DEPTH_INIT}` : ""}
 </head>
 <body>
 ${agentNote}
@@ -229,7 +232,7 @@ function writeTyped(i, others, out) {
   writeFileSync(join(out, "incidents", `${i.slug}.html`), shell({
     title: `${i.question.text} | ${SITE.title}`, share: i.question.text, description, path, data, card,
     article: { published: i.first_published, modified: i.last_updated },
-    root: "../", banner: statusBanner(i), body: main, disclaimer: i.disclaimer, markdown: `${i.slug}.md`,
+    root: "../", banner: statusBanner(i), body: main, disclaimer: i.disclaimer, markdown: `${i.slug}.md`, depth: true,
   }));
   writeFileSync(join(out, "incidents", `${i.slug}.md`), incidentMarkdown(i.loaded, { dataPath: i.dataPath }));
   if (resolve(join(out, i.dataPath)) !== resolve(i.loaded.dir)) cpSync(i.loaded.dir, join(out, i.dataPath), { recursive: true });
@@ -292,17 +295,7 @@ function writeLegacy(i, others, out) {
 }
 
 // ---------- home and the static pages ----------
-// The home page files every incident under one of four plain answers (format/README.md,
-// "The home page's four answers"). The wording stays clear of the two final verdicts,
-// which only the owner gives.
-const ANSWER_GROUPS = [
-  { key: "unclear", title: "Still unclear", short: "Still unclear", pill: "pill-not-established", means: "Nobody has shown whether it was an attack or not.", gloss: "Open questions. Nobody has shown whether these were attacks, and we keep checking." },
-  { key: "hack-stated", title: "Hacked, by its own account", short: "Says it was hacked", pill: "pill-confirmed", means: "The organization itself, or an official source, says someone got in.", gloss: "The organization itself, or an official source, says someone got in. Who did it is often still unknown." },
-  { key: "hack-reported", title: "Reported as a hack", short: "Reported as a hack", pill: "pill-reported", means: "News outlets say it was a hack. It is not officially confirmed.", gloss: "News outlets or a single official say it was a hack. Nothing independent confirms it yet." },
-  { key: "no-sign-of-hack", title: "No sign of a hack", short: "No sign of a hack", pill: "pill-no-sign", means: "The organization says it was not an attack, or the claim was shown to be false.", gloss: "The organization says it was not an attack, or the claim of one was shown to be false. Some rest on the company's word alone." },
-];
 const INCIDENT_TYPES = [["outage", "Outages"], ["breach", "Data breaches"], ["attack", "Attacks"]];
-const answerPill = (g) => `<span class="pill ${g.pill}">${esc(g.short)}</span>`;
 // A row shows the day in its own column, so a date at the end of the title is dropped.
 const TITLE_DATE = /,\s*(?:reported\s+)?(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?(?:\s+\d{1,2}(?:\s*(?:to|-|–)\s*\d{1,2})?)?,?\s+\d{4}$/;
 const rowName = (i) => i.title.replace(TITLE_DATE, "");
