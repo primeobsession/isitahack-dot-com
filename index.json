@@ -1,6 +1,19 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-cleverbridge-card-data-breach",
+      "title": "Cleverbridge payment card breach, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-23T12:12:23-05:00",
+      "files": {
+        "page": "incidents/2026-11-cleverbridge-card-data-breach.md",
+        "html": "incidents/2026-11-cleverbridge-card-data-breach.html",
+        "data": "data/incidents/2026-11-cleverbridge-card-data-breach/"
+      },
+      "incident_type": "breach",
+      "answer_group": "hack-stated"
+    },
+    {
       "slug": "2026-11-tower-records-japan-breach",
       "title": "Tower Records Japan data breach, Nov 2026",
       "status": "monitoring",
@@ -209,19 +222,6 @@
         "page": "incidents/2026-11-kepco-customer-data-breach.md",
         "html": "incidents/2026-11-kepco-customer-data-breach.html",
         "data": "data/incidents/2026-11-kepco-customer-data-breach/"
-      },
-      "incident_type": "breach",
-      "answer_group": "hack-stated"
-    },
-    {
-      "slug": "2026-11-cleverbridge-card-data-breach",
-      "title": "Cleverbridge payment card breach, Nov 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-22T12:19:10-05:00",
-      "files": {
-        "page": "incidents/2026-11-cleverbridge-card-data-breach.md",
-        "html": "incidents/2026-11-cleverbridge-card-data-breach.html",
-        "data": "data/incidents/2026-11-cleverbridge-card-data-breach/"
       },
       "incident_type": "breach",
       "answer_group": "hack-stated"
