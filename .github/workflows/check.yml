@@ -19,9 +19,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      # The whole history, so the check can compare a branch's new log rows with main.
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
       - name: Validate, test and build
         run: node scripts/check.mjs
+        env:
+          # On main, compare with what main was before this push. On a branch or a pull
+          # request the check finds where the branch left main by itself.
+          CHECK_BASE: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && github.event.before || '' }}

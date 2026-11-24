@@ -3,11 +3,11 @@
 > Public-source tracking of reported hacks and cyber incidents. Each claim carries a label (Confirmed, Reported, Unverified, Rumor, Debunked, Not established), a source link and a note on why it supports the claim.
 
 ## Index
-- [index.json](https://isitahack.com/index.json): JSON list of all incidents: slug, title, status, last_updated, paths to its files.
+- [index.json](https://isitahack.com/index.json): JSON list of all incidents: slug, title, status, last_updated, last_checked, next_check_due, paths to its files.
 
 ## Pages
 - [Home](https://isitahack.com/index.html): HTML list of incidents, generated from each incident's data.
-- [Status board](https://isitahack.com/status.html): every incident in one table (answer so far, size, the day it happened, last check), with counts by answer, by kind of organization and by kind of incident.
+- [Status board](https://isitahack.com/status.html): every incident in one table (answer so far, size, the day it happened, last check, when the next check is due), with counts by answer, by kind of organization and by kind of incident.
 - [How it works](https://isitahack.com/how-it-works.html): who does what, the six labels, the sourcing tiers and the rules the agents work to.
 - [About](https://isitahack.com/about.html): why the site exists, who is behind it, and how to report an error.
 

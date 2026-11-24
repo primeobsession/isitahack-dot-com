@@ -14,7 +14,8 @@ import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { validateIncident } from "../validate.mjs";
 import { isBuiltPage } from "../build.mjs";
-import { incidentPicture } from "../incident.mjs";
+import { incidentPicture, nextCheck } from "../incident.mjs";
+import { emptyUpdates } from "../changes.mjs";
 import { renderPlate } from "../plate.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
@@ -225,6 +226,14 @@ test("the build is repeatable and writes the pages search engines need", () => {
     assert.match(page, /<h2 class="kicker">Is it back\?<\/h2><p><strong>Back\.<\/strong> Billing portal restored\. <a class="ref" href="#t\d+">evidence<\/a>/, "the short answer says whether the service is back, with its evidence");
     assert.match(board, new RegExp(`<li class="svc svc-back"[^>]*><span class="svc-state">.*?Back</span><a class="svc-name" href="incidents/${SLUG}\\.html">`), "the board lists the sample as back");
     assert.equal(board.match(/<li class="svc svc-/g).length, listed.filter((i) => i.service).length, "the board lists exactly the incidents whose data says how things stand");
+    // when the next check is due: on the board, in index.json for the agents, on the page and in its Markdown
+    const sample = listed.find((i) => i.slug === SLUG);
+    assert.deepEqual([sample.last_checked, sample.check_every, sample.next_check_due], ["2026-01-13T08:00:00-05:00", "day", "2026-01-14T23:59:00-05:00"], "index.json says when the sample was last checked and when it is next due");
+    assert.match(board, new RegExp(`<tr data-group="no-sign-of-hack"[^>]*data-due="2026-01-14T23:59:00-05:00"><td data-label="Incident"><a href="incidents/${SLUG}\\.html">`), "the board carries each incident's due time for the browser to judge");
+    assert.match(board, /<td data-label="Next check"><span class="due"><time datetime="2026-01-14T23:59:00-05:00">Jan 14, 2026<\/time><\/span><span class="kind"[^>]*>Daily<\/span><\/td>/, "and shows the day the next check is due");
+    assert.equal(board.match(/ data-due="/g).length, listed.filter((i) => i.next_check_due).length, "every incident that is still checked has a due time on the board");
+    assert.match(page, /The next check is due by <time datetime="2026-01-14T23:59:00-05:00">the end of Jan 14, 2026<\/time>: the desk checks once a day for the first three days\./, "the page says when the next check is due and why");
+    assert.match(readFileSync(join(a, "incidents", `${SLUG}.md`), "utf8"), /^last_checked: 2026-01-13T08:00:00-05:00\nnext_check_due: 2026-01-14T23:59:00-05:00$/m, "and so does the Markdown version");
   } finally {
     rmSync(base, { recursive: true, force: true });
   }
@@ -237,4 +246,48 @@ test("the check knows a built page from a source", () => {
     assert.equal(isBuiltPage(f, hasData), true, `${f} is written by the build and must not be committed`);
   for (const f of ["pages/home.html", "pages/status.html", "llms.txt", "robots.txt", `data/incidents/${SLUG}/incident.json`, "format/README.md", "scripts/partials/head.html", "incidents/2026-02-not-yet-converted.md"])
     assert.equal(isBuiltPage(f, hasData), false, `${f} is a source and belongs in the repository`);
+});
+
+// ---------- when the next check is due ----------
+test("the next check follows the decided cadence", () => {
+  const first_published = "2026-11-20T09:00:00-05:00";
+  const due = (o) => nextCheck({ status: "monitoring", service: null, first_published, ...o });
+  assert.deepEqual(due({ last_checked: "2026-11-20T22:10:00-05:00", service: { state: "down" } }), { every: "hour", due: "2026-11-20T23:10:00-05:00" }, "every hour while it is down");
+  assert.deepEqual(due({ last_checked: "2026-11-20T23:30:00-05:00", service: { state: "partly-back" } }), { every: "hour", due: "2026-11-21T00:30:00-05:00" }, "and while it is only partly back, across midnight");
+  assert.deepEqual(due({ last_checked: "2026-11-20T09:00:00-05:00", service: { state: "back" } }), { every: "day", due: "2026-11-21T23:59:00-05:00" }, "once it is back, the story's own cadence applies");
+  assert.deepEqual(due({ last_checked: "2026-11-22T23:50:00-05:00" }), { every: "day", due: "2026-11-23T23:59:00-05:00" }, "once a day for the first three days, due by the end of the next day");
+  assert.deepEqual(due({ last_checked: "2026-11-23T00:05:00-05:00" }), { every: "3 days", due: "2026-11-26T23:59:00-05:00" }, "every three days after that");
+  assert.deepEqual(due({ last_checked: "2026-11-29T10:00:00-05:00" }), { every: "3 days", due: "2026-12-02T23:59:00-05:00" }, "across the end of a month");
+  assert.deepEqual(due({ last_checked: "2026-11-21T10:00:00-05:00", status: "resolved" }), { every: "week", due: "2026-11-28T23:59:00-05:00" }, "weekly once it is resolved");
+  assert.deepEqual(due({ last_checked: "2026-11-21T03:30:00Z" }), { every: "day", due: "2026-11-22T23:59:00Z" }, "the day is counted in the offset the check was logged with");
+  assert.equal(due({ last_checked: "2026-11-21T10:00:00-05:00", status: "closed" }), null, "a closed story is not checked again");
+  assert.equal(due({ last_checked: "" }), null, "no check, no due time");
+});
+
+// ---------- an update has to change something ----------
+test("a new log row filed as an update must name a claim the change added or altered", () => {
+  const read = (file) => readFileSync(join(SAMPLE, file), "utf8");
+  const before = { claims: read("claims.csv"), questions: read("questions.csv"), update_log: read("update_log.csv") };
+  // adds a log row above the newest one, and optionally edits the other files
+  const after = (row, edit = {}) => ({
+    claims: (edit.claims || ((x) => x))(before.claims),
+    questions: (edit.questions || ((x) => x))(before.questions),
+    update_log: before.update_log.replace("\nu004,", `\n${row}\nu004,`),
+  });
+  const row = (type, ids, id = "u005") => `${id},2026-01-14T08:00:00-05:00,watch,${type},Two more outlets report the outage.,Both repeat the utility's statement.,${ids},Research agent`;
+  const swap = (from, to) => (text) => { assert.ok(text.includes(from), `the sample still has ${from}`); return text.replace(from, to); };
+  const c006 = before.claims.split("\n").find((l) => l.startsWith("c006,"));
+
+  assert.deepEqual(emptyUpdates(before, before), [], "rows already on main are never judged, whatever they name");
+  assert.match(emptyUpdates(before, after(row("updated", "")))[0], /^update_log\.csv u005: filed as updated but names no claim\..*checked_no_change$/, "an update that names no claim is refused");
+  assert.match(emptyUpdates(before, after(row("updated", "c006")))[0], /^update_log\.csv u005: filed as updated, but c006 is the same as on main apart from the check date/, "an update that names an untouched claim is refused");
+  assert.match(emptyUpdates(before, after(row("added", "c005;c006")))[0], /u005: filed as added, but c005, c006 are the same as on main/, "so is one filed as added");
+  const rechecked = swap(c006, c006.replace(/[^,]*$/, "2026-01-14T08:00:00-05:00"));
+  assert.match(emptyUpdates(before, after(row("updated", "c006"), { claims: rechecked }))[0], /c006 is the same as on main apart from the check date/, "re-checking a claim moves its date, and that alone is not an update");
+  assert.deepEqual(emptyUpdates(before, after(row("checked_no_change", ""), { claims: rechecked })), [], "the same run filed as checked_no_change passes");
+  assert.deepEqual(emptyUpdates(before, after(row("presentation", ""))), [], "a wording-only row needs no claim");
+  assert.deepEqual(emptyUpdates(before, after(row("updated", "c006"), { claims: swap(c006, c006.replace(",Confirmed,", ",Reported,")) })), [], "a claim whose label changed is a change");
+  assert.deepEqual(emptyUpdates(before, after(row("added", "c099"), { claims: (text) => `${text}${c006.replace("c006,", "c099,")}\n` })), [], "a new claim is a change");
+  assert.deepEqual(emptyUpdates(before, after(row("label_change", "c001"), { questions: swap(",Reported,", ",Confirmed,") })), [], "a question with a new label is a change to the claims it rests on");
+  assert.deepEqual(emptyUpdates({ claims: "", questions: "", update_log: "" }, before), [], "a new story is all change");
 });
