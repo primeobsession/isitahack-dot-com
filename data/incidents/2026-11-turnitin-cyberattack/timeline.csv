@@ -1,0 +1,3 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-23T00:00:00-05:00,,"Nov 23, 2026",approximate,Turnitin posts a letter from its CEO to customers saying it found unauthorized activity in some customer-facing systems,c001,"Date on the help-center letter; the time shown there has no time zone, so only the date is used."
+t002,2026-11-24T13:59:00-05:00,,"1:59 PM ET, Nov 24, 2026",stated,BleepingComputer reports the attack and says Turnitin had no more details to share,c003,Time shown on the article.

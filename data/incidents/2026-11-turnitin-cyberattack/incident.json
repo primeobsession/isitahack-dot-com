@@ -1,0 +1,119 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-turnitin-cyberattack",
+  "title": "Turnitin cyberattack, Nov 2026",
+  "subject": {
+    "name": "Turnitin",
+    "kind": "online-service"
+  },
+  "incident_type": "attack",
+  "answer_group": "hack-stated",
+  "lead_image": "turnitin-oakland-office",
+  "also_called": [
+    "the Turnitin security incident",
+    "the Turnitin data breach"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-23",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Turnitin, any school, news outlet, company, government agency, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Turnitin's plagiarism and AI-writing checks are used by schools and universities worldwide; it says more than 16,000 institutions and 71 million students. Turnitin has not said how many people are affected, so size rests on its reach, not a count.",
+  "who_is_affected": "Possibly students, teachers and schools that use Turnitin. Turnitin has not said whether anyone's data was taken. It says the service is working and safe to use and has not asked users to do anything. Watch for word from your school, and be wary of messages that only claim to be from Turnitin.",
+  "known": [
+    {
+      "text": "Turnitin says it found unauthorized activity in some of its customer-facing systems.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Turnitin says it called in outside cybersecurity specialists and notified police and cyber regulators.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "Turnitin says its investigation is still going on and it is watching for more unauthorized activity.",
+      "claim_id": "c003"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether students' or teachers' data was accessed or taken.",
+      "question_id": "q002"
+    },
+    {
+      "text": "How the intruders got in and which systems they reached. The root cause is not published.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Who is behind it.",
+      "question_id": "q005"
+    },
+    {
+      "text": "When it happened and how many people are affected."
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 23",
+      "label": "Turnitin's letter to customers",
+      "detail": "Posted on its help center",
+      "claim_id": "c001"
+    },
+    {
+      "value": "0",
+      "label": "Outages on the status page in November",
+      "detail": "Per Turnitin's status page, Nov 24",
+      "claim_id": "c009"
+    }
+  ],
+  "images": [
+    {
+      "id": "turnitin-oakland-office",
+      "title": "Turnitin's Oakland office building",
+      "file": "images/turnitin-oakland-office.jpg",
+      "alt": "A tall beige office tower with rows of small windows on a city street, with bare trees, parked cars and a parking meter in front, and a glass building to the right.",
+      "caption": "2101 Webster Street in Oakland, California, where Turnitin has its Oakland office, in March 2023 (cropped).",
+      "credit": "Photo via Wikimedia Commons, CC0 public domain dedication",
+      "rights": "public-domain",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2101_Webster_St,_Oakland.jpg",
+      "sha256": "2454276cd31c846c7567aee48296473cdf4597b4e94b49909d80abceecb9d5e3",
+      "width": 1402,
+      "height": 1052
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was Turnitin hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Can I keep using Turnitin?",
+      "group": "using-it",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Turnitin attack"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
