@@ -1,4 +1,4 @@
-We looked for these and did not find them as of 1:01 PM ET on Nov 23, 2026. The root cause has not been published, so this page stays open.
+We looked for these and did not find them as of 1:00 PM ET on Nov 24, 2026. The root cause has not been published, so this page stays open.
 
 - Any statement from Rockstar or Take-Two on the November Xbox build, the executable, or whether their systems were breached.
 - Any statement from a platform holder or law enforcement.
