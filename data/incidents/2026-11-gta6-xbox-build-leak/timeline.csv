@@ -1,4 +1,5 @@
 event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t008,2026-11-23T18:06:00-05:00,,"About 6:06 PM ET, Nov 23, 2026",approximate,The Discord server of a leading fan PC-port project vanishes; its GitHub page also goes offline that evening,c010,Time from Tarreo (about 23:06 GMT). Creator says Rockstar took the server down; not confirmed.
 t001,2026-08-20,,"Aug 20, 2026",stated,Take-Two files court requests for DMCA subpoenas to Microsoft and Discord over GTA 6 leaks,c009,Per the court filings; concerns the August leaks.
 t006,2026-08-21,,"Aug 21, 2026",stated,The court orders the clerk to issue Take-Two's DMCA subpoenas to Microsoft and Discord,c009,Per the signed orders on the docket.
 t002,2026-08-26,,"Aug 26, 2026",stated,Rockstar publishes a letter calling the leaked gameplay videos 'heartbreaking for our team',c008,Per the letter as printed by outlets.
