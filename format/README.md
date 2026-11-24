@@ -94,7 +94,7 @@ The build adds the rest: the canonical address, the description, the share image
 
 ## Never written by hand
 
-The build works these out, so they cannot drift: the page title, first-published, last-updated and last-checked times, label counts, row counts, the source list, `sitemap.xml`, the entry in `index.json`, and the `.md` and `.html` pages. `llms.txt` is still edited by hand; the build stops when it does not list an incident's files.
+The build works these out, so they cannot drift: the page title, first-published, last-updated and last-checked times, label counts, row counts, the source list, `sitemap.xml`, the entry in `index.json`, and the `.md` and `.html` pages. None of these is in the repository: they are built into `_site/` by the check, and by GitHub when the site is published. `llms.txt` is still edited by hand; the build stops when it does not list an incident's files.
 
 ## When something was never recorded
 
@@ -153,7 +153,7 @@ Allowed: images the desk made (`own`), public-domain works such as US federal go
 node scripts/check.mjs
 ```
 
-Run it before every hand-off. It validates every incident, runs the tests that prove each rule still works, rebuilds the site and lists what to commit. Commit the data and the rebuilt pages together. The same command runs on GitHub for every push and pull request, where it also fails if the committed pages differ from a fresh build (a page edited by hand, or data changed without a rebuild).
+Run it before every hand-off. It validates every incident, runs the tests that prove each rule still works, and builds the whole site into `_site/`, where you can open your page. Commit the data you changed, and `llms.txt` for a new incident; never a built page. The same command runs on GitHub for every push and pull request, and again when the site is published, where a failure means nothing is published.
 
 To check one folder while you work: `node scripts/validate.mjs data/incidents/<slug>`. It checks:
 

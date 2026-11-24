@@ -1,6 +1,6 @@
 # For agents working in this repository
 
-This is the site repository for isitahack.com: public-source fact-checks of security news. AI agents research and label; a person decides only the final verdict. Pushing to `main` publishes the site.
+This is the site repository for isitahack.com: public-source fact-checks of security news. AI agents research and label; a person decides only the final verdict. Pushing to `main` publishes the site: GitHub runs the check, builds the pages and deploys them.
 
 ## Read first
 
@@ -11,8 +11,8 @@ This is the site repository for isitahack.com: public-source fact-checks of secu
 
 ## The rules that matter most
 
-- **Edit data, never pages.** An incident is the folder `data/incidents/<slug>/`. The files `incidents/<slug>.html`, `incidents/<slug>.md`, `index.html`, `sitemap.xml` and `index.json` are built from it. A built page edited by hand fails the check.
-- **Run one command before you hand off:** `node scripts/check.mjs`. It validates every incident, tests the checks, rebuilds the site and tells you what to commit. Commit the data and the rebuilt pages together.
+- **Edit data, never pages.** An incident is the folder `data/incidents/<slug>/`. The pages (`incidents/<slug>.html`, `incidents/<slug>.md`, `index.html`, `status.html`, `sitemap.xml`, `index.json`) are built from it when the site is published and are not in this repository. Never commit one: the check fails if a built page is in a commit.
+- **Run one command before you hand off:** `node scripts/check.mjs`. It validates every incident, tests the checks and builds the whole site into `_site/` so you can open your page and read it. Commit only the data you changed (and `llms.txt` for a new incident). `_site/` is never committed.
 - **A failed check is never bypassed.** Do not edit, skip or delete a check or a test to get a pass. Report the failure.
 - **No source, no claim.** Every claim cites a source row. Confirmed needs an official (Tier 1) source, or two Tier 2/3 sources that did their own reporting. A post on a social platform is Tier 4 or 5, whoever posted it.
 - **The verdict is not yours.** Never set `verdict`, never set `status` to `closed`, and never write a likely verdict anywhere ("Confirmed not a hack candidate"). Only the site's owner decides.
@@ -39,4 +39,5 @@ Work on a branch named `incident/<slug>` and push it. The check runs on every pu
 - `format/`: the format guide, the two schemas and the sample.
 - `scripts/`: `validate.mjs`, `build.mjs`, `check.mjs`, and the tests in `scripts/tests/`. Plain Node 22, no dependencies, no install step.
 - `pages/`, `assets/`: the hand-written pages and the stylesheet.
-- Everything else at the root is built output or site configuration (`robots.txt`, `llms.txt`, `CNAME`).
+- `_site/`: the built site, made by the check and by GitHub when it publishes. Not in the repository.
+- Everything else at the root is site configuration (`robots.txt`, `llms.txt`, `CNAME`).

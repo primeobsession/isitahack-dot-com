@@ -13,6 +13,7 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { validateIncident } from "../validate.mjs";
+import { isBuiltPage } from "../build.mjs";
 import { incidentPicture } from "../incident.mjs";
 import { renderPlate } from "../plate.mjs";
 
@@ -227,4 +228,13 @@ test("the build is repeatable and writes the pages search engines need", () => {
   } finally {
     rmSync(base, { recursive: true, force: true });
   }
+});
+
+// ---------- built pages stay out of the repository ----------
+test("the check knows a built page from a source", () => {
+  const hasData = (slug) => slug === SLUG;
+  for (const f of ["index.html", "status.html", "about.html", "how-it-works.html", "404.html", "sitemap.xml", "index.json", "_site/index.html", `incidents/${SLUG}.html`, `incidents/${SLUG}.md`, "incidents/2026-02-anything.html"])
+    assert.equal(isBuiltPage(f, hasData), true, `${f} is written by the build and must not be committed`);
+  for (const f of ["pages/home.html", "pages/status.html", "llms.txt", "robots.txt", `data/incidents/${SLUG}/incident.json`, "format/README.md", "scripts/partials/head.html", "incidents/2026-02-not-yet-converted.md"])
+    assert.equal(isBuiltPage(f, hasData), false, `${f} is a source and belongs in the repository`);
 });

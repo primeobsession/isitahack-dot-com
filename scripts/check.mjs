@@ -7,15 +7,17 @@
 //   1. validate.mjs on every incident and on the made-up sample
 //   2. the tests in scripts/tests/ (they prove each rule still catches its mistake)
 //   3. build.mjs, which writes the whole site into _site/
+//   4. a look for built pages that were committed by mistake
 //
 // The site is built by GitHub on every push to main (.github/workflows/deploy.yml), with this
 // same command. Built pages are never committed: a change to a story is a change to its data.
 // A failed check is never bypassed (operations manual 7.3).
 
 import { spawnSync } from "node:child_process";
-import { readdirSync } from "node:fs";
+import { readdirSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { isBuiltPage } from "./build.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const run = (label, cmd, args) => {
@@ -33,4 +35,17 @@ run("Validate the sample incident", node, ["scripts/validate.mjs", ...samples]);
 run("Test the checks themselves", node, ["--test", "--test-reporter=spec", ...tests]);
 run("Build the site into _site/", node, ["scripts/build.mjs"]);
 
-console.log("\nAll checks passed. The site is in _site/ for you to look at; it is not committed.");
+// A page the build writes must not be in the repository: it would go stale, and it makes every
+// branch conflict with every other. An incident's hand-written page is only a source while the
+// incident has no data folder.
+console.log("\n== Look for built pages committed by mistake");
+const tracked = spawnSync("git", ["ls-files"], { cwd: ROOT, encoding: "utf8" });
+if (tracked.status !== 0) { console.error("Could not run git ls-files."); process.exit(1); }
+const hasData = (slug) => existsSync(join(ROOT, "data", "incidents", slug, "incident.json"));
+const stray = tracked.stdout.split("\n").filter((f) => f && isBuiltPage(f, hasData));
+if (stray.length) {
+  console.error(`${stray.slice(0, 12).join("\n")}${stray.length > 12 ? `\n...and ${stray.length - 12} more` : ""}`);
+  console.error("\nFAILED: the files above are built pages and must not be committed. Remove them from the commit (git rm --cached <file>); the site is built when it is published.");
+  process.exit(1);
+}
+console.log("None.\n\nAll checks passed. The site is in _site/ for you to look at; it is not committed. Commit the data you changed, and llms.txt if you added an incident.");

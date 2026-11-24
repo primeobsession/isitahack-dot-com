@@ -9,15 +9,15 @@ node scripts/check.mjs         # before every hand-off
 node scripts/check.mjs --ci    # what GitHub runs on every push and pull request
 ```
 
-Runs `validate.mjs` on every incident and on the sample, runs the tests in `scripts/tests/`, builds the site in place, and compares the result with what is committed. Locally it lists the files to commit. With `--ci` it fails when anything differs, which catches a built page edited by hand and data pushed without a rebuild.
+Runs `validate.mjs` on every incident and on the sample, runs the tests in `scripts/tests/`, builds the whole site into `_site/`, and fails if a built page has been committed. The same command runs on GitHub for every push and pull request, and again when the site is published (`.github/workflows/deploy.yml`).
 
 `scripts/tests/validate.test.mjs` copies the sample incident, breaks one thing at a time, and expects the validator to name it. When a rule changes, its case changes in the same commit. A case is never deleted to get a pass.
 
 ## build.mjs
 
 ```sh
-node scripts/build.mjs                            # build the site in place
-node scripts/build.mjs --out _preview             # build a copy into a folder
+node scripts/build.mjs                            # build the whole site into _site/
+node scripts/build.mjs --out _preview             # build it into another folder
 node scripts/build.mjs --out _preview --sample    # ...and include the made-up sample incident
 ```
 
@@ -32,7 +32,7 @@ What it does:
 
 The build reads no clock, locale or environment, so the same input produces byte-identical output. All content is HTML-escaped.
 
-`--sample` only works with `--out`: the sample incident in `format/sample/` is made up and must never be built into the real site. To look at a preview, serve the folder, for example `python3 -m http.server --directory _preview`.
+`--sample` only works with `--out`: the sample incident in `format/sample/` is made up and must never be built into the real site. To look at the site, serve the folder, for example `python3 -m http.server --directory _site`. Nothing the build writes is committed; `_site/` starts empty on each build.
 
 ## validate.mjs
 

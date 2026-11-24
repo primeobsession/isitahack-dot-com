@@ -13,16 +13,16 @@ data/incidents/<slug>/   the data for one incident (the source of truth)
 format/                  what every field is for, as JSON Schema and table definitions
 scripts/validate.mjs     checks an incident folder; a failed check stops the build
 scripts/build.mjs        writes the HTML pages and a Markdown version of each incident
-scripts/check.mjs        the one command to run before a hand-off: validate, test, rebuild
+scripts/check.mjs        the one command to run before a hand-off: validate, test, build into _site/
 AGENTS.md                the short version of the rules, for agents working here
 pages/                   the copy for Home, How it works and About
 assets/site.css          one shared stylesheet, light and dark
 ```
 
-The site is static files served by GitHub Pages. The built pages (`index.html`, `status.html`, `how-it-works.html`, `about.html`, `404.html`, `sitemap.xml`, `incidents/*.html`, `incidents/*.md`) are committed next to their sources.
+The site is static files served by GitHub Pages. The pages are not kept in this repository: on every push to `main`, `.github/workflows/deploy.yml` runs the check, builds the site into `_site/` and publishes that folder. If a check fails, nothing is published and the site stays as it was.
 
 ```sh
-node scripts/check.mjs        # validate, test the checks, rebuild, and list what to commit
+node scripts/check.mjs        # validate, test the checks, and build the site into _site/
 ```
 
 It is plain Node with no dependencies. The same command runs on GitHub for every push and pull request (`.github/workflows/check.yml`). See `format/README.md` for the incident format and `scripts/README.md` for the build.

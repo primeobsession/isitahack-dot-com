@@ -530,6 +530,16 @@ function checkLlms(incidents) {
   return missing.map((f) => `llms.txt: does not list ${f}; add it in the same change`);
 }
 
+// Is this repository path something the build writes? Such a file must never be committed
+// (scripts/check.mjs refuses it). `hasData(slug)` says whether an incident has a data folder:
+// until it does, its hand-written incidents/<slug>.md is a source, not a built page.
+const BUILT_AT_ROOT = new Set(["index.html", "status.html", "404.html", "sitemap.xml", "index.json", ...PAGES.map((p) => `${p.file}.html`)]);
+export function isBuiltPage(file, hasData) {
+  if (BUILT_AT_ROOT.has(file) || file.startsWith("_site/")) return true;
+  const page = file.match(/^incidents\/([^/]+)\.(html|md)$/);
+  return Boolean(page) && (page[2] === "html" || hasData(page[1]));
+}
+
 // ---------- main ----------
 if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
   const args = process.argv.slice(2);
