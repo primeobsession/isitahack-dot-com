@@ -1,6 +1,19 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-together-ai-prompt-leak",
+      "title": "Together AI prompt leak, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-23T12:49:00-05:00",
+      "files": {
+        "page": "incidents/2026-11-together-ai-prompt-leak.md",
+        "html": "incidents/2026-11-together-ai-prompt-leak.html",
+        "data": "data/incidents/2026-11-together-ai-prompt-leak/"
+      },
+      "incident_type": "breach",
+      "answer_group": "hack-stated"
+    },
+    {
       "slug": "2026-11-travelsoft-orchestra-cyberattack",
       "title": "Travelsoft Orchestra cyberattack, Nov 2026",
       "status": "monitoring",
@@ -293,19 +306,6 @@
         "state": "partly-back",
         "as_of": "2026-11-22T06:48:00-05:00"
       }
-    },
-    {
-      "slug": "2026-11-together-ai-prompt-leak",
-      "title": "Together AI prompt leak, Nov 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-22T01:52:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-together-ai-prompt-leak.md",
-        "html": "incidents/2026-11-together-ai-prompt-leak.html",
-        "data": "data/incidents/2026-11-together-ai-prompt-leak/"
-      },
-      "incident_type": "breach",
-      "answer_group": "hack-stated"
     },
     {
       "slug": "2026-11-microsoft-365-outage",

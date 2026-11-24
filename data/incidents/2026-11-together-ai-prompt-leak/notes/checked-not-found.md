@@ -1,4 +1,4 @@
-We looked for these and did not find them as of 1:52 AM ET on Nov 22, 2026.
+We looked for these and did not find them as of 12:49 PM ET on Nov 23, 2026.
 
 - Which customers or how many prompts were affected.
 - Any claim of responsibility, or any attacker named.
