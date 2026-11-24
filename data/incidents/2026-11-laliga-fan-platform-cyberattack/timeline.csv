@@ -1,0 +1,4 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-14,,"Nov 14 to 16, 2026",stated,"An attacker accesses a LALIGA fan-services platform and extracts personal data, per LALIGA",c003,Dates as given by LALIGA; no times stated.
+t002,2026-11-16,,"Nov 16, 2026",stated,"LALIGA applies measures to contain the attack, stop the extraction and block the attacker",c003,Per LALIGA; Reuters says LALIGA became aware of the attack on this date.
+t003,2026-11-23,,"Nov 23, 2026",stated,LALIGA publishes its statement; Reuters and Europa Press report it the same day,c001,Date as published by the three sources.

@@ -173,6 +173,19 @@
       "answer_group": "unclear"
     },
     {
+      "slug": "2026-11-laliga-fan-platform-cyberattack",
+      "title": "LALIGA fan platform cyberattack, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-23T06:12:00-05:00",
+      "incident_type": "breach",
+      "answer_group": "hack-stated",
+      "files": {
+        "page": "incidents/2026-11-laliga-fan-platform-cyberattack.md",
+        "html": "incidents/2026-11-laliga-fan-platform-cyberattack.html",
+        "data": "data/incidents/2026-11-laliga-fan-platform-cyberattack/"
+      }
+    },
+    {
       "slug": "2026-11-journal-technologies-court-portals",
       "title": "Journal Technologies court portal outage, Nov 13, 2026",
       "status": "monitoring",
