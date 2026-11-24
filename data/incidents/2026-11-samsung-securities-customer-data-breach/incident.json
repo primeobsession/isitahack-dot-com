@@ -1,0 +1,95 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-samsung-securities-customer-data-breach",
+  "title": "Samsung Securities customer data breach, Nov 2026",
+  "subject": {
+    "name": "Samsung Securities",
+    "kind": "finance"
+  },
+  "incident_type": "breach",
+  "answer_group": "hack-reported",
+  "also_called": [
+    "Samsung Securities VOC data leak",
+    "Samsung Securities hack"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-21",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Samsung Securities, Samsung, Yonhap, The Korea Times, The Herald Business, Hankyoreh, any government agency, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Regional",
+  "size_basis": "Samsung Securities says 8,241 clients had data in the affected files. The potential reach is wider if the count or scope changes; the company says other customer systems were not affected and is still checking.",
+  "who_is_affected": "Clients who filed a VOC (customer feedback) submission with an attachment. The company says it will notify them one by one and others are not involved.",
+  "known": [],
+  "not_known": [
+    {
+      "text": "How many clients were affected, beyond the company's own count.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Who was behind it.",
+      "question_id": "q003"
+    },
+    {
+      "text": "How the intruder got in.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Whether it is linked to the Samsung Ads vendor breach.",
+      "question_id": "q005"
+    }
+  ],
+  "figures": [
+    {
+      "value": "8,241",
+      "label": "Clients whose data was leaked",
+      "detail": "Company says",
+      "claim_id": "c002"
+    },
+    {
+      "value": "Nov 21",
+      "label": "Intrusion found (Korea time)",
+      "detail": "Per Samsung Securities",
+      "claim_id": "c001"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Samsung Securities breach"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

@@ -203,6 +203,19 @@
       "answer_group": "hack-stated"
     },
     {
+      "slug": "2026-11-samsung-securities-customer-data-breach",
+      "title": "Samsung Securities customer data breach, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T22:16:00-05:00",
+      "incident_type": "breach",
+      "answer_group": "hack-reported",
+      "files": {
+        "page": "incidents/2026-11-samsung-securities-customer-data-breach.md",
+        "html": "incidents/2026-11-samsung-securities-customer-data-breach.html",
+        "data": "data/incidents/2026-11-samsung-securities-customer-data-breach/"
+      }
+    },
+    {
       "slug": "2026-11-virgin-plus-customer-data-breach",
       "title": "Virgin Plus customer data breach, Nov 2026",
       "status": "monitoring",

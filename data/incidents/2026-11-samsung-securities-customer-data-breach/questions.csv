@@ -1,0 +1,6 @@
+question_id,kind,question_text,state,answer_text,label,claim_ids,rumor_type,what_would_settle_it,opened_at,answered_at
+q001,question,Was the Samsung Securities data breach a hack?,answered,"By the company's account, yes: an outside party got into its customer-feedback system and took files from 8,241 clients. That rests on its own statement. Method and attacker are not established.",Reported,c001;c002,,,2026-11-22T22:16:00-05:00,2026-11-22T22:16:00-05:00
+q002,question,How many Samsung Securities clients were affected?,answered,"The company says 8,241 clients, all of whom had filed a VOC submission. No outside check yet.",Reported,c002;c004,,,2026-11-22T22:16:00-05:00,2026-11-22T22:16:00-05:00
+q003,question,Who was behind the Samsung Securities breach?,open,,Not established,c007,,"A claim of responsibility reported by press, or an official attribution.",2026-11-22T22:16:00-05:00,
+q004,question,How did the intruder get into the Samsung Securities system?,open,,Not established,c006,,A company or regulator report on the cause.,2026-11-22T22:16:00-05:00,
+q005,question,Is it linked to the Samsung Ads vendor breach?,open,,Not established,c008,,"A Samsung or regulator statement, or press reporting, linking the two.",2026-11-22T22:16:00-05:00,
