@@ -1,4 +1,4 @@
-We looked for these and did not find them as of Nov 23, 2026.
+We looked for these and did not find them as of Nov 24, 2026.
 
 - Kurly's own notice read on its website (the page did not load for us; we read its full text as reprinted by an outlet).
 - Any statement from Korea's privacy regulator or the internet security agency about this breach.
