@@ -40,13 +40,17 @@
       "claim_id": "c013"
     },
     {
+      "text": "The Director of National Intelligence said on Nov 22 the FBI 'has an incident' it is handling, without details.",
+      "claim_id": "c015"
+    },
+    {
       "text": "A separate breach hit the FBI jobs site in September; the FBI blamed a contractor's missed patch.",
       "claim_id": "c008"
     }
   ],
   "not_known": [
     {
-      "text": "Whether the FBI confirms the breach. The reports rest on unnamed sources, and the President's remarks gave no details."
+      "text": "Whether the FBI confirms the breach. The reports rest on unnamed sources, and the President's and the DNI's remarks gave no details."
     },
     {
       "text": "What part of NCIC was reached, how the intruders got in, and who they are."
