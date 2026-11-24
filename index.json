@@ -203,6 +203,19 @@
       "answer_group": "hack-stated"
     },
     {
+      "slug": "2026-11-virgin-plus-customer-data-breach",
+      "title": "Virgin Plus customer data breach, Nov 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-22T21:40:00-05:00",
+      "incident_type": "breach",
+      "answer_group": "hack-stated",
+      "files": {
+        "page": "incidents/2026-11-virgin-plus-customer-data-breach.md",
+        "html": "incidents/2026-11-virgin-plus-customer-data-breach.html",
+        "data": "data/incidents/2026-11-virgin-plus-customer-data-breach/"
+      }
+    },
+    {
       "slug": "2026-11-chu-guadeloupe-hospital-cyberattack",
       "title": "CHU de la Guadeloupe hospital cyberattack, Nov 21, 2026",
       "status": "monitoring",
@@ -222,14 +235,14 @@
       "last_updated": "2026-11-22T19:12:01-05:00",
       "incident_type": "attack",
       "answer_group": "hack-reported",
-      "service": {
-        "state": "down",
-        "as_of": "2026-11-22T19:12:01-05:00"
-      },
       "files": {
         "page": "incidents/2026-11-cranston-ri-police-network-intrusion.md",
         "html": "incidents/2026-11-cranston-ri-police-network-intrusion.html",
         "data": "data/incidents/2026-11-cranston-ri-police-network-intrusion/"
+      },
+      "service": {
+        "state": "down",
+        "as_of": "2026-11-22T19:12:01-05:00"
       }
     },
     {

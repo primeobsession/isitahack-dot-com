@@ -1,0 +1,107 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-virgin-plus-customer-data-breach",
+  "title": "Virgin Plus customer data breach, Nov 2026",
+  "subject": {
+    "name": "Virgin Plus",
+    "kind": "telecom"
+  },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "also_called": [
+    "Virgin Plus cyber security incident",
+    "Virgin Plus data breach"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-17",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Virgin Plus, Bell Canada, any news outlet, government agency, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Virgin Plus has not said how many customers were affected. Large rests on reach, not a count: it is a national consumer brand of a major carrier. Revisit when a count is published.",
+  "who_is_affected": "Virgin Plus customers whose records were in the internal system. The company says it is informing affected customers.",
+  "known": [
+    {
+      "text": "Virgin Plus says an unknown party gained unauthorized access to an internal customer-data system on Nov 17.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The data may include name, address, phone, email, account number, product information and last payment date and amount.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "Bell Canada reported its own separate breach of enterprise customer data on Nov 17.",
+      "claim_id": "c010"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "How many customers were affected.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Who was behind it.",
+      "question_id": "q003"
+    },
+    {
+      "text": "Whether it is the same attack as Bell Canada's Nov 17 breach.",
+      "question_id": "q004"
+    },
+    {
+      "text": "How the intruder got in."
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 17",
+      "label": "Date of the intrusion",
+      "detail": "Per Virgin Plus",
+      "claim_id": "c001"
+    },
+    {
+      "value": "None",
+      "label": "Card or bank data affected",
+      "detail": "Company says",
+      "claim_id": "c003"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Virgin Plus breach"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Related, but separate",
+      "group": "related"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
