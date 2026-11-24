@@ -1,4 +1,4 @@
 question_id,kind,question_text,state,answer_text,label,claim_ids,rumor_type,what_would_settle_it,opened_at,answered_at
 q001,question,Was the LALIGA fan platform attack a hack?,answered,"Yes, by LALIGA's own statement: an attacker got into a fan-services platform and extracted personal data. How many people, which data, who and how are not established.",Confirmed,c001;c002,,,2026-11-23T06:12:00-05:00,2026-11-23T06:12:00-05:00
-q002,question,"How many fans were affected, and what data?",open,,,c006,,A LALIGA or AEPD notice giving a count and the kinds of data.,2026-11-23T06:12:00-05:00,
+q002,question,"How many fans were affected, and what data?",open,,,c006;c008;c009,,A LALIGA or AEPD notice giving a count and confirming the kinds of data.,2026-11-23T06:12:00-05:00,
 q003,question,"Who was behind the LALIGA attack, and how did they get in?",open,,,c007,,"An official attribution, a root-cause statement from LALIGA, or a claim of responsibility reported by press.",2026-11-23T06:12:00-05:00,
