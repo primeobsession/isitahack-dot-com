@@ -8,6 +8,10 @@
   },
   "incident_type": "outage",
   "answer_group": "hack-stated",
+  "service": {
+    "state": "down",
+    "claim_id": "c004"
+  },
   "lead_image": "hugendubel-marienplatz",
   "also_called": [
     "the Hugendubel hack",

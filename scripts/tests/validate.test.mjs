@@ -106,6 +106,9 @@ rule("filed as a stated hack while the main answer is not Confirmed", (t) => t.h
 rule("filed as a reported hack while the main answer is not Reported", (t) => t.head((h) => { h.answer_group = "hack-reported"; }), /answer_group: "hack-reported" needs the main question to be labelled Reported/);
 rule("filed as unclear while the main answer is Confirmed", (t) => { t.swap("questions.csv", ",Unverified,", ",Confirmed,"); t.head((h) => { h.answer_group = "unclear"; }); }, /answer_group: "unclear" does not fit a main question labelled Confirmed/);
 rule("filed as no sign of a hack while the main answer is Not established", (t) => t.swap("questions.csv", ",Unverified,", ",Not established,"), /answer_group: "no-sign-of-hack" does not fit a main question labelled Not established/);
+rule("a service state resting on a claim that does not exist", (t) => t.head((h) => { h.service.claim_id = "c099"; }), /service\.claim_id: "c099" is not in claims\.csv/);
+rule("a service state resting on a rumor", (t) => t.head((h) => { h.service.claim_id = "c003"; }), /service: rests on c003, which is labelled Rumor; whether a service is back can only rest on a Confirmed or Reported claim/);
+rule("a service state outside the three", (t) => t.head((h) => { h.service.state = "fine"; }), /incident\.json\.service\.state: "fine" is not one of/);
 rule("an answer group that contradicts the verdict", (t) => t.head((h) => { h.verdict = "Confirmed hack"; h.verdict_approved_at = "2026-01-20T09:00:00-05:00"; h.status = "closed"; }), /answer_group: must be "hack-stated" once the verdict is "Confirmed hack"/);
 
 // ---------- update log ----------
@@ -214,6 +217,10 @@ test("the build is repeatable and writes the pages search engines need", () => {
     assert.equal(tiles.reduce((sum, n) => sum + n, 0), listed.length, "the counts add up to the incidents");
     assert.match(board, new RegExp(`<tr data-group="no-sign-of-hack"[^>]*><td data-label="Incident"><a href="incidents/${SLUG}\\.html">`), "the sample is on the board under its answer");
     assert.match(readFileSync(join(a, "sitemap.xml"), "utf8"), /<loc>https:\/\/isitahack\.com\/status\.html<\/loc>/, "the status board is in the sitemap");
+    // whether a service is back is said with the claim it rests on, on the page and on the board
+    assert.match(page, /<h2 class="kicker">Is it back\?<\/h2><p><strong>Back\.<\/strong> Billing portal restored\. <a class="ref" href="#t\d+">evidence<\/a>/, "the short answer says whether the service is back, with its evidence");
+    assert.match(board, new RegExp(`<li class="svc svc-back"[^>]*><span class="svc-state">.*?Back</span><a class="svc-name" href="incidents/${SLUG}\\.html">`), "the board lists the sample as back");
+    assert.equal(board.match(/<li class="svc svc-/g).length, listed.filter((i) => i.service).length, "the board lists exactly the incidents whose data says how things stand");
   } finally {
     rmSync(base, { recursive: true, force: true });
   }

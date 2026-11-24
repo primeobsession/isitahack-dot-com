@@ -44,6 +44,7 @@ Each field has a `description` saying what it is for. Those two files are the fi
 | A picture or diagram | `images/` plus an entry in `incident.json` `images` |
 | Who or what the incident is about | `incident.json` `subject` (the build draws the incident's picture from it) |
 | Whether it is an outage, a breach or an attack | `incident.json` `incident_type`, chosen by what happened, not by the suspected cause |
+| Whether the thing that went down is back | `incident.json` `service`: a state (`down`, `partly-back`, `back`) and the Confirmed or Reported claim that says so. Leave it out when nothing went down or no claim says |
 | Which plain answer the home page files it under | `incident.json` `answer_group` (see "The home page's four answers") |
 | A reference table with no labels (who runs what) | `tables/<id>.csv` plus an entry in `incident.json` `tables` |
 | Background that is none of the above | `notes/<name>.md` |
@@ -72,7 +73,7 @@ A reader chooses how much to read, and each depth adds to the one before. You do
 
 | Depth | What it holds | Comes from |
 |---|---|---|
-| The short answer | The plain answer and its evidence label, the latest, how big it is, who is affected, what is known and not known | `answer_group`, the main question, the newest `update_log.csv` row that changed a finding, `size`, `size_basis`, `who_is_affected`, `known`, `not_known` |
+| The short answer | The plain answer and its evidence label, the latest, whether it is back, how big it is, who is affected, what is known and not known | `answer_group`, the main question, the newest `update_log.csv` row that changed a finding, `service`, `size`, `size_basis`, `who_is_affected`, `known`, `not_known` |
 | The full story | The key numbers, then every section in `sections`, in your order | `figures` and `sections` |
 | The evidence | A count of every claim by label, every source, the update log and links to the raw files | `claims.csv`, `sources.csv`, `update_log.csv` |
 
@@ -118,6 +119,15 @@ It restates the main question's answer and is not a verdict, so it needs no appr
 
 `incident_type` (outage, breach or attack) is what readers filter the home page by. Choose by what happened, not by the suspected cause: a service that went down is an outage even if an attack turns out to be behind it.
 
+## Is it back?
+
+When something stopped working, readers ask whether it is back. `service` in `incident.json` answers that: a `state` and the `claim_id` of the claim that says so.
+
+- `down`: the service, or the part that failed, was still out at the last check. `partly-back`: some of it is restored and some is not. `back`: it is working again.
+- The claim must be labelled Confirmed or Reported. The page and the status board show the state, the claim's own text and when that claim was last checked, so keep the claim's `last_checked` current.
+- Re-check it on every run, and change it in the same change as the claim. A "down" that is no longer true is the most misleading thing the site can say.
+- Leave `service` out when nothing went down, or when no claim says how things stand. Never guess it from a tracker graph or from silence.
+
 ## Charts
 
 A chart is a CSV of numbers plus a short description in `incident.json`: its type (`line` or `bar`), which column is the horizontal axis, which columns are the series, the unit, where the numbers came from, and an `alt` sentence that states the trend in words. The build draws the chart and prints the same numbers as a table under it. Agents never draw a chart or save a picture of one. All series on one chart share one scale, so they must be the same kind of quantity; two different quantities need two charts.
@@ -156,6 +166,7 @@ To check one folder while you work: `node scripts/validate.mjs data/incidents/<s
 - that an answered question has an answer, a label and its claims, and an open one says what would settle it;
 - that a verdict has an approval time and a closed status, and a closed incident has a verdict;
 - that no text uses the words of a final verdict ("Confirmed hack", "Confirmed not a hack") before one is approved;
+- that `service`, when present, rests on a Confirmed or Reported claim;
 - that `answer_group` says no more than the main question's label does, and matches the verdict once there is one;
 - that the update log is newest first;
 - that chart columns exist and hold numbers, image files exist and match their SHA-256, and SVGs contain no scripts;

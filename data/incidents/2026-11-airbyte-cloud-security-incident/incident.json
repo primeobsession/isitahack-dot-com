@@ -8,6 +8,10 @@
   },
   "incident_type": "attack",
   "answer_group": "hack-stated",
+  "service": {
+    "state": "partly-back",
+    "claim_id": "c008"
+  },
   "lead_image": "airbyte-logo",
   "also_called": [
     "the Airbyte Cloud outage",

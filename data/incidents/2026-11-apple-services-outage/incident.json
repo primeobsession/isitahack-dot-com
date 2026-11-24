@@ -5,6 +5,10 @@
   "subject": { "name": "Apple", "kind": "devices" },
   "incident_type": "outage",
   "answer_group": "no-sign-of-hack",
+  "service": {
+    "state": "back",
+    "claim_id": "c003"
+  },
   "lead_image": "apple-park",
   "also_called": ["the Apple outage"],
   "status": "monitoring",

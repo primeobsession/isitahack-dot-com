@@ -8,6 +8,10 @@
   },
   "incident_type": "outage",
   "answer_group": "no-sign-of-hack",
+  "service": {
+    "state": "back",
+    "claim_id": "c001"
+  },
   "lead_image": "dropbox-app-phone",
   "also_called": [
     "the Dropbox outage"

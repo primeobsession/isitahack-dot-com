@@ -8,6 +8,10 @@
   },
   "incident_type": "outage",
   "answer_group": "unclear",
+  "service": {
+    "state": "back",
+    "claim_id": "c010"
+  },
   "lead_image": "doordash-logo",
   "also_called": [
     "the DoorDash outage"

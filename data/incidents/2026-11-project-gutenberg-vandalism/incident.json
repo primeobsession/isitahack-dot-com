@@ -8,6 +8,10 @@
   },
   "incident_type": "attack",
   "answer_group": "hack-stated",
+  "service": {
+    "state": "down",
+    "claim_id": "c007"
+  },
   "lead_image": "project-gutenberg-logo",
   "also_called": [
     "the Gutenberg hack",

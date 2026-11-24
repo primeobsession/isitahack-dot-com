@@ -8,6 +8,10 @@
   },
   "incident_type": "breach",
   "answer_group": "hack-reported",
+  "service": {
+    "state": "back",
+    "claim_id": "c004"
+  },
   "lead_image": "rackspace-logo",
   "also_called": [
     "the Rackspace Spot outage",

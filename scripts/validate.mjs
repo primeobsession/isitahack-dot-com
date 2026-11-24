@@ -266,6 +266,12 @@ export function loadIncident(dir) {
     if (!head.verdict_approved_at) errs.push(`incident.json.verdict_approved_at: required when a verdict is set (the owner approves every verdict)`);
     if (head.status !== "closed") errs.push(`incident.json.status: must be closed once a verdict is set`);
   } else if (head.status === "closed") errs.push(`incident.json.verdict: a closed incident needs an approved verdict`);
+  // Whether a service is back is only ever said on the strength of a sourced claim.
+  if (head.service) {
+    const c = claims.get(head.service.claim_id);
+    if (!c) errs.push(`incident.json.service.claim_id: ${show(head.service.claim_id)} is not in claims.csv`);
+    else if (c.label !== "Confirmed" && c.label !== "Reported") errs.push(`incident.json.service: rests on ${head.service.claim_id}, which is labelled ${c.label}; whether a service is back can only rest on a Confirmed or Reported claim`);
+  }
   // The plain answer the home page files the incident under may not say more than the
   // main question's label does, and must follow a verdict once there is one.
   const group = head.answer_group, mainLabel = main && main.label;

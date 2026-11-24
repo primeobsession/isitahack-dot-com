@@ -5,6 +5,10 @@
   "subject": { "name": "FAA", "kind": "aviation" },
   "incident_type": "outage",
   "answer_group": "unclear",
+  "service": {
+    "state": "back",
+    "claim_id": "c077"
+  },
   "lead_image": "faa-radar-site",
   "also_called": [
     "the FAA outage",

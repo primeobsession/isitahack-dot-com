@@ -5,6 +5,7 @@
   "subject": { "name": "Example City Water", "kind": "other" },
   "incident_type": "outage",
   "answer_group": "no-sign-of-hack",
+  "service": { "state": "back", "claim_id": "c006" },
   "lead_image": "water-tower",
   "also_called": ["the Example City water outage"],
   "status": "monitoring",

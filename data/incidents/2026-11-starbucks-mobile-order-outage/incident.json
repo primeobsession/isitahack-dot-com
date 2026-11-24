@@ -8,6 +8,10 @@
   },
   "incident_type": "outage",
   "answer_group": "unclear",
+  "service": {
+    "state": "back",
+    "claim_id": "c003"
+  },
   "lead_image": "starbucks-store",
   "also_called": [
     "the Starbucks app outage",

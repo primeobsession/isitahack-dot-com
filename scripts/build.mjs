@@ -19,7 +19,7 @@ import { join, dirname, basename, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { LABELS, ANSWER_GROUPS, answerPill, esc, slugify, pill, inline, linkTag, fmtDate, fmtDay, timeTag, renderBody, warnings, warn, setCurrent } from "./html.mjs";
 import { loadIncident } from "./validate.mjs";
-import { renderIncident, incidentMarkdown, incidentLayout, incidentPicture, evidenceBar, summarize } from "./incident.mjs";
+import { renderIncident, incidentMarkdown, incidentLayout, incidentPicture, evidenceBar, summarize, SERVICE_STATES } from "./incident.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -443,6 +443,17 @@ ${answerPill(g)}
 <span class="stat-means">${esc(g.means)}</span>
 </a>`;
   }).join("\n");
+  // Is it still down? Only incidents whose data says, on the strength of a sourced claim.
+  // What is still down comes first; each line carries the time of the check it rests on.
+  const RANK = { down: 0, "partly-back": 1, back: 2 }, at = (i) => (i.service.as_of ? Date.parse(i.service.as_of) : 0);
+  const stated = incidents.filter((i) => i.service).sort((a, b) => RANK[a.service.state] - RANK[b.service.state] || at(b) - at(a) || a.slug.localeCompare(b.slug));
+  const service = stated.length ? `<section class="wrap status-block" aria-labelledby="st-down">
+<h2 id="st-down">Is it still down?</h2>
+<p class="meta">Only where a sourced claim says how things stand: ${stated.length} of ${incidents.length} incidents. Each line is as of that incident's last check, which may be days old.</p>
+<ul class="svc-list">
+${stated.map((i) => `<li class="svc svc-${i.service.state}"${i.service.as_of ? ` data-asof="${esc(i.service.as_of)}"` : ""}><span class="svc-state"><span class="svc-mark" aria-hidden="true"></span>${esc(SERVICE_STATES[i.service.state])}</span><a class="svc-name" href="incidents/${esc(i.slug)}.html">${esc(rowName(i))}</a><span class="svc-text">${esc(i.service.text)}</span><span class="svc-when meta">${i.service.as_of ? `Checked ${timeTag(i.service.as_of)}` : ""}</span></li>`).join("\n")}
+</ul>
+</section>` : "";
   const chart = dayChart(incidents);
   const head = ["Incident", "Answer so far", "How big", "Happened", "Last checked"];
   const rows = byDay.map((i) => {
@@ -458,7 +469,7 @@ ${answerPill(g)}
     return `<tr data-group="${g.key}" data-name="${esc(rowName(i).toLowerCase())}" data-happened="${esc(i.incident_date || "")}" data-checked="${esc(checkedOf(i))}">${cells.map((c, n) => `<td data-label="${head[n]}">${c}</td>`).join("")}</tr>`;
   }).join("\n");
   const body = fill(readPage("status"), {
-    root: "", stats,
+    root: "", stats, service,
     checked: newestCheck ? `Last check: ${timeTag(newestCheck)}.` : "",
     by_subject: countTable("Incidents by kind of organization and by answer", "Organization", SUBJECT_KINDS, incidents, (i) => i.subject?.kind || "other"),
     by_type: countTable("Incidents by kind of incident and by answer", "Incident", INCIDENT_TYPES, incidents, (i) => i.incident_type),
@@ -502,6 +513,8 @@ function updateIndexJson(incidents, out) {
     const files = { ...i.files };
     for (const [k, v] of Object.entries(prev.files || {})) if (!(k in files)) files[k] = v;
     const filed = i.typed ? { incident_type: i.incident_type, answer_group: i.answer_group } : {};
+    delete prev.service;
+    if (i.service) filed.service = { state: i.service.state, as_of: i.service.as_of };
     return { ...prev, slug: i.slug, title: i.title, status: i.status, last_updated: i.last_updated, ...filed, files };
   });
   writeFileSync(join(out, "index.json"), JSON.stringify({ ...existing, incidents: list }, null, 2) + "\n");

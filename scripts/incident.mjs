@@ -36,7 +36,10 @@ const STANDARD_NOTE = `<strong>Not verified: initial investigation only.</strong
 const two = (n) => String(n).padStart(2, "0");
 
 // Everything other pages need to know about an incident, worked out from its data.
+export const SERVICE_STATES = { down: "Down at our last check", "partly-back": "Partly back at our last check", back: "Back" };
 export function summarize({ head, t }) {
+  // Whether the thing that went down is back: only where a sourced claim says so.
+  const stateClaim = head.service && t.claims.find((c) => c.claim_id === head.service.claim_id);
   const latest = t.update_log.find((r) => !QUIET.has(r.change_type));
   const checked = t.update_log.find((r) => r.change_type !== "presentation");
   const main = t.questions.find((q) => q.question_id === head.main_question_id);
@@ -50,6 +53,7 @@ export function summarize({ head, t }) {
     question: { text: main.question_text, answer: main.answer_text, label: main.label, claim_ids: main.claim_ids },
     verdict: head.verdict || null, verdict_approved_at: head.verdict_approved_at || null,
     size: head.size, subject: head.subject, incident_type: head.incident_type, answer_group: head.answer_group, also_names: head.also_called || [],
+    service: stateClaim ? { state: head.service.state, claim_id: stateClaim.claim_id, text: stateClaim.claim_text, as_of: stateClaim.last_checked || null } : null,
     tally: Object.fromEntries(LABELS.map((l) => [l, inGroup.filter((c) => c.label === l).length])),
     tally_title: head.sections.find((s) => s.type === "claims")?.title || "Claims",
     counts: { sources: t.sources.length, updates: t.update_log.length, events: t.timeline.length },
@@ -309,7 +313,7 @@ ${evidenceBar(sum.tally, sum.tally_title)}
   const short = `<section class="depth depth-short" aria-label="The short answer, continued">
 <div class="brief">
 <div class="brief-item latest"><h2 class="kicker accent">The latest · ${timeTag(sum.latest.at)}</h2><p class="latest-headline">${esc(sum.latest.headline)}</p></div>
-<div class="brief-item"><h2 class="kicker">How big is it?</h2><p><strong>${esc(head.size)}.</strong> ${esc(head.size_basis)}</p></div>
+${sum.service ? `<div class="brief-item"><h2 class="kicker">Is it back?</h2><p><strong>${esc(SERVICE_STATES[sum.service.state])}.</strong> ${esc(sum.service.text.replace(/[.\s]+$/, ""))}. <a class="ref" href="${esc(claimHref(sum.service.claim_id))}">evidence</a>${sum.service.as_of ? ` <span class="meta">Checked ${timeTag(sum.service.as_of)}</span>` : ""}</p></div>\n` : ""}<div class="brief-item"><h2 class="kicker">How big is it?</h2><p><strong>${esc(head.size)}.</strong> ${esc(head.size_basis)}</p></div>
 <div class="brief-item"><h2 class="kicker">Who is affected?</h2><p>${esc(head.who_is_affected)}</p></div>
 </div>
 <div class="known-grid" id="glance">

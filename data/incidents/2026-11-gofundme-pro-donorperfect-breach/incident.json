@@ -8,6 +8,10 @@
   },
   "incident_type": "breach",
   "answer_group": "hack-stated",
+  "service": {
+    "state": "partly-back",
+    "claim_id": "c008"
+  },
   "lead_image": "gofundme-logo",
   "also_called": [
     "GoFundMe Pro data breach",

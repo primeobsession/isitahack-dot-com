@@ -8,6 +8,10 @@
   },
   "incident_type": "outage",
   "answer_group": "unclear",
+  "service": {
+    "state": "down",
+    "claim_id": "c001"
+  },
   "lead_image": "atlassian-office-yokohama",
   "also_called": [
     "the Bitbucket outage",

@@ -8,6 +8,10 @@
   },
   "incident_type": "outage",
   "answer_group": "hack-stated",
+  "service": {
+    "state": "partly-back",
+    "claim_id": "c004"
+  },
   "lead_image": "havas-voyages-agency",
   "also_called": [
     "the Orchestra outage",

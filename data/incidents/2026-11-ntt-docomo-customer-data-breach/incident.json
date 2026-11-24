@@ -8,6 +8,10 @@
   },
   "incident_type": "breach",
   "answer_group": "hack-stated",
+  "service": {
+    "state": "partly-back",
+    "claim_id": "c011"
+  },
   "lead_image": "ntt-docomo-yoyogi",
   "also_called": [
     "the Docomo data leak",

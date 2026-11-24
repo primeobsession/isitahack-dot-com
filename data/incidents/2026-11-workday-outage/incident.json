@@ -8,6 +8,10 @@
   },
   "incident_type": "outage",
   "answer_group": "unclear",
+  "service": {
+    "state": "back",
+    "claim_id": "c006"
+  },
   "lead_image": "workday-headquarters",
   "also_called": [
     "the Workday outage",

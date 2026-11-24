@@ -37,7 +37,11 @@
         "data": "data/incidents/2026-11-atlassian-bitbucket-login-outage/"
       },
       "incident_type": "outage",
-      "answer_group": "unclear"
+      "answer_group": "unclear",
+      "service": {
+        "state": "down",
+        "as_of": "2026-11-23T11:12:00-05:00"
+      }
     },
     {
       "slug": "2026-11-glinet-cloud-malware",
@@ -156,7 +160,11 @@
         "manifest": "data/incidents/2026-11-faa-ground-stop/MANIFEST.txt"
       },
       "incident_type": "outage",
-      "answer_group": "unclear"
+      "answer_group": "unclear",
+      "service": {
+        "state": "back",
+        "as_of": null
+      }
     },
     {
       "slug": "2026-11-cleverbridge-card-data-breach",
@@ -182,7 +190,11 @@
         "data": "data/incidents/2026-11-hugendubel-tolino-cyberattack/"
       },
       "incident_type": "outage",
-      "answer_group": "hack-stated"
+      "answer_group": "hack-stated",
+      "service": {
+        "state": "down",
+        "as_of": "2026-11-22T11:31:00-05:00"
+      }
     },
     {
       "slug": "2026-11-usda-farm-payment-system-cyberattack",
@@ -195,7 +207,11 @@
         "data": "data/incidents/2026-11-usda-farm-payment-system-cyberattack/"
       },
       "incident_type": "outage",
-      "answer_group": "hack-reported"
+      "answer_group": "hack-reported",
+      "service": {
+        "state": "down",
+        "as_of": "2026-11-22T09:04:02-05:00"
+      }
     },
     {
       "slug": "2026-11-ticketmaster-outage",
@@ -208,7 +224,11 @@
         "data": "data/incidents/2026-11-ticketmaster-outage/"
       },
       "incident_type": "outage",
-      "answer_group": "unclear"
+      "answer_group": "unclear",
+      "service": {
+        "state": "back",
+        "as_of": "2026-11-21T21:06:19-05:00"
+      }
     },
     {
       "slug": "2026-11-ntt-docomo-customer-data-breach",
@@ -221,7 +241,11 @@
         "data": "data/incidents/2026-11-ntt-docomo-customer-data-breach/"
       },
       "incident_type": "breach",
-      "answer_group": "hack-stated"
+      "answer_group": "hack-stated",
+      "service": {
+        "state": "partly-back",
+        "as_of": "2026-11-22T06:48:00-05:00"
+      }
     },
     {
       "slug": "2026-11-together-ai-prompt-leak",
@@ -260,7 +284,11 @@
         "data": "data/incidents/2026-11-travelsoft-orchestra-cyberattack/"
       },
       "incident_type": "outage",
-      "answer_group": "hack-stated"
+      "answer_group": "hack-stated",
+      "service": {
+        "state": "partly-back",
+        "as_of": "2026-11-22T00:10:00-05:00"
+      }
     },
     {
       "slug": "2026-11-rakuten-securities-breach",
@@ -299,7 +327,11 @@
         "data": "data/incidents/2026-11-rackspace-spot-breach/"
       },
       "incident_type": "breach",
-      "answer_group": "hack-reported"
+      "answer_group": "hack-reported",
+      "service": {
+        "state": "back",
+        "as_of": "2026-11-21T18:34:58-05:00"
+      }
     },
     {
       "slug": "2026-11-journal-technologies-court-portals",
@@ -312,7 +344,11 @@
         "data": "data/incidents/2026-11-journal-technologies-court-portals/"
       },
       "incident_type": "outage",
-      "answer_group": "hack-stated"
+      "answer_group": "hack-stated",
+      "service": {
+        "state": "down",
+        "as_of": "2026-11-21T16:30:24-05:00"
+      }
     },
     {
       "slug": "2026-11-airbyte-cloud-security-incident",
@@ -325,7 +361,11 @@
         "data": "data/incidents/2026-11-airbyte-cloud-security-incident/"
       },
       "incident_type": "attack",
-      "answer_group": "hack-stated"
+      "answer_group": "hack-stated",
+      "service": {
+        "state": "partly-back",
+        "as_of": "2026-11-21T16:35:26-05:00"
+      }
     },
     {
       "slug": "2026-11-doordash-outage",
@@ -338,7 +378,11 @@
         "data": "data/incidents/2026-11-doordash-outage/"
       },
       "incident_type": "outage",
-      "answer_group": "unclear"
+      "answer_group": "unclear",
+      "service": {
+        "state": "back",
+        "as_of": "2026-11-21T14:54:58-05:00"
+      }
     },
     {
       "slug": "2026-11-microsoft-entra-connect-health-breach",
@@ -364,7 +408,11 @@
         "data": "data/incidents/2026-11-gofundme-pro-donorperfect-breach/"
       },
       "incident_type": "breach",
-      "answer_group": "hack-stated"
+      "answer_group": "hack-stated",
+      "service": {
+        "state": "partly-back",
+        "as_of": "2026-11-21T12:53:54-05:00"
+      }
     },
     {
       "slug": "2026-11-charleston-county-sc-cyberattack",
@@ -429,7 +477,11 @@
         "data": "data/incidents/2026-11-project-gutenberg-vandalism/"
       },
       "incident_type": "attack",
-      "answer_group": "hack-stated"
+      "answer_group": "hack-stated",
+      "service": {
+        "state": "down",
+        "as_of": "2026-11-21T05:14:24-05:00"
+      }
     },
     {
       "slug": "2026-11-steam-outage",
@@ -455,7 +507,11 @@
         "data": "data/incidents/2026-11-dropbox-outage/"
       },
       "incident_type": "outage",
-      "answer_group": "no-sign-of-hack"
+      "answer_group": "no-sign-of-hack",
+      "service": {
+        "state": "back",
+        "as_of": "2026-11-21T01:23:54-05:00"
+      }
     },
     {
       "slug": "2026-11-riken-fugaku-supercomputer-hack",
@@ -468,7 +524,11 @@
         "data": "data/incidents/2026-11-riken-fugaku-supercomputer-hack/"
       },
       "incident_type": "attack",
-      "answer_group": "hack-stated"
+      "answer_group": "hack-stated",
+      "service": {
+        "state": "down",
+        "as_of": "2026-11-21T00:24:56-05:00"
+      }
     },
     {
       "slug": "2026-11-staples-canada-print-breach",
@@ -520,7 +580,11 @@
         "data": "data/incidents/2026-11-vermont-valcour-dispatch-outage/"
       },
       "incident_type": "outage",
-      "answer_group": "unclear"
+      "answer_group": "unclear",
+      "service": {
+        "state": "down",
+        "as_of": "2026-11-20T23:29:00-05:00"
+      }
     },
     {
       "slug": "2026-11-apple-services-outage",
@@ -533,7 +597,11 @@
         "data": "data/incidents/2026-11-apple-services-outage/"
       },
       "incident_type": "outage",
-      "answer_group": "no-sign-of-hack"
+      "answer_group": "no-sign-of-hack",
+      "service": {
+        "state": "back",
+        "as_of": "2026-11-18T20:57:00-05:00"
+      }
     },
     {
       "slug": "2026-11-boeing-inc-ransom-claim",
@@ -559,7 +627,11 @@
         "data": "data/incidents/2026-11-starbucks-mobile-order-outage/"
       },
       "incident_type": "outage",
-      "answer_group": "unclear"
+      "answer_group": "unclear",
+      "service": {
+        "state": "back",
+        "as_of": "2026-11-20T19:49:00-05:00"
+      }
     },
     {
       "slug": "2026-11-workday-outage",
@@ -572,7 +644,11 @@
         "data": "data/incidents/2026-11-workday-outage/"
       },
       "incident_type": "outage",
-      "answer_group": "unclear"
+      "answer_group": "unclear",
+      "service": {
+        "state": "back",
+        "as_of": "2026-11-20T11:00:00-05:00"
+      }
     }
   ]
 }

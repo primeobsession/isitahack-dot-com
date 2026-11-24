@@ -8,6 +8,10 @@
   },
   "incident_type": "outage",
   "answer_group": "unclear",
+  "service": {
+    "state": "back",
+    "claim_id": "c019"
+  },
   "lead_image": "ticketmaster-paper-ticket",
   "also_called": [
     "the Ticketmaster outage",
