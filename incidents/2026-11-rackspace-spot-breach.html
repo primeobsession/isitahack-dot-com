@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was Rackspace Spot hacked? | Is It a Hack?</title>
 <meta name="description" content="Was Rackspace Spot hacked? Reportedly yes: Rackspace&#39;s customer notice, quoted by BleepingComputer, says leaked credentials let someone into Spot on Nov 17, and a Spot team member said the same on Spot&#39;s GitHub forum. No Rackspace-hosted statement yet.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-21T18:34:58-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-rackspace-spot-breach.html#article","headline":"Was Rackspace Spot hacked?","alternativeHeadline":"Rackspace Spot breach, Nov 2026","description":"Was Rackspace Spot hacked? Reportedly yes: Rackspace's customer notice, quoted by BleepingComputer, says leaked credentials let someone into Spot on Nov 17, and a Spot team member said the same on Spot's GitHub forum. No Rackspace-hosted statement yet.","abstract":"Reportedly yes: Rackspace's customer notice, quoted by BleepingComputer, says leaked credentials let someone into Spot on Nov 17, and a Spot team member said the same on Spot's GitHub forum. No Rackspace-hosted statement yet.","url":"https://isitahack.com/incidents/2026-11-rackspace-spot-breach.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-rackspace-spot-breach.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T18:09:37-05:00","dateModified":"2026-11-21T18:34:58-05:00","image":["https://isitahack.com/data/incidents/2026-11-rackspace-spot-breach/images/rackspace-logo.png"],"about":{"@type":"Event","name":"Rackspace Spot breach, Nov 2026","startDate":"2026-11-17"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-rackspace-spot-breach.html#article","headline":"Was Rackspace Spot hacked?","alternativeHeadline":"Rackspace Spot breach, Nov 2026","description":"Was Rackspace Spot hacked? Reportedly yes: Rackspace's customer notice, quoted by BleepingComputer, says leaked credentials let someone into Spot on Nov 17, and a Spot team member said the same on Spot's GitHub forum. No Rackspace-hosted statement yet.","abstract":"Reportedly yes: Rackspace's customer notice, quoted by BleepingComputer, says leaked credentials let someone into Spot on Nov 17, and a Spot team member said the same on Spot's GitHub forum. No Rackspace-hosted statement yet.","url":"https://isitahack.com/incidents/2026-11-rackspace-spot-breach.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-rackspace-spot-breach.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T18:09:37-05:00","dateModified":"2026-11-21T18:34:58-05:00","image":["https://isitahack.com/data/incidents/2026-11-rackspace-spot-breach/images/rackspace-logo.png"],"about":{"@type":"Thing","name":"Rackspace Spot breach, Nov 2026"},"temporalCoverage":"2026-11-17","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Rackspace Spot breach, Nov 2026","item":"https://isitahack.com/incidents/2026-11-rackspace-spot-breach.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-rackspace-spot-breach.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -509,7 +515,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-21T18:34:58-05:00">Nov 21, 2026, 6:34 PM ET</time></p>
 <p class="latest-headline">A Spot team member wrote on Spot&#39;s GitHub forum that an observability system was breached via a compromised credential; still Reported.</p>
-<p class="latest-summary">New source s004 (Tier 4): Rackspace Spot&#39;s GitHub Discussions thread &#39;Update On Spot Outage&#39;, Nov 20, where a Spot team member said an observability system was breached using a compromised credential and that intrusive infrastructure changes caused the extended outage, then gave a 9am Pacific Nov 21 restoration estimate. Added c012 (Reported), t005 and t006; added s004 to c003, c004 and c011. c001 stays Reported: a forum post is Tier 4 and not a Rackspace-hosted statement. c011 stays Not established: no published incident report, and whose credential and how it leaked are unknown. Rackspace release notes and status page unchanged (sign-up restriction notice still pinned, no breach mention). Other new coverage (Mezha, infonewscyber.fr) rewrites BleepingComputer, same independence group; no second independent outlet. BleepingComputer read through a search tool. Reddit not checked: access blocked. Staleness check done: q001 answer and incident.json known/not_known refreshed. Privacy check done: no names, usernames or handles.</p>
 <p><a href="#update-log">All 2 updates</a></p>
 </section>
 <section class="side-block">

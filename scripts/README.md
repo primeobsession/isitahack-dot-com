@@ -70,7 +70,7 @@ chrome --headless=new --hide-scrollbars --force-device-scale-factor=1 --window-s
 
 ## partials/head.html
 
-Shared `<head>` snippet inserted verbatim into every generated page. It holds the Google Tag Manager loader for container `GTM-M6WWGDJ5`. Edit it here, not in the generated HTML.
+Shared `<head>` snippet inserted verbatim into every generated page. It holds the Google Tag Manager loader for container `GTM-M6WWGDJ5`, which loads only when the page is served from `isitahack.com`, so previews and local builds are not counted as visits. Edit it here, not in the generated HTML.
 
 ## Page scripts
 

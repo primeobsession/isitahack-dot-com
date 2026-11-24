@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was the Ticketmaster outage on Nov 20 a cyberattack? | Is It a Hack?</title>
 <meta name="description" content="Was the Ticketmaster outage on Nov 20 a cyberattack? Ticketmaster has not given a cause, and no source we read says the outage was an attack or rules one out. Nobody has claimed responsibility. The only suggestion of one is an anonymous comment with no evidence.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-22T09:03:01-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-ticketmaster-outage.html#article","headline":"Was the Ticketmaster outage on Nov 20 a cyberattack?","alternativeHeadline":"Ticketmaster outage, Nov 20, 2026","description":"Was the Ticketmaster outage on Nov 20 a cyberattack? Ticketmaster has not given a cause, and no source we read says the outage was an attack or rules one out. Nobody has claimed responsibility. The only suggestion of one is an anonymous comment with no evidence.","abstract":"Ticketmaster has not given a cause, and no source we read says the outage was an attack or rules one out. Nobody has claimed responsibility. The only suggestion of one is an anonymous comment with no evidence.","url":"https://isitahack.com/incidents/2026-11-ticketmaster-outage.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-ticketmaster-outage.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T02:16:00-05:00","dateModified":"2026-11-22T09:03:01-05:00","image":["https://isitahack.com/data/incidents/2026-11-ticketmaster-outage/images/ticketmaster-paper-ticket.jpg"],"about":{"@type":"Event","name":"Ticketmaster outage, Nov 20, 2026","startDate":"2026-11-20"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-ticketmaster-outage.html#article","headline":"Was the Ticketmaster outage on Nov 20 a cyberattack?","alternativeHeadline":"Ticketmaster outage, Nov 20, 2026","description":"Was the Ticketmaster outage on Nov 20 a cyberattack? Ticketmaster has not given a cause, and no source we read says the outage was an attack or rules one out. Nobody has claimed responsibility. The only suggestion of one is an anonymous comment with no evidence.","abstract":"Ticketmaster has not given a cause, and no source we read says the outage was an attack or rules one out. Nobody has claimed responsibility. The only suggestion of one is an anonymous comment with no evidence.","url":"https://isitahack.com/incidents/2026-11-ticketmaster-outage.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-ticketmaster-outage.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T02:16:00-05:00","dateModified":"2026-11-22T09:03:01-05:00","image":["https://isitahack.com/data/incidents/2026-11-ticketmaster-outage/images/ticketmaster-paper-ticket.jpg"],"about":{"@type":"Thing","name":"Ticketmaster outage, Nov 20, 2026"},"temporalCoverage":"2026-11-20","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Ticketmaster outage, Nov 20, 2026","item":"https://isitahack.com/incidents/2026-11-ticketmaster-outage.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-ticketmaster-outage.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -784,7 +790,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-22T09:03:01-05:00">Nov 22, 2026, 9:03 AM ET</time></p>
 <p class="latest-headline">Ticketmaster told fans on Saturday to save tickets to a phone wallet and said the problem was fixed. Still no cause, and no sign of a hack.</p>
-<p class="latest-summary">2 new Tier 2 sources: s019, WWL&#39;s Nov 21 follow-up, and s020, NOLA.com&#39;s Nov 21 follow-up. New c020 (Confirmed): on Saturday a Ticketmaster spokesperson gave WWL tips for the second Superdome show, and NOLA.com says Ticketmaster called the problem a technical issue it did not define and said it had been cleared up. FOX 8 prints the same tips. New timeline row t012. c006 now also cites s019, which says some fans left without seeing the show. Not cited: a Knox News (USA TODAY Network) national story, because its page is behind a paywall and we could not read it. Staleness check done: known and not_known refreshed (refunds for fans who missed the show are not known); main answer unchanged (Not established). Privacy check done: no private names or handles are published, and no reporter is named.</p>
 <p><a href="#update-log">All 5 updates</a></p>
 </section>
 <section class="side-block">

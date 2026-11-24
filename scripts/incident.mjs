@@ -10,11 +10,12 @@ import { renderPlate } from "./plate.mjs";
 
 // The incident's picture: its photograph when it has one, otherwise the drawn plate.
 // `base` is where the incident's data folder is, as seen from the page.
-export function incidentPicture(head, base) {
+// `lazy` is for a picture below the first screen: it loads when the reader gets near it.
+export function incidentPicture(head, base, { lazy = false } = {}) {
   const image = head.lead_image && (head.images || []).find((x) => x.id === head.lead_image);
   if (!image) return { html: renderPlate(head.subject), credit: "", caption: "", image: null };
   return {
-    html: `<img src="${esc(`${base}/${image.file}`)}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}">`,
+    html: `<img src="${esc(`${base}/${image.file}`)}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}"${lazy ? ' loading="lazy" decoding="async"' : ""}>`,
     credit: `Image: ${image.credit}`, caption: image.caption || "", image,
   };
 }
@@ -286,8 +287,7 @@ ${verdictNote}
   const facts = `<section class="side-block latest">
 <p class="kicker accent">The latest · ${timeTag(sum.latest.at)}</p>
 <p class="latest-headline">${esc(sum.latest.headline)}</p>
-<p class="latest-summary">${esc(sum.latest.summary)}</p>
-<p><a href="#update-log">All ${t.update_log.length} updates</a></p>
+<p><a href="#update-log">${t.update_log.length === 1 ? "Update log" : `All ${t.update_log.length} updates`}</a></p>
 </section>
 <section class="side-block">
 <dl class="reach">

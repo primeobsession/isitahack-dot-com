@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was the FAA ground stop a cyberattack? | Is It a Hack?</title>
 <meta name="description" content="Was the FAA ground stop a cyberattack? Not supported by any public evidence; not formally ruled out. The FAA says it has no indication of a cyberattack, and the root cause is still not determined.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-22T12:20:00-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-faa-ground-stop.html#article","headline":"Was the FAA ground stop a cyberattack?","alternativeHeadline":"FAA nationwide ground stop","description":"Was the FAA ground stop a cyberattack? Not supported by any public evidence; not formally ruled out. The FAA says it has no indication of a cyberattack, and the root cause is still not determined.","abstract":"Not supported by any public evidence; not formally ruled out. The FAA says it has no indication of a cyberattack, and the root cause is still not determined.","url":"https://isitahack.com/incidents/2026-11-faa-ground-stop.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-faa-ground-stop.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-13T18:00:00-05:00","dateModified":"2026-11-22T12:20:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-faa-ground-stop/images/faa-radar-bennett-colorado.jpg"],"about":{"@type":"Event","name":"FAA nationwide ground stop","startDate":"2026-11-13"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-faa-ground-stop.html#article","headline":"Was the FAA ground stop a cyberattack?","alternativeHeadline":"FAA nationwide ground stop","description":"Was the FAA ground stop a cyberattack? Not supported by any public evidence; not formally ruled out. The FAA says it has no indication of a cyberattack, and the root cause is still not determined.","abstract":"Not supported by any public evidence; not formally ruled out. The FAA says it has no indication of a cyberattack, and the root cause is still not determined.","url":"https://isitahack.com/incidents/2026-11-faa-ground-stop.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-faa-ground-stop.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-13T18:00:00-05:00","dateModified":"2026-11-22T12:20:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-faa-ground-stop/images/faa-radar-bennett-colorado.jpg"],"about":{"@type":"Thing","name":"FAA nationwide ground stop"},"temporalCoverage":"2026-11-13","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"FAA nationwide ground stop","item":"https://isitahack.com/incidents/2026-11-faa-ground-stop.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-faa-ground-stop.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -3033,7 +3039,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-22T12:20:00-05:00">Nov 22, 2026, 12:20 PM ET</time></p>
 <p class="latest-headline">The intelligence director told ABC the week&#39;s outages, the FAA&#39;s included, were not coordinated or state-sponsored; cause still pending.</p>
-<p class="latest-summary">Added ABC News (s273, s274), Nov. 22: on &quot;This Week,&quot; the Director of National Intelligence was asked about the Microsoft, FAA and J.P. Morgan incidents and said &quot;we know that they were not coordinated and that they were not state sponsored,&quot; calling them outages resulting from system upgrades (c160, Reported). This repeats the Nov. 18 White House statement (c144) and gives no cause for the ground stop. Staleness fix: the not-known list now says the root-cause announcement the FAA chief expected that week had not been published as of Nov. 22. The FAA Q&amp;A is unchanged (Nov. 15). No new leads from the news sweep. Privacy check done: no handles, contacts, bylines or private names added. The main answer and its label were not changed.</p>
 <p><a href="#update-log">All 70 updates</a></p>
 </section>
 <section class="side-block">

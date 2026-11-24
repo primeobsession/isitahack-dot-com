@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was the Travelsoft Orchestra outage a hack? | Is It a Hack?</title>
 <meta name="description" content="Was the Travelsoft Orchestra outage a hack? Yes, by the company&#39;s own account: its president says Orchestra was the victim of a cyberattack with illicit access, and that it shut its systems down. How they got in and who did it are not known.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-22T00:13:00-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-travelsoft-orchestra-cyberattack.html#article","headline":"Was the Travelsoft Orchestra outage a hack?","alternativeHeadline":"Travelsoft Orchestra cyberattack, Nov 2026","description":"Was the Travelsoft Orchestra outage a hack? Yes, by the company's own account: its president says Orchestra was the victim of a cyberattack with illicit access, and that it shut its systems down. How they got in and who did it are not known.","abstract":"Yes, by the company's own account: its president says Orchestra was the victim of a cyberattack with illicit access, and that it shut its systems down. How they got in and who did it are not known.","url":"https://isitahack.com/incidents/2026-11-travelsoft-orchestra-cyberattack.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-travelsoft-orchestra-cyberattack.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-22T00:13:00-05:00","dateModified":"2026-11-22T00:13:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-travelsoft-orchestra-cyberattack/images/havas-voyages-agency.jpg"],"about":{"@type":"Event","name":"Travelsoft Orchestra cyberattack, Nov 2026","startDate":"2026-11-20"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-travelsoft-orchestra-cyberattack.html#article","headline":"Was the Travelsoft Orchestra outage a hack?","alternativeHeadline":"Travelsoft Orchestra cyberattack, Nov 2026","description":"Was the Travelsoft Orchestra outage a hack? Yes, by the company's own account: its president says Orchestra was the victim of a cyberattack with illicit access, and that it shut its systems down. How they got in and who did it are not known.","abstract":"Yes, by the company's own account: its president says Orchestra was the victim of a cyberattack with illicit access, and that it shut its systems down. How they got in and who did it are not known.","url":"https://isitahack.com/incidents/2026-11-travelsoft-orchestra-cyberattack.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-travelsoft-orchestra-cyberattack.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-22T00:13:00-05:00","dateModified":"2026-11-22T00:13:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-travelsoft-orchestra-cyberattack/images/havas-voyages-agency.jpg"],"about":{"@type":"Thing","name":"Travelsoft Orchestra cyberattack, Nov 2026"},"temporalCoverage":"2026-11-20","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Travelsoft Orchestra cyberattack, Nov 2026","item":"https://isitahack.com/incidents/2026-11-travelsoft-orchestra-cyberattack.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-travelsoft-orchestra-cyberattack.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -420,8 +426,7 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-22T00:13:00-05:00">Nov 22, 2026, 12:13 AM ET</time></p>
 <p class="latest-headline">Travelsoft says its Orchestra booking platform was hit by a cyberattack; French travel sites went offline Nov 20.</p>
-<p class="latest-summary">First draft. 2 sources (2 Tier 2), 9 claims, 5 questions. The company&#39;s president tells two outlets with different owners that Orchestra was hit by a cyberattack. Stolen logins are Reported (TourMaG, unnamed sources). Data theft is Not established. No Travelsoft notice or CNIL statement found. Privacy check done: no names of people, no handles, no contact details.</p>
-<p><a href="#update-log">All 1 updates</a></p>
+<p><a href="#update-log">Update log</a></p>
 </section>
 <section class="side-block">
 <dl class="reach">

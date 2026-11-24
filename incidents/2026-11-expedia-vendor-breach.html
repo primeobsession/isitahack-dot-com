@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was the Expedia data breach a hack? | Is It a Hack?</title>
 <meta name="description" content="Was the Expedia data breach a hack? A vendor-side attack, yes: Expedia confirmed, per Skift, that attackers got in through a compromised third-party data platform provider. What was taken is not established.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-22T15:31:00-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-expedia-vendor-breach.html#article","headline":"Was the Expedia data breach a hack?","alternativeHeadline":"Expedia third-party vendor breach, Nov 2026","description":"Was the Expedia data breach a hack? A vendor-side attack, yes: Expedia confirmed, per Skift, that attackers got in through a compromised third-party data platform provider. What was taken is not established.","abstract":"A vendor-side attack, yes: Expedia confirmed, per Skift, that attackers got in through a compromised third-party data platform provider. What was taken is not established.","url":"https://isitahack.com/incidents/2026-11-expedia-vendor-breach.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-expedia-vendor-breach.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-22T12:25:00-05:00","dateModified":"2026-11-22T15:31:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-expedia-vendor-breach/images/expedia-group-campus.jpg"],"about":{"@type":"Event","name":"Expedia third-party vendor breach, Nov 2026","startDate":"2026-11-12"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-expedia-vendor-breach.html#article","headline":"Was the Expedia data breach a hack?","alternativeHeadline":"Expedia third-party vendor breach, Nov 2026","description":"Was the Expedia data breach a hack? A vendor-side attack, yes: Expedia confirmed, per Skift, that attackers got in through a compromised third-party data platform provider. What was taken is not established.","abstract":"A vendor-side attack, yes: Expedia confirmed, per Skift, that attackers got in through a compromised third-party data platform provider. What was taken is not established.","url":"https://isitahack.com/incidents/2026-11-expedia-vendor-breach.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-expedia-vendor-breach.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-22T12:25:00-05:00","dateModified":"2026-11-22T15:31:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-expedia-vendor-breach/images/expedia-group-campus.jpg"],"about":{"@type":"Thing","name":"Expedia third-party vendor breach, Nov 2026"},"temporalCoverage":"2026-11-12","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Expedia third-party vendor breach, Nov 2026","item":"https://isitahack.com/incidents/2026-11-expedia-vendor-breach.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-expedia-vendor-breach.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -494,7 +500,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-22T15:31:00-05:00">Nov 22, 2026, 3:31 PM ET</time></p>
 <p class="latest-headline">A second outlet describes the group&#39;s posted Expedia files: hundreds of thousands of emails, possibly old; still not confirmed by Expedia.</p>
-<p class="latest-summary">New source: Cyber Daily (s008, Tier 2, Nov 12 Australian time), independent of Cybernews. It dates the group&#39;s leak post to Nov 3 (new timeline row t005), quotes the same claimed figures and says the posted extract lists hundreds of thousands of email addresses linked to travel data, some seen in earlier breaches, possibly historical. Added to c003, c004 (still Unverified: two outlets relay the group&#39;s claim but nobody has checked it) and c005 (still Reported: the files are not confirmed as Expedia&#39;s). No label change on any claim or the main question. Checked: no Expedia newsroom post or customer notice; no Form 8-K with Item 1.05 on EDGAR (latest 8-K Nov 4, earnings); no Qubole or Idera statement; no new Expedia statement since Nov 18. Staleness check done: head, known, not known, figures and size still accurate. Privacy check done: no staff, researchers, reporters, plaintiffs or contacts named. The group&#39;s page was not visited.</p>
 <p><a href="#update-log">All 4 updates</a></p>
 </section>
 <section class="side-block">

@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was Next hacked in the supplier data breach? | Is It a Hack?</title>
 <meta name="description" content="Was Next hacked in the supplier data breach? Reported. Next says outsiders reached some Next data at a supplier, not in Next&#39;s own systems, and that no customer data is known affected. No outside party has checked this.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-23T11:13:00-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-next-supplier-data-breach.html#article","headline":"Was Next hacked in the supplier data breach?","alternativeHeadline":"Was Next hacked? Supplier data breach, Nov 2026","description":"Was Next hacked in the supplier data breach? Reported. Next says outsiders reached some Next data at a supplier, not in Next's own systems, and that no customer data is known affected. No outside party has checked this.","abstract":"Reported. Next says outsiders reached some Next data at a supplier, not in Next's own systems, and that no customer data is known affected. No outside party has checked this.","url":"https://isitahack.com/incidents/2026-11-next-supplier-data-breach.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-next-supplier-data-breach.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-23T11:13:00-05:00","dateModified":"2026-11-23T11:13:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-next-supplier-data-breach/images/next-store-truro.jpg"],"about":{"@type":"Event","name":"Was Next hacked? Supplier data breach, Nov 2026","startDate":"2026-11-23"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-next-supplier-data-breach.html#article","headline":"Was Next hacked in the supplier data breach?","alternativeHeadline":"Was Next hacked? Supplier data breach, Nov 2026","description":"Was Next hacked in the supplier data breach? Reported. Next says outsiders reached some Next data at a supplier, not in Next's own systems, and that no customer data is known affected. No outside party has checked this.","abstract":"Reported. Next says outsiders reached some Next data at a supplier, not in Next's own systems, and that no customer data is known affected. No outside party has checked this.","url":"https://isitahack.com/incidents/2026-11-next-supplier-data-breach.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-next-supplier-data-breach.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-23T11:13:00-05:00","dateModified":"2026-11-23T11:13:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-next-supplier-data-breach/images/next-store-truro.jpg"],"about":{"@type":"Thing","name":"Was Next hacked? Supplier data breach, Nov 2026"},"temporalCoverage":"2026-11-23","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Was Next hacked? Supplier data breach, Nov 2026","item":"https://isitahack.com/incidents/2026-11-next-supplier-data-breach.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-next-supplier-data-breach.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -378,8 +384,7 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-23T11:13:00-05:00">Nov 23, 2026, 11:13 AM ET</time></p>
 <p class="latest-headline">Next says a supplier was breached and outsiders reached some Next data; customer data taken is Not established.</p>
-<p class="latest-summary">New incident page. Sources read: Next&#39;s notice to the London Stock Exchange and its investor page (Tier 1); BBC News, The Guardian, Reuters, The Register and City AM, all repeating that one statement. Supplier incident with outsiders reaching Next data: Confirmed by Next&#39;s own notice. Next&#39;s own systems not compromised: Reported (company&#39;s claim). Customer personal data taken: Not established. &#39;Benign&#39; data: Reported (company&#39;s description). Supplier, data types, perpetrator and method: Not established. No ICO or police statement found. Privacy check done: no names, handles or contact details. We opened no leak or dark-web sites.</p>
-<p><a href="#update-log">All 1 updates</a></p>
+<p><a href="#update-log">Update log</a></p>
 </section>
 <section class="side-block">
 <dl class="reach">

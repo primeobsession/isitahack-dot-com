@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was Boeing hacked by the INC Ransom group? | Is It a Hack?</title>
 <meta name="description" content="Was Boeing hacked by the INC Ransom group? Not established. INC Ransom claims it took 3.6 million files from a Boeing helicopter support unit. Boeing has said nothing, no filing exists, and no one independent has verified the claim.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-20T19:49:00-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-boeing-inc-ransom-claim.html#article","headline":"Was Boeing hacked by the INC Ransom group?","alternativeHeadline":"Boeing ransomware claim by INC Ransom, Nov 20, 2026","description":"Was Boeing hacked by the INC Ransom group? Not established. INC Ransom claims it took 3.6 million files from a Boeing helicopter support unit. Boeing has said nothing, no filing exists, and no one independent has verified the claim.","abstract":"Not established. INC Ransom claims it took 3.6 million files from a Boeing helicopter support unit. Boeing has said nothing, no filing exists, and no one independent has verified the claim.","url":"https://isitahack.com/incidents/2026-11-boeing-inc-ransom-claim.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-boeing-inc-ransom-claim.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-20T19:49:00-05:00","dateModified":"2026-11-20T19:49:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-boeing-inc-ransom-claim/images/boeing-everett-factory.jpg"],"about":{"@type":"Event","name":"Boeing ransomware claim by INC Ransom, Nov 20, 2026","startDate":"2026-11-20"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-boeing-inc-ransom-claim.html#article","headline":"Was Boeing hacked by the INC Ransom group?","alternativeHeadline":"Boeing ransomware claim by INC Ransom, Nov 20, 2026","description":"Was Boeing hacked by the INC Ransom group? Not established. INC Ransom claims it took 3.6 million files from a Boeing helicopter support unit. Boeing has said nothing, no filing exists, and no one independent has verified the claim.","abstract":"Not established. INC Ransom claims it took 3.6 million files from a Boeing helicopter support unit. Boeing has said nothing, no filing exists, and no one independent has verified the claim.","url":"https://isitahack.com/incidents/2026-11-boeing-inc-ransom-claim.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-boeing-inc-ransom-claim.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-20T19:49:00-05:00","dateModified":"2026-11-20T19:49:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-boeing-inc-ransom-claim/images/boeing-everett-factory.jpg"],"about":{"@type":"Thing","name":"Boeing ransomware claim by INC Ransom, Nov 20, 2026"},"temporalCoverage":"2026-11-20","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Boeing ransomware claim by INC Ransom, Nov 20, 2026","item":"https://isitahack.com/incidents/2026-11-boeing-inc-ransom-claim.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-boeing-inc-ransom-claim.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -390,8 +396,7 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-20T19:49:00-05:00">Nov 20, 2026, 7:49 PM ET</time></p>
 <p class="latest-headline">INC Ransom claims a Boeing helicopter support unit breach on Nov 20; Boeing has said nothing and no one has verified it.</p>
-<p class="latest-summary">First draft. 5 sources (2 Tier 1: Boeing newsroom and SEC filings, checked with no statement), 9 claims (3 Confirmed, 4 Reported, 1 Unverified, 1 Not established), 3 questions. Main answer is Not established: the claim rests on the gang&#39;s post. The leak site was not visited. Not checked: BleepingComputer&#39;s 2023 story, cited via PlayCISO. Staleness check done. Privacy check done: the gang&#39;s post names individuals and was not repeated here.</p>
-<p><a href="#update-log">All 1 updates</a></p>
+<p><a href="#update-log">Update log</a></p>
 </section>
 <section class="side-block">
 <dl class="reach">

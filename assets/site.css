@@ -345,7 +345,6 @@ ol.doc-main, ul.doc-main { list-style: none; padding: 0; }
 .side-facts > .side-block:first-child { border-top-color: var(--strong); }
 .side-block a { font-weight: 600; }
 .latest-headline { font-size: 1.02rem; line-height: 1.4; font-weight: 700; letter-spacing: -0.01em; }
-.latest-summary { color: var(--muted); }
 .reach { display: grid; gap: 0.8rem; }
 .reach dt { font: 600 0.66rem/1.6 var(--mono); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); }
 .reach dd { margin: 0; }

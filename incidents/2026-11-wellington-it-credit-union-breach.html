@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was the Wellington IT credit union breach a hack? | Is It a Hack?</title>
 <meta name="description" content="Was the Wellington IT credit union breach a hack? Yes: an outside party got unauthorised access to saved-payee details on Wellington IT&#39;s banking platform, per the department, Wellington IT and the credit union league. Money taken and the attacker are not established.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-22T15:58:00-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-wellington-it-credit-union-breach.html#article","headline":"Was the Wellington IT credit union breach a hack?","alternativeHeadline":"Wellington IT credit union breach, Nov 2026","description":"Was the Wellington IT credit union breach a hack? Yes: an outside party got unauthorised access to saved-payee details on Wellington IT's banking platform, per the department, Wellington IT and the credit union league. Money taken and the attacker are not established.","abstract":"Yes: an outside party got unauthorised access to saved-payee details on Wellington IT's banking platform, per the department, Wellington IT and the credit union league. Money taken and the attacker are not established.","url":"https://isitahack.com/incidents/2026-11-wellington-it-credit-union-breach.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-wellington-it-credit-union-breach.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-22T06:17:00-05:00","dateModified":"2026-11-22T15:58:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-wellington-it-credit-union-breach/images/irish-credit-union-branch.jpg"],"about":{"@type":"Event","name":"Wellington IT credit union breach, Nov 2026","startDate":"2026-10-02"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-wellington-it-credit-union-breach.html#article","headline":"Was the Wellington IT credit union breach a hack?","alternativeHeadline":"Wellington IT credit union breach, Nov 2026","description":"Was the Wellington IT credit union breach a hack? Yes: an outside party got unauthorised access to saved-payee details on Wellington IT's banking platform, per the department, Wellington IT and the credit union league. Money taken and the attacker are not established.","abstract":"Yes: an outside party got unauthorised access to saved-payee details on Wellington IT's banking platform, per the department, Wellington IT and the credit union league. Money taken and the attacker are not established.","url":"https://isitahack.com/incidents/2026-11-wellington-it-credit-union-breach.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-wellington-it-credit-union-breach.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-22T06:17:00-05:00","dateModified":"2026-11-22T15:58:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-wellington-it-credit-union-breach/images/irish-credit-union-branch.jpg"],"about":{"@type":"Thing","name":"Wellington IT credit union breach, Nov 2026"},"temporalCoverage":"2026-10-02","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Wellington IT credit union breach, Nov 2026","item":"https://isitahack.com/incidents/2026-11-wellington-it-credit-union-breach.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-wellington-it-credit-union-breach.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -878,7 +884,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-22T15:58:00-05:00">Nov 22, 2026, 3:58 PM ET</time></p>
 <p class="latest-headline">A credit union that stopped using Wellington IT about six years ago says some of its old payee data is included.</p>
-<p class="latest-summary">3 new Tier 1 sources: notices from Core, Gateway and Life credit unions. New claim c022 (Confirmed): Life Credit Union says Wellington IT told it some historical data is included, although it has not used the provider for about six years; members who joined after 2020 or saved no payees before 2020 are unlikely to be affected. c003, c004, c007 and c012 updated; c022 linked to q005. Core repeats the &#39;approximately 50 credit unions&#39; figure. No new statement from Wellington IT, the Department of Finance, the Central Bank, the Data Protection Commission or the Gardaí found since Nov 19; review findings, terms of reference and member counts still not public. No label change on existing claims. Main answer q001 unchanged. Staleness check done: head and not-known list still accurate. Irish Independent not checked: access blocked. Privacy check done.</p>
 <p><a href="#update-log">All 11 updates</a></p>
 </section>
 <section class="side-block">

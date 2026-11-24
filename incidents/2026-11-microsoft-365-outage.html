@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was the Microsoft 365 outage a cyberattack? | Is It a Hack?</title>
 <meta name="description" content="Was the Microsoft 365 outage a cyberattack? All the public evidence says no. Microsoft says it was a technical failure, and the US government said on Nov 18 that the outage was not a cyberattack. Microsoft&#39;s final report, dated Nov 20, also says it was not a cyberattack.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-22T01:50:00-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-microsoft-365-outage.html#article","headline":"Was the Microsoft 365 outage a cyberattack?","alternativeHeadline":"Microsoft 365 outage, Nov 12-13, 2026","description":"Was the Microsoft 365 outage a cyberattack? All the public evidence says no. Microsoft says it was a technical failure, and the US government said on Nov 18 that the outage was not a cyberattack. Microsoft's final report, dated Nov 20, also says it was not a cyberattack.","abstract":"All the public evidence says no. Microsoft says it was a technical failure, and the US government said on Nov 18 that the outage was not a cyberattack. Microsoft's final report, dated Nov 20, also says it was not a cyberattack.","url":"https://isitahack.com/incidents/2026-11-microsoft-365-outage.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-microsoft-365-outage.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-18T21:20:00-05:00","dateModified":"2026-11-22T01:50:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-microsoft-365-outage/images/microsoft-building-92.jpg"],"about":{"@type":"Event","name":"Microsoft 365 outage, Nov 12-13, 2026","startDate":"2026-11-12"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-microsoft-365-outage.html#article","headline":"Was the Microsoft 365 outage a cyberattack?","alternativeHeadline":"Microsoft 365 outage, Nov 12-13, 2026","description":"Was the Microsoft 365 outage a cyberattack? All the public evidence says no. Microsoft says it was a technical failure, and the US government said on Nov 18 that the outage was not a cyberattack. Microsoft's final report, dated Nov 20, also says it was not a cyberattack.","abstract":"All the public evidence says no. Microsoft says it was a technical failure, and the US government said on Nov 18 that the outage was not a cyberattack. Microsoft's final report, dated Nov 20, also says it was not a cyberattack.","url":"https://isitahack.com/incidents/2026-11-microsoft-365-outage.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-microsoft-365-outage.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-18T21:20:00-05:00","dateModified":"2026-11-22T01:50:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-microsoft-365-outage/images/microsoft-building-92.jpg"],"about":{"@type":"Thing","name":"Microsoft 365 outage, Nov 12-13, 2026"},"temporalCoverage":"2026-11-12","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Microsoft 365 outage, Nov 12-13, 2026","item":"https://isitahack.com/incidents/2026-11-microsoft-365-outage.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-microsoft-365-outage.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -875,7 +881,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-22T01:50:00-05:00">Nov 22, 2026, 1:50 AM ET</time></p>
 <p class="latest-headline">The Guardian, an established outlet, now describes the cause given in Microsoft&#39;s final report.</p>
-<p class="latest-summary">The Guardian published an explainer on Nov 22 about the recent run of outages. It says a July upgrade left a software bug in place that lay dormant for months until a string of coincidences triggered it and overwhelmed Microsoft&#39;s servers, which matches Microsoft&#39;s final report. Added as a further source for c020 (the final report&#39;s account of the cause). No label changed and the main answer is unchanged.</p>
 <p><a href="#update-log">All 11 updates</a></p>
 </section>
 <section class="side-block">

@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was the Starbucks Mobile Order &amp; Pay outage a cyberattack? | Is It a Hack?</title>
 <meta name="description" content="Was the Starbucks Mobile Order &amp; Pay outage a cyberattack? Not established. Starbucks said only that there was &#39;an issue&#39; and gave no cause. No source reports an attack or a claim of one, but nothing has ruled one out.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-20T19:49:00-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-starbucks-mobile-order-outage.html#article","headline":"Was the Starbucks Mobile Order & Pay outage a cyberattack?","alternativeHeadline":"Starbucks Mobile Order & Pay outage, Nov 20, 2026","description":"Was the Starbucks Mobile Order & Pay outage a cyberattack? Not established. Starbucks said only that there was 'an issue' and gave no cause. No source reports an attack or a claim of one, but nothing has ruled one out.","abstract":"Not established. Starbucks said only that there was 'an issue' and gave no cause. No source reports an attack or a claim of one, but nothing has ruled one out.","url":"https://isitahack.com/incidents/2026-11-starbucks-mobile-order-outage.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-starbucks-mobile-order-outage.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-20T19:49:00-05:00","dateModified":"2026-11-20T19:49:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-starbucks-mobile-order-outage/images/starbucks-store.jpg"],"about":{"@type":"Event","name":"Starbucks Mobile Order & Pay outage, Nov 20, 2026","startDate":"2026-11-20"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-starbucks-mobile-order-outage.html#article","headline":"Was the Starbucks Mobile Order & Pay outage a cyberattack?","alternativeHeadline":"Starbucks Mobile Order & Pay outage, Nov 20, 2026","description":"Was the Starbucks Mobile Order & Pay outage a cyberattack? Not established. Starbucks said only that there was 'an issue' and gave no cause. No source reports an attack or a claim of one, but nothing has ruled one out.","abstract":"Not established. Starbucks said only that there was 'an issue' and gave no cause. No source reports an attack or a claim of one, but nothing has ruled one out.","url":"https://isitahack.com/incidents/2026-11-starbucks-mobile-order-outage.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-starbucks-mobile-order-outage.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-20T19:49:00-05:00","dateModified":"2026-11-20T19:49:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-starbucks-mobile-order-outage/images/starbucks-store.jpg"],"about":{"@type":"Thing","name":"Starbucks Mobile Order & Pay outage, Nov 20, 2026"},"temporalCoverage":"2026-11-20","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Starbucks Mobile Order & Pay outage, Nov 20, 2026","item":"https://isitahack.com/incidents/2026-11-starbucks-mobile-order-outage.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-starbucks-mobile-order-outage.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -428,8 +434,7 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-20T19:49:00-05:00">Nov 20, 2026, 7:49 PM ET</time></p>
 <p class="latest-headline">Starbucks acknowledged a Mobile Order &amp; Pay issue on Nov 20; no cause has been given and no source reports a hack.</p>
-<p class="latest-summary">First draft. 5 sources (0 Tier 1), 10 claims (1 Confirmed, 6 Reported, 1 Unverified, 2 Not established), 4 questions. Starbucks&#39; own statement was not read, so its acknowledgement is Reported. Checked: no cause, no attack claim, no regulator or researcher statement found. Not checked: Starbucks&#39; social posts (cited by no outlet). Staleness check done. Privacy check done: no reporter names, handles or usernames.</p>
-<p><a href="#update-log">All 1 updates</a></p>
+<p><a href="#update-log">Update log</a></p>
 </section>
 <section class="side-block">
 <dl class="reach">

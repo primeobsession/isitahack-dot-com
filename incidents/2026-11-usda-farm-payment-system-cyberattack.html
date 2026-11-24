@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was the USDA farm payment system outage a hack? | Is It a Hack?</title>
 <meta name="description" content="Was the USDA farm payment system outage a hack? A USDA under secretary calls it a cyberthreat. NBC and ABC sources say outsiders got in, but he says defenses worked. Whether anyone actually got in is not settled.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-22T09:04:02-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-usda-farm-payment-system-cyberattack.html#article","headline":"Was the USDA farm payment system outage a hack?","alternativeHeadline":"USDA farm payment system cyberattack, Nov 2026","description":"Was the USDA farm payment system outage a hack? A USDA under secretary calls it a cyberthreat. NBC and ABC sources say outsiders got in, but he says defenses worked. Whether anyone actually got in is not settled.","abstract":"A USDA under secretary calls it a cyberthreat. NBC and ABC sources say outsiders got in, but he says defenses worked. Whether anyone actually got in is not settled.","url":"https://isitahack.com/incidents/2026-11-usda-farm-payment-system-cyberattack.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-usda-farm-payment-system-cyberattack.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T00:14:03-05:00","dateModified":"2026-11-22T09:04:02-05:00","image":["https://isitahack.com/data/incidents/2026-11-usda-farm-payment-system-cyberattack/images/usda-whitten-building.jpg"],"about":{"@type":"Event","name":"USDA farm payment system cyberattack, Nov 2026","startDate":"2026-11-16"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-usda-farm-payment-system-cyberattack.html#article","headline":"Was the USDA farm payment system outage a hack?","alternativeHeadline":"USDA farm payment system cyberattack, Nov 2026","description":"Was the USDA farm payment system outage a hack? A USDA under secretary calls it a cyberthreat. NBC and ABC sources say outsiders got in, but he says defenses worked. Whether anyone actually got in is not settled.","abstract":"A USDA under secretary calls it a cyberthreat. NBC and ABC sources say outsiders got in, but he says defenses worked. Whether anyone actually got in is not settled.","url":"https://isitahack.com/incidents/2026-11-usda-farm-payment-system-cyberattack.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-usda-farm-payment-system-cyberattack.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T00:14:03-05:00","dateModified":"2026-11-22T09:04:02-05:00","image":["https://isitahack.com/data/incidents/2026-11-usda-farm-payment-system-cyberattack/images/usda-whitten-building.jpg"],"about":{"@type":"Thing","name":"USDA farm payment system cyberattack, Nov 2026"},"temporalCoverage":"2026-11-16","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"USDA farm payment system cyberattack, Nov 2026","item":"https://isitahack.com/incidents/2026-11-usda-farm-payment-system-cyberattack.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-usda-farm-payment-system-cyberattack.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -662,7 +668,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-22T09:04:02-05:00">Nov 22, 2026, 9:04 AM ET</time></p>
 <p class="latest-headline">On Saturday the FSA chief said technicians were still working to restore service; still no USDA statement or word that systems are back.</p>
-<p class="latest-summary">New Tier 2 source s008 (Red River Farm Network, Nov 21): the FSA administrator says technicians are working to restore service, and farmers are encouraged to document enrollment attempts and ask about paper contracts (c018, Reported, timeline t010). Searched again for a written USDA, CISA or FBI statement, congressional letters or hearings, restoration notices, attribution and independent confirmation of the break-in: none found. USDA&#39;s press releases page still lists nothing on the incident (latest Nov 20). US Farm News (Nov 22), Ag Bull Trading and AI-written summary sites only repeat DTN, AgWeb, Nextgov, NBC and Red River Farm Network; none counted. Staleness check done: c011 now reads &#39;as of Sunday morning, Nov 22&#39;. Main answer q001 unchanged (Reported). Privacy check done: only on-record public officials named; no reporter names, handles or contact details added.</p>
 <p><a href="#update-log">All 5 updates</a></p>
 </section>
 <section class="side-block">

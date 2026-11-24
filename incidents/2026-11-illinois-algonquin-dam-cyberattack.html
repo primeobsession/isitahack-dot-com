@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was the Algonquin Dam on the Fox River hacked? | Is It a Hack?</title>
 <meta name="description" content="Was the Algonquin Dam on the Fox River hacked? Illinois DNR calls it an “apparent cyberattack”, an attempt at unauthorized access that staff blocked, and says the dam kept running. It has given no technical detail, so the attack itself is not independently shown.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-21T05:37:15-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-illinois-algonquin-dam-cyberattack.html#article","headline":"Was the Algonquin Dam on the Fox River hacked?","alternativeHeadline":"Algonquin Dam apparent cyberattack, Nov 16, 2026","description":"Was the Algonquin Dam on the Fox River hacked? Illinois DNR calls it an “apparent cyberattack”, an attempt at unauthorized access that staff blocked, and says the dam kept running. It has given no technical detail, so the attack itself is not independently shown.","abstract":"Illinois DNR calls it an “apparent cyberattack”, an attempt at unauthorized access that staff blocked, and says the dam kept running. It has given no technical detail, so the attack itself is not independently shown.","url":"https://isitahack.com/incidents/2026-11-illinois-algonquin-dam-cyberattack.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-illinois-algonquin-dam-cyberattack.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T05:13:25-05:00","dateModified":"2026-11-21T05:37:15-05:00","image":["https://isitahack.com/data/incidents/2026-11-illinois-algonquin-dam-cyberattack/images/illinois-dnr-logo.png"],"about":{"@type":"Event","name":"Algonquin Dam apparent cyberattack, Nov 16, 2026","startDate":"2026-11-16"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-illinois-algonquin-dam-cyberattack.html#article","headline":"Was the Algonquin Dam on the Fox River hacked?","alternativeHeadline":"Algonquin Dam apparent cyberattack, Nov 16, 2026","description":"Was the Algonquin Dam on the Fox River hacked? Illinois DNR calls it an “apparent cyberattack”, an attempt at unauthorized access that staff blocked, and says the dam kept running. It has given no technical detail, so the attack itself is not independently shown.","abstract":"Illinois DNR calls it an “apparent cyberattack”, an attempt at unauthorized access that staff blocked, and says the dam kept running. It has given no technical detail, so the attack itself is not independently shown.","url":"https://isitahack.com/incidents/2026-11-illinois-algonquin-dam-cyberattack.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-illinois-algonquin-dam-cyberattack.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T05:13:25-05:00","dateModified":"2026-11-21T05:37:15-05:00","image":["https://isitahack.com/data/incidents/2026-11-illinois-algonquin-dam-cyberattack/images/illinois-dnr-logo.png"],"about":{"@type":"Thing","name":"Algonquin Dam apparent cyberattack, Nov 16, 2026"},"temporalCoverage":"2026-11-16","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Algonquin Dam apparent cyberattack, Nov 16, 2026","item":"https://isitahack.com/incidents/2026-11-illinois-algonquin-dam-cyberattack.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-illinois-algonquin-dam-cyberattack.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -484,7 +490,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-21T05:37:15-05:00">Nov 21, 2026, 5:37 AM ET</time></p>
 <p class="latest-headline">The Chicago Tribune&#39;s first report adds no new detail. IDNR still has not said who was behind it or whether any system was reached.</p>
-<p class="latest-summary">Read the Chicago Tribune report (s007), the earliest we found (8:26 PM ET Nov 20); it quotes the IDNR release and adds the line that IDNR is working to “ensure Illinois dams remain secure”. Added as a source to c001 to c005; no label changes. Added IDNR&#39;s own page on the Stratton and Algonquin Dams (s008) and a Confirmed background claim on what the dam&#39;s gate does (c011). Moved t003 to the Tribune&#39;s publish time. Checked dnr.illinois.gov news: the release is still not listed. No CISA, state police, FBI or IEMA statement, no attribution, no detail of what was accessed. Staleness check done: main answer, known, not known, size and who is affected still hold; notes updated. Privacy check done: no reporter names, handles or contacts.</p>
 <p><a href="#update-log">All 2 updates</a></p>
 </section>
 <section class="side-block">

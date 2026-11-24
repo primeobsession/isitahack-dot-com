@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was the Workday outage a hack? | Is It a Hack?</title>
 <meta name="description" content="Was the Workday outage a hack? Not established. Workday says it was not a cyber incident and describes a fault in its own disaster-recovery setup. No independent source confirms that, and Workday has published no root-cause report.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-20T18:55:00-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-workday-outage.html#article","headline":"Was the Workday outage a hack?","alternativeHeadline":"Workday HR and payroll outage, Nov 13-14, 2026","description":"Was the Workday outage a hack? Not established. Workday says it was not a cyber incident and describes a fault in its own disaster-recovery setup. No independent source confirms that, and Workday has published no root-cause report.","abstract":"Not established. Workday says it was not a cyber incident and describes a fault in its own disaster-recovery setup. No independent source confirms that, and Workday has published no root-cause report.","url":"https://isitahack.com/incidents/2026-11-workday-outage.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-workday-outage.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-20T11:00:00-05:00","dateModified":"2026-11-20T18:55:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-workday-outage/images/workday-headquarters.jpg"],"about":{"@type":"Event","name":"Workday HR and payroll outage, Nov 13-14, 2026","startDate":"2026-11-13"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-workday-outage.html#article","headline":"Was the Workday outage a hack?","alternativeHeadline":"Workday HR and payroll outage, Nov 13-14, 2026","description":"Was the Workday outage a hack? Not established. Workday says it was not a cyber incident and describes a fault in its own disaster-recovery setup. No independent source confirms that, and Workday has published no root-cause report.","abstract":"Not established. Workday says it was not a cyber incident and describes a fault in its own disaster-recovery setup. No independent source confirms that, and Workday has published no root-cause report.","url":"https://isitahack.com/incidents/2026-11-workday-outage.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-workday-outage.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-20T11:00:00-05:00","dateModified":"2026-11-20T18:55:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-workday-outage/images/workday-headquarters.jpg"],"about":{"@type":"Thing","name":"Workday HR and payroll outage, Nov 13-14, 2026"},"temporalCoverage":"2026-11-13","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Workday HR and payroll outage, Nov 13-14, 2026","item":"https://isitahack.com/incidents/2026-11-workday-outage.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-workday-outage.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -560,7 +566,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-20T18:55:00-05:00">Nov 20, 2026, 6:55 PM ET</time></p>
 <p class="latest-headline">Axios reports that suspected bots wrote about a third of the conspiracy posts during the Workday outage; the cause is unchanged.</p>
-<p class="latest-summary">Added s017, a Nov 19 Axios report (Tier 2) citing PeakMetrics data: suspected bots accounted for 34% of conspiracy-related posts during the Workday outage, versus 27% of other posts, and Axios says there is no publicly established evidence of a coordinated cyberattack. Added c011 as Reported (one outlet relaying one firm&#39;s analysis) and linked it to q002. No label change on q001, which stays Not established. Checked, not found: a Workday root-cause report, an SEC 8-K about the outage (latest 8-K Oct 23), a CISA or regulator statement naming Workday. Staleness check done on the head. Privacy check done: no reporter names, handles or usernames.</p>
 <p><a href="#update-log">All 3 updates</a></p>
 </section>
 <section class="side-block">

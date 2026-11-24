@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was Rockstar hacked in the GTA 6 Xbox build leak? | Is It a Hack?</title>
 <meta name="description" content="Was Rockstar hacked in the GTA 6 Xbox build leak? Not established. A leaker says it has a near-complete Xbox build, and an outside group says the files look real, but Rockstar and Take-Two have not said the files are real or that they were breached, and how the leaker got them is unknown.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-23T11:07:00-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-gta6-xbox-build-leak.html#article","headline":"Was Rockstar hacked in the GTA 6 Xbox build leak?","alternativeHeadline":"GTA 6 Xbox build leak: was Rockstar hacked? Nov 2026","description":"Was Rockstar hacked in the GTA 6 Xbox build leak? Not established. A leaker says it has a near-complete Xbox build, and an outside group says the files look real, but Rockstar and Take-Two have not said the files are real or that they were breached, and how the leaker got them is unknown.","abstract":"Not established. A leaker says it has a near-complete Xbox build, and an outside group says the files look real, but Rockstar and Take-Two have not said the files are real or that they were breached, and how the leaker got them is unknown.","url":"https://isitahack.com/incidents/2026-11-gta6-xbox-build-leak.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-gta6-xbox-build-leak.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-23T10:20:00-05:00","dateModified":"2026-11-23T11:07:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-gta6-xbox-build-leak/images/rockstar-north-office.jpg"],"about":{"@type":"Event","name":"GTA 6 Xbox build leak: was Rockstar hacked? Nov 2026","startDate":"2026-11-19"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-gta6-xbox-build-leak.html#article","headline":"Was Rockstar hacked in the GTA 6 Xbox build leak?","alternativeHeadline":"GTA 6 Xbox build leak: was Rockstar hacked? Nov 2026","description":"Was Rockstar hacked in the GTA 6 Xbox build leak? Not established. A leaker says it has a near-complete Xbox build, and an outside group says the files look real, but Rockstar and Take-Two have not said the files are real or that they were breached, and how the leaker got them is unknown.","abstract":"Not established. A leaker says it has a near-complete Xbox build, and an outside group says the files look real, but Rockstar and Take-Two have not said the files are real or that they were breached, and how the leaker got them is unknown.","url":"https://isitahack.com/incidents/2026-11-gta6-xbox-build-leak.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-gta6-xbox-build-leak.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-23T10:20:00-05:00","dateModified":"2026-11-23T11:07:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-gta6-xbox-build-leak/images/rockstar-north-office.jpg"],"about":{"@type":"Thing","name":"GTA 6 Xbox build leak: was Rockstar hacked? Nov 2026"},"temporalCoverage":"2026-11-19","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"GTA 6 Xbox build leak: was Rockstar hacked? Nov 2026","item":"https://isitahack.com/incidents/2026-11-gta6-xbox-build-leak.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-gta6-xbox-build-leak.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -481,7 +487,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-23T11:07:00-05:00">Nov 23, 2026, 11:07 AM ET</time></p>
 <p class="latest-headline">Outlets now report the leaker posted the GTA 6 executable; court orders show the August subpoenas were granted.</p>
-<p class="latest-summary">Executable posted Nov 23 moved from Unverified to Reported: Wccftech and DSOGaming now report it alongside GameGPU, all relaying the leaker&#39;s posts (one source). Added the signed August 21 and August 31 court orders directing the clerk to issue Take-Two&#39;s subpoenas to Microsoft and Discord (Tier 1); what they produced is not on the docket. No Rockstar or Take-Two statement found. Main question unchanged: Not established. Privacy check done. We opened no leak or download sites.</p>
 <p><a href="#update-log">All 2 updates</a></p>
 </section>
 <section class="side-block">

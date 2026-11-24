@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was the Staples Canada print website breach a hack? | Is It a Hack?</title>
 <meta name="description" content="Was the Staples Canada print website breach a hack? Yes, by Staples&#39; own account: an unknown party got into staplesprint.ca without permission between Nov 1 and Nov 5 and had access to customer information. Who did it is not known.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-21T00:36:34-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-staples-canada-print-breach.html#article","headline":"Was the Staples Canada print website breach a hack?","alternativeHeadline":"Staples Canada print website breach, Nov 2026","description":"Was the Staples Canada print website breach a hack? Yes, by Staples' own account: an unknown party got into staplesprint.ca without permission between Nov 1 and Nov 5 and had access to customer information. Who did it is not known.","abstract":"Yes, by Staples' own account: an unknown party got into staplesprint.ca without permission between Nov 1 and Nov 5 and had access to customer information. Who did it is not known.","url":"https://isitahack.com/incidents/2026-11-staples-canada-print-breach.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-staples-canada-print-breach.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T00:11:29-05:00","dateModified":"2026-11-21T00:36:34-05:00","image":["https://isitahack.com/data/incidents/2026-11-staples-canada-print-breach/images/staples-canada-store.jpg"],"about":{"@type":"Event","name":"Staples Canada print website breach, Nov 2026","startDate":"2026-11-01"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-staples-canada-print-breach.html#article","headline":"Was the Staples Canada print website breach a hack?","alternativeHeadline":"Staples Canada print website breach, Nov 2026","description":"Was the Staples Canada print website breach a hack? Yes, by Staples' own account: an unknown party got into staplesprint.ca without permission between Nov 1 and Nov 5 and had access to customer information. Who did it is not known.","abstract":"Yes, by Staples' own account: an unknown party got into staplesprint.ca without permission between Nov 1 and Nov 5 and had access to customer information. Who did it is not known.","url":"https://isitahack.com/incidents/2026-11-staples-canada-print-breach.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-staples-canada-print-breach.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T00:11:29-05:00","dateModified":"2026-11-21T00:36:34-05:00","image":["https://isitahack.com/data/incidents/2026-11-staples-canada-print-breach/images/staples-canada-store.jpg"],"about":{"@type":"Thing","name":"Staples Canada print website breach, Nov 2026"},"temporalCoverage":"2026-11-01","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Staples Canada print website breach, Nov 2026","item":"https://isitahack.com/incidents/2026-11-staples-canada-print-breach.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-staples-canada-print-breach.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -500,7 +506,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-21T00:36:34-05:00">Nov 21, 2026, 12:36 AM ET</time></p>
 <p class="latest-headline">Staples says it removed the intruder and secured all accounts, and that no other Staples website was affected.</p>
-<p class="latest-summary">Story agent run. Added 2 Tier 2 sources: Agence QMI (s006, Journal de Québec; not re-read: access blocked, text seen in a public search index) and The Canadian Press (s007, Winnipeg Free Press). Correction: s003 Les Affaires is The Canadian Press, so its independence group is now canadian-press (c001 to c004 stay Confirmed on CBC and Global News). Label changes: c005 password reset Reported to Confirmed (Global News, QMI); c006 other websites not affected Reported to Confirmed (CBC, Canadian Press); c007 investigation Reported to Confirmed (CBC, Global News, Canadian Press). New c012 (Confirmed): intruder removed, accounts secured. Still no public Staples page (staplesprint.ca home page shows no notice; staples.ca not checked: access blocked), no privacy-regulator notice, no count, no attacker or method. Staleness check done: main answer, known, not known, size and figures still true; known gains c012. Privacy check done: no names of private people, no handles, no contact details.</p>
 <p><a href="#update-log">All 2 updates</a></p>
 </section>
 <section class="side-block">

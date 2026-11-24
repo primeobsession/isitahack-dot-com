@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was AEON Credit Service hacked? | Is It a Hack?</title>
 <meta name="description" content="Was AEON Credit Service hacked? Yes, by the company&#39;s own notice: AEON says it detected unauthorized access to its system. It has not said that this caused the outage, how the access happened, or who did it.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-22T12:39:41-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-aeon-credit-service-outage.html#article","headline":"Was AEON Credit Service hacked?","alternativeHeadline":"AEON Credit Service outage and unauthorized access, Nov 2026","description":"Was AEON Credit Service hacked? Yes, by the company's own notice: AEON says it detected unauthorized access to its system. It has not said that this caused the outage, how the access happened, or who did it.","abstract":"Yes, by the company's own notice: AEON says it detected unauthorized access to its system. It has not said that this caused the outage, how the access happened, or who did it.","url":"https://isitahack.com/incidents/2026-11-aeon-credit-service-outage.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-aeon-credit-service-outage.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-22T00:13:00-05:00","dateModified":"2026-11-22T12:39:41-05:00","image":["https://isitahack.com/data/incidents/2026-11-aeon-credit-service-outage/images/aeon-credit-hong-kong.jpg"],"about":{"@type":"Event","name":"AEON Credit Service outage and unauthorized access, Nov 2026","startDate":"2026-11-18"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-aeon-credit-service-outage.html#article","headline":"Was AEON Credit Service hacked?","alternativeHeadline":"AEON Credit Service outage and unauthorized access, Nov 2026","description":"Was AEON Credit Service hacked? Yes, by the company's own notice: AEON says it detected unauthorized access to its system. It has not said that this caused the outage, how the access happened, or who did it.","abstract":"Yes, by the company's own notice: AEON says it detected unauthorized access to its system. It has not said that this caused the outage, how the access happened, or who did it.","url":"https://isitahack.com/incidents/2026-11-aeon-credit-service-outage.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-aeon-credit-service-outage.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-22T00:13:00-05:00","dateModified":"2026-11-22T12:39:41-05:00","image":["https://isitahack.com/data/incidents/2026-11-aeon-credit-service-outage/images/aeon-credit-hong-kong.jpg"],"about":{"@type":"Thing","name":"AEON Credit Service outage and unauthorized access, Nov 2026"},"temporalCoverage":"2026-11-18","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"AEON Credit Service outage and unauthorized access, Nov 2026","item":"https://isitahack.com/incidents/2026-11-aeon-credit-service-outage.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-aeon-credit-service-outage.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -515,7 +521,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-22T12:39:41-05:00">Nov 22, 2026, 12:39 PM ET</time></p>
 <p class="latest-headline">AEON&#39;s Japanese parent reported a separate group website intrusion in October; no source links it to Hong Kong.</p>
-<p class="latest-summary">Added AEON Co., Ltd.&#39;s Nov 10 notice (s010, Tier 1, in Japanese): some AEON group company websites were accessed without authorization (first announced Oct 21) and personal information leaked; it names only one Japanese group company as notifying. New claim c011 (Not established): no source we read connects that incident to AEON Credit Service (Asia)&#39;s notice, and neither notice refers to the other. Other labels unchanged. AEON Hong Kong&#39;s notice is unchanged. No stock exchange announcement, no statement from the privacy commissioner&#39;s office, HKMA or police, no data types, count, cause or attacker, and AEON still has not tied the outage to the intrusion. Staleness check done. Privacy check done: no names of people, no handles, no contact details.</p>
 <p><a href="#update-log">All 5 updates</a></p>
 </section>
 <section class="side-block">

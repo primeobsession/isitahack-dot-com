@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was OPM&#39;s USA Staffing system hacked in November 2026? | Is It a Hack?</title>
 <meta name="description" content="Was OPM&#39;s USA Staffing system hacked in November 2026? Not established. One outlet says an internal OPM email describes outside access to 403 job offers on Nov 12-13. OPM has published nothing, and how the party got in and who it was are unknown, so a hack is not settled.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-21T00:35:58-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-opm-usa-staffing-access.html#article","headline":"Was OPM's USA Staffing system hacked in November 2026?","alternativeHeadline":"OPM USA Staffing unauthorized access, Nov 12-13, 2026","description":"Was OPM's USA Staffing system hacked in November 2026? Not established. One outlet says an internal OPM email describes outside access to 403 job offers on Nov 12-13. OPM has published nothing, and how the party got in and who it was are unknown, so a hack is not settled.","abstract":"Not established. One outlet says an internal OPM email describes outside access to 403 job offers on Nov 12-13. OPM has published nothing, and how the party got in and who it was are unknown, so a hack is not settled.","url":"https://isitahack.com/incidents/2026-11-opm-usa-staffing-access.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-opm-usa-staffing-access.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-20T19:49:00-05:00","dateModified":"2026-11-21T00:35:58-05:00","image":["https://isitahack.com/data/incidents/2026-11-opm-usa-staffing-access/images/opm-headquarters.jpg"],"about":{"@type":"Event","name":"OPM USA Staffing unauthorized access, Nov 12-13, 2026","startDate":"2026-11-12"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-opm-usa-staffing-access.html#article","headline":"Was OPM's USA Staffing system hacked in November 2026?","alternativeHeadline":"OPM USA Staffing unauthorized access, Nov 12-13, 2026","description":"Was OPM's USA Staffing system hacked in November 2026? Not established. One outlet says an internal OPM email describes outside access to 403 job offers on Nov 12-13. OPM has published nothing, and how the party got in and who it was are unknown, so a hack is not settled.","abstract":"Not established. One outlet says an internal OPM email describes outside access to 403 job offers on Nov 12-13. OPM has published nothing, and how the party got in and who it was are unknown, so a hack is not settled.","url":"https://isitahack.com/incidents/2026-11-opm-usa-staffing-access.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-opm-usa-staffing-access.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-20T19:49:00-05:00","dateModified":"2026-11-21T00:35:58-05:00","image":["https://isitahack.com/data/incidents/2026-11-opm-usa-staffing-access/images/opm-headquarters.jpg"],"about":{"@type":"Thing","name":"OPM USA Staffing unauthorized access, Nov 12-13, 2026"},"temporalCoverage":"2026-11-12","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"OPM USA Staffing unauthorized access, Nov 12-13, 2026","item":"https://isitahack.com/incidents/2026-11-opm-usa-staffing-access.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-opm-usa-staffing-access.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -408,7 +414,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-21T00:35:58-05:00">Nov 21, 2026, 12:35 AM ET</time></p>
 <p class="latest-headline">OPM still has not commented on the reported USA Staffing access, and no second outlet has confirmed it.</p>
-<p class="latest-summary">Correction: source s001 (MSW Media) moved from Tier 2 to Tier 3. It is a single-author newsletter without published editorial standards, so it does not meet Tier 2 (established news organization); no label changes, since every claim resting on it was already Reported or Not established. Re-checked OPM&#39;s news releases page (latest item still Nov 2) and cybersecurity page (no incident notice); searched for an OPM statement, congressional statements and independent coverage: none found. One foreign-language summary repeating the MSW Media report was seen; it adds no sourcing of its own and is not counted. Staleness check done: c006 and the known item now read &#39;as of Nov 21&#39;. Privacy check done: no reporter names, handles or usernames added. Not checked: the original email, which is not public.</p>
 <p><a href="#update-log">All 3 updates</a></p>
 </section>
 <section class="side-block">

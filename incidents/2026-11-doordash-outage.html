@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was the DoorDash outage on Nov 21 a cyberattack? | Is It a Hack?</title>
 <meta name="description" content="Was the DoorDash outage on Nov 21 a cyberattack? Not established. DoorDash has not given a cause or said anything about an attack. People on social media asked if it was a hack, but no one has shown evidence of one.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-21T14:54:58-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-doordash-outage.html#article","headline":"Was the DoorDash outage on Nov 21 a cyberattack?","alternativeHeadline":"DoorDash app and website outage, Nov 21, 2026","description":"Was the DoorDash outage on Nov 21 a cyberattack? Not established. DoorDash has not given a cause or said anything about an attack. People on social media asked if it was a hack, but no one has shown evidence of one.","abstract":"Not established. DoorDash has not given a cause or said anything about an attack. People on social media asked if it was a hack, but no one has shown evidence of one.","url":"https://isitahack.com/incidents/2026-11-doordash-outage.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-doordash-outage.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T13:17:45-05:00","dateModified":"2026-11-21T14:54:58-05:00","image":["https://isitahack.com/data/incidents/2026-11-doordash-outage/images/doordash-logo.png"],"about":{"@type":"Event","name":"DoorDash app and website outage, Nov 21, 2026","startDate":"2026-11-21"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-doordash-outage.html#article","headline":"Was the DoorDash outage on Nov 21 a cyberattack?","alternativeHeadline":"DoorDash app and website outage, Nov 21, 2026","description":"Was the DoorDash outage on Nov 21 a cyberattack? Not established. DoorDash has not given a cause or said anything about an attack. People on social media asked if it was a hack, but no one has shown evidence of one.","abstract":"Not established. DoorDash has not given a cause or said anything about an attack. People on social media asked if it was a hack, but no one has shown evidence of one.","url":"https://isitahack.com/incidents/2026-11-doordash-outage.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-doordash-outage.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T13:17:45-05:00","dateModified":"2026-11-21T14:54:58-05:00","image":["https://isitahack.com/data/incidents/2026-11-doordash-outage/images/doordash-logo.png"],"about":{"@type":"Thing","name":"DoorDash app and website outage, Nov 21, 2026"},"temporalCoverage":"2026-11-21","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"DoorDash app and website outage, Nov 21, 2026","item":"https://isitahack.com/incidents/2026-11-doordash-outage.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-doordash-outage.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -582,7 +588,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-21T14:54:58-05:00">Nov 21, 2026, 2:54 PM ET</time></p>
 <p class="latest-headline">DoorDash marked both status incidents resolved and says a post mortem will be posted later; the cause is still not given.</p>
-<p class="latest-summary">We read DoorDash&#39;s official status page feed directly at www.doordashstatus.com (added as s009, Tier 1). The Drive incident was marked resolved at 1:58 PM ET. The &#39;Health Degredation&#39; incident was marked resolved at 2:50 PM ET with a note that it ended at 11:51 AM ET; it names only the Merchant - Marketplace Orders component, with impact none. c002 Reported to Confirmed (direct read of the official page, as the Editor-in-Chief asked) and c010 Not established to Confirmed. The Drive API component says &#39;Post Mortem will be posted later&#39;; c009 stays Not established until one is published. No cyberattack statement, customer figure or link to other outages; c006, c007, c008 and c011 unchanged. Staleness check done: known and not-known lists, who_is_affected, q002, q003 and the checked-not-found note refreshed. Privacy check done: no names of people, no handles, no contact details.</p>
 <p><a href="#update-log">All 3 updates</a></p>
 </section>
 <section class="side-block">

@@ -214,7 +214,9 @@ function writeTyped(i, others, out) {
     url, mainEntityOfPage: url, inLanguage: "en", isAccessibleForFree: true,
     datePublished: i.first_published, dateModified: i.last_updated,
     image: [card ? card.url : `${SITE.url}/${SITE.card.path}`],
-    about: { "@type": "Event", name: i.title, startDate: i.incident_date },
+    // The incident is a plain "Thing": schema.org's "Event" means a concert or a conference to a
+    // search engine, which then asks for a venue, tickets and a performer.
+    about: { "@type": "Thing", name: i.title }, temporalCoverage: i.incident_date,
     author: { "@type": "Organization", name: `${SITE.name} desk`, url: `${SITE.url}/how-it-works.html` },
     publisher: ORG,
   }, {
@@ -294,7 +296,8 @@ function writeLegacy(i, others, out) {
 function incidentCard(i, lead) {
   const status = STATUSES[i.status] || String(i.status);
   const href = `incidents/${esc(i.slug)}.html`;
-  const picture = i.typed ? incidentPicture(i.loaded.head, i.dataPath) : null;
+  // Only the lead story's photograph is on the first screen; the rest load as the reader reaches them.
+  const picture = i.typed ? incidentPicture(i.loaded.head, i.dataPath, { lazy: !lead }) : null;
   const media = picture ? `<a class="story-media" href="${href}" tabindex="-1" aria-hidden="true">${picture.html}${picture.credit ? `<span class="credit">${esc(picture.credit)}</span>` : ""}</a>` : "";
   const headline = i.question ? i.question.text : i.title;
   const answer = i.question ? `<p class="story-answer">${pill(i.question.label)}<span>${esc(i.question.answer)}</span></p>` : "";

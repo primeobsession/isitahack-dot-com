@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was the Dropbox outage on Nov 20 a cyberattack? | Is It a Hack?</title>
 <meta name="description" content="Was the Dropbox outage on Nov 20 a cyberattack? Reported, on Dropbox&#39;s own account: its status page says the outage was not caused by a cyberattack or by AI acting on its own. No independent source has confirmed that, and Dropbox has not given a cause.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-21T01:23:54-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-dropbox-outage.html#article","headline":"Was the Dropbox outage on Nov 20 a cyberattack?","alternativeHeadline":"Dropbox outage, Nov 20, 2026","description":"Was the Dropbox outage on Nov 20 a cyberattack? Reported, on Dropbox's own account: its status page says the outage was not caused by a cyberattack or by AI acting on its own. No independent source has confirmed that, and Dropbox has not given a cause.","abstract":"Reported, on Dropbox's own account: its status page says the outage was not caused by a cyberattack or by AI acting on its own. No independent source has confirmed that, and Dropbox has not given a cause.","url":"https://isitahack.com/incidents/2026-11-dropbox-outage.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-dropbox-outage.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T01:23:54-05:00","dateModified":"2026-11-21T01:23:54-05:00","image":["https://isitahack.com/data/incidents/2026-11-dropbox-outage/images/dropbox-app-phone.jpg"],"about":{"@type":"Event","name":"Dropbox outage, Nov 20, 2026","startDate":"2026-11-20"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-dropbox-outage.html#article","headline":"Was the Dropbox outage on Nov 20 a cyberattack?","alternativeHeadline":"Dropbox outage, Nov 20, 2026","description":"Was the Dropbox outage on Nov 20 a cyberattack? Reported, on Dropbox's own account: its status page says the outage was not caused by a cyberattack or by AI acting on its own. No independent source has confirmed that, and Dropbox has not given a cause.","abstract":"Reported, on Dropbox's own account: its status page says the outage was not caused by a cyberattack or by AI acting on its own. No independent source has confirmed that, and Dropbox has not given a cause.","url":"https://isitahack.com/incidents/2026-11-dropbox-outage.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-dropbox-outage.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T01:23:54-05:00","dateModified":"2026-11-21T01:23:54-05:00","image":["https://isitahack.com/data/incidents/2026-11-dropbox-outage/images/dropbox-app-phone.jpg"],"about":{"@type":"Thing","name":"Dropbox outage, Nov 20, 2026"},"temporalCoverage":"2026-11-20","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Dropbox outage, Nov 20, 2026","item":"https://isitahack.com/incidents/2026-11-dropbox-outage.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-dropbox-outage.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -433,8 +439,7 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-21T01:23:54-05:00">Nov 21, 2026, 1:23 AM ET</time></p>
 <p class="latest-headline">Dropbox says its 45-minute outage on Nov 20 was not a cyberattack. It has not said what caused it.</p>
-<p class="latest-summary">First draft. 5 sources (3 Tier 1, 2 Tier 3), 8 claims (4 Confirmed, 4 Not established), 5 questions. The outage and its times are confirmed by Dropbox&#39;s own status page. The denial of a cyberattack is Dropbox&#39;s own statement and no independent source backs it, so the main question is labelled Reported. No cause, user count or post-incident report found. No link to other outages is shown. Dropbox Sign was named in a request but is not on the status page, so it is not listed. Privacy check done: no names of private people, no handles, no contact details.</p>
-<p><a href="#update-log">All 1 updates</a></p>
+<p><a href="#update-log">Update log</a></p>
 </section>
 <section class="side-block">
 <dl class="reach">

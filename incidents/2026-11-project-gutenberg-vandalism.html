@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was Project Gutenberg&#39;s website hacked? | Is It a Hack?</title>
 <meta name="description" content="Was Project Gutenberg&#39;s website hacked? Yes, by its own account: the foundation says outside attackers vandalized the site, injected code and got root access, then returned on Monday. It calls this “vandalism” and has not said what was taken.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-21T05:14:24-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-project-gutenberg-vandalism.html#article","headline":"Was Project Gutenberg's website hacked?","alternativeHeadline":"Project Gutenberg website vandalism, Nov 15, 2026","description":"Was Project Gutenberg's website hacked? Yes, by its own account: the foundation says outside attackers vandalized the site, injected code and got root access, then returned on Monday. It calls this “vandalism” and has not said what was taken.","abstract":"Yes, by its own account: the foundation says outside attackers vandalized the site, injected code and got root access, then returned on Monday. It calls this “vandalism” and has not said what was taken.","url":"https://isitahack.com/incidents/2026-11-project-gutenberg-vandalism.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-project-gutenberg-vandalism.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T05:14:24-05:00","dateModified":"2026-11-21T05:14:24-05:00","image":["https://isitahack.com/data/incidents/2026-11-project-gutenberg-vandalism/images/project-gutenberg-logo.png"],"about":{"@type":"Event","name":"Project Gutenberg website vandalism, Nov 15, 2026","startDate":"2026-11-15"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-project-gutenberg-vandalism.html#article","headline":"Was Project Gutenberg's website hacked?","alternativeHeadline":"Project Gutenberg website vandalism, Nov 15, 2026","description":"Was Project Gutenberg's website hacked? Yes, by its own account: the foundation says outside attackers vandalized the site, injected code and got root access, then returned on Monday. It calls this “vandalism” and has not said what was taken.","abstract":"Yes, by its own account: the foundation says outside attackers vandalized the site, injected code and got root access, then returned on Monday. It calls this “vandalism” and has not said what was taken.","url":"https://isitahack.com/incidents/2026-11-project-gutenberg-vandalism.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-project-gutenberg-vandalism.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T05:14:24-05:00","dateModified":"2026-11-21T05:14:24-05:00","image":["https://isitahack.com/data/incidents/2026-11-project-gutenberg-vandalism/images/project-gutenberg-logo.png"],"about":{"@type":"Thing","name":"Project Gutenberg website vandalism, Nov 15, 2026"},"temporalCoverage":"2026-11-15","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Project Gutenberg website vandalism, Nov 15, 2026","item":"https://isitahack.com/incidents/2026-11-project-gutenberg-vandalism.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-project-gutenberg-vandalism.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -544,8 +550,7 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-21T05:14:24-05:00">Nov 21, 2026, 5:14 AM ET</time></p>
 <p class="latest-headline">Project Gutenberg says attackers vandalized its site and got root access. It is still offline. Who and why are unknown.</p>
-<p class="latest-summary">First draft. 6 sources (3 Tier 1, 1 Tier 2, 2 Tier 4), 12 claims (5 Confirmed, 4 Reported, 3 Not established), 6 questions. The intrusion is Confirmed on the foundation&#39;s own site and status updates (the updates were read through File 770, not Reddit). As of 5:12 AM ET on Nov 21 gutenberg.org still returns a 503 maintenance page. Who, why and data exposure are Not established. A link to ibiblio&#39;s outage on the same days is Not established. Privacy check done: no names of private people, no handles, no contact details.</p>
-<p><a href="#update-log">All 1 updates</a></p>
+<p><a href="#update-log">Update log</a></p>
 </section>
 <section class="side-block">
 <dl class="reach">

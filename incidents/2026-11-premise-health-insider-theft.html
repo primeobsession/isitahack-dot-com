@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was the Premise Health data breach a hack? | Is It a Hack?</title>
 <meta name="description" content="Was the Premise Health data breach a hack? No outside hack is known. Premise Health says an employee copied the data from around March 26 and that &#39;this was not a hacking or ransomware event.&#39; That is the company&#39;s account; no independent investigation has confirmed it.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-21T07:08:00-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-premise-health-insider-theft.html#article","headline":"Was the Premise Health data breach a hack?","alternativeHeadline":"Premise Health patient data taken by an employee, 2026","description":"Was the Premise Health data breach a hack? No outside hack is known. Premise Health says an employee copied the data from around March 26 and that 'this was not a hacking or ransomware event.' That is the company's account; no independent investigation has confirmed it.","abstract":"No outside hack is known. Premise Health says an employee copied the data from around March 26 and that 'this was not a hacking or ransomware event.' That is the company's account; no independent investigation has confirmed it.","url":"https://isitahack.com/incidents/2026-11-premise-health-insider-theft.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-premise-health-insider-theft.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-20T23:47:00-05:00","dateModified":"2026-11-21T07:08:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-premise-health-insider-theft/images/premise-health-logo.png"],"about":{"@type":"Event","name":"Premise Health patient data taken by an employee, 2026","startDate":"2026-03-26"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-premise-health-insider-theft.html#article","headline":"Was the Premise Health data breach a hack?","alternativeHeadline":"Premise Health patient data taken by an employee, 2026","description":"Was the Premise Health data breach a hack? No outside hack is known. Premise Health says an employee copied the data from around March 26 and that 'this was not a hacking or ransomware event.' That is the company's account; no independent investigation has confirmed it.","abstract":"No outside hack is known. Premise Health says an employee copied the data from around March 26 and that 'this was not a hacking or ransomware event.' That is the company's account; no independent investigation has confirmed it.","url":"https://isitahack.com/incidents/2026-11-premise-health-insider-theft.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-premise-health-insider-theft.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-20T23:47:00-05:00","dateModified":"2026-11-21T07:08:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-premise-health-insider-theft/images/premise-health-logo.png"],"about":{"@type":"Thing","name":"Premise Health patient data taken by an employee, 2026"},"temporalCoverage":"2026-03-26","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Premise Health patient data taken by an employee, 2026","item":"https://isitahack.com/incidents/2026-11-premise-health-insider-theft.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-premise-health-insider-theft.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -604,7 +610,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-21T07:08:00-05:00">Nov 21, 2026, 7:08 AM ET</time></p>
 <p class="latest-headline">One lawsuit alleges an outside hack but offers no evidence beyond the company&#39;s own notice, which says it was an employee.</p>
-<p class="latest-summary">Read the complaint in case 3:26-cv-01843 (M.D. Tenn., Nov 13; Tier 1 court filing, now in the RECAP archive). It alleges the company &#39;was hacked&#39; by &#39;cybercriminals&#39; but cites only Premise Health&#39;s notice and quotes its employee account. Added s009 and c018 (Unverified); c017 detail updated. Main answer unchanged (Reported). Staleness check done: &#39;checked and not found&#39; note updated (one complaint now read; still no law-enforcement statement or charges). Privacy check done: no plaintiff or employee named.</p>
 <p><a href="#update-log">All 4 updates</a></p>
 </section>
 <section class="side-block">

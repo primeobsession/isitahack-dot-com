@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was Airbyte Cloud hacked in the Nov 2026 security incident? | Is It a Hack?</title>
 <meta name="description" content="Was Airbyte Cloud hacked in the Nov 2026 security incident? Yes, by Airbyte&#39;s own account: it says an attacker had access to its systems before it blocked them. How they got in, who they are and what they reached are not established.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-21T16:35:26-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-airbyte-cloud-security-incident.html#article","headline":"Was Airbyte Cloud hacked in the Nov 2026 security incident?","alternativeHeadline":"Airbyte Cloud security incident, Nov 2026","description":"Was Airbyte Cloud hacked in the Nov 2026 security incident? Yes, by Airbyte's own account: it says an attacker had access to its systems before it blocked them. How they got in, who they are and what they reached are not established.","abstract":"Yes, by Airbyte's own account: it says an attacker had access to its systems before it blocked them. How they got in, who they are and what they reached are not established.","url":"https://isitahack.com/incidents/2026-11-airbyte-cloud-security-incident.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-airbyte-cloud-security-incident.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T16:16:05-05:00","dateModified":"2026-11-21T16:35:26-05:00","image":["https://isitahack.com/data/incidents/2026-11-airbyte-cloud-security-incident/images/airbyte-logo.png"],"about":{"@type":"Event","name":"Airbyte Cloud security incident, Nov 2026","startDate":"2026-11-17"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-airbyte-cloud-security-incident.html#article","headline":"Was Airbyte Cloud hacked in the Nov 2026 security incident?","alternativeHeadline":"Airbyte Cloud security incident, Nov 2026","description":"Was Airbyte Cloud hacked in the Nov 2026 security incident? Yes, by Airbyte's own account: it says an attacker had access to its systems before it blocked them. How they got in, who they are and what they reached are not established.","abstract":"Yes, by Airbyte's own account: it says an attacker had access to its systems before it blocked them. How they got in, who they are and what they reached are not established.","url":"https://isitahack.com/incidents/2026-11-airbyte-cloud-security-incident.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-airbyte-cloud-security-incident.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T16:16:05-05:00","dateModified":"2026-11-21T16:35:26-05:00","image":["https://isitahack.com/data/incidents/2026-11-airbyte-cloud-security-incident/images/airbyte-logo.png"],"about":{"@type":"Thing","name":"Airbyte Cloud security incident, Nov 2026"},"temporalCoverage":"2026-11-17","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Airbyte Cloud security incident, Nov 2026","item":"https://isitahack.com/incidents/2026-11-airbyte-cloud-security-incident.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-airbyte-cloud-security-incident.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -620,7 +626,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-21T16:35:26-05:00">Nov 21, 2026, 4:35 PM ET</time></p>
 <p class="latest-headline">Airbyte&#39;s X posts now linked directly; no new facts.</p>
-<p class="latest-summary">No new Airbyte status update since 1:00 AM ET Nov 21, no incident report, no change to Salesforce advisory 20000278, no new Tier 1/2 source. Per editor note, Airbyte&#39;s X statement (Nov 17) and &#39;back online&#39; post (Nov 20) are now cited directly from x.com (s008, s009) instead of the third-party mirror (s003, kept for the record). The Nov 20 &#39;back online&#39; time is now 2:54 AM ET from the post itself. No label changes. Privacy check done.</p>
 <p><a href="#update-log">All 2 updates</a></p>
 </section>
 <section class="side-block">

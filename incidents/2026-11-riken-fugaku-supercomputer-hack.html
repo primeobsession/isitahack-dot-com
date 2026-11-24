@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was the RIKEN Fugaku supercomputer break-in a hack? | Is It a Hack?</title>
 <meta name="description" content="Was the RIKEN Fugaku supercomputer break-in a hack? Yes, by RIKEN&#39;s own account: an outside party got into Fugaku&#39;s operational network from Nov 10 to 13, installed malicious programs on some servers and took users&#39; files, including private keys. Who did it is not known.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-21T01:18:35-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-riken-fugaku-supercomputer-hack.html#article","headline":"Was the RIKEN Fugaku supercomputer break-in a hack?","alternativeHeadline":"RIKEN Fugaku supercomputer break-in, Nov 2026","description":"Was the RIKEN Fugaku supercomputer break-in a hack? Yes, by RIKEN's own account: an outside party got into Fugaku's operational network from Nov 10 to 13, installed malicious programs on some servers and took users' files, including private keys. Who did it is not known.","abstract":"Yes, by RIKEN's own account: an outside party got into Fugaku's operational network from Nov 10 to 13, installed malicious programs on some servers and took users' files, including private keys. Who did it is not known.","url":"https://isitahack.com/incidents/2026-11-riken-fugaku-supercomputer-hack.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-riken-fugaku-supercomputer-hack.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T00:12:56-05:00","dateModified":"2026-11-21T01:18:35-05:00","image":["https://isitahack.com/data/incidents/2026-11-riken-fugaku-supercomputer-hack/images/riken-fugaku.jpg"],"about":{"@type":"Event","name":"RIKEN Fugaku supercomputer break-in, Nov 2026","startDate":"2026-11-10"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-riken-fugaku-supercomputer-hack.html#article","headline":"Was the RIKEN Fugaku supercomputer break-in a hack?","alternativeHeadline":"RIKEN Fugaku supercomputer break-in, Nov 2026","description":"Was the RIKEN Fugaku supercomputer break-in a hack? Yes, by RIKEN's own account: an outside party got into Fugaku's operational network from Nov 10 to 13, installed malicious programs on some servers and took users' files, including private keys. Who did it is not known.","abstract":"Yes, by RIKEN's own account: an outside party got into Fugaku's operational network from Nov 10 to 13, installed malicious programs on some servers and took users' files, including private keys. Who did it is not known.","url":"https://isitahack.com/incidents/2026-11-riken-fugaku-supercomputer-hack.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-riken-fugaku-supercomputer-hack.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T00:12:56-05:00","dateModified":"2026-11-21T01:18:35-05:00","image":["https://isitahack.com/data/incidents/2026-11-riken-fugaku-supercomputer-hack/images/riken-fugaku.jpg"],"about":{"@type":"Thing","name":"RIKEN Fugaku supercomputer break-in, Nov 2026"},"temporalCoverage":"2026-11-10","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"RIKEN Fugaku supercomputer break-in, Nov 2026","item":"https://isitahack.com/incidents/2026-11-riken-fugaku-supercomputer-hack.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-riken-fugaku-supercomputer-hack.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -640,7 +646,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-21T01:18:35-05:00">Nov 21, 2026, 1:18 AM ET</time></p>
 <p class="latest-headline">No new statement from RIKEN since its Nov 20 second notice; Fugaku stays offline with no restart date.</p>
-<p class="latest-summary">Correction: TechRadar&#39;s article (s004) says it is based on The Register&#39;s report, so its independence group is now the-register instead of its own. Added The Register&#39;s Nov 17 article (s009, Tier 2) as the original report behind c003 and c010; neither label changes (both stay Not established). Checked RIKEN&#39;s English and Japanese news pages, the R-CCS notice page, Nikkei, Sankei and Kyodo: no third notice, no restart date, no named attacker, no reported misuse of the keys elsewhere. Staleness check done: head, known, not_known, figures and who_is_affected still true. Privacy check done: no individuals named.</p>
 <p><a href="#update-log">All 3 updates</a></p>
 </section>
 <section class="side-block">

@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was Charleston County&#39;s network incident a cyberattack? | Is It a Hack?</title>
 <meta name="description" content="Was Charleston County&#39;s network incident a cyberattack? Yes, by the county&#39;s own account: it calls it a &quot;sophisticated cyberattack&quot; identified Nov 16, says data was copied from its systems, and says SLED is treating it as a criminal investigation. Who, how and what data: not established.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-21T11:29:09-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-charleston-county-sc-cyberattack.html#article","headline":"Was Charleston County's network incident a cyberattack?","alternativeHeadline":"Charleston County, SC cyberattack, Nov 16, 2026","description":"Was Charleston County's network incident a cyberattack? Yes, by the county's own account: it calls it a \"sophisticated cyberattack\" identified Nov 16, says data was copied from its systems, and says SLED is treating it as a criminal investigation. Who, how and what data: not established.","abstract":"Yes, by the county's own account: it calls it a \"sophisticated cyberattack\" identified Nov 16, says data was copied from its systems, and says SLED is treating it as a criminal investigation. Who, how and what data: not established.","url":"https://isitahack.com/incidents/2026-11-charleston-county-sc-cyberattack.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-charleston-county-sc-cyberattack.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T10:12:01-05:00","dateModified":"2026-11-21T11:29:09-05:00","image":["https://isitahack.com/data/incidents/2026-11-charleston-county-sc-cyberattack/images/charleston-county-courthouse.jpg"],"about":{"@type":"Event","name":"Charleston County, SC cyberattack, Nov 16, 2026","startDate":"2026-11-16"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-charleston-county-sc-cyberattack.html#article","headline":"Was Charleston County's network incident a cyberattack?","alternativeHeadline":"Charleston County, SC cyberattack, Nov 16, 2026","description":"Was Charleston County's network incident a cyberattack? Yes, by the county's own account: it calls it a \"sophisticated cyberattack\" identified Nov 16, says data was copied from its systems, and says SLED is treating it as a criminal investigation. Who, how and what data: not established.","abstract":"Yes, by the county's own account: it calls it a \"sophisticated cyberattack\" identified Nov 16, says data was copied from its systems, and says SLED is treating it as a criminal investigation. Who, how and what data: not established.","url":"https://isitahack.com/incidents/2026-11-charleston-county-sc-cyberattack.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-charleston-county-sc-cyberattack.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T10:12:01-05:00","dateModified":"2026-11-21T11:29:09-05:00","image":["https://isitahack.com/data/incidents/2026-11-charleston-county-sc-cyberattack/images/charleston-county-courthouse.jpg"],"about":{"@type":"Thing","name":"Charleston County, SC cyberattack, Nov 16, 2026"},"temporalCoverage":"2026-11-16","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Charleston County, SC cyberattack, Nov 16, 2026","item":"https://isitahack.com/incidents/2026-11-charleston-county-sc-cyberattack.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-charleston-county-sc-cyberattack.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -493,7 +499,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-21T11:29:09-05:00">Nov 21, 2026, 11:29 AM ET</time></p>
 <p class="latest-headline">SLED confirmed its role to WCIV; state breach-notice rule added. No label change.</p>
-<p class="latest-summary">Added WCIV&#39;s Nov 18 report (s009): SLED confirmed to the station that its assistance began Tuesday, Nov 17, and is ongoing, our first statement from SLED itself rather than through the county. It covers SLED&#39;s assistance, not the criminal-investigation status, which still rests on the county&#39;s Nov 19 release (c004). The same report says South Carolina law requires notices to affected residents and a report to the state Department of Consumer Affairs above 1,000 residents; no notice for the county has been reported (c006, q003). County releases unchanged (Nov 17, Nov 19). No root cause, attribution, data type, count or ransom claim reported. Privacy check done: no names of individuals, officials, experts, reporters or spokespeople, no contact details.</p>
 <p><a href="#update-log">All 2 updates</a></p>
 </section>
 <section class="side-block">

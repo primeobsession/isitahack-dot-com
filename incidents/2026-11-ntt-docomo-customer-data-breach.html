@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was the Docomo customer data leak a hack? | Is It a Hack?</title>
 <meta name="description" content="Was the Docomo customer data leak a hack? Yes. Docomo says outside parties got into My docomo and its online shop, and that customer information leaked. Jiji Press and Nippon TV report the same. The cause and the attacker are not established.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-22T07:45:00-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-ntt-docomo-customer-data-breach.html#article","headline":"Was the Docomo customer data leak a hack?","alternativeHeadline":"NTT Docomo customer data breach, Nov 2026","description":"Was the Docomo customer data leak a hack? Yes. Docomo says outside parties got into My docomo and its online shop, and that customer information leaked. Jiji Press and Nippon TV report the same. The cause and the attacker are not established.","abstract":"Yes. Docomo says outside parties got into My docomo and its online shop, and that customer information leaked. Jiji Press and Nippon TV report the same. The cause and the attacker are not established.","url":"https://isitahack.com/incidents/2026-11-ntt-docomo-customer-data-breach.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-ntt-docomo-customer-data-breach.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-22T04:09:00-05:00","dateModified":"2026-11-22T07:45:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-ntt-docomo-customer-data-breach/images/ntt-docomo-yoyogi.jpg"],"about":{"@type":"Event","name":"NTT Docomo customer data breach, Nov 2026","startDate":"2026-11-04"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-ntt-docomo-customer-data-breach.html#article","headline":"Was the Docomo customer data leak a hack?","alternativeHeadline":"NTT Docomo customer data breach, Nov 2026","description":"Was the Docomo customer data leak a hack? Yes. Docomo says outside parties got into My docomo and its online shop, and that customer information leaked. Jiji Press and Nippon TV report the same. The cause and the attacker are not established.","abstract":"Yes. Docomo says outside parties got into My docomo and its online shop, and that customer information leaked. Jiji Press and Nippon TV report the same. The cause and the attacker are not established.","url":"https://isitahack.com/incidents/2026-11-ntt-docomo-customer-data-breach.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-ntt-docomo-customer-data-breach.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-22T04:09:00-05:00","dateModified":"2026-11-22T07:45:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-ntt-docomo-customer-data-breach/images/ntt-docomo-yoyogi.jpg"],"about":{"@type":"Thing","name":"NTT Docomo customer data breach, Nov 2026"},"temporalCoverage":"2026-11-04","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"NTT Docomo customer data breach, Nov 2026","item":"https://isitahack.com/incidents/2026-11-ntt-docomo-customer-data-breach.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-ntt-docomo-customer-data-breach.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -581,7 +587,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-22T07:45:00-05:00">Nov 22, 2026, 7:45 AM ET</time></p>
 <p class="latest-headline">A second outlet backs the overseas-IP alert account, and card data not leaking; both now Confirmed.</p>
-<p class="latest-summary">Added CNET Japan (s007, Tier 2, Nov 6) on Docomo&#39;s Nov 6 briefing: up to 294,839 lines leaked (204,157 personal, 90,682 corporate); card numbers were masked and did not leak; a mass-access alert came at about 10:30 AM Nov 4 and overseas IP addresses were blocked at about 2:30 PM without stopping the access; goodwill payments are under consideration. c014 (alert and overseas IPs) and c007 (no card data) move from Reported to Confirmed; c004, c008 and c010 add s007. s002 now links to Jiji Press English directly (the Nippon.com copy is gone). Docomo notices unchanged since the 6th report (Nov 22, 5:10 PM Japan time); no root cause, intrusion route, attacker or compensation details yet. Privacy check done.</p>
 <p><a href="#update-log">All 4 updates</a></p>
 </section>
 <section class="side-block">

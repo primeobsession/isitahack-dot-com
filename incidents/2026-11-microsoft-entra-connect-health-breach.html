@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was Microsoft Entra Connect Health hacked? | Is It a Hack?</title>
 <meta name="description" content="Was Microsoft Entra Connect Health hacked? Yes, by Microsoft&#39;s own account: unauthorized parties exploited a flaw in the Connect Health API and read tenant metadata, including administrator emails. Who did it and how many were hit are not established.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-21T13:17:54-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-microsoft-entra-connect-health-breach.html#article","headline":"Was Microsoft Entra Connect Health hacked?","alternativeHeadline":"Microsoft Entra Connect Health data exposure, Nov 2026","description":"Was Microsoft Entra Connect Health hacked? Yes, by Microsoft's own account: unauthorized parties exploited a flaw in the Connect Health API and read tenant metadata, including administrator emails. Who did it and how many were hit are not established.","abstract":"Yes, by Microsoft's own account: unauthorized parties exploited a flaw in the Connect Health API and read tenant metadata, including administrator emails. Who did it and how many were hit are not established.","url":"https://isitahack.com/incidents/2026-11-microsoft-entra-connect-health-breach.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-microsoft-entra-connect-health-breach.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T13:17:54-05:00","dateModified":"2026-11-21T13:17:54-05:00","image":["https://isitahack.com/data/incidents/2026-11-microsoft-entra-connect-health-breach/images/microsoft-redmond-campus.jpg"],"about":{"@type":"Event","name":"Microsoft Entra Connect Health data exposure, Nov 2026","startDate":"2026-11-20"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-microsoft-entra-connect-health-breach.html#article","headline":"Was Microsoft Entra Connect Health hacked?","alternativeHeadline":"Microsoft Entra Connect Health data exposure, Nov 2026","description":"Was Microsoft Entra Connect Health hacked? Yes, by Microsoft's own account: unauthorized parties exploited a flaw in the Connect Health API and read tenant metadata, including administrator emails. Who did it and how many were hit are not established.","abstract":"Yes, by Microsoft's own account: unauthorized parties exploited a flaw in the Connect Health API and read tenant metadata, including administrator emails. Who did it and how many were hit are not established.","url":"https://isitahack.com/incidents/2026-11-microsoft-entra-connect-health-breach.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-microsoft-entra-connect-health-breach.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T13:17:54-05:00","dateModified":"2026-11-21T13:17:54-05:00","image":["https://isitahack.com/data/incidents/2026-11-microsoft-entra-connect-health-breach/images/microsoft-redmond-campus.jpg"],"about":{"@type":"Thing","name":"Microsoft Entra Connect Health data exposure, Nov 2026"},"temporalCoverage":"2026-11-20","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Microsoft Entra Connect Health data exposure, Nov 2026","item":"https://isitahack.com/incidents/2026-11-microsoft-entra-connect-health-breach.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-microsoft-entra-connect-health-breach.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -561,8 +567,7 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-21T13:17:54-05:00">Nov 21, 2026, 1:17 PM ET</time></p>
 <p class="latest-headline">Microsoft says attackers exploited a Connect Health flaw to read tenant metadata; who and how many are not established.</p>
-<p class="latest-summary">First draft. 6 sources (1 Tier 1, 2 Tier 2, 3 Tier 3), 15 claims (9 Confirmed, 1 Reported, 5 Not established), 9 questions. Microsoft says an Entra Connect Health API flaw, introduced Jul 23 and found Nov 9, let unauthorized parties read tenant-level metadata, including administrator emails, fixed server-side on Nov 19; it notified affected organizations on Nov 20. The label Confirmed records Microsoft&#39;s statements, relayed by two independent outlets and a Microsoft statement to one; we did not find the notification on a Microsoft page. Microsoft says no passwords, tokens or keys were exposed (its statement only). Attacker, affected count, start of exploitation, follow-on attacks and any link to other Microsoft incidents are Not established. No Reddit thread, leak site, dark-web page or tracker visited. Privacy check done: no names of officials, spokespeople or reporters, no handles, contact details or phone numbers.</p>
-<p><a href="#update-log">All 1 updates</a></p>
+<p><a href="#update-log">Update log</a></p>
 </section>
 <section class="side-block">
 <dl class="reach">

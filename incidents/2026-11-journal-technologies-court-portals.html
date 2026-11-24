@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was the Journal Technologies court portal outage a cyberattack? | Is It a Hack?</title>
 <meta name="description" content="Was the Journal Technologies court portal outage a cyberattack? Yes, by the vendor&#39;s own account: it says malicious automated activity targeted its public portal software on Nov 13. Who did it, how far it got and whether data was taken are not established.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-21T18:26:46-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-journal-technologies-court-portals.html#article","headline":"Was the Journal Technologies court portal outage a cyberattack?","alternativeHeadline":"Journal Technologies court portal outage, Nov 13, 2026","description":"Was the Journal Technologies court portal outage a cyberattack? Yes, by the vendor's own account: it says malicious automated activity targeted its public portal software on Nov 13. Who did it, how far it got and whether data was taken are not established.","abstract":"Yes, by the vendor's own account: it says malicious automated activity targeted its public portal software on Nov 13. Who did it, how far it got and whether data was taken are not established.","url":"https://isitahack.com/incidents/2026-11-journal-technologies-court-portals.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-journal-technologies-court-portals.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T07:16:04-05:00","dateModified":"2026-11-21T18:26:46-05:00","image":["https://isitahack.com/data/incidents/2026-11-journal-technologies-court-portals/images/journal-technologies-logo.png"],"about":{"@type":"Event","name":"Journal Technologies court portal outage, Nov 13, 2026","startDate":"2026-11-13"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-journal-technologies-court-portals.html#article","headline":"Was the Journal Technologies court portal outage a cyberattack?","alternativeHeadline":"Journal Technologies court portal outage, Nov 13, 2026","description":"Was the Journal Technologies court portal outage a cyberattack? Yes, by the vendor's own account: it says malicious automated activity targeted its public portal software on Nov 13. Who did it, how far it got and whether data was taken are not established.","abstract":"Yes, by the vendor's own account: it says malicious automated activity targeted its public portal software on Nov 13. Who did it, how far it got and whether data was taken are not established.","url":"https://isitahack.com/incidents/2026-11-journal-technologies-court-portals.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-journal-technologies-court-portals.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T07:16:04-05:00","dateModified":"2026-11-21T18:26:46-05:00","image":["https://isitahack.com/data/incidents/2026-11-journal-technologies-court-portals/images/journal-technologies-logo.png"],"about":{"@type":"Thing","name":"Journal Technologies court portal outage, Nov 13, 2026"},"temporalCoverage":"2026-11-13","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"Journal Technologies court portal outage, Nov 13, 2026","item":"https://isitahack.com/incidents/2026-11-journal-technologies-court-portals.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-journal-technologies-court-portals.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -818,7 +824,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-21T18:26:46-05:00">Nov 21, 2026, 6:26 PM ET</time></p>
 <p class="latest-headline">Correction: Kern County&#39;s court alert is dated Nov 20, the day of the vendor&#39;s new build; it still gives no restoration time.</p>
-<p class="latest-summary">Corrected c009: the Kern court&#39;s Online Services alert is headed 11/20/2026; earlier versions said the notice had no date. It still says the portal is offline due to suspicious automated activity with no ETA (stays Confirmed). s003 source date set to Nov 20. No label changes. Re-read the vendor&#39;s Nov 16 and Nov 20 posts (no newer post found); Alameda and Marin pages still say their portals are offline. NBC Bay Area (Nov 17) relies on the vendor statement and court notices; not cited. No FBI or CISA statement naming this incident, no CVE, no attribution. Staleness check done. Privacy check done: no individuals, spokespeople, reporters, court contacts, emails or handles named.</p>
 <p><a href="#update-log">All 6 updates</a></p>
 </section>
 <section class="side-block">

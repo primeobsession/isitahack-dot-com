@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Was the KEPCO customer data breach a hack? | Is It a Hack?</title>
 <meta name="description" content="Was the KEPCO customer data breach a hack? KEPCO&#39;s own notices say an outside cyber intrusion leaked data on about 1.52 million users of its KEPCO ON and SRM systems. How the attacker got in, and who it was, are not established.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-22T14:44:00-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-kepco-customer-data-breach.html#article","headline":"Was the KEPCO customer data breach a hack?","alternativeHeadline":"KEPCO customer data breach, Nov 2026","description":"Was the KEPCO customer data breach a hack? KEPCO's own notices say an outside cyber intrusion leaked data on about 1.52 million users of its KEPCO ON and SRM systems. How the attacker got in, and who it was, are not established.","abstract":"KEPCO's own notices say an outside cyber intrusion leaked data on about 1.52 million users of its KEPCO ON and SRM systems. How the attacker got in, and who it was, are not established.","url":"https://isitahack.com/incidents/2026-11-kepco-customer-data-breach.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-kepco-customer-data-breach.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-22T06:17:00-05:00","dateModified":"2026-11-22T14:44:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-kepco-customer-data-breach/images/kepco-hadong-branch.jpg"],"about":{"@type":"Event","name":"KEPCO customer data breach, Nov 2026","startDate":"2026-11-20"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-kepco-customer-data-breach.html#article","headline":"Was the KEPCO customer data breach a hack?","alternativeHeadline":"KEPCO customer data breach, Nov 2026","description":"Was the KEPCO customer data breach a hack? KEPCO's own notices say an outside cyber intrusion leaked data on about 1.52 million users of its KEPCO ON and SRM systems. How the attacker got in, and who it was, are not established.","abstract":"KEPCO's own notices say an outside cyber intrusion leaked data on about 1.52 million users of its KEPCO ON and SRM systems. How the attacker got in, and who it was, are not established.","url":"https://isitahack.com/incidents/2026-11-kepco-customer-data-breach.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-kepco-customer-data-breach.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-22T06:17:00-05:00","dateModified":"2026-11-22T14:44:00-05:00","image":["https://isitahack.com/data/incidents/2026-11-kepco-customer-data-breach/images/kepco-hadong-branch.jpg"],"about":{"@type":"Thing","name":"KEPCO customer data breach, Nov 2026"},"temporalCoverage":"2026-11-20","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"KEPCO customer data breach, Nov 2026","item":"https://isitahack.com/incidents/2026-11-kepco-customer-data-breach.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-kepco-customer-data-breach.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -762,7 +768,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-22T14:44:00-05:00">Nov 22, 2026, 2:44 PM ET</time></p>
 <p class="latest-headline">More on KEPCO&#39;s October breach: the intelligence service found the exposed staff data on a cloud-hosted page; its cause is not public.</p>
-<p class="latest-summary">New Tier 2 sources on the separate October breach: Yonhap (Oct 19) and Today Korea (Oct 19) report KEPCO telling a parliamentary audit that the National Intelligence Service alerted it on Oct 1 to staff data on a webpage hosted with a private cloud provider, and that investigators were weighing a partner-company leak and outside hacking (c010 now rests on more than one outlet). Today Korea also reports the 408 face-recognition records and 14,957 CCTV access records, a second outlet for that detail, and says KEPCO has no record of page views or downloads. Segye Ilbo (Oct 22) splits the later 10,759 additions into retirees and partner staff and alone says the site was in Hong Kong. c009 stays Reported; c010 and q005 stay open. No statement yet from the privacy regulator, police, ministry or intelligence service on the Nov 22 breach; no new KEPCO notice. Main answer unchanged. Privacy check done: no officials, lawmakers, hotlines or emails added.</p>
 <p><a href="#update-log">All 8 updates</a></p>
 </section>
 <section class="side-block">

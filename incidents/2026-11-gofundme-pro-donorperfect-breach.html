@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Analytics runs on the live site only, so a preview or a local build is never counted.
+  if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
+    var gtm = document.createElement("script");
+    gtm.async = true;
+    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+    document.head.appendChild(gtm);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+  }
 </script>
 <title>Were GoFundMe Pro and DonorPerfect hacked? | Is It a Hack?</title>
 <meta name="description" content="Were GoFundMe Pro and DonorPerfect hacked? Yes, by both companies&#39; own accounts: GoFundMe says an unauthorized party accessed GoFundMe Pro data; DonorPerfect says it found unauthorized activity and went offline. Who did it, and whether one attacker, is not established.">
@@ -26,7 +32,7 @@
 <meta property="article:modified_time" content="2026-11-21T12:53:54-05:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@isitahack">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-gofundme-pro-donorperfect-breach.html#article","headline":"Were GoFundMe Pro and DonorPerfect hacked?","alternativeHeadline":"GoFundMe Pro and DonorPerfect breaches, Nov 2026","description":"Were GoFundMe Pro and DonorPerfect hacked? Yes, by both companies' own accounts: GoFundMe says an unauthorized party accessed GoFundMe Pro data; DonorPerfect says it found unauthorized activity and went offline. Who did it, and whether one attacker, is not established.","abstract":"Yes, by both companies' own accounts: GoFundMe says an unauthorized party accessed GoFundMe Pro data; DonorPerfect says it found unauthorized activity and went offline. Who did it, and whether one attacker, is not established.","url":"https://isitahack.com/incidents/2026-11-gofundme-pro-donorperfect-breach.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-gofundme-pro-donorperfect-breach.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T11:12:52-05:00","dateModified":"2026-11-21T12:53:54-05:00","image":["https://isitahack.com/data/incidents/2026-11-gofundme-pro-donorperfect-breach/images/gofundme-logo.png"],"about":{"@type":"Event","name":"GoFundMe Pro and DonorPerfect breaches, Nov 2026","startDate":"2026-11-10"},"author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://isitahack.com/incidents/2026-11-gofundme-pro-donorperfect-breach.html#article","headline":"Were GoFundMe Pro and DonorPerfect hacked?","alternativeHeadline":"GoFundMe Pro and DonorPerfect breaches, Nov 2026","description":"Were GoFundMe Pro and DonorPerfect hacked? Yes, by both companies' own accounts: GoFundMe says an unauthorized party accessed GoFundMe Pro data; DonorPerfect says it found unauthorized activity and went offline. Who did it, and whether one attacker, is not established.","abstract":"Yes, by both companies' own accounts: GoFundMe says an unauthorized party accessed GoFundMe Pro data; DonorPerfect says it found unauthorized activity and went offline. Who did it, and whether one attacker, is not established.","url":"https://isitahack.com/incidents/2026-11-gofundme-pro-donorperfect-breach.html","mainEntityOfPage":"https://isitahack.com/incidents/2026-11-gofundme-pro-donorperfect-breach.html","inLanguage":"en","isAccessibleForFree":true,"datePublished":"2026-11-21T11:12:52-05:00","dateModified":"2026-11-21T12:53:54-05:00","image":["https://isitahack.com/data/incidents/2026-11-gofundme-pro-donorperfect-breach/images/gofundme-logo.png"],"about":{"@type":"Thing","name":"GoFundMe Pro and DonorPerfect breaches, Nov 2026"},"temporalCoverage":"2026-11-10","author":{"@type":"Organization","name":"isitahack.com desk","url":"https://isitahack.com/how-it-works.html"},"publisher":{"@type":"Organization","@id":"https://isitahack.com/#org","name":"Is It a Hack?","alternateName":"isitahack.com","url":"https://isitahack.com/","logo":"https://isitahack.com/assets/logo.png","sameAs":["https://x.com/isitahack","https://github.com/primeobsession/isitahack-dot-com"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Is It a Hack?","item":"https://isitahack.com/"},{"@type":"ListItem","position":2,"name":"GoFundMe Pro and DonorPerfect breaches, Nov 2026","item":"https://isitahack.com/incidents/2026-11-gofundme-pro-donorperfect-breach.html"}]}</script>
 <link rel="alternate" type="text/markdown" href="2026-11-gofundme-pro-donorperfect-breach.md" title="This report as Markdown">
 <link rel="alternate" type="application/json" href="../index.json" title="All incidents as JSON">
@@ -711,7 +717,6 @@
 <section class="side-block latest">
 <p class="kicker accent">The latest · <time datetime="2026-11-21T12:53:54-05:00">Nov 21, 2026, 12:53 PM ET</time></p>
 <p class="latest-headline">Salesforce&#39;s own public advisory found: it disabled the GoFundMe Pro connection over suspicious token use, not a Salesforce flaw.</p>
-<p class="latest-summary">Label change: c007 (Salesforce says it disabled the GoFundMe Pro connected app over suspicious use of access tokens, and that this was not a flaw in Salesforce) moved from Reported to Confirmed. We found Salesforce&#39;s own Trust status advisory (s010, Tier 1), posted Nov 11 and updated Nov 20: Salesforce re-enabled the GoFundMe Pro managed packages on Nov 20, but the connected apps stay disabled until GoFundMe completes remediation; Salesforce says it will notify customers if it finds unauthorized access to their data. Confirmed covers what Salesforce says it did; that it was not a Salesforce flaw remains Salesforce&#39;s own account (q008 stays Reported). Added DonorPerfect&#39;s undated customer message (s011, Tier 1), which says it confirmed unauthorized activity involving certain systems and will send confirmed findings to affected organizations (c002, c009 detail). Timeline t012, t013. Status pages re-read: GoFundMe and DonorPerfect unchanged since Nov 20 and Nov 21 9:31 AM ET. Still Not established: counts, DonorPerfect data impact, root cause, attacker, same attacker, tie to other outages. A Tier 3 recap (The Nonprofit Herald) restates the same sources and was not added. No leak site, dark-web page or tracker visited. Privacy check done: no names of individuals, officials, reporters or spokespeople, no handles, contact details or phone numbers.</p>
 <p><a href="#update-log">All 2 updates</a></p>
 </section>
 <section class="side-block">
