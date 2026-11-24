@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "slug": "2026-11-atlassian-bitbucket-login-outage",
+      "title": "Atlassian Bitbucket and login outage, Nov 23, 2026",
+      "status": "monitoring",
+      "last_updated": "2026-11-23T13:35:32-05:00",
+      "files": {
+        "page": "incidents/2026-11-atlassian-bitbucket-login-outage.md",
+        "html": "incidents/2026-11-atlassian-bitbucket-login-outage.html",
+        "data": "data/incidents/2026-11-atlassian-bitbucket-login-outage/"
+      },
+      "incident_type": "outage",
+      "answer_group": "unclear",
+      "service": {
+        "state": "down",
+        "as_of": "2026-11-23T13:35:32-05:00"
+      }
+    },
+    {
       "slug": "2026-11-gta6-xbox-build-leak",
       "title": "GTA 6 Xbox build leak: was Rockstar hacked? Nov 2026",
       "status": "monitoring",
@@ -111,23 +128,6 @@
       },
       "incident_type": "breach",
       "answer_group": "hack-reported"
-    },
-    {
-      "slug": "2026-11-atlassian-bitbucket-login-outage",
-      "title": "Atlassian Bitbucket and login outage, Nov 23, 2026",
-      "status": "monitoring",
-      "last_updated": "2026-11-23T11:12:00-05:00",
-      "files": {
-        "page": "incidents/2026-11-atlassian-bitbucket-login-outage.md",
-        "html": "incidents/2026-11-atlassian-bitbucket-login-outage.html",
-        "data": "data/incidents/2026-11-atlassian-bitbucket-login-outage/"
-      },
-      "incident_type": "outage",
-      "answer_group": "unclear",
-      "service": {
-        "state": "down",
-        "as_of": "2026-11-23T11:12:00-05:00"
-      }
     },
     {
       "slug": "2026-11-glinet-cloud-malware",
