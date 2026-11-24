@@ -7,4 +7,6 @@ t006,2026-11-20T02:54:00-05:00,,,stated,"Airbyte says Airbyte Cloud is back onli
 t005,2026-11-20T03:05:00-05:00,,,stated,"Airbyte says most data syncs and database connectors work; API sources, Connector Builder and MCP are unavailable",c009,08:05 UTC.
 t007,2026-11-20T16:33:00-05:00,,,stated,Salesforce posts an advisory that it disabled the Airbyte connected app after suspicious activity,c010,Posted 4:33 pm EST per Salesforce.
 t008,2026-11-20T23:05:00-05:00,,,stated,Airbyte lists 16 API connectors still down because OAuth is deactivated,c008,Nov 21 04:05 UTC.
-t009,2026-11-21T01:00:00-05:00,,,stated,"Airbyte says Intercom OAuth is fixed; 15 API connectors, Connector Builder and MCP stay down",c008,06:00 UTC. Latest update on the page when we checked.
+t009,2026-11-21T01:00:00-05:00,,,stated,"Airbyte says Intercom OAuth is fixed; 15 API connectors, Connector Builder and MCP stay down",c008,06:00 UTC. Airbyte said on Nov 23 that the Intercom part was posted in error (t010).
+t010,2026-11-23T12:47:00-05:00,,,stated,"Airbyte says its note that Intercom was fixed was posted in error; 16 API connectors, Connector Builder and MCP stay down",c008,17:47 UTC.
+t011,2026-11-24T14:55:00-05:00,,,stated,Airbyte says the API connectors stay unavailable while its partners complete their own reviews and will return as each provider approves,c008,19:55 UTC. Latest update on the page when we checked.
