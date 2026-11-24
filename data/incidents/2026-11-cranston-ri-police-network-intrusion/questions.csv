@@ -1,0 +1,4 @@
+question_id,kind,question_text,state,answer_text,label,claim_ids,rumor_type,what_would_settle_it,opened_at,answered_at
+q001,question,Was the Cranston police network incident a cyberattack?,answered,"Reported. Police say they found a potential unauthorized intrusion into one database and took the network offline. It is one police statement, relayed by two outlets. Ransom, data theft and the attacker are not established.",Reported,c001;c002;c005,,"A police, state police or FBI statement naming the cause, or a second independent report.",2026-11-22T19:12:01-05:00,2026-11-22T19:12:01-05:00
+q002,question,"Was a ransom demanded, or any personal data taken?",open,,,c005;c006,,"A police statement saying whether a demand was made, and what the investigation finds about data.",2026-11-22T19:12:01-05:00,
+q003,question,Who was behind it?,open,,,c007,,"A police or federal statement, or a claim of responsibility reported by press.",2026-11-22T19:12:01-05:00,

@@ -1,0 +1,89 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-cranston-ri-police-network-intrusion",
+  "title": "Cranston, RI police network intrusion, Nov 21, 2026",
+  "subject": {
+    "name": "Cranston Police",
+    "kind": "government"
+  },
+  "incident_type": "attack",
+  "answer_group": "hack-reported",
+  "service": { "state": "down", "claim_id": "c002" },
+  "also_called": [
+    "Cranston police cyber breach",
+    "Cranston police ransom refusal"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-21",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by the Cranston Police Department, the FBI, the Rhode Island State Police, any news outlet, government agency, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Local",
+  "size_basis": "One city police department's network, taken offline as a precaution. Police say phones, radio and calls for service were not affected. No count of records or people is given.",
+  "who_is_affected": "The Cranston, Rhode Island police department and, if its database held it, the data in that database. Police say there is no indication personal information was accessed.",
+  "known": [],
+  "not_known": [
+    {
+      "text": "Whether the intrusion succeeded and what kind of attack it was."
+    },
+    {
+      "text": "Whether a ransom was demanded, or any personal data taken.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Who was behind it.",
+      "question_id": "q003"
+    },
+    {
+      "text": "Whether a second source, such as a police or FBI statement, confirms the account."
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 21",
+      "label": "Police became aware",
+      "detail": "Early Saturday, per police",
+      "claim_id": "c001"
+    },
+    {
+      "value": "1",
+      "label": "Database named as involved",
+      "detail": "Police statement",
+      "claim_id": "c001"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Cranston police incident"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
