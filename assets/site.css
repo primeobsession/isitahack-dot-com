@@ -457,6 +457,9 @@ html[data-depth="short"] .toc-sub, html[data-depth="story"] .toc-in-evidence { d
 .status-list td:first-child a { color: var(--ink); font-weight: 700; text-decoration: none; }
 .status-list td:first-child a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.18em; }
 .status-list .kind { display: block; font-size: 0.76rem; font-weight: 400; color: var(--muted); }
+/* a check the schedule says is due: marked in the reader's browser, because it depends on the time now */
+.status-list .overdue-mark { display: block; font-size: 0.76rem; font-weight: 700; color: var(--accent); }
+#due-note { color: var(--ink); }
 /* below table width each incident is three short lines, not a stack of labelled cells */
 @media (max-width: 759px) {
   .data-table.status-list tr { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 1rem; }

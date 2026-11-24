@@ -35,6 +35,29 @@ const STATUSES = { monitoring: "Monitoring", resolved: "Resolved", closed: "Clos
 const STANDARD_NOTE = `<strong>Not verified: initial investigation only.</strong> Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them.`;
 const two = (n) => String(n).padStart(2, "0");
 
+// When the next check is due, by the decided cadence (operations manual section 3): every hour
+// while something is down, once a day for a story's first three days, every three days until
+// it is resolved, then weekly. A daily or slower check is due by the end of its day, in the
+// offset the last check was logged with. A closed story is not checked again.
+const HOUR = 36e5, DAY = 864e5;
+export const CADENCES = { hour: "every hour while it is down", day: "once a day for the first three days", "3 days": "every three days until it is resolved", week: "once a week now it is resolved" };
+function atOffset(ms, offset) {
+  const mins = offset === "Z" ? 0 : (offset[0] === "-" ? -1 : 1) * (+offset.slice(1, 3) * 60 + +offset.slice(4, 6));
+  return `${new Date(ms + mins * 6e4).toISOString().slice(0, 19)}${offset}`;
+}
+export function nextCheck({ status, service, first_published, last_checked }) {
+  const offset = String(last_checked || "").match(/T.*(Z|[+-]\d\d:\d\d)$/)?.[1];
+  if (status === "closed" || !offset) return null;
+  const last = Date.parse(last_checked);
+  if (service && service.state !== "back") return { every: "hour", due: atOffset(last + HOUR, offset) };
+  const dayOf = (iso) => Date.parse(`${atOffset(Date.parse(iso), offset).slice(0, 10)}T00:00:00Z`);
+  const day = dayOf(last_checked);
+  const days = status === "resolved" ? 7 : (day - dayOf(first_published || last_checked)) / DAY < 3 ? 1 : 3;
+  return { every: days === 7 ? "week" : days === 1 ? "day" : "3 days", due: `${new Date(day + days * DAY).toISOString().slice(0, 10)}T23:59:00${offset}` };
+}
+// "by 4:12 PM ET, Nov 24" for an hourly check, "by the end of Nov 27, 2026" for the rest.
+export const dueText = (next) => (next.every === "hour" ? fmtDate(next.due) : `the end of ${fmtDay(next.due)}`);
+
 // Everything other pages need to know about an incident, worked out from its data.
 export const SERVICE_STATES = { down: "Down at our last check", "partly-back": "Partly back at our last check", back: "Back" };
 export function summarize({ head, t }) {
@@ -45,10 +68,12 @@ export function summarize({ head, t }) {
   const main = t.questions.find((q) => q.question_id === head.main_question_id);
   const tallyGroup = head.sections.find((s) => s.type === "claims")?.group;
   const inGroup = t.claims.filter((c) => c.group === tallyGroup);
+  const first = t.update_log[t.update_log.length - 1].logged_at;
   return {
     slug: head.slug, title: head.title, status: head.status, incident_date: head.incident_date, disclaimer: head.disclaimer,
     last_updated: latest.logged_at, last_checked: checked.logged_at,
-    first_published: t.update_log[t.update_log.length - 1].logged_at, also_called: alsoCalled(head),
+    next_check: nextCheck({ status: head.status, service: stateClaim && head.service, first_published: first, last_checked: checked.logged_at }),
+    first_published: first, also_called: alsoCalled(head),
     latest: { at: latest.logged_at, headline: latest.headline, summary: latest.summary },
     question: { text: main.question_text, answer: main.answer_text, label: main.label, claim_ids: main.claim_ids },
     verdict: head.verdict || null, verdict_approved_at: head.verdict_approved_at || null,
@@ -267,7 +292,7 @@ ${tableHtml(headRow, body)}
 <span class="log-when">${timeTag(u.logged_at)}</span>
 <span class="log-what"><strong>${esc(u.headline)}</strong> ${esc(u.summary)} <span class="meta">${esc(CHANGES[u.change_type])} · ${esc(u.author)}</span></span>
 </li>`);
-  const logHtml = fold({ title: "Update log", count: t.update_log.length, id: "update-log", body: `<p class="meta">Every check and change, newest first.</p>\n<ol class="log">\n${foldRest(logRows, 6, "entries")}\n</ol>` });
+  const logHtml = fold({ title: "Update log", count: t.update_log.length, id: "update-log", body: `<p class="meta">Every check and change, newest first. Last checked ${timeTag(sum.last_checked)}.${sum.next_check ? ` The next check is due by ${timeTag(sum.next_check.due, dueText(sum.next_check))}: the desk checks ${CADENCES[sum.next_check.every]}.` : ""}</p>\n<ol class="log">\n${foldRest(logRows, 6, "entries")}\n</ol>` });
   const sourcesHtml = fold({ title: "Sources", count: t.sources.length, id: "sources", body: `<ol class="source-lines numbered">\n${t.sources.map((s) => sourceLine(s.source_id)).join("\n")}\n</ol>` });
 
   // ---------- the top of the page ----------
@@ -376,7 +401,7 @@ export function incidentMarkdown(loaded, { dataPath }) {
   const sources = new Map(t.sources.map((s) => [s.source_id, s]));
   const src = (id) => { const s = sources.get(id); return `[${s.source_name}](${s.source_url})`; };
   const out = [];
-  out.push(`---\nslug: ${head.slug}\ntitle: ${JSON.stringify(head.title)}\nquestion: ${JSON.stringify(sum.question.text)}\nstatus: ${head.status}\nincident_date: ${head.incident_date}\nfirst_published: ${sum.first_published}\nlast_updated: ${sum.last_updated}\nsize: ${JSON.stringify(head.size)}\ndata_dir: ${dataPath}\ngenerated: true\ndisclaimer: ${JSON.stringify(head.disclaimer)}\n---`);
+  out.push(`---\nslug: ${head.slug}\ntitle: ${JSON.stringify(head.title)}\nquestion: ${JSON.stringify(sum.question.text)}\nstatus: ${head.status}\nincident_date: ${head.incident_date}\nfirst_published: ${sum.first_published}\nlast_updated: ${sum.last_updated}\nlast_checked: ${sum.last_checked}${sum.next_check ? `\nnext_check_due: ${sum.next_check.due}` : ""}\nsize: ${JSON.stringify(head.size)}\ndata_dir: ${dataPath}\ngenerated: true\ndisclaimer: ${JSON.stringify(head.disclaimer)}\n---`);
   out.push(`<!-- Generated by scripts/build.mjs from ${dataPath}/. Do not edit this file; edit the data. -->`);
   out.push(`# ${sum.question.text}`);
   out.push(`**${sum.question.label}.** ${sum.question.answer}`);

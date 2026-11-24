@@ -94,7 +94,7 @@ The build adds the rest: the canonical address, the description, the share image
 
 ## Never written by hand
 
-The build works these out, so they cannot drift: the page title, first-published, last-updated and last-checked times, label counts, row counts, the source list, `sitemap.xml`, the entry in `index.json`, and the `.md` and `.html` pages. None of these is in the repository: they are built into `_site/` by the check, and by GitHub when the site is published. `llms.txt` is still edited by hand; the build stops when it does not list an incident's files.
+The build works these out, so they cannot drift: the page title, first-published, last-updated and last-checked times, when the next check is due, label counts, row counts, the source list, `sitemap.xml`, the entry in `index.json`, and the `.md` and `.html` pages. None of these is in the repository: they are built into `_site/` by the check, and by GitHub when the site is published. `llms.txt` is still edited by hand; the build stops when it does not list an incident's files.
 
 ## When something was never recorded
 
@@ -130,6 +130,20 @@ When something stopped working, readers ask whether it is back. `service` in `in
 - Re-check it on every run, and change it in the same change as the claim. A "down" that is no longer true is the most misleading thing the site can say.
 - Leave `service` out when nothing went down, or when no claim says how things stand. Never guess it from a tracker graph or from silence.
 
+## An update has to change something
+
+A log row filed as `added`, `updated` or `label_change` moves the page's "Last updated" time and becomes "The latest" at the top of the page. So it must name, in `claim_ids`, at least one claim that the same change added or altered, or that a question the change answered or relabelled rests on. The check compares your branch with `main` and refuses a new row that does not.
+
+- A run that added no source and changed no claim is a check: file it as `checked_no_change`. Another outlet repeating what the story already says is not an update. Moving a claim's `last_checked` is not one either.
+- A `checked_no_change` row still gets a headline a reader can use: "Next has still not named the supplier", not "Morning check".
+- Only rows that are not on `main` yet are judged. Rows already published stay as they were filed.
+
+## When the next check is due
+
+The build works out when each story is next due a check, from the cadence the owner decided (Nov 24, 2026): every hour while `service` is `down` or `partly-back`; once a day for a story's first three days; every three days until it is resolved; weekly once `status` is `resolved`. A closed story is not checked again. An hourly check is due an hour after the last one; the others are due by the end of the day.
+
+"Last checked" is the newest log row that is not `presentation`, so every run must add its row, even an empty one. The due time is on the story's page, in its Markdown version, on the status board (which marks what is overdue and can list the most overdue first) and in `index.json` as `last_checked`, `check_every` and `next_check_due`. Nothing is written by hand.
+
 ## Charts
 
 A chart is a CSV of numbers plus a short description in `incident.json`: its type (`line` or `bar`), which column is the horizontal axis, which columns are the series, the unit, where the numbers came from, and an `alt` sentence that states the trend in words. The build draws the chart and prints the same numbers as a table under it. Agents never draw a chart or save a picture of one. All series on one chart share one scale, so they must be the same kind of quantity; two different quantities need two charts.
@@ -153,7 +167,7 @@ Allowed: images the desk made (`own`), public-domain works such as US federal go
 node scripts/check.mjs
 ```
 
-Run it before every hand-off. It validates every incident, runs the tests that prove each rule still works, and builds the whole site into `_site/`, where you can open your page. Commit the data you changed, and `llms.txt` for a new incident; never a built page. The same command runs on GitHub for every push and pull request, and again when the site is published, where a failure means nothing is published.
+Run it before every hand-off. It validates every incident, runs the tests that prove each rule still works, compares your new log rows with `main` (an update has to change something), and builds the whole site into `_site/`, where you can open your page. Commit the data you changed, and `llms.txt` for a new incident; never a built page. The same command runs on GitHub for every push and pull request, and again when the site is published, where a failure means nothing is published.
 
 To check one folder while you work: `node scripts/validate.mjs data/incidents/<slug>`. It checks:
 

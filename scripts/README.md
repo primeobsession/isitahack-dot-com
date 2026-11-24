@@ -5,13 +5,16 @@ Plain Node (tested on Node 22), zero dependencies, no framework or bundler.
 ## check.mjs
 
 ```sh
-node scripts/check.mjs         # before every hand-off
-node scripts/check.mjs --ci    # what GitHub runs on every push and pull request
+node scripts/check.mjs         # before every hand-off; GitHub runs the same on every push and pull request
 ```
 
-Runs `validate.mjs` on every incident and on the sample, runs the tests in `scripts/tests/`, builds the whole site into `_site/`, and fails if a built page has been committed. The same command runs on GitHub for every push and pull request, and again when the site is published (`.github/workflows/deploy.yml`).
+Runs `validate.mjs` on every incident and on the sample, runs the tests in `scripts/tests/`, compares new log rows with `main` (`changes.mjs`, below), builds the whole site into `_site/`, and fails if a built page has been committed. The same command runs on GitHub for every push and pull request, and again when the site is published (`.github/workflows/deploy.yml`).
 
 `scripts/tests/validate.test.mjs` copies the sample incident, breaks one thing at a time, and expects the validator to name it. When a rule changes, its case changes in the same commit. A case is never deleted to get a pass.
+
+## changes.mjs
+
+An update has to change something. A log row filed as `added`, `updated` or `label_change` must name, in `claim_ids`, a claim that the same change added or altered, or that a question the change answered or relabelled rests on; otherwise the run was a check and the row is `checked_no_change`. One copy of the data cannot show this, so `check.mjs` compares the working copy with `main`: where the branch left `origin/main`, or the commit named in `CHECK_BASE` (the Check workflow sets it on a push to `main`). Only log rows not yet on `main` are judged. Where there is no history to compare with, the step says so and passes; GitHub runs it with the full history.
 
 ## build.mjs
 
@@ -27,10 +30,10 @@ What it does:
 2. For every other `incidents/<slug>.md`, renders the hand-written page as it is. This is how an incident not yet in the typed format can stay on the site; no incident uses it at the moment. Its front-matter may carry `question`, `answer`, `answer_label` and `latest` so the page can lead with the short answer and the latest update.
 3. Writes `index.html`, `status.html`, `how-it-works.html` and `about.html` from `pages/*.html`, plus `404.html`. The home page and the status board are counted from the incidents: nothing on them is written by hand.
 4. Writes `sitemap.xml`. An incident's date there is its last update that changed a finding.
-5. Updates `index.json`, keeping existing fields.
+5. Writes `index.json` fresh: each incident's status, answer group, service state, when it was last checked and when its next check is due (`last_checked`, `check_every`, `next_check_due`), and where its files are.
 6. Stops when `llms.txt` does not list a page or an incident's files.
 
-The build reads no clock, locale or environment, so the same input produces byte-identical output. All content is HTML-escaped.
+The build reads no clock, locale or environment, so the same input produces byte-identical output. Whether a check is overdue depends on the time now, so the status board works that out in the reader's browser from the due time the build wrote. All content is HTML-escaped.
 
 `--sample` only works with `--out`: the sample incident in `format/sample/` is made up and must never be built into the real site. To look at the site, serve the folder, for example `python3 -m http.server --directory _site`. Nothing the build writes is committed; `_site/` starts empty on each build.
 

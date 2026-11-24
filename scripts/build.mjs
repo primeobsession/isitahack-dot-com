@@ -25,7 +25,7 @@ import { join, dirname, basename, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { LABELS, ANSWER_GROUPS, answerPill, esc, slugify, pill, inline, linkTag, fmtDate, fmtDay, timeTag, renderBody, warnings, warn, setCurrent } from "./html.mjs";
 import { loadIncident } from "./validate.mjs";
-import { renderIncident, incidentMarkdown, incidentLayout, incidentPicture, evidenceBar, summarize, SERVICE_STATES } from "./incident.mjs";
+import { renderIncident, incidentMarkdown, incidentLayout, incidentPicture, evidenceBar, summarize, SERVICE_STATES, CADENCES } from "./incident.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -461,7 +461,8 @@ ${stated.map((i) => `<li class="svc svc-${i.service.state}"${i.service.as_of ? `
 </ul>
 </section>` : "";
   const chart = dayChart(incidents);
-  const head = ["Incident", "Answer so far", "How big", "Happened", "Last checked"];
+  const head = ["Incident", "Answer so far", "How big", "Happened", "Last checked", "Next check"];
+  const EVERY = { hour: "Hourly", day: "Daily", "3 days": "Every 3 days", week: "Weekly" };
   const rows = byDay.map((i) => {
     const g = ANSWER_GROUPS.find((x) => x.key === groupOf(i));
     const kind = [TYPE_NAMES[i.incident_type], SUBJECT_KINDS.find(([k]) => k === i.subject?.kind)?.[1]].filter(Boolean).join(" · ");
@@ -471,8 +472,9 @@ ${stated.map((i) => `<li class="svc svc-${i.service.state}"${i.service.as_of ? `
       esc(i.size || ""),
       i.incident_date ? timeTag(i.incident_date, rowDay(i.incident_date, year)) : "",
       timeTag(checkedOf(i), fmtDay(checkedOf(i))),
+      i.next_check ? `<span class="due">${timeTag(i.next_check.due, i.next_check.every === "hour" ? fmtDate(i.next_check.due) : fmtDay(i.next_check.due))}</span><span class="kind" title="The desk checks ${esc(CADENCES[i.next_check.every])}">${EVERY[i.next_check.every]}</span>` : "",
     ];
-    return `<tr data-group="${g.key}" data-name="${esc(rowName(i).toLowerCase())}" data-happened="${esc(i.incident_date || "")}" data-checked="${esc(checkedOf(i))}">${cells.map((c, n) => `<td data-label="${head[n]}">${c}</td>`).join("")}</tr>`;
+    return `<tr data-group="${g.key}" data-name="${esc(rowName(i).toLowerCase())}" data-happened="${esc(i.incident_date || "")}" data-checked="${esc(checkedOf(i))}"${i.next_check ? ` data-due="${esc(i.next_check.due)}"` : ""}>${cells.map((c, n) => `<td data-label="${head[n]}">${c}</td>`).join("")}</tr>`;
   }).join("\n");
   const body = fill(readPage("status"), {
     root: "", stats, service,
@@ -509,11 +511,16 @@ function buildSitemap(incidents, out) {
 }
 
 // index.json: every incident with what kind it is, which plain answer it is filed under,
-// whether the service is back, and where its files are. Made fresh on every build.
+// whether the service is back, when it is next due a check, and where its files are. Made
+// fresh on every build.
 function updateIndexJson(incidents, out) {
   const list = incidents.map((i) => {
     const filed = i.typed ? { incident_type: i.incident_type, answer_group: i.answer_group } : {};
     if (i.service) filed.service = { state: i.service.state, as_of: i.service.as_of };
+    // When each story was last checked and when its next check is due, so the desk's agents can
+    // work the overdue ones first.
+    if (i.last_checked) filed.last_checked = i.last_checked;
+    if (i.next_check) Object.assign(filed, { check_every: i.next_check.every, next_check_due: i.next_check.due });
     return { slug: i.slug, title: i.title, status: i.status, last_updated: i.last_updated, ...filed, files: { ...i.files } };
   });
   writeFileSync(join(out, "index.json"), JSON.stringify({ incidents: list }, null, 2) + "\n");
