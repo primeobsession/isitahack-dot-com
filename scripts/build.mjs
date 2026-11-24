@@ -10,14 +10,14 @@
 //                                        scripts/validate.mjs first; any problem stops the build.
 //                                        The build writes incidents/<slug>.html and <slug>.md.
 //   incidents/<slug>.md                  a hand-written page, for incidents not yet converted.
-// It also writes index.html, how-it-works.html and about.html from pages/*.html, 404.html and
+// It also writes index.html, status.html, how-it-works.html and about.html from pages/*.html, 404.html and
 // sitemap.xml, and updates index.json. Output depends only on the input files: no clock, no locale, no randomness, so
 // the same input always produces byte-identical output.
 
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync, cpSync } from "node:fs";
 import { join, dirname, basename, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { LABELS, ANSWER_GROUPS, answerPill, esc, slugify, pill, inline, linkTag, fmtDate, timeTag, renderBody, warnings, warn, setCurrent } from "./html.mjs";
+import { LABELS, ANSWER_GROUPS, answerPill, esc, slugify, pill, inline, linkTag, fmtDate, fmtDay, timeTag, renderBody, warnings, warn, setCurrent } from "./html.mjs";
 import { loadIncident } from "./validate.mjs";
 import { renderIncident, incidentMarkdown, incidentLayout, incidentPicture, evidenceBar, summarize } from "./incident.mjs";
 
@@ -38,6 +38,8 @@ const SITE = {
   x: "https://x.com/isitahack",
 };
 const STATUSES = { monitoring: "Monitoring", resolved: "Resolved", closed: "Closed" };
+// The status board is built from the incidents, so it is not in PAGES.
+const STATUS_PAGE = { file: "status", title: "Status board", description: "Every incident isitahack.com is following, in one view: the answer so far, the kind of organization and incident, the day it happened and when it was last checked." };
 const PAGES = [
   { file: "how-it-works", title: "How it works", description: "Who does what at isitahack.com: the AI agents, the rulebook they work to, the six labels, and the one call a person makes." },
   { file: "about", title: "About", description: "Why isitahack.com exists, who is behind it, and how to get in touch." },
@@ -117,6 +119,7 @@ function shell({ title, share = title, description, root, path, body, banner = "
   ].filter(Boolean).join("\n");
   const nav = [
     ["incidents", `${home}#incidents`, "Incidents"],
+    ["status", `${root}status.html`, "Status board"],
     ["how-it-works", `${root}how-it-works.html`, "How it works"],
     ["about", `${root}about.html`, "About"],
   ].map(([key, href, text]) => `<a href="${href}"${key === current ? ' aria-current="page"' : ""}>${text}</a>`).join("\n");
@@ -162,6 +165,7 @@ ${WORDMARK}
 </div>
 <nav class="footer-nav" aria-label="Footer">
 <a href="${home}#incidents">Incidents</a>
+<a href="${root}status.html">Status board</a>
 <a href="${root}how-it-works.html">How it works</a>
 <a href="${root}about.html">About</a>
 <a href="${SITE.repo}" rel="noopener">GitHub repository</a>
@@ -373,6 +377,98 @@ ${rows.map((i) => incidentRow(i, year)).join("\n")}
   ];
   writeFileSync(join(out, "index.html"), shell({ title: `${SITE.title} Public-source fact-checks of security news`, share: `${SITE.title} Here is what is actually known.`, description: `Is it a hack? ${SITE.tagline}`, root: "", path: "", data, banner, body, current: "incidents" }));
 }
+// ---------- the status board ----------
+// Every incident in one view: counts by answer, by kind of organisation and by kind of
+// incident, the days they happened, and one sortable list. All of it is counted from the data.
+const SUBJECT_KINDS = [["online-service", "Online services"], ["government", "Government"], ["finance", "Banks and finance"], ["health", "Health care"], ["aviation", "Aviation"], ["devices", "Devices"], ["telecom", "Telecom"], ["energy", "Energy"], ["network", "Networks"], ["other", "Other"]];
+const TYPE_NAMES = { outage: "Outage", breach: "Data breach", attack: "Attack" };
+const GROUP_COLUMNS = { unclear: "Unclear", "hack-stated": "Says hacked", "hack-reported": "Reported", "no-sign-of-hack": "No sign" };
+const groupOf = (i) => i.answer_group || "unclear";
+// One row per kind, one column per answer; kinds with no incidents are left out, the busiest first.
+function countTable(caption, firstColumn, kinds, incidents, keyOf) {
+  const rows = kinds.map(([key, name]) => {
+    const of = incidents.filter((i) => keyOf(i) === key);
+    return { name, total: of.length, cells: ANSWER_GROUPS.map((g) => of.filter((i) => groupOf(i) === g.key).length) };
+  }).filter((r) => r.total).sort((a, b) => b.total - a.total || a.name.localeCompare(b.name));
+  const peak = Math.max(0, ...rows.flatMap((r) => r.cells));
+  const cell = (n) => `<td${n === 0 ? ' class="zero"' : n === peak ? ' class="peak"' : ""}>${n}</td>`;
+  const totals = ANSWER_GROUPS.map((g) => incidents.filter((i) => groupOf(i) === g.key).length);
+  return `<div class="matrix-wrap">
+<table class="matrix">
+<caption class="sr-only">${esc(caption)}</caption>
+<thead><tr><th scope="col">${esc(firstColumn)}</th>${ANSWER_GROUPS.map((g) => `<th scope="col">${esc(GROUP_COLUMNS[g.key])}</th>`).join("")}<th scope="col">All</th></tr></thead>
+<tbody>
+${rows.map((r) => `<tr><th scope="row">${esc(r.name)}</th>${r.cells.map(cell).join("")}<td class="total">${r.total}</td></tr>`).join("\n")}
+</tbody>
+<tfoot><tr><th scope="row">All</th>${totals.map((n) => `<td>${n}</td>`).join("")}<td>${incidents.length}</td></tr></tfoot>
+</table>
+</div>`;
+}
+// Incidents per day for the 30 days up to the newest one. Dates are plain calendar days.
+function dayChart(incidents) {
+  const days = incidents.map((i) => i.incident_date).filter(Boolean).sort();
+  if (!days.length) return { html: "", older: 0 };
+  const DAY = 86400000, end = Date.parse(`${days[days.length - 1]}T00:00:00Z`), SPAN = 30;
+  const iso = (ms) => new Date(ms).toISOString().slice(0, 10);
+  const counts = Array.from({ length: SPAN }, (_, k) => { const d = iso(end - (SPAN - 1 - k) * DAY); return { d, n: days.filter((x) => x === d).length }; });
+  const older = days.filter((x) => x < counts[0].d).length;
+  const W = 720, H = 210, x0 = 8, x1 = W - 8, y0 = H - 34, top = Math.max(...counts.map((c) => c.n));
+  const band = (x1 - x0) / SPAN, barW = Math.min(18, band - 5);
+  const short = (d) => fmtDay(d).replace(/, \d{4}$/, "");
+  const out = [];
+  counts.forEach((c, k) => {
+    const cx = Math.round((x0 + band * (k + 0.5)) * 10) / 10;
+    if ((SPAN - 1 - k) % 5 === 0) out.push(`<text class="chart-tick" x="${cx}" y="${y0 + 20}" text-anchor="${k === SPAN - 1 ? "end" : "middle"}">${esc(short(c.d))}</text>`);
+    if (!c.n) return;
+    const h = Math.round((c.n / top) * (y0 - 26) * 10) / 10, bx = Math.round((cx - barW / 2) * 10) / 10, by = Math.round((y0 - h) * 10) / 10;
+    out.push(`<rect class="chart-bar series-1" x="${bx}" y="${by}" width="${barW}" height="${h}" rx="2"><title>${esc(`${short(c.d)}: ${c.n} incident${c.n === 1 ? "" : "s"}`)}</title></rect>`);
+    out.push(`<text class="chart-value" x="${cx}" y="${Math.round((by - 6) * 10) / 10}" text-anchor="middle">${c.n}</text>`);
+  });
+  out.push(`<line class="chart-axis" x1="${x0}" x2="${x1}" y1="${y0}" y2="${y0}"/>`);
+  const busiest = counts.reduce((a, c) => (c.n > a.n ? c : a));
+  const alt = `Incidents by the day they happened, ${short(counts[0].d)} to ${short(counts[SPAN - 1].d)}. The most on one day is ${busiest.n}, on ${short(busiest.d)}.`;
+  return { html: `<svg class="chart day-chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(alt)}">\n${out.join("\n")}\n</svg>`, older, from: counts[0].d, to: counts[SPAN - 1].d };
+}
+function buildStatus(incidents, out) {
+  const byDay = [...incidents].sort((a, b) => String(b.incident_date || "").localeCompare(String(a.incident_date || "")) || a.slug.localeCompare(b.slug));
+  const year = String(byDay[0]?.incident_date || "").slice(0, 4);
+  const checkedOf = (i) => i.last_checked || i.last_updated;
+  const newestCheck = incidents.map(checkedOf).sort((a, b) => Date.parse(b) - Date.parse(a))[0];
+  const stats = ANSWER_GROUPS.map((g) => {
+    const n = incidents.filter((i) => groupOf(i) === g.key).length;
+    return `<a class="stat" href="./#${g.key}" data-group="${g.key}" data-title="${esc(g.title)}">
+<span class="stat-top"><span class="stat-n">${n}</span><span class="meta">of ${incidents.length}</span></span>
+${answerPill(g)}
+<span class="stat-bar" aria-hidden="true"><span style="width:${incidents.length ? Math.round((n / incidents.length) * 100) : 0}%"></span></span>
+<span class="stat-means">${esc(g.means)}</span>
+</a>`;
+  }).join("\n");
+  const chart = dayChart(incidents);
+  const head = ["Incident", "Answer so far", "How big", "Happened", "Last checked"];
+  const rows = byDay.map((i) => {
+    const g = ANSWER_GROUPS.find((x) => x.key === groupOf(i));
+    const kind = [TYPE_NAMES[i.incident_type], SUBJECT_KINDS.find(([k]) => k === i.subject?.kind)?.[1]].filter(Boolean).join(" · ");
+    const cells = [
+      `<a href="incidents/${esc(i.slug)}.html">${esc(rowName(i))}</a>${kind ? `<span class="kind">${esc(kind)}</span>` : ""}`,
+      answerPill(g),
+      esc(i.size || ""),
+      i.incident_date ? timeTag(i.incident_date, rowDay(i.incident_date, year)) : "",
+      timeTag(checkedOf(i), fmtDay(checkedOf(i))),
+    ];
+    return `<tr data-group="${g.key}" data-name="${esc(rowName(i).toLowerCase())}" data-happened="${esc(i.incident_date || "")}" data-checked="${esc(checkedOf(i))}">${cells.map((c, n) => `<td data-label="${head[n]}">${c}</td>`).join("")}</tr>`;
+  }).join("\n");
+  const body = fill(readPage("status"), {
+    root: "", stats,
+    checked: newestCheck ? `Last check: ${timeTag(newestCheck)}.` : "",
+    by_subject: countTable("Incidents by kind of organization and by answer", "Organization", SUBJECT_KINDS, incidents, (i) => i.subject?.kind || "other"),
+    by_type: countTable("Incidents by kind of incident and by answer", "Incident", INCIDENT_TYPES, incidents, (i) => i.incident_type),
+    when_chart: chart.html,
+    when_note: chart.html ? `Incidents by the day they happened, ${esc(fmtDay(chart.from))} to ${esc(fmtDay(chart.to))}.${chart.older ? ` ${chart.older} older incident${chart.older === 1 ? " is" : "s are"} not on the chart.` : ""}` : "",
+    count: `${incidents.length} of ${incidents.length}`,
+    list: `<div class="table-wrap" role="region" aria-label="All incidents table" tabindex="0">\n<table class="data-table status-list">\n<thead><tr>${head.map((h) => `<th scope="col">${h}</th>`).join("")}</tr></thead>\n<tbody>\n${rows}\n</tbody>\n</table>\n</div>`,
+  });
+  writeFileSync(join(out, "status.html"), shell({ title: `${STATUS_PAGE.title} | ${SITE.title}`, share: STATUS_PAGE.title, description: STATUS_PAGE.description, root: "", path: "status.html", body, current: "status" }));
+}
 function buildPages(out) {
   for (const page of PAGES) {
     const body = fill(readPage(page.file), { root: "", repo: SITE.repo, x: SITE.x, ...pillMap });
@@ -391,7 +487,7 @@ function buildPages(out) {
 function buildSitemap(incidents, out) {
   const newest = incidents[0]?.last_updated;
   const entry = (path, lastmod) => `<url><loc>${esc(`${SITE.url}/${path}`)}</loc>${lastmod ? `<lastmod>${esc(lastmod)}</lastmod>` : ""}</url>`;
-  const urls = [entry("", newest), ...incidents.map((i) => entry(`incidents/${i.slug}.html`, i.last_updated)), ...PAGES.map((p) => entry(`${p.file}.html`))];
+  const urls = [entry("", newest), ...incidents.map((i) => entry(`incidents/${i.slug}.html`, i.last_updated)), entry(`${STATUS_PAGE.file}.html`, newest), ...PAGES.map((p) => entry(`${p.file}.html`))];
   writeFileSync(join(out, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`);
 }
 
@@ -417,7 +513,7 @@ function checkLlms(incidents) {
   if (!existsSync(path)) return ["llms.txt: file is missing"];
   const txt = readFileSync(path, "utf8");
   const missing = [];
-  for (const page of PAGES) if (!txt.includes(`${page.file}.html`)) missing.push(`${page.file}.html`);
+  for (const page of [...PAGES, STATUS_PAGE]) if (!txt.includes(`${page.file}.html`)) missing.push(`${page.file}.html`);
   for (const i of incidents) if (!i.sample) for (const f of Object.values(i.files)) if (!txt.includes(f)) missing.push(f);
   return missing.map((f) => `llms.txt: does not list ${f}; add it in the same change`);
 }
@@ -450,11 +546,12 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1
     (i.typed ? writeTyped : writeLegacy)(i, others, out);
   }
   buildHome(incidents, out);
+  buildStatus(incidents, out);
   buildPages(out);
   buildSitemap(incidents, out);
   updateIndexJson(incidents, out);
   if (!inPlace) for (const f of ["llms.txt", "robots.txt"]) cpSync(join(ROOT, f), join(out, f));
   for (const i of incidents) console.log(`wrote incidents/${i.slug}.html${i.typed ? ` and ${i.slug}.md` : ""}`);
-  console.log(`wrote index.html, ${PAGES.map((p) => `${p.file}.html`).join(", ")}, 404.html, sitemap.xml, index.json`);
+  console.log(`wrote index.html, status.html, ${PAGES.map((p) => `${p.file}.html`).join(", ")}, 404.html, sitemap.xml, index.json`);
   for (const w of warnings) console.warn(`warning: ${w}`);
 }

@@ -1,0 +1,55 @@
+<main id="main" class="status">
+
+<section class="wrap doc-head">
+<p class="kicker accent">Status board</p>
+<h1>Every incident we are following, in one view.</h1>
+<p class="lede">The answer so far, where it is happening and when. {{checked}}</p>
+</section>
+
+<section class="wrap status-block" aria-labelledby="st-answers">
+<h2 id="st-answers">The answers so far</h2>
+<div class="stats">
+{{stats}}
+</div>
+<p class="meta stats-hint" hidden>Pick an answer to see only those incidents in the list at the bottom of the page.</p>
+</section>
+
+<section class="wrap status-pair">
+<div>
+<h2>Where it is happening</h2>
+<p class="meta">Incidents by kind of organization and by answer.</p>
+{{by_subject}}
+</div>
+<div>
+<h2>What kind of incident</h2>
+<p class="meta">An outage is a service that stopped working, whatever the cause turns out to be.</p>
+{{by_type}}
+</div>
+</section>
+
+<section class="wrap status-block" aria-labelledby="st-when">
+<h2 id="st-when">When it happened</h2>
+<p class="meta">{{when_note}}</p>
+{{when_chart}}
+</section>
+
+<section class="wrap status-block last" id="list" aria-labelledby="list-title">
+<div class="board-head">
+<div>
+<h2 id="list-title">All incidents</h2>
+<p class="meta" id="list-count">{{count}}</p>
+</div>
+<div class="filters" role="group" aria-label="Sort the list" hidden>
+<button type="button" class="pick" data-sort="happened" aria-pressed="true">Newest first</button>
+<button type="button" class="pick" data-sort="name" aria-pressed="false">A to Z</button>
+<button type="button" class="pick" data-sort="checked" aria-pressed="false">Longest since a check</button>
+</div>
+</div>
+{{list}}
+</section>
+
+</main>
+<script>
+/* Optional: filter the list by answer and sort it. Without it the list shows every incident, newest first. */
+(function(){var list=document.getElementById("list");if(!list)return;var body=list.querySelector("tbody"),rows=[].slice.call(body.rows),stats=[].slice.call(document.querySelectorAll(".stat")),sorts=list.querySelector(".filters"),title=document.getElementById("list-title"),count=document.getElementById("list-count"),hint=document.querySelector(".stats-hint"),group="",sort="happened";function name(a,b){return a.getAttribute("data-name").localeCompare(b.getAttribute("data-name"))}function apply(){rows.sort(sort==="name"?name:sort==="checked"?function(a,b){return Date.parse(a.getAttribute("data-checked"))-Date.parse(b.getAttribute("data-checked"))||name(a,b)}:function(a,b){return b.getAttribute("data-happened").localeCompare(a.getAttribute("data-happened"))||name(a,b)}).forEach(function(r){body.appendChild(r)});var n=0,on=null;rows.forEach(function(r){var ok=!group||r.getAttribute("data-group")===group;r.hidden=!ok;if(ok)n++});stats.forEach(function(s){if(s.getAttribute("data-group")===group){s.setAttribute("aria-current","true");on=s}else s.removeAttribute("aria-current")});title.textContent=on?on.getAttribute("data-title"):"All incidents";count.textContent=n+" of "+rows.length+(on?". Pick the same answer again to see them all.":"");[].forEach.call(sorts.querySelectorAll("button"),function(b){b.setAttribute("aria-pressed",b.getAttribute("data-sort")===sort?"true":"false")})}stats.forEach(function(s){s.addEventListener("click",function(e){e.preventDefault();var g=s.getAttribute("data-group");group=group===g?"":g;apply();if(group)list.scrollIntoView()})});sorts.addEventListener("click",function(e){var b=e.target.closest("button");if(b){sort=b.getAttribute("data-sort");apply()}});sorts.hidden=false;hint.hidden=false;apply()})();
+</script>

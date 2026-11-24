@@ -19,7 +19,7 @@ pages/                   the copy for Home, How it works and About
 assets/site.css          one shared stylesheet, light and dark
 ```
 
-The site is static files served by GitHub Pages. The built pages (`index.html`, `how-it-works.html`, `about.html`, `404.html`, `sitemap.xml`, `incidents/*.html`, `incidents/*.md`) are committed next to their sources.
+The site is static files served by GitHub Pages. The built pages (`index.html`, `status.html`, `how-it-works.html`, `about.html`, `404.html`, `sitemap.xml`, `incidents/*.html`, `incidents/*.md`) are committed next to their sources.
 
 ```sh
 node scripts/check.mjs        # validate, test the checks, rebuild, and list what to commit

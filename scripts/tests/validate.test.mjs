@@ -163,7 +163,7 @@ test("the build is repeatable and writes the pages search engines need", () => {
   try {
     const build = (name) => { execFileSync(process.execPath, [join(ROOT, "scripts", "build.mjs"), "--out", join(base, name), "--sample"], { stdio: "pipe" }); return join(base, name); };
     const a = build("a"), b = build("b");
-    const files = ["index.html", "404.html", "sitemap.xml", "robots.txt", "index.json", `incidents/${SLUG}.html`, `incidents/${SLUG}.md`];
+    const files = ["index.html", "status.html", "404.html", "sitemap.xml", "robots.txt", "index.json", `incidents/${SLUG}.html`, `incidents/${SLUG}.md`];
     for (const f of files) assert.equal(readFileSync(join(a, f), "utf8"), readFileSync(join(b, f), "utf8"), `${f} differs between two builds`);
     const page = readFileSync(join(a, "incidents", `${SLUG}.html`), "utf8");
     assert.match(page, /<title>Was the Example City water portal outage a hack\? \| Is It a Hack\?<\/title>/);
@@ -206,6 +206,14 @@ test("the build is repeatable and writes the pages search engines need", () => {
     assert.doesNotMatch(group("unclear") + group("hack-stated") + group("hack-reported"), sampleRow, "and under no other group");
     assert.equal(listed.find((i) => i.slug === SLUG).answer_group, "no-sign-of-hack", "index.json says which answer an incident is filed under");
     assert.doesNotMatch(home, /<img /, "the home page lists incidents as text; photographs stay on the incident pages");
+    // the status board counts the same incidents: one row each, and tiles that add up
+    const board = readFileSync(join(a, "status.html"), "utf8");
+    assert.equal(board.match(/<tr data-group="/g).length, listed.length, "the status board has one row for every incident");
+    const tiles = [...board.matchAll(/<span class="stat-n">(\d+)<\/span>/g)].map((m) => Number(m[1]));
+    assert.equal(tiles.length, 4, "the status board has a count for each of the four answers");
+    assert.equal(tiles.reduce((sum, n) => sum + n, 0), listed.length, "the counts add up to the incidents");
+    assert.match(board, new RegExp(`<tr data-group="no-sign-of-hack"[^>]*><td data-label="Incident"><a href="incidents/${SLUG}\\.html">`), "the sample is on the board under its answer");
+    assert.match(readFileSync(join(a, "sitemap.xml"), "utf8"), /<loc>https:\/\/isitahack\.com\/status\.html<\/loc>/, "the status board is in the sitemap");
   } finally {
     rmSync(base, { recursive: true, force: true });
   }

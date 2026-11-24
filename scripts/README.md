@@ -25,7 +25,7 @@ What it does:
 
 1. For every `data/incidents/<slug>/incident.json`, loads the folder through `validate.mjs`. Any problem stops the build; a failed check is never bypassed. It then writes `incidents/<slug>.html` and a Markdown version, `incidents/<slug>.md`. Both are outputs.
 2. For every other `incidents/<slug>.md`, renders the hand-written page as it is. This is how an incident not yet in the typed format can stay on the site; no incident uses it at the moment. Its front-matter may carry `question`, `answer`, `answer_label` and `latest` so the page can lead with the short answer and the latest update.
-3. Writes `index.html`, `how-it-works.html` and `about.html` from `pages/*.html`, plus `404.html`.
+3. Writes `index.html`, `status.html`, `how-it-works.html` and `about.html` from `pages/*.html`, plus `404.html`. The home page and the status board are counted from the incidents: nothing on them is written by hand.
 4. Writes `sitemap.xml`. An incident's date there is its last update that changed a finding.
 5. Updates `index.json`, keeping existing fields.
 6. Stops when `llms.txt` does not list a page or an incident's files.
