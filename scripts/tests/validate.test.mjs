@@ -14,7 +14,7 @@ import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { validateIncident } from "../validate.mjs";
 import { isBuiltPage } from "../build.mjs";
-import { incidentPicture, nextCheck } from "../incident.mjs";
+import { incidentPicture, nextCheck, cadenceText } from "../incident.mjs";
 import { emptyUpdates } from "../changes.mjs";
 import { renderPlate } from "../plate.mjs";
 
@@ -252,8 +252,14 @@ test("the check knows a built page from a source", () => {
 test("the next check follows the decided cadence", () => {
   const first_published = "2026-11-20T09:00:00-05:00";
   const due = (o) => nextCheck({ status: "monitoring", service: null, first_published, ...o });
-  assert.deepEqual(due({ last_checked: "2026-11-20T22:10:00-05:00", service: { state: "down" } }), { every: "hour", due: "2026-11-20T23:10:00-05:00" }, "every hour while it is down");
+  assert.deepEqual(due({ last_checked: "2026-11-20T22:10:00-05:00", service: { state: "down" } }), { every: "hour", due: "2026-11-20T23:10:00-05:00" }, "every hour while it is down, in the story's first three days");
   assert.deepEqual(due({ last_checked: "2026-11-20T23:30:00-05:00", service: { state: "partly-back" } }), { every: "hour", due: "2026-11-21T00:30:00-05:00" }, "and while it is only partly back, across midnight");
+  assert.deepEqual(due({ last_checked: "2026-11-22T23:30:00-05:00", service: { state: "down" } }), { every: "hour", due: "2026-11-23T00:30:00-05:00" }, "still hourly on the story's third day");
+  assert.deepEqual(due({ last_checked: "2026-11-23T00:20:00-05:00", service: { state: "down" } }), { every: "day", due: "2026-11-24T23:59:00-05:00", down: true }, "after three days something still down is checked once a day, not hourly");
+  assert.deepEqual(due({ last_checked: "2026-12-10T15:00:00-05:00", service: { state: "partly-back" } }), { every: "day", due: "2026-12-11T23:59:00-05:00", down: true }, "and stays daily for as long as it is only partly back");
+  assert.deepEqual(due({ last_checked: "2026-12-10T15:00:00-05:00", service: { state: "down" }, status: "resolved" }), { every: "day", due: "2026-12-11T23:59:00-05:00", down: true }, "something still down is checked daily whatever the status says");
+  assert.equal(cadenceText(due({ last_checked: "2026-12-10T15:00:00-05:00", service: { state: "down" } })), "once a day while it is still down", "the page says why a late outage is checked daily");
+  assert.equal(cadenceText(due({ last_checked: "2026-11-21T10:00:00-05:00" })), "once a day for the first three days", "and an early story's daily check keeps its own words");
   assert.deepEqual(due({ last_checked: "2026-11-20T09:00:00-05:00", service: { state: "back" } }), { every: "day", due: "2026-11-21T23:59:00-05:00" }, "once it is back, the story's own cadence applies");
   assert.deepEqual(due({ last_checked: "2026-11-22T23:50:00-05:00" }), { every: "day", due: "2026-11-23T23:59:00-05:00" }, "once a day for the first three days, due by the end of the next day");
   assert.deepEqual(due({ last_checked: "2026-11-23T00:05:00-05:00" }), { every: "3 days", due: "2026-11-26T23:59:00-05:00" }, "every three days after that");

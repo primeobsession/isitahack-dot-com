@@ -25,7 +25,7 @@ import { join, dirname, basename, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { LABELS, ANSWER_GROUPS, answerPill, esc, slugify, pill, inline, linkTag, fmtDate, fmtDay, timeTag, renderBody, warnings, warn, setCurrent } from "./html.mjs";
 import { loadIncident } from "./validate.mjs";
-import { renderIncident, incidentMarkdown, incidentLayout, incidentPicture, evidenceBar, summarize, SERVICE_STATES, CADENCES } from "./incident.mjs";
+import { renderIncident, incidentMarkdown, incidentLayout, incidentPicture, evidenceBar, summarize, SERVICE_STATES, cadenceText } from "./incident.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -472,7 +472,7 @@ ${stated.map((i) => `<li class="svc svc-${i.service.state}"${i.service.as_of ? `
       esc(i.size || ""),
       i.incident_date ? timeTag(i.incident_date, rowDay(i.incident_date, year)) : "",
       timeTag(checkedOf(i), fmtDay(checkedOf(i))),
-      i.next_check ? `<span class="due">${timeTag(i.next_check.due, i.next_check.every === "hour" ? fmtDate(i.next_check.due) : fmtDay(i.next_check.due))}</span><span class="kind" title="The desk checks ${esc(CADENCES[i.next_check.every])}">${EVERY[i.next_check.every]}</span>` : "",
+      i.next_check ? `<span class="due">${timeTag(i.next_check.due, i.next_check.every === "hour" ? fmtDate(i.next_check.due) : fmtDay(i.next_check.due))}</span><span class="kind" title="The desk checks ${esc(cadenceText(i.next_check))}">${EVERY[i.next_check.every]}</span>` : "",
     ];
     return `<tr data-group="${g.key}" data-name="${esc(rowName(i).toLowerCase())}" data-happened="${esc(i.incident_date || "")}" data-checked="${esc(checkedOf(i))}"${i.next_check ? ` data-due="${esc(i.next_check.due)}"` : ""}>${cells.map((c, n) => `<td data-label="${head[n]}">${c}</td>`).join("")}</tr>`;
   }).join("\n");

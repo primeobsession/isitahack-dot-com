@@ -36,11 +36,14 @@ const STANDARD_NOTE = `<strong>Not verified: initial investigation only.</strong
 const two = (n) => String(n).padStart(2, "0");
 
 // When the next check is due, by the decided cadence (operations manual section 3): every hour
-// while something is down, once a day for a story's first three days, every three days until
-// it is resolved, then weekly. A daily or slower check is due by the end of its day, in the
-// offset the last check was logged with. A closed story is not checked again.
+// while something is down during a story's first three days, and once a day while it is still
+// down after that; otherwise once a day for the first three days, every three days until it is
+// resolved, then weekly. A daily or slower check is due by the end of its day, in the offset
+// the last check was logged with. A closed story is not checked again.
 const HOUR = 36e5, DAY = 864e5;
-export const CADENCES = { hour: "every hour while it is down", day: "once a day for the first three days", "3 days": "every three days until it is resolved", week: "once a week now it is resolved" };
+export const CADENCES = { hour: "every hour while it is down, for the story's first three days", "still down": "once a day while it is still down", day: "once a day for the first three days", "3 days": "every three days until it is resolved", week: "once a week now it is resolved" };
+// The words for a next check: a daily check on something still down has its own.
+export const cadenceText = (next) => CADENCES[next.down ? "still down" : next.every];
 function atOffset(ms, offset) {
   const mins = offset === "Z" ? 0 : (offset[0] === "-" ? -1 : 1) * (+offset.slice(1, 3) * 60 + +offset.slice(4, 6));
   return `${new Date(ms + mins * 6e4).toISOString().slice(0, 19)}${offset}`;
@@ -48,12 +51,14 @@ function atOffset(ms, offset) {
 export function nextCheck({ status, service, first_published, last_checked }) {
   const offset = String(last_checked || "").match(/T.*(Z|[+-]\d\d:\d\d)$/)?.[1];
   if (status === "closed" || !offset) return null;
-  const last = Date.parse(last_checked);
-  if (service && service.state !== "back") return { every: "hour", due: atOffset(last + HOUR, offset) };
   const dayOf = (iso) => Date.parse(`${atOffset(Date.parse(iso), offset).slice(0, 10)}T00:00:00Z`);
   const day = dayOf(last_checked);
-  const days = status === "resolved" ? 7 : (day - dayOf(first_published || last_checked)) / DAY < 3 ? 1 : 3;
-  return { every: days === 7 ? "week" : days === 1 ? "day" : "3 days", due: `${new Date(day + days * DAY).toISOString().slice(0, 10)}T23:59:00${offset}` };
+  const early = (day - dayOf(first_published || last_checked)) / DAY < 3;
+  const down = Boolean(service) && service.state !== "back";
+  if (down && early) return { every: "hour", due: atOffset(Date.parse(last_checked) + HOUR, offset) };
+  const days = down || (early && status !== "resolved") ? 1 : status === "resolved" ? 7 : 3;
+  const next = { every: days === 7 ? "week" : days === 1 ? "day" : "3 days", due: `${new Date(day + days * DAY).toISOString().slice(0, 10)}T23:59:00${offset}` };
+  return down ? { ...next, down: true } : next;
 }
 // "by 4:12 PM ET, Nov 24" for an hourly check, "by the end of Nov 27, 2026" for the rest.
 export const dueText = (next) => (next.every === "hour" ? fmtDate(next.due) : `the end of ${fmtDay(next.due)}`);
@@ -292,7 +297,7 @@ ${tableHtml(headRow, body)}
 <span class="log-when">${timeTag(u.logged_at)}</span>
 <span class="log-what"><strong>${esc(u.headline)}</strong> ${esc(u.summary)} <span class="meta">${esc(CHANGES[u.change_type])} · ${esc(u.author)}</span></span>
 </li>`);
-  const logHtml = fold({ title: "Update log", count: t.update_log.length, id: "update-log", body: `<p class="meta">Every check and change, newest first. Last checked ${timeTag(sum.last_checked)}.${sum.next_check ? ` The next check is due by ${timeTag(sum.next_check.due, dueText(sum.next_check))}: the desk checks ${CADENCES[sum.next_check.every]}.` : ""}</p>\n<ol class="log">\n${foldRest(logRows, 6, "entries")}\n</ol>` });
+  const logHtml = fold({ title: "Update log", count: t.update_log.length, id: "update-log", body: `<p class="meta">Every check and change, newest first. Last checked ${timeTag(sum.last_checked)}.${sum.next_check ? ` The next check is due by ${timeTag(sum.next_check.due, dueText(sum.next_check))}: the desk checks ${cadenceText(sum.next_check)}.` : ""}</p>\n<ol class="log">\n${foldRest(logRows, 6, "entries")}\n</ol>` });
   const sourcesHtml = fold({ title: "Sources", count: t.sources.length, id: "sources", body: `<ol class="source-lines numbered">\n${t.sources.map((s) => sourceLine(s.source_id)).join("\n")}\n</ol>` });
 
   // ---------- the top of the page ----------

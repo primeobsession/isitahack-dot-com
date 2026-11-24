@@ -140,7 +140,7 @@ A log row filed as `added`, `updated` or `label_change` moves the page's "Last u
 
 ## When the next check is due
 
-The build works out when each story is next due a check, from the cadence the owner decided (Nov 24, 2026): every hour while `service` is `down` or `partly-back`; once a day for a story's first three days; every three days until it is resolved; weekly once `status` is `resolved`. A closed story is not checked again. An hourly check is due an hour after the last one; the others are due by the end of the day.
+The build works out when each story is next due a check, from the cadence the owner decided (Nov 24, 2026): every hour while `service` is `down` or `partly-back` during a story's first three days, and once a day while it is still down after that; otherwise once a day for a story's first three days; every three days until it is resolved; weekly once `status` is `resolved`. A closed story is not checked again. The three days are counted from the day the story was first published. An hourly check is due an hour after the last one; the others are due by the end of the day.
 
 "Last checked" is the newest log row that is not `presentation`, so every run must add its row, even an empty one. The due time is on the story's page, in its Markdown version, on the status board (which marks what is overdue and can list the most overdue first) and in `index.json` as `last_checked`, `check_every` and `next_check_due`. Nothing is written by hand.
 
