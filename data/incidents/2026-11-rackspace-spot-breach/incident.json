@@ -7,7 +7,7 @@
     "kind": "online-service"
   },
   "incident_type": "breach",
-  "answer_group": "hack-reported",
+  "answer_group": "hack-stated",
   "service": {
     "state": "back",
     "claim_id": "c004"
@@ -25,20 +25,28 @@
   "verdict_approved_at": null,
   "size": "Regional",
   "size_basis": "Rackspace Spot runs customers' Kubernetes clusters, and the admin console was down for days. Rackspace reportedly says some customer organizations were affected. The number is unknown.",
-  "who_is_affected": "Organizations that run workloads on Rackspace Spot. Rackspace reportedly told affected customers to reissue Spot API tokens, replace refresh tokens, download new kubeconfig files and rotate credentials in cluster Secrets. Other customers should watch Rackspace's notices.",
+  "who_is_affected": "Organizations that run workloads on Rackspace Spot. Rackspace says Spot shuts down Dec 8, 2026 at 5pm CT; customers need to retrieve data and move workloads before then, and rotate Spot API tokens, refresh tokens, kubeconfigs and cluster Secrets.",
   "known": [
+    {
+      "text": "Rackspace's Spot status page refers to 'the recent security incident affecting Rackspace Spot'.",
+      "claim_id": "c013"
+    },
+    {
+      "text": "Rackspace says it will wind down Spot on Dec 8, 2026 at 5pm CT; running workloads will be terminated and data will not be accessible after that date.",
+      "claim_id": "c014"
+    },
     {
       "text": "Rackspace's release notes list a November 2026 fix that closed a network exposure on Spot worker nodes as part of security hardening.",
       "claim_id": "c006"
     },
     {
-      "text": "Rackspace's Spot status page says new sign-ups are restricted until Nov 25, 17:00 UTC after recent system maintenance.",
+      "text": "Rackspace's Spot status page said new sign-ups were restricted until Nov 25, 17:00 UTC after recent system maintenance.",
       "claim_id": "c007"
     }
   ],
   "not_known": [
     {
-      "text": "Whether Rackspace itself has confirmed the breach on a page it hosts. Reports rely on a customer notice and a Spot team member's forum post."
+      "text": "Whether Rackspace will confirm on its own pages how the security incident happened. The details (leaked credentials, Nov 17) come from a customer notice and a Spot team member's forum post."
     },
     {
       "text": "Whether customer data or Secrets were actually read or misused, not just readable."
@@ -67,10 +75,10 @@
       "claim_id": "c004"
     },
     {
-      "value": "Nov 25",
-      "label": "New sign-ups restricted until",
-      "detail": "17:00 UTC, on Rackspace's status page",
-      "claim_id": "c007"
+      "value": "Dec 8",
+      "label": "Spot wind-down date",
+      "detail": "5pm CT, on Rackspace's status page",
+      "claim_id": "c014"
     }
   ],
   "sections": [
