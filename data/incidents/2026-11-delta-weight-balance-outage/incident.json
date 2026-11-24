@@ -7,13 +7,13 @@
     "kind": "aviation"
   },
   "incident_type": "outage",
-  "answer_group": "unclear",
+  "answer_group": "no-sign-of-hack",
   "also_called": [
     "Delta outage",
     "Delta Atlanta ground stop",
     "Delta ALIS outage"
   ],
-  "status": "monitoring",
+  "status": "resolved",
   "incident_date": "2026-11-22",
   "disclaimer": "Made for entertainment using AI. Not endorsed by Delta Air Lines, the FAA, any news outlet, government agency, company, or anyone else named.",
   "main_question_id": "q001",
@@ -37,7 +37,7 @@
       "text": "What caused the outage. Delta gives no cause."
     },
     {
-      "text": "Whether a cyberattack was involved. No official statement addresses it either way."
+      "text": "Whether anyone besides Delta can confirm it was not a cyberattack."
     },
     {
       "text": "Whether it relates to the FAA's Nov 13 ground stop or United's Nov 16 outage."
@@ -100,5 +100,9 @@
       "title": "What we checked and did not find",
       "file": "notes/checked-not-found.md"
     }
-  ]
+  ],
+  "service": {
+    "state": "back",
+    "claim_id": "c005"
+  }
 }
