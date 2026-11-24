@@ -48,7 +48,7 @@
       "text": "Whether logins were taken, as TourMaG reports."
     },
     {
-      "text": "How the attackers got in, and who they are."
+      "text": "Who the attackers are, and whether the company confirms how they got in."
     },
     {
       "text": "What the company's investigation finds, and whether it will publish it."
@@ -70,7 +70,7 @@
     {
       "value": "All",
       "label": "Customer platforms back",
-      "detail": "Mon Nov 23, per the company",
+      "detail": "Mon Nov 23, per the company; some customers say slower",
       "claim_id": "c004"
     }
   ],

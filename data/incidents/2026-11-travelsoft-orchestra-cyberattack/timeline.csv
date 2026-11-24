@@ -1,5 +1,9 @@
 event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t007,2026-11-19T23:45:00+01:00,,11:45 PM Thu Nov 19 (Paris time),stated,"The intrusion begins, TourMaG reports",c011,"TourMaG, Nov 24, from its own sources."
+t008,2026-11-20T04:30:00+01:00,,About 4:30 AM Fri Nov 20 (Paris time),approximate,"The company's teams spot the break-in after about five hours of exploring and running commands, and block it about 15 minutes later, TourMaG reports",c011,"TourMaG, Nov 24, from its own sources."
 t001,2026-11-20T05:00:00+01:00,,5 AM Fri Nov 20 (Paris time),stated,"Teams begin working to restore services, after abnormal activity with illicit access is seen overnight",c001,L'Echo touristique: teams at work 'since Friday at 5 AM'.
+t009,2026-11-20T07:30:00+01:00,,7:30 AM Fri Nov 20 (Paris time),stated,"The tour-operator catalogues are switched off, TourMaG reports",c002,"TourMaG, Nov 24."
+t010,2026-11-20T10:00:00+01:00,,10 AM Fri Nov 20 (Paris time),stated,"A full shutdown follows, TourMaG reports",c002,"TourMaG, Nov 24."
 t002,2026-11-20T15:45:00+01:00,,3:45 PM Fri Nov 20 (Paris time),stated,TourMaG publishes that many travel sites are down and quotes the company's president on the cyberattack,c001,TourMaG's own time stamp.
 t003,2026-11-20T18:00:00+01:00,,About 6 PM Fri Nov 20 (Paris time),approximate,The company's president says services are being brought back gradually,c004,'Vers 18 heures' per L'Echo touristique.
 t004,2026-11-20T22:00:00+01:00,,10 PM Fri Nov 20 (Paris time),stated,Gradual restoration of customer platforms begins,c004,As told to L'Echo touristique on Saturday morning.
