@@ -44,7 +44,7 @@ export function privacyProblem(text) {
 const VERDICT_WORDS = /confirmed\s+(not\s+)?(a\s+)?hack\b/i;
 // Social platforms are Tier 4 or 5 whoever posts there (operations manual 2.2): leads,
 // never a basis for Confirmed.
-const SOCIAL_HOSTS = ["x.com", "twitter.com", "facebook.com", "instagram.com", "threads.net", "threads.com", "tiktok.com", "reddit.com", "bsky.app", "truthsocial.com", "t.me", "linkedin.com", "mastodon.social"];
+const SOCIAL_HOSTS = ["x.com", "twitter.com", "facebook.com", "instagram.com", "threads.net", "threads.com", "tiktok.com", "reddit.com", "news.ycombinator.com", "bsky.app", "truthsocial.com", "t.me", "linkedin.com", "mastodon.social"];
 const isSocial = (url) => { try { const h = new URL(url).hostname.toLowerCase(); return SOCIAL_HOSTS.some((s) => h === s || h.endsWith(`.${s}`)); } catch { return false; } };
 // The main question becomes the page title and main heading, so it has to make
 // sense on its own in a list of search results.

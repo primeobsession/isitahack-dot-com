@@ -96,6 +96,7 @@ rule("a main question that is not in questions.csv", (t) => t.head((h) => { h.ma
 rule("Confirmed on a single news outlet is rejected", (t) => t.swap("claims.csv", "Confirmed,s003;s004,", "Confirmed,s003,"), /Confirmed needs a Tier 1 source, or two Tier 2\/3 sources/);
 rule("Confirmed on two outlets repeating one report is rejected", (t) => t.swap("sources.csv", "Example Wire,2,example-wire,", "Example Wire,2,example-daily,"), /Confirmed needs a Tier 1 source, or two Tier 2\/3 sources/);
 rule("a 'known' item resting on a claim that is not Confirmed", (t) => t.head((h) => { h.known[0].claim_id = "c003"; }), /only Confirmed claims can be listed as known/);
+rule("a discussion thread ranked as a news outlet", (t) => t.swap("sources.csv", "s001,https://water.example.org/status,", "s001,https://news.ycombinator.com/item?id=1,"), /a post on a social platform is Tier 4 or 5/);
 rule("a social post ranked as an official source", (t) => t.swap("sources.csv", "s001,https://water.example.org/status,", "s001,https://x.com/examplewater/status/1,"), /a post on a social platform is Tier 4 or 5/);
 rule("a dead link with no archived copy", (t) => t.swap("sources.csv", "2026-01-12T10:30:00-05:00,,ok,", "2026-01-12T10:30:00-05:00,,dead,"), /archive_url: required when link_status is dead/);
 
