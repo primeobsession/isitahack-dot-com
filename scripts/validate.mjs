@@ -192,6 +192,9 @@ function readTable(dir, file, fields, errs, required = true) {
 // ---------- one incident ----------
 // Returns { errs, head, t, chartData, tableData }. `t` holds the typed rows of
 // each standard table; chartData and tableData are keyed by chart/table id.
+// From this day a new incident needs a photograph, or a stated reason for having none.
+export const PHOTO_RULE_FROM = "2026-11-26T00:00:00-05:00";
+
 export function loadIncident(dir) {
   const errs = [];
   const empty = { head: null, t: {}, chartData: {}, tableData: {} };
@@ -331,6 +334,12 @@ export function loadIncident(dir) {
       if (header.includes(s.column) && filled < 2) errs.push(`${chart.data}: column ${show(s.column)} needs at least two numbers`);
     }
     chartData[chart.id] = rows.slice(1).map((cells) => Object.fromEntries(header.map((h, j) => [h, cells[j]])));
+  }
+  // a photograph, or the reason there is none. Incidents opened before the rule are filled in as they are checked.
+  const opened = t.update_log?.length ? t.update_log[t.update_log.length - 1].logged_at : null;
+  if (head.lead_image && head.no_photo) errs.push("incident.json.no_photo: the incident has a photograph (lead_image), so remove no_photo");
+  if (!head.lead_image && !head.no_photo && opened && Date.parse(opened) >= Date.parse(PHOTO_RULE_FROM)) {
+    errs.push(`incident.json.lead_image: an incident opened on or after ${PHOTO_RULE_FROM.slice(0, 10)} needs a photograph. Add one under the picture rules (format/README.md), or say in no_photo where you looked and why nothing could be used`);
   }
   // what the subject is: a description and the page it rests on, together or not at all
   if (head.subject && typeof head.subject === "object" && Boolean(head.subject.about) !== Boolean(head.subject.about_url)) {

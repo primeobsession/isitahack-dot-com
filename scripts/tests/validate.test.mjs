@@ -58,6 +58,17 @@ test("the sample incident passes every check", () => {
 
 // ---------- shape of the files ----------
 rule("an unknown field in incident.json is rejected", (t) => t.head((h) => { h.severity = "high"; }), /incident\.json\.severity: unknown field/);
+// ---------- a new incident has a photograph, or says why not ----------
+// The sample was opened in January 2026, before the rule; moving its log to December puts it after.
+const openedLater = (more = () => {}) => (t) => { const log = join(t.dir, "update_log.csv"); writeFileSync(log, readFileSync(log, "utf8").replaceAll("2026-01-", "2026-12-")); t.head((h) => { delete h.lead_image; more(h); }); };
+const PHOTO = /incident\.json\.lead_image: an incident opened on or after 2026-11-26 needs a photograph/;
+rule("a new incident with no photograph and no reason", openedLater(), PHOTO);
+test("a new incident may have no photograph if it says where the desk looked", () => {
+  const errs = problems(openedLater((h) => { h.no_photo = "Looked on Wikimedia Commons and the utility's own site; the only images are logos."; }));
+  assert.ok(!errs.some((e) => PHOTO.test(e)), errs.join("\n"));
+});
+test("an incident opened before the rule may still be waiting for its photograph", () => { assert.ok(!problems((t) => t.head((h) => { delete h.lead_image; })).some((e) => PHOTO.test(e))); });
+rule("a reason for no photograph on an incident that has one", (t) => t.head((h) => { h.no_photo = "Looked on Wikimedia Commons and found nothing usable at all."; }), /incident\.json\.no_photo: the incident has a photograph/);
 rule("a description of the subject with no page behind it", (t) => t.head((h) => { delete h.subject.about_url; }), /incident\.json\.subject: about needs about_url/);
 rule("a page for the subject with no description", (t) => t.head((h) => { delete h.subject.about; }), /incident\.json\.subject: about_url needs about/);
 rule("a description of the subject too short to say anything", (t) => t.head((h) => { h.subject.about = "A water utility."; }), /incident\.json\.subject\.about: /);
