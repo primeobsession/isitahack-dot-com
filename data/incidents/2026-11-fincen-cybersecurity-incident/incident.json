@@ -71,6 +71,22 @@
       "claim_id": "c003"
     }
   ],
+  "lead_image": "us-treasury-building",
+  "images": [
+    {
+      "id": "us-treasury-building",
+      "title": "US Treasury headquarters",
+      "file": "images/us-treasury-building.jpg",
+      "alt": "The stone front of the US Treasury Department building in Washington, DC, with a row of tall columns under a triangular pediment, a bronze statue on a pedestal and an iron fence in front.",
+      "caption": "The US Treasury Department building in Washington, DC. FinCEN is a bureau of the Treasury; this is not FinCEN's own office.",
+      "credit": "Carol M. Highsmith, Library of Congress, public domain, via Wikimedia Commons",
+      "rights": "public-domain",
+      "source_url": "https://commons.wikimedia.org/wiki/File:U.S._Treasury_Department_Building,_Washington,_D.C_LCCN2011635063.jpg",
+      "sha256": "eb3c4df3770638459a4581d4987553ef2bec69552a05f6f1caed56209c16de99",
+      "width": 1920,
+      "height": 1476
+    }
+  ],
   "sections": [
     {
       "type": "claims",
