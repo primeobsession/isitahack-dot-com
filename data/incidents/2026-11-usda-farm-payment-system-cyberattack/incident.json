@@ -9,8 +9,8 @@
   "incident_type": "outage",
   "answer_group": "hack-reported",
   "service": {
-    "state": "down",
-    "claim_id": "c018"
+    "state": "partly-back",
+    "claim_id": "c019"
   },
   "lead_image": "usda-whitten-building",
   "also_called": [
@@ -60,7 +60,7 @@
   ],
   "figures": [
     {
-      "value": "~1 week",
+      "value": "Over a week",
       "label": "Disruption so far",
       "detail": "Since about Nov 16",
       "claim_id": "c008"
