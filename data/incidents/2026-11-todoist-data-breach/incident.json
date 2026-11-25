@@ -1,0 +1,116 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-todoist-data-breach",
+  "title": "Todoist data breach, Nov 2026",
+  "subject": {
+    "name": "Todoist",
+    "kind": "online-service",
+    "about": "Todoist is a to-do list and task management app made by Todoist Inc., a company that has worked remotely since 2011. It says the app is used by tens of millions of people and teams to organise work and life.",
+    "about_url": "https://www.todoist.com/about-us"
+  },
+  "no_photo": "Searched Wikimedia Commons and Todoist's own site: only Todoist logos, small icons and slide decks about apps. No reusable photograph of the company, its people's workplace or the app in use.",
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "also_called": [
+    "the Todoist security incident"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-23",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Todoist, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Todoist says its app is used by tens of millions of people. About 6% of its users had an email address and an old password hash taken; the company has not given a number of accounts.",
+  "who_is_affected": "Todoist users whose account still had a password stored the old way (about 6%), and much smaller groups whose tokens, task text or Outlook email previews were taken. Todoist says it has emailed everyone affected; users who got no email need do nothing.",
+  "known": [
+    {
+      "text": "Todoist says an attacker got into its production systems on Nov 23, 2026, using a stolen credential.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Email addresses, old password hashes and account creation dates for about 6% of users were downloaded.",
+      "claim_id": "c005"
+    },
+    {
+      "text": "Smaller groups had tokens, task and comment text, or Outlook email previews taken.",
+      "claim_id": "c006"
+    },
+    {
+      "text": "Todoist disabled affected passwords and tokens and emailed affected users.",
+      "claim_id": "c009"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "How the first stolen credential was obtained.",
+      "question_id": "q004"
+    },
+    {
+      "text": "How many accounts were affected.",
+      "question_id": "q005"
+    },
+    {
+      "text": "Who was behind it.",
+      "question_id": "q006"
+    },
+    {
+      "text": "Whether regulators or police have been told.",
+      "question_id": "q007"
+    }
+  ],
+  "figures": [
+    {
+      "value": "~6%",
+      "label": "Users whose password hash was taken",
+      "detail": "Todoist's notice",
+      "claim_id": "c005"
+    },
+    {
+      "value": "Nov 23",
+      "label": "Data downloaded",
+      "detail": "Todoist's timeline",
+      "claim_id": "c001"
+    },
+    {
+      "value": "Nov 24",
+      "label": "Disclosed",
+      "detail": "Todoist's notice",
+      "claim_id": "c001"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was Todoist hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What was taken, and what was not?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What has Todoist done, and what should I do?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Todoist breach"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

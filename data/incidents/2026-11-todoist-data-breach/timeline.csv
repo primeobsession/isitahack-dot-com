@@ -1,0 +1,8 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-22T09:04:00-05:00,,,stated,Earliest use Todoist has found of the stolen credential for its version control system,c002,Todoist gives 14:04 UTC.
+t002,2026-11-23T01:06:00-05:00,,,stated,The attacker obtains an administrative credential for Todoist's employee sign-in system,c002,Todoist gives 06:06 UTC.
+t003,2026-11-23T07:45:00-05:00,2026-11-23T07:51:00-05:00,,stated,The attacker exports and downloads account records with email addresses and old password hashes,c005,Todoist gives 12:45 to 12:51 UTC.
+t004,2026-11-23T12:01:00-05:00,,,stated,Todoist begins investigating an unexpected administrator account flagged by its security monitoring,c001,Todoist gives 17:01 UTC.
+t005,2026-11-24T00:06:00-05:00,,,stated,Todoist disables its Outlook email add-in,c009,Todoist gives 05:06 UTC.
+t006,2026-11-24T11:11:00-05:00,,,stated,Todoist publishes its notice about the incident,c001,"The notice's update log gives 16:11 UTC; its own timeline says 17:11 UTC."
+t007,2026-11-25T04:39:00-05:00,,,stated,Todoist finishes emailing affected customers,c009,Todoist gives 09:39 UTC.
