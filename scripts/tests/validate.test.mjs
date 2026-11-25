@@ -112,6 +112,29 @@ rule("filed as no sign of a hack while the main answer is Not established", (t) 
 rule("a service state resting on a claim that does not exist", (t) => t.head((h) => { h.service.claim_id = "c099"; }), /service\.claim_id: "c099" is not in claims\.csv/);
 rule("a service state resting on a rumor", (t) => t.head((h) => { h.service.claim_id = "c003"; }), /service: rests on c003, which is labelled Rumor; whether a service is back can only rest on a Confirmed or Reported claim/);
 rule("a service state outside the three", (t) => t.head((h) => { h.service.state = "fine"; }), /incident\.json\.service\.state: "fine" is not one of/);
+
+// ---------- resolved means over and quiet ----------
+// The sample's last update is u003 at 5:30 PM on Jan 12, with one check the next morning.
+const LOG_HEAD = "claim_ids,author\n";
+const quietRow = (id, at, type = "checked_no_change") => `${id},${at},watch,${type},Still nothing new from the utility.,"Checked the status page and the utility newsroom. No change.",,Research agent\n`;
+const resolved = (rows = "", more = () => {}) => (t) => { if (rows) t.swap("update_log.csv", LOG_HEAD, LOG_HEAD + rows); t.head((h) => { h.status = "resolved"; more(h); }); };
+const QUIET_WEEK = quietRow("u006", "2026-01-19T17:30:00-05:00") + quietRow("u005", "2026-01-16T08:00:00-05:00");
+test("a story with nothing down and seven quiet days across two checks may be resolved", () => {
+  assert.deepEqual(problems(resolved(QUIET_WEEK)), [], "exactly seven days after the last update, with three checks since");
+  assert.deepEqual(problems(resolved(QUIET_WEEK, (h) => { delete h.service; })), [], "and a story where nothing ever went down");
+  assert.deepEqual(problems(resolved(quietRow("u006", "2026-01-19T17:30:00-05:00", "staleness_check") + quietRow("u005", "2026-01-16T08:00:00-05:00", "blocked_source"))), [], "any logged check counts, whatever kind it is");
+});
+rule("resolved while something is still down", resolved(QUIET_WEEK, (h) => { h.service.state = "partly-back"; }), /status: resolved, but service says "partly-back"; a story is resolved only when nothing is still down\. Set status back to monitoring/);
+rule("resolved the day after its last update", resolved(), /status: resolved, but update_log\.csv u003 filed an update \(updated\) only 14 hours before the newest check; a story is resolved after seven days with no update\. Set status back to monitoring/);
+rule("resolved a minute short of seven quiet days", resolved(quietRow("u006", "2026-01-19T17:29:00-05:00") + quietRow("u005", "2026-01-16T08:00:00-05:00")), /u003 filed an update \(updated\) only 6 days before the newest check/);
+rule("resolved after seven quiet days but only one check", (t) => { t.swap("update_log.csv", "u004,2026-01-13T08:00:00-05:00", "u004,2026-01-20T08:00:00-05:00"); t.head((h) => { h.status = "resolved"; }); }, /status: resolved, but only one check follows the last update \(update_log\.csv u003\); a story is resolved after at least two checks across seven quiet days/);
+rule("a change to wording is not a check", (t) => { t.swap("update_log.csv", "u004,2026-01-13T08:00:00-05:00,watch,checked_no_change", "u004,2026-01-13T08:00:00-05:00,watch,presentation"); resolved(quietRow("u005", "2026-01-20T08:00:00-05:00"))(t); }, /only one check follows the last update \(update_log\.csv u003\)/);
+rule("a new update on a resolved story must put it back in monitoring", resolved(`u007,2026-01-22T09:00:00-05:00,watch,updated,The utility publishes its review of the failed update.,Added the review.,c001,Research agent\n` + QUIET_WEEK), /update_log\.csv u007 filed an update \(updated\) and no check has followed it; a story is resolved after seven days with no update\. Set status back to monitoring/);
+rule("a correction on a resolved story counts as an update too", resolved(`u008,2026-01-23T09:00:00-05:00,watch,checked_no_change,Still nothing new.,No change.,,Research agent\nu007,2026-01-22T09:00:00-05:00,watch,correction,The restore time was wrong by an hour.,Corrected the restore time.,c006,Research agent\n` + QUIET_WEEK), /update_log\.csv u007 filed an update \(correction\) only 1 day before the newest check/);
+test("a monitoring story is not held to the resolved rule", () => {
+  assert.deepEqual(problems((t) => t.head((h) => { h.service.state = "down"; })), [], "a story still down and updated an hour ago is fine while it is monitoring");
+});
+
 rule("an answer group that contradicts the verdict", (t) => t.head((h) => { h.verdict = "Confirmed hack"; h.verdict_approved_at = "2026-01-20T09:00:00-05:00"; h.status = "closed"; }), /answer_group: must be "hack-stated" once the verdict is "Confirmed hack"/);
 
 // ---------- update log ----------

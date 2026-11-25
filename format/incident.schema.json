@@ -30,7 +30,7 @@
         "claim_id": { "type": "string", "pattern": "^c[0-9]{3,}$", "description": "The claim that says so. It must be labelled Confirmed or Reported; its text is shown beside the state." }
       }
     },
-    "status": { "enum": ["monitoring", "resolved", "closed"], "description": "monitoring while the desk is still checking, resolved once the event is over but the cause is not settled, closed only with an approved verdict." },
+    "status": { "enum": ["monitoring", "resolved", "closed"], "description": "monitoring while the story is still moving. resolved once the event is over and the story has gone quiet but the final answer is not settled: nothing still down, no update for seven days across at least two checks, and no dated promise still ahead; set by the Editor-in-Chief, and set back to monitoring in the same change as any new update. closed only with a verdict the owner approved." },
     "incident_date": { "type": "string", "format": "date", "description": "The day the incident began." },
     "disclaimer": { "type": "string", "minLength": 1, "description": "The entertainment and AI disclaimer for this page, naming the kinds of organisation it mentions." },
     "main_question_id": { "type": "string", "pattern": "^q[0-9]{3,}$", "description": "The row in questions.csv that is the headline question. Its text is the page title and main heading, so it must name its subject ('Was the FAA ground stop a cyberattack?', never 'Was it a hack?'). Its answer and label open the page." },

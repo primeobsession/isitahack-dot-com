@@ -144,6 +144,20 @@ The build works out when each story is next due a check, from the cadence the ow
 
 "Last checked" is the newest log row that is not `presentation`, so every run must add its row, even an empty one. The due time is on the story's page, in its Markdown version, on the status board (which marks what is overdue and can list the most overdue first) and in `index.json` as `last_checked`, `check_every` and `next_check_due`. Nothing is written by hand.
 
+## When a story is resolved
+
+`status` is `monitoring`, `resolved` or `closed`. Resolved means the event is over and the story has gone quiet, but the final answer is not settled. It is not a verdict and it does not mean the main question is answered. Adopted by the owner on Nov 25, 2026. A story is resolved when all three hold:
+
+1. **Nothing is still down.** There is no `service`, or its state is `back`.
+2. **It has gone quiet.** No update for seven days, across at least two checks in that time. An update is a log row filed as `added`, `updated`, `label_change` or `correction`. A check is any row that is not `presentation`.
+3. **No dated promise is still ahead.** Nobody has promised a report, a review or a shutdown with a date that has not passed.
+
+A resolved story goes back to `monitoring` in the same change that files a new update or marks something down again. It can be resolved again after another seven quiet days.
+
+The Editor-in-Chief sets `resolved`; the owner's approval is not needed. A research agent does not set it: when a story qualifies, say so in the summary of the check's log row. `closed` needs an approved verdict and is the owner's alone.
+
+The validator checks the first two from the story's own files, so it fails a story marked resolved too early and fails an update that leaves a story resolved. The third is a judgement: read what each open question says would settle it.
+
 ## Charts
 
 A chart is a CSV of numbers plus a short description in `incident.json`: its type (`line` or `bar`), which column is the horizontal axis, which columns are the series, the unit, where the numbers came from, and an `alt` sentence that states the trend in words. The build draws the chart and prints the same numbers as a table under it. Agents never draw a chart or save a picture of one. All series on one chart share one scale, so they must be the same kind of quantity; two different quantities need two charts.
@@ -181,6 +195,7 @@ To check one folder while you work: `node scripts/validate.mjs data/incidents/<s
 - that the main question names its subject, ends with a question mark and fits in a page title;
 - that an answered question has an answer, a label and its claims, and an open one says what would settle it;
 - that a verdict has an approval time and a closed status, and a closed incident has a verdict;
+- that a resolved story has nothing still down and has had no update for seven days across at least two checks;
 - that no text uses the words of a final verdict ("Confirmed hack", "Confirmed not a hack") before one is approved;
 - that `service`, when present, rests on a Confirmed or Reported claim;
 - that the main question is labelled Confirmed, Reported or Not established, that `answer_group` agrees with that label, and that it matches the verdict once there is one;

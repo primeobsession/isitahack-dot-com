@@ -13,7 +13,7 @@
     "Delta Atlanta ground stop",
     "Delta ALIS outage"
   ],
-  "status": "resolved",
+  "status": "monitoring",
   "incident_date": "2026-11-22",
   "disclaimer": "Made for entertainment using AI. Not endorsed by Delta Air Lines, the FAA, any news outlet, government agency, company, or anyone else named.",
   "main_question_id": "q001",

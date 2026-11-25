@@ -50,6 +50,9 @@ const isSocial = (url) => { try { const h = new URL(url).hostname.toLowerCase();
 // sense on its own in a list of search results.
 const VAGUE_QUESTION = /^(was|is|were|are|did|does|do|has|have|had|can|could|will|would)\s+(it|this|that|they|these|those|there)\b/i;
 const MAIN_QUESTION_MAX = 70;
+// A story is resolved after this many days with no update, across at least this many checks.
+const RESOLVED_QUIET_DAYS = 7, RESOLVED_CHECKS = 2;
+const RESOLVED_UPDATES = new Set(["added", "updated", "label_change", "correction"]);
 const show = (v) => JSON.stringify(v);
 
 // ---------- JSON Schema (the subset the incident schema uses) ----------
@@ -266,6 +269,25 @@ export function loadIncident(dir) {
     if (!head.verdict_approved_at) errs.push(`incident.json.verdict_approved_at: required when a verdict is set (the owner approves every verdict)`);
     if (head.status !== "closed") errs.push(`incident.json.status: must be closed once a verdict is set`);
   } else if (head.status === "closed") errs.push(`incident.json.verdict: a closed incident needs an approved verdict`);
+  // Resolved means the event is over and the story has gone quiet (adopted Nov 25, 2026):
+  // nothing still down, and no update for seven days across at least two checks. An update
+  // is a row filed as added, updated, label_change or correction; a check is any row that is
+  // not presentation. Read from the log alone, so the same rule stops a story being marked
+  // resolved too early and stops a new update leaving it resolved.
+  if (head.status === "resolved") {
+    const back = `Set status back to monitoring`;
+    if (head.service && head.service.state !== "back") errs.push(`incident.json.status: resolved, but service says ${show(head.service.state)}; a story is resolved only when nothing is still down. ${back}`);
+    const checks = t.update_log.filter((r) => r.change_type !== "presentation" && Number.isFinite(Date.parse(r.logged_at)));
+    const update = checks.find((r) => RESOLVED_UPDATES.has(r.change_type));
+    if (update && checks.length) {
+      const at = Date.parse(update.logged_at);
+      const quiet = (Date.parse(checks[0].logged_at) - at) / 864e5;
+      const since = checks.filter((r) => Date.parse(r.logged_at) > at).length;
+      const ago = quiet < 1 ? `${Math.floor(quiet * 24)} hours` : `${Math.floor(quiet)} day${Math.floor(quiet) === 1 ? "" : "s"}`;
+      if (quiet < RESOLVED_QUIET_DAYS) errs.push(`incident.json.status: resolved, but update_log.csv ${update.log_id} filed an update (${update.change_type}) ${checks[0] === update ? "and no check has followed it" : `only ${ago} before the newest check`}; a story is resolved after seven days with no update. ${back}, and mark it resolved again once it has been quiet for seven days`);
+      else if (since < RESOLVED_CHECKS) errs.push(`incident.json.status: resolved, but only one check follows the last update (update_log.csv ${update.log_id}); a story is resolved after at least two checks across seven quiet days. ${back} until a second check is logged`);
+    }
+  }
   // Whether a service is back is only ever said on the strength of a sourced claim.
   if (head.service) {
     const c = claims.get(head.service.claim_id);
