@@ -92,5 +92,21 @@
       "title": "What we checked and did not find",
       "file": "notes/checked-not-found.md"
     }
-  ]
+  ],
+  "images": [
+    {
+      "id": "onepassword-logo",
+      "title": "1Password logo",
+      "file": "images/1password-logo.png",
+      "alt": "1Password logo",
+      "caption": "1Password logo (used for identification; not affiliated with isitahack.com).",
+      "credit": "1Password logo, trademark of 1Password, from the 1Password newsroom",
+      "rights": "logo",
+      "source_url": "https://1password.com/press",
+      "sha256": "8d2689ae60dd7efa8bcf436ea3ed8693f4d06ae4e59db9be1c052bfcd179d9f5",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "lead_image": "onepassword-logo"
 }
