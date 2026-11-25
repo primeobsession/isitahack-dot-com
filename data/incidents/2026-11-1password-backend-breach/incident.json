@@ -1,0 +1,96 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-1password-backend-breach",
+  "title": "1Password backend systems breach, Nov 2026",
+  "subject": {
+    "name": "1Password",
+    "kind": "online-service"
+  },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "also_called": [
+    "the 1Password security incident",
+    "the 1Password data breach"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-19",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by 1Password, GitHub, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "1Password is a password manager used by millions of people and many businesses. Only a subset of customers had account details copied, and the company has not said how many.",
+  "who_is_affected": "Some 1Password customers, whose names, sign-in email addresses and account details were copied. 1Password says vaults were not touched and nobody needs to change anything, but advises caution with unexpected emails about invitations or account recovery.",
+  "known": [
+    {
+      "text": "1Password says an attacker gained access to some of its backend systems through an employee's GitHub account.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Names, email addresses and account details of some customers were copied.",
+      "claim_id": "c005"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "How many customers were affected.",
+      "question_id": "q004"
+    },
+    {
+      "text": "How the attacker got into the employee's GitHub account.",
+      "question_id": "q005"
+    },
+    {
+      "text": "Who was behind it.",
+      "question_id": "q006"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 19",
+      "label": "Investigation began",
+      "detail": "1Password's date",
+      "claim_id": "c001"
+    },
+    {
+      "value": "Nov 25",
+      "label": "Disclosed",
+      "detail": "1Password's incident post",
+      "claim_id": "c005"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was 1Password hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What was taken, and what was not?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What has 1Password done, and what should I do?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the 1Password incident"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

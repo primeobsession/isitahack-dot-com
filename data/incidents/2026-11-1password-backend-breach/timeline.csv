@@ -1,0 +1,3 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-19,,,stated,1Password begins investigating signs that an attacker had gained access to an employee's corporate GitHub account,c001,Date from 1Password's post.
+t002,2026-11-25,,,stated,1Password discloses that an attacker reached some backend systems and copied customer account information,c005,
