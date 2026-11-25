@@ -15,6 +15,8 @@
 //                                        The build writes incidents/<slug>.html and <slug>.md.
 //   incidents/<slug>.md                  a hand-written page, for an incident not yet converted
 //                                        (there are none today).
+// data/front-page.json holds the Editor-in-Chief's picks for the front of the home page
+// (scripts/home.mjs); the page builds without it.
 // The folder also gets index.html, status.html, how-it-works.html and about.html from
 // pages/*.html, 404.html, sitemap.xml, index.json, and copies of assets/, each incident's data,
 // format/, llms.txt and robots.txt. Output depends only on the input files: no clock, no
@@ -25,6 +27,7 @@ import { join, dirname, basename, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { LABELS, ANSWER_GROUPS, answerPill, esc, slugify, pill, inline, linkTag, fmtDate, fmtDay, timeTag, renderBody, warnings, warn, setCurrent } from "./html.mjs";
 import { loadIncident } from "./validate.mjs";
+import { NO_PICKS, checkFrontPage, frontBands, renderBands, renderLive, FRESH_DAYS } from "./home.mjs";
 import { renderIncident, incidentMarkdown, incidentLayout, incidentPicture, evidenceBar, summarize, SERVICE_STATES, cadenceText } from "./incident.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -339,7 +342,9 @@ const fill = (html, map) => html.replace(/\{\{(\w+)\}\}/g, (whole, key) => (key 
 const readPage = (name) => readFileSync(join(ROOT, "pages", `${name}.html`), "utf8");
 const pillMap = Object.fromEntries(LABELS.map((l) => [`pill_${slugify(l).replace(/-/g, "_")}`, pill(l)]));
 
-function buildHome(incidents, out) {
+function buildHome(incidents, out, picks = NO_PICKS) {
+  // The front of the page: this week's stories by size, and the newest changes (scripts/home.mjs).
+  const front = frontBands(incidents, picks);
   const monitoring = incidents.filter((i) => i.status === "monitoring");
   const latest = incidents[0];
   const typed = incidents.find((i) => i.typed);
@@ -376,6 +381,10 @@ ${rows.map((i) => incidentRow(i, year)).join("\n")}
     newest: byDay.slice(0, 4).map((i) => `<a href="incidents/${esc(i.slug)}.html">${esc(rowName(i))}</a>`).join(", "),
     answer_key: ANSWER_GROUPS.map((g) => `<div><dt>${answerPill(g)}</dt><dd>${esc(g.means)}</dd></div>`).join("\n"),
     filters, groups,
+    as_of: latest ? `<time class="ago" datetime="${esc(latest.last_updated)}">${esc(fmtDate(latest.last_updated))}</time>` : "",
+    bands: renderBands(front, { name: rowName }),
+    live: renderLive(front, incidents, { name: rowName }),
+    fresh_days: String(FRESH_DAYS), total: String(incidents.length),
   });
   const data = [
     { "@context": "https://schema.org", "@type": "WebSite", "@id": `${SITE.url}/#site`, name: SITE.title, alternateName: ["isitahack", SITE.name], url: `${SITE.url}/`, description: SITE.tagline, publisher: { "@id": ORG["@id"] } },
@@ -577,7 +586,11 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1
     const others = incidents.filter((o) => o !== i).map((o) => ({ slug: o.slug, title: o.title, status: o.status, last_updated: o.last_updated }));
     (i.typed ? writeTyped : writeLegacy)(i, others, out);
   }
-  buildHome(incidents, out);
+  // The Editor-in-Chief's picks for the front of the home page. The page builds without them.
+  const picksFile = join(ROOT, "data", "front-page.json");
+  const front = existsSync(picksFile) ? checkFrontPage(readFileSync(picksFile, "utf8"), typedSlugs) : { errs: [], picks: NO_PICKS };
+  if (front.errs.length) { for (const e of front.errs) console.error(e); console.error("Build stopped: fix the problems above. A failed check is never bypassed."); process.exit(1); }
+  buildHome(incidents, out, front.picks);
   buildStatus(incidents, out);
   buildPages(out);
   buildSitemap(incidents, out);

@@ -121,6 +121,30 @@ It restates the main question's answer and is not a verdict, so it needs no appr
 
 `incident_type` (outage, breach or attack) is what readers filter the home page by. Choose by what happened, not by the suspected cause: a service that went down is an outage even if an attack turns out to be behind it.
 
+## The front of the home page
+
+The top of the home page is built from the incidents, with nothing written by hand. It shows the stories that are current, from biggest to smallest, with the newest changes beside them.
+
+- **Which stories.** An incident in `monitoring` is on the front while any of these holds: it happened in the last seven days (`incident_date`), we opened it in the last 48 hours, or `service` says something is still `down` or `partly-back`. An older story with a new update appears in the live updates, not in the bands.
+- **The bands.** One per `size`, largest first; "Nation-level potential" sits in the Nation-level band, after the established ones and marked "potential". Within a band the most recently updated comes first.
+- **A tile** is the main question, the plain answer in its colour, the main answer's text, the `lead_image` (or the `subject.name` on a plate when there is none), and whether it is new or still down.
+- **Live updates** are the newest log rows filed as `added`, `updated`, `label_change` or `correction`, across every story. A story's first row reads "New story". Checks that found nothing are counted, not listed.
+- **The clock.** The build has none: "now" is the newest check logged in any incident. Pages print real timestamps, and a few lines of script show them as "6 min ago".
+
+### The Editor-in-Chief's picks: `data/front-page.json`
+
+The one hand-written input, and only the Editor-in-Chief changes it. Every field but `updated` may be left out, and the page builds correctly with every list empty.
+
+| Field | What it does |
+|---|---|
+| `updated` | When the picks were last reviewed, with its offset. `lead` and `lines` lapse 48 hours after it, so a front page nobody is tending falls back to the rules |
+| `lead` | Up to 8 slugs, in order. Each goes first in its own band, and is on the front even if it is older than seven days |
+| `keep` | `{ "slug", "until" }`: an older story to keep on the front until that day |
+| `hold` | `{ "slug", "until", "reason" }`: a story to leave off the front until that day. It stays in the full list and on its own page |
+| `lines` | `{ "slug", "text" }`: one sentence, at most 160 characters, shown on that story's tile in place of the main answer's text |
+
+`until` is a day and at most 14 days after `updated`; renew it if it is still needed. A pick never changes a story: the size, the answer and every fact still come from the incident's data. A line follows the same rules as any story text: plain, calm, no verdict words, nothing about the desk. The build stops if the file names an incident that does not exist, picks and holds the same story, or breaks a limit.
+
 ## Is it back?
 
 When something stopped working, readers ask whether it is back. `service` in `incident.json` answers that: a `state` and the `claim_id` of the claim that says so.

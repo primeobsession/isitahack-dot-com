@@ -236,7 +236,17 @@ test("the build is repeatable and writes the pages search engines need", () => {
     assert.equal(listed.find((i) => i.slug === SLUG).answer_group, "no-sign-of-hack", "index.json says which answer an incident is filed under");
     // index.json is built from the last index.json, so its key order must not depend on how many times the build has run
     for (const entry of listed) assert.equal(Object.keys(entry).at(-1), "files", `index.json entry ${entry.slug}: files comes last, whatever the previous build wrote`);
-    assert.doesNotMatch(home, /<img /, "the home page lists incidents as text; photographs stay on the incident pages");
+    // the front of the home page: this week's stories by size, with the newest changes beside them
+    const frontPart = home.slice(home.indexOf('<div class="wrap now"'), home.indexOf('<section class="wrap board"'));
+    assert.ok(frontPart.length > 0 && home.indexOf('<div class="wrap now"') < home.indexOf('<section class="wrap board"'), "the front comes before the full list");
+    assert.doesNotMatch(home.replace(frontPart, ""), /<img /, "outside the front, the home page lists incidents as text");
+    for (const img of frontPart.match(/<img [^>]*>/g) || []) {
+      assert.match(img, / alt="[^"]+"/, `a picture on the front says what it shows: ${img}`);
+      assert.match(img, / width="\d+" height="\d+"/, `and reserves its space: ${img}`);
+      assert.match(img, / loading="lazy"/, `and loads only when it is reached: ${img}`);
+    }
+    for (const t of frontPart.match(/<time [^>]*>/g) || []) assert.match(t, /^<time class="ago[^"]*" datetime="\d{4}-\d{2}-\d{2}T[^"]+">$/, `a time on the front carries its full timestamp: ${t}`);
+    assert.doesNotMatch(frontPart, new RegExp(`incidents/${SLUG}\\.html`), "the made-up sample happened long ago, so it is in the full list but not on the front");
     // the status board counts the same incidents: one row each, and tiles that add up
     const board = readFileSync(join(a, "status.html"), "utf8");
     assert.equal(board.match(/<tr data-group="/g).length, listed.length, "the status board has one row for every incident");

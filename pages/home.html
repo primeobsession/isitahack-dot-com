@@ -2,28 +2,35 @@
 
 <section class="wrap home-intro">
 <div class="intro-copy">
-<p class="kicker accent">Public-source fact-checks of security news</p>
-<h1>Heard that something got hacked?</h1>
-<p class="lede">Look it up. We read what public sources actually say and give you a straight answer in plain words, with the evidence underneath.</p>
+<p class="kicker accent">Is it a hack? Last update {{as_of}}</p>
+<h1>Security news right now, biggest first</h1>
+<p class="lede">Was it a hack? Stories from the last {{fresh_days}} days and anything still down, each with a straight answer and the evidence underneath. Older stories come back when something changes.</p>
 <div class="finder" role="search" hidden>
-<label for="find">Search by company, service or agency</label>
+<label for="find">Heard that something got hacked? Look it up</label>
 <input id="find" type="search" autocomplete="off" spellcheck="false" placeholder="FAA, Ticketmaster, Microsoft 365">
 </div>
-<p class="meta newest">Newest: {{newest}}</p>
 </div>
 <aside class="answers-key" aria-labelledby="answers-key">
 <h2 class="kicker" id="answers-key">Every incident gets one of four answers</h2>
 <dl>
 {{answer_key}}
 </dl>
-<p class="meta">These sum up each page. Inside, every claim carries its own evidence label and source. AI agents do the research; a person approves only the final verdict. <a href="how-it-works.html">How it works</a></p>
+<p class="meta">Colour shows the answer. Bars show how far an incident reaches. AI agents do the research; a person approves only the final verdict. <a href="how-it-works.html">How it works</a></p>
 </aside>
 </section>
+
+<div class="wrap now" id="now">
+<div class="now-main">
+{{bands}}
+<p class="meta now-note">This part of the page shows stories from the last {{fresh_days}} days and anything still down. <a href="#incidents">All {{total}} stories, by the answer so far</a></p>
+</div>
+{{live}}
+</div>
 
 <section class="wrap board" id="incidents">
 <div class="board-head">
 <div>
-<h2>Everything we are following</h2>
+<h2>Everything we are following, by the answer so far</h2>
 <p class="meta">{{now}} <a href="status.html">See them all on the status board</a></p>
 </div>
 <div class="filters" role="group" aria-label="Filter by kind of incident" hidden>
@@ -80,4 +87,8 @@
 <script>
 /* Optional: search, the kind-of-incident filter, and folding long groups (shorter on a phone). Without it every incident is listed. */
 (function(){var board=document.getElementById("incidents"),find=document.getElementById("find");if(!board||!find)return;var filters=board.querySelector(".filters"),none=board.querySelector(".board-none"),groups=[].slice.call(board.querySelectorAll("[data-group]")),type="all",small=window.matchMedia&&matchMedia("(max-width: 639px)").matches,SHOW=small?5:10,FOLD=small?7:14;groups.forEach(function(g){var b=document.createElement("button");b.type="button";b.className="button secondary group-more";b.hidden=true;b.addEventListener("click",function(){g.setAttribute("data-open","");apply()});g.querySelector(".group-body").appendChild(b);g.more=b});function apply(){var q=find.value.trim().toLowerCase(),total=0,counts={all:0};groups.forEach(function(g){var n=0,shown=0;g.big=[].filter.call(g.querySelectorAll(".irow"),function(r){return type==="all"||r.getAttribute("data-type")===type}).length>FOLD;[].forEach.call(g.querySelectorAll(".irow"),function(r){var hit=!q||r.getAttribute("data-text").indexOf(q)>-1,t=r.getAttribute("data-type");if(hit){counts.all++;counts[t]=(counts[t]||0)+1}var ok=hit&&(type==="all"||t===type);if(ok)n++;var cut=ok&&!q&&!g.hasAttribute("data-open")&&g.big&&n>SHOW;r.hidden=!ok||cut;if(ok&&!cut)shown++});g.querySelector("[data-count]").textContent=n;g.hidden=n===0;g.more.hidden=shown>=n;g.more.textContent="Show all "+n;total+=n});none.hidden=total>0;[].forEach.call(filters.querySelectorAll("button"),function(b){var t=b.getAttribute("data-type");b.setAttribute("aria-pressed",t===type?"true":"false");b.querySelector(".n").textContent=counts[t]||0})}filters.addEventListener("click",function(e){var b=e.target.closest("button");if(b){type=b.getAttribute("data-type");apply()}});find.addEventListener("input",apply);find.parentNode.hidden=false;filters.hidden=false;apply()})();
+/* Optional: a search shows its results at once, so the front of the page steps aside while one is typed. */
+(function(){var find=document.getElementById("find"),now=document.getElementById("now");if(!find||!now)return;find.addEventListener("input",function(){now.hidden=!!find.value.trim()})})();
+/* Optional: times read as "6 min ago". Without it each shows its date and time, which is also its tooltip. */
+(function(){var els=[].slice.call(document.querySelectorAll("time.ago"));if(!els.length)return;function show(){var now=Date.now();els.forEach(function(el){var t=Date.parse(el.getAttribute("datetime"));if(isNaN(t))return;if(!el.title)el.title=el.textContent;var m=Math.round((now-t)/6e4),s;if(m<0)return;if(m<1)s="just now";else if(m<60)s=m+" min ago";else if(m<1440)s=Math.round(m/60)+" hr ago";else if(m<2880)s="yesterday";else if(m<10080)s=Math.round(m/1440)+" days ago";else return;el.textContent=s})}show();setInterval(show,6e4)})();
 </script>

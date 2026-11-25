@@ -12,6 +12,7 @@ This is the site repository for isitahack.com: public-source fact-checks of secu
 ## The rules that matter most
 
 - **Edit data, never pages.** An incident is the folder `data/incidents/<slug>/`. The pages (`incidents/<slug>.html`, `incidents/<slug>.md`, `index.html`, `status.html`, `sitemap.xml`, `index.json`) are built from it when the site is published and are not in this repository. Never commit one: the check fails if a built page is in a commit.
+- **The front of the home page builds itself.** It shows current stories by size with the newest changes beside them, all from the incidents' data. `data/front-page.json` holds the Editor-in-Chief's picks (lead, keep, hold, a line for a story); only the Editor-in-Chief changes it, and a research run never does. See format/README.md, "The front of the home page".
 - **Run one command before you hand off:** `node scripts/check.mjs`. It validates every incident, tests the checks and builds the whole site into `_site/` so you can open your page and read it. Commit only the data you changed (and `llms.txt` for a new incident). `_site/` is never committed.
 - **A failed check is never bypassed.** Do not edit, skip or delete a check or a test to get a pass. Report the failure.
 - **No source, no claim.** Every claim cites a source row. Confirmed needs an official (Tier 1) source, or two Tier 2/3 sources that did their own reporting. A post on a social platform is Tier 4 or 5, whoever posted it.
@@ -39,6 +40,7 @@ Work on a branch named `incident/<slug>` and push it. The check runs on every pu
 ## Layout
 
 - `data/incidents/<slug>/`: the incident's data (source of truth).
+- `data/front-page.json`: the Editor-in-Chief's picks for the front of the home page.
 - `format/`: the format guide, the two schemas and the sample.
 - `scripts/`: `validate.mjs`, `build.mjs`, `check.mjs`, and the tests in `scripts/tests/`. Plain Node 22, no dependencies, no install step.
 - `pages/`, `assets/`: the hand-written pages and the stylesheet.

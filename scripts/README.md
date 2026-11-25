@@ -28,7 +28,7 @@ What it does:
 
 1. For every `data/incidents/<slug>/incident.json`, loads the folder through `validate.mjs`. Any problem stops the build; a failed check is never bypassed. It then writes `incidents/<slug>.html` and a Markdown version, `incidents/<slug>.md`. Both are outputs.
 2. For every other `incidents/<slug>.md`, renders the hand-written page as it is. This is how an incident not yet in the typed format can stay on the site; no incident uses it at the moment. Its front-matter may carry `question`, `answer`, `answer_label` and `latest` so the page can lead with the short answer and the latest update.
-3. Writes `index.html`, `status.html`, `how-it-works.html` and `about.html` from `pages/*.html`, plus `404.html`. The home page and the status board are counted from the incidents: nothing on them is written by hand.
+3. Writes `index.html`, `status.html`, `how-it-works.html` and `about.html` from `pages/*.html`, plus `404.html`. The home page and the status board are counted from the incidents: nothing on them is written by hand. The front of the home page (this week's stories by size, and the live updates) is worked out in `home.mjs`; its one hand-kept input is `data/front-page.json`, the Editor-in-Chief's picks, which the build checks and stops on if it is wrong (format/README.md, "The front of the home page").
 4. Writes `sitemap.xml`. An incident's date there is its last update that changed a finding.
 5. Writes `index.json` fresh: each incident's status, answer group, service state, when it was last checked and when its next check is due (`last_checked`, `check_every`, `next_check_due`), and where its files are.
 6. Stops when `llms.txt` does not list a page or an incident's files.
@@ -48,7 +48,7 @@ Checks incident folders against `format/incident.schema.json` and `format/tables
 ## The other modules
 
 - `incident.mjs`: turns one loaded incident into page HTML and Markdown.
-- `plate.mjs`: draws an incident's picture from its `subject`: the name in type over a drawing for the kind. Used at the top of the incident page (the home page lists incidents as text) unless the incident names a photograph as `lead_image`.
+- `plate.mjs`: draws an incident's picture from its `subject`: the name in type over a drawing for the kind. Used at the top of the incident page unless the incident names a photograph as `lead_image`. The front of the home page shows that photograph on a story's tile, or the subject's name on a plain plate in the answer's colour.
 - `chart.mjs`: draws a chart as inline SVG from a chart definition and its CSV rows. No client-side script; every mark has a hover title and the page prints the numbers as a table.
 - `html.mjs`: escaping, dates, label tags and the Markdown subset shared by the above.
 
@@ -77,7 +77,7 @@ Shared `<head>` snippet inserted verbatim into every generated page. It holds th
 
 ## Page scripts
 
-Small inline scripts, all optional. In the head, one applies a stored light or dark choice before the page paints, and on an incident page another applies how deep the reader last chose to read (the short answer by default; everything when the address points at a place on the page). At the end of the body, one wires up the theme toggle and the reading-depth switch, opens a collapsed row (and the depth it sits in) when a link points at it, and marks the section being read in an incident page's contents list. The home page has its own for search, the kind-of-incident filter and folding long groups. With JavaScript off the toggle and the depth switch stay hidden, the page follows the system theme, every depth of an incident shows and every incident is listed.
+Small inline scripts, all optional. In the head, one applies a stored light or dark choice before the page paints, and on an incident page another applies how deep the reader last chose to read (the short answer by default; everything when the address points at a place on the page). At the end of the body, one wires up the theme toggle and the reading-depth switch, opens a collapsed row (and the depth it sits in) when a link points at it, and marks the section being read in an incident page's contents list. The home page has its own for search, the kind-of-incident filter and folding long groups, for stepping the front aside while a search is typed, and for showing times as "6 min ago" (without it each time shows its date and clock time). With JavaScript off the toggle and the depth switch stay hidden, the page follows the system theme, every depth of an incident shows and every incident is listed.
 
 ## Not built yet
 
