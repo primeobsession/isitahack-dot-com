@@ -4,7 +4,9 @@
   "title": "FinCEN cybersecurity incident, Nov 2026",
   "subject": {
     "name": "FinCEN",
-    "kind": "government"
+    "kind": "government",
+    "about": "FinCEN is the Financial Crimes Enforcement Network, a bureau of the US Treasury. It collects and analyses financial intelligence to counter money laundering and the financing of terrorism, and banks and other businesses file their required reports with it.",
+    "about_url": "https://www.fincen.gov/about-fincen/"
   },
   "incident_type": "attack",
   "answer_group": "hack-stated",
