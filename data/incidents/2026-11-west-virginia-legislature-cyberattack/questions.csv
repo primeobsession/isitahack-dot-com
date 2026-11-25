@@ -1,0 +1,6 @@
+question_id,kind,question_text,state,answer_text,label,claim_ids,rumor_type,what_would_settle_it,opened_at,answered_at
+q001,question,Was the West Virginia Legislature hit by a cyberattack?,answered,"Reported as a cyberattack. The Legislature confirms a 'cybersecurity incident' on Nov 19 that led it to disable some IT systems, and its website went down. It has not said whether anyone got in or took data.",Reported,c001;c002;c003;c005,,,2026-11-25T13:28:00-05:00,2026-11-25T13:28:00-05:00
+q002,question,Was it ransomware?,open,,,c003;c004,,The Legislature or law enforcement saying on the record whether it was ransomware.,2026-11-25T13:28:00-05:00,
+q003,question,Was any personal or sensitive information taken?,open,,,c008,,The Legislature's forensic review findings or notices to affected people.,2026-11-25T13:28:00-05:00,
+q004,question,Is the West Virginia Legislature website back?,open,,,c010;c005,,The Legislature or a local outlet saying the website and systems are restored.,2026-11-25T13:28:00-05:00,
+q005,question,Were other West Virginia state agencies affected?,answered,"Not as far as anyone has shown. The Legislature says the incident appears limited to its own systems and it has no evidence other state agencies or offices are affected.",Reported,c007,,,2026-11-25T13:28:00-05:00,2026-11-25T13:28:00-05:00

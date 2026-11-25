@@ -1,0 +1,90 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-west-virginia-legislature-cyberattack",
+  "title": "West Virginia Legislature cyberattack, Nov 19, 2026",
+  "subject": {
+    "name": "WV Legislature",
+    "kind": "government"
+  },
+  "incident_type": "attack",
+  "answer_group": "hack-reported",
+  "also_called": [
+    "the WV Legislature cyber incident",
+    "the WV Legislature website outage"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-19",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by the West Virginia Legislature, the State of West Virginia, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Local",
+  "size_basis": "One body, the state legislature's IT systems and website. The Legislature says other state agencies do not appear to be affected, and legislative work continued.",
+  "who_is_affected": "Legislative staff and lawmakers, and anyone trying to use the Legislature's website. Whether anyone's personal information was involved is still being reviewed; the Legislature says it will meet any notification obligations.",
+  "known": [
+    {
+      "text": "The Legislature says it identified a cybersecurity incident affecting its IT systems on Nov 19.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "It disabled access to some IT systems, and its website went down.",
+      "claim_id": "c005"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether it was ransomware.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Whether any personal or sensitive information was taken.",
+      "question_id": "q003"
+    },
+    {
+      "text": "Whether the website and systems are back.",
+      "question_id": "q004"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 19",
+      "label": "Incident identified",
+      "detail": "The Legislature's date",
+      "claim_id": "c001"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a cyberattack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What was affected, and is it back?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Whose information could be involved?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the West Virginia Legislature incident"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
