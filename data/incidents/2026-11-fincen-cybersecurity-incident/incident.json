@@ -1,0 +1,102 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-fincen-cybersecurity-incident",
+  "title": "FinCEN cybersecurity incident, Nov 2026",
+  "subject": {
+    "name": "FinCEN",
+    "kind": "government"
+  },
+  "incident_type": "attack",
+  "answer_group": "hack-stated",
+  "also_called": [
+    "Treasury FinCEN cyberattack",
+    "BSA E-Filing outage"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-24",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by FinCEN, the US Treasury, any news outlet, regulator, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "service": {
+    "state": "down",
+    "claim_id": "c002"
+  },
+  "size": "Nation-level potential",
+  "size_basis": "Potential only. FinCEN holds national financial-crime reports, so a breach of its main databases would be a national matter, but FinCEN says there is no evidence of that so far. Known impact: some FinCEN systems offline and filing deadlines extended.",
+  "who_is_affected": "Banks and other financial institutions that file Bank Secrecy Act reports with FinCEN, and anyone using its BSA E-Filing website. FinCEN says the website still works, some services may not, and deadlines are being extended for filers affected.",
+  "known": [
+    {
+      "text": "FinCEN says a cybersecurity incident gave someone unauthorized access to a limited part of its systems.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "FinCEN has taken some systems offline; its BSA E-Filing website still works, but some services may not.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "FinCEN is extending filing deadlines for filers affected by the disruption.",
+      "claim_id": "c003"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Who got in, how, and when it started.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Whether any financial reports or company-ownership records were taken. FinCEN says it has no evidence of that so far.",
+      "question_id": "q003"
+    },
+    {
+      "text": "When all systems will be back.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Whether it is connected to the breach reported at the CIA the same week.",
+      "question_id": "q005"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 24",
+      "label": "FinCEN alert posted",
+      "detail": "Tuesday evening, per The Record",
+      "claim_id": "c001"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was FinCEN hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What is down, and what is FinCEN doing?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Was any data taken?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the FinCEN incident"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
