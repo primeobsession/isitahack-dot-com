@@ -211,7 +211,7 @@ test("the build is repeatable and writes the pages search engines need", () => {
     assert.match(page, /<meta property="og:image" content="https:\/\/isitahack\.com\/data\/incidents\/[^"]+\/images\/water-tower\.png">/);
     // the page reads at three depths, and every depth is in the page itself, so it is all
     // there without the script: the short answer, the full story, the evidence
-    assert.match(page, /<div class="answer-head"><p class="kicker">Is it a hack\? The short answer<\/p><span class="pill pill-no-sign answer-pill">No sign of a hack<\/span><\/div>/, "the plain answer leads the answer box");
+    assert.match(page, /<div class="answer-head"><p class="kicker">Is it a hack\? The short answer<\/p><span class="pill pill-no-sign ans-no-sign-of-hack answer-pill">No sign of a hack<\/span><\/div>/, "the plain answer leads the answer box");
     assert.match(page, /<span class="field">How well supported<\/span> <span class="pill pill-reported"/, "the evidence label follows it");
     const depthAt = (cls) => page.indexOf(`<section class="depth ${cls}"`);
     assert.ok(depthAt("depth-short") > 0 && depthAt("depth-short") < depthAt("depth-story") && depthAt("depth-story") < depthAt("depth-evidence"), "the three depths come in order");

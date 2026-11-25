@@ -31,7 +31,9 @@ export const ANSWER_GROUPS = [
   { key: "hack-reported", title: "Reported as a hack", short: "Reported as a hack", pill: "pill-reported", means: "News outlets say it was a hack. It is not officially confirmed.", gloss: "News outlets or a single official say it was a hack. Nothing independent confirms it yet." },
   { key: "no-sign-of-hack", title: "No sign of a hack", short: "No sign of a hack", pill: "pill-no-sign", means: "The organization says it was not an attack, or the claim was shown to be false.", gloss: "The organization says it was not an attack, or the claim of one was shown to be false. Some rest on the company's word alone." },
 ];
-export const answerPill = (g, cls = "") => `<span class="pill ${g.pill}${cls ? ` ${cls}` : ""}">${esc(g.short)}</span>`;
+// An answer's pill carries its own colour (ans-<key>), so the four answers look the same on
+// every page. The shape of the dot still tells them apart without colour.
+export const answerPill = (g, cls = "") => `<span class="pill ${g.pill} ans-${g.key}${cls ? ` ${cls}` : ""}">${esc(g.short)}</span>`;
 
 // ---------- dates (string parsing only, independent of the machine's zone/locale) ----------
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];

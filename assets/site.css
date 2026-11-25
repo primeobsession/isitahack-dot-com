@@ -237,10 +237,15 @@ p, ul, ol, dl { margin: 0; }
 .a-hack-reported { --a: var(--a-reported); --a-bg: var(--a-reported-bg); --a-rule: var(--a-reported-rule); --a-ink: var(--a-reported-ink); }
 .a-unclear { --a: var(--a-unclear); --a-bg: var(--a-unclear-bg); --a-rule: var(--a-unclear-rule); --a-ink: var(--a-unclear-ink); }
 .a-no-sign-of-hack { --a: var(--a-nosign); --a-bg: var(--a-nosign-bg); --a-rule: var(--a-nosign-rule); --a-ink: var(--a-nosign-ink); }
-.home .answers-key .pill-confirmed, .home .group-head .pill-confirmed { background: var(--a-stated-fill); border-color: var(--a-stated-fill); color: var(--bg); }
-.home .answers-key .pill-reported, .home .group-head .pill-reported { background: var(--a-reported-bg); border-color: var(--a-reported); color: var(--a-reported-ink); }
-.home .answers-key .pill-reported::before, .home .group-head .pill-reported::before { border-color: var(--a-reported); background: linear-gradient(90deg, var(--a-reported) 50%, transparent 50%); }
-.home .answers-key .pill-no-sign, .home .group-head .pill-no-sign { border-color: var(--a-nosign); color: var(--a-nosign); }
+/* The four answers have the same colours wherever their pill appears: the home page, an incident's short answer and the status board. */
+.pill.ans-hack-stated { background: var(--a-stated-fill); border-color: var(--a-stated-fill); color: var(--bg); }
+.pill.ans-hack-reported { background: var(--a-reported-bg); border-color: var(--a-reported); color: var(--a-reported-ink); }
+.pill.ans-hack-reported::before { border-color: var(--a-reported); background: linear-gradient(90deg, var(--a-reported) 50%, transparent 50%); }
+.pill.ans-no-sign-of-hack { background: var(--surface); border-color: var(--a-nosign); color: var(--a-nosign); }
+.stat[data-group="hack-stated"] .stat-bar span { background: var(--a-stated-fill); }
+.stat[data-group="hack-reported"] .stat-bar span { background: var(--a-reported); }
+.stat[data-group="unclear"] .stat-bar span { background: var(--neutral); }
+.stat[data-group="no-sign-of-hack"] .stat-bar span { background: var(--a-nosign); }
 .now { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2.5rem; align-items: start; padding-bottom: clamp(2rem, 4vw, 3.5rem); }
 @media (min-width: 1040px) { .now { grid-template-columns: minmax(0, 1fr) 21.5rem; gap: 2.75rem; } }
 .now[hidden] { display: none; }
