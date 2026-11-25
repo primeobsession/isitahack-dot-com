@@ -1,0 +1,103 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-allstate-website-app-outage",
+  "title": "Allstate website and app outage, Nov 2026",
+  "subject": {
+    "name": "Allstate",
+    "kind": "finance",
+    "about": "Allstate is a US insurance company, launched by Sears in 1931, that sells car, home and other insurance. Customers use its website and app to get quotes, pay bills, see policy documents and file claims.",
+    "about_url": "https://www.allstatecorporation.com/about/our-history.aspx"
+  },
+  "incident_type": "outage",
+  "answer_group": "unclear",
+  "also_called": [
+    "the Allstate outage"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-23",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Allstate, any news outlet, government, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Allstate is a major US insurer, and outlets report customers across the country unable to use its website and app since Nov 23. Nobody has reported customer data being affected.",
+  "who_is_affected": "Allstate customers who use its website or app to sign in, pay a bill or file a claim. Outlets reported the problems from Monday, Nov 23; whether they are over is not known. Allstate has not said whether any customer information was affected.",
+  "known": [
+    {
+      "text": "Allstate's home page showed no outage notice when we read it on Nov 25 at about 5:25 PM ET.",
+      "claim_id": "c003"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "What caused the outage.",
+      "question_id": "q001"
+    },
+    {
+      "text": "Whether the website and app are fully working again.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Whether any customer data was affected.",
+      "question_id": "q003"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 23",
+      "label": "Problems began",
+      "detail": "Monday morning, per TechCrunch and Newsweek",
+      "claim_id": "c001"
+    },
+    {
+      "value": "None",
+      "label": "Cause given by Allstate",
+      "detail": "As of Nov 25",
+      "claim_id": "c004"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "What went down?",
+      "group": "outage",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What caused it?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Allstate outage"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ],
+  "images": [
+    {
+      "id": "allstate-agency-office",
+      "title": "An Allstate agency office",
+      "file": "images/allstate-agency-office.jpg",
+      "alt": "A single-storey shopfront under a two-storey building with a large blue Allstate sign and the company's hands emblem on the window, with a pickup truck parked in front under a clear blue sky.",
+      "caption": "An Allstate agency office in Cross Plains, Wisconsin, in April 2015. Not involved in this incident; the truck's licence plate has been blurred.",
+      "credit": "Corey Coyle, CC BY 3.0, via Wikimedia Commons (licence plate blurred)",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Allstate%C2%AE_Esser_Insurance_Cross_Plains_Office_-_panoramio.jpg",
+      "sha256": "ca242f10eaadea0a9f2b80d1fcf4515f2a6c56acad02f2b46f59a8a8bec2b7ec",
+      "width": 1920,
+      "height": 1440
+    }
+  ],
+  "lead_image": "allstate-agency-office"
+}

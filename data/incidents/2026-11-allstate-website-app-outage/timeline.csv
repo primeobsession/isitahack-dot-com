@@ -1,0 +1,4 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-23,,Monday morning,stated,Allstate's website and app begin having problems,c001,TechCrunch and Newsweek say Monday morning; Newsweek cites Downdetector reports.
+t002,2026-11-25T10:08:00-05:00,,,stated,"TechCrunch reports the outage, saying Allstate has made no formal statement",c004,Time is the article's publication time.
+t003,2026-11-25T17:25:00-05:00,,,stated,Allstate's home page shows no outage notice,c003,Our own read of the page.

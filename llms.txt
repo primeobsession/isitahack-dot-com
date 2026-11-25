@@ -138,6 +138,8 @@
 - [European Commission cyberattack and EU Academy data theft, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-european-commission-cyberattack.html): the same report as a web page.
 - [Todoist data breach, Nov 2026](https://isitahack.com/incidents/2026-11-todoist-data-breach.md): the report as Markdown (still monitored). Built from its data folder.
 - [Todoist data breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-todoist-data-breach.html): the same report as a web page.
+- [Allstate website and app outage, Nov 2026](https://isitahack.com/incidents/2026-11-allstate-website-app-outage.md): the report as Markdown (still monitored). Built from its data folder.
+- [Allstate website and app outage, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-allstate-website-app-outage.html): the same report as a web page.
 
 ## Data (typed incident format: UTF-8, RFC 4180 CSV with a header row; see Format below)
 - [data/incidents/2026-11-microsoft-365-outage/](https://isitahack.com/data/incidents/2026-11-microsoft-365-outage/): the folder the Microsoft 365 report is built from: incident.json, claims.csv, sources.csv, timeline.csv, questions.csv, update_log.csv and notes/.
@@ -213,6 +215,7 @@
 - [data/incidents/2026-11-1password-backend-breach/](https://isitahack.com/data/incidents/2026-11-1password-backend-breach/): the folder the 1Password breach report is built from.
 - [data/incidents/2026-11-european-commission-cyberattack/](https://isitahack.com/data/incidents/2026-11-european-commission-cyberattack/): the folder the European Commission cyberattack report is built from.
 - [data/incidents/2026-11-todoist-data-breach/](https://isitahack.com/data/incidents/2026-11-todoist-data-breach/): the folder the Todoist data breach report is built from.
+- [data/incidents/2026-11-allstate-website-app-outage/](https://isitahack.com/data/incidents/2026-11-allstate-website-app-outage/): the folder the Allstate outage report is built from.
 
 ## For search engines
 - [sitemap.xml](https://isitahack.com/sitemap.xml): every page, with each incident's last update.
