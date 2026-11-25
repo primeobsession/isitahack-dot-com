@@ -227,6 +227,12 @@ test("the build is repeatable and writes the pages search engines need", () => {
     assert.match(page.slice(at("glance"), at("what-has-been-said")), /<h3>Known so far<\/h3>[\s\S]*<h3>Not known yet<\/h3>/, "the page says what is and is not known");
     assert.match(page.slice(at("what-has-been-said"), at("sources")), /<article class="row" id="c001">/, "every claim is listed, with its evidence in view");
     assert.doesNotMatch(page, /<details|data-depth|depth-switch|Keep going/, "nothing is folded away, and there is no switch for how much to read");
+    // a check that found nothing is one line in the update list; a real update keeps its note
+    const logPart = page.slice(at("update-log"), page.indexOf('id="raw-files"'));
+    const brief = logPart.match(/<li class="log-row quiet log-brief" id="u\d+">\n<span class="log-when">.*<\/span>\n<span class="log-what">[^<]+ <span class="meta">Checked, no change<\/span><\/span>\n<\/li>/g) || [];
+    assert.equal(brief.length, (logPart.match(/Checked, no change/g) || []).length, "every empty check is a single line with no working note");
+    assert.ok(brief.length >= 1, "the sample has at least one empty check");
+    assert.match(logPart, /<li class="log-row" id="u003">\n<span class="log-when">.*<\/span>\n<span class="log-what"><strong>[^<]+<\/strong> [^<]+/, "an update still shows its headline and its note");
     const toc = page.slice(page.indexOf('<nav class="toc"'), page.indexOf("</nav>", page.indexOf('<nav class="toc"')));
     assert.deepEqual([...toc.matchAll(/<li class="toc-top"><a href="#([^"]+)">/g)].map((m) => m[1]), ["the-question", ...asked], "the contents list names the same questions in the same order");
     const home = readFileSync(join(a, "index.html"), "utf8");

@@ -291,10 +291,17 @@ ${tableHtml(headRow, body)}` });
   const timelineHtml = timelineSection ? renderers.timeline(timelineSection) : "";
   const sectionsHtml = head.sections.filter((s) => s.type !== "timeline").map((s) => renderers[s.type](s)).join("\n\n");
 
-  const logRows = t.update_log.map((u) => `<li class="log-row${QUIET.has(u.change_type) ? " quiet" : ""}" id="${esc(u.log_id)}">
+  // A check that found nothing is one line: when, and what was still true. Its working note
+  // stays in the data. Every other entry shows its headline and its note.
+  const logRows = t.update_log.map((u) => (u.change_type === "checked_no_change"
+    ? `<li class="log-row quiet log-brief" id="${esc(u.log_id)}">
+<span class="log-when">${timeTag(u.logged_at)}</span>
+<span class="log-what">${esc(u.headline)} <span class="meta">${esc(CHANGES[u.change_type])}</span></span>
+</li>`
+    : `<li class="log-row${QUIET.has(u.change_type) ? " quiet" : ""}" id="${esc(u.log_id)}">
 <span class="log-when">${timeTag(u.logged_at)}</span>
 <span class="log-what"><strong>${esc(u.headline)}</strong> ${esc(u.summary)} <span class="meta">${esc(CHANGES[u.change_type])}</span></span>
-</li>`);
+</li>`));
   const logHtml = `<p class="meta">Every check and change, newest first. Last checked ${timeTag(sum.last_checked)}.${sum.next_check ? ` The next check is due by ${timeTag(sum.next_check.due, dueText(sum.next_check))}: the desk checks ${cadenceText(sum.next_check)}.` : ""}</p>\n<ol class="log">\n${logRows.join("\n")}\n</ol>`;
   const sourcesHtml = `<ol class="source-lines numbered">\n${t.sources.map((s) => sourceLine(s.source_id)).join("\n")}\n</ol>`;
 

@@ -614,6 +614,9 @@ details[open] > summary::after { transform: rotate(-135deg); margin-bottom: -0.1
 .log-what { flex: 1 1 360px; min-width: 0; }
 .log-row.quiet { color: var(--muted); }
 .log-row.quiet strong { font-weight: 600; }
+/* a check that found nothing: one line */
+.log-row.log-brief { padding: 0.4rem 0; font-size: 0.84rem; line-height: 1.5; }
+.log-row.log-brief .log-when { line-height: 1.7; }
 .figure { margin: 0; display: grid; gap: 0.75rem; }
 .figure img { display: block; border-radius: var(--radius); border: 1px solid var(--rule); }
 .figure figcaption, .quote figcaption { color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
