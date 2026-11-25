@@ -295,7 +295,7 @@ ${tableHtml(headRow, body)}
   tocDepth = "evidence";
   const logRows = t.update_log.map((u) => `<li class="log-row${QUIET.has(u.change_type) ? " quiet" : ""}" id="${esc(u.log_id)}">
 <span class="log-when">${timeTag(u.logged_at)}</span>
-<span class="log-what"><strong>${esc(u.headline)}</strong> ${esc(u.summary)} <span class="meta">${esc(CHANGES[u.change_type])} · ${esc(u.author)}</span></span>
+<span class="log-what"><strong>${esc(u.headline)}</strong> ${esc(u.summary)} <span class="meta">${esc(CHANGES[u.change_type])}</span></span>
 </li>`);
   const logHtml = fold({ title: "Update log", count: t.update_log.length, id: "update-log", body: `<p class="meta">Every check and change, newest first. Last checked ${timeTag(sum.last_checked)}.${sum.next_check ? ` The next check is due by ${timeTag(sum.next_check.due, dueText(sum.next_check))}: the desk checks ${cadenceText(sum.next_check)}.` : ""}</p>\n<ol class="log">\n${foldRest(logRows, 6, "entries")}\n</ol>` });
   const sourcesHtml = fold({ title: "Sources", count: t.sources.length, id: "sources", body: `<ol class="source-lines numbered">\n${t.sources.map((s) => sourceLine(s.source_id)).join("\n")}\n</ol>` });
