@@ -24,7 +24,7 @@
   "verdict_approved_at": null,
   "size": "Large",
   "size_basis": "DoorDash is a food-delivery service that many people use daily, and Downdetector logged more than 12,700 reports. DoorDash has not said how many customers were affected, and Downdetector counts reports, not users.",
-  "who_is_affected": "People who use the DoorDash app or website, mostly in the US, from about 11 AM ET on Saturday, Nov 21, and businesses using DoorDash Drive from 11:30 AM ET. DoorDash marked both status-page incidents resolved by 2:50 PM ET but has not said when the app was fully back for everyone.",
+  "who_is_affected": "People who use the DoorDash app or website, mostly in the US, from about 11 AM ET on Saturday, Nov 21, and businesses using DoorDash. DoorDash says partners saw errors from about 10:55 to 11:45 AM ET. It has not said when the app was fully back for everyone.",
   "known": [
     {
       "text": "DoorDash's status page showed an increase in errors on its Drive endpoints from 11:30 AM ET on Nov 21 and a recovery update at 11:50 AM ET.",
@@ -37,17 +37,21 @@
     {
       "text": "DoorDash marked the Drive incident resolved at 1:58 PM ET and said the second incident ended at 11:51 AM ET.",
       "claim_id": "c010"
+    },
+    {
+      "text": "DoorDash says a database connectivity issue on an internal address service caused errors and delays across its services from about 10:55 to 11:45 AM ET.",
+      "claim_id": "c009"
     }
   ],
   "not_known": [
     {
-      "text": "What caused the outage. DoorDash has not said; its status page says a post mortem will be posted later."
+      "text": "What made the database connection fail, and whether the separate Drive incident had the same cause. DoorDash has not posted the Drive post mortem yet."
     },
     {
-      "text": "Whether it was a cyberattack. DoorDash has not said either way; the hack idea is only social-media speculation."
+      "text": "Whether it was a cyberattack. DoorDash gives a technical cause and does not mention an attack, but it has not said either way; the hack idea is only social-media speculation."
     },
     {
-      "text": "Whether either status-page incident caused the app and website errors, and when the app was fully back for everyone."
+      "text": "Whether the app and website errors came from the same problem DoorDash describes for partners, and when the app was fully back for everyone."
     },
     {
       "text": "How many customers were affected."
@@ -59,6 +63,12 @@
       "label": "Downdetector reports",
       "detail": "User-submitted, not customers affected",
       "claim_id": "c003"
+    },
+    {
+      "value": "10:55–11:45 AM",
+      "label": "Errors across DoorDash services (ET)",
+      "detail": "Per DoorDash's post-incident note",
+      "claim_id": "c009"
     },
     {
       "value": "11:30 AM",
