@@ -1,0 +1,102 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-cia-odni-osint-system-breach",
+  "title": "CIA and ODNI open-source intelligence system breach, Nov 2026",
+  "subject": {
+    "name": "CIA",
+    "kind": "government"
+  },
+  "incident_type": "breach",
+  "answer_group": "hack-reported",
+  "also_called": [
+    "the CIA hack",
+    "the CIA and ODNI breach",
+    "the unclassified CIA system breach"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-24",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by the CIA, ODNI, any news outlet, government agency, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Nation-level",
+  "size_basis": "A breach reported at US intelligence agencies, a matter for the national government. The known impact is one unclassified analysis system; sources say no classified systems were affected, and what was exposed is not known.",
+  "who_is_affected": "Analysts at the CIA, ODNI and, reportedly, the NGA who use the system. The public does not use it, and nobody outside the agencies has been told to do anything.",
+  "known": [
+    {
+      "text": "Four news outlets, each with its own sources, report that hackers breached an unclassified CIA and ODNI system used for open-source intelligence.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The CIA declined to comment, and neither agency has confirmed the breach on the record.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "The New York Times first reported the breach on Nov 24.",
+      "claim_id": "c010"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "What information was exposed, and when the breach happened.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Who did it. No government body has named anyone.",
+      "question_id": "q003"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 24",
+      "label": "First reported",
+      "detail": "By The New York Times",
+      "claim_id": "c010"
+    },
+    {
+      "value": "4",
+      "label": "Outlets with their own sources",
+      "detail": "CyberScoop, Nextgov/FCW, AP, CNN",
+      "claim_id": "c001"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was the CIA system hacked? What has been reported",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What was affected?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Has it been fixed?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Is it linked to the other federal incidents?",
+      "group": "context"
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the CIA and ODNI breach"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

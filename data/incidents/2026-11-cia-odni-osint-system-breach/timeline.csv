@@ -1,0 +1,2 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-24,,,stated,"The New York Times reports that hackers breached an unclassified CIA and ODNI open-source intelligence system; CyberScoop, Nextgov/FCW, AP and CNN confirm it with their own sources the same day",c010,When the breach itself happened has not been reported.
