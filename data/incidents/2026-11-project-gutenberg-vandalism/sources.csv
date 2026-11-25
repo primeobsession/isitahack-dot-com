@@ -1,7 +1,8 @@
 source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
-s001,https://pglaf.org/,Project Gutenberg Literary Archive Foundation (pglaf.org): notice that gutenberg.org is being rebuilt after vandalism,1,pglaf,2026-11-21,2026-11-21T05:14:24-05:00,,ok,2026-11-21T05:14:24-05:00
-s002,https://www.gutenberg.org/,gutenberg.org: “Temporarily Down for Maintenance” page (HTTP 503),1,gutenberg,2026-11-21,2026-11-21T05:14:24-05:00,,ok,2026-11-21T05:14:24-05:00
+s001,https://pglaf.org/,Project Gutenberg Literary Archive Foundation (pglaf.org): notice that gutenberg.org is being rebuilt after vandalism,1,pglaf,2026-11-21,2026-11-25T11:39:06-05:00,,ok,2026-11-25T11:39:06-05:00
+s002,https://www.gutenberg.org/,gutenberg.org: “Temporarily Down for Maintenance” page (HTTP 503),1,gutenberg,2026-11-21,2026-11-25T11:39:06-05:00,,ok,2026-11-25T11:39:06-05:00
 s003,https://file770.com/project-gutenberg-blames-vandalism-for-downtime/,File 770: Project Gutenberg Blames Vandalism for Downtime (reproduces the foundation's status updates),2,file770,2026-11-20,2026-11-21T05:14:24-05:00,,ok,2026-11-21T05:14:24-05:00
-s004,https://support.ibiblio.org/t/unplanned-outage-login-ssh-sftp-and-gutenberg-services/1085,"ibiblio support forum: UNPLANNED outage, login (SSH, SFTP) and Gutenberg services",1,ibiblio,2026-11-20,2026-11-21T05:14:24-05:00,,ok,2026-11-21T05:14:24-05:00
+s004,https://support.ibiblio.org/t/unplanned-outage-login-ssh-sftp-and-gutenberg-services/1085,"ibiblio support forum: UNPLANNED outage, login (SSH, SFTP) and Gutenberg services",1,ibiblio,2026-11-20,2026-11-25T11:39:06-05:00,,ok,2026-11-25T11:39:06-05:00
 s005,https://mastodon.social/@gutenberg_org/117647638785059806,Project Gutenberg on Mastodon: NOTICE that the site is undergoing a deep rebuilding due to vandalism,4,mastodon,2026-11-20,2026-11-21T05:14:24-05:00,,ok,2026-11-21T05:14:24-05:00
 s006,https://mastodon.social/@gutenberg_new,"Project Gutenberg New Books feed on Mastodon: Nov 16 notices (abuse issue, unplanned maintenance)",4,mastodon-new,2026-11-16,2026-11-21T05:14:24-05:00,,ok,2026-11-21T05:14:24-05:00
+s007,https://mastodon.social/@gutenberg_org/117676607923324444,"Project Gutenberg on Mastodon: update of Nov 25, 10:00 AM UTC",4,mastodon,2026-11-25,2026-11-25T11:39:06-05:00,,ok,2026-11-25T11:39:06-05:00
