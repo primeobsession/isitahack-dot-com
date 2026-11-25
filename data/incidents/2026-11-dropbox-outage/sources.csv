@@ -1,6 +1,6 @@
 source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
-s001,https://status.dropbox.com/incidents/h0w7s25x3j7z,Dropbox Status: Dropbox is not working as expected for some users (incident page),1,dropbox-status,2026-11-20T15:13:00-05:00,2026-11-21T01:23:54-05:00,,ok,2026-11-21T01:23:54-05:00
-s002,https://status.dropbox.com/,"Dropbox Status: past incidents list, Nov 20, 2026",1,dropbox-status,2026-11-21,2026-11-21T01:23:54-05:00,,ok,2026-11-21T01:23:54-05:00
+s001,https://status.dropbox.com/incidents/h0w7s25x3j7z,Dropbox Status: Dropbox is not working as expected for some users (incident page),1,dropbox-status,2026-11-20T15:13:00-05:00,2026-11-21T01:23:54-05:00,,ok,2026-11-25T11:40:39-05:00
+s002,https://status.dropbox.com/,"Dropbox Status: past incidents list, Nov 20, 2026",1,dropbox-status,2026-11-21,2026-11-21T01:23:54-05:00,,ok,2026-11-25T11:40:39-05:00
 s003,https://www.technobezz.com/news/dropbox-service-incident-b6982a69,Technobezz: Dropbox issue affected some users (relays the status page),3,technobezz,2026-11-20T15:13:00-05:00,2026-11-21T01:23:54-05:00,,ok,2026-11-21T01:23:54-05:00
 s004,https://uptimerobot.com/is-it-down/dropbox/2026-11-20/,UptimeRobot: Dropbox outage on 2026-11-20 (automated status-page recap),3,uptimerobot,2026-11-20,2026-11-21T01:23:54-05:00,,ok,2026-11-21T01:23:54-05:00
 s005,https://www.whitehouse.gov/releases/2026/11/no-indication-of-a-cyberattack-dni-clayton-and-secretary-rubio-on-recent-tech-outages/,The White House: “No Indication of a Cyberattack” on recent tech outages,1,,2026-11-18,2026-11-21T01:23:54-05:00,,ok,2026-11-21T01:23:54-05:00
