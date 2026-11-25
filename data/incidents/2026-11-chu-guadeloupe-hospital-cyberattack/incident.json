@@ -84,6 +84,22 @@
       "claim_id": "c003"
     }
   ],
+  "lead_image": "chu-pointe-a-pitre",
+  "images": [
+    {
+      "id": "chu-pointe-a-pitre",
+      "title": "The university hospital in Pointe-à-Pitre, Guadeloupe",
+      "file": "images/chu-pointe-a-pitre.jpg",
+      "alt": "A tall concrete hospital tower and a lower, weathered wing with yellow panels, seen from an access road under a grey sky, with parked cars, a palm tree and a temporary fence in front.",
+      "caption": "The main buildings of the university hospital in Pointe-à-Pitre, Guadeloupe, in October 2025. Not taken during this incident.",
+      "credit": "Enrevseluj, CC BY-SA 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Centre_hospitalier_universitaire_de_Pointe-%C3%A0-Pitre.jpg",
+      "sha256": "b3aeb5095e3dfc4b8d39188dcc65271712eab341538be9cd00b68ae624bb5489",
+      "width": 1920,
+      "height": 1440
+    }
+  ],
   "sections": [
     {
       "type": "claims",

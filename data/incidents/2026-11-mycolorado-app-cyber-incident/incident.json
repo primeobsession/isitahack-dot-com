@@ -4,7 +4,9 @@
   "title": "myColorado app cybersecurity incident, Nov 2026",
   "subject": {
     "name": "myColorado",
-    "kind": "government"
+    "kind": "government",
+    "about": "myColorado is the State of Colorado's mobile app. People use it to carry a mobile driver license and the Colorado Digital ID on their phone, and to reach some state services.",
+    "about_url": "https://mycolorado.gov/press-kit"
   },
   "incident_type": "breach",
   "answer_group": "hack-stated",
@@ -75,6 +77,22 @@
       "label": "App users",
       "detail": "State figure",
       "claim_id": "c005"
+    }
+  ],
+  "lead_image": "colorado-state-capitol",
+  "images": [
+    {
+      "id": "colorado-state-capitol",
+      "title": "Colorado State Capitol",
+      "file": "images/colorado-state-capitol.jpg",
+      "alt": "A large grey stone building with a row of tall columns and a gold dome, under a deep blue sky, with a paved plaza, evergreen trees and a stone marker reading State of Colorado in front.",
+      "caption": "The Colorado State Capitol in Denver, the seat of the state government, in October 2023. Not part of this incident.",
+      "credit": "Xiquinho Silva, CC BY 2.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Colorado_State_Capitol_(2023).jpg",
+      "sha256": "c17dbbb20c878b65e15e8da981c924487d950d9236bbea84570fd1d11f083fc5",
+      "width": 1920,
+      "height": 1277
     }
   ],
   "sections": [

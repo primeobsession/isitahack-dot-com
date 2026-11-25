@@ -63,6 +63,22 @@
       "claim_id": "c007"
     }
   ],
+  "lead_image": "delta-a321-atlanta",
+  "images": [
+    {
+      "id": "delta-a321-atlanta",
+      "title": "A Delta Air Lines plane at Atlanta airport",
+      "file": "images/delta-a321-atlanta.jpg",
+      "alt": "A white Delta Air Lines passenger jet with a red and blue tail parked at a gate under a clear blue sky, with baggage carts, a catering truck and traffic cones on the apron around it.",
+      "caption": "A Delta Air Lines Airbus A321 at a gate at Atlanta's Hartsfield-Jackson airport in January 2023. Not taken during this incident.",
+      "credit": "formulanone, CC BY-SA 2.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Delta_N125DN_Airbus_A321_ATL0123_at_Atlanta_-_January_2023.jpg",
+      "sha256": "64085807c3156e1d746375d48d71b3d646843094113f90569e71b0579e29cee3",
+      "width": 1920,
+      "height": 1280
+    }
+  ],
   "sections": [
     {
       "type": "claims",
