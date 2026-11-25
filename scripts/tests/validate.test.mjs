@@ -223,7 +223,7 @@ test("the build is repeatable and writes the pages search engines need", () => {
     assert.match(readFileSync(join(a, "sitemap.xml"), "utf8"), new RegExp(`<loc>https://isitahack\\.com/incidents/${SLUG}\\.html</loc><lastmod>2026-01-12T17:30:00-05:00</lastmod>`));
     assert.ok(readdirSync(a).includes("404.html"));
     // pictures: a photograph where the incident has one, the drawn plate where it does not
-    assert.match(page, /<figure class="head-media"><img src="\.\.\/data\/incidents\/[^"]+\/images\/water-tower\.png"[^>]*><figcaption>Image: isitahack\.com<\/figcaption>/);
+    assert.match(page, /<figure class="head-media"><img src="\.\.\/data\/incidents\/[^"]+\/images\/water-tower\.small\.png" width="1200" height="675" alt="[^"]+" fetchpriority="high"><figcaption>Image: isitahack\.com<\/figcaption>/, "the page shows the small copy, at the original's shape, loaded first");
     assert.match(page, /<meta property="og:image" content="https:\/\/isitahack\.com\/data\/incidents\/[^"]+\/images\/water-tower\.png">/);
     // the page reads at three depths, and every depth is in the page itself, so it is all
     // there without the script: the short answer, the full story, the evidence
@@ -273,10 +273,11 @@ test("the build is repeatable and writes the pages search engines need", () => {
     const frontPart = home.slice(home.indexOf('<div class="wrap now"'), home.indexOf('<section class="wrap board"'));
     assert.ok(frontPart.length > 0 && home.indexOf('<div class="wrap now"') < home.indexOf('<section class="wrap board"'), "the front comes before the full list");
     assert.doesNotMatch(home.replace(frontPart, ""), /<img /, "outside the front, the home page lists incidents as text");
-    for (const img of frontPart.match(/<img [^>]*>/g) || []) {
+    for (const [n, img] of (frontPart.match(/<img [^>]*>/g) || []).entries()) {
       assert.match(img, / alt="[^"]+"/, `a picture on the front says what it shows: ${img}`);
       assert.match(img, / width="\d+" height="\d+"/, `and reserves its space: ${img}`);
-      assert.match(img, / loading="lazy"/, `and loads only when it is reached: ${img}`);
+      if (n === 0) assert.match(img, / fetchpriority="high"/, `the first card's picture loads at once: ${img}`);
+      else assert.match(img, / loading="lazy"/, `every other picture loads only when it is reached: ${img}`);
     }
     for (const t of frontPart.match(/<time [^>]*>/g) || []) assert.match(t, /^<time class="ago[^"]*" datetime="\d{4}-\d{2}-\d{2}T[^"]+">$/, `a time on the front carries its full timestamp: ${t}`);
     assert.doesNotMatch(frontPart, new RegExp(`incidents/${SLUG}\\.html`), "the made-up sample happened long ago, so it is in the full list but not on the front");

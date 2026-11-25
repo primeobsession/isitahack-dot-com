@@ -28,6 +28,7 @@ import { fileURLToPath } from "node:url";
 import { LABELS, ANSWER_GROUPS, answerPill, esc, slugify, pill, inline, linkTag, fmtDate, fmtDay, timeTag, renderBody, warnings, warn, setCurrent } from "./html.mjs";
 import { loadIncident } from "./validate.mjs";
 import { NO_PICKS, checkFrontPage, frontBands, renderBands, renderLive, allUpdates, FRESH_DAYS } from "./home.mjs";
+import { smallFile } from "./incident.mjs";
 import { renderIncident, incidentMarkdown, incidentLayout, incidentPicture, evidenceBar, summarize, SERVICE_STATES, cadenceText } from "./incident.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -329,7 +330,7 @@ function anatomyCard(i) {
 <div><dt>What we know</dt><dd>${esc(claim.summary)}</dd></div>
 <div><dt>Why the source supports it</dt><dd>${esc(claim.why_it_supports)}</dd></div>
 <div><dt>Source</dt><dd>${linkTag(source.source_url, esc(source.source_name))}</dd></div>
-<div class="anatomy-foot"><dd>Last checked ${timeTag(claim.last_checked)}</dd></div>
+<div class="anatomy-foot"><dt class="sr-only">Last checked</dt><dd>Last checked ${timeTag(claim.last_checked)}</dd></div>
 </dl>
 <p class="meta">Every row on every page has these parts. A claim without a source does not get published.</p>
 </aside>`;
@@ -585,6 +586,12 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1
   const unlisted = checkLlms(incidents);
   if (unlisted.length) { for (const e of unlisted) console.error(e); console.error("Build stopped: fix the problems above. A failed check is never bypassed."); process.exit(1); }
 
+  // A lead picture wider than 800 pixels should have its small copy (format/README.md). The
+  // pages fall back to the original without one, so this is a warning, not a failure.
+  for (const i of incidents) {
+    const lead = i.typed && i.loaded.head.lead_image && (i.loaded.head.images || []).find((x) => x.id === i.loaded.head.lead_image);
+    if (lead && lead.width > 800 && !/\.svg$/.test(lead.file) && !smallFile(i.loaded.dir, lead)) warn(i.dataPath, `the lead picture has no small copy (${lead.file.replace(/\.([a-z]+)$/, ".small.$1")}, 800 pixels wide), so pages load the full-size file`);
+  }
   for (const i of incidents) {
     const others = incidents.filter((o) => o !== i).map((o) => ({ slug: o.slug, title: o.title, status: o.status, last_updated: o.last_updated }));
     (i.typed ? writeTyped : writeLegacy)(i, others, out);

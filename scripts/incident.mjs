@@ -2,19 +2,30 @@
 // a Markdown export. Pure functions of the loaded data: no clock, no locale.
 // Also holds the page layout that typed and hand-written incident pages share.
 
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { LABELS, ANSWER_GROUPS, answerPill, sizeBars, esc, slugify, pill, inline, linkTag, fmtDate, fmtTime, fmtDay, timeTag, renderBody, tableHtml } from "./html.mjs";
 import { renderChart, fmtNumber } from "./chart.mjs";
 import { renderPlate } from "./plate.mjs";
 
+// A smaller copy of an image for pages that show it a few hundred pixels wide:
+// images/<name>.small.<ext> beside the original, 800 pixels wide (format/README.md). Shared
+// links and image sections keep the original. Without the small copy, the original is used.
+export function smallFile(dir, image) {
+  if (!dir || !image) return null;
+  const small = image.file.replace(/\.([a-z]+)$/, ".small.$1");
+  return small !== image.file && existsSync(join(dir, small)) ? small : null;
+}
+
 // The incident's picture: its photograph when it has one, otherwise the drawn plate.
-// `base` is where the incident's data folder is, as seen from the page.
-export function incidentPicture(head, base) {
+// `base` is where the incident's data folder is, as seen from the page; `dir` is that folder
+// on disk, so the small copy is used when there is one.
+export function incidentPicture(head, base, dir = null) {
   const image = head.lead_image && (head.images || []).find((x) => x.id === head.lead_image);
   if (!image) return { html: renderPlate(head.subject), credit: "", caption: "", image: null };
+  const file = smallFile(dir, image) || image.file;
   return {
-    html: `<img src="${esc(`${base}/${image.file}`)}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}">`,
+    html: `<img src="${esc(`${base}/${file}`)}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}" fetchpriority="high">`,
     credit: `Image: ${image.credit}`, caption: image.caption || "", image,
   };
 }
@@ -311,7 +322,7 @@ ${tableHtml(headRow, body)}` });
     ? `<p class="verdict"><span class="verdict-badge">${esc(sum.verdict)}</span> Final verdict, approved by the site's owner on ${timeTag(sum.verdict_approved_at, fmtDay(sum.verdict_approved_at))}.</p>`
     : `<p class="answer-note">This is the current answer, not a final verdict. A final verdict is published only after the site's owner has reviewed the evidence.</p>`;
   // The main question is the page's heading; the box under it answers it.
-  const picture = incidentPicture(head, dataHref);
+  const picture = incidentPicture(head, dataHref, dir);
   // A photograph says what it shows and who made it; the credit links to where it came from.
   const pictureFrom = picture.image && (picture.image.source_url || (picture.image.source_id && sources.get(picture.image.source_id).source_url));
   const pictureCredit = picture.credit ? (pictureFrom ? linkTag(pictureFrom, esc(picture.credit)) : esc(picture.credit)) : "";

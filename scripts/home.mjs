@@ -9,7 +9,7 @@
 
 import { ANSWER_GROUPS, sizeBars, esc, fmtDate } from "./html.mjs";
 export { sizeBars };
-import { incidentPicture } from "./incident.mjs";
+import { incidentPicture, smallFile } from "./incident.mjs";
 
 const HOUR = 36e5, DAY = 864e5;
 // A story is on the front while it is new, recent or still down.
@@ -181,18 +181,21 @@ const stateWords = (i) => (i.service ? { down: "down now", "partly-back": "partl
 const answerLine = (i) => [groupOf(i).short, i.size === POTENTIAL ? "potential" : ""].filter(Boolean).join(" · ");
 
 // The picture on a tile: the incident's photograph, or its name on a plate in the answer's colour.
-function tileMedia(i) {
+// The first card on the page is usually the largest thing a phone shows, so its picture loads
+// at once; every other picture waits until it is scrolled near.
+function tileMedia(i, first = false) {
   const { image } = incidentPicture(i.loaded.head, i.dataPath);
-  if (image) return `<span class="fcard-media"><img src="${esc(`${i.dataPath}/${image.file}`)}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}"${image.rights === "logo" || /(^|-)logo(-|$)/.test(image.id) ? ' class="is-logo"' : ""} loading="lazy" decoding="async"></span>`;
+  const file = image && (smallFile(i.loaded.dir, image) || image.file);
+  if (image) return `<span class="fcard-media"><img src="${esc(`${i.dataPath}/${file}`)}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}"${image.rights === "logo" || /(^|-)logo(-|$)/.test(image.id) ? ' class="is-logo"' : ""}${first ? ' fetchpriority="high"' : ' loading="lazy"'} decoding="async"></span>`;
   const name = i.subject?.name || i.title;
   const fit = name.length > 22 ? " np-xs" : name.length > 12 ? " np-s" : "";
   return `<span class="fcard-media"><span class="nameplate${fit}">${esc(name)}</span></span>`;
 }
-function tile(i, kind, front) {
+function tile(i, kind, front, first = false) {
   const isNew = ms(front.asOf) - ms(i.first_published) <= NEW_HOURS * HOUR;
   const text = front.on.lines.get(i.slug) || i.question.answer;
   return `<li class="fcard fcard-${kind} a-${esc(groupOf(i).key)}"><a href="incidents/${esc(i.slug)}.html">
-${tileMedia(i)}
+${tileMedia(i, first)}
 <span class="fcard-body">
 <span class="fcard-meta">${isNew ? `<span class="ftag ftag-new">New story</span>` : ""}${stateChip(i)}<span>${isNew ? "" : "Updated "}${ago(i.last_updated)}</span></span>
 <span class="fcard-answer">${esc(answerLine(i))}</span>
@@ -205,11 +208,12 @@ function row(i, name) {
 }
 
 export function renderBands(front, { name }) {
+  const leadCard = front.bands[0] && (front.bands[0].big[0] || front.bands[0].side[0]);
   return front.bands.map((b) => {
     const list = (cls, items, draw) => (items.length ? `<ul class="${cls}">\n${items.map(draw).join("\n")}\n</ul>` : "");
     return `<section class="sband" aria-labelledby="sb-${b.key}">
 <div class="sband-head">${sizeBars(b.bars, { label: `Size: ${b.bars} of 4` })}<h2 id="sb-${b.key}">${esc(b.title)}</h2><p class="meta">${esc(b.gloss)}</p></div>
-${[list("fcards fcards-big", b.big, (i) => tile(i, "big", front)), list("fcards", b.side, (i) => tile(i, "side", front)), list("srows", b.rows, (i) => row(i, name))].filter(Boolean).join("\n")}
+${[list("fcards fcards-big", b.big, (i) => tile(i, "big", front, i === leadCard)), list("fcards", b.side, (i) => tile(i, "side", front, i === leadCard)), list("srows", b.rows, (i) => row(i, name))].filter(Boolean).join("\n")}
 ${b.more > 0 ? `<p class="meta sband-more"><a href="#incidents">${b.more} more in the full list</a></p>` : ""}
 </section>`;
   }).join("\n");

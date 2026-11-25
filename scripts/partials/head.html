@@ -1,12 +1,15 @@
 <script>
   // Analytics runs on the live site only, so a preview or a local build is never counted.
   if (/^(www\.)?isitahack\.com$/.test(location.hostname)) {
-    var gtm = document.createElement("script");
-    gtm.async = true;
-    gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
-    document.head.appendChild(gtm);
     window.dataLayer = window.dataLayer || [];
     window.gtag = function(){dataLayer.push(arguments);};
     gtag('js', new Date());
+    // Fetched once the page has finished loading, so it never delays what a reader sees.
+    addEventListener("load", function () {
+      var gtm = document.createElement("script");
+      gtm.async = true;
+      gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M6WWGDJ5";
+      document.head.appendChild(gtm);
+    });
   }
 </script>

@@ -347,8 +347,9 @@ p, ul, ol, dl { margin: 0; }
 .repo-block > div { flex: 1 1 380px; min-width: 0; display: grid; gap: 1rem; }
 .repo-block .kicker { color: var(--inv-link); }
 .file-tree { flex: 1 1 380px; min-width: 0; margin: 0; background: var(--inv-surface); border: 1px solid var(--inv-rule); border-radius: var(--radius); padding: 1.1rem; display: grid; gap: 0.7rem; }
-.file-tree > dt { font: 0.74rem/1.5 var(--mono); color: var(--inv-muted); }
-.file-tree > div { border-top: 1px solid var(--inv-rule); padding-top: 0.6rem; display: grid; gap: 0.1rem; }
+.file-tree > dl { margin: 0; display: grid; gap: 0.7rem; }
+.file-tree-name { font: 0.74rem/1.5 var(--mono); color: var(--inv-muted); }
+.file-tree dl > div { border-top: 1px solid var(--inv-rule); padding-top: 0.6rem; display: grid; gap: 0.1rem; }
 .file-tree div dt { font: 600 0.74rem/1.5 var(--mono); color: #ffffff; overflow-wrap: anywhere; }
 .file-tree dd { margin: 0; font-size: 0.8rem; line-height: 1.5; color: var(--inv-muted); }
 
