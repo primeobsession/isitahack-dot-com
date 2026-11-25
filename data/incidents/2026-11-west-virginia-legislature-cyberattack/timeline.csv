@@ -1,0 +1,3 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-19,,Morning,approximate,"IT staff notice unusual activity on the Legislature's internal systems and shut down systems and remote access, according to an internal memo",c003,The Dominion Post says Thursday morning; the Legislature gives the date as Nov 19.
+t002,2026-11-20,,Afternoon,approximate,"The Legislature confirms a cybersecurity incident; access to some IT systems is disabled and the website is down",c005,"Statement reported by The Record, WV MetroNews and The Dominion Post on Friday, Nov 20."
