@@ -32,8 +32,8 @@
       "claim_id": "c006"
     },
     {
-      "text": "The FBI has not commented on the reports.",
-      "claim_id": "c003"
+      "text": "The FBI has issued no statement. Asked on Nov 24, its Director said only that the matter is an ongoing investigation.",
+      "claim_id": "c017"
     },
     {
       "text": "the President called the reported hack 'not good' on Nov 21 but gave no details.",
@@ -50,7 +50,7 @@
   ],
   "not_known": [
     {
-      "text": "Whether the FBI confirms the breach. The reports rest on unnamed sources, and the President's and the DNI's remarks gave no details."
+      "text": "Whether the FBI confirms the breach. The reports rest on unnamed sources, and the President, the DNI and the FBI Director gave no details."
     },
     {
       "text": "What part of NCIC was reached, how the intruders got in, and who they are."
@@ -59,7 +59,7 @@
       "text": "Whether any records were copied or changed."
     },
     {
-      "text": "Whether it is linked to this week's outages or the September jobs-site breach. No source says so."
+      "text": "Whether it is linked to this week's outages, the September jobs-site breach or the separate CIA and ODNI breach reported on Nov 24. No source says so."
     },
     {
       "text": "Whether NCIC service for police was interrupted."
