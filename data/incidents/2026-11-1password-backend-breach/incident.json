@@ -4,7 +4,9 @@
   "title": "1Password backend systems breach, Nov 2026",
   "subject": {
     "name": "1Password",
-    "kind": "online-service"
+    "kind": "online-service",
+    "about": "1Password is a password manager, made by a company of the same name based in Toronto, Canada. People and businesses keep their passwords and other sign-in details in it. The company says it has millions of customers and more than 200,000 business customers.",
+    "about_url": "https://1password.com/press"
   },
   "incident_type": "breach",
   "answer_group": "hack-stated",
@@ -29,6 +31,10 @@
     {
       "text": "Names, email addresses and account details of some customers were copied.",
       "claim_id": "c005"
+    },
+    {
+      "text": "The attacker also copied 1Password's private source code and got into the system that builds its software.",
+      "claim_id": "c011"
     }
   ],
   "not_known": [
@@ -43,6 +49,10 @@
     {
       "text": "Who was behind it.",
       "question_id": "q006"
+    },
+    {
+      "text": "How the attacker's code got onto 1Password's servers, and what checks it passed.",
+      "question_id": "q008"
     }
   ],
   "figures": [
