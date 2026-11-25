@@ -124,6 +124,8 @@
 - [Check Point management server intrusions (GT13), Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-checkpoint-management-server-intrusions.html): the same report as a web page.
 - [Turnitin cyberattack, Nov 2026](https://isitahack.com/incidents/2026-11-turnitin-cyberattack.md): the report as Markdown (still monitored). Built from its data folder.
 - [Turnitin cyberattack, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-turnitin-cyberattack.html): the same report as a web page.
+- [FinCEN cybersecurity incident, Nov 2026](https://isitahack.com/incidents/2026-11-fincen-cybersecurity-incident.md): the report as Markdown (still monitored). Built from its data folder.
+- [FinCEN cybersecurity incident, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-fincen-cybersecurity-incident.html): the same report as a web page.
 
 ## Data (typed incident format: UTF-8, RFC 4180 CSV with a header row; see Format below)
 - [data/incidents/2026-11-microsoft-365-outage/](https://isitahack.com/data/incidents/2026-11-microsoft-365-outage/): the folder the Microsoft 365 report is built from: incident.json, claims.csv, sources.csv, timeline.csv, questions.csv, update_log.csv and notes/.
@@ -192,6 +194,7 @@
 - [data/incidents/2026-11-nsa-network-disruption/](https://isitahack.com/data/incidents/2026-11-nsa-network-disruption/): the folder the NSA report is built from: incident.json, claims.csv, sources.csv, timeline.csv, questions.csv, update_log.csv and notes/.
 - [data/incidents/2026-11-checkpoint-management-server-intrusions/](https://isitahack.com/data/incidents/2026-11-checkpoint-management-server-intrusions/): the folder the Check Point management server report is built from.
 - [data/incidents/2026-11-turnitin-cyberattack/](https://isitahack.com/data/incidents/2026-11-turnitin-cyberattack/): the folder the Turnitin cyberattack report is built from.
+- [data/incidents/2026-11-fincen-cybersecurity-incident/](https://isitahack.com/data/incidents/2026-11-fincen-cybersecurity-incident/): the folder the FinCEN cybersecurity incident report is built from.
 
 ## For search engines
 - [sitemap.xml](https://isitahack.com/sitemap.xml): every page, with each incident's last update.
