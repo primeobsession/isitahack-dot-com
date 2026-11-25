@@ -1,4 +1,4 @@
-We looked for these and did not find them as of our latest check on Nov 21.
+We looked for these and did not find them as of our latest check on Nov 25.
 
 - A published account of how the attackers got into GoFundMe Pro, or a forensic report from either company. DonorPerfect says the initial access was its marketing website; that is a statement to the press only.
 - Independent evidence for the AI bots claim, or an outside expert's review of it.
