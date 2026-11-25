@@ -47,6 +47,10 @@
     {
       "text": "Riverside's court says its portal is restored and users must reset their passwords.",
       "claim_id": "c022"
+    },
+    {
+      "text": "Alameda's court says its portal is operational again as of Nov 24. Marin's says its portal is back but its e-filing service is still offline.",
+      "claim_id": "c024"
     }
   ],
   "not_known": [
