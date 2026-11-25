@@ -168,7 +168,7 @@ const answerLine = (i) => [groupOf(i).short, i.size === POTENTIAL ? "potential" 
 // The picture on a tile: the incident's photograph, or its name on a plate in the answer's colour.
 function tileMedia(i) {
   const { image } = incidentPicture(i.loaded.head, i.dataPath);
-  if (image) return `<span class="fcard-media"><img src="${esc(`${i.dataPath}/${image.file}`)}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}"${/(^|-)logo(-|$)/.test(image.id) ? ' class="is-logo"' : ""} loading="lazy" decoding="async"></span>`;
+  if (image) return `<span class="fcard-media"><img src="${esc(`${i.dataPath}/${image.file}`)}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}"${image.rights === "logo" || /(^|-)logo(-|$)/.test(image.id) ? ' class="is-logo"' : ""} loading="lazy" decoding="async"></span>`;
   const name = i.subject?.name || i.title;
   const fit = name.length > 22 ? " np-xs" : name.length > 12 ? " np-s" : "";
   return `<span class="fcard-media"><span class="nameplate${fit}">${esc(name)}</span></span>`;
