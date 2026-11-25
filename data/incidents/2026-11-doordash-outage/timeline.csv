@@ -9,3 +9,5 @@ t007,2026-11-21T13:52:00-05:00,,,stated,PulsAPI finds all 16 status-page compone
 t008,2026-11-21T11:51:00-05:00,,,stated,"The 'Health Degredation' incident ends, according to DoorDash's later resolved note ('resolved at 8:51AM PST')",c010,"Stated in the 2:50 PM ET status-page update, not posted at the time."
 t009,2026-11-21T13:58:10-05:00,,,stated,DoorDash marks the Drive incident resolved: 'This incident has been resolved.',c010,10:58 AM PT on DoorDash's status page.
 t010,2026-11-21T14:50:34-05:00,,,stated,DoorDash marks the 'Health Degredation' incident resolved,c010,11:50 AM PT on DoorDash's status page.
+t011,2026-11-21T10:55:00-05:00,2026-11-21T11:45:00-05:00,About 10:55 to 11:45 AM ET,stated,"Some DoorDash partners see elevated errors and delays across DoorDash services, caused by a database connectivity issue on an internal address service, according to DoorDash's later post-incident note",c009,'About 7:55 AM and 8:45 AM PT' in the note posted Nov 24.
+t012,2026-11-24T15:12:21-05:00,,,stated,DoorDash posts a post-incident note on the 'Health Degredation' incident giving the cause,c009,12:12 PM PT on DoorDash's status page.
