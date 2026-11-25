@@ -4,7 +4,9 @@
   "title": "European Commission cyberattack and EU Academy data theft, Nov 2026",
   "subject": {
     "name": "European Commission",
-    "kind": "government"
+    "kind": "government",
+    "about": "The European Commission is the executive body of the European Union. It proposes new laws and policies, monitors how they are applied and manages the EU budget.",
+    "about_url": "https://commission.europa.eu/about_en"
   },
   "incident_type": "attack",
   "answer_group": "hack-stated",
@@ -24,7 +26,7 @@
   "verdict_approved_at": null,
   "size": "Large",
   "size_basis": "The executive of the European Union, with internal systems disrupted for days, and an online learning platform whose users' personal data is involved. The number of users affected is not known.",
-  "who_is_affected": "Commission staff, whose HR and reimbursement systems were disrupted, and EU Academy users, whose names and emails may have been taken. The Commission tells EU Academy users to watch for suspicious emails and impersonation attempts.",
+  "who_is_affected": "Commission staff, whose HR and reimbursement systems were disrupted, and EU Academy users, whose names and email addresses were among the data taken, the Commission says. It tells EU Academy users to watch for suspicious emails and impersonation attempts.",
   "known": [
     {
       "text": "The Commission confirms a cyberattack, first detected on Oct 22, carried out with AI tools.",
@@ -33,6 +35,10 @@
     {
       "text": "It says an incident on its EU Academy platform involves users' personal data, and access to the platform is disabled.",
       "claim_id": "c005"
+    },
+    {
+      "text": "Names and email addresses of EU Academy users were among the data taken, the Commission says; it has not said how many people.",
+      "claim_id": "c006"
     },
     {
       "text": "By Nov 19 most affected Commission systems were back; EU Academy is offline.",
