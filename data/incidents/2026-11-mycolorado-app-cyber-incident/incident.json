@@ -1,0 +1,114 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-mycolorado-app-cyber-incident",
+  "title": "myColorado app cybersecurity incident, Nov 2026",
+  "subject": {
+    "name": "myColorado",
+    "kind": "government"
+  },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "also_called": [
+    "myColorado app outage",
+    "Colorado digital ID app breach"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-18",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by the State of Colorado, any news outlet, regulator, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "service": {
+    "state": "down",
+    "claim_id": "c003"
+  },
+  "size": "Regional",
+  "size_basis": "One statewide app with about 2.1 million users, offline for everyone. The state estimates 50,000 to 150,000 people's data may have been affected; the investigation is ongoing.",
+  "who_is_affected": "Everyone who uses the myColorado app for a digital driver license, digital ID or state services. Carry your physical ID, including for holiday flights. The state says it will notify people whose data was affected.",
+  "known": [
+    {
+      "text": "The state says an unauthorized user accessed myColorado platform data, found late on Nov 18.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The state shut the app down and it is still unavailable, with no restoration date.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "The state estimates 50,000 to 150,000 people's data may have been affected.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "State services are still available through agency websites, and a physical ID is needed meanwhile.",
+      "claim_id": "c009"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "What data was accessed, and whose.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Who got in, and through what vulnerability.",
+      "question_id": "q003"
+    },
+    {
+      "text": "When the app will be back.",
+      "question_id": "q004"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 18",
+      "label": "Incident found",
+      "detail": "Late at night, the state says",
+      "claim_id": "c001"
+    },
+    {
+      "value": "50k-150k",
+      "label": "People whose data may be affected",
+      "detail": "State estimate, Nov 24",
+      "claim_id": "c004"
+    },
+    {
+      "value": "2.1 million",
+      "label": "App users",
+      "detail": "State figure",
+      "claim_id": "c005"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was the myColorado app hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Whose data was affected?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Is it back, and what should users do?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the myColorado incident"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
