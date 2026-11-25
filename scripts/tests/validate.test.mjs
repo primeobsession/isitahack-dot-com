@@ -58,6 +58,10 @@ test("the sample incident passes every check", () => {
 
 // ---------- shape of the files ----------
 rule("an unknown field in incident.json is rejected", (t) => t.head((h) => { h.severity = "high"; }), /incident\.json\.severity: unknown field/);
+rule("a description of the subject with no page behind it", (t) => t.head((h) => { delete h.subject.about_url; }), /incident\.json\.subject: about needs about_url/);
+rule("a page for the subject with no description", (t) => t.head((h) => { delete h.subject.about; }), /incident\.json\.subject: about_url needs about/);
+rule("a description of the subject too short to say anything", (t) => t.head((h) => { h.subject.about = "A water utility."; }), /incident\.json\.subject\.about: /);
+test("an incident may leave the description of its subject out", () => { assert.deepEqual(problems((t) => t.head((h) => { delete h.subject.about; delete h.subject.about_url; })), []); });
 rule("a missing required field is named", (t) => t.head((h) => { delete h.who_is_affected; }), /who_is_affected: missing \(required\)/);
 rule("a value outside the allowed list is rejected", (t) => t.head((h) => { h.size = "Huge"; }), /incident\.json\.size: "Huge" is not one of/);
 rule("the slug must equal the folder name", (t) => t.head((h) => { h.slug = "2026-01-something-else"; }), /slug: .* must equal the folder name/);
@@ -213,14 +217,18 @@ test("the build is repeatable and writes the pages search engines need", () => {
     // there without the script: the short answer, the full story, the evidence
     assert.match(page, /<div class="answer-head"><p class="kicker">Is it a hack\? The short answer<\/p><span class="pill pill-no-sign ans-no-sign-of-hack answer-pill">No sign of a hack<\/span><\/div>/, "the plain answer leads the answer box");
     assert.match(page, /<span class="field">How well supported<\/span> <span class="pill pill-reported"/, "the evidence label follows it");
-    const depthAt = (cls) => page.indexOf(`<section class="depth ${cls}"`);
-    assert.ok(depthAt("depth-short") > 0 && depthAt("depth-short") < depthAt("depth-story") && depthAt("depth-story") < depthAt("depth-evidence"), "the three depths come in order");
-    const storyPart = page.slice(depthAt("depth-story"), depthAt("depth-evidence")), evidencePart = page.slice(depthAt("depth-evidence"));
-    assert.match(page.slice(depthAt("depth-short"), depthAt("depth-story")), /<h2>Known so far<\/h2>[\s\S]*<h2>Not known yet<\/h2>/, "the short answer says what is and is not known");
-    assert.match(storyPart, /<details class="row" id="c001"/, "claims are part of the full story");
-    assert.match(evidencePart, /id="sources"[\s\S]*id="update-log"[\s\S]*id="raw-files"/, "sources, the update log and the raw files are the evidence");
-    assert.equal(page.match(/<button type="button" data-depth="(short|story|evidence)" aria-pressed="false">/g).length, 3, "the switch offers the three depths");
-    assert.doesNotMatch(page, /<html[^>]*data-depth/, "nothing is hidden until the script says how deep to read");
+    // the page is one scroll: the questions a reader asks, in the order they ask them
+    const at = (id) => page.indexOf(`<section class="q" id="${id}">`);
+    const asked = ["what-is-it", "what-happened", "is-it-back", "who-is-affected", "how-big", "glance", "what-has-been-said", "sources", "update-log"];
+    for (const [n, id] of asked.entries()) assert.ok(at(id) > 0 && (n === 0 || at(asked[n - 1]) < at(id)), `the question "${id}" is on the page, after "${asked[n - 1] || "the short answer"}"`);
+    assert.ok(page.indexOf('id="raw-files"') > at("update-log"), "the raw files come last");
+    assert.match(page.slice(at("what-is-it"), at("what-happened")), /<h2>What is Example City Water\?<\/h2>\n<p class="q-lede">[^<]+<\/p>\n<p class="meta">From <a href="https:\/\/water\.example\.org\/about" rel="noopener">water\.example\.org<\/a><\/p>/, "the page says what the subject is, and where that comes from");
+    assert.match(page.slice(at("what-happened"), at("is-it-back")), /class="latest-headline"[\s\S]*class="rows rows-timeline"/, "what happened is the latest, then the timeline");
+    assert.match(page.slice(at("glance"), at("what-has-been-said")), /<h3>Known so far<\/h3>[\s\S]*<h3>Not known yet<\/h3>/, "the page says what is and is not known");
+    assert.match(page.slice(at("what-has-been-said"), at("sources")), /<article class="row" id="c001">/, "every claim is listed, with its evidence in view");
+    assert.doesNotMatch(page, /<details|data-depth|depth-switch|Keep going/, "nothing is folded away, and there is no switch for how much to read");
+    const toc = page.slice(page.indexOf('<nav class="toc"'), page.indexOf("</nav>", page.indexOf('<nav class="toc"')));
+    assert.deepEqual([...toc.matchAll(/<li class="toc-top"><a href="#([^"]+)">/g)].map((m) => m[1]), ["the-question", ...asked], "the contents list names the same questions in the same order");
     const home = readFileSync(join(a, "index.html"), "utf8");
     // the home page lists every incident once, as a row under its plain answer
     const listed = JSON.parse(readFileSync(join(a, "index.json"), "utf8")).incidents;
@@ -256,7 +264,7 @@ test("the build is repeatable and writes the pages search engines need", () => {
     assert.match(board, new RegExp(`<tr data-group="no-sign-of-hack"[^>]*><td data-label="Incident"><a href="incidents/${SLUG}\\.html">`), "the sample is on the board under its answer");
     assert.match(readFileSync(join(a, "sitemap.xml"), "utf8"), /<loc>https:\/\/isitahack\.com\/status\.html<\/loc>/, "the status board is in the sitemap");
     // whether a service is back is said with the claim it rests on, on the page and on the board
-    assert.match(page, /<h2 class="kicker">Is it back\?<\/h2><p><strong>Back\.<\/strong> Billing portal restored\. <a class="ref" href="#t\d+">evidence<\/a>/, "the short answer says whether the service is back, with its evidence");
+    assert.match(page, /<h2>Is it back\?<\/h2>\n<p class="q-lede"><strong>Back\.<\/strong> Billing portal restored\. <a class="ref" href="#t\d+">evidence<\/a>/, "the page says whether the service is back, with its evidence");
     assert.match(board, new RegExp(`<li class="svc svc-back"[^>]*><span class="svc-state">.*?Back</span><a class="svc-name" href="incidents/${SLUG}\\.html">`), "the board lists the sample as back");
     assert.equal(board.match(/<li class="svc svc-/g).length, listed.filter((i) => i.service).length, "the board lists exactly the incidents whose data says how things stand");
     // when the next check is due: on the board, in index.json for the agents, on the page and in its Markdown

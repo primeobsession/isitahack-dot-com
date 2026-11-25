@@ -2,7 +2,7 @@
   "format_version": 1,
   "slug": "2026-01-example-city-water-portal",
   "title": "Example City water billing portal outage",
-  "subject": { "name": "Example City Water", "kind": "other" },
+  "subject": { "name": "Example City Water", "kind": "other", "about": "Example City Water is the city-run utility that supplies drinking water to Example City. Residents use its online portal to pay bills and report leaks.", "about_url": "https://water.example.org/about" },
   "incident_type": "outage",
   "answer_group": "no-sign-of-hack",
   "service": { "state": "back", "claim_id": "c006" },

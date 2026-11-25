@@ -467,44 +467,30 @@ ol.doc-main, ul.doc-main { list-style: none; padding: 0; }
   .toc a { display: grid; grid-template-columns: 1.5rem minmax(0, 1fr) auto; align-items: baseline; gap: 0.25rem; min-height: 0; padding: 0.42rem 0; white-space: normal; }
 }
 
-/* An incident page reads at three depths: the short answer, the full story, the evidence.
-   The switch and the folding need the page script; without it every depth shows. */
-.depth { display: grid; gap: 2.25rem; align-content: start; }
-.depth > * { min-width: 0; }
-.depth-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0.25rem 0.75rem; align-items: baseline; border-top: 2px solid var(--strong); padding-top: 1rem; scroll-margin-top: 1rem; }
-.depth-head h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); letter-spacing: -0.03em; }
-.depth-head .meta { grid-column: 2; max-width: 44em; }
-.depth-switch { display: none; gap: 0.6rem; }
-html[data-depth] .depth-switch { display: grid; }
-.depth-picks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; }
-.depth-picks button { display: grid; gap: 0.15rem; align-content: center; min-height: 56px; padding: 0.5rem 0.9rem; text-align: left; background: var(--surface); color: var(--ink); border: 1.5px solid var(--rule); border-radius: var(--radius); font: inherit; cursor: pointer; }
-.depth-picks b { font-size: 0.92rem; font-weight: 700; line-height: 1.25; }
-.depth-picks span { font-size: 0.76rem; line-height: 1.35; color: var(--muted); }
-.depth-picks button:hover { border-color: var(--neutral); }
-.depth-picks button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-.depth-picks button[aria-pressed="true"] span { color: inherit; opacity: 0.85; }
-@media (max-width: 599px) {
-  .depth-picks span { display: none; }
-  .depth-picks button { min-height: 48px; padding: 0.4rem 0.4rem; text-align: center; }
-  .depth-picks b { font-size: 0.82rem; }
-}
-html[data-depth="short"] .depth-story, html[data-depth="short"] .depth-evidence, html[data-depth="story"] .depth-evidence { display: none; }
-.keep-going { display: none; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.2rem; border-top: 1px solid var(--rule); padding-top: 1.25rem; }
-html[data-depth="short"] .keep-story, html[data-depth="story"] .keep-evidence { display: flex; }
+/* An incident page is one scroll: the questions a reader asks, in the order they ask them.
+   Nothing is folded away; the contents list is for jumping. */
+.q { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.1rem; align-content: start; border-top: 2px solid var(--strong); padding-top: 1rem; scroll-margin-top: 1rem; }
+.q > * { min-width: 0; }
+.q > h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); letter-spacing: -0.03em; }
+.q-lede { font-size: 1.08rem; line-height: 1.55; max-width: 40em; }
+.q > .meta { max-width: 44em; }
+.latest-box { display: grid; gap: 0.35rem; background: var(--surface); border: 1px solid var(--rule); border-top: 2px solid var(--accent); border-radius: var(--radius); padding: 0.9rem 1.1rem 1rem; }
+.size-line { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.7rem; }
+.answer-facts { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.9rem; font-size: 0.88rem; }
+.block-head h3 { font-size: clamp(1.15rem, 1.9vw, 1.35rem); letter-spacing: -0.02em; }
+.block-head .count { font-weight: 400; color: var(--muted); }
 button.button { font-family: inherit; cursor: pointer; }
 .brief { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.4rem 2.25rem; }
 .brief-item { display: grid; gap: 0.4rem; align-content: start; border-top: 1px solid var(--rule); padding-top: 0.8rem; font-size: 0.92rem; line-height: 1.55; }
 .brief-item.latest { border-top-color: var(--accent); }
 .answer-pill { font-size: 0.82rem; min-height: 32px; padding: 3px 12px 3px 10px; }
 .raw-files { display: grid; gap: 0.4rem; padding: 1.1rem 1.25rem; background: var(--surface-2); border-radius: 8px; font-size: 0.9rem; }
-.raw-files h3 { font-size: 1rem; }
+.raw-files h2, .raw-files h3 { font-size: 1rem; letter-spacing: -0.01em; }
 .raw-links { display: flex; flex-wrap: wrap; gap: 0 1.5rem; font: 600 0.8rem/1.5 var(--mono); }
 .raw-links a { display: inline-flex; align-items: center; min-height: 44px; }
 .toc-top a { color: var(--ink); font-weight: 700; }
-/* the contents list shows the sections of the depths being read */
-html[data-depth="short"] .toc-sub, html[data-depth="story"] .toc-in-evidence { display: none; }
-/* below the three-column width the switch does the contents list's job for a first-time reader */
-@media (max-width: 1239px) { html[data-depth="short"] .toc { display: none; } .toc-top a { text-transform: none; } }
+/* below the three-column width the contents list is one scrolling line of the questions */
+@media (max-width: 1239px) { .toc-sub { display: none; } }
 @media (min-width: 1240px) {
   .toc-top:not(:first-child) a { margin-top: 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
   .toc-sub a { grid-template-columns: minmax(0, 1fr) auto; padding-left: 1.75rem; font-size: 0.8rem; }
@@ -600,10 +586,8 @@ details[open] > summary::after { transform: rotate(-135deg); margin-bottom: -0.1
 .intro { max-width: 40em; }
 .rows { border-top: 1px solid var(--rule); }
 .row { border-bottom: 1px solid var(--rule); }
-.row > summary { position: relative; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0.35rem 1rem; padding: 0.85rem 2.4rem 0.85rem 0; min-height: 48px; }
-.row > summary:hover .row-title { color: var(--accent); }
-.row > summary::after { position: absolute; right: 0.4rem; top: 1.15rem; margin: 0; }
-.row[open] > summary::after { top: 1.4rem; margin: 0; }
+.row { scroll-margin-top: 1rem; }
+.row-head { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0.35rem 1rem; padding: 0.85rem 0 0.6rem; }
 .row-lead { flex: 0 0 132px; }
 .rows-timeline .row-lead { flex-basis: 100px; font: 600 0.76rem/1.5 var(--mono); padding-top: 0.2rem; }
 .rows-timeline .row-lead time { white-space: nowrap; }
@@ -708,8 +692,7 @@ ul.tasks { list-style: none; padding: 0; border-top: 1px solid var(--rule); }
   .data-table.compact { width: auto; min-width: 50%; }
 }
 @media print {
-  .skip, .site-nav, .toc, .theme-toggle, .side-more, .depth-switch, .keep-going { display: none !important; }
-  html[data-depth] .depth { display: grid !important; }
+  .skip, .site-nav, .toc, .theme-toggle, .side-more { display: none !important; }
   details > :not(summary) { display: block !important; }
   .inverse { background: none; color: inherit; border-color: #000; }
 }

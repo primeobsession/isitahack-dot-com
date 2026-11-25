@@ -4,7 +4,7 @@
 
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { LABELS, ANSWER_GROUPS, answerPill, esc, slugify, pill, inline, linkTag, fmtDate, fmtTime, fmtDay, timeTag, renderBody, tableHtml } from "./html.mjs";
+import { LABELS, ANSWER_GROUPS, answerPill, sizeBars, esc, slugify, pill, inline, linkTag, fmtDate, fmtTime, fmtDay, timeTag, renderBody, tableHtml } from "./html.mjs";
 import { renderChart, fmtNumber } from "./chart.mjs";
 import { renderPlate } from "./plate.mjs";
 
@@ -153,18 +153,13 @@ ${otherIncidents(others, root)}
 </main>`;
 }
 
-const row = ({ id, lead, title, sub, trail = "", body, open = false }) => `<details class="row"${id ? ` id="${esc(id)}"` : ""}${open ? " open" : ""}>
-<summary><span class="row-lead">${lead}</span><span class="row-main"><span class="row-title">${title}</span>${sub ? `<span class="row-sub">${sub}</span>` : ""}</span>${trail ? `<span class="row-trail">${trail}</span>` : ""}</summary>
+// A row is always open: the claim, its label, and what it rests on, all in view.
+const row = ({ id, lead, title, sub, trail = "", body }) => `<article class="row"${id ? ` id="${esc(id)}"` : ""}>
+<div class="row-head"><span class="row-lead">${lead}</span><span class="row-main"><span class="row-title">${title}</span>${sub ? `<span class="row-sub">${sub}</span>` : ""}</span>${trail ? `<span class="row-trail">${trail}</span>` : ""}</div>
 <div class="row-body">
 ${body}
 </div>
-</details>`;
-
-// Show the first `n` items; put the rest behind a native disclosure (no script needed).
-function foldRest(items, n, noun) {
-  if (items.length <= n) return items.join("\n");
-  return `${items.slice(0, n).join("\n")}\n<details class="more">\n<summary>Show ${items.length - n} more ${noun}</summary>\n${items.slice(n).join("\n")}\n</details>`;
-}
+</article>`;
 
 export function renderIncident(loaded, { root, dataHref, dir, repo, others }) {
   const { head, t, chartData, tableData } = loaded;
@@ -196,20 +191,18 @@ ${c.source_ids.map(sourceLine).join("\n")}
   // ---------- sections ----------
   const ids = new Map();
   const uniqueId = (text) => { const base = slugify(text); const n = (ids.get(base) || 0) + 1; ids.set(base, n); return n === 1 ? base : `${base}-${n}`; };
-  for (const reserved of ["glance", "update-log", "sources", "main", "the-question", "full-story", "evidence", "numbers", "raw-files"]) ids.set(reserved, 1);
-  // The page reads at three depths: the short answer, the full story, the evidence.
-  const toc = [{ id: "the-question", name: "The short answer", n: "01" }, { id: "full-story", name: "The full story", n: "02" }];
-  let tocDepth = "story";
-  const fold = ({ title, count = "", open, body, id }) => {
+  for (const reserved of ["glance", "update-log", "sources", "main", "the-question", "what-is-it", "what-happened", "is-it-back", "who-is-affected", "how-big", "what-has-been-said", "numbers", "raw-files"]) ids.set(reserved, 1);
+  // The page is one scroll: the questions a reader asks, in the order they ask them. Nothing is
+  // folded away. A block is one titled part inside a question; `sub` says which question.
+  const subToc = [];
+  const fold = ({ title, count = "", body, id, sub = "what-has-been-said" }) => {
     const sid = id || uniqueId(title);
-    toc.push({ id: sid, name: title, count, sub: tocDepth });
+    subToc.push({ id: sid, name: title, count, sub });
     return `<section class="block" id="${esc(sid)}">
-<details class="fold"${open ? " open" : ""}>
-<summary><h3>${esc(title)}</h3>${count !== "" ? `<span class="count">${esc(count)}</span>` : ""}</summary>
+<div class="block-head"><h3>${esc(title)}</h3>${count !== "" ? `<span class="count">${esc(count)}</span>` : ""}</div>
 <div class="fold-body">
 ${body}
 </div>
-</details>
 </section>`;
   };
   const intro = (s) => (s.intro ? `<p class="intro">${esc(s.intro)}</p>\n` : "");
@@ -218,7 +211,7 @@ ${body}
     claims(s) {
       const list = t.claims.filter((c) => c.group === s.group);
       const rows = list.map((c) => row({ id: c.claim_id, lead: pill(c.label), title: esc(c.claim_text), sub: esc(c.summary), body: claimBody(c) }));
-      return fold({ title: s.title, count: list.length, open: s.open, body: `${intro(s)}<div class="rows">\n${foldRest(rows, 8, "rows")}\n</div>` });
+      return fold({ title: s.title, count: list.length, body: `${intro(s)}<div class="rows">\n${rows.join("\n")}\n</div>` });
     },
     timeline(s) {
       const events = t.timeline; // file order: the order things happened
@@ -230,10 +223,15 @@ ${body}
         const when = `${day}${clock ? timeTag(e.event_time, clock) : ""}${e.event_end_time ? `<span class="row-until"> to ${esc(fmtTime(e.event_end_time))}</span>` : ""}`;
         const basis = e.time_basis === "inferred" ? `<p class="meta">Time inferred${e.notes ? `: ${esc(e.notes)}` : ""}</p>\n` : e.notes ? `<p class="meta">${esc(e.notes)}</p>\n` : "";
         const repeats = c.why_it_supports.startsWith(c.summary) || c.summary.startsWith(c.why_it_supports);
-        return row({ id: e.event_id, lead: when, title: esc(e.event_text), trail: pill(c.label), body: `${repeats ? "" : `<p>${esc(c.summary)}</p>\n`}${basis}${claimBody(c)}` });
+        // The claim's full evidence is listed once, under "everything that has been said"; the
+        // timeline points to it. A claim shown nowhere else keeps its evidence here.
+        const body = shownGroups.has(c.group)
+          ? `${basis}<p class="meta"><a class="ref" href="#${esc(c.claim_id)}">Evidence and sources</a></p>`
+          : `${repeats ? "" : `<p>${esc(c.summary)}</p>\n`}${basis}${claimBody(c)}`;
+        return row({ id: e.event_id, lead: when, title: esc(e.event_text), trail: pill(c.label), body });
       });
       const zone = events.length ? fmtDate(events[0].event_time).split(" ").pop() : "";
-      return fold({ title: s.title, count: events.length, open: s.open, body: `${intro(s)}<p class="meta">Times are ${zone === "ET" ? "Eastern" : esc(zone)}. Each row opens to show its evidence and source.</p>\n<div class="rows rows-timeline">\n${foldRest(rows, 8, "events")}\n</div>` });
+      return fold({ title: s.title, count: events.length, sub: "what-happened", body: `${intro(s)}<p class="meta">Times are ${zone === "ET" ? "Eastern" : esc(zone)}.</p>\n<div class="rows rows-timeline">\n${rows.join("\n")}\n</div>` });
     },
     questions(s) {
       const rows = t.questions.map((q) => {
@@ -245,7 +243,7 @@ ${body}
         ].filter(Boolean).join("\n");
         return row({ id: q.question_id, lead, title: esc(q.question_text), sub: q.answer_text ? esc(q.answer_text) : "Not answered yet.", body });
       });
-      return fold({ title: s.title, count: rows.length, open: s.open, body: `${intro(s)}<div class="rows">\n${foldRest(rows, 8, "questions")}\n</div>` });
+      return fold({ title: s.title, count: rows.length, body: `${intro(s)}<div class="rows">\n${rows.join("\n")}\n</div>` });
     },
     quotes(s) {
       const list = t.quotes.filter((q) => q.group === s.group);
@@ -253,26 +251,24 @@ ${body}
         const bits = [esc(q.speaker), q.context ? esc(q.context) : "", q.said_at ? esc(fmtDate(q.said_at)) : "", sourceLink(q.source_id), q.confidence ? `confidence: ${esc(q.confidence)}` : ""].filter(Boolean);
         return `<figure class="quote" id="${esc(q.quote_id)}">\n<blockquote><p>${esc(q.quote_text)}</p></blockquote>\n<figcaption>${bits.join(" · ")}${q.notes ? `<br>${esc(q.notes)}` : ""}</figcaption>\n</figure>`;
       });
-      return fold({ title: s.title, count: list.length, open: s.open, body: `${intro(s)}${foldRest(items, 6, "statements")}` });
+      return fold({ title: s.title, count: list.length, body: `${intro(s)}${items.join("\n")}` });
     },
     chart(s) {
       const chart = head.charts.find((c) => c.id === s.id);
       const rows = chartData[chart.id];
       const headRow = [chart.x.label, ...chart.series.map((x) => x.label)];
       const body = rows.map((r) => [esc(chart.x.kind === "time" ? fmtDate(r[chart.x.column]) : r[chart.x.column]), ...chart.series.map((x) => (r[x.column] === "" ? "" : esc(fmtNumber(Number(r[x.column])))))]);
-      return fold({ title: chart.title, open: s.open, id: uniqueId(chart.id), body: `<figure class="figure">
+      return fold({ title: chart.title, id: uniqueId(chart.id), body: `<figure class="figure">
 ${renderChart(chart, rows)}
 <figcaption>${chart.caption ? `${esc(chart.caption)} ` : ""}Source: ${chart.source_ids.map(sourceLink).join(", ")}.</figcaption>
 </figure>
-<details class="more">
-<summary>Show the numbers</summary>
-${tableHtml(headRow, body)}
-</details>` });
+<p class="meta">The numbers behind the chart</p>
+${tableHtml(headRow, body)}` });
     },
     image(s) {
       const image = head.images.find((i) => i.id === s.id);
       const credit = `${esc(image.credit)}${image.source_id ? `, via ${sourceLink(image.source_id)}` : image.source_url ? ` (${linkTag(image.source_url, "source")})` : ""}`;
-      return fold({ title: image.title, open: s.open, id: uniqueId(image.id), body: `<figure class="figure">
+      return fold({ title: image.title, id: uniqueId(image.id), body: `<figure class="figure">
 <img src="${esc(`${dataHref}/${image.file}`)}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}" loading="lazy">
 <figcaption>${image.caption ? `${esc(image.caption)} ` : ""}Image: ${credit}.</figcaption>
 </figure>` });
@@ -281,24 +277,26 @@ ${tableHtml(headRow, body)}
       const table = head.tables.find((x) => x.id === s.id);
       const cell = (c, v) => (v == null ? "" : c.type === "label" ? pill(v) : c.type === "source" ? sourceLink(v) : c.type === "number" ? esc(fmtNumber(v)) : inline(String(v)));
       const body = tableData[table.id].map((r) => table.columns.map((c) => cell(c, r[c.name])));
-      return fold({ title: table.title, count: body.length, open: s.open, id: uniqueId(table.id), body: `${table.intro ? `<p class="intro">${esc(table.intro)}</p>\n` : ""}${tableHtml(table.columns.map((c) => c.label), body)}` });
+      return fold({ title: table.title, count: body.length, id: uniqueId(table.id), body: `${table.intro ? `<p class="intro">${esc(table.intro)}</p>\n` : ""}${tableHtml(table.columns.map((c) => c.label), body)}` });
     },
     note(s) {
       const doc = renderBody(readFileSync(join(dir, s.file), "utf8"));
       const blocks = [...doc.pre, ...doc.sections.flatMap((x) => [`<h3>${inline(x.heading)}</h3>`, ...x.blocks])];
-      return fold({ title: s.title, open: s.open, body: `<div class="prose">\n${blocks.join("\n")}\n</div>` });
+      return fold({ title: s.title, body: `<div class="prose">\n${blocks.join("\n")}\n</div>` });
     },
   };
-  const sectionsHtml = head.sections.map((s) => renderers[s.type](s)).join("\n\n");
+  // The timeline answers "what happened", so it sits there; every other section is part of
+  // "everything that has been said", in the order the incident lists them.
+  const timelineSection = head.sections.find((s) => s.type === "timeline");
+  const timelineHtml = timelineSection ? renderers.timeline(timelineSection) : "";
+  const sectionsHtml = head.sections.filter((s) => s.type !== "timeline").map((s) => renderers[s.type](s)).join("\n\n");
 
-  toc.push({ id: "evidence", name: "The evidence", n: "03" });
-  tocDepth = "evidence";
   const logRows = t.update_log.map((u) => `<li class="log-row${QUIET.has(u.change_type) ? " quiet" : ""}" id="${esc(u.log_id)}">
 <span class="log-when">${timeTag(u.logged_at)}</span>
 <span class="log-what"><strong>${esc(u.headline)}</strong> ${esc(u.summary)} <span class="meta">${esc(CHANGES[u.change_type])}</span></span>
 </li>`);
-  const logHtml = fold({ title: "Update log", count: t.update_log.length, id: "update-log", body: `<p class="meta">Every check and change, newest first. Last checked ${timeTag(sum.last_checked)}.${sum.next_check ? ` The next check is due by ${timeTag(sum.next_check.due, dueText(sum.next_check))}: the desk checks ${cadenceText(sum.next_check)}.` : ""}</p>\n<ol class="log">\n${foldRest(logRows, 6, "entries")}\n</ol>` });
-  const sourcesHtml = fold({ title: "Sources", count: t.sources.length, id: "sources", body: `<ol class="source-lines numbered">\n${t.sources.map((s) => sourceLine(s.source_id)).join("\n")}\n</ol>` });
+  const logHtml = `<p class="meta">Every check and change, newest first. Last checked ${timeTag(sum.last_checked)}.${sum.next_check ? ` The next check is due by ${timeTag(sum.next_check.due, dueText(sum.next_check))}: the desk checks ${cadenceText(sum.next_check)}.` : ""}</p>\n<ol class="log">\n${logRows.join("\n")}\n</ol>`;
+  const sourcesHtml = `<ol class="source-lines numbered">\n${t.sources.map((s) => sourceLine(s.source_id)).join("\n")}\n</ol>`;
 
   // ---------- the top of the page ----------
   const q = sum.question;
@@ -313,9 +311,15 @@ ${tableHtml(headRow, body)}
   const media = `<figure class="head-media">${picture.html}${pictureCredit ? `<figcaption>${picture.caption ? `${esc(picture.caption)} ` : ""}${pictureCredit}</figcaption>` : ""}</figure>`;
   // The plain answer comes first; the evidence label says how well it is supported.
   const group = ANSWER_GROUPS.find((g) => g.key === head.answer_group);
+  const SIZE_BARS = { Local: 1, Regional: 2, Large: 3, "Nation-level": 4, "Nation-level potential": 4 };
+  const potential = head.size === "Nation-level potential";
+  const sizeLine = `${sizeBars(SIZE_BARS[head.size], { potential, label: `Size: ${head.size}` })}<strong>${esc(potential ? "Nation-level, but only if the worst case were true" : head.size)}</strong>`;
+  const STATE_TAGS = { down: ["ftag-down", "Down now"], "partly-back": ["ftag-partly", "Partly back"], back: ["ftag-kind", "Back"] };
+  const stateTag = sum.service ? `<span class="ftag ${STATE_TAGS[sum.service.state][0]}">${STATE_TAGS[sum.service.state][1]}</span>` : "";
   const lead = `<section class="answer-box" aria-labelledby="the-question">
 <div class="answer-head"><p class="kicker">Is it a hack? The short answer</p>${answerPill(group, "answer-pill")}</div>
 <p class="answer">${esc(q.answer)}</p>
+<p class="answer-facts">${stateTag}<span class="size-line">${sizeLine}</span></p>
 <p class="answer-refs"><span class="field">How well supported</span> ${pill(q.label)}</p>
 <p class="answer-refs"><span class="field">Rests on</span> ${q.claim_ids.map((id) => `<a href="${esc(claimHref(id))}">${esc(claims.get(id).claim_text)}</a>`).join(" · ")}</p>
 ${verdictNote}
@@ -330,58 +334,44 @@ ${evidenceBar(sum.tally, sum.tally_title)}
 <p><a href="${root}how-it-works.html">What the labels mean</a></p>
 </section>`;
 
-  // The reader chooses how deep to go. Without the page script all three depths show.
-  const depthSwitch = `<div class="depth-switch" role="group" aria-label="How much do you want to read?">
-<p class="kicker">How much do you want to read?</p>
-<div class="depth-picks">
-<button type="button" data-depth="short" aria-pressed="false"><b>The short answer</b><span>Is it a hack, how big, and who it affects</span></button>
-<button type="button" data-depth="story" aria-pressed="false"><b>The full story</b><span>Adds the timeline and every claim</span></button>
-<button type="button" data-depth="evidence" aria-pressed="false"><b>The evidence</b><span>Adds every source and every update</span></button>
-</div>
-</div>`;
+  // ---------- the page: the questions a reader asks, in the order they ask them ----------
   const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
-  const short = `<section class="depth depth-short" aria-label="The short answer, continued">
-<div class="brief">
-<div class="brief-item latest"><h2 class="kicker accent">The latest · ${timeTag(sum.latest.at)}</h2><p class="latest-headline">${esc(sum.latest.headline)}</p></div>
-${sum.service ? `<div class="brief-item"><h2 class="kicker">Is it back?</h2><p><strong>${esc(SERVICE_STATES[sum.service.state])}.</strong> ${esc(sum.service.text.replace(/[.\s]+$/, ""))}. <a class="ref" href="${esc(claimHref(sum.service.claim_id))}">evidence</a>${sum.service.as_of ? ` <span class="meta">Checked ${timeTag(sum.service.as_of)}</span>` : ""}</p></div>\n` : ""}<div class="brief-item"><h2 class="kicker">How big is it?</h2><p><strong>${esc(head.size)}.</strong> ${esc(head.size_basis)}</p></div>
-<div class="brief-item"><h2 class="kicker">Who is affected?</h2><p>${esc(head.who_is_affected)}</p></div>
-</div>
-<div class="known-grid" id="glance">
-<div class="known"><h2>Known so far</h2>${known ? `<ul>\n${known}\n</ul>` : `<p>Nothing is established yet.</p>`}</div>
-<div class="not-known"><h2>Not known yet</h2>${notKnown ? `<ul>\n${notKnown}\n</ul>` : `<p>No open questions are recorded.</p>`}</div>
+  const allTally = Object.fromEntries(LABELS.map((l) => [l, t.claims.filter((c) => c.label === l).length]));
+  const about = head.subject.about;
+  const hostOf = (url) => new URL(url).hostname.replace(/^www\./, "");
+  const parts = [
+    about && { id: "what-is-it", name: `What is ${head.subject.name}?`, html: `<p class="q-lede">${esc(about)}</p>\n<p class="meta">From ${linkTag(head.subject.about_url, esc(hostOf(head.subject.about_url)))}</p>` },
+    { id: "what-happened", name: "What happened?", html: `<div class="latest-box"><p class="kicker accent">The latest · ${timeTag(sum.latest.at)}</p><p class="latest-headline">${esc(sum.latest.headline)}</p></div>${tiles ? `\n<ul class="tiles" id="numbers">\n${tiles}\n</ul>` : ""}${timelineHtml ? `\n${timelineHtml}` : ""}` },
+    sum.service && { id: "is-it-back", name: sum.service.state === "back" ? "Is it back?" : "Is it still down?", html: `<p class="q-lede"><strong>${esc(SERVICE_STATES[sum.service.state])}.</strong> ${esc(sum.service.text.replace(/[.\s]+$/, ""))}. <a class="ref" href="${esc(claimHref(sum.service.claim_id))}">evidence</a></p>${sum.service.as_of ? `\n<p class="meta">Checked ${timeTag(sum.service.as_of)}</p>` : ""}` },
+    { id: "who-is-affected", name: "Does it affect me?", html: `<p class="q-lede">${esc(head.who_is_affected)}</p>` },
+    { id: "how-big", name: "How big is it?", html: `<p class="size-line">${sizeLine}</p>\n<p class="q-lede">${esc(head.size_basis)}</p>` },
+    { id: "glance", name: "What we know, and what we don't", html: `<div class="known-grid">
+<div class="known"><h3>Known so far</h3>${known ? `<ul>\n${known}\n</ul>` : `<p>Nothing is established yet.</p>`}</div>
+<div class="not-known"><h3>Not known yet</h3>${notKnown ? `<ul>\n${notKnown}\n</ul>` : `<p>No open questions are recorded.</p>`}</div>
 </div>
 <aside class="note">
 <p>${STANDARD_NOTE}</p>
 <p>${esc(head.disclaimer)}</p>
-</aside>
-<p class="keep-going keep-story"><button type="button" class="button" data-depth="story">Keep going: the full story</button><span class="meta">${tiles ? "The key numbers, the" : "The"} timeline and ${plural(t.claims.length, "claim", "claims")}, each with a label saying how well it is supported.</span></p>
-</section>`;
-  const story = `<section class="depth depth-story" id="full-story" data-level="story">
-<div class="depth-head"><span class="sec-n">02</span><h2>The full story</h2><p class="meta">What happened and what has been said about it. Every claim carries a label, and opens to show its sources.</p></div>
-${tiles ? `<ul class="tiles" id="numbers">\n${tiles}\n</ul>\n` : ""}${sectionsHtml}
-<p class="keep-going keep-evidence"><button type="button" class="button" data-depth="evidence">Keep going: the evidence</button><span class="meta">${plural(t.sources.length, "source", "sources")} and ${plural(t.update_log.length, "dated update", "dated updates")}.</span></p>
-</section>`;
-  const allTally = Object.fromEntries(LABELS.map((l) => [l, t.claims.filter((c) => c.label === l).length]));
-  const evidence = `<section class="depth depth-evidence" id="evidence" data-level="evidence">
-<div class="depth-head"><span class="sec-n">03</span><h2>The evidence</h2><p class="meta">Everything this page rests on. Every claim cites a source, and every change is dated.</p></div>
+</aside>` },
+    { id: "what-has-been-said", name: "Everything that has been said", count: t.claims.length, html: `<p class="meta">${plural(t.claims.length, "claim", "claims")}, each with a label saying how well it is supported and the sources it rests on.</p>
 ${evidenceBar(allTally, "Every claim on this page, by label")}
-${sourcesHtml}
+${sectionsHtml}` },
+    { id: "sources", name: "Where this comes from", count: t.sources.length, html: sourcesHtml },
+    { id: "update-log", name: "Every update", count: t.update_log.length, html: logHtml },
+  ].filter(Boolean);
+  const main = `${parts.map((p) => `<section class="q" id="${p.id}">\n<h2>${esc(p.name)}</h2>\n${p.html}\n</section>`).join("\n\n")}
 
-${logHtml}
 <section class="raw-files" id="raw-files">
-<h3>The raw files</h3>
+<h2>The raw files</h2>
 <p>For people and programs that want the data itself. Nothing on this page exists only here.</p>
 <p class="raw-links"><a href="${esc(head.slug)}.md">This report as Markdown</a><a href="${esc(`${repo}/tree/main/data/incidents/${head.slug}`)}" rel="noopener">The data folder on GitHub</a><a href="${esc(`${repo}/commits/main/data/incidents/${head.slug}`)}" rel="noopener">Every change to this page</a></p>
-</section>
 </section>`;
-
-  const main = `${depthSwitch}
-
-${short}
-
-${story}
-
-${evidence}`;
+  // The contents list names the same questions, with the parts inside each.
+  const toc = [{ id: "the-question", name: "The short answer", n: "01" }];
+  parts.forEach((p, i) => {
+    toc.push({ id: p.id, name: p.name, n: two(i + 2), count: p.count });
+    for (const part of subToc) if (part.sub === p.id) toc.push(part);
+  });
 
   const TYPES = { outage: "Outage", breach: "Data breach", attack: "Attack" };
   const html = incidentLayout({
@@ -414,6 +404,7 @@ export function incidentMarkdown(loaded, { dataPath }) {
   const lead = head.lead_image && (head.images || []).find((x) => x.id === head.lead_image);
   if (lead) out.push(`Picture: ${lead.caption ? `${lead.caption} ` : ""}Image: ${lead.credit}${lead.source_url ? ` (${lead.source_url})` : ""}.`);
   out.push(`> **Not verified: initial investigation only.** Nothing on this page is absolutely confirmed. It is an early look based only on publicly available sources, and it should not be treated as verified fact. Even items labeled "Confirmed" only mean a public source reports them. ${head.disclaimer}`);
+  if (head.subject.about) out.push(`## What is ${head.subject.name}?\n\n${head.subject.about} (${head.subject.about_url})`);
   out.push(sum.verdict ? `Final verdict: **${sum.verdict}**, approved by the site's owner on ${fmtDay(sum.verdict_approved_at)}.` : `This is the current answer, not a final verdict.`);
   out.push(`## The latest\n\n${fmtDate(sum.latest.at)}: **${sum.latest.headline}** ${sum.latest.summary}`);
   out.push(`## At a glance\n\n- Status: ${head.status}\n- Size: ${head.size}. ${head.size_basis}\n- Who is affected: ${head.who_is_affected}`);

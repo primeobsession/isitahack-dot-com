@@ -332,6 +332,10 @@ export function loadIncident(dir) {
     }
     chartData[chart.id] = rows.slice(1).map((cells) => Object.fromEntries(header.map((h, j) => [h, cells[j]])));
   }
+  // what the subject is: a description and the page it rests on, together or not at all
+  if (head.subject && typeof head.subject === "object" && Boolean(head.subject.about) !== Boolean(head.subject.about_url)) {
+    errs.push(`incident.json.subject: ${head.subject.about ? "about needs about_url, the public page the description rests on" : "about_url needs about, the one or two sentences saying what the subject is"}`);
+  }
   // images
   for (const [i, image] of (head.images || []).entries()) {
     const at = `incident.json.images[${i}]`;

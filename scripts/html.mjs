@@ -35,6 +35,15 @@ export const ANSWER_GROUPS = [
 // every page. The shape of the dot still tells them apart without colour.
 export const answerPill = (g, cls = "") => `<span class="pill ${g.pill} ans-${g.key}${cls ? ` ${cls}` : ""}">${esc(g.short)}</span>`;
 
+// One to four bars: how far an incident reaches. Dashed bars mean "only if the worst case were true".
+export function sizeBars(n, { potential = false, label = "" } = {}) {
+  const H = [5, 8, 12, 16];
+  const rects = H.map((h, k) => (potential
+    ? `<rect class="maybe" x="${k * 8 + 0.5}" y="${16 - h + 0.5}" width="5" height="${h - 1}"/>`
+    : `<rect${k < n ? "" : ' class="off"'} x="${k * 8}" y="${16 - h}" width="6" height="${h}"/>`)).join("");
+  return `<svg class="bars" width="30" height="16" viewBox="0 0 30 16" role="img" aria-label="${esc(label || `Size: ${n} of 4`)}">${rects}</svg>`;
+}
+
 // ---------- dates (string parsing only, independent of the machine's zone/locale) ----------
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const ISO = /^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2})(?::\d{2})?([+-]\d{2}:\d{2}|Z)?)?$/;

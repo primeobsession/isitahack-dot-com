@@ -7,7 +7,8 @@
 // The build has no clock, so "now" is the newest check logged in any incident (asOf). The page
 // prints real timestamps and a few lines of script turn them into "6 min ago" for the reader.
 
-import { ANSWER_GROUPS, esc, fmtDate } from "./html.mjs";
+import { ANSWER_GROUPS, sizeBars, esc, fmtDate } from "./html.mjs";
+export { sizeBars };
 import { incidentPicture } from "./incident.mjs";
 
 const HOUR = 36e5, DAY = 864e5;
@@ -163,15 +164,6 @@ const STATE_CHIPS = { down: ["ftag-down", "Down now"], "partly-back": ["ftag-par
 const stateChip = (i) => (isDown(i) ? `<span class="ftag ${STATE_CHIPS[i.service.state][0]}">${STATE_CHIPS[i.service.state][1]}</span>` : "");
 const stateWords = (i) => (i.service ? { down: "down now", "partly-back": "partly back", back: "back" }[i.service.state] : "");
 const answerLine = (i) => [groupOf(i).short, i.size === POTENTIAL ? "potential" : ""].filter(Boolean).join(" · ");
-
-// One to four bars: how far an incident reaches. Dashed bars mean "only if the worst case were true".
-export function sizeBars(n, { potential = false, label = "" } = {}) {
-  const H = [5, 8, 12, 16];
-  const rects = H.map((h, k) => (potential
-    ? `<rect class="maybe" x="${k * 8 + 0.5}" y="${16 - h + 0.5}" width="5" height="${h - 1}"/>`
-    : `<rect${k < n ? "" : ' class="off"'} x="${k * 8}" y="${16 - h}" width="6" height="${h}"/>`)).join("");
-  return `<svg class="bars" width="30" height="16" viewBox="0 0 30 16" role="img" aria-label="${esc(label || `Size: ${n} of 4`)}">${rects}</svg>`;
-}
 
 // The picture on a tile: the incident's photograph, or its name on a plate in the answer's colour.
 function tileMedia(i) {

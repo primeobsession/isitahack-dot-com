@@ -4,7 +4,9 @@
   "title": "CIA and ODNI open-source intelligence system breach, Nov 2026",
   "subject": {
     "name": "CIA",
-    "kind": "government"
+    "kind": "government",
+    "about": "The CIA is the US government agency that collects foreign intelligence and gives the president and other policymakers analysis of foreign countries and global issues. It is not a law enforcement body.",
+    "about_url": "https://www.cia.gov/about/"
   },
   "incident_type": "breach",
   "answer_group": "hack-reported",

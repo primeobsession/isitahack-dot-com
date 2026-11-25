@@ -57,6 +57,7 @@ If something carries a label, it is a claim. Do not put labelled statements in a
 | On the page | Comes from |
 |---|---|
 | The page title, the main heading and the short answer | The `questions.csv` row named by `main_question_id` |
+| What the subject is | `incident.json` `subject.about`, with `subject.about_url` |
 | "Also reported as…" under the heading | `incident.json` `also_called` |
 | The incident's name in lists and breadcrumbs | `incident.json` `title` |
 | The latest | The newest `update_log.csv` row that changed a finding (not `checked_no_change`, not `presentation`): its `headline` and `logged_at` |
@@ -67,17 +68,28 @@ If something carries a label, it is a claim. Do not put labelled statements in a
 | At a glance | `incident.json` `figures` |
 | Final verdict | `incident.json` `verdict`, only after the owner approves it |
 
-## The page's three depths
+## The page: one scroll of questions
 
-A reader chooses how much to read, and each depth adds to the one before. You do not mark anything for a depth: the build places each part of the data.
+An incident page is read from top to bottom. It asks the questions a reader has, in the order they have them, and nothing is folded away: someone who wants more scrolls further. You do not place anything: the build puts each part of the data where it belongs.
 
-| Depth | What it holds | Comes from |
+| The question on the page | What answers it | Comes from |
 |---|---|---|
-| The short answer | The plain answer and its evidence label, the latest, whether it is back, how big it is, who is affected, what is known and not known | `answer_group`, the main question, the newest `update_log.csv` row that changed a finding, `service`, `size`, `size_basis`, `who_is_affected`, `known`, `not_known` |
-| The full story | The key numbers, then every section in `sections`, in your order | `figures` and `sections` |
-| The evidence | A count of every claim by label, every source, the update log and links to the raw files | `claims.csv`, `sources.csv`, `update_log.csv` |
+| The main question, at the top | The plain answer, how well it is supported, whether it is still down and how big it is | The main question, `answer_group`, `service`, `size` |
+| What is <name>? | One or two sentences on what the subject is, with the page they rest on | `subject.about` and `subject.about_url`. Left out when the incident gives none |
+| What happened? | The latest, the key numbers, then the timeline | The newest log row that changed a finding, `figures`, `timeline.csv` |
+| Is it still down? | The state and the claim it rests on | `service`. Left out when nothing went down |
+| Does it affect me? | Who is affected and what they can do | `who_is_affected` |
+| How big is it? | The size and why | `size`, `size_basis` |
+| What we know, and what we don't | Two lists | `known`, `not_known` |
+| Everything that has been said | Every other section in `sections`, in your order, each claim with its label, its evidence and its sources in view | `sections`, `claims.csv`, `questions.csv` and the rest |
+| Where this comes from | Every source | `sources.csv` |
+| Every update | The whole update log, newest first | `update_log.csv` |
 
-So write the short-answer fields for someone who will read nothing else: plain words, no source ids, no jargon. Without the page script all three depths show, one after the other.
+So write the fields near the top for someone who will stop there: plain words, no source ids, no jargon.
+
+### Say what the subject is
+
+A reader may never have heard of the subject. `subject.about` says what it is in one or two plain sentences: what it is, who runs it, and what people use it for. "FinCEN is the Financial Crimes Enforcement Network, a bureau of the US Treasury. Banks and other businesses file their required reports with it." Write nothing about the incident there, and no opinion. `subject.about_url` is the public page the description rests on, usually the subject's own "about" page; the page links to it. The two go together, and the check fails on one without the other. Every new incident should have them.
 
 ## Being found
 
