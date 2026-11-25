@@ -20,7 +20,7 @@
   "verdict_approved_at": null,
   "size": "Large",
   "size_basis": "Virgin Plus has not said how many customers were affected. Large rests on reach, not a count: it is a national consumer brand of a major carrier. Revisit when a count is published.",
-  "who_is_affected": "Virgin Plus customers whose records were in the internal system. The company says it is informing affected customers.",
+  "who_is_affected": "Virgin Plus customers whose records were in the internal system. The company says it is informing affected customers. Bell is reported to say customers of Bell, Bell Aliant, Bell MTS and Lucky Mobile were also affected.",
   "known": [
     {
       "text": "Virgin Plus says an unknown party gained unauthorized access to an internal customer-data system on Nov 17.",
@@ -31,8 +31,12 @@
       "claim_id": "c002"
     },
     {
-      "text": "Bell Canada reported its own separate breach of enterprise customer data on Nov 17.",
+      "text": "Bell Canada separately reported that enterprise customer data was taken from its systems on Nov 17.",
       "claim_id": "c010"
+    },
+    {
+      "text": "Bell has posted a notice in the same words for its own customers, saying an unknown party accessed an internal Bell system on Nov 17.",
+      "claim_id": "c012"
     }
   ],
   "not_known": [
@@ -45,7 +49,7 @@
       "question_id": "q003"
     },
     {
-      "text": "Whether it is the same attack as Bell Canada's Nov 17 breach.",
+      "text": "Whether it is the same intrusion Bell described for its enterprise customers on Nov 20.",
       "question_id": "q004"
     },
     {
@@ -95,7 +99,7 @@
     },
     {
       "type": "claims",
-      "title": "Related, but separate",
+      "title": "Is it linked to Bell's breach?",
       "group": "related"
     },
     {
