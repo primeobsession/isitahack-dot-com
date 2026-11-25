@@ -1,0 +1,6 @@
+question_id,kind,question_text,state,answer_text,label,claim_ids,rumor_type,what_would_settle_it,opened_at,answered_at
+q001,question,Was the European Commission hit by a cyberattack?,answered,"Yes, by its own account. The Commission says it was hit by a cyberattack using AI tools, first detected on Oct 22, and that an incident on its EU Academy learning platform involves users' personal data.",Confirmed,c001;c002;c005,,,2026-11-25T15:23:00-05:00,2026-11-25T15:23:00-05:00
+q002,question,Was my EU Academy data stolen?,open,,,c005;c006,,"The Commission saying how many users and which data were affected, or contacting them.",2026-11-25T15:23:00-05:00,
+q003,question,Who was behind the attack on the European Commission?,open,,,c003;c004,,The Commission or CERT-EU naming the attacker once the investigation ends.,2026-11-25T15:23:00-05:00,
+q004,question,When will EU Academy be back?,open,,,c008;c009,,The Commission saying when access returns and whether the Jan 14 reopening is linked to the attack.,2026-11-25T15:23:00-05:00,
+q005,question,Was Commission staff data taken?,answered,"Not as far as anyone has shown. The Commission says investigators found no evidence of a data breach affecting its staff broadly.",Reported,c007,,,2026-11-25T15:23:00-05:00,2026-11-25T15:23:00-05:00

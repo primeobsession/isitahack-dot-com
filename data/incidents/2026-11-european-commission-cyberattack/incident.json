@@ -1,0 +1,104 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-european-commission-cyberattack",
+  "title": "European Commission cyberattack and EU Academy data theft, Nov 2026",
+  "subject": {
+    "name": "European Commission",
+    "kind": "government"
+  },
+  "incident_type": "attack",
+  "answer_group": "hack-stated",
+  "also_called": [
+    "the EU Academy data breach",
+    "the Commission AI-assisted cyberattack"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-10-22",
+  "service": {
+    "state": "partly-back",
+    "claim_id": "c008"
+  },
+  "disclaimer": "Made for entertainment using AI. Not endorsed by the European Commission, any EU body, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "The executive of the European Union, with internal systems disrupted for days, and an online learning platform whose users' personal data is involved. The number of users affected is not known.",
+  "who_is_affected": "Commission staff, whose HR and reimbursement systems were disrupted, and EU Academy users, whose names and emails may have been taken. The Commission tells EU Academy users to watch for suspicious emails and impersonation attempts.",
+  "known": [
+    {
+      "text": "The Commission confirms a cyberattack, first detected on Oct 22, carried out with AI tools.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "It says an incident on its EU Academy platform involves users' personal data, and access to the platform is disabled.",
+      "claim_id": "c005"
+    },
+    {
+      "text": "By Nov 19 most affected Commission systems were back; EU Academy is offline.",
+      "claim_id": "c008"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "How many EU Academy users are affected, and exactly what was taken.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Who was behind it.",
+      "question_id": "q003"
+    },
+    {
+      "text": "When EU Academy will be back, and whether its planned rebuild is linked to the attack.",
+      "question_id": "q004"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Oct 22",
+      "label": "First detected",
+      "detail": "The Commission's date",
+      "claim_id": "c001"
+    },
+    {
+      "value": "Nov 19",
+      "label": "Publicly confirmed",
+      "detail": "At a press briefing",
+      "claim_id": "c001"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was the Commission hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Whose data was taken?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What was affected, and is it back?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the European Commission cyberattack"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
