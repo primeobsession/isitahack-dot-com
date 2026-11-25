@@ -67,6 +67,22 @@
       "claim_id": "c001"
     }
   ],
+  "lead_image": "berlaymont-building",
+  "images": [
+    {
+      "id": "berlaymont-building",
+      "title": "European Commission headquarters",
+      "file": "images/berlaymont-building.jpg",
+      "alt": "A tall, curved office block with metal-screened walls, seen across an empty street crossing under a clear blue sky, with a long vertical banner hanging on its end wall.",
+      "caption": "The Berlaymont building in Brussels, the European Commission's headquarters, in August 2020. Not taken during this incident.",
+      "credit": "Trougnouf (Benoit Brummer), CC BY 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Berlaymont_building_(DSCF7542-DSCF7548).jpg",
+      "sha256": "47887589fc334657894faaca0d19866f669e219be2a00628a76509517d9e2584",
+      "width": 1920,
+      "height": 1193
+    }
+  ],
   "sections": [
     {
       "type": "claims",
