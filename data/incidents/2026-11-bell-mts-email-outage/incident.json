@@ -8,7 +8,10 @@
   },
   "incident_type": "outage",
   "answer_group": "hack-reported",
-  "service": { "state": "back", "claim_id": "c003" },
+  "service": {
+    "state": "back",
+    "claim_id": "c003"
+  },
   "also_called": [
     "Bell MTS email lockout",
     "Manitoba Bell MTS email outage"
@@ -53,7 +56,7 @@
       "question_id": "q004"
     },
     {
-      "text": "Whether it is the same attack as Bell Canada's Nov 17 breach.",
+      "text": "Whether the email outage is linked to Bell Canada's Nov 17 breach, which Bell calls a separate attack.",
       "question_id": "q003"
     }
   ],
