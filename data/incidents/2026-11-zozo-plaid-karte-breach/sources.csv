@@ -1,5 +1,5 @@
 source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
-s001,https://corp.zozo.com/information/20261120-482917/,ZOZO: notice on unauthorised access to the external service KARTE (Japanese; dated Nov 20),1,,2026-11-20,2026-11-22T12:25:00-05:00,,ok,2026-11-22T13:45:00-05:00
+s001,https://corp.zozo.com/information/20261120-482917/,ZOZO: notice on unauthorised access to the external service KARTE (Japanese; dated Nov 20),1,,2026-11-20,2026-11-22T12:25:00-05:00,,ok,2026-11-25T12:12:40-05:00
 s002,https://plaid.co.jp/news/20261116/,"PLAID: notice on leak of information that may include personal data (Japanese; Nov 16, updated Nov 20)",1,,2026-11-16,2026-11-22T12:25:00-05:00,,ok,2026-11-22T13:45:00-05:00
 s003,https://plaid.co.jp/news/20261120/,PLAID: investigation results on the KARTE unauthorised access and outlook for restart (Japanese; Nov 20),1,,2026-11-20,2026-11-22T12:25:00-05:00,,ok,2026-11-22T13:45:00-05:00
 s004,https://www.nikkei.com/article/DGXZQOUC20APN0Q6A121C2000000/,Nikkei: ZOZO says 15.18 million records leaked after contractor hacked (Japanese; free part read),2,zozo-notice,2026-11-20T21:03:00+09:00,2026-11-22T12:25:00-05:00,,ok,2026-11-22T12:48:00-05:00
@@ -24,3 +24,4 @@ s022,https://www.nikkei.com/article/DGXZQOUC209MW0Q6A121C2000000/,Nikkei: Marui 
 s023,https://company.golfdigest.co.jp/corp/pr/2026111701.html,Golf Digest Online (GDO): notice on member data leak after the unauthorised access to KARTE (Japanese; Nov 17),1,,2026-11-17,2026-11-22T17:45:00-05:00,,ok,2026-11-22T17:45:00-05:00
 s024,https://help.francfranc.com/hc/ja/articles/64371011900313,Francfranc: notice on possible customer data leak via KARTE (Japanese; Nov 17),1,,2026-11-17,,,blocked,2026-11-22T17:45:00-05:00
 s025,https://camp-fire.jp/news/2026/11/18/campfire,CAMPFIRE: second report on the unauthorised access to KARTE (Japanese; Nov 18),1,,2026-11-18,2026-11-22T17:45:00-05:00,,ok,2026-11-22T17:45:00-05:00
+s026,https://www.kaunet.com/kaunet/news-info/000199,Kaunet (Kokuyo group): second report on data leaked after the unauthorised access at PLAID (Japanese; Nov 24),1,,2026-11-24,2026-11-25T12:12:40-05:00,,ok,2026-11-25T12:12:40-05:00
