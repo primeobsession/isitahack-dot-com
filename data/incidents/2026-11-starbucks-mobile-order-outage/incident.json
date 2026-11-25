@@ -24,7 +24,7 @@
   "verdict": null,
   "verdict_approved_at": null,
   "size": "Large",
-  "size_basis": "Starbucks Mobile Order & Pay is used across the US. The tracker's reports peaked at about 58 times normal for roughly five hours. Starbucks has not said how many customers or orders were affected.",
+  "size_basis": "Starbucks Mobile Order & Pay is used across the US. The tracker's reports peaked at about 73 times normal for roughly six hours. Starbucks has not said how many customers or orders were affected.",
   "who_is_affected": "US customers who order or pay in the Starbucks app. Stores and drive-thrus stayed open. If you were charged for an order that never arrived, check your app history and ask Starbucks support.",
   "known": [
     {
@@ -53,11 +53,11 @@
     {
       "value": "Nov 20",
       "label": "Outage day",
-      "detail": "Friday, about 10 AM to 3 PM ET",
+      "detail": "Friday, about 10 AM to 4 PM ET",
       "claim_id": "c003"
     },
     {
-      "value": "58x",
+      "value": "73x",
       "label": "Peak vs normal reports",
       "detail": "One tracker; not a count of customers",
       "claim_id": "c004"
