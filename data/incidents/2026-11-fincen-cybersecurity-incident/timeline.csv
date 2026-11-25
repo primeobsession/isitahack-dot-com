@@ -1,3 +1,4 @@
 event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
 t001,2026-11-24,,Evening,approximate,FinCEN posts a service-disruption alert on its BSA E-Filing site saying it is investigating a cybersecurity incident with unauthorized access,c001,Time from The Record ('posted Tuesday evening'); FinCEN's alert carries no time.
+t003,2026-11-24,,,stated,"FinCEN issues an order giving certain filers until Dec 30 for reports and updates due from Nov 18 to Dec 29, citing a service disruption",c003,Date on Order FIN-2026-R002; no time given.
 t002,2026-11-25,,,stated,"A FinCEN official tells Reuters some systems were taken offline and filers given relief, with the FBI and CISA involved",c004,Reuters says the official spoke on Wednesday.

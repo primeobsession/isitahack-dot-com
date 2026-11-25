@@ -24,7 +24,7 @@
   },
   "size": "Nation-level potential",
   "size_basis": "Potential only. FinCEN holds national financial-crime reports, so a breach of its main databases would be a national matter, but FinCEN says there is no evidence of that so far. Known impact: some FinCEN systems offline and filing deadlines extended.",
-  "who_is_affected": "Banks and other financial institutions that file Bank Secrecy Act reports with FinCEN, and anyone using its BSA E-Filing website. FinCEN says the website still works, some services may not, and deadlines are being extended for filers affected.",
+  "who_is_affected": "Banks and others that file Bank Secrecy Act reports with FinCEN, people and companies filing beneficial ownership reports or FinCEN ID updates, and users of its BSA E-Filing website. Some services may not work; certain filers have until Dec 30.",
   "known": [
     {
       "text": "FinCEN says a cybersecurity incident gave someone unauthorized access to a limited part of its systems.",
@@ -35,7 +35,7 @@
       "claim_id": "c002"
     },
     {
-      "text": "FinCEN is extending filing deadlines for filers affected by the disruption.",
+      "text": "FinCEN has given certain filers until Dec 30 for reports and updates due between Nov 18 and Dec 29.",
       "claim_id": "c003"
     }
   ],
@@ -63,6 +63,12 @@
       "label": "FinCEN alert posted",
       "detail": "Tuesday evening, per The Record",
       "claim_id": "c001"
+    },
+    {
+      "value": "Dec 30",
+      "label": "New filing deadline",
+      "detail": "For certain reports due Nov 18 to Dec 29, per FinCEN's Nov 24 order",
+      "claim_id": "c003"
     }
   ],
   "sections": [
