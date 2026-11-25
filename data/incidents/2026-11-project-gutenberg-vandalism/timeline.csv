@@ -8,3 +8,5 @@ t006,2026-11-18T00:00:00-05:00,,"Tuesday night, Nov 17 (PT)",approximate,Foundat
 t007,2026-11-18T19:00:00-05:00,,"Wednesday afternoon PT, Nov 18",approximate,Foundation: site will not come up until 100% sure it is safe,c006,4 PM PT update.
 t008,2026-11-20T13:52:00-05:00,,"1:52 PM ET, Friday",stated,"ibiblio says university staff are helping, with next steps for contributors by Monday, Nov 23",c008,18:52 UTC.
 t009,2026-11-21T05:12:00-05:00,,"5:12 AM ET, Saturday",stated,Our check: gutenberg.org still returns HTTP 503 maintenance page,c007,Own first-hand check.
+t010,2026-11-25T05:28:00-05:00,,,stated,The foundation posts that the website should be back later in the afternoon and that its database is intact,c013,Post time 10:28 UTC.
+t011,2026-11-25T11:39:06-05:00,,,stated,Our check: gutenberg.org still returns the HTTP 503 maintenance page,c007,Own first-hand check.
