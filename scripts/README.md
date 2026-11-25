@@ -30,8 +30,9 @@ What it does:
 2. For every other `incidents/<slug>.md`, renders the hand-written page as it is. This is how an incident not yet in the typed format can stay on the site; no incident uses it at the moment. Its front-matter may carry `question`, `answer`, `answer_label` and `latest` so the page can lead with the short answer and the latest update.
 3. Writes `index.html`, `status.html`, `how-it-works.html` and `about.html` from `pages/*.html`, plus `404.html`. The home page and the status board are counted from the incidents: nothing on them is written by hand. The front of the home page (this week's stories by size, and the live updates) is worked out in `home.mjs`; its one hand-kept input is `data/front-page.json`, the Editor-in-Chief's picks, which the build checks and stops on if it is wrong (format/README.md, "The front of the home page").
 4. Writes `sitemap.xml`. An incident's date there is its last update that changed a finding.
-5. Writes `index.json` fresh: each incident's status, answer group, service state, when it was last checked and when its next check is due (`last_checked`, `check_every`, `next_check_due`), and where its files are.
-6. Stops when `llms.txt` does not list a page or an incident's files.
+5. Writes `updates.json`: the newest 200 real changes across every story, newest first, for anything that follows the site (a feed reader, an AI assistant, a mailer). Checks that found nothing are left out.
+6. Writes `index.json` fresh: each incident's status, answer group, service state, when it was last checked and when its next check is due (`last_checked`, `check_every`, `next_check_due`), and where its files are.
+7. Stops when `llms.txt` does not list a page or an incident's files.
 
 The build reads no clock, locale or environment, so the same input produces byte-identical output. Whether a check is overdue depends on the time now, so the status board works that out in the reader's browser from the due time the build wrote. All content is HTML-escaped.
 

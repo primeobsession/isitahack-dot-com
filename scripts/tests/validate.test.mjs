@@ -208,7 +208,7 @@ test("the build is repeatable and writes the pages search engines need", () => {
   try {
     const build = (name) => { execFileSync(process.execPath, [join(ROOT, "scripts", "build.mjs"), "--out", join(base, name), "--sample"], { stdio: "pipe" }); return join(base, name); };
     const a = build("a"), b = build("b");
-    const files = ["index.html", "status.html", "404.html", "sitemap.xml", "robots.txt", "index.json", `incidents/${SLUG}.html`, `incidents/${SLUG}.md`];
+    const files = ["index.html", "status.html", "404.html", "sitemap.xml", "robots.txt", "index.json", "updates.json", `incidents/${SLUG}.html`, `incidents/${SLUG}.md`];
     for (const f of files) assert.equal(readFileSync(join(a, f), "utf8"), readFileSync(join(b, f), "utf8"), `${f} differs between two builds`);
     const page = readFileSync(join(a, "incidents", `${SLUG}.html`), "utf8");
     assert.match(page, /<title>Was the Example City water portal outage a hack\? \| Is It a Hack\?<\/title>/);
@@ -262,6 +262,13 @@ test("the build is repeatable and writes the pages search engines need", () => {
     assert.equal(listed.find((i) => i.slug === SLUG).answer_group, "no-sign-of-hack", "index.json says which answer an incident is filed under");
     // index.json is built from the last index.json, so its key order must not depend on how many times the build has run
     for (const entry of listed) assert.equal(Object.keys(entry).at(-1), "files", `index.json entry ${entry.slug}: files comes last, whatever the previous build wrote`);
+    // updates.json: every real change, newest first, for programs that follow the site
+    const feed = JSON.parse(readFileSync(join(a, "updates.json"), "utf8"));
+    assert.ok(feed.updates.length > 0 && feed.updates.length <= 200, "updates.json lists the newest changes, capped");
+    assert.ok(feed.updates.every((u, n) => n === 0 || Date.parse(feed.updates[n - 1].logged_at) >= Date.parse(u.logged_at)), "newest first");
+    assert.ok(feed.updates.every((u) => ["added", "updated", "label_change", "correction"].includes(u.change_type)), "a check that found nothing is not an update");
+    assert.deepEqual(Object.keys(feed.updates[0]), ["slug", "title", "question", "answer_group", "size", "log_id", "logged_at", "change_type", "kind", "headline", "url", "markdown"]);
+    assert.ok(feed.updates.every((u) => u.url === `https://isitahack.com/incidents/${u.slug}.html` && listed.some((i) => i.slug === u.slug)), "each update links to its story");
     // the front of the home page: this week's stories by size, with the newest changes beside them
     const frontPart = home.slice(home.indexOf('<div class="wrap now"'), home.indexOf('<section class="wrap board"'));
     assert.ok(frontPart.length > 0 && home.indexOf('<div class="wrap now"') < home.indexOf('<section class="wrap board"'), "the front comes before the full list");
@@ -301,7 +308,7 @@ test("the build is repeatable and writes the pages search engines need", () => {
 // ---------- built pages stay out of the repository ----------
 test("the check knows a built page from a source", () => {
   const hasData = (slug) => slug === SLUG;
-  for (const f of ["index.html", "status.html", "about.html", "how-it-works.html", "404.html", "sitemap.xml", "index.json", "_site/index.html", `incidents/${SLUG}.html`, `incidents/${SLUG}.md`, "incidents/2026-02-anything.html"])
+  for (const f of ["index.html", "status.html", "about.html", "how-it-works.html", "404.html", "sitemap.xml", "index.json", "updates.json", "_site/index.html", `incidents/${SLUG}.html`, `incidents/${SLUG}.md`, "incidents/2026-02-anything.html"])
     assert.equal(isBuiltPage(f, hasData), true, `${f} is written by the build and must not be committed`);
   for (const f of ["pages/home.html", "pages/status.html", "llms.txt", "robots.txt", `data/incidents/${SLUG}/incident.json`, "format/README.md", "scripts/partials/head.html", "incidents/2026-02-not-yet-converted.md"])
     assert.equal(isBuiltPage(f, hasData), false, `${f} is a source and belongs in the repository`);

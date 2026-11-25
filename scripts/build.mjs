@@ -27,7 +27,7 @@ import { join, dirname, basename, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { LABELS, ANSWER_GROUPS, answerPill, esc, slugify, pill, inline, linkTag, fmtDate, fmtDay, timeTag, renderBody, warnings, warn, setCurrent } from "./html.mjs";
 import { loadIncident } from "./validate.mjs";
-import { NO_PICKS, checkFrontPage, frontBands, renderBands, renderLive, FRESH_DAYS } from "./home.mjs";
+import { NO_PICKS, checkFrontPage, frontBands, renderBands, renderLive, allUpdates, FRESH_DAYS } from "./home.mjs";
 import { renderIncident, incidentMarkdown, incidentLayout, incidentPicture, evidenceBar, summarize, SERVICE_STATES, cadenceText } from "./incident.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -515,6 +515,13 @@ function buildSitemap(incidents, out) {
   writeFileSync(join(out, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`);
 }
 
+// updates.json: the newest real changes across every story, newest first. A check that found
+// nothing is not listed. It is what a feed reader, an AI assistant or a mailer polls to follow
+// the site: each entry names the story, what kind of change it was and the headline.
+function buildUpdatesJson(incidents, out) {
+  const updates = allUpdates(incidents).map((u) => ({ ...u, url: `${SITE.url}/incidents/${u.slug}.html`, markdown: `${SITE.url}/incidents/${u.slug}.md` }));
+  writeFileSync(join(out, "updates.json"), JSON.stringify({ site: SITE.url, note: "Real changes only, newest first: new stories, updates, label changes and corrections. Routine checks that found nothing are left out.", updates }, null, 2) + "\n");
+}
 // index.json: every incident with what kind it is, which plain answer it is filed under,
 // whether the service is back, when it is next due a check, and where its files are. Made
 // fresh on every build.
@@ -545,7 +552,7 @@ function checkLlms(incidents) {
 // Is this repository path something the build writes? Such a file must never be committed
 // (scripts/check.mjs refuses it). `hasData(slug)` says whether an incident has a data folder:
 // until it does, its hand-written incidents/<slug>.md is a source, not a built page.
-const BUILT_AT_ROOT = new Set(["index.html", "status.html", "404.html", "sitemap.xml", "index.json", ...PAGES.map((p) => `${p.file}.html`)]);
+const BUILT_AT_ROOT = new Set(["index.html", "status.html", "404.html", "sitemap.xml", "index.json", "updates.json", ...PAGES.map((p) => `${p.file}.html`)]);
 export function isBuiltPage(file, hasData) {
   if (BUILT_AT_ROOT.has(file) || file.startsWith("_site/")) return true;
   const page = file.match(/^incidents\/([^/]+)\.(html|md)$/);
@@ -591,12 +598,13 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1
   buildPages(out);
   buildSitemap(incidents, out);
   updateIndexJson(incidents, out);
+  buildUpdatesJson(incidents, out);
   // The rest of what the site serves: the map for programs, the crawler rules, the custom
   // domain, and the format files that the schemas' own addresses point at.
   for (const f of ["llms.txt", "robots.txt", "CNAME", ".nojekyll"]) if (existsSync(join(ROOT, f))) cpSync(join(ROOT, f), join(out, f));
   cpSync(join(ROOT, "format"), join(out, "format"), { recursive: true });
   for (const i of incidents) console.log(`wrote incidents/${i.slug}.html${i.typed ? ` and ${i.slug}.md` : ""}`);
-  console.log(`wrote index.html, status.html, ${PAGES.map((p) => `${p.file}.html`).join(", ")}, 404.html, sitemap.xml, index.json`);
+  console.log(`wrote index.html, status.html, ${PAGES.map((p) => `${p.file}.html`).join(", ")}, 404.html, sitemap.xml, index.json, updates.json`);
   console.log(`site built in ${out}`);
   for (const w of warnings) console.warn(`warning: ${w}`);
 }

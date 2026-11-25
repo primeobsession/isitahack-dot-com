@@ -157,6 +157,21 @@ export function liveUpdates(incidents, asOf) {
   return { rows: (recent.length >= LIVE_MIN ? recent : all.slice(0, LIVE_MIN)).slice(0, LIVE_MAX), quiet };
 }
 
+// Every real change to any story, newest first, for updates.json: what a program, an AI
+// assistant or a mailer needs in order to follow the site without reading every page.
+export function allUpdates(incidents, limit = 200) {
+  const all = [];
+  for (const i of incidents) {
+    if (!i.typed) continue;
+    const log = i.loaded.t.update_log;
+    log.forEach((r, n) => {
+      if (!(r.change_type in KINDS)) return;
+      all.push({ slug: i.slug, title: i.title, question: i.question.text, answer_group: i.answer_group, size: i.size, log_id: r.log_id, logged_at: r.logged_at, change_type: r.change_type, kind: n === log.length - 1 ? "New story" : KINDS[r.change_type], headline: r.headline });
+    });
+  }
+  return all.sort((a, b) => ms(b.logged_at) - ms(a.logged_at) || a.slug.localeCompare(b.slug) || b.log_id.localeCompare(a.log_id)).slice(0, limit);
+}
+
 // ---------- drawing ----------
 const groupOf = (i) => ANSWER_GROUPS.find((g) => g.key === (i.answer_group || "unclear")) || ANSWER_GROUPS[0];
 const ago = (iso, cls = "") => `<time class="ago${cls ? ` ${cls}` : ""}" datetime="${esc(iso)}">${esc(fmtDate(iso))}</time>`;
