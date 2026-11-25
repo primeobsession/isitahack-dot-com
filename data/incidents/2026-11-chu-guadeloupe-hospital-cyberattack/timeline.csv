@@ -1,3 +1,4 @@
 event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
 t001,2026-11-21T21:00:00-04:00,,"About 9 PM Saturday, Nov 21 (local)",stated,"Phones, imaging, non-urgent lab work and software go down at the hospital, per RCI; staff first take it for an IT outage",c003,"RCI gives ""depuis 21h samedi soir""; Guadeloupe time."
 t002,2026-11-22T00:00:00-04:00,,"Sunday morning, Nov 22",approximate,"The hospital meets the national cybersecurity agency, convenes a crisis cell and triggers the plan blanc",c004,No clock time given. Meeting with the agency is per RCI.
+t003,2026-11-23,,"Monday, Nov 23",stated,The Paris prosecutor's cybercrime section opens an investigation and gives it to the national anti-cybercrime police office,c011,

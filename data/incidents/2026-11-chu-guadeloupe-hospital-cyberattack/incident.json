@@ -41,6 +41,10 @@
     {
       "text": "The national cybersecurity agency is helping and has told the hospital to expect a long recovery.",
       "claim_id": "c007"
+    },
+    {
+      "text": "The Paris prosecutor's cybercrime section opened an investigation on Nov 23.",
+      "claim_id": "c011"
     }
   ],
   "not_known": [
@@ -49,7 +53,7 @@
       "question_id": "q002"
     },
     {
-      "text": "Whether a ransom was demanded, or any patient data was stolen.",
+      "text": "Whether patient data was stolen, and whether a ransom will be demanded; none had been by Nov 23.",
       "question_id": "q003"
     },
     {
@@ -57,7 +61,7 @@
       "question_id": "q003"
     },
     {
-      "text": "When systems will be fully back; the hospital hopes for a gradual restart from the end of the week."
+      "text": "When systems will be fully back; the director says there is no visibility before the end of the week, when a full diagnosis is expected."
     }
   ],
   "figures": [
