@@ -165,6 +165,8 @@
 - [Deichmann online shop data breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-deichmann-online-shop-breach.html): the same report as a web page.
 - [1984 Hosting cyberattack and shutdown, Nov 2026](https://isitahack.com/incidents/2026-11-1984-hosting-cyberattack.md): the report as Markdown (still monitored). Built from its data folder.
 - [1984 Hosting cyberattack and shutdown, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-1984-hosting-cyberattack.html): the same report as a web page.
+- [SAP GitHub security incident, Nov 2026](https://isitahack.com/incidents/2026-11-sap-github-security-incident.md): the report as Markdown (still monitored). Built from its data folder.
+- [SAP GitHub security incident, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-sap-github-security-incident.html): the same report as a web page.
 - [CHU de Bordeaux cyberattack, Nov 2026](https://isitahack.com/incidents/2026-11-chu-bordeaux-cyberattack.md): the report as Markdown (still monitored). Built from its data folder.
 - [CHU de Bordeaux cyberattack, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-chu-bordeaux-cyberattack.html): the same report as a web page.
 
@@ -255,6 +257,7 @@
 - [data/incidents/2026-11-github-outage/](https://isitahack.com/data/incidents/2026-11-github-outage/): the folder the GitHub outage report is built from.
 - [data/incidents/2026-11-deichmann-online-shop-breach/](https://isitahack.com/data/incidents/2026-11-deichmann-online-shop-breach/): the folder the Deichmann online shop data breach, Nov 2026 report is built from.
 - [data/incidents/2026-11-1984-hosting-cyberattack/](https://isitahack.com/data/incidents/2026-11-1984-hosting-cyberattack/): the folder the 1984 Hosting cyberattack and shutdown, Nov 2026 report is built from.
+- [data/incidents/2026-11-sap-github-security-incident/](https://isitahack.com/data/incidents/2026-11-sap-github-security-incident/): the folder the SAP GitHub security incident, Nov 2026 report is built from.
 - [data/incidents/2026-11-chu-bordeaux-cyberattack/](https://isitahack.com/data/incidents/2026-11-chu-bordeaux-cyberattack/): the folder the CHU de Bordeaux cyberattack, Nov 2026 report is built from.
 
 ## For search engines

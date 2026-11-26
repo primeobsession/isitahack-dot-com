@@ -1,0 +1,4 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t002,2026-11-26T20:14:00+01:00,,,stated,Der Spiegel reports that SAP fell victim to a hacker attack,c001,
+t003,2026-11-26T21:30:00+01:00,,,stated,"The dts news agency reports Der Spiegel's account: attackers targeted SAP on GitHub and, according to an insider, stole staff login tokens",c004,
+t004,2026-11-26,,Evening,approximate,"SAP tells dpa it found suspicious activity, took steps at once and has no sign so far of access to customers' business data",c002,dpa's report was last updated at 23:02 CET.
