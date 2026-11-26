@@ -78,20 +78,20 @@
       "claim_id": "c001"
     }
   ],
-  "lead_image": "todoist-logo",
+  "lead_image": "todoist-notice-screenshot",
   "images": [
     {
-      "id": "todoist-logo",
-      "title": "Todoist logo",
-      "file": "images/todoist-logo.png",
-      "alt": "The Todoist logo: a red square with three white stacked check marks, beside the word todoist in red, on a white background.",
-      "caption": "Todoist logo (used for identification; not affiliated with isitahack.com).",
-      "credit": "Todoist logo, trademark of Doist, from the Doist press page via Wikimedia Commons (marked public domain there)",
-      "rights": "logo",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Todoist-lockup_positive.png",
-      "sha256": "c8a1d1cb21398b469d27043eb045afefbb08293b8734434f20b55fc30ab5e54c",
-      "width": 1920,
-      "height": 992
+      "id": "todoist-notice-screenshot",
+      "title": "Todoist's incident notice",
+      "file": "images/todoist-notice-screenshot.jpg",
+      "alt": "The top of a page in Todoist's Help Center headed 'Security incident in November 2026', beginning: On November 23, 2026, an attacker gained unauthorized access to Todoist's production systems and retrieved some customer information.",
+      "caption": "Screenshot of Todoist's notice, Nov 25, 2026.",
+      "credit": "Todoist, screenshot by isitahack.com",
+      "rights": "screenshot",
+      "source_id": "s001",
+      "sha256": "a2b2634873b4b7b938a70751b7a5307c5738380f86845b895b18e0bc47332c6d",
+      "width": 1600,
+      "height": 800
     }
   ],
   "sections": [
