@@ -53,6 +53,22 @@
       "claim_id": "c001"
     }
   ],
+  "lead_image": "west-virginia-state-capitol",
+  "images": [
+    {
+      "id": "west-virginia-state-capitol",
+      "title": "West Virginia State Capitol",
+      "file": "images/west-virginia-state-capitol.jpg",
+      "alt": "An aerial view of a long pale stone building with a gold dome, a columned entrance hung with a large America 250 banner and flags, and wide steps, among green trees and wooded hills under a blue sky.",
+      "caption": "The West Virginia State Capitol in Charleston, where the Legislature meets, in July 2026. Not taken during this incident.",
+      "credit": "Quintin Soloviev, CC BY 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:West_Virginia_State_Capitol_building.jpg",
+      "sha256": "d355650c8abd36465f1e5f6e50a17c70124e2776b3354367e9ff82fc4e777052",
+      "width": 1920,
+      "height": 1280
+    }
+  ],
   "sections": [
     {
       "type": "claims",
