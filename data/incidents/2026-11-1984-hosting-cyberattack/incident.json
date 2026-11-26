@@ -1,0 +1,138 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-1984-hosting-cyberattack",
+  "title": "1984 Hosting cyberattack and shutdown, Nov 2026",
+  "subject": {
+    "name": "1984 Hosting",
+    "kind": "online-service",
+    "about": "1984 Hosting (1984 ehf) is an Icelandic hosting company. It runs websites, virtual private servers, email and domain name services for its customers, and Iceland lists it as an operator of essential services.",
+    "about_url": "https://status.1984.is/status/public"
+  },
+  "incident_type": "attack",
+  "answer_group": "hack-stated",
+  "also_called": [
+    "the 1984 ehf cyberattack",
+    "the 1984.is outage"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-20",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by 1984 Hosting, CERT-IS, Icelandic authorities, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Local",
+  "size_basis": "One hosting company and the customers whose websites, email and servers it runs. It has not said how many customers it has; its managing director says most are outside Iceland.",
+  "who_is_affected": "1984's customers: their websites and virtual servers have been offline since Nov 20, and email is back. 1984 says their data was not touched except on seven targeted websites. Visitors to sites it hosts may find them down until restored.",
+  "service": {
+    "state": "partly-back",
+    "claim_id": "c006"
+  },
+  "known": [
+    {
+      "text": "1984 Hosting says attackers got into parts of its infrastructure in a targeted cyberattack, and it suspended its services to contain it.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "1984 says customer data was not seen or changed, except on seven websites that were the original target.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "Email is working again; websites are due back from about 21:00 UTC on Nov 26 and virtual servers are still being restored.",
+      "claim_id": "c006"
+    },
+    {
+      "text": "Iceland activated its response plan for essential information infrastructure on Nov 25, citing AI-driven attacks.",
+      "claim_id": "c007"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Who was behind the attack. The company's managing director suspects a nation-state, but nobody official has said.",
+      "question_id": "q003"
+    },
+    {
+      "text": "Which seven websites were attacked, and whether anything was taken from them.",
+      "question_id": "q006"
+    },
+    {
+      "text": "Whether the attack is linked to the AI-driven attacks Iceland is on alert for.",
+      "question_id": "q005"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 20",
+      "label": "Services suspended",
+      "detail": "Joint statement with CERT-IS",
+      "claim_id": "c002"
+    },
+    {
+      "value": "7",
+      "label": "Websites that were the target",
+      "detail": "1984's own finding",
+      "claim_id": "c003"
+    }
+  ],
+  "lead_image": "hosting-status-notice",
+  "images": [
+    {
+      "id": "hosting-status-notice",
+      "title": "1984 Hosting's status page notice on the November 2026 security incident",
+      "file": "images/hosting-status-notice.jpg",
+      "alt": "A dark status page headed '1984 Hosting Status' with a notice titled 'A November 2026 security incident', describing unauthorised activity after a targeted cyberattack, the investigation findings of Nov 25 and the restoration status of Nov 26.",
+      "caption": "Screenshot of 1984 Hosting's notice, Nov 26, 2026. A contact address has been removed.",
+      "credit": "1984 Hosting, screenshot by isitahack.com",
+      "rights": "screenshot",
+      "source_id": "s001",
+      "sha256": "96237b253234c06b761befc87d02d796cb29ba4f587ec2018fc3269cb35c6920",
+      "width": 1600,
+      "height": 800
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was 1984 Hosting hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Is it back up?",
+      "group": "service",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What was affected?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What has 1984 done?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Is it part of a wider wave of attacks in Iceland?",
+      "group": "context",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the 1984 Hosting attack"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
