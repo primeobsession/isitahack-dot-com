@@ -31,12 +31,8 @@
   ],
   "not_known": [
     {
-      "text": "Whether Rockstar or Take-Two says the files are real or that it was breached.",
+      "text": "Whether Rockstar or Take-Two says its systems were breached.",
       "question_id": "q001"
-    },
-    {
-      "text": "Whether the files, including the executable the leaker says it posted on Nov 23, are genuine.",
-      "question_id": "q002"
     },
     {
       "text": "How the leaker got the build, and who is behind it. The root cause is not published.",
@@ -51,10 +47,10 @@
       "claim_id": "c001"
     },
     {
-      "value": "No statement",
-      "label": "Rockstar or Take-Two on the build",
-      "detail": "None found",
-      "claim_id": "c007"
+      "value": "Stolen",
+      "label": "Take-Two on the files",
+      "detail": "Its Nov 24 takedown notice",
+      "claim_id": "c011"
     }
   ],
   "images": [
