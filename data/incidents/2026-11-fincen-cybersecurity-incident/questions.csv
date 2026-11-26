@@ -1,6 +1,6 @@
 question_id,kind,question_text,state,answer_text,label,claim_ids,rumor_type,what_would_settle_it,opened_at,answered_at
 q001,question,Was FinCEN hacked in the Nov 2026 cybersecurity incident?,answered,"Yes, by its own account. FinCEN, the Treasury's financial-crimes unit, says someone gained unauthorized access to some of its systems, and it took some offline. It says there is no evidence so far that its main databases were breached.",Confirmed,c001;c002;c005,,,2026-11-25T11:36:00-05:00,2026-11-25T11:36:00-05:00
-q002,question,"Who did it, and how did they get in?",open,,,c006,,"FinCEN, Treasury, the FBI or CISA naming the attacker or the way in.",2026-11-25T11:36:00-05:00,
+q002,question,"Who did it, and how did they get in?",open,,,c006;c008,,"FinCEN, Treasury, the FBI or CISA naming the attacker or the way in.",2026-11-25T11:36:00-05:00,
 q003,question,Was any Bank Secrecy Act or company-ownership data taken?,open,,,c005,,"The result of the forensic investigation, published by FinCEN or Treasury.",2026-11-25T11:36:00-05:00,
 q004,question,When will FinCEN's systems be fully back?,open,,,c002,,The service alert on the BSA E-Filing site being lifted or updated.,2026-11-25T11:36:00-05:00,
 q005,rumor,Is the FinCEN incident part of the same attacks as the reported CIA breach?,open,,,c007,,An official statement or credible independent analysis linking or separating the incidents.,2026-11-25T11:36:00-05:00,
