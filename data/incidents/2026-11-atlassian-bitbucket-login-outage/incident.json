@@ -4,7 +4,9 @@
   "title": "Atlassian Bitbucket and login outage, Nov 23, 2026",
   "subject": {
     "name": "Atlassian Bitbucket",
-    "kind": "online-service"
+    "kind": "online-service",
+    "about": "Bitbucket is Atlassian's service for software teams, combining source code storage, issue tracking and automated build and deployment pipelines.",
+    "about_url": "https://bitbucket.org/product/"
   },
   "incident_type": "outage",
   "answer_group": "unclear",

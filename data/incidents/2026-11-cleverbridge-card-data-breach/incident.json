@@ -4,7 +4,9 @@
   "title": "Cleverbridge payment card breach, Nov 2026",
   "subject": {
     "name": "Cleverbridge",
-    "kind": "online-service"
+    "kind": "online-service",
+    "about": "Cleverbridge is an ecommerce company that acts as a digital reseller (merchant of record) for software businesses, handling their online payments, taxes and subscriptions.",
+    "about_url": "https://grow.cleverbridge.com/about"
   },
   "incident_type": "breach",
   "answer_group": "hack-stated",

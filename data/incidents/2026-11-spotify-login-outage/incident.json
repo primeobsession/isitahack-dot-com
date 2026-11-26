@@ -4,7 +4,9 @@
   "title": "Spotify login outage, Nov 24 2026",
   "subject": {
     "name": "Spotify",
-    "kind": "online-service"
+    "kind": "online-service",
+    "about": "Spotify is an audio streaming subscription service. People use it to listen to music, podcasts and audiobooks in 184 markets.",
+    "about_url": "https://newsroom.spotify.com/company-info/"
   },
   "incident_type": "outage",
   "answer_group": "unclear",

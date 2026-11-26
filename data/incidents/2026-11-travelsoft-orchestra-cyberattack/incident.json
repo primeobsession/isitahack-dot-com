@@ -4,7 +4,9 @@
   "title": "Travelsoft Orchestra cyberattack, Nov 2026",
   "subject": {
     "name": "Orchestra",
-    "kind": "online-service"
+    "kind": "online-service",
+    "about": "Orchestra is a booking and distribution platform that travel companies use to produce, manage and sell holiday offers. It is part of Travelsoft, a Paris software company for the tourism industry.",
+    "about_url": "https://www.orchestra.eu/en/a-propos"
   },
   "incident_type": "outage",
   "answer_group": "hack-stated",
