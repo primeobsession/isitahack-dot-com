@@ -5,8 +5,8 @@
   "subject": {
     "name": "SAP",
     "kind": "online-service",
-    "about": "SAP is a German software company based in Walldorf. Organisations around the world use its business software to run finance, procurement, HR, supply chain and customer operations.",
-    "about_url": "https://www.sap.com/about/company.html"
+    "about": "SAP is a German software company based in Walldorf and one of Germany's largest companies. It is best known for business software that organisations use to run processes such as finance, HR and sales.",
+    "about_url": "https://www.t-online.de/finanzen/aktuelles/id_101548506/sap-haben-verdaechtige-aktivitaeten-identifiziert-.html"
   },
   "incident_type": "breach",
   "answer_group": "hack-reported",
@@ -21,7 +21,7 @@
   "verdict": null,
   "verdict_approved_at": null,
   "size": "Large",
-  "size_basis": "SAP is one of the world's largest business software makers, and many organisations run on its software. SAP says it has no sign so far that customers' data was reached, so any reach through its customers is not known.",
+  "size_basis": "SAP is one of Germany's largest companies, and organisations use its business software to run their finance, HR and sales. SAP says it has no sign so far that customers' data was reached, so any reach through its customers is not known.",
   "who_is_affected": "SAP itself, whose code on GitHub was reportedly targeted. SAP says it has found no sign so far that customers' business data was reached, and no organisation has said it was affected. SAP has not asked customers to do anything.",
   "known": [
     {
