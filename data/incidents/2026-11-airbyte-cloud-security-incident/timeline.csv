@@ -10,3 +10,6 @@ t008,2026-11-20T23:05:00-05:00,,,stated,Airbyte lists 16 API connectors still do
 t009,2026-11-21T01:00:00-05:00,,,stated,"Airbyte says Intercom OAuth is fixed; 15 API connectors, Connector Builder and MCP stay down",c008,06:00 UTC. Airbyte said on Nov 23 that the Intercom part was posted in error (t010).
 t010,2026-11-23T12:47:00-05:00,,,stated,"Airbyte says its note that Intercom was fixed was posted in error; 16 API connectors, Connector Builder and MCP stay down",c008,17:47 UTC.
 t011,2026-11-24T14:55:00-05:00,,,stated,Airbyte says the API connectors stay unavailable while its partners complete their own reviews and will return as each provider approves,c008,19:55 UTC. Latest update on the page when we checked.
+t012,2026-11-25T15:06:00-05:00,,,stated,"Airbyte says new Shopify connectors will fail while it reviews last week's incident with Shopify, and that it has rotated Shopify tokens",c015,20:06 UTC.
+t013,2026-11-25T16:17:00-05:00,,,stated,Airbyte pauses all syncs on Airbyte Cloud to investigate an issue,c016,21:17 UTC.
+t014,2026-11-25T21:12:00-05:00,,,stated,Airbyte says Cloud syncs have resumed; the API connectors stay unavailable pending the partners' reviews,c016,02:12 UTC Nov 26. Latest update on the page when we checked.
