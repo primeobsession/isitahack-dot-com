@@ -25,7 +25,7 @@
   "verdict_approved_at": null,
   "size": "Regional",
   "size_basis": "Airbyte Cloud moves data between many companies' apps and databases, and every customer lost service for days. Airbyte says fewer than 1% of customers were directly affected. Salesforce also cut access. The full count is unknown.",
-  "who_is_affected": "Companies that use Airbyte Cloud to sync data. API connectors for Salesforce, HubSpot, Intercom, Zendesk and others were still down as of 2:55 PM ET Nov 24, waiting on the partner platforms' reviews. Affected customers were contacted by Airbyte; others need only watch its status page.",
+  "who_is_affected": "Companies that use Airbyte Cloud to sync data. API connectors for Salesforce, HubSpot, Intercom, Zendesk and others were still down on Nov 25 pending the partner platforms' reviews, and new Shopify connectors fail for now. Airbyte contacted affected customers.",
   "known": [
     {
       "text": "Airbyte says a security incident gave an attacker access to its systems; it blocked them and took Cloud offline on Nov 17.",
@@ -40,7 +40,7 @@
       "claim_id": "c004"
     },
     {
-      "text": "As of 2:55 PM ET Nov 24, 16 API connectors were still down while the partner platforms finish their own reviews; Connector Builder and MCP were also still down.",
+      "text": "As of 9:12 PM ET Nov 25, the API connectors were still down while the partner platforms finish their own reviews.",
       "claim_id": "c008"
     },
     {
@@ -78,7 +78,7 @@
     {
       "value": "16",
       "label": "API connectors still down",
-      "detail": "As of 2:55 PM ET Nov 24, per Airbyte",
+      "detail": "Last listed Nov 23; still down Nov 25, per Airbyte",
       "claim_id": "c008"
     },
     {
