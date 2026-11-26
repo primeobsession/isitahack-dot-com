@@ -1,0 +1,111 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-fifa-cyberattack",
+  "title": "FIFA cyberattack and data theft, Nov 2026",
+  "subject": {
+    "name": "FIFA",
+    "kind": "other",
+    "about": "FIFA, the Fédération Internationale de Football Association, has been the global governing body for football since 1904. It sets the rules of the game, works with 211 member associations and organises tournaments such as the FIFA World Cup.",
+    "about_url": "https://inside.fifa.com/organisation"
+  },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "also_called": [
+    "the FIFA data breach",
+    "the FIFA hack"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-25",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by FIFA, any football body, any news outlet, company, group, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "FIFA is football's world governing body. What is known: it says a limited set of personal and business information was accessed. It has given no count of people affected, so the reach is not known.",
+  "who_is_affected": "People and organisations whose information FIFA holds; FIFA has not said who. Nothing it has said mentions fans or ticket holders. FIFA has asked no one to take any action.",
+  "known": [
+    {
+      "text": "FIFA says a criminal cyberattack gave someone unauthorised access to a limited set of personal and business information.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "FIFA says it is working with the authorities, including law enforcement.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "FIFA has not said how many people were affected, when the attack happened or what the information was.",
+      "claim_id": "c005"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Who carried out the attack. A group says it did; FIFA has not said.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Whose information was accessed, and whether fans or ticket holders are among them.",
+      "question_id": "q003"
+    },
+    {
+      "text": "How much data was taken. FIFA has given no figure."
+    }
+  ],
+  "figures": [
+    {
+      "value": "12 GB",
+      "label": "Data the group claims it stole",
+      "detail": "The group's claim; FIFA has not confirmed it",
+      "claim_id": "c003"
+    },
+    {
+      "value": "Nov 25",
+      "label": "FIFA confirms the attack",
+      "detail": "Statement sent to news outlets",
+      "claim_id": "c001"
+    }
+  ],
+  "lead_image": "home-of-fifa-zurich",
+  "images": [
+    {
+      "id": "home-of-fifa-zurich",
+      "title": "FIFA's headquarters in Zurich",
+      "file": "images/home-of-fifa-zurich.jpg",
+      "alt": "A low building wrapped in a grey metal mesh with 'FIFA' in blue letters on the roof line, seen across a cobbled path and gardens, with a football pitch to the right.",
+      "caption": "The Home of FIFA, FIFA's headquarters in Zurich, in 2016.",
+      "credit": "Albinfo, CC BY-SA 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Home_of_FIFA_-_front.jpg",
+      "sha256": "60bfa842d3edf35e307affaca3362af1e12baf2e431646ba6e2856c387111a69",
+      "width": 1920,
+      "height": 1276
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was FIFA hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What was taken, and who is affected?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the FIFA cyberattack"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
