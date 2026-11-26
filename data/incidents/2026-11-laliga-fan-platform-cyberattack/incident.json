@@ -4,8 +4,11 @@
   "title": "LALIGA fan platform cyberattack, Nov 2026",
   "subject": {
     "name": "LALIGA",
-    "kind": "other"
+    "kind": "other",
+    "about": "LALIGA is a private sports association made up of the clubs in Spain's two professional football divisions. It organises those national competitions and is based in Madrid.",
+    "about_url": "https://www.laliga.com/en-GB/pressroom/what-is-laliga"
   },
+  "lead_image": "carlos-tartiere-oviedo",
   "incident_type": "breach",
   "answer_group": "hack-stated",
   "also_called": [
@@ -99,6 +102,21 @@
       "type": "note",
       "title": "What we checked and did not find",
       "file": "notes/checked-not-found.md"
+    }
+  ],
+  "images": [
+    {
+      "id": "carlos-tartiere-oviedo",
+      "title": "Real Oviedo's Estadio Carlos Tartiere",
+      "file": "images/carlos-tartiere-oviedo.jpg",
+      "alt": "A large football stadium with a pale blue roof and the words Estadio Municipal Carlos Tartiere on its side, seen from a hill, with car parks and a training pitch in front and apartment blocks and mountains behind.",
+      "caption": "The Estadio Carlos Tartiere in Oviedo, home of Real Oviedo, one of the clubs that says its fans' data was taken, in January 2010. Not taken during this incident.",
+      "credit": "Jsmq, CC BY 3.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Estadio_Municipal_Carlos_Tartiere_(Real_Oviedo_S.A.D.).jpg",
+      "sha256": "c96e3b007c71e2b6ed1daa4ddeb1054ea230d3b7ef711fad9dbdfeb149c11932",
+      "width": 1920,
+      "height": 1440
     }
   ]
 }
