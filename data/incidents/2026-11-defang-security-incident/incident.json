@@ -8,7 +8,6 @@
     "about": "Defang makes tools for developers. Defang Deploy takes an application described in a Compose file and deploys it into the customer's own AWS, Google Cloud or Azure account. Defang Station runs AI coding agents on a hosted machine.",
     "about_url": "https://defang.io/about/"
   },
-  "no_photo": "Searched Wikimedia Commons and Defang's own site: Commons has nothing about the company, and Defang's site has only product screenshots and logos. No reusable photograph found.",
   "incident_type": "breach",
   "answer_group": "hack-stated",
   "also_called": [
@@ -77,6 +76,22 @@
       "label": "Deploys whose saved state was taken",
       "detail": "Defang's post",
       "claim_id": "c006"
+    }
+  ],
+  "lead_image": "defang-notice-screenshot",
+  "images": [
+    {
+      "id": "defang-notice-screenshot",
+      "title": "Defang's incident notice",
+      "file": "images/defang-notice-screenshot.jpg",
+      "alt": "The top of a web page on Defang's site headed 'Security incident: November 2026', dated November 24, 2026, with a title card reading 'What happened, what was exposed, what we have done, and what you should do.'",
+      "caption": "Screenshot of Defang's notice, Nov 25, 2026.",
+      "credit": "Defang, screenshot by isitahack.com",
+      "rights": "screenshot",
+      "source_id": "s001",
+      "sha256": "8699b77acc3da50e6c719b07a53ed4d923ad28606c85c4379ed293cda9857288",
+      "width": 1600,
+      "height": 800
     }
   ],
   "sections": [
