@@ -8,3 +8,4 @@ t006,2026-11-01T22:19:46-05:00,,"10:19 PM ET, Nov 1, 2026",stated,GreyNoise's la
 t007,2026-11-23T00:00:00-05:00,,"Nov 23, 2026",approximate,GreyNoise publishes its report on the campaign,c001,Date on the blog post; no time given.
 t008,2026-11-24T09:21:00-05:00,,"9:21 AM ET, Nov 24, 2026",stated,SecurityWeek reports the campaign,c001,Time shown on the article.
 t009,2026-11-24T11:15:00-05:00,,"11:15 AM ET, Nov 24, 2026",stated,BleepingComputer reports the campaign and says it is waiting for Check Point's answer,c004,Time shown on the article.
+t010,2026-11-25,,"Nov 25, 2026",stated,Check Point tells BleepingComputer it is aware of the activity and that the attackers used CVE-2026-16232,c004,BleepingComputer's update is dated 25/11 with no time.
