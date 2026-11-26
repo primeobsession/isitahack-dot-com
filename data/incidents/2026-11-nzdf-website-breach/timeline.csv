@@ -1,0 +1,5 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-20,,"Morning, Fri Nov 20, 2026 (NZ time)",approximate,The NZDF's website provider tells it of unauthorised access to website systems; the NZDF takes affected websites offline,c001,The notice gives the day; RNZ and the NZ Herald say Friday morning.
+t002,2026-11-20T19:56:06+13:00,,"7:56 PM NZDT, Fri Nov 20, 2026",stated,The NZ Herald reports the NZDF's statement that a discount-scheme database was accessed,c002,1:56 AM ET the same day.
+t003,2026-11-23T10:20:30+11:00,,"10:20 AM AEDT, Mon Nov 23, 2026",stated,An NZDF spokesman tells Cyber Daily the website remains offline while remediation continues,c006,6:20 PM ET on Sun Nov 22.
+t004,2026-11-25T23:30:00-05:00,,"11:30 PM ET, Wed Nov 25, 2026",stated,The NZDF website still shows only a temporary page about the incident,c003,Our own reading of nzdf.mil.nz.
