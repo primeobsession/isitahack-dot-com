@@ -1,0 +1,131 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-mcdonalds-japan-app-breach",
+  "title": "McDonald's Japan app database breach, Nov 2026",
+  "subject": {
+    "name": "McDonald's Japan",
+    "kind": "other",
+    "about": "McDonald's Japan (Nihon McDonald's) runs the McDonald's hamburger restaurant chain in Japan. Its parent, McDonald's Holdings Company (Japan), is listed on the Tokyo Stock Exchange.",
+    "about_url": "https://www.mcdonalds.co.jp/company/outline/gaiyo/"
+  },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "also_called": [
+    "the McDonald's Japan data breach",
+    "the McDonald's app unauthorized access"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-20",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by McDonald's Japan, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "McDonald's runs about 3,000 restaurants across Japan and its app is used to order in them. The company has not said how many app users were affected, so the real reach is not known.",
+  "who_is_affected": "People in Japan who use the official McDonald's app. The company has not said how many. It says names, email addresses, phone numbers, addresses and card details were not involved, and that users need not change passwords or do anything for now.",
+  "known": [
+    {
+      "text": "McDonald's Japan says a third party got unauthorized access to part of the customer information in its official app's database.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The information involved was purchase history, an internal customer ID, IP addresses and phone location data.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "The access used login credentials, which the company is cancelling.",
+      "claim_id": "c007"
+    },
+    {
+      "text": "The company is investigating and reporting the incident to Japan's privacy regulator.",
+      "claim_id": "c010"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "How many app users were affected.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Whether any data was actually copied.",
+      "question_id": "q005"
+    },
+    {
+      "text": "How the credentials were obtained.",
+      "question_id": "q006"
+    },
+    {
+      "text": "When the access happened.",
+      "question_id": "q007"
+    },
+    {
+      "text": "Who was behind it.",
+      "question_id": "q008"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 20",
+      "label": "Disclosed",
+      "detail": "McDonald's Japan's notice",
+      "claim_id": "c001"
+    },
+    {
+      "value": "4",
+      "label": "Kinds of information involved",
+      "detail": "Purchases, internal ID, IP address, location",
+      "claim_id": "c002"
+    },
+    {
+      "value": "3,048",
+      "label": "McDonald's restaurants in Japan",
+      "detail": "End of October 2026",
+      "claim_id": "c012"
+    }
+  ],
+  "images": [
+    {
+      "id": "mcdonalds-japan-inage-store",
+      "title": "A McDonald's restaurant in Chiba, Japan",
+      "file": "images/mcdonalds-japan-inage-store.jpg",
+      "alt": "A single-storey grey McDonald's restaurant with a red awning and a drive-through sign on a tall pole, beside a road, with apartment blocks behind it under a clear blue sky.",
+      "caption": "The McDonald's Route 14 Inage restaurant in Chiba, Japan, in May 2026. Not involved in this incident; shown as one of the restaurants the app is used to order from.",
+      "credit": "Misei sen, CC BY 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:McDonald%27s_R14_Inage.jpg",
+      "sha256": "fe98ae7bf254b58a3ea3014e77abf17eb58b7b9797460e97497569827885b437",
+      "width": 1920,
+      "height": 1280
+    }
+  ],
+  "lead_image": "mcdonalds-japan-inage-store",
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was the McDonald's Japan app hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What was involved, and what was not?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What has McDonald's Japan done, and what should app users do?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the McDonald's Japan app breach"
+    }
+  ]
+}
