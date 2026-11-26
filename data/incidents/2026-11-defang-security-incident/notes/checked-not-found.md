@@ -1,6 +1,6 @@
 We looked for these and did not find them as of Nov 25, 2026.
 
-- Any organisation saying publicly that it uses Defang, or that it was affected. Defang's site names no customers.
+- Any organisation saying publicly that it uses Defang, or that it was affected. Defang's site names no customers. We also searched the web for organisations' own vendor and subprocessor lists naming Defang (none), for companies writing that they deploy with Defang (only individual developers' tutorials and hackathon projects), and Hacker News comments (no one says their organisation uses it).
 - A number of accounts affected. Defang says everyone with a Defang Portal account is in the copied database.
 - An explanation of how the attacker came to act as Defang's development GitHub App.
 - Whether the stolen credentials were used after Nov 12. Defang says it is still checking.
