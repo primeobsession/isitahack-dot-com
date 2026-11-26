@@ -1,0 +1,5 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-16,,"Mon Nov 16, 2026",stated,"A group calling itself n0n claims to have JPMorgan Chase customer data and posts similar claims about Visa and Mastercard",c008,Date only. The group's claim as reported by Reuters and BleepingComputer; not confirmed.
+t002,2026-11-19,,"Morning, Thu Nov 19, 2026",approximate,JPMorgan Chase says vendors that provide it services were the target of a cyberattack,c001,ABC News says the company made its statement on Thursday morning.
+t003,2026-11-19T14:58:34-05:00,,"2:58 PM ET, Thu Nov 19, 2026",stated,"Reuters reports statements from JPMorgan Chase, Visa and Mastercard about attacks on their vendors",c002,Publication time of the copy on Business Insurance; Mastercard's statement is dated Thursday by ABC News.
+t004,2026-11-20T10:58:06-05:00,,"10:58 AM ET, Fri Nov 20, 2026",stated,"BleepingComputer reports that Qubole is suspected to be the vendor, without confirmation",c010,
