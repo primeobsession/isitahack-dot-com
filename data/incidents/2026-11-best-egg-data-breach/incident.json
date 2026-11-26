@@ -1,0 +1,124 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-best-egg-data-breach",
+  "title": "Best Egg Financial Health platform data breach, Nov 2026",
+  "subject": {
+    "name": "Best Egg",
+    "kind": "finance",
+    "about": "Best Egg is a US consumer finance company that offers personal loans and tools to help people manage their money. It says it has funded 2.9 million loans.",
+    "about_url": "https://www.bestegg.com/about-us/"
+  },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "also_called": [
+    "the Best Egg data breach",
+    "the Best Egg Financial Health breach"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-10-25",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Best Egg, Barclays, Experian, any state attorney general, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Best Egg lends to people across the US, and American Banker reports about 792,000 records affected; Best Egg's own notice gives no total. Texas alone lists 74,013 Texans.",
+  "who_is_affected": "People whose information was on Best Egg's Financial Health platform, including borrowers and some who never took a loan. Those affected are being sent letters with a code for 24 months of free credit monitoring.",
+  "known": [
+    {
+      "text": "Best Egg says an unauthorized third party got into its Financial Health platform on Oct 25-26, 2026, and took records.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The records include names, dates of birth, Social Security numbers and the account numbers people use to pay their Best Egg loans.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "The Texas Attorney General lists 74,013 Texans affected.",
+      "claim_id": "c005"
+    },
+    {
+      "text": "Best Egg offers 24 months of free Experian credit monitoring, with enrolment open until March 31, 2027.",
+      "claim_id": "c009"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "How the intruder got in, and who it was.",
+      "question_id": "q004"
+    },
+    {
+      "text": "The exact total of people affected in a filing we could read; American Banker reports about 792,000 records.",
+      "question_id": "q003"
+    }
+  ],
+  "figures": [
+    {
+      "value": "792,000",
+      "label": "Records affected",
+      "detail": "American Banker's report",
+      "claim_id": "c004"
+    },
+    {
+      "value": "74,013",
+      "label": "Texans affected",
+      "detail": "Texas Attorney General",
+      "claim_id": "c005"
+    },
+    {
+      "value": "Oct 26",
+      "label": "Best Egg detected the activity",
+      "detail": "Notice letters dated Nov 24",
+      "claim_id": "c001"
+    }
+  ],
+  "lead_image": "best-egg-notice",
+  "images": [
+    {
+      "id": "best-egg-notice",
+      "title": "Best Egg's notice of data breach",
+      "file": "images/best-egg-notice.jpg",
+      "alt": "The top of a letter with the Best Egg name, dated November 24, 2026, headed 'RE: Notice of Data Breach. Please read this entire letter.', with a 'What Happened?' section saying that on October 26, 2026, Best Egg detected suspicious activity on its Financial Health platform.",
+      "caption": "Screenshot of Best Egg's notice, Nov 24, 2026, as filed with the California Attorney General (sample letter; addresses and postal codes left out).",
+      "credit": "Best Egg, screenshot by isitahack.com",
+      "rights": "screenshot",
+      "source_id": "s002",
+      "sha256": "70830df1a09a82d897ac3af16d8790d642b9a6ff51a8685af040c3fb1e562f1b",
+      "width": 1600,
+      "height": 800
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was Best Egg hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What was taken, and who is affected?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What has Best Egg done, and what should I do?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Best Egg breach"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
