@@ -1,5 +1,5 @@
 source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
-s001,https://bsaefiling.fincen.gov/,FinCEN BSA E-Filing System home page: 'Service Disruption' alert,1,fincen,,2026-11-25T11:36:00-05:00,,ok,2026-11-25T17:12:03-05:00
+s001,https://bsaefiling.fincen.gov/,FinCEN BSA E-Filing System home page: 'Service Disruption' alert,1,fincen,,2026-11-25T11:36:00-05:00,,ok,2026-11-25T19:07:00-05:00
 s002,https://kfgo.com/2026/11/25/us-fincen-takes-some-systems-offline-after-cyber-incident-official-says/,"Reuters (via KFGO): US FinCEN takes some systems offline after cyber incident, official says",2,reuters,2026-11-25T09:42:39-05:00,2026-11-25T11:36:00-05:00,,ok,2026-11-25T11:36:00-05:00
 s003,https://therecord.media/treasury-fincen-takes-systems-offline-after-cyber-incident,The Record: Treasury's FinCEN takes systems offline after cybersecurity incident,2,the-record,2026-11-25T05:15:00-05:00,2026-11-25T11:36:00-05:00,,ok,2026-11-25T11:36:00-05:00
 s004,https://www.fincen.gov/sites/default/files/100/ORDER-FIN-2026-R002.pdf,"FinCEN Order FIN-2026-R002: temporary, limited exceptive relief for certain BSA and CTA submissions",1,fincen,2026-11-24,2026-11-25T13:08:23-05:00,,ok,2026-11-25T13:08:23-05:00
