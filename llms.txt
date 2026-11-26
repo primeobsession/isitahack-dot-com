@@ -147,6 +147,8 @@
 - [Defang security incident, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-defang-security-incident.html): the same report as a web page.
 - [McDonald's Japan app database breach, Nov 2026](https://isitahack.com/incidents/2026-11-mcdonalds-japan-app-breach.md): the report as Markdown (still monitored). Built from its data folder.
 - [McDonald's Japan app database breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-mcdonalds-japan-app-breach.html): the same report as a web page.
+- [New Zealand Defence Force website breach, Nov 2026](https://isitahack.com/incidents/2026-11-nzdf-website-breach.md): the report as Markdown (still monitored). Built from its data folder.
+- [New Zealand Defence Force website breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-nzdf-website-breach.html): the same report as a web page.
 - [GitHub outage, Nov 25 2026](https://isitahack.com/incidents/2026-11-github-outage.md): the report as Markdown (still monitored). Built from its data folder.
 - [GitHub outage, Nov 25 2026 (HTML)](https://isitahack.com/incidents/2026-11-github-outage.html): the same report as a web page.
 
@@ -228,6 +230,7 @@
 - [data/incidents/2026-11-allstate-website-app-outage/](https://isitahack.com/data/incidents/2026-11-allstate-website-app-outage/): the folder the Allstate outage report is built from.
 - [data/incidents/2026-11-defang-security-incident/](https://isitahack.com/data/incidents/2026-11-defang-security-incident/): the folder the Defang security incident report is built from.
 - [data/incidents/2026-11-mcdonalds-japan-app-breach/](https://isitahack.com/data/incidents/2026-11-mcdonalds-japan-app-breach/): the folder the McDonald's Japan app database breach report is built from.
+- [data/incidents/2026-11-nzdf-website-breach/](https://isitahack.com/data/incidents/2026-11-nzdf-website-breach/): the folder the NZDF website breach report is built from.
 - [data/incidents/2026-11-github-outage/](https://isitahack.com/data/incidents/2026-11-github-outage/): the folder the GitHub outage report is built from.
 
 ## For search engines

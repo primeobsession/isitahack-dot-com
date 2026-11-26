@@ -1,0 +1,151 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-nzdf-website-breach",
+  "title": "New Zealand Defence Force website breach, Nov 2026",
+  "subject": {
+    "name": "NZ Defence Force",
+    "kind": "government",
+    "about": "The New Zealand Defence Force (NZDF) is New Zealand's military: the Royal New Zealand Navy, the New Zealand Army and the Royal New Zealand Air Force. It is a government department that answers to the Minister of Defence.",
+    "about_url": "https://www.govt.nz/organisations/new-zealand-defence-force/"
+  },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "also_called": [
+    "the NZDF cyber security incident",
+    "the Force4Families data breach"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-20",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by the New Zealand Defence Force, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "service": {
+    "state": "down",
+    "claim_id": "c003"
+  },
+  "size": "Local",
+  "size_basis": "One organisation's public websites and the database of one discount scheme for Defence Force families. The NZDF has not said how many people are in it, and nothing we read says its military systems were affected.",
+  "who_is_affected": "People registered with the NZDF's Force4Families Defence Discounts scheme, whose names and email addresses were in the database; the NZDF says it has contacted them. Anyone looking for NZDF information online, since its website is offline.",
+  "known": [
+    {
+      "text": "The NZDF says its website provider told it on Nov 20 of unauthorised access to its website systems.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "A database for the Force4Families discount scheme, holding names and email addresses, was accessed.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "The NZDF website was still offline at our last check.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "The NZDF has contacted people who may be affected and told the Privacy Commissioner.",
+      "claim_id": "c004"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "How many people were affected.",
+      "question_id": "q006"
+    },
+    {
+      "text": "Whether anything beyond the discount database was reached."
+    },
+    {
+      "text": "Which website provider was breached, and how.",
+      "question_id": "q008"
+    },
+    {
+      "text": "Who was behind it.",
+      "question_id": "q005"
+    },
+    {
+      "text": "When the website will be back."
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 20",
+      "label": "NZDF told of the access",
+      "detail": "By its website provider",
+      "claim_id": "c001"
+    },
+    {
+      "value": "2",
+      "label": "Kinds of data in the database",
+      "detail": "Names and email addresses",
+      "claim_id": "c002"
+    }
+  ],
+  "images": [
+    {
+      "id": "nzdf-notice",
+      "title": "The New Zealand Defence Force's incident notice",
+      "file": "images/nzdf-notice.jpg",
+      "alt": "The top of the New Zealand Defence Force website's temporary page, headed 'We're working on our website', saying the website is temporarily unavailable, and starting the notice that the NZDF is responding to a cyber security incident affecting its public websites.",
+      "caption": "Screenshot of the New Zealand Defence Force's notice, Nov 25, 2026.",
+      "credit": "New Zealand Defence Force, screenshot by isitahack.com",
+      "rights": "screenshot",
+      "source_id": "s001",
+      "sha256": "576dc1287733be8cfe73cc6de4cf572ce3785fcd0c92b7efb00c33bda569d0b9",
+      "width": 1600,
+      "height": 800
+    }
+  ],
+  "lead_image": "nzdf-notice",
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was the NZDF website hacked? What the NZDF has said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Is the NZDF website back?",
+      "group": "service",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What was taken, and what is not known?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How did it happen?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What is the NZDF doing, and what should users do?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Is it linked to other attacks in New Zealand?",
+      "group": "related",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What is the NZDF?",
+      "group": "about",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the NZDF website breach"
+    }
+  ]
+}
