@@ -1,0 +1,3 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-20T03:32:00-05:00,,,stated,McDonald's Japan publishes its notice of unauthorized access to its app database,c001,The page's own publication time is 17:32 Japan time on Nov 20.
+t002,2026-11-24T07:59:00-05:00,,,stated,The Record reports the breach,c001,The article's publication time is 12:59 UTC.
