@@ -1,3 +1,4 @@
 event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
 t001,2026-11-18,,Late at night,approximate,"The state finds a cybersecurity incident in which an unauthorized user accessed myColorado platform data, and shuts the app down",c001,"The state says 'late Wednesday night, Nov. 18'."
 t002,2026-11-24,,,stated,"The state posts an update: the app stays offline with no restoration date, and 50,000 to 150,000 people's data may be affected",c003,Date on the myColorado.gov update.
+t003,2026-11-25,,,stated,"The state says the incident mainly involved users' uploaded documents, estimates roughly 100,000 users' data was involved, and says notices will begin on Nov 27",c011,Date on the myColorado.gov update.
