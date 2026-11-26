@@ -25,8 +25,8 @@
     "claim_id": "c003"
   },
   "size": "Regional",
-  "size_basis": "One statewide app with about 2.1 million users, offline for everyone. The state estimates 50,000 to 150,000 people's data may have been affected; the investigation is ongoing.",
-  "who_is_affected": "Everyone who uses the myColorado app for a digital driver license, digital ID or state services. Carry your physical ID, including for holiday flights. The state says it will notify people whose data was affected.",
+  "size_basis": "One statewide app with about 2.1 million users, offline for everyone. The state estimates roughly 100,000 users' data was involved, mainly uploaded documents; the count is still being refined.",
+  "who_is_affected": "Everyone who uses the myColorado app for a digital driver license, digital ID or state services. Carry your physical ID, including for holiday flights. The state expects to start notifying people whose documents were involved on Nov 27.",
   "known": [
     {
       "text": "The state says an unauthorized user accessed myColorado platform data, found late on Nov 18.",
@@ -37,8 +37,12 @@
       "claim_id": "c003"
     },
     {
-      "text": "The state estimates 50,000 to 150,000 people's data may have been affected.",
+      "text": "The state estimates roughly 100,000 users' data was involved.",
       "claim_id": "c004"
+    },
+    {
+      "text": "The state says photos and PDFs of documents such as passports, vehicle registrations and insurance cards were accessed; payment information was not.",
+      "claim_id": "c011"
     },
     {
       "text": "State services are still available through agency websites, and a physical ID is needed meanwhile.",
@@ -47,8 +51,8 @@
   ],
   "not_known": [
     {
-      "text": "What data was accessed, and whose.",
-      "question_id": "q002"
+      "text": "Exactly whose documents were involved: the state is still matching them to users.",
+      "question_id": "q007"
     },
     {
       "text": "Who got in, and through what vulnerability.",
@@ -67,9 +71,9 @@
       "claim_id": "c001"
     },
     {
-      "value": "50k-150k",
-      "label": "People whose data may be affected",
-      "detail": "State estimate, Nov 24",
+      "value": "About 100k",
+      "label": "Users whose data was involved",
+      "detail": "State estimate, Nov 25",
       "claim_id": "c004"
     },
     {
