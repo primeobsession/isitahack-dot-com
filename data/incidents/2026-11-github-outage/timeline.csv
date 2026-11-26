@@ -1,0 +1,7 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-25T10:55:19-05:00,,,stated,GitHub opens a status incident: degraded performance for Actions and Webhooks,c001,15:55 UTC.
+t002,2026-11-25T11:05:03-05:00,,,stated,"Git Operations, Pull Requests, Actions, Issues, Packages and Pages are listed with degraded availability",c002,Between 16:05 and 16:11 UTC.
+t003,2026-11-25T11:14:11-05:00,,,stated,GitHub says the failures are due to high database load and it is working to reduce the load,c003,16:14 UTC.
+t004,2026-11-25T11:25:42-05:00,,,stated,GitHub says it has updated its database load distribution and is starting to see recovery,c003,16:25 UTC.
+t005,2026-11-25T11:52:16-05:00,,,stated,GitHub marks the incident resolved and promises a detailed root cause analysis,c004,16:52 UTC.
+t006,2026-11-25T16:30:00-05:00,2026-11-25T19:28:00-05:00,,stated,"Git LFS operations are degraded; GitHub later blames a large volume of automated, unauthenticated traffic in one region",c007,21:30 to 00:28 UTC. GitHub opened this incident at 6:06 PM ET and resolved it at 7:43 PM ET.

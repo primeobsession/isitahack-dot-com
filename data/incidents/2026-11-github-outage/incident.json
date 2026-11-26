@@ -1,0 +1,140 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-github-outage",
+  "title": "GitHub outage, Nov 25, 2026",
+  "subject": {
+    "name": "GitHub",
+    "kind": "online-service",
+    "about": "GitHub describes itself as a complete developer platform to build, scale and deliver secure software. It says more than 225 million developers and 4 million organisations use it, including 90% of the Fortune 100.",
+    "about_url": "https://github.com/about"
+  },
+  "incident_type": "outage",
+  "answer_group": "unclear",
+  "service": {
+    "state": "back",
+    "claim_id": "c004"
+  },
+  "lead_image": "github-letterbox-amsterdam",
+  "also_called": [
+    "GitHub down",
+    "the GitHub degraded experiences incident"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-25",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by GitHub, any government agency, news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "GitHub is used daily by a very large number of developers and companies, and the outage touched most of its main features, including Git itself, pull requests and Actions. It lasted under an hour, and GitHub has not said how many users or requests were affected.",
+  "who_is_affected": "Anyone using GitHub from about 10:55 to 11:52 AM ET on Wednesday, Nov 25: Git, pull requests, Actions, Issues, Packages, Pages, webhooks and the API may have failed or been slow. GitHub says it works normally again; nothing needs to be done.",
+  "known": [
+    {
+      "text": "GitHub opened a status incident at 10:55 AM ET on Nov 25 for degraded experiences across its products.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "It affected Git Operations, Webhooks, API Requests, Issues, Pull Requests, Actions, Packages and Pages.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "GitHub said the failures came from high database load, and that spreading the load differently brought recovery.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "GitHub marked the incident resolved at 11:52 AM ET, under an hour after it began, and promised a detailed root cause analysis.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "That evening, Git LFS was degraded for about three hours; GitHub blamed a large volume of automated, unauthenticated traffic in one region.",
+      "claim_id": "c007"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "What drove the database load up. GitHub has not said yet."
+    },
+    {
+      "text": "Whether either problem was an attack. No one has claimed one and GitHub has not addressed it."
+    },
+    {
+      "text": "Who or what sent the automated traffic behind the evening Git LFS slowdown."
+    },
+    {
+      "text": "How many users or requests were affected by the morning outage."
+    }
+  ],
+  "figures": [
+    {
+      "value": "10:55 AM",
+      "label": "Incident opened (ET)",
+      "detail": "Per GitHub's status page",
+      "claim_id": "c001"
+    },
+    {
+      "value": "8",
+      "label": "Parts of GitHub affected",
+      "detail": "Including Git, pull requests and Actions",
+      "claim_id": "c002"
+    },
+    {
+      "value": "11:52 AM",
+      "label": "Marked resolved (ET)",
+      "detail": "Under an hour after it began",
+      "claim_id": "c004"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was it a hack? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened?",
+      "group": "what-happened",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the GitHub outage"
+    },
+    {
+      "type": "claims",
+      "title": "What caused it?",
+      "group": "cause"
+    },
+    {
+      "type": "claims",
+      "title": "Who was affected?",
+      "group": "impact"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ],
+  "images": [
+    {
+      "id": "github-letterbox-amsterdam",
+      "title": "GitHub's letterbox at its Amsterdam office",
+      "file": "images/github-letterbox-amsterdam.jpg",
+      "alt": "A dark grey metal door panel with a brushed-steel letterbox labelled GitHub, and part of another letterbox above it.",
+      "caption": "The letterbox of GitHub's office on Spuistraat, Amsterdam, in 2023. The office is not part of this incident.",
+      "credit": "Rrustema, CC0, via Wikimedia Commons (cropped)",
+      "rights": "public-domain",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Letterbox_for_GitHub_office_in_Spuistraat,_Amsterdam,_the_Netherlands.jpg",
+      "sha256": "5686e2dcc12901b9230c5f1089cb33907f8e11257dc39c2d16e0d0e78f603a14",
+      "width": 1920,
+      "height": 1430
+    }
+  ]
+}

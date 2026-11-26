@@ -1,0 +1,8 @@
+source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
+s001,https://www.githubstatus.com/incidents/qn8mfv6q5hlx,GitHub Status: Investigating degraded experiences across GitHub products (incident page),1,github-status,2026-11-25T11:52:16-05:00,2026-11-25T21:28:00-05:00,,ok,2026-11-25T21:28:00-05:00
+s002,https://www.githubstatus.com/api/v2/incidents.json,GitHub Status: recent incidents feed (public API),1,github-status,2026-11-25T19:43:01-05:00,2026-11-25T21:28:00-05:00,,ok,2026-11-25T21:28:00-05:00
+s003,https://www.githubstatus.com/incidents/m0wvf9pt3l0l,GitHub Status: LFS degradation for some customers (incident page),1,github-status,2026-11-25T19:43:01-05:00,2026-11-25T21:28:00-05:00,,ok,2026-11-25T21:28:00-05:00
+s004,https://www.githubstatus.com/api/v2/status.json,GitHub Status: current overall status (public API),1,github-status,2026-11-25T20:58:51-05:00,2026-11-25T21:28:00-05:00,,ok,2026-11-25T21:28:00-05:00
+s005,https://github.com/about,GitHub: About,1,github,,2026-11-25T21:28:00-05:00,,ok,2026-11-25T21:28:00-05:00
+s006,https://github.blog/news-insights/company-news/github-availability-report-october-2026/,The GitHub Blog: GitHub availability report: October 2026,1,github,2026-11-12T19:20:16-05:00,2026-11-25T21:28:00-05:00,,ok,2026-11-25T21:28:00-05:00
+s007,https://news.ycombinator.com/item?id=50643720,Hacker News: discussion of GitHub's Nov 25 status incident,5,hacker-news,2026-11-25T10:59:23-05:00,2026-11-25T21:28:00-05:00,,ok,2026-11-25T21:28:00-05:00

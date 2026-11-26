@@ -145,6 +145,8 @@
 - [Defang security incident, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-defang-security-incident.html): the same report as a web page.
 - [McDonald's Japan app database breach, Nov 2026](https://isitahack.com/incidents/2026-11-mcdonalds-japan-app-breach.md): the report as Markdown (still monitored). Built from its data folder.
 - [McDonald's Japan app database breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-mcdonalds-japan-app-breach.html): the same report as a web page.
+- [GitHub outage, Nov 25 2026](https://isitahack.com/incidents/2026-11-github-outage.md): the report as Markdown (still monitored). Built from its data folder.
+- [GitHub outage, Nov 25 2026 (HTML)](https://isitahack.com/incidents/2026-11-github-outage.html): the same report as a web page.
 
 ## Data (typed incident format: UTF-8, RFC 4180 CSV with a header row; see Format below)
 - [data/incidents/2026-11-microsoft-365-outage/](https://isitahack.com/data/incidents/2026-11-microsoft-365-outage/): the folder the Microsoft 365 report is built from: incident.json, claims.csv, sources.csv, timeline.csv, questions.csv, update_log.csv and notes/.
@@ -223,6 +225,7 @@
 - [data/incidents/2026-11-allstate-website-app-outage/](https://isitahack.com/data/incidents/2026-11-allstate-website-app-outage/): the folder the Allstate outage report is built from.
 - [data/incidents/2026-11-defang-security-incident/](https://isitahack.com/data/incidents/2026-11-defang-security-incident/): the folder the Defang security incident report is built from.
 - [data/incidents/2026-11-mcdonalds-japan-app-breach/](https://isitahack.com/data/incidents/2026-11-mcdonalds-japan-app-breach/): the folder the McDonald's Japan app database breach report is built from.
+- [data/incidents/2026-11-github-outage/](https://isitahack.com/data/incidents/2026-11-github-outage/): the folder the GitHub outage report is built from.
 
 ## For search engines
 - [sitemap.xml](https://isitahack.com/sitemap.xml): every page, with each incident's last update.
