@@ -145,6 +145,8 @@
 - [Allstate website and app outage, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-allstate-website-app-outage.html): the same report as a web page.
 - [Defang security incident, Nov 2026](https://isitahack.com/incidents/2026-11-defang-security-incident.md): the report as Markdown (still monitored). Built from its data folder.
 - [Defang security incident, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-defang-security-incident.html): the same report as a web page.
+- [Best Egg Financial Health platform data breach, Nov 2026](https://isitahack.com/incidents/2026-11-best-egg-data-breach.md): the report as Markdown (still monitored). Built from its data folder.
+- [Best Egg Financial Health platform data breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-best-egg-data-breach.html): the same report as a web page.
 - [Hex.pm package registry breach, Nov 2026](https://isitahack.com/incidents/2026-11-hex-pm-security-incident.md): the report as Markdown (still monitored). Built from its data folder.
 - [Hex.pm package registry breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-hex-pm-security-incident.html): the same report as a web page.
 - [McDonald's Japan app database breach, Nov 2026](https://isitahack.com/incidents/2026-11-mcdonalds-japan-app-breach.md): the report as Markdown (still monitored). Built from its data folder.
@@ -231,6 +233,7 @@
 - [data/incidents/2026-11-todoist-data-breach/](https://isitahack.com/data/incidents/2026-11-todoist-data-breach/): the folder the Todoist data breach report is built from.
 - [data/incidents/2026-11-allstate-website-app-outage/](https://isitahack.com/data/incidents/2026-11-allstate-website-app-outage/): the folder the Allstate outage report is built from.
 - [data/incidents/2026-11-defang-security-incident/](https://isitahack.com/data/incidents/2026-11-defang-security-incident/): the folder the Defang security incident report is built from.
+- [data/incidents/2026-11-best-egg-data-breach/](https://isitahack.com/data/incidents/2026-11-best-egg-data-breach/): the folder the Best Egg Financial Health platform data breach report is built from.
 - [data/incidents/2026-11-hex-pm-security-incident/](https://isitahack.com/data/incidents/2026-11-hex-pm-security-incident/): the folder the Hex.pm package registry breach report is built from.
 - [data/incidents/2026-11-mcdonalds-japan-app-breach/](https://isitahack.com/data/incidents/2026-11-mcdonalds-japan-app-breach/): the folder the McDonald's Japan app database breach report is built from.
 - [data/incidents/2026-11-nzdf-website-breach/](https://isitahack.com/data/incidents/2026-11-nzdf-website-breach/): the folder the NZDF website breach report is built from.

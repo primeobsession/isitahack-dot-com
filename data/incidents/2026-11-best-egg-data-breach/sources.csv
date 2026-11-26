@@ -1,0 +1,8 @@
+source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
+s001,https://oag.ca.gov/ecrime/databreach/reports/sb24-633388,California Attorney General: Best Egg breach notification filing,1,ca-oag,2026-11-24,2026-11-26T09:30:00-05:00,,ok,2026-11-26T09:30:00-05:00
+s002,https://oag.ca.gov/system/files/L01%20BEST%20EGG.pdf,"Best Egg: Notice of Data Breach, sample letter filed with the California Attorney General",1,bestegg,2026-11-24,2026-11-26T09:30:00-05:00,,ok,2026-11-26T09:30:00-05:00
+s003,https://oag.my.site.com/datasecuritybreachreport/apex/DataSecurityReportsPage,Texas Attorney General: Data Security Breach Reports (Best Egg entry),1,tx-oag,2026-11-25,2026-11-26T09:31:00-05:00,,ok,2026-11-26T09:31:00-05:00
+s004,https://www.americanbanker.com/news/barclays-best-egg-unit-discloses-breach-of-792-000-records,"American Banker: Barclays' Best Egg unit discloses breach of 792,000 records",2,americanbanker,2026-11-25T14:35:00-05:00,2026-11-26T09:32:00-05:00,,ok,2026-11-26T09:32:00-05:00
+s005,https://cyberinsider.com/best-egg-data-breach-792000-customers/,"CyberInsider: Barclays-owned Best Egg suffers data breach impacting 792,000 customers",3,cyberinsider,2026-11-26,2026-11-26T09:29:00-05:00,,ok,2026-11-26T09:29:00-05:00
+s006,https://www.bestegg.com/about-us/,Best Egg: About us,1,bestegg,,2026-11-26T09:32:00-05:00,,ok,2026-11-26T09:32:00-05:00
+s007,https://www.bestegg.com/,Best Egg: home page,1,bestegg,,2026-11-26T09:34:00-05:00,,ok,2026-11-26T09:34:00-05:00

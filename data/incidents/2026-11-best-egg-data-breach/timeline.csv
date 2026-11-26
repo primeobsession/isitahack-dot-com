@@ -1,0 +1,5 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-10-25,,Oct 25 to Oct 26,stated,Dates of the breach as filed with the California Attorney General,c001,
+t002,2026-10-26,,,stated,Best Egg detects suspicious activity on its Financial Health platform,c001,
+t003,2026-11-24,,,stated,Best Egg dates its notice letters and files with the California Attorney General,c001,
+t004,2026-11-25,,,stated,"The Texas Attorney General lists the breach, with 74,013 Texans affected",c005,
