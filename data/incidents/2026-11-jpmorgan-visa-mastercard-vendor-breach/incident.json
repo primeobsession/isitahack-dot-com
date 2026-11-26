@@ -1,0 +1,144 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-jpmorgan-visa-mastercard-vendor-breach",
+  "title": "JPMorgan Chase, Visa and Mastercard vendor breach, Nov 2026",
+  "subject": {
+    "name": "JPMorgan Chase",
+    "kind": "finance",
+    "about": "JPMorgan Chase is a global financial services firm. Its J.P. Morgan and Chase brands serve millions of consumers, small businesses, and corporate, institutional and government clients in the US and around the world.",
+    "about_url": "https://www.jpmorganchase.com/about"
+  },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "also_called": [
+    "the Chase vendor data breach",
+    "the Visa and Mastercard vendor breach"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-19",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by JPMorgan Chase, Visa, Mastercard, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "JPMorgan Chase is the largest US bank, and Visa and Mastercard run major global card networks. None has said how many customers were affected, and the companies say only marketing data and email addresses were involved, so the real reach is not known.",
+  "who_is_affected": "Some JPMorgan Chase customers whose names and emails were held by its vendors, a small group of Mastercard cardholders in one benefit program, and some Visa customers in Asia Pacific. Chase says it will contact those affected. Be wary of emails about the breach.",
+  "known": [
+    {
+      "text": "JPMorgan Chase says vendors that provide it services were the target of a cyberattack that reached marketing data, which may include some customer names and email addresses.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Visa says the claims about its data come from an incident at a third-party service provider in Asia Pacific.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "Mastercard says a third-party provider had an incident that exposed some email addresses of a small group of cardholders.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "JPMorgan Chase says it will contact affected customers directly.",
+      "claim_id": "c007"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Which vendor or vendors were attacked.",
+      "question_id": "q004"
+    },
+    {
+      "text": "How many customers were affected.",
+      "question_id": "q005"
+    },
+    {
+      "text": "When the attack happened.",
+      "question_id": "q008"
+    },
+    {
+      "text": "Whether the three companies' cases come from the same vendor."
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 19",
+      "label": "Disclosed by JPMorgan Chase",
+      "detail": "Statement reported by Reuters and ABC News",
+      "claim_id": "c001"
+    },
+    {
+      "value": "16,000+",
+      "label": "Customer emails in posted data",
+      "detail": "Reuters' own review; not verified",
+      "claim_id": "c009"
+    },
+    {
+      "value": "80 million",
+      "label": "People and businesses Chase serves",
+      "detail": "JPMorgan Chase's about page",
+      "claim_id": "c013"
+    }
+  ],
+  "images": [
+    {
+      "id": "jpmorgan-270-park-avenue",
+      "title": "The entrance of JPMorgan Chase's headquarters at 270 Park Avenue, New York",
+      "file": "images/jpmorgan-270-park-avenue.jpg",
+      "alt": "Wide stone steps with metal handrails lead up to a glass-fronted entrance under a long curved metal canopy, with the name JPMorganChase above the doors.",
+      "caption": "The entrance of JPMorgan Chase's headquarters at 270 Park Avenue, New York, in May 2026. Not involved in this incident: the attack was on outside vendors. People's faces blurred.",
+      "credit": "ajay_suresh, CC BY 4.0, via Flickr and Wikimedia Commons (faces blurred)",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:JPMorgan_Chase_-_270_Park_Avenue_(55283843744).jpg",
+      "sha256": "c6a13477310db413f4c22b692fb1acce4eafedcd2243ef4fc9c7cf3cb99feafa",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "lead_image": "jpmorgan-270-park-avenue",
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Were JPMorgan Chase, Visa and Mastercard hacked? What they said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What was taken, and what was not?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Who claims to be behind it?",
+      "group": "claims",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Which vendor was it?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What is JPMorgan Chase doing?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How big is JPMorgan Chase?",
+      "group": "about",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the JPMorgan Chase, Visa and Mastercard vendor breach"
+    }
+  ]
+}
