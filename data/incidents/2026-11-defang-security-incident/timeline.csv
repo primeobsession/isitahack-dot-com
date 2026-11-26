@@ -1,0 +1,7 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-12T01:05:00-05:00,,,stated,"The first workflow that copied build credentials runs, against Defang's development and staging environments",c002,Defang gives 06:05 UTC.
+t002,2026-11-12T01:26:00-05:00,,,stated,Defang's production credentials are copied,c001,Defang gives 06:26 UTC.
+t003,2026-11-12T02:57:00-05:00,2026-11-12T03:10:00-05:00,,stated,Defang's main database is copied,c005,Defang gives 07:57 to 08:10 UTC.
+t004,2026-11-15,,,stated,Defang installs an update for a dependency it was told had a security issue; it does not say whether this is connected,c010,
+t005,2026-11-23,,,stated,"A routine scan finds suspicious activity; Defang confirms the database copy, replaces its production credentials and emails affected users",c010,
+t006,2026-11-24,,,stated,Defang publishes its incident post,c001,
