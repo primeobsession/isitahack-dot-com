@@ -1,0 +1,108 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-sap-github-security-incident",
+  "title": "SAP GitHub security incident, Nov 2026",
+  "subject": {
+    "name": "SAP",
+    "kind": "online-service",
+    "about": "SAP is a German software company based in Walldorf and one of Germany's largest companies. It is best known for business software that organisations use to run processes such as finance, HR and sales.",
+    "about_url": "https://www.t-online.de/finanzen/aktuelles/id_101548506/sap-haben-verdaechtige-aktivitaeten-identifiziert-.html"
+  },
+  "incident_type": "breach",
+  "answer_group": "hack-reported",
+  "also_called": [
+    "the SAP hack",
+    "Project Granite"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-26",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by SAP, GitHub, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "SAP is one of Germany's largest companies, and organisations use its business software to run their finance, HR and sales. SAP says it has no sign so far that customers' data was reached, so any reach through its customers is not known.",
+  "who_is_affected": "SAP itself, whose code on GitHub was reportedly targeted. SAP says it has found no sign so far that customers' business data was reached, and no organisation has said it was affected. SAP has not asked customers to do anything.",
+  "known": [
+    {
+      "text": "SAP says it found suspicious activity and took steps at once to protect its customers.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "The activity was on SAP's GitHub platform, where its developers work on code; staff were asked to check their credentials.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "SAP says it has found no sign so far that anyone got into customers' business data.",
+      "claim_id": "c008"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether SAP source code was copied or changed, as an insider told Der Spiegel.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Who is behind it, how they got in, and when it started.",
+      "question_id": "q006"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 26",
+      "label": "Der Spiegel reports the attack",
+      "detail": "SAP confirms suspicious activity the same evening",
+      "claim_id": "c001"
+    }
+  ],
+  "lead_image": "sap-walldorf",
+  "images": [
+    {
+      "id": "sap-walldorf",
+      "title": "SAP headquarters in Walldorf, Germany",
+      "file": "images/sap-walldorf.jpg",
+      "alt": "A long grey office building with many windows and the SAP name on the roof, behind young trees and a meadow, under a blue sky.",
+      "caption": "Building 1 of SAP's headquarters in Walldorf, Germany, in 2008. The incident concerns SAP's accounts on GitHub, not this building.",
+      "credit": "Vladislav Bezrukov, CC BY 2.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:SAP_AG_headquarter_Walldorf_building_1.jpg",
+      "sha256": "007a7a02bedb488bf7deaa04ea150b5dfaddfc52d69c60da274162b403adc489",
+      "width": 1920,
+      "height": 1277
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was SAP hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Was customer data reached?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Who uses SAP, and were they affected?",
+      "group": "users",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the SAP incident"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
