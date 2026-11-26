@@ -21,7 +21,7 @@
   "verdict": null,
   "verdict_approved_at": null,
   "size": "Local",
-  "size_basis": "One company and the developers who use it. Every Defang Portal account is in the copied database, and Defang has not said how many that is. Users of its GitHub App could have had repositories and cloud accounts reached.",
+  "size_basis": "One company and the developers who use it. Every Defang Portal account is in the copied database; Defang has not said how many. Which organisations' repositories and cloud accounts the stolen app key could reach is not known.",
   "who_is_affected": "Everyone with a Defang Portal account. Users of the Defang GitHub App should check their repositories and cloud deploy role for activity since Nov 11. Anyone who deployed with Defang between Oct 12 and Nov 19 should change database passwords and secrets.",
   "known": [
     {
@@ -42,6 +42,10 @@
     }
   ],
   "not_known": [
+    {
+      "text": "Which organisations use Defang, and whether any were affected.",
+      "question_id": "q008"
+    },
     {
       "text": "Whether the stolen credentials were used after Nov 12.",
       "question_id": "q004"

@@ -1,3 +1,4 @@
 source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
 s001,https://defang.io/blog/post/security-incident-november-2026/,"Defang blog: Defang security incident, November 2026",1,defang,2026-11-24,2026-11-25T19:01:00-05:00,,ok,2026-11-25T19:01:00-05:00
 s002,https://news.ycombinator.com/item?id=50648035,Hacker News: discussion of Defang's incident post,5,hackernews,2026-11-25T16:47:16-05:00,2026-11-25T19:01:00-05:00,,ok,2026-11-25T19:01:00-05:00
+s003,https://defang.io/,Defang: home page,1,defang,,2026-11-25T19:03:23-05:00,,ok,2026-11-25T19:03:23-05:00
