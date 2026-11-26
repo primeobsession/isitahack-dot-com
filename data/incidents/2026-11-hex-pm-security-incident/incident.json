@@ -1,0 +1,138 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-hex-pm-security-incident",
+  "title": "Hex.pm package registry breach, Nov 2026",
+  "subject": {
+    "name": "Hex.pm",
+    "kind": "online-service",
+    "about": "Hex is the package manager for languages that run on the BEAM virtual machine, such as Elixir and Erlang: developers use hex.pm to publish and download code packages. It is open source and is run by Six Colors AB, a Swedish company that charges for private packages.",
+    "about_url": "https://hex.pm/about"
+  },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "also_called": [
+    "the Hex.pm security incident",
+    "the hex.pm breach"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-23",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Hex, Six Colors AB, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Hex is where Elixir and Erlang developers worldwide get their packages; it says it serves millions of packages daily. What is known: commands ran on six servers for about 13 minutes. Whether account data was read is not known, and Hex has given no number of accounts.",
+  "who_is_affected": "People with a hex.pm account: Hex asks them to change their password, set up 2FA again and update their Hex client when the new release is out. Organisations with private packages will hear from Hex if affected. Developers who only download public packages have nothing to reset.",
+  "known": [
+    {
+      "text": "Hex says an attacker used a flaw in hex.pm to run commands on six of its web servers on Nov 23, 2026.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Hex cannot rule out that email addresses, password hashes, API key hashes and 2FA secrets were read.",
+      "claim_id": "c006"
+    },
+    {
+      "text": "Hex replaced its server credentials and signing keys and signed everyone out.",
+      "claim_id": "c009"
+    },
+    {
+      "text": "Hex reported it to the Swedish data protection authority, CISA and ENISA.",
+      "claim_id": "c010"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether any account data was actually read.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Who was behind it.",
+      "question_id": "q005"
+    },
+    {
+      "text": "Which organisations use Hex, and whether any were affected.",
+      "question_id": "q006"
+    },
+    {
+      "text": "When the new registry signing key will be in place.",
+      "question_id": "q007"
+    }
+  ],
+  "figures": [
+    {
+      "value": "6",
+      "label": "Web servers where commands ran",
+      "detail": "Hex's post",
+      "claim_id": "c002"
+    },
+    {
+      "value": "13 min",
+      "label": "From first to last malicious request",
+      "detail": "18:16 to 18:29 UTC, Nov 23",
+      "claim_id": "c002"
+    },
+    {
+      "value": "2016",
+      "label": "When the flaw entered the code",
+      "detail": "Hex's post",
+      "claim_id": "c002"
+    }
+  ],
+  "lead_image": "hex-notice-screenshot",
+  "images": [
+    {
+      "id": "hex-notice-screenshot",
+      "title": "Hex's incident notice",
+      "file": "images/hex-notice-screenshot.jpg",
+      "alt": "The top of a web page on hex.pm headed 'Security incident on hex.pm', dated 24 Nov 2026, beginning 'On November 23, 2026, an unauthorized third party exploited a vulnerability in hex.pm that let them run commands on our web servers.'",
+      "caption": "Screenshot of Hex's notice, Nov 26, 2026.",
+      "credit": "Hex, screenshot by isitahack.com",
+      "rights": "screenshot",
+      "source_id": "s001",
+      "sha256": "b5a23d9169c3889427df6cddc3612828816dee2212dc0af2e872cb51ea17f716",
+      "width": 1600,
+      "height": 800
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was Hex.pm hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What could have been taken, and what was not?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Who uses Hex, and were they affected?",
+      "group": "users",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What has Hex done, and what should I do?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Hex.pm breach"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

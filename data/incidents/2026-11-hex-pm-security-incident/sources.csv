@@ -1,0 +1,6 @@
+source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
+s001,https://hex.pm/blog/security-incident-on-hexpm,Hex blog: Security incident on hex.pm,1,hexpm,2026-11-24,2026-11-26T05:23:00-05:00,,ok,2026-11-26T05:23:00-05:00
+s002,https://hex.pm/about,Hex: About Hex,1,hexpm,,2026-11-26T05:25:00-05:00,,ok,2026-11-26T05:25:00-05:00
+s003,https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html,The Hacker News: Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers,2,thehackernews,2026-11-25T04:06:59-05:00,2026-11-26T05:27:00-05:00,,ok,2026-11-26T05:27:00-05:00
+s004,https://elixirforum.com/t/hex-pm-security-incident/77503,Elixir Forum: discussion of Hex's incident post,5,elixirforum,2026-11-24T09:48:29-05:00,2026-11-26T05:27:00-05:00,,ok,2026-11-26T05:27:00-05:00
+s005,https://hex.pm/,Hex: home page,1,hexpm,,2026-11-26T05:25:00-05:00,,ok,2026-11-26T05:25:00-05:00

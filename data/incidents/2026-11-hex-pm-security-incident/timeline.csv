@@ -1,0 +1,9 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2016-02-23,,,stated,"The safety check in hex.pm's request decoder is removed, leaving the flaw in place",c002,
+t002,2026-11-19,,From this day,approximate,"The attacker's two addresses repeatedly download hex.pm's own dependencies, which Hex says suggests a test copy was being built",c004,
+t003,2026-11-23T13:16:00-05:00,2026-11-23T13:29:33-05:00,,stated,69 malicious requests reach hex.pm; commands run on six web servers,c002,Hex gives 18:16 to 18:29 UTC.
+t004,2026-11-23T13:31:00-05:00,,,stated,Every hex.pm server is running a fixed build; a firewall rule blocks the attacker two minutes later,c002,Hex gives 18:31 and 18:33 UTC.
+t005,2026-11-23T14:07:00-05:00,,,stated,A separate security report describing the same flaw reaches Hex by email,c004,Hex gives 19:07 UTC.
+t006,2026-11-23T17:58:00-05:00,2026-11-23T18:26:00-05:00,,stated,"Hex reports the breach to the Swedish data protection authority, CISA and ENISA",c010,Hex gives 22:58 to 23:26 UTC.
+t007,2026-11-24T05:42:00-05:00,,By 5:42 AM,stated,Hex has replaced every credential the attacker could have read except the registry signing key and a few low-impact secrets,c009,"Hex gives ""by 10:42"" UTC."
+t008,2026-11-24,,,stated,Hex publishes its incident post and the flaw is published as CVE-2026-129514,c001,Hex gives 13:48 UTC for the CVE.
