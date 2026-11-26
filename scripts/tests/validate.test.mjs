@@ -58,6 +58,12 @@ test("the sample incident passes every check", () => {
 
 // ---------- shape of the files ----------
 rule("an unknown field in incident.json is rejected", (t) => t.head((h) => { h.severity = "high"; }), /incident\.json\.severity: unknown field/);
+// ---------- a screenshot shows the organisation's own page ----------
+const asScreenshot = (sourceId) => (t) => t.head((h) => { const img = h.images.find((x) => x.id === h.lead_image); img.rights = "screenshot"; delete img.source_url; if (sourceId) img.source_id = sourceId; else delete img.source_id; });
+test("a screenshot of a Tier 1 page the story cites is allowed", () => { assert.ok(!problems(asScreenshot("s001")).some((e) => /screenshot/.test(e))); });
+rule("a screenshot that does not say which page it shows", asScreenshot(null), /a screenshot names the page it shows with source_id/);
+rule("a screenshot of a news article", asScreenshot("s003"), /a screenshot may only show the organisation's own page \(a Tier 1 source\); s003 is Tier 2/);
+
 // ---------- a new incident has a photograph, or says why not ----------
 // The sample was opened in January 2026, before the rule; moving its log to December puts it after.
 const openedLater = (more = () => {}) => (t) => { const log = join(t.dir, "update_log.csv"); writeFileSync(log, readFileSync(log, "utf8").replaceAll("2026-01-", "2026-12-")); t.head((h) => { delete h.lead_image; more(h); }); };
