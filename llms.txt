@@ -151,6 +151,8 @@
 - [Best Egg Financial Health platform data breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-best-egg-data-breach.html): the same report as a web page.
 - [Peninsula Energy Lance uranium project cyber incident, Nov 2026](https://isitahack.com/incidents/2026-11-peninsula-energy-lance-cyber-incident.md): the report as Markdown (still monitored). Built from its data folder.
 - [Peninsula Energy Lance uranium project cyber incident, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-peninsula-energy-lance-cyber-incident.html): the same report as a web page.
+- [Flight Centre third-party booking system breach, Nov 2026](https://isitahack.com/incidents/2026-11-flight-centre-booking-system-breach.md): the report as Markdown (still monitored). Built from its data folder.
+- [Flight Centre third-party booking system breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-flight-centre-booking-system-breach.html): the same report as a web page.
 - [Hex.pm package registry breach, Nov 2026](https://isitahack.com/incidents/2026-11-hex-pm-security-incident.md): the report as Markdown (still monitored). Built from its data folder.
 - [Hex.pm package registry breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-hex-pm-security-incident.html): the same report as a web page.
 - [McDonald's Japan app database breach, Nov 2026](https://isitahack.com/incidents/2026-11-mcdonalds-japan-app-breach.md): the report as Markdown (still monitored). Built from its data folder.
@@ -240,6 +242,7 @@
 - [data/incidents/2026-11-fifa-cyberattack/](https://isitahack.com/data/incidents/2026-11-fifa-cyberattack/): the folder the FIFA cyberattack and data theft report is built from.
 - [data/incidents/2026-11-best-egg-data-breach/](https://isitahack.com/data/incidents/2026-11-best-egg-data-breach/): the folder the Best Egg Financial Health platform data breach report is built from.
 - [data/incidents/2026-11-peninsula-energy-lance-cyber-incident/](https://isitahack.com/data/incidents/2026-11-peninsula-energy-lance-cyber-incident/): the folder the Peninsula Energy Lance uranium project cyber incident, Nov 2026 report is built from.
+- [data/incidents/2026-11-flight-centre-booking-system-breach/](https://isitahack.com/data/incidents/2026-11-flight-centre-booking-system-breach/): the folder the Flight Centre third-party booking system breach, Nov 2026 report is built from.
 - [data/incidents/2026-11-hex-pm-security-incident/](https://isitahack.com/data/incidents/2026-11-hex-pm-security-incident/): the folder the Hex.pm package registry breach report is built from.
 - [data/incidents/2026-11-mcdonalds-japan-app-breach/](https://isitahack.com/data/incidents/2026-11-mcdonalds-japan-app-breach/): the folder the McDonald's Japan app database breach report is built from.
 - [data/incidents/2026-11-nzdf-website-breach/](https://isitahack.com/data/incidents/2026-11-nzdf-website-breach/): the folder the NZDF website breach report is built from.

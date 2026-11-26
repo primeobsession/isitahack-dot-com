@@ -1,0 +1,122 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-flight-centre-booking-system-breach",
+  "title": "Flight Centre third-party booking system breach, Nov 2026",
+  "subject": {
+    "name": "Flight Centre",
+    "kind": "other",
+    "about": "Flight Centre is the flagship travel agency brand of Flight Centre Travel Group, which began in 1973 and runs more than 2,000 leisure, corporate and wholesale travel businesses in 11 countries. People use it to book flights, holidays, cruises, tours and other travel, in stores, online or by phone.",
+    "about_url": "https://www.flightcentre.com.au/about-us"
+  },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "also_called": [
+    "the Flight Centre data breach",
+    "the Flight Centre cyber incident"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-26",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Flight Centre, Flight Centre Travel Group, Travel Associates, Cruiseabout, any news outlet, company, group, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Flight Centre Travel Group is one of Australia's largest travel retailers, and it says a significant number of customer records may have been accessed. It has given no count, and the share with passport or other sensitive details is, it says, very small.",
+  "who_is_affected": "Customers who booked accommodation through the Flight Centre brand, Travel Associates, Cruiseabout or some independent agents. Flight bookings, corporate travel and card details are not affected, the company says. It will contact those affected and asks customers to be wary of unexpected messages.",
+  "known": [
+    {
+      "text": "Flight Centre says unknown persons may have accessed a significant number of customer records in a third-party hotel booking system used by some of its brands.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Most of the records hold only names and basic travel details; a very small share may include limited passport details, birth dates, contact details or health information.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "No access to card, payment or bank details has been found, the company says.",
+      "claim_id": "c005"
+    },
+    {
+      "text": "Flight bookings and corporate travel bookings are not affected.",
+      "claim_id": "c006"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Which booking system or supplier was breached, and whether other companies that use it were affected.",
+      "question_id": "q003"
+    },
+    {
+      "text": "How many customers were affected, and how many records were actually taken.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Who was behind it, and when it began.",
+      "question_id": "q005"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 26",
+      "label": "Flight Centre discloses the breach",
+      "detail": "Statement to the Australian exchange",
+      "claim_id": "c001"
+    },
+    {
+      "value": "3 brands",
+      "label": "Leisure brands using the system",
+      "detail": "Flight Centre, Travel Associates, Cruiseabout",
+      "claim_id": "c006"
+    }
+  ],
+  "lead_image": "flight-centre-notice",
+  "images": [
+    {
+      "id": "flight-centre-notice",
+      "title": "Flight Centre Travel Group's statement to the Australian Securities Exchange",
+      "file": "images/flight-centre-notice.jpg",
+      "alt": "The top of a document headed 'Flight Centre Travel Group', titled 'Statement to Australian Securities Exchange – November 26, 2026', saying the group is investigating unusual activity in a third-party accommodation booking system used by some of its leisure travel brands.",
+      "caption": "Screenshot of Flight Centre Travel Group's notice, Nov 26, 2026, as filed with the Australian Securities Exchange.",
+      "credit": "Flight Centre Travel Group, screenshot by isitahack.com",
+      "rights": "screenshot",
+      "source_id": "s001",
+      "sha256": "d1f3885d53dcb30879831df6ecc9e45275ea2940155438fc0f0e968b2a0b1d70",
+      "width": 1600,
+      "height": 800
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was Flight Centre hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What was taken, and who is affected?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What has Flight Centre done, and what should customers do?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Flight Centre breach"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
