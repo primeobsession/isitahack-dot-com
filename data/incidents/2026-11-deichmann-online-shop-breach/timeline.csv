@@ -1,0 +1,5 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-24,,,stated,Deichmann posts notices on its German and UK online shops saying unauthorised persons accessed selected customer data,c001,The notices are dated Nov 24. When the access happened has not been said.
+t002,2026-11-25T11:56:00+01:00,,,stated,heise online reports the breach,c010,
+t003,2026-11-25T14:36:00+01:00,,,stated,dpa reports that the Deichmann subsidiary Snipes is also affected,c007,
+t004,2026-11-25,,,stated,A matching notice appears on Deichmann's Austrian online shop,c001,

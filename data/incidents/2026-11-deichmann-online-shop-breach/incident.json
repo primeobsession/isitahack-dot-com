@@ -1,0 +1,118 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-deichmann-online-shop-breach",
+  "title": "Deichmann online shop data breach, Nov 2026",
+  "subject": {
+    "name": "Deichmann",
+    "kind": "other",
+    "about": "Deichmann is a shoe retailer with about 4,700 stores in 36 countries, about 1,300 of them in Germany, and around 50,000 employees. People buy shoes from it in its stores and through its online shops.",
+    "about_url": "https://corpsite.deichmann.com/en/our-growth/"
+  },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "also_called": [
+    "the Deichmann data breach",
+    "the Deichmann hack"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-24",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Deichmann, Snipes, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Deichmann is one of Europe's largest shoe retailers, and notices cover its German, UK and Austrian online shops. It calls the scope limited and has given no count.",
+  "who_is_affected": "Some customers who bought from Deichmann's online shops in Germany, the UK and Austria, and, dpa reports, some Snipes customers. Those affected are being emailed. Watch for fake messages that quote real orders; Deichmann never asks for passwords or payment data.",
+  "known": [
+    {
+      "text": "Deichmann says unauthorised persons got into selected customer data from purchases in its online shop.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Names, billing and delivery addresses, invoices, email addresses, phone numbers and the chosen payment method may be affected.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "Deichmann says passwords, account logins, card numbers and PayPal logins were not affected.",
+      "claim_id": "c005"
+    },
+    {
+      "text": "It says it closed the weakness, informed the authorities and filed a criminal complaint.",
+      "claim_id": "c008"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "How many customers are affected, and when the access happened.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Who was behind it, and what weakness was used.",
+      "question_id": "q005"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 24",
+      "label": "Deichmann posts its notice",
+      "detail": "German and UK online shops",
+      "claim_id": "c001"
+    },
+    {
+      "value": "3 shops",
+      "label": "Country shops with a notice",
+      "detail": "Germany, UK, Austria",
+      "claim_id": "c001"
+    }
+  ],
+  "lead_image": "deichmann-store-leer",
+  "images": [
+    {
+      "id": "deichmann-store-leer",
+      "title": "A Deichmann shoe store in Leer, Germany",
+      "file": "images/deichmann-store-leer.jpg",
+      "alt": "The glass front of a Deichmann shoe store in a pedestrian street, with a large green Deichmann sign above the open doors and shoes on display in the windows.",
+      "caption": "A Deichmann store in Leer, Germany, in 2018. The breach was in the company's online shops; this store is not involved.",
+      "credit": "Donald Trung, CC BY-SA 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Deichmann,_Leer_(2018).jpg",
+      "sha256": "32a24fa2faf0bd17d465e829d5f56cbf413ae534c4440abbe996c417e04a66ae",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was Deichmann hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What was taken, and who is affected?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What has Deichmann done, and what should customers do?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Deichmann breach"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
