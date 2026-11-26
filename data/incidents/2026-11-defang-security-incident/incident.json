@@ -99,6 +99,12 @@
     },
     {
       "type": "claims",
+      "title": "Who uses Defang, and were they affected?",
+      "group": "users",
+      "open": true
+    },
+    {
+      "type": "claims",
       "title": "What has Defang done, and what should I do?",
       "group": "response",
       "open": true
