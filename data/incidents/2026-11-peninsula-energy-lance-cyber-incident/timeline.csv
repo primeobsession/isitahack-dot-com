@@ -1,0 +1,5 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-20,,Morning of Nov 20 (Wyoming time),stated,Strata Energy identifies a cybersecurity incident affecting the plant and wellfield control systems at Lance and shuts down operations as a precaution,c001,The Nov 23 filing dates the incident to late Friday night Western Australia time; the Nov 25 update says the morning of Nov 20 in the US. Both refer to the same day.
+t002,2026-11-23,,,stated,Peninsula asks the Australian Securities Exchange for a trading halt and says the breach was to its operating system only,c002,
+t003,2026-11-23,,Monday morning,stated,Wyoming's Department of Environmental Quality says it has not been notified,c007,
+t004,2026-11-25,,,stated,"Peninsula says operations at Lance remain suspended, with no restart date, and its shares are suspended until Nov 30 at the latest",c003,

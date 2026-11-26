@@ -1,0 +1,138 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-peninsula-energy-lance-cyber-incident",
+  "title": "Peninsula Energy Lance uranium project cyber incident, Nov 2026",
+  "subject": {
+    "name": "Peninsula Energy",
+    "kind": "energy",
+    "about": "Peninsula Energy is a uranium company listed on the Australian Securities Exchange. It is building a US uranium production business at its Lance and Dagger projects in Wyoming, where Lance recovers uranium underground by in-situ recovery and has its own processing plant.",
+    "about_url": "https://www.pel.net.au/"
+  },
+  "incident_type": "attack",
+  "answer_group": "hack-reported",
+  "also_called": [
+    "the Wyoming uranium mine cyberattack",
+    "the Lance uranium project cyber incident"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-20",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Peninsula Energy, Strata Energy, any government agency, news outlet, company, group, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "service": {
+    "state": "down",
+    "claim_id": "c003"
+  },
+  "size": "Local",
+  "size_basis": "One uranium recovery operation in northeast Wyoming, shut down while the company checks its control systems. Peninsula says its corporate systems were not affected, and nothing public shows any effect beyond the site and the company's shares.",
+  "who_is_affected": "The Lance uranium operation in Crook County, Wyoming, which has stopped working, and Peninsula Energy's shareholders, whose shares cannot be traded until Nov 30 at the latest. The company has not said whether anyone's data was affected. Nothing it has said affects the public directly.",
+  "known": [
+    {
+      "text": "Peninsula Energy says a cybersecurity incident hit the plant and wellfield control systems at its Lance uranium project on Nov 20.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Operations at Lance are suspended until the company's recovery and safety checks are finished. No restart date has been given.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "The company says its corporate systems, including payroll and finance, were not affected.",
+      "claim_id": "c008"
+    },
+    {
+      "text": "It says it has told the relevant US authorities and hired outside cyber security, forensic and legal advisers.",
+      "claim_id": "c006"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Who or what caused the incident, and how it happened.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Whether any data was taken. The company is still checking.",
+      "question_id": "q003"
+    },
+    {
+      "text": "When the Lance operation will restart.",
+      "question_id": "q004"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 20",
+      "label": "Incident found at Lance",
+      "detail": "Morning, Wyoming time",
+      "claim_id": "c001"
+    },
+    {
+      "value": "Suspended",
+      "label": "Operations at Lance",
+      "detail": "No restart date yet",
+      "claim_id": "c003"
+    },
+    {
+      "value": "Nov 30",
+      "label": "Shares suspended until, at the latest",
+      "detail": "Or until a restart is announced",
+      "claim_id": "c009"
+    }
+  ],
+  "lead_image": "willow-creek-isr-site",
+  "images": [
+    {
+      "id": "willow-creek-isr-site",
+      "title": "An in-situ uranium recovery site in Wyoming",
+      "file": "images/willow-creek-isr-site.jpg",
+      "alt": "Snow-dusted rangeland with sagebrush in the foreground, a power pole and a line of bare trees in the middle distance, and a long flat-topped ridge under a blue sky with clouds.",
+      "caption": "The Willow Creek in-situ uranium recovery site in Johnson and Campbell counties, Wyoming, run by another company, photographed by the NRC in 2013. It is not involved in this incident.",
+      "credit": "US Nuclear Regulatory Commission, public domain, via Wikimedia Commons",
+      "rights": "public-domain",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Uranium_Recovery_Facility_-_Willow_Creek_Project_(8672133373).jpg",
+      "sha256": "278b07f5c113962de56202dc2c9666f0d7364f29b3e3a8f0e1e5120c326b60ef",
+      "width": 1920,
+      "height": 1440
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was Peninsula Energy hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Is Lance still shut down?",
+      "group": "service",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What was affected?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What has Peninsula done, and who has been told?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Lance cyber incident"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
