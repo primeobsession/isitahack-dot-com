@@ -1,0 +1,112 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-defang-security-incident",
+  "title": "Defang security incident, Nov 2026",
+  "subject": {
+    "name": "Defang",
+    "kind": "online-service",
+    "about": "Defang makes tools for developers. Defang Deploy takes an application described in a Compose file and deploys it into the customer's own AWS, Google Cloud or Azure account. Defang Station runs AI coding agents on a hosted machine.",
+    "about_url": "https://defang.io/about/"
+  },
+  "no_photo": "Searched Wikimedia Commons and Defang's own site: Commons has nothing about the company, and Defang's site has only product screenshots and logos. No reusable photograph found.",
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "also_called": [
+    "the Defang security incident"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-12",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Defang, GitHub, Stripe, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Local",
+  "size_basis": "One company and the developers who use it. Every Defang Portal account is in the copied database, and Defang has not said how many that is. Users of its GitHub App could have had repositories and cloud accounts reached.",
+  "who_is_affected": "Everyone with a Defang Portal account. Users of the Defang GitHub App should check their repositories and cloud deploy role for activity since Nov 11. Anyone who deployed with Defang between Oct 12 and Nov 19 should change database passwords and secrets.",
+  "known": [
+    {
+      "text": "Defang says an attacker got into its build system on Nov 12 and copied the credentials it runs on.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Defang's main database was copied, with every Defang Portal account in it.",
+      "claim_id": "c005"
+    },
+    {
+      "text": "The key to the Defang GitHub App and customers' stored GitHub tokens were taken, and worked until Nov 23.",
+      "claim_id": "c007"
+    },
+    {
+      "text": "Saved copies of deployments from Oct 12 to Nov 19, which can include database passwords, were taken.",
+      "claim_id": "c006"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether the stolen credentials were used after Nov 12.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Who was behind it.",
+      "question_id": "q005"
+    },
+    {
+      "text": "How many accounts were affected.",
+      "question_id": "q006"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 12",
+      "label": "Database copied",
+      "detail": "Defang's timeline",
+      "claim_id": "c005"
+    },
+    {
+      "value": "Nov 23",
+      "label": "Found and credentials replaced",
+      "detail": "Defang's timeline",
+      "claim_id": "c010"
+    },
+    {
+      "value": "Oct 12-Nov 19",
+      "label": "Deploys whose saved state was taken",
+      "detail": "Defang's post",
+      "claim_id": "c006"
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was Defang hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What was taken, and what was not?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What has Defang done, and what should I do?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Defang breach"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
