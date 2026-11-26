@@ -1,0 +1,4 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-16,,During the week of Nov 16,approximate,A group calling itself the Handsome Boy Hacking Club posts a screenshot of what it says are FIFA files,c003,The Associated Press says this happened 'last week' in its Nov 26 report; it gives no exact day. Three days later the group appeared to take credit.
+t002,2026-11-25,,,stated,FIFA confirms to The Record that hackers got unauthorised access to a limited set of personal and business information,c001,
+t003,2026-11-26,,,stated,"FIFA's statement is reported by The Associated Press and Al Jazeera, among others",c001,
