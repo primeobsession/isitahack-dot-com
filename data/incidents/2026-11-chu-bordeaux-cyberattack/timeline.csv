@@ -1,0 +1,5 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-23T11:00:00+01:00,,,stated,"The hospital says two of its email addresses were used to send mass emails to staff, and that no sign of a compromise has been found so far",c003,
+t002,2026-11-24,,,stated,"Egora, citing Sud Ouest and French Breaches, reports that Scarlettgroup claims the attack",c004,
+t003,2026-11-24T09:30:00+01:00,,,stated,"The hospital says its investigations confirmed a compromise of its information system; ANSSI informed, the CNIL notified, a complaint to follow",c001,
+t004,2026-11-25,,,stated,The Record reports the Bordeaux incident alongside attacks on the Guadeloupe hospital and the National Cancer Institute,c012,

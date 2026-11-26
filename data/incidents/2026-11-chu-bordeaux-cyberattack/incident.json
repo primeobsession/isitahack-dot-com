@@ -1,0 +1,118 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-chu-bordeaux-cyberattack",
+  "title": "CHU de Bordeaux cyberattack, Nov 2026",
+  "subject": {
+    "name": "CHU de Bordeaux",
+    "kind": "health",
+    "about": "The CHU de Bordeaux is the university hospital of Bordeaux, in south-west France. It has about 16,000 staff, and in 2025 it recorded more than 311,800 hospital stays and nearly 836,000 outpatient consultations and procedures.",
+    "about_url": "https://www.chu-bordeaux.fr/CHU-de-Bordeaux/Pr%C3%A9sentation-du-CHU/Activit%C3%A9-du-CHU-en-chiffres/"
+  },
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "also_called": [
+    "the Bordeaux University Hospital hack",
+    "the CHU de Bordeaux data breach"
+  ],
+  "status": "monitoring",
+  "incident_date": "2026-11-23",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by the CHU de Bordeaux, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Regional",
+  "size_basis": "The CHU de Bordeaux is one of France's large university hospitals, with about 16,000 staff and over 311,000 hospital stays a year. It has not said how many people's data may be involved, so the size rests on the hospital's reach, not a count.",
+  "who_is_affected": "Patients and staff of the Bordeaux University Hospital whose data may have been reached; the hospital has not said who or how many. Care continues as normal. Anyone affected will be contacted individually. Treat unexpected emails that seem to come from the hospital with care.",
+  "known": [
+    {
+      "text": "The hospital says its investigations confirmed a compromise of its information system.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "It found out after two of its email addresses were used to send mass emails to staff.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "It says patient care is not affected; it cut outside access to one server as a precaution.",
+      "claim_id": "c007"
+    },
+    {
+      "text": "ANSSI was informed, the CNIL notified, and a criminal complaint will be filed.",
+      "claim_id": "c008"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether patient data was taken, and how many people are affected.",
+      "question_id": "q005"
+    },
+    {
+      "text": "Who is behind it and how they got in. A group calls itself responsible; the hospital has not confirmed that.",
+      "question_id": "q006"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 24",
+      "label": "Hospital confirms a compromise",
+      "detail": "A day after saying it had found no sign of one",
+      "claim_id": "c001"
+    },
+    {
+      "value": "2",
+      "label": "Hospital email addresses misused",
+      "detail": "To send mass emails to staff",
+      "claim_id": "c002"
+    }
+  ],
+  "lead_image": "hopital-saint-andre",
+  "images": [
+    {
+      "id": "hopital-saint-andre",
+      "title": "Hôpital Saint-André, one of the CHU de Bordeaux's hospitals",
+      "file": "images/hopital-saint-andre.jpg",
+      "alt": "The stone front of the Hôpital Saint-André in Bordeaux, with four columns and a pediment in the centre, a green dome behind, and a small CHU sign beside a side door.",
+      "caption": "The Hôpital Saint-André in central Bordeaux, one of the CHU de Bordeaux's sites, in 2010. The hospital has not said which systems or sites were involved.",
+      "credit": "Symac, CC BY-SA 3.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:H%C3%B4pital_Saint-Andr%C3%A9_-_Bordeaux.jpg",
+      "sha256": "78fa2e8650a5b332d952d3644d977837e113e1abbf856f5de7f4283fbdc1b9b6",
+      "width": 1920,
+      "height": 1440
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was the CHU de Bordeaux hacked? What has been said",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What may have been taken, and is care affected?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What has the hospital done?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the CHU de Bordeaux incident"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
