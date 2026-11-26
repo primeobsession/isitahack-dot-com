@@ -1,0 +1,6 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-20,,,stated,1984 Hosting suspends all its services after what it and CERT-IS call a serious cyberattack,c002,When the attackers first got in has not been said.
+t002,2026-11-21T14:53:00+00:00,,,stated,1984's managing director tells Vísir that the seven damaged websites appear to support Palestine,c004,
+t003,2026-11-25,,,stated,1984 says its investigation found customer data untouched except on the seven targeted websites,c003,
+t004,2026-11-25,,,stated,Iceland's Civil Protection and CERT-IS activate the national response plan for essential information infrastructure,c007,
+t005,2026-11-26,,,stated,1984 says email is working again and expects the first websites back from about 21:00 UTC,c006,
