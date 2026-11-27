@@ -1,0 +1,7 @@
+source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
+s001,https://www.cash.ch/news/hacker-stehlen-bei-planzer-paketdaten-aus-mehr-als-funf-jahren-988681,"cash.ch (AWP news agency): Hackers steal more than five years of parcel data from Planzer (in German)",2,awp-sda,2026-11-27T13:15:00+01:00,2026-11-27T17:34:53-05:00,,ok,2026-11-27T17:34:53-05:00
+s002,https://www.netzwoche.ch/news/2026-11-26/cyberkriminelle-greifen-daten-von-planzer-ab,"Netzwoche: Cybercriminals take data from Planzer (in German)",2,netzwoche,2026-11-26T10:27:00+01:00,2026-11-27T17:34:53-05:00,,ok,2026-11-27T17:34:53-05:00
+s003,https://www.inside-it.ch/planzer-meldet-datendiebstahl-20261126,"Inside IT: Planzer reports data theft (in German)",2,inside-it,2026-11-26T11:24:00+01:00,2026-11-27T17:34:53-05:00,,ok,2026-11-27T17:34:53-05:00
+s004,https://en.wikipedia.org/wiki/Planzer,"Wikipedia: Planzer, about the company",3,wikipedia,,2026-11-27T17:34:53-05:00,,ok,2026-11-27T17:34:53-05:00
+s005,https://www.planzer.ch/,Planzer website,1,planzer,,,,blocked,2026-11-27T17:34:53-05:00
+s006,https://www.galaxus.ch/en/page/everything-you-need-to-know-about-the-planzer-cyber-attack-44528,Galaxus: Everything you need to know about the Planzer cyber attack,1,digitec-galaxus,,,,blocked,2026-11-27T17:34:53-05:00

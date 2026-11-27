@@ -190,6 +190,8 @@
 - [Denmark CPR register breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-denmark-cpr-register-breach.html): the same report as a web page.
 - [Gatwick drop-off AutoPay breach, Nov 2026](https://isitahack.com/incidents/2026-11-gatwick-drop-off-autopay-breach.md): the report as Markdown (still monitored). Built from its data folder.
 - [Gatwick drop-off AutoPay breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-gatwick-drop-off-autopay-breach.html): the same report as a web page.
+- [Planzer parcel data breach, Nov 2026](https://isitahack.com/incidents/2026-11-planzer-parcel-data-breach.md): the report as Markdown (still monitored). Built from its data folder.
+- [Planzer parcel data breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-planzer-parcel-data-breach.html): the same report as a web page.
 
 ## Data (typed incident format: UTF-8, RFC 4180 CSV with a header row; see Format below)
 - [data/incidents/2026-11-microsoft-365-outage/](https://isitahack.com/data/incidents/2026-11-microsoft-365-outage/): the folder the Microsoft 365 report is built from: incident.json, claims.csv, sources.csv, timeline.csv, questions.csv, update_log.csv and notes/.
@@ -290,6 +292,7 @@
 - [data/incidents/2026-11-rnz-cyber-breach/](https://isitahack.com/data/incidents/2026-11-rnz-cyber-breach/): the folder the RNZ cyber breach, Nov 2026 report is built from.
 - [data/incidents/2026-11-denmark-cpr-register-breach/](https://isitahack.com/data/incidents/2026-11-denmark-cpr-register-breach/): the folder the Denmark CPR register breach, Nov 2026 report is built from.
 - [data/incidents/2026-11-gatwick-drop-off-autopay-breach/](https://isitahack.com/data/incidents/2026-11-gatwick-drop-off-autopay-breach/): the folder the Gatwick drop-off AutoPay breach, Nov 2026 report is built from.
+- [data/incidents/2026-11-planzer-parcel-data-breach/](https://isitahack.com/data/incidents/2026-11-planzer-parcel-data-breach/): the folder the Planzer parcel data breach, Nov 2026 report is built from.
 
 ## For search engines
 - [sitemap.xml](https://isitahack.com/sitemap.xml): every page, with each incident's last update.
