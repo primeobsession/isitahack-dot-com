@@ -1,0 +1,138 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-easyequities-security-incident",
+  "title": "EasyEquities security incident and platform shutdown, Nov 2026",
+  "also_called": [
+    "the EasyEquities cyberattack",
+    "the EasyEquities outage"
+  ],
+  "subject": {
+    "name": "EasyEquities",
+    "kind": "finance",
+    "about": "EasyEquities is a South African online investment platform where people can buy shares, ETFs and other investments with any amount, including fractions of a share. It belongs to Purple Group, a company listed on the Johannesburg Stock Exchange whose brands serve more than 1.3 million people.",
+    "about_url": "https://www.purplegroup.co.za/"
+  },
+  "lead_image": "easyequities-notice",
+  "incident_type": "outage",
+  "answer_group": "unclear",
+  "service": {
+    "state": "down",
+    "claim_id": "c002"
+  },
+  "status": "monitoring",
+  "incident_date": "2026-11-26",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by EasyEquities, Purple Group, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "EasyEquities is one of South Africa's most used investment platforms, and its owner says its brands serve more than 1.3 million people; every client account is locked while the platform is offline. The company has not said whether any personal data was taken or how many clients that would involve.",
+  "who_is_affected": "Every EasyEquities client, including child accounts run by a guardian: none can log in or see their accounts for now. The company says funds are accounted for, trades can go through its trading desk and some withdrawals may be delayed. It warns against unexpected messages asking for details.",
+  "known": [
+    {
+      "text": "EasyEquities says a security incident affected some of its systems and it is investigating with independent specialists.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Clients have not been able to log in since Nov 26; the company is keeping the platform offline while it completes checks.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "EasyEquities says that, so far, all client funds are accounted for.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "Trades can be placed through its trading desk, and some withdrawals may be delayed.",
+      "claim_id": "c007"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether anyone broke into EasyEquities' systems, and how.",
+      "question_id": "q001"
+    },
+    {
+      "text": "Whether any personal information was taken.",
+      "question_id": "q004"
+    },
+    {
+      "text": "When clients will be able to log in again.",
+      "question_id": "q003"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Offline",
+      "label": "Client logins, since Nov 26",
+      "detail": "All accounts, no return date given",
+      "claim_id": "c002"
+    },
+    {
+      "value": "1.3 million+",
+      "label": "People served by Purple Group's brands",
+      "detail": "The company's own figure",
+      "claim_id": "c012"
+    }
+  ],
+  "images": [
+    {
+      "id": "easyequities-notice",
+      "title": "EasyEquities' help page on the November 2026 security incident",
+      "file": "images/easyequities-notice.jpg",
+      "alt": "The EasyEquities Help Centre page headed 'Security Incident November 2026', saying that on 26 November 2026 the company emailed every client about a security incident affecting some of its systems, last updated 27 November 2026, with sections 'What We Know' and 'Logging In and Trading'.",
+      "caption": "Screenshot of EasyEquities' notice, Nov 27, 2026.",
+      "credit": "EasyEquities, screenshot by isitahack.com",
+      "rights": "screenshot",
+      "source_id": "s001",
+      "sha256": "49f4295e5283ea395ebdd957a1ef799267ce9e220c33a78e8761c93215a814e9",
+      "width": 1540,
+      "height": 770
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "What does EasyEquities say happened?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Is EasyEquities back online?",
+      "group": "service",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What does it mean for clients?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened before: the September breach and other attacks",
+      "group": "background",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "About EasyEquities",
+      "group": "about",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the EasyEquities security incident"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
