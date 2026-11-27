@@ -26,7 +26,7 @@
   },
   "size": "Regional",
   "size_basis": "One statewide app with about 2.1 million users, offline for everyone. The state estimates roughly 100,000 users' data was involved, mainly uploaded documents; the count is still being refined.",
-  "who_is_affected": "Everyone who uses the myColorado app for a digital driver license, digital ID or state services. Carry your physical ID, including for holiday flights. The state expects to start notifying people whose documents were involved on Nov 27.",
+  "who_is_affected": "Everyone who uses the myColorado app for a digital driver license, digital ID or state services. Carry your physical ID, including for holiday flights. The state expects to start notifying people whose documents were involved on Nov 30.",
   "known": [
     {
       "text": "The state says an unauthorized user accessed myColorado platform data, found late on Nov 18.",
@@ -35,6 +35,10 @@
     {
       "text": "The state shut the app down and it is still unavailable, with no restoration date.",
       "claim_id": "c003"
+    },
+    {
+      "text": "The state has engaged an outside firm to test the app's security before it returns.",
+      "claim_id": "c013"
     },
     {
       "text": "The state estimates roughly 100,000 users' data was involved.",
