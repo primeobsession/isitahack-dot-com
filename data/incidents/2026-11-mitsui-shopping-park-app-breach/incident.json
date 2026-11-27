@@ -1,0 +1,123 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-mitsui-shopping-park-app-breach",
+  "title": "Mitsui Shopping Park app breach, Nov 2026",
+  "also_called": [
+    "the Mitsui Fudosan app breach"
+  ],
+  "subject": {
+    "name": "Mitsui Shopping Park",
+    "kind": "online-service",
+    "about": "The Mitsui Shopping Park app is the shopping app for LaLaport, Mitsui Outlet Park and other Mitsui shopping centres in Japan. Shoppers use it to collect and spend points, pay by phone, get coupons and use parking services.",
+    "about_url": "https://mitsui-shopping-park.com/msppoint/app/"
+  },
+  "lead_image": "lalaport-tokyo-bay",
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "service": {
+    "state": "down",
+    "claim_id": "c006"
+  },
+  "status": "monitoring",
+  "incident_date": "2026-11-18",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Mitsui Fudosan, Mitsui Fudosan Commercial Management, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Data on about 3.1 million members of a points scheme used at shopping centres across Japan leaked, and the app they use has been out of service since Nov 18.",
+  "who_is_affected": "About 3.1 million Mitsui Shopping Park Point members; card details and passwords were not included. The companies are contacting them and warn them to ignore suspicious emails claiming to be from the group. Shops, online malls and points still work without the app.",
+  "known": [
+    {
+      "text": "The companies that run the app say a third party got into it without authorisation.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Data on about 3,119,000 members leaked; card details and passwords were not included.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "The app has been suspended since Nov 18 and will restart once its safety is confirmed.",
+      "claim_id": "c006"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "How the intruder got in and who it was; the companies say they know the route but have not said.",
+      "question_id": "q004"
+    },
+    {
+      "text": "When the app will be back.",
+      "question_id": "q005"
+    }
+  ],
+  "figures": [
+    {
+      "value": "3.12 million",
+      "label": "Members whose data leaked",
+      "detail": "The companies' count, Nov 26",
+      "claim_id": "c003"
+    },
+    {
+      "value": "Nov 18",
+      "label": "Break-in found, app stopped",
+      "detail": "The companies' account",
+      "claim_id": "c002"
+    }
+  ],
+  "images": [
+    {
+      "id": "lalaport-tokyo-bay",
+      "title": "LaLaport Tokyo-Bay, Funabashi, Japan",
+      "file": "images/lalaport-tokyo-bay.jpg",
+      "alt": "A tall pale office tower with blue bands beside the low LaLaport shopping centre and its car parks, under a white sky.",
+      "caption": "The LaLaport Tokyo-Bay shopping centre and the LaLaport Mitsui Building in Funabashi, Japan, in 2019 (cropped). It is one of the centres the app serves; the breach concerns the app, not this place.",
+      "credit": "Xser21, CC BY-SA 4.0, via Wikimedia Commons (cropped by isitahack.com)",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:LaLaport_Funabashi_20190428.jpg",
+      "sha256": "4b9a88228caa3f924d06875307e3fb95b6860d8d5e0641827af71278c4411dd7",
+      "width": 1280,
+      "height": 680
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was the Mitsui Shopping Park app hacked? What the companies say",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What leaked, and has it been misused?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Is the app back?",
+      "group": "service",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Who runs the app?",
+      "group": "about",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Mitsui Shopping Park app breach"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}
