@@ -1,0 +1,5 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-10-02,,Evening,stated,The CPR administration notices irregular activity in the CPR system during September,c007,
+t002,2026-10-05T07:00:00+02:00,,,stated,"The ministry announces that unauthorised people reached names, addresses and CPR numbers of about 8.8 million people",c007,
+t003,2026-11-23,,,stated,The CPR administration notices new irregular lookups in the register from a company,c002,
+t004,2026-11-26T07:00:21+01:00,,,stated,"The ministry announces a second incident, reaching about 11,000 people, stopped by new monitoring",c001,

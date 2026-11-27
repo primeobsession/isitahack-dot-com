@@ -1,0 +1,147 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-denmark-cpr-register-breach",
+  "title": "Denmark CPR register breach, Nov 2026",
+  "also_called": [
+    "the second CPR leak",
+    "the Danish CPR data breach"
+  ],
+  "subject": {
+    "name": "CPR",
+    "kind": "government",
+    "about": "The CPR (Det Centrale Personregister) is Denmark's central register of people, run by the CPR administration within the Ministry of Research, Education and Digitalisation. It is the central supplier of basic personal details, such as names and addresses, to public authorities and private companies.",
+    "about_url": "https://www.cpr.dk/om-cpr-kontoret"
+  },
+  "lead_image": "fudm-cpr-notice",
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "status": "monitoring",
+  "incident_date": "2026-11-23",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by the Danish government, the CPR administration, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "The CPR is Denmark's national register of people. The November incident reached about 11,000 people's CPR numbers, names and addresses; the separate October incident reached about 8.8 million.",
+  "who_is_affected": "About 11,000 people whose CPR numbers, names and addresses were looked up. The ministry has not said how they will be told. It advises everyone never to give out a password on a call or email, even to someone who knows their name, address and CPR number.",
+  "known": [
+    {
+      "text": "Denmark's ministry says unauthorised people got the CPR numbers, names and addresses of about 11,000 people.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The access came through suspicious lookups in the register from a company, noticed on Monday Nov 23.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "New monitoring of lookups, brought in after October's breach, stopped it.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "The police are investigating both the October and November incidents.",
+      "claim_id": "c005"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Which company the lookups came from, and whether it is the one involved in October.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Who was behind it.",
+      "question_id": "q003"
+    },
+    {
+      "text": "What the security review of the CPR system will find.",
+      "question_id": "q006"
+    }
+  ],
+  "figures": [
+    {
+      "value": "11,000",
+      "label": "People whose data was reached",
+      "detail": "November incident, per the ministry",
+      "claim_id": "c001"
+    },
+    {
+      "value": "Nov 23",
+      "label": "New lookups noticed",
+      "detail": "Announced Nov 26",
+      "claim_id": "c002"
+    },
+    {
+      "value": "8.8 million",
+      "label": "Reached in October",
+      "detail": "The earlier, separate incident",
+      "claim_id": "c007"
+    }
+  ],
+  "images": [
+    {
+      "id": "fudm-cpr-notice",
+      "title": "The Danish ministry's press release on the second CPR incident",
+      "file": "images/fudm-cpr-notice.jpg",
+      "alt": "A government web page headed by the Danish Ministry of Research, Education and Digitalisation, with a press release titled 'Trusselsbilledet skærper krav til CPR-systemet', dated 26 November 2026, saying unauthorised people gained access to CPR data on 11,000 people.",
+      "caption": "Screenshot of the Danish Ministry of Research, Education and Digitalisation's notice, Nov 26, 2026.",
+      "credit": "Danish Ministry of Research, Education and Digitalisation, screenshot by isitahack.com",
+      "rights": "screenshot",
+      "source_id": "s001",
+      "sha256": "ad52e97f86f37276f36f287b3fb112461eecdb3fa927d816a2abef7904a47318",
+      "width": 1600,
+      "height": 800
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "What has the Danish government said happened?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What has been done about it?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Who was behind it?",
+      "group": "attacker",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What happened in October?",
+      "group": "october",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What should people in Denmark do?",
+      "group": "advice",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What are people asking online?",
+      "group": "discussion",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "About the CPR register",
+      "group": "about",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the CPR register breaches"
+    }
+  ]
+}
