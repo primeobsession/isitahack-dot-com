@@ -10,3 +10,4 @@ t008,2026-11-20T13:52:00-05:00,,"1:52 PM ET, Friday",stated,"ibiblio says univer
 t009,2026-11-21T05:12:00-05:00,,"5:12 AM ET, Saturday",stated,Our check: gutenberg.org still returns HTTP 503 maintenance page,c007,Own first-hand check.
 t010,2026-11-25T05:28:00-05:00,,,stated,The foundation posts that the website should be back later in the afternoon and that its database is intact,c013,Post time 10:28 UTC.
 t011,2026-11-25T11:39:06-05:00,,,stated,Our check: gutenberg.org still returns the HTTP 503 maintenance page,c007,Own first-hand check.
+t012,2026-11-26T07:17:00Z,,"Nov 26, 7:17 AM UTC",stated,"The foundation posts that its web host's security office is reviewing its checklist; the site might return that night, more likely Friday, possibly Tuesday",c014,

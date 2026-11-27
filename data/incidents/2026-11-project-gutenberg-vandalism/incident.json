@@ -4,7 +4,9 @@
   "title": "Project Gutenberg website vandalism, Nov 15, 2026",
   "subject": {
     "name": "Project Gutenberg",
-    "kind": "online-service"
+    "kind": "online-service",
+    "about": "Project Gutenberg, founded in 1971, describes itself as the oldest producer and distributor of free ebooks. Its volunteers run it, and the Project Gutenberg Literary Archive Foundation handles its finances, including the donations that fund it.",
+    "about_url": "https://mastodon.social/@gutenberg_org"
   },
   "incident_type": "attack",
   "answer_group": "hack-stated",
@@ -36,7 +38,7 @@
       "claim_id": "c002"
     },
     {
-      "text": "As of 5:12 AM ET on Nov 21, gutenberg.org still shows a 503 maintenance page.",
+      "text": "As of early Nov 27, gutenberg.org still shows a 503 maintenance page.",
       "claim_id": "c007"
     },
     {
