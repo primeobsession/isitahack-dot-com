@@ -1,0 +1,5 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-25,,,stated,Digitec Galaxus tells customers that data on their orders was taken in a cyberattack on Planzer,c007,
+t002,2026-11-26,,,stated,"Planzer announces the attack and says shipment data and encrypted portal logins were taken",c001,
+t003,2026-11-26,,,stated,Planzer tells AWP that shipment data on all Planzer Paket parcels from Jan 2018 to Feb 2023 is affected,c002,
+t004,2026-11-27,,,stated,Brack.ch says it was not affected,c009,

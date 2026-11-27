@@ -1,0 +1,159 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-planzer-parcel-data-breach",
+  "title": "Planzer parcel data breach, Nov 2026",
+  "also_called": [
+    "the Planzer cyberattack",
+    "the Digitec Galaxus delivery data leak"
+  ],
+  "subject": {
+    "name": "Planzer",
+    "kind": "other",
+    "about": "Planzer is a family-owned Swiss transport and logistics company based in Seewen, Schwyz, with its operational headquarters in Dietikon near Zurich.",
+    "about_url": "https://en.wikipedia.org/wiki/Planzer"
+  },
+  "lead_image": "planzer-truck",
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "status": "monitoring",
+  "incident_date": "2026-11-25",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Planzer, Digitec Galaxus, Brack.ch, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Planzer says shipment data on every parcel sent with Planzer Paket over more than five years was taken, including orders from the online retailer Digitec Galaxus. No number of people has been given.",
+  "who_is_affected": "People who sent or received a parcel through Planzer Paket between January 2018 and February 2023, including Digitec and Galaxus customers. Payment data was not taken. Be wary of messages about parcels that ask for personal or payment details.",
+  "known": [
+    {
+      "text": "Planzer says cybercriminals stole data on its customers' transport orders.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Digitec Galaxus says parcel numbers, names, delivery addresses, emails and some phone numbers from its orders were taken.",
+      "claim_id": "c007"
+    },
+    {
+      "text": "Planzer says payment and financial data were not affected; shippers' portal logins were taken in encrypted form and reset.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "Switzerland's cybersecurity office and data protection commissioner have been told.",
+      "claim_id": "c006"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "How many people are affected.",
+      "question_id": "q003"
+    },
+    {
+      "text": "When the attack began and when it was found.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Who was behind it.",
+      "question_id": "q005"
+    }
+  ],
+  "figures": [
+    {
+      "value": "2018-2023",
+      "label": "Parcels whose data was taken",
+      "detail": "Jan 1, 2018, to Feb 26, 2023, per Planzer",
+      "claim_id": "c002"
+    },
+    {
+      "value": "Nov 26",
+      "label": "Planzer announced the attack",
+      "detail": "Digitec Galaxus told customers Nov 25",
+      "claim_id": "c001"
+    },
+    {
+      "value": "Not given",
+      "label": "People affected",
+      "detail": "Planzer has not said",
+      "claim_id": "c010"
+    }
+  ],
+  "images": [
+    {
+      "id": "planzer-truck",
+      "title": "A Planzer lorry in St. Gallen",
+      "file": "images/planzer-truck.jpg",
+      "alt": "A blue Volvo lorry with a red curtain-sided trailer, both marked Planzer, parked at a loading bay.",
+      "caption": "A Planzer lorry at a loading bay in St. Gallen, Switzerland, in June 2026. The site pictured is not known to be involved in this incident.",
+      "credit": "JoachimKohler-HB, CC BY-SA 4.0, via Wikimedia Commons (cropped)",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:KOCH_Group_AG_Logistik_in_St._Gallen_(2026).jpg",
+      "sha256": "9f68fefd4c1e6aa10263ab9bdc3c9dc5970dd0109a0589cc7ccfad44d40fb846",
+      "width": 1920,
+      "height": 1369
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "What has Planzer said happened?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What data was taken?",
+      "group": "data",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What has Digitec Galaxus said?",
+      "group": "galaxus",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What has been done about it?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How many people are affected?",
+      "group": "scale",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Who was behind it?",
+      "group": "attacker",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Who uses Planzer, and were they affected?",
+      "group": "users",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What should people do?",
+      "group": "advice",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "About Planzer",
+      "group": "about",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Planzer data breach"
+    }
+  ]
+}
