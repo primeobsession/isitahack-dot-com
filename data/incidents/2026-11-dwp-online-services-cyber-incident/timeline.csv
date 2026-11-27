@@ -6,3 +6,6 @@ t003,2026-11-27T12:00:00+00:00,,Around 12:00 GMT,approximate,"The online systems
 t005,2026-11-27T12:16:00+00:00,,,stated,"Downing Street says an investigation is looking at who is behind the incident and that there is currently no evidence of customer data loss, the BBC reports",c013,Time is the BBC live-page entry.
 t006,2026-11-27T12:56:00+00:00,,Before 12:56 GMT,approximate,Some Universal Credit claimants tell the BBC their payments have not arrived,c015,Time is the BBC live-page entry.
 t007,2026-11-27T13:44:00+00:00,,,stated,"The Work and Pensions Secretary calls the outage a ""serious cyber incident"" and says there is no evidence anyone's data has been compromised, the BBC reports",c016,Time is the BBC live-page entry.
+t008,2026-11-27T14:44:00+00:00,,,stated,"Asked about claimants' missing payments, DWP repeats that regular payments are not affected and says anyone with a payment problem should call its benefit phoneline, the BBC reports",c003,Time is the BBC live-page entry.
+t009,2026-11-27T14:45:47+00:00,,,stated,DWP updates its GOV.UK notice: people who need help should call their usual benefit line,c002,Time is the notice's own update time.
+t010,2026-11-27T14:58:00+00:00,,,stated,"DWP says nobody will be sanctioned if the cyber incident stopped them attending or updating their claim, the BBC reports",c017,Time is the BBC live-page entry.

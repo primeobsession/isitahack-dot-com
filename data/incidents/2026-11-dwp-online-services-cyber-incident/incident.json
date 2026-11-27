@@ -28,7 +28,7 @@
   "verdict_approved_at": null,
   "size": "Large",
   "size_basis": "DWP serves around 20 million claimants and customers across the UK, and some of its online services are offline. It says regular benefit and pension payments are not affected, and it has not said how many people the outage reaches or whether any data was taken.",
-  "who_is_affected": "People who use DWP's online services, including pensions, Universal Credit, PIP and Tell Us Once. DWP says benefit and pension payments will be paid as normal, though some claimants told the BBC theirs had not arrived. It never messages people asking for bank details.",
+  "who_is_affected": "People who use DWP's online services, including pensions, Universal Credit, PIP and Tell Us Once. DWP says payments will be made as normal, though some claimants told the BBC theirs had not arrived, and that nobody will be sanctioned if the incident stopped them updating their claim.",
   "known": [
     {
       "text": "DWP says it identified a cyber incident affecting its systems and took some online services offline as a precaution.",
