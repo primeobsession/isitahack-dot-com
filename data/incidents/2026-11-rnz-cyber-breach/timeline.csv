@@ -1,0 +1,5 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-24,,Early hours,stated,"An attack disrupts Allied Media's production servers; the Otago Daily Times is laid out by hand, and two smaller papers cannot publish",c008,
+t002,2026-11-25,,Morning,stated,"RNZ staff cannot reach wi-fi, editorial systems or the VPN",c002,
+t003,2026-11-25,,,stated,RNZ says it is investigating what it understands at this stage to be a cyber breach and has notified the National Cyber Security Centre,c001,
+t004,2026-11-25T16:45:00+13:00,,,stated,RNZ's Checkpoint programme reports the apparent attack cut access to some editorial systems and online services,c003,
