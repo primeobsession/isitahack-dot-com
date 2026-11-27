@@ -4,7 +4,9 @@
   "title": "Journal Technologies court portal outage, Nov 13, 2026",
   "subject": {
     "name": "Journal Technologies",
-    "kind": "online-service"
+    "kind": "online-service",
+    "about": "Journal Technologies is an enterprise software company based in Los Angeles and a long-time subsidiary of Daily Journal Corporation. Its products, such as eCourt, eProsecutor and eDefender, are software for courts and justice agencies.",
+    "about_url": "https://www.journaltech.com/about"
   },
   "incident_type": "outage",
   "answer_group": "hack-stated",
