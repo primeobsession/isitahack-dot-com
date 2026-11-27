@@ -1,0 +1,127 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-afp-forum-cyberattack",
+  "title": "AFP Forum cyberattack, Nov 2026",
+  "also_called": [
+    "the Agence France-Presse cyberattack"
+  ],
+  "subject": {
+    "name": "AFP",
+    "kind": "other",
+    "about": "Agence France-Presse (AFP) is one of the world's three global news agencies, with AP and Reuters. It employs about 1,840 journalists in 210 bureaus and supplies news organisations with text, photos and video in six languages.",
+    "about_url": "https://www.dhnet.be/dernieres-depeches/2026/11/26/lafp-victime-dune-cyberattaque-sa-plateforme-afp-forum-temporairement-inaccessible-WRLEY2LEVVC43GR75GFMR7KTIE/"
+  },
+  "lead_image": "afp-place-de-la-bourse",
+  "incident_type": "attack",
+  "answer_group": "hack-stated",
+  "service": {
+    "state": "down",
+    "claim_id": "c003"
+  },
+  "status": "monitoring",
+  "incident_date": "2026-11-26",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Agence France-Presse, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "A cyberattack took offline the platform that news organisations use to get content from AFP, one of the three global news agencies. AFP has not said that any other system was hit or that any data was taken.",
+  "who_is_affected": "AFP's subscribers, mostly news organisations, which use AFP Forum to find and download AFP's stories, photos and videos. AFP says it is offering them other ways to get its content while the platform is offline. It has not said whether any data was taken.",
+  "known": [
+    {
+      "text": "AFP says a cyberattack hit AFP Forum, a platform its clients use, starting at 1:30 am Paris time on Nov 26.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "AFP took AFP Forum offline when it found the intrusion, and the platform is still unavailable.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "AFP is investigating with outside experts and says it does not know who was behind the attack.",
+      "claim_id": "c005"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Who carried out the attack.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Whether any data was taken.",
+      "question_id": "q004"
+    },
+    {
+      "text": "When AFP Forum will be back.",
+      "question_id": "q003"
+    }
+  ],
+  "figures": [
+    {
+      "value": "1:30 am",
+      "label": "Attack began, Paris time, Nov 26",
+      "detail": "AFP's account",
+      "claim_id": "c002"
+    },
+    {
+      "value": "Offline",
+      "label": "AFP Forum, since Nov 26",
+      "detail": "Still showing a maintenance notice",
+      "claim_id": "c003"
+    }
+  ],
+  "images": [
+    {
+      "id": "afp-place-de-la-bourse",
+      "title": "AFP headquarters, Place de la Bourse, Paris",
+      "file": "images/afp-place-de-la-bourse.jpg",
+      "alt": "A glass-fronted office building on the left and the tall stone columns of the Palais Brongniart on the right, either side of an empty Paris street under a grey sky.",
+      "caption": "Agence France-Presse's headquarters (left) and the Palais Brongniart on Place de la Bourse, Paris, in 2016 (cropped). The attack was on AFP Forum, an online platform, not on this building.",
+      "credit": "Guilhem Vellut, CC BY 2.0, via Wikimedia Commons (cropped by isitahack.com)",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Paris_Place_de_la_Bourse_-_AFP_-_Palais_Brongniart.jpg",
+      "sha256": "21ed859d824a253899a7a4a772036e296f5e2203a234f2abf3d2d7dafdd3ec11",
+      "width": 1920,
+      "height": 1280
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "Was AFP hacked? What the agency says",
+      "group": "hack",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Is AFP Forum back?",
+      "group": "service",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What does it mean for AFP's clients?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "About AFP",
+      "group": "about",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the AFP Forum cyberattack"
+    },
+    {
+      "type": "note",
+      "title": "What we checked and did not find",
+      "file": "notes/checked-not-found.md"
+    }
+  ]
+}

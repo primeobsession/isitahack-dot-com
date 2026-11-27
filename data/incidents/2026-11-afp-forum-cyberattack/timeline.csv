@@ -1,0 +1,4 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-26T01:30:00+01:00,,,stated,The cyberattack on AFP Forum begins,c002,
+t002,2026-11-26,,,stated,"AFP finds the intrusion, isolates AFP Forum and takes it offline as a precaution",c003,
+t003,2026-11-26,,,stated,AFP's management announces the attack and says it does not know who was behind it,c001,

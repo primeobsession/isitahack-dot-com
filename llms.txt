@@ -171,6 +171,8 @@
 - [CHU de Bordeaux cyberattack, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-chu-bordeaux-cyberattack.html): the same report as a web page.
 - [Mitsui Shopping Park app breach, Nov 2026](https://isitahack.com/incidents/2026-11-mitsui-shopping-park-app-breach.md): the report as Markdown (still monitored). Built from its data folder.
 - [Mitsui Shopping Park app breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-mitsui-shopping-park-app-breach.html): the same report as a web page.
+- [AFP Forum cyberattack, Nov 2026](https://isitahack.com/incidents/2026-11-afp-forum-cyberattack.md): the report as Markdown (still monitored). Built from its data folder.
+- [AFP Forum cyberattack, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-afp-forum-cyberattack.html): the same report as a web page.
 
 ## Data (typed incident format: UTF-8, RFC 4180 CSV with a header row; see Format below)
 - [data/incidents/2026-11-microsoft-365-outage/](https://isitahack.com/data/incidents/2026-11-microsoft-365-outage/): the folder the Microsoft 365 report is built from: incident.json, claims.csv, sources.csv, timeline.csv, questions.csv, update_log.csv and notes/.
@@ -262,6 +264,7 @@
 - [data/incidents/2026-11-sap-github-security-incident/](https://isitahack.com/data/incidents/2026-11-sap-github-security-incident/): the folder the SAP GitHub security incident, Nov 2026 report is built from.
 - [data/incidents/2026-11-chu-bordeaux-cyberattack/](https://isitahack.com/data/incidents/2026-11-chu-bordeaux-cyberattack/): the folder the CHU de Bordeaux cyberattack, Nov 2026 report is built from.
 - [data/incidents/2026-11-mitsui-shopping-park-app-breach/](https://isitahack.com/data/incidents/2026-11-mitsui-shopping-park-app-breach/): the folder the Mitsui Shopping Park app breach, Nov 2026 report is built from.
+- [data/incidents/2026-11-afp-forum-cyberattack/](https://isitahack.com/data/incidents/2026-11-afp-forum-cyberattack/): the folder the AFP Forum cyberattack, Nov 2026 report is built from.
 
 ## For search engines
 - [sitemap.xml](https://isitahack.com/sitemap.xml): every page, with each incident's last update.
