@@ -173,6 +173,8 @@
 - [Mitsui Shopping Park app breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-mitsui-shopping-park-app-breach.html): the same report as a web page.
 - [DWP online services cyber incident, Nov 2026](https://isitahack.com/incidents/2026-11-dwp-online-services-cyber-incident.md): the report as Markdown (still monitored). Built from its data folder.
 - [DWP online services cyber incident, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-dwp-online-services-cyber-incident.html): the same report as a web page.
+- [Lloyds Bank and Bank of Scotland app outage, Nov 27, 2026](https://isitahack.com/incidents/2026-11-lloyds-bank-app-outage.md): the report as Markdown (still monitored). Built from its data folder.
+- [Lloyds Bank and Bank of Scotland app outage, Nov 27, 2026 (HTML)](https://isitahack.com/incidents/2026-11-lloyds-bank-app-outage.html): the same report as a web page.
 - [EasyEquities security incident and platform shutdown, Nov 2026](https://isitahack.com/incidents/2026-11-easyequities-security-incident.md): the report as Markdown (still monitored). Built from its data folder.
 - [EasyEquities security incident and platform shutdown, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-easyequities-security-incident.html): the same report as a web page.
 - [AFP Forum cyberattack, Nov 2026](https://isitahack.com/incidents/2026-11-afp-forum-cyberattack.md): the report as Markdown (still monitored). Built from its data folder.
@@ -269,6 +271,7 @@
 - [data/incidents/2026-11-chu-bordeaux-cyberattack/](https://isitahack.com/data/incidents/2026-11-chu-bordeaux-cyberattack/): the folder the CHU de Bordeaux cyberattack, Nov 2026 report is built from.
 - [data/incidents/2026-11-mitsui-shopping-park-app-breach/](https://isitahack.com/data/incidents/2026-11-mitsui-shopping-park-app-breach/): the folder the Mitsui Shopping Park app breach, Nov 2026 report is built from.
 - [data/incidents/2026-11-dwp-online-services-cyber-incident/](https://isitahack.com/data/incidents/2026-11-dwp-online-services-cyber-incident/): the folder the DWP online services cyber incident, Nov 2026 report is built from.
+- [data/incidents/2026-11-lloyds-bank-app-outage/](https://isitahack.com/data/incidents/2026-11-lloyds-bank-app-outage/): the folder the Lloyds Bank and Bank of Scotland app outage, Nov 27, 2026 report is built from.
 - [data/incidents/2026-11-easyequities-security-incident/](https://isitahack.com/data/incidents/2026-11-easyequities-security-incident/): the folder the EasyEquities security incident and platform shutdown, Nov 2026 report is built from.
 - [data/incidents/2026-11-afp-forum-cyberattack/](https://isitahack.com/data/incidents/2026-11-afp-forum-cyberattack/): the folder the AFP Forum cyberattack, Nov 2026 report is built from.
 

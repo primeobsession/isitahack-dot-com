@@ -1,0 +1,4 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-27T09:40:00+00:00,,Around 9:40 to 10 AM GMT,approximate,Lloyds Bank customers begin reporting problems with the app and online banking on Downdetector,c005,
+t002,2026-11-27T10:16:00+00:00,,By 10:16 AM GMT,stated,More than 300 problem reports have been logged for Bank of Scotland,c005,
+t003,2026-11-27T12:01:27+00:00,,,stated,"The Register reports the Lloyds and Bank of Scotland problems, with the bank saying it is working to get things back to normal",c001,Time is The Register's publication time.
