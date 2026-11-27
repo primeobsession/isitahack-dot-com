@@ -1,0 +1,4 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-18,,,stated,"The companies confirm unauthorized access to the Mitsui Shopping Park app, stop the app and find that some member data leaked",c002,
+t002,2026-11-19,,,stated,The companies announce the leak and the app's suspension; the number of people affected is still being investigated,c001,
+t003,2026-11-26,,,stated,"The companies say data on about 3,119,000 members leaked, including phone numbers and gender, and that they have identified how the intruder got in",c003,
