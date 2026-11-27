@@ -1,0 +1,6 @@
+question_id,kind,question_text,state,answer_text,label,claim_ids,rumor_type,what_would_settle_it,opened_at,answered_at
+q001,question,Was RNZ (Radio New Zealand) hacked?,answered,"RNZ says it understands so at this stage. On Nov 25 it said it was investigating a cyber breach after unusual activity in one of its systems, and staff lost access to wi-fi and editorial systems. It has not said whether any data was taken.",Confirmed,c001;c002,,,2026-11-27T11:29:40-05:00,2026-11-27T11:29:40-05:00
+q002,question,Is the RNZ breach linked to the Allied Media (Otago Daily Times) attack?,open,,,c007;c008,,"RNZ, Allied Media, the police or the National Cyber Security Centre saying whether the two attacks are connected.",2026-11-27T11:29:40-05:00,
+q003,question,Was any data taken in the RNZ breach?,open,,,c001,,"RNZ saying what the unusual activity was and whether any staff, audience or other data was accessed or taken.",2026-11-27T11:29:40-05:00,
+q004,question,Are RNZ's systems back to normal?,open,,,c002;c006,,"An RNZ statement, or reporting with its own sourcing, saying its systems have been restored.",2026-11-27T11:29:40-05:00,
+q005,question,Who was behind the RNZ cyber breach?,open,,,c007,,"RNZ, the police or the National Cyber Security Centre naming who was responsible.",2026-11-27T11:29:40-05:00,

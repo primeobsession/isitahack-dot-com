@@ -1,0 +1,145 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-rnz-cyber-breach",
+  "title": "RNZ cyber breach, Nov 2026",
+  "also_called": [
+    "the RNZ cyber attack",
+    "the Radio New Zealand cyber breach"
+  ],
+  "subject": {
+    "name": "RNZ",
+    "kind": "other",
+    "about": "RNZ (Radio New Zealand) is New Zealand's independent public service multimedia organisation, a Crown entity set up under the Radio New Zealand Act 1995. It broadcasts news and programmes on three nationwide networks, including RNZ National and RNZ Concert, and online.",
+    "about_url": "https://www.rnz.co.nz/about"
+  },
+  "lead_image": "rnz-house",
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "status": "monitoring",
+  "incident_date": "2026-11-25",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by RNZ, Allied Media, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "RNZ is New Zealand's national public broadcaster. What is known is that its staff lost access to wi-fi, editorial systems and the VPN on Nov 25; nothing published says listeners' data was affected or broadcasts stopped.",
+  "who_is_affected": "RNZ staff, who lost access to internal systems on Nov 25. RNZ has not said that listeners or other outside people are affected or need to do anything. Separately, readers of the Otago Daily Times, Greymouth Star and Hokitika Guardian saw their papers disrupted by an attack on Allied Media.",
+  "known": [
+    {
+      "text": "RNZ says it is investigating what it understands at this stage to be a cyber breach, after unusual activity in one of its systems.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "On Nov 25 RNZ staff could not reach wi-fi, editorial systems or the VPN.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "RNZ notified New Zealand's National Cyber Security Centre.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "Newspaper publisher Allied Media was hit by an attack the day before, disrupting the Otago Daily Times and two smaller papers.",
+      "claim_id": "c008"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether any data was taken from RNZ.",
+      "question_id": "q003"
+    },
+    {
+      "text": "Whether the RNZ and Allied Media attacks are connected.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Whether RNZ's systems are fully back.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Who was behind it.",
+      "question_id": "q005"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 25",
+      "label": "RNZ systems disrupted",
+      "detail": "Wednesday morning",
+      "claim_id": "c002"
+    },
+    {
+      "value": "Nov 24",
+      "label": "Allied Media attacked",
+      "detail": "Early hours of Tuesday",
+      "claim_id": "c008"
+    },
+    {
+      "value": "20 of 36",
+      "label": "ODT pages printed",
+      "detail": "Laid out by hand, per The Spinoff",
+      "claim_id": "c008"
+    }
+  ],
+  "images": [
+    {
+      "id": "rnz-house",
+      "title": "Radio New Zealand House, Wellington",
+      "file": "images/rnz-house.jpg",
+      "alt": "The lower floors of a tall office tower with white vertical columns and green decorative panels between the windows, with a maroon sign reading Radio New Zealand House at street level.",
+      "caption": "Radio New Zealand House in Wellington, in September 2006.",
+      "credit": "Dabbelju, CC BY-SA 3.0, via Wikimedia Commons (cropped)",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Radio_New_Zealand_House.JPG",
+      "sha256": "c051df7bf63d94ddab046d7890257b4ecd087095fb1b6e11b71a7fa28ebc6eb1",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "What has RNZ said happened?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What stopped working?",
+      "group": "service",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Who has been told?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Who was behind it?",
+      "group": "attacker",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Is it linked to the Allied Media attack?",
+      "group": "related",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "About RNZ",
+      "group": "about",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the RNZ cyber breach"
+    }
+  ]
+}
