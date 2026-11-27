@@ -1,0 +1,167 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-gatwick-drop-off-autopay-breach",
+  "title": "Gatwick drop-off AutoPay breach, Nov 2026",
+  "also_called": [
+    "the Gatwick Airport data breach",
+    "the Gatwick drop-off charge breach"
+  ],
+  "subject": {
+    "name": "Gatwick Airport",
+    "kind": "aviation",
+    "about": "London Gatwick is an international airport in Crawley, West Sussex, about 30 miles south of central London. In 2024 it was the UK's second-busiest airport by passengers, after Heathrow.",
+    "about_url": "https://en.wikipedia.org/wiki/Gatwick_Airport"
+  },
+  "lead_image": "gatwick-drop-off-exit",
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "service": {
+    "state": "down",
+    "claim_id": "c004"
+  },
+  "status": "monitoring",
+  "incident_date": "2026-11-23",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by London Gatwick, Times24, ParkPark, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Local",
+  "size_basis": "One payment system for drop-off charges at one airport, though it is the UK's second-busiest. Gatwick has not said how many customers were affected. Flights, car parks and the drop-off zones themselves are working.",
+  "who_is_affected": "People who registered for AutoPay to pay Gatwick's drop-off charge automatically; Gatwick says it has emailed those affected. Drivers can still use the drop-off zones and pay another way. Be wary of messages about parking, refunds or fines that ask for payment or bank details.",
+  "known": [
+    {
+      "text": "Gatwick says the company that runs its drop-off zones had unauthorised access to AutoPay, the system that charges drivers automatically.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Names, addresses, contact details, AutoPay logins and vehicle details were reached.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "In a few cases payment records and partial card details (brand, last four digits, expiry date) were reached.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "AutoPay has been switched off; flights, car parks and the drop-off zones are working.",
+      "claim_id": "c004"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "How many customers were affected.",
+      "question_id": "q003"
+    },
+    {
+      "text": "When the access began and when it was found.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Who was behind it.",
+      "question_id": "q005"
+    },
+    {
+      "text": "When AutoPay will come back.",
+      "question_id": "q007"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 23",
+      "label": "Customers told by email",
+      "detail": "Per The National",
+      "claim_id": "c006"
+    },
+    {
+      "value": "Off",
+      "label": "AutoPay",
+      "detail": "Disabled as a precaution",
+      "claim_id": "c004"
+    },
+    {
+      "value": "Not given",
+      "label": "Customers affected",
+      "detail": "Gatwick has not said",
+      "claim_id": "c007"
+    }
+  ],
+  "images": [
+    {
+      "id": "gatwick-drop-off-exit",
+      "title": "Exit from the drop-off area at Gatwick Airport",
+      "file": "images/gatwick-drop-off-exit.jpg",
+      "alt": "A road leaving the drop-off area at Gatwick Airport on a sunny evening, with a yellow sign reading 'Drop off charges apply', parked cars, a hotel building on the right and trees behind.",
+      "caption": "The exit from a drop-off area at Gatwick Airport, with a sign saying drop-off charges apply, in July 2023. Drivers could pay these charges automatically through AutoPay.",
+      "credit": "Peter Whatley, CC BY-SA 2.0, via Wikimedia Commons (cropped)",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Exit_from_the_drop-off_area,_Gatwick_Airport_-_geograph.org.uk_-_7534092.jpg",
+      "sha256": "924f5e205e1eefe593a684371572c056f546b02e6f9f46a25d042aa9e853d96b",
+      "width": 1920,
+      "height": 960
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "What has Gatwick said happened?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What data was reached?",
+      "group": "data",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What has been done about it?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How many people were affected?",
+      "group": "scale",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Who was behind it?",
+      "group": "attacker",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Which company runs AutoPay?",
+      "group": "supplier",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Who uses AutoPay, and were they affected?",
+      "group": "users",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What should AutoPay customers do?",
+      "group": "advice",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "About Gatwick Airport",
+      "group": "about",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Gatwick AutoPay breach"
+    }
+  ]
+}
