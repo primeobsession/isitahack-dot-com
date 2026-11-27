@@ -7,7 +7,7 @@
 // The build has no clock, so "now" is the newest check logged in any incident (asOf). The page
 // prints real timestamps and a few lines of script turn them into "6 min ago" for the reader.
 
-import { ANSWER_GROUPS, sizeBars, esc, fmtDate } from "./html.mjs";
+import { ANSWER_GROUPS, sizeBars, esc, fmtDate, withoutAnswerWords } from "./html.mjs";
 export { sizeBars };
 import { incidentPicture, smallFile } from "./incident.mjs";
 
@@ -193,7 +193,7 @@ function tileMedia(i, first = false) {
 }
 function tile(i, kind, front, first = false) {
   const isNew = ms(front.asOf) - ms(i.first_published) <= NEW_HOURS * HOUR;
-  const text = front.on.lines.get(i.slug) || i.question.answer;
+  const text = front.on.lines.get(i.slug) || withoutAnswerWords(i.question.answer, groupOf(i));
   return `<li class="fcard fcard-${kind} a-${esc(groupOf(i).key)}"><a href="incidents/${esc(i.slug)}.html">
 ${tileMedia(i, first)}
 <span class="fcard-body">
@@ -219,16 +219,18 @@ ${b.more > 0 ? `<p class="meta sband-more"><a href="#incidents">${b.more} more i
   }).join("\n");
 }
 
-export function renderLive(front, incidents, { name }) {
+// On a phone the panel sits above the bands, so only the newest few show until the reader asks.
+export const LIVE_PHONE = 3;
+export function renderLive(front, incidents, { name, follow = "" }) {
   const { rows, quiet } = liveUpdates(incidents, front.asOf);
   if (!rows.length) return "";
-  const item = (u) => `<li class="a-${esc(groupOf(u.i).key)}"><a href="incidents/${esc(u.i.slug)}.html"><span class="live-top">${ago(u.at)}<span class="ftag ${u.kind === "New story" ? "ftag-new" : u.kind === "Correction" ? "ftag-kind ftag-fix" : "ftag-kind"}">${esc(u.kind)}</span>${u.newest ? stateChip(u.i) : ""}</span><span class="live-name">${esc(name(u.i))}</span><span class="live-text">${esc(u.headline)}</span></a></li>`;
+  const item = (u, n) => `<li class="a-${esc(groupOf(u.i).key)}${n >= LIVE_PHONE ? " live-later" : ""}"><a href="incidents/${esc(u.i.slug)}.html"><span class="live-top">${ago(u.at)}<span class="ftag ${u.kind === "New story" ? "ftag-new" : u.kind === "Correction" ? "ftag-kind ftag-fix" : "ftag-kind"}">${esc(u.kind)}</span>${u.newest ? stateChip(u.i) : ""}</span><span class="live-name">${esc(name(u.i))}</span><span class="live-text">${esc(u.headline)}</span></a></li>`;
   return `<aside class="live" aria-labelledby="live-h">
 <h2 id="live-h"><span class="live-dot" aria-hidden="true"></span>Live updates</h2>
 <p class="meta">What changed in our stories, newest first.</p>
-<ol class="live-list">
+<ol class="live-list" data-more="${rows.length > LIVE_PHONE ? `Show all ${rows.length} updates` : ""}">
 ${rows.map(item).join("\n")}
 </ol>
-<p class="meta live-foot">${quiet ? `${quiet} routine check${quiet === 1 ? "" : "s"} in the past day found nothing new. ` : ""}<a href="status.html">Every story's last check</a></p>
+${follow ? `<p class="live-follow"><a href="${esc(`${follow}?daily=1`)}" rel="noopener">Get these by email, daily or weekly</a></p>\n` : ""}<p class="meta live-foot">${quiet ? `${quiet} routine check${quiet === 1 ? "" : "s"} in the past day found nothing new. ` : ""}<a href="status.html">Every story's last check</a></p>
 </aside>`;
 }

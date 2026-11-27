@@ -33,6 +33,13 @@ export const ANSWER_GROUPS = [
 ];
 // An answer's pill carries its own colour (ans-<key>), so the four answers look the same on
 // every page. The shape of the dot still tells them apart without colour.
+// An answer that opens with its own answer's words ("Reported as a hack. Four outlets...") is shown
+// without them wherever the answer's name is already beside it. The data keeps the full text.
+export const withoutAnswerWords = (text, g) => {
+  const lead = new RegExp(`^${g.short.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}[.:]\\s+`, "i");
+  const rest = String(text).replace(lead, "");
+  return rest && rest !== text ? rest[0].toUpperCase() + rest.slice(1) : text;
+};
 export const answerPill = (g, cls = "") => `<span class="pill ${g.pill} ans-${g.key}${cls ? ` ${cls}` : ""}">${esc(g.short)}</span>`;
 
 // One to four bars: how far an incident reaches. Dashed bars mean "only if the worst case were true".

@@ -4,7 +4,7 @@
 
 import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
-import { LABELS, ANSWER_GROUPS, answerPill, sizeBars, esc, slugify, pill, inline, linkTag, fmtDate, fmtTime, fmtDay, timeTag, renderBody, tableHtml } from "./html.mjs";
+import { LABELS, ANSWER_GROUPS, answerPill, withoutAnswerWords, sizeBars, esc, slugify, pill, inline, linkTag, fmtDate, fmtTime, fmtDay, timeTag, renderBody, tableHtml } from "./html.mjs";
 import { renderChart, fmtNumber } from "./chart.mjs";
 import { renderPlate } from "./plate.mjs";
 
@@ -25,7 +25,7 @@ export function incidentPicture(head, base, dir = null) {
   if (!image) return { html: renderPlate(head.subject), credit: "", caption: "", image: null };
   const file = smallFile(dir, image) || image.file;
   return {
-    html: `<img src="${esc(`${base}/${file}`)}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}" fetchpriority="high">`,
+    html: `<img src="${esc(`${base}/${file}`)}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}"${image.rights === "logo" || /(^|-)logo(-|$)/.test(image.id) ? ' class="is-logo"' : ""} fetchpriority="high">`,
     credit: `Image: ${image.credit}`, caption: image.caption || "", image,
   };
 }
@@ -172,7 +172,7 @@ ${body}
 </div>
 </article>`;
 
-export function renderIncident(loaded, { root, dataHref, dir, repo, others }) {
+export function renderIncident(loaded, { root, dataHref, dir, repo, follow = "", others }) {
   const { head, t, chartData, tableData } = loaded;
   const sum = summarize(loaded);
   const claims = new Map(t.claims.map((c) => [c.claim_id, c]));
@@ -334,14 +334,18 @@ ${tableHtml(headRow, body)}` });
   const sizeLine = `${sizeBars(SIZE_BARS[head.size], { potential, label: `Size: ${head.size}` })}<strong>${esc(potential ? "Nation-level, but only if the worst case were true" : head.size)}</strong>`;
   const STATE_TAGS = { down: ["ftag-down", "Down now"], "partly-back": ["ftag-partly", "Partly back"], back: ["ftag-kind", "Back"] };
   const stateTag = sum.service ? `<span class="ftag ${STATE_TAGS[sum.service.state][0]}">${STATE_TAGS[sum.service.state][1]}</span>` : "";
+  // Following by email: one message when the story changes. A closed story is not checked again.
+  const followCta = follow && head.status !== "closed"
+    ? `\n<p class="follow-cta"><a class="button secondary" href="${esc(`${follow}?story=${encodeURIComponent(head.slug)}`)}" rel="noopener">Follow this story by email</a><span class="meta">An email when the answer or the facts change. No account, and you can stop any time.</span></p>`
+    : "";
   const lead = `<section class="answer-box" aria-labelledby="the-question">
 <div class="answer-head"><p class="kicker">Is it a hack? The short answer</p>${answerPill(group, "answer-pill")}</div>
-<p class="answer">${esc(q.answer)}</p>
+<p class="answer">${esc(withoutAnswerWords(q.answer, group))}</p>
 <p class="answer-facts">${stateTag}<span class="size-line">${sizeLine}</span></p>
 <p class="answer-refs"><span class="field">How well supported</span> ${pill(q.label)}</p>
 <p class="answer-refs"><span class="field">Rests on</span> ${q.claim_ids.map((id) => `<a href="${esc(claimHref(id))}">${esc(claims.get(id).claim_text)}</a>`).join(" · ")}</p>
 ${verdictNote}
-</section>
+</section>${followCta}
 <p class="byline">By the isitahack.com desk. First published ${timeTag(sum.first_published, fmtDay(sum.first_published))}. AI agents research public sources and label each claim; a person decides only the final verdict. <a href="${root}how-it-works.html">How it works</a></p>`;
   const tiles = (head.figures || []).map((f) => `<li class="tile"><a href="${esc(claimHref(f.claim_id))}"><span class="tile-value">${esc(f.value)}</span><span class="tile-label">${esc(f.label)}</span>${f.detail ? `<span class="tile-detail">${esc(f.detail)}</span>` : ""}</a></li>`).join("\n");
   const known = head.known.map((k) => `<li>${esc(k.text)} <a class="ref" href="${esc(claimHref(k.claim_id))}">evidence</a></li>`).join("\n");

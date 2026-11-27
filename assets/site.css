@@ -194,6 +194,11 @@ p, ul, ol, dl { margin: 0; }
 .finder input { width: 100%; height: 56px; padding: 0 1rem; font: inherit; font-weight: 500; color: var(--ink); background: var(--surface); border: 1.5px solid var(--ink); border-radius: var(--radius); }
 .finder input::placeholder { color: var(--muted); opacity: 1; }
 .newest a { font-weight: 600; }
+/* following by email: a plain link on the home page, a button under a story's short answer */
+.follow-line { font-size: 0.92rem; }
+.follow-line a { font-weight: 700; }
+.follow-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; }
+.follow-cta .meta { flex: 1 1 16rem; }
 .answers-key { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 1.3rem 1.4rem; display: grid; gap: 0.9rem; }
 .answers-key dl { display: grid; gap: 0.75rem; }
 .answers-key dl > div { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 0.3rem 1rem; align-items: start; }
@@ -288,6 +293,12 @@ p, ul, ol, dl { margin: 0; }
 .ftag-kind { border-color: var(--muted); color: var(--muted); }
 .ftag-fix { border-style: dashed; }
 .fcard-answer, .srow-answer, .live-name { font-size: 0.8rem; font-weight: 700; line-height: 1.35; color: var(--a); }
+/* Each answer line starts with the same mark as its answer's pill: full for "says it was hacked",
+   half for "reported", a bar for "still unclear", a ring for "no sign". Colour is never the only cue. */
+.fcard-answer::before, .srow-answer::before, .live-name::before { content: ""; display: inline-block; width: 0.62em; height: 0.62em; margin-right: 0.4em; border: 1.5px solid currentColor; border-radius: 50%; vertical-align: 0.02em; }
+.a-hack-stated .fcard-answer::before, .a-hack-stated .srow-answer::before, .a-hack-stated .live-name::before { background: currentColor; }
+.a-hack-reported .fcard-answer::before, .a-hack-reported .srow-answer::before, .a-hack-reported .live-name::before { background: linear-gradient(90deg, currentColor 50%, transparent 50%); }
+.a-unclear .fcard-answer::before, .a-unclear .srow-answer::before, .a-unclear .live-name::before { border-color: transparent; background: linear-gradient(currentColor, currentColor) center / 100% 2px no-repeat; }
 .fcard-title { font-size: 1.4rem; font-weight: 800; line-height: 1.16; letter-spacing: -0.02em; text-wrap: balance; }
 .fcard-side .fcard-title { font-size: 1.05rem; line-height: 1.22; letter-spacing: -0.01em; }
 .fcard-text { font-size: 0.92rem; line-height: 1.5; color: var(--muted); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
@@ -297,7 +308,10 @@ p, ul, ol, dl { margin: 0; }
 .srow a { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.15rem 1rem; padding: 0.75rem 0.25rem; color: var(--ink); text-decoration: none; }
 .srow a:hover { background: var(--surface); color: var(--ink); }
 .srow a:hover .srow-name { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.18em; }
-@media (min-width: 760px) { .srow a { grid-template-columns: 5.25rem minmax(0, 14rem) minmax(0, 1fr); align-items: baseline; } .srow-answer { grid-column: 2 / -1; } }
+@media (min-width: 760px) {
+  .srow a { grid-template-columns: 5.25rem minmax(0, 14rem) minmax(0, 1fr); grid-template-rows: auto 1fr; grid-template-areas: "when name text" "when answer text"; align-items: start; }
+  .srow-when { grid-area: when; padding-top: 0.12rem; } .srow-name { grid-area: name; } .srow-text { grid-area: text; padding-top: 0.08rem; } .srow-answer { grid-area: answer; }
+}
 .srow-when { font: 600 0.74rem/1.5 var(--mono); color: var(--muted); }
 .srow-name { font-weight: 750; line-height: 1.3; letter-spacing: -0.01em; }
 .srow-text { font-size: 0.88rem; line-height: 1.45; color: var(--muted); }
@@ -312,6 +326,11 @@ p, ul, ol, dl { margin: 0; }
 .live-top { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 0.5rem; font: 700 0.78rem/1.4 var(--mono); }
 .live-text { font-size: 0.94rem; font-weight: 600; line-height: 1.4; }
 .live-foot { border-top: 1px solid var(--rule); padding-top: 0.8rem; }
+.live-follow { border-top: 1px solid var(--rule); padding-top: 0.75rem; font-size: 0.9rem; font-weight: 700; }
+.live-more { justify-self: start; margin: 0.2rem 0 0.4rem; }
+.live-folded .live-later { display: none; }
+/* Below the two-column width the newest changes come before the stories, not after all of them. */
+@media (max-width: 1039px) { .now > .live { order: -1; } }
 /* On a phone the list comes first: each group's heading already explains its answer. */
 @media (max-width: 699px) {
   .answers-key, .newest, .group-head .pill { display: none; }
@@ -319,7 +338,7 @@ p, ul, ol, dl { margin: 0; }
   .filters { flex-wrap: nowrap; overflow-x: auto; margin: 0 calc(-1 * var(--pad)); padding: 0 var(--pad) 4px; }
   .pick { flex: none; }
 }
-.head-media figcaption { font: 0.62rem/1.4 var(--mono); color: var(--muted); }
+.head-media figcaption { font-size: 0.78rem; line-height: 1.45; color: var(--muted); }
 .band.split { grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 1.6rem 4.5rem; align-items: start; }
 /* the drawn picture of an incident's subject */
 .plate { display: block; width: 100%; height: auto; }
@@ -407,15 +426,13 @@ ol.doc-main, ul.doc-main { list-style: none; padding: 0; }
 .crumb { font: 0.72rem/1.5 var(--mono); color: var(--muted); }
 .head-text { display: grid; gap: 1.1rem; align-content: start; min-width: 0; }
 .head-media { margin: 0; display: grid; gap: 0.3rem; align-content: start; }
-.head-media img, .head-media .plate { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--rule); }
-/* on a phone the answer comes before the picture */
-@media (max-width: 699px) { .head-media { max-width: 16rem; order: 1; } }
-@media (min-width: 700px) {
-  .page-head.has-media { grid-template-columns: minmax(0, 1fr) clamp(190px, 24%, 300px); column-gap: 2rem; }
-  .page-head.has-media > * { grid-column: 1 / -1; }
-  .page-head.has-media > .head-text { grid-column: 1; }
-  .page-head.has-media > .head-media { grid-column: 2; grid-row: 1; }
-}
+.head-media img, .head-media .plate { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--rule); }
+/* A logo is shown whole on white, never cropped; a drawn plate stays its own shape. */
+.head-media img.is-logo { object-fit: contain; background: #fff; padding: 1rem; }
+.head-media .plate { aspect-ratio: auto; max-width: 30rem; }
+/* The headline has the full width; the picture follows the short answer, then the byline. */
+.page-head > .head-media { order: 1; }
+.page-head > .byline { order: 2; }
 .page-head h1 { font-size: clamp(1.9rem, 3.6vw, 2.85rem); line-height: 1.06; letter-spacing: -0.03em; }
 .answer-box { background: var(--surface); border: 1px solid var(--strong); border-radius: var(--radius); padding: clamp(1.1rem, 2.4vw, 1.6rem); display: grid; gap: 0.7rem; align-content: start; }
 .answer-head { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.9rem; }

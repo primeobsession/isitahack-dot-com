@@ -46,6 +46,9 @@ const SITE = {
   footer: "Made for entertainment using AI. Not endorsed by anyone named here.",
   repo: "https://github.com/primeobsession/isitahack-dot-com",
   x: "https://x.com/isitahack",
+  // The email follow service: a story's updates, or a daily or weekly summary. It runs apart from
+  // this site and reads its updates.json.
+  follow: "https://follow.isitahack.com/",
 };
 const STATUSES = { monitoring: "Monitoring", resolved: "Resolved", closed: "Closed" };
 // The status board is built from the incidents, so it is not in PAGES.
@@ -177,6 +180,7 @@ ${WORDMARK}
 <a href="${SITE.repo}" rel="noopener">GitHub repository</a>
 <a href="${SITE.x}" rel="noopener">isitahack on X</a>
 <a href="${root}about.html#contact">Report an error</a>
+<a href="${SITE.follow}?daily=1" rel="noopener">Follow by email</a>
 <a class="mono" href="${root}index.json">index.json</a>
 <a class="mono" href="${root}llms.txt">llms.txt</a>
 </nav>
@@ -214,7 +218,7 @@ function loadTyped(dir) {
   return { ...sum, typed: true, loaded, dataPath, anatomy: { claim: first, source }, files: { page: `incidents/${sum.slug}.md`, html: `incidents/${sum.slug}.html`, data: `${dataPath}/` } };
 }
 function writeTyped(i, others, out) {
-  const { main } = renderIncident(i.loaded, { root: "../", dataHref: `../${i.dataPath}`, dir: i.loaded.dir, repo: SITE.repo, others });
+  const { main } = renderIncident(i.loaded, { root: "../", dataHref: `../${i.dataPath}`, dir: i.loaded.dir, repo: SITE.repo, follow: SITE.follow, others });
   // The page title is the question people ask, then the site name.
   const path = `incidents/${i.slug}.html`, url = `${SITE.url}/${path}`;
   const description = `${i.question.text} ${i.question.answer}`;
@@ -380,7 +384,8 @@ ${rows.map((i) => incidentRow(i, year)).join("\n")}
     filters, groups,
     as_of: latest ? `<time class="ago" datetime="${esc(latest.last_updated)}">${esc(fmtDate(latest.last_updated))}</time>` : "",
     bands: renderBands(front, { name: rowName }),
-    live: renderLive(front, incidents, { name: rowName }),
+    live: renderLive(front, incidents, { name: rowName, follow: SITE.follow }),
+    follow: `${SITE.follow}?daily=1`,
     fresh_days: String(FRESH_DAYS), total: String(incidents.length),
   });
   const data = [

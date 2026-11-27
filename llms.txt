@@ -5,6 +5,7 @@
 ## Index
 - [index.json](https://isitahack.com/index.json): JSON list of all incidents: slug, title, status, last_updated, last_checked, next_check_due, paths to its files.
 - [updates.json](https://isitahack.com/updates.json): the newest real changes across all incidents, newest first: story, kind of change, headline, time and links. To follow the site, fetch this no more than once an hour and compare each entry's slug and log_id with what you have already seen.
+- [Follow by email](https://follow.isitahack.com/): for people: an email when one story changes, or a daily or weekly summary of every change. A story page links to it as "Follow this story by email". Programs should read updates.json instead.
 
 ## Pages
 - [Home](https://isitahack.com/index.html): HTML list of incidents, generated from each incident's data.
