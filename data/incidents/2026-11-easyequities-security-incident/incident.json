@@ -14,7 +14,7 @@
   },
   "lead_image": "easyequities-notice",
   "incident_type": "outage",
-  "answer_group": "unclear",
+  "answer_group": "hack-reported",
   "service": {
     "state": "down",
     "claim_id": "c002"
@@ -26,8 +26,8 @@
   "verdict": null,
   "verdict_approved_at": null,
   "size": "Large",
-  "size_basis": "EasyEquities is one of South Africa's most used investment platforms, and its owner says its brands serve more than 1.3 million people; every client account is locked while the platform is offline. The company has not said whether any personal data was taken or how many clients that would involve.",
-  "who_is_affected": "Every EasyEquities client, including child accounts run by a guardian: none can log in or see their accounts for now. The company says funds and assets are accounted for, trades can go through its trading desk and withdrawals reopen only after checks. It warns against unexpected messages.",
+  "size_basis": "EasyEquities is one of South Africa's most used investment platforms, and its owner says its brands serve more than 1.3 million people; every client account is locked while the platform is offline. It says a small number of accounts were specifically targeted, without saying how many.",
+  "who_is_affected": "Every EasyEquities client, including child accounts run by a guardian: none can log in or see their accounts for now. The company says funds are accounted for and trades can go through its trading desk; automated withdrawals are paused until checks are done. It warns against unexpected messages.",
   "known": [
     {
       "text": "EasyEquities says a security incident affected some of its systems and it is investigating with independent specialists.",
@@ -48,11 +48,11 @@
   ],
   "not_known": [
     {
-      "text": "Whether anyone broke into EasyEquities' systems, and how.",
+      "text": "How the attacker EasyEquities describes got in, and who it was.",
       "question_id": "q001"
     },
     {
-      "text": "Whether any personal information was taken.",
+      "text": "Whether any personal information was taken, and how many clients' accounts were targeted.",
       "question_id": "q004"
     },
     {
