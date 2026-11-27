@@ -122,6 +122,12 @@
     },
     {
       "type": "claims",
+      "title": "What are people saying it was?",
+      "group": "theory",
+      "open": true
+    },
+    {
+      "type": "claims",
       "title": "Has this happened to a government department before?",
       "group": "background",
       "open": true
