@@ -21,7 +21,7 @@
   "verdict": null,
   "verdict_approved_at": null,
   "size": "Large",
-  "size_basis": "1Password is a password manager used by millions of people and many businesses. Only a subset of customers had account details copied, and the company has not said how many.",
+  "size_basis": "1Password is a password manager used by millions of people and many businesses. Only a subset of customers had account details copied, and the company has not said how many. Whether any of the organisations that use it were among them is not known.",
   "who_is_affected": "Some 1Password customers, whose names, sign-in email addresses and account details were copied. 1Password says vaults were not touched and nobody needs to change anything, but advises caution with unexpected emails about invitations or account recovery.",
   "known": [
     {
@@ -53,6 +53,10 @@
     {
       "text": "How the attacker's code got onto 1Password's servers, and what checks it passed.",
       "question_id": "q008"
+    },
+    {
+      "text": "Whether any organisation that uses 1Password was among those affected.",
+      "question_id": "q010"
     }
   ],
   "figures": [
@@ -91,6 +95,12 @@
       "type": "claims",
       "title": "What has 1Password done, and what should I do?",
       "group": "response",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Who uses 1Password, and were they affected?",
+      "group": "users",
       "open": true
     },
     {
