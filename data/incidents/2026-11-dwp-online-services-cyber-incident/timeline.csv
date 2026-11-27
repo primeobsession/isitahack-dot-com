@@ -1,5 +1,6 @@
 event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
 t004,2026-11-26,,,stated,"The cyber incident is detected, Downing Street says, a day before DWP announces it",c013,"The BBC reports the spokesperson saying it was detected ""yesterday""; no time given."
+t011,2026-11-26,,Late evening,approximate,"The government takes the DWP portal down after detecting ""unusual activity"", the Guardian reports",c020,"The Guardian says ""late on Thursday""; no time given."
 t001,2026-11-27T08:11:20+00:00,,,stated,DWP posts a notice on GOV.UK saying it has taken some online services offline as a precaution after identifying a cyber incident affecting its systems,c001,Time is the notice's publication time on GOV.UK.
 t002,2026-11-27T09:00:00+00:00,,Around 9 AM GMT,approximate,"Online systems for pensions, Universal Credit and PIP applications, and the Tell Us Once service, cannot be accessed, the BBC reports",c005,
 t003,2026-11-27T12:00:00+00:00,,Around 12:00 GMT,approximate,"The online systems for pensions, Universal Credit and PIP applications, and Tell Us Once, still cannot be accessed, the BBC reports",c005,
@@ -9,3 +10,4 @@ t007,2026-11-27T13:44:00+00:00,,,stated,"The Work and Pensions Secretary calls t
 t008,2026-11-27T14:44:00+00:00,,,stated,"Asked about claimants' missing payments, DWP repeats that regular payments are not affected and says anyone with a payment problem should call its benefit phoneline, the BBC reports",c003,Time is the BBC live-page entry.
 t009,2026-11-27T14:45:47+00:00,,,stated,DWP updates its GOV.UK notice: people who need help should call their usual benefit line,c002,Time is the notice's own update time.
 t010,2026-11-27T14:58:00+00:00,,,stated,"DWP says nobody will be sanctioned if the cyber incident stopped them attending or updating their claim, the BBC reports",c017,Time is the BBC live-page entry.
+t012,2026-11-27,,,stated,"DWP's internal systems are restored and officials begin working again, while the public portal stays offline, the Guardian reports",c018,The Guardian cites DWP insiders; no time given.
