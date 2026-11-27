@@ -1,4 +1,7 @@
 event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t004,2026-11-26,,,stated,"The cyber incident is detected, Downing Street says, a day before DWP announces it",c013,"The BBC reports the spokesperson saying it was detected ""yesterday""; no time given."
 t001,2026-11-27T08:11:20+00:00,,,stated,DWP posts a notice on GOV.UK saying it has taken some online services offline as a precaution after identifying a cyber incident affecting its systems,c001,Time is the notice's publication time on GOV.UK.
 t002,2026-11-27T09:00:00+00:00,,Around 9 AM GMT,approximate,"Online systems for pensions, Universal Credit and PIP applications, and the Tell Us Once service, cannot be accessed, the BBC reports",c005,
 t003,2026-11-27T12:00:00+00:00,,Around 12:00 GMT,approximate,"The online systems for pensions, Universal Credit and PIP applications, and Tell Us Once, still cannot be accessed, the BBC reports",c005,
+t005,2026-11-27T12:16:00+00:00,,,stated,"Downing Street says an investigation is looking at who is behind the incident and that there is currently no evidence of customer data loss, the BBC reports",c013,Time is the BBC live-page entry.
+t006,2026-11-27T12:56:00+00:00,,Before 12:56 GMT,approximate,Some Universal Credit claimants tell the BBC their payments have not arrived,c015,Time is the BBC live-page entry.
