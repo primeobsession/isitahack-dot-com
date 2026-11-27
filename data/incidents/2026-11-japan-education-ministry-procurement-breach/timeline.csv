@@ -1,0 +1,4 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-10-01,,,stated,Unauthorised access by a third party is detected on servers of MEXT's government procurement information system,c001,
+t002,2026-11-25,,,stated,"MEXT publishes a notice: up to 1,778 email addresses and up to 163,953 company and representative records may have leaked",c002,
+t003,2026-11-27,,,stated,The Record reports the breach,c007,

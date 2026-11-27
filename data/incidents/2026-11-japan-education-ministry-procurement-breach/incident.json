@@ -1,0 +1,141 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-japan-education-ministry-procurement-breach",
+  "title": "Japan education ministry (MEXT) procurement system breach, 2026",
+  "also_called": [
+    "the MEXT data leak",
+    "the Japan education ministry breach"
+  ],
+  "subject": {
+    "name": "MEXT",
+    "kind": "government",
+    "about": "The Ministry of Education, Culture, Sports, Science and Technology (MEXT) is a ministry of Japan's national government, responsible for education, science and technology, sports and culture. It was formed in 2001 by merging two earlier government bodies.",
+    "about_url": "https://www.mext.go.jp/en/about/mext/index.htm"
+  },
+  "lead_image": "mext-building",
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "status": "monitoring",
+  "incident_date": "2026-10-01",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by the Ministry of Education, Culture, Sports, Science and Technology, the Government of Japan, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "A national government ministry says up to 163,953 records on companies and their representatives, and up to 1,778 email addresses, may have leaked. It has found no misuse so far. Nothing says the public's use of ministry services was affected.",
+  "who_is_affected": "Companies whose details were held in the ministry's procurement system, which The Record describes as companies eligible to bid for its contracts, and their representatives; and the owners of up to 1,778 email addresses. The ministry has not yet said what they should do.",
+  "known": [
+    {
+      "text": "MEXT says unauthorised access by a third party was detected on its government procurement system's servers on Oct 1, 2026.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Up to 1,778 email addresses and up to 163,953 records of company and representative names may have leaked.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "The ministry has cut off the system's communications in and out.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "The ministry has found no publication or misuse of the data so far.",
+      "claim_id": "c004"
+    },
+    {
+      "text": "It has reported the matter to Japan's privacy regulator and is still investigating.",
+      "claim_id": "c005"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Who was behind the intrusion, and how the intruder got in.",
+      "question_id": "q003"
+    },
+    {
+      "text": "Whether the procurement system is still in use or has been stopped.",
+      "question_id": "q005"
+    }
+  ],
+  "figures": [
+    {
+      "value": "163,953",
+      "label": "Company records possibly leaked",
+      "detail": "Names, representatives and other details; ministry's maximum",
+      "claim_id": "c002"
+    },
+    {
+      "value": "1,778",
+      "label": "Email addresses possibly leaked",
+      "detail": "Ministry's maximum so far",
+      "claim_id": "c002"
+    },
+    {
+      "value": "Oct 1",
+      "label": "Intrusion detected",
+      "detail": "2026; disclosed Nov 25",
+      "claim_id": "c007"
+    }
+  ],
+  "images": [
+    {
+      "id": "mext-building",
+      "title": "Former Ministry of Education building, Kasumigaseki, Tokyo",
+      "file": "images/mext-building.jpg",
+      "alt": "A five-storey brown brick office building from the 1930s with tall vertical pillars over its entrance, trees along the street in front and a white high-rise tower behind it, under a clear blue sky.",
+      "caption": "The 1933 former Ministry of Education building at 3-2-2 Kasumigaseki, Tokyo, MEXT's address, in May 2010.",
+      "credit": "Wiiii, CC BY-SA 3.0, via Wikimedia Commons (cropped)",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Former_Monbush%C5%8D_Ministry_of_Education,_Culture,_Sports,_Science_and_Technology_building_2010.jpg",
+      "sha256": "9f0df460f73640e5ad40605e4cb495825b8ec1249f4032ca2ee3bae36e6561d5",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "What has the ministry said happened?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What data may have leaked?",
+      "group": "data",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What has the ministry done?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Has the data been misused?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Who was behind it?",
+      "group": "attacker",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "About MEXT",
+      "group": "about",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the MEXT procurement system breach"
+    }
+  ]
+}
