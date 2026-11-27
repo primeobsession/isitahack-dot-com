@@ -1,0 +1,6 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-09-26,,Early hours,stated,"Keio finds a ransomware attack on its group's servers, cuts off its network and reports it to the police",c001,
+t002,2026-10-16,,,stated,Keio says a group claiming to be the attacker says it has published some of the group's data,c003,
+t003,2026-10-21,,,stated,"Keio says outside experts report that data the attacker says it stole has been published, and reports a possible personal data leak to the regulator",c004,
+t004,2026-11-24,,,stated,"Keio publishes its findings: about 12,000 people's data confirmed leaked, up to about 10.63 million customers and partners possibly affected",c006,
+t005,2026-11-25,,,stated,"The Japan Times reports the attack has been linked to the ransomware group Qilin, citing a tracker",c011,

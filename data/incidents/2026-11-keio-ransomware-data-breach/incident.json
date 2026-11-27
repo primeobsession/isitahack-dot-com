@@ -1,0 +1,151 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-keio-ransomware-data-breach",
+  "title": "Keio railway group ransomware attack and data leak, 2026",
+  "also_called": [
+    "the Keio data breach",
+    "the Keio ransomware attack"
+  ],
+  "subject": {
+    "name": "Keio",
+    "kind": "other",
+    "about": "Keio Corporation is a Japanese private railway company. It runs the Keio Line from Shinjuku and the Inokashira Line from Shibuya, 84.7 km of commuter railway across western Tokyo and northern Kanagawa.",
+    "about_url": "https://www.keio.co.jp/global/company/corporate/"
+  },
+  "lead_image": "keio-plaza-hotel",
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "service": {
+    "state": "partly-back",
+    "claim_id": "c010"
+  },
+  "status": "monitoring",
+  "incident_date": "2026-09-26",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Keio Corporation, any Keio group company, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Keio says data on up to about 10.63 million customers and business partners may have leaked, and data on about 12,000 people is confirmed leaked. The counts may include the same person more than once. Train services were not affected.",
+  "who_is_affected": "Customers and partners of Keio group companies (hotels, department store, real estate, travel), job applicants, and staff and their families. Keio will contact affected people. It asks everyone to check card statements and ignore messages pretending to be from Keio.",
+  "known": [
+    {
+      "text": "Keio says ransomware hit its group's servers in the early hours of Sept 26, 2026.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Keio's trains kept running; some group companies' business systems were disrupted.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "Data on about 12,000 current and former staff and their families is confirmed leaked.",
+      "claim_id": "c005"
+    },
+    {
+      "text": "Data on about 10.63 million customers and business partners may have leaked, including about 1.6 million passport copies of overseas hotel guests.",
+      "claim_id": "c006"
+    },
+    {
+      "text": "Keio has found no misuse of the data so far.",
+      "claim_id": "c009"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Who carried out the attack. A newspaper links it to the ransomware group Qilin; nobody official has said so.",
+      "question_id": "q004"
+    },
+    {
+      "text": "When Keio Presso Inn will take new bookings again; Keio expects December.",
+      "question_id": "q006"
+    }
+  ],
+  "figures": [
+    {
+      "value": "10.63M",
+      "label": "Customers and partners possibly hit",
+      "detail": "Keio's figure; a possible leak, counts may overlap",
+      "claim_id": "c006"
+    },
+    {
+      "value": "~12,000",
+      "label": "Staff and families confirmed leaked",
+      "detail": "Keio's notice, Nov 24",
+      "claim_id": "c005"
+    },
+    {
+      "value": "1.6M",
+      "label": "Passport copies possibly leaked",
+      "detail": "Overseas guests at four group hotels",
+      "claim_id": "c007"
+    },
+    {
+      "value": "Sept 26",
+      "label": "Attack found",
+      "detail": "Early hours, 2026",
+      "claim_id": "c001"
+    }
+  ],
+  "images": [
+    {
+      "id": "keio-plaza-hotel",
+      "title": "Keio Plaza Hotel in Nishi-Shinjuku, Tokyo",
+      "file": "images/keio-plaza-hotel.jpg",
+      "alt": "Two tall white tower blocks of the Keio Plaza Hotel against a clear blue sky, seen from street level.",
+      "caption": "Keio Plaza Hotel in Nishi-Shinjuku, Tokyo, in July 2011. The hotel is run by the Keio group; passport copies of some of its overseas guests are among the data Keio says may have leaked.",
+      "credit": "Aimaimyi, CC BY-SA 3.0, via Wikimedia Commons (cropped)",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Keio_Plaza_Hotel_-01.jpg",
+      "sha256": "2a7aa6e7ff577c770b8c4d60b68e3753afe2185fb4df2ed41cc916f57d13a904",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "What has Keio said about the attack?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Whose data may have leaked?",
+      "group": "data",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Who was behind it?",
+      "group": "attacker",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Were trains and other services affected?",
+      "group": "service",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What should affected people do?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "About Keio",
+      "group": "about",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Keio ransomware attack"
+    }
+  ]
+}
