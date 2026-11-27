@@ -1,4 +1,5 @@
 source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
-s001,https://techcrunch.com/2026/11/25/allstate-suffers-multi-day-tech-outage-ahead-of-thanksgiving/,"TechCrunch: Allstate suffers multi-day tech outage ahead of Thanksgiving",2,techcrunch,2026-11-25T07:08:00-08:00,2026-11-25T17:25:00-05:00,,ok,2026-11-25T17:25:00-05:00
-s002,https://www.newsweek.com/major-insurer-allstate-hit-by-3-day-outage-amid-spate-of-us-service-issues-12768326,"Newsweek: Major insurer Allstate hit by 3-day outage amid spate of US service issues",2,newsweek,,2026-11-25T17:25:00-05:00,,ok,2026-11-25T17:25:00-05:00
-s003,https://www.allstate.com/,"Allstate home page",1,allstate,,2026-11-25T17:25:00-05:00,,ok,2026-11-25T17:25:00-05:00
+s001,https://techcrunch.com/2026/11/25/allstate-suffers-multi-day-tech-outage-ahead-of-thanksgiving/,TechCrunch: Allstate suffers multi-day tech outage ahead of Thanksgiving,2,techcrunch,2026-11-25T07:08:00-08:00,2026-11-25T17:25:00-05:00,,ok,2026-11-25T17:25:00-05:00
+s002,https://www.newsweek.com/major-insurer-allstate-hit-by-3-day-outage-amid-spate-of-us-service-issues-12768326,Newsweek: Major insurer Allstate hit by 3-day outage amid spate of US service issues,2,newsweek,,2026-11-25T17:25:00-05:00,,ok,2026-11-25T17:25:00-05:00
+s003,https://www.allstate.com/,Allstate home page,1,allstate,,2026-11-25T17:25:00-05:00,,ok,2026-11-27T00:14:13-05:00
+s004,https://tech.yahoo.com/cybersecurity/articles/allstate-hit-multi-day-tech-160021738.html,TechCrunch via Yahoo Tech: Allstate hit by multi-day tech outage (updated with Allstate's statement),2,techcrunch,2026-11-26T16:00:21Z,2026-11-27T00:14:13-05:00,,ok,2026-11-27T00:14:13-05:00
