@@ -1,8 +1,9 @@
 source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
-s001,https://www.docomo.ne.jp/info/notice/page/261122_00_m.html,"NTT Docomo notice, 6th report, Nov 22 (in Japanese; company statement)",1,,2026-11-22,2026-11-22T04:06:00-05:00,,ok,2026-11-22T04:06:00-05:00
+s001,https://www.docomo.ne.jp/info/notice/page/261122_00_m.html,"NTT Docomo notice, 6th report, Nov 22 (in Japanese; company statement)",1,,2026-11-22,2026-11-22T04:06:00-05:00,,ok,2026-11-27T00:12:11-05:00
 s002,https://jen.jiji.com/business/industry/2026110601235/,Jiji Press English: NTT Docomo Chief Says Personal Info Breached in Cyberattack,2,jiji,2026-11-06,2026-11-22T07:45:00-05:00,,ok,2026-11-22T07:45:00-05:00
 s003,https://www.ntv.co.jp/englishnews/articles/2021h1wjj97102jwwzgd.html,"Nippon TV NEWS 24 JAPAN: NTT Docomo says up to 300,000 customer records leaked",2,nippon-tv,2026-11-06,2026-11-22T04:06:00-05:00,,ok,2026-11-22T04:06:00-05:00
 s004,https://cybersecurity-jp.com/news/118199,Cybersecurity.com: Docomo completes ahamo site maintenance (in Japanese),3,cybersecurity-jp,2026-11-08,2026-11-22T04:06:00-05:00,,ok,2026-11-22T04:06:00-05:00
 s005,https://www.itmedia.co.jp/mobile/articles/2611/06/news085.html,ITmedia Mobile: NTT Docomo explains the unauthorized-access case and the 5G SA outage (in Japanese),2,itmedia,2026-11-06,2026-11-22T04:53:00-05:00,,ok,2026-11-22T04:53:00-05:00
 s006,https://www.nikkei.com/article/DGXZQOUC098PQ0Z01C26A1000000/,Nikkei: Docomo restarts some online procedures; shopping site stays shut (in Japanese),2,nikkei,2026-11-09,2026-11-22T06:48:00-05:00,,ok,2026-11-22T06:48:00-05:00
 s007,https://japan.cnet.com/article/35254525/,"CNET Japan: Docomo to make goodwill payments; 294,839 lines leaked, including ID-document numbers (in Japanese)",2,cnet-japan,2026-11-06,2026-11-22T07:45:00-05:00,,ok,2026-11-22T07:45:00-05:00
+s008,https://www.docomo.ne.jp/info/notice/page/261126_00_m.html,"NTT Docomo notice, 7th report, Nov 26 (in Japanese; company statement)",1,,2026-11-26,2026-11-27T00:12:11-05:00,,ok,2026-11-27T00:12:11-05:00

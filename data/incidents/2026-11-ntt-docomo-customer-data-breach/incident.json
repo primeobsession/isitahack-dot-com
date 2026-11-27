@@ -4,7 +4,9 @@
   "title": "NTT Docomo customer data breach, Nov 2026",
   "subject": {
     "name": "NTT Docomo",
-    "kind": "telecom"
+    "kind": "telecom",
+    "about": "NTT Docomo is a Japanese telecommunications company that began service in 1992. It provides mobile phone, fibre broadband and international services to individuals, sells phones, and runs services such as video, music and e-book distribution.",
+    "about_url": "https://www.docomo.ne.jp/corporate/about/"
   },
   "incident_type": "breach",
   "answer_group": "hack-stated",
@@ -40,7 +42,7 @@
       "claim_id": "c005"
     },
     {
-      "text": "My docomo is partly back as of Nov 22; the online shop and the iOS app are still in emergency maintenance.",
+      "text": "My docomo, including its iOS app, is mostly back as of Nov 26; the online shop is still in emergency maintenance.",
       "claim_id": "c011"
     }
   ],
