@@ -22,7 +22,7 @@
   "verdict_approved_at": null,
   "size": "Local",
   "size_basis": "One hosting company and the customers whose websites, email and servers it runs. It has not said how many customers it has; its managing director says most are outside Iceland.",
-  "who_is_affected": "1984's customers: their services were suspended on Nov 20. Email is back and most virtual servers are online; shared-hosting websites are due back from the night of Nov 26. 1984 says their data was not touched except on seven targeted websites.",
+  "who_is_affected": "1984's customers: their services were suspended on Nov 20. Email is back, about 90% of virtual servers and 85% of hosted websites are online, and the rest are returning. 1984 says their data was not touched except on seven targeted websites.",
   "service": {
     "state": "partly-back",
     "claim_id": "c006"
@@ -37,7 +37,7 @@
       "claim_id": "c003"
     },
     {
-      "text": "Email is working again and about 80% of virtual servers are back; shared web hosting is due to start returning from 21:00 UTC on Nov 26.",
+      "text": "Email is working again, and about 90% of virtual servers and 85% of hosted websites are back online.",
       "claim_id": "c006"
     },
     {
