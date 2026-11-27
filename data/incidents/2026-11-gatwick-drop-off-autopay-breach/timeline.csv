@@ -1,0 +1,3 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-23,,,stated,Gatwick emails affected drop-off customers about unauthorised access to AutoPay,c006,
+t002,2026-11-24T16:25:00+00:00,,,stated,Gatwick confirms the breach publicly and says AutoPay has been disabled,c004,Time of the BBC report.

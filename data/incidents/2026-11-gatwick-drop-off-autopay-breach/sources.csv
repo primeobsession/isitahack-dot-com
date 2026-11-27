@@ -1,0 +1,9 @@
+source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
+s001,https://www.bbc.com/news/articles/ckx283l7n17ro,BBC News: Airport customers hit by payment data breach,2,bbc,2026-11-24T16:25:00+00:00,2026-11-27T17:31:30-05:00,,ok,2026-11-27T17:31:30-05:00
+s002,https://www.theregister.com/security/2026/11/25/gatwick-drop-off-customers-personal-data-exposed-in-supplier-breach/5312060,The Register: Gatwick drop-off customers' personal data exposed in supplier breach,2,the-register,2026-11-25T11:16:00+00:00,2026-11-27T17:31:30-05:00,,ok,2026-11-27T17:31:30-05:00
+s003,https://www.thenationalnews.com/business/aviation/2026/11/25/gatwick-airport-hacked-cyber-attack-may-have-exposed-customers-bank-details/,The National: Gatwick Airport cyber-attack may have exposed customers' bank details,2,the-national,2026-11-25,2026-11-27T17:31:30-05:00,,ok,2026-11-27T17:31:30-05:00
+s004,https://travelradar.aero/gatwick-airport-cyberattack-affects-customers/,Travel Radar: Gatwick Airport cyberattack affects customers,2,travel-radar,2026-11-25,2026-11-27T17:31:30-05:00,,ok,2026-11-27T17:31:30-05:00
+s005,https://www.times24.co.uk/about,Times24 UK: About us,1,times24,,2026-11-27T17:31:30-05:00,,ok,2026-11-27T17:31:30-05:00
+s006,https://www.times24.co.uk/parking-management-services,Times24 UK: Parking management services,1,times24,,2026-11-27T17:31:30-05:00,,ok,2026-11-27T17:31:30-05:00
+s007,https://en.wikipedia.org/wiki/Gatwick_Airport,"Wikipedia: Gatwick Airport, about the airport",3,wikipedia,,2026-11-27T17:31:30-05:00,,ok,2026-11-27T17:31:30-05:00
+s008,https://www.gatwickairport.com/,London Gatwick website,1,gatwick,,,,blocked,2026-11-27T17:31:30-05:00
