@@ -15,8 +15,8 @@
   "incident_type": "breach",
   "answer_group": "hack-stated",
   "service": {
-    "state": "down",
-    "claim_id": "c006"
+    "state": "back",
+    "claim_id": "c010"
   },
   "status": "monitoring",
   "incident_date": "2026-11-18",
@@ -25,8 +25,8 @@
   "verdict": null,
   "verdict_approved_at": null,
   "size": "Large",
-  "size_basis": "Data on about 3.1 million members of a points scheme used at shopping centres across Japan leaked, and the app they use has been out of service since Nov 18.",
-  "who_is_affected": "About 3.1 million Mitsui Shopping Park Point members; card details and passwords were not included. The companies are contacting them and warn them to ignore suspicious emails claiming to be from the group. Shops, online malls and points still work without the app.",
+  "size_basis": "Data on about 3.1 million members of a points scheme used at shopping centres across Japan leaked, and the app they use was out of service from Nov 18 to Nov 27.",
+  "who_is_affected": "About 3.1 million Mitsui Shopping Park Point members; card details and passwords were not included. The companies are contacting them and warn of fake emails claiming to be from the group. The app is back; members who pay through it may need to register their card again.",
   "known": [
     {
       "text": "The companies that run the app say a third party got into it without authorisation.",
@@ -37,18 +37,14 @@
       "claim_id": "c003"
     },
     {
-      "text": "The app has been suspended since Nov 18 and will restart once its safety is confirmed.",
-      "claim_id": "c006"
+      "text": "The app was suspended on Nov 18 and the companies say it restarted on Nov 27.",
+      "claim_id": "c010"
     }
   ],
   "not_known": [
     {
       "text": "How the intruder got in and who it was; the companies say they know the route but have not said.",
       "question_id": "q004"
-    },
-    {
-      "text": "When the app will be back.",
-      "question_id": "q005"
     }
   ],
   "figures": [
