@@ -8,6 +8,7 @@
     "about": "The Cranston Police Department is the police force of the City of Cranston, Rhode Island. It says it provides police services to the city's residents and visitors.",
     "about_url": "https://www.cranstonri.gov/departments/emergency-services/cranston-police-department/"
   },
+  "lead_image": "cranston-aerial",
   "incident_type": "attack",
   "answer_group": "hack-reported",
   "service": {
@@ -89,6 +90,21 @@
       "type": "note",
       "title": "What we checked and did not find",
       "file": "notes/checked-not-found.md"
+    }
+  ],
+  "images": [
+    {
+      "id": "cranston-aerial",
+      "title": "Aerial view of Cranston, Rhode Island",
+      "file": "images/cranston-aerial.jpg",
+      "alt": "An aerial view of a city of closely packed houses and tree-lined streets, with a pond and parkland in the middle distance and more neighbourhoods stretching to the horizon under a pale sky.",
+      "caption": "An aerial view of Cranston, Rhode Island, in December 2008. A general view of the city; it does not show the police department's systems and was not taken during this incident.",
+      "credit": "thisisbossi, CC BY-SA 2.0, via Wikimedia Commons (cropped by isitahack.com)",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cranston,_Rhode_Island.jpg",
+      "sha256": "7822847b6d37accda46fe37e6920ef5aa06d6119854d782f00931d3455315290",
+      "width": 1920,
+      "height": 1280
     }
   ]
 }
