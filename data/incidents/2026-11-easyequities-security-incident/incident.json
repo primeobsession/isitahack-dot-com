@@ -27,7 +27,7 @@
   "verdict_approved_at": null,
   "size": "Large",
   "size_basis": "EasyEquities is one of South Africa's most used investment platforms, and its owner says its brands serve more than 1.3 million people; every client account is locked while the platform is offline. The company has not said whether any personal data was taken or how many clients that would involve.",
-  "who_is_affected": "Every EasyEquities client, including child accounts run by a guardian: none can log in or see their accounts for now. The company says funds are accounted for, trades can go through its trading desk and some withdrawals may be delayed. It warns against unexpected messages asking for details.",
+  "who_is_affected": "Every EasyEquities client, including child accounts run by a guardian: none can log in or see their accounts for now. The company says funds and assets are accounted for, trades can go through its trading desk and withdrawals reopen only after checks. It warns against unexpected messages.",
   "known": [
     {
       "text": "EasyEquities says a security incident affected some of its systems and it is investigating with independent specialists.",
@@ -38,11 +38,11 @@
       "claim_id": "c002"
     },
     {
-      "text": "EasyEquities says that, so far, all client funds are accounted for.",
+      "text": "EasyEquities says that, so far, client funds and assets are accounted for.",
       "claim_id": "c003"
     },
     {
-      "text": "Trades can be placed through its trading desk, and some withdrawals may be delayed.",
+      "text": "Trades can be placed through its trading desk; withdrawals reopen only once payment providers pass a test.",
       "claim_id": "c007"
     }
   ],
@@ -105,6 +105,12 @@
       "type": "claims",
       "title": "Is EasyEquities back online?",
       "group": "service",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How is EasyEquities bringing the platform back?",
+      "group": "response",
       "open": true
     },
     {
