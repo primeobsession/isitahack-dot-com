@@ -41,11 +41,11 @@
       "claim_id": "c003"
     },
     {
-      "text": "GoFundMe's Salesforce connection was cut off and is still disabled.",
+      "text": "GoFundMe's Salesforce connection was cut off from Nov 9; GoFundMe said on Nov 26 it is available again.",
       "claim_id": "c006"
     },
     {
-      "text": "DonorPerfect has restored most of its application since Nov 14; its API, mobile app and Classic Crowdfunding forms were still down on Nov 25.",
+      "text": "DonorPerfect has restored most of its application since Nov 14; most of its API, its mobile app and Classic Crowdfunding forms were still down on Nov 25.",
       "claim_id": "c008"
     }
   ],
