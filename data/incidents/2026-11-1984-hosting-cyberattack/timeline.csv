@@ -7,3 +7,5 @@ t005,2026-11-26,,,stated,1984 says email is working again and expects the first 
 t006,2026-11-25,,,stated,"Reykjavík City's systems are attacked and the Blue Lagoon reports an attack to CERT-IS; neither is linked to 1984 in the reporting",c010,
 t007,2026-11-26T19:45:00+00:00,,,stated,1984 says about 80% of its virtual servers are back online and shared web hosting will start returning from 21:00 UTC,c006,
 t008,2026-11-26,,,stated,The Iceland-Palestine Association says it believes Israel was behind the attack on 1984; it gives no evidence,c011,
+t009,2026-11-27,,,stated,"CERT-IS keeps the alert level at uncertainty through the weekend, with its next assessment due early on Monday",c015,
+t010,2026-11-27T14:10:00+00:00,,,stated,1984 says about 90% of its virtual servers and about 85% of hosted websites are back online,c006,
