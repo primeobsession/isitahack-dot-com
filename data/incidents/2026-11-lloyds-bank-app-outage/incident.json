@@ -1,0 +1,140 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-lloyds-bank-app-outage",
+  "title": "Lloyds Bank and Bank of Scotland app outage, Nov 27, 2026",
+  "also_called": [
+    "Lloyds down",
+    "the Lloyds app outage",
+    "the Bank of Scotland app outage"
+  ],
+  "subject": {
+    "name": "Lloyds Bank",
+    "kind": "finance",
+    "about": "Lloyds Bank is a large British retail and commercial bank, founded in Birmingham in 1765. It is a key part of Lloyds Banking Group.",
+    "about_url": "https://en.wikipedia.org/wiki/Lloyds_Bank"
+  },
+  "lead_image": "lloyds-stafford",
+  "incident_type": "outage",
+  "answer_group": "unclear",
+  "service": {
+    "state": "down",
+    "claim_id": "c001"
+  },
+  "status": "monitoring",
+  "incident_date": "2026-11-27",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Lloyds Banking Group, Lloyds Bank, Bank of Scotland, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "Lloyds Banking Group has more than 21 million mobile app users, and many Lloyds Bank and Bank of Scotland customers could not use the app or online banking on Nov 27. The bank has not said how many were affected.",
+  "who_is_affected": "Lloyds Bank and Bank of Scotland customers trying to use the app or online banking. The bank suggests clearing the browser cache or reinstalling the app; some people got in through the website instead. Nobody has said whether payments or data were affected.",
+  "known": [
+    {
+      "text": "Many Lloyds Bank customers could not log in to the app or online banking, make payments or check balances on the morning of Nov 27.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Bank of Scotland's app and online banking had problems too.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "Lloyds Banking Group says it is working to get things back to normal, and has given no cause.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "Nobody has said the outage was a cyberattack.",
+      "claim_id": "c004"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "What caused the outage.",
+      "question_id": "q001"
+    },
+    {
+      "text": "When the app and online banking will be fully back.",
+      "question_id": "q003"
+    },
+    {
+      "text": "Whether any customer data or payments were affected.",
+      "question_id": "q004"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Down",
+      "label": "Lloyds app and online banking, Nov 27",
+      "detail": "Not reported fixed at 12:01 GMT",
+      "claim_id": "c001"
+    },
+    {
+      "value": "4,000+",
+      "label": "Downdetector reports for Lloyds",
+      "detail": "User reports, not people affected",
+      "claim_id": "c005"
+    },
+    {
+      "value": "21 million+",
+      "label": "Lloyds Banking Group app users",
+      "detail": "The group's own figure, as reported",
+      "claim_id": "c007"
+    }
+  ],
+  "images": [
+    {
+      "id": "lloyds-stafford",
+      "title": "Lloyds Bank branch in Market Square, Stafford",
+      "file": "images/lloyds-stafford.jpg",
+      "alt": "A sandstone bank building with tall sash windows and arched ground-floor doorways, with LLOYDS BANK in green letters across the front and a two-globe street lamp outside.",
+      "caption": "A Lloyds Bank branch in Market Square, Stafford, in July 2022. Shown to identify the bank; the branch is not part of this story.",
+      "credit": "Chemical Engineer, CC BY-SA 4.0, via Wikimedia Commons (cropped)",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lloyds_Bank,_Market_Square_Stafford_a_(July_2022).jpg",
+      "sha256": "46d88632d98b4a21816cf8b51af98bfc96858942d08a6284b0c6ab0624662fd9",
+      "width": 1600,
+      "height": 800
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "What has Lloyds said about the outage?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Is the Lloyds app back?",
+      "group": "service",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How many people were hit, and what can they do?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Has the Lloyds app had problems before?",
+      "group": "background",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "About Lloyds Bank",
+      "group": "about",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Lloyds app outage"
+    }
+  ]
+}
