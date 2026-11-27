@@ -1,0 +1,140 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-dwp-online-services-cyber-incident",
+  "title": "DWP online services cyber incident, Nov 2026",
+  "also_called": [
+    "the DWP cyber attack",
+    "the DWP outage",
+    "the Universal Credit online outage"
+  ],
+  "subject": {
+    "name": "DWP",
+    "kind": "government",
+    "about": "The Department for Work and Pensions (DWP) is the UK government department responsible for welfare, pensions and child maintenance policy. It pays the State Pension and working-age, disability and ill-health benefits, such as Universal Credit and PIP, to around 20 million people.",
+    "about_url": "https://www.gov.uk/government/organisations/department-for-work-pensions"
+  },
+  "lead_image": "dwp-adelphi",
+  "incident_type": "outage",
+  "answer_group": "unclear",
+  "service": {
+    "state": "down",
+    "claim_id": "c002"
+  },
+  "status": "monitoring",
+  "incident_date": "2026-11-27",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by the Department for Work and Pensions, the UK government, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "DWP serves around 20 million claimants and customers across the UK, and some of its online services are offline. It says regular benefit and pension payments are not affected, and it has not said how many people the outage reaches or whether any data was taken.",
+  "who_is_affected": "People who use DWP's online services; reports name pensions, Universal Credit, PIP applications and Tell Us Once. DWP says benefit and pension payments will be paid as normal and to try again later. It never messages people asking for bank details.",
+  "known": [
+    {
+      "text": "DWP says it identified a cyber incident affecting its systems and took some online services offline as a precaution.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Some DWP online services are offline, and no time has been given for their return.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "DWP says regular benefit and pension payments are not affected and will be paid as normal.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "DWP is working with the National Cyber Security Centre to investigate.",
+      "claim_id": "c004"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "What kind of cyber incident it was, and whether anyone got into DWP's systems.",
+      "question_id": "q001"
+    },
+    {
+      "text": "Whether any personal data was accessed or taken.",
+      "question_id": "q005"
+    },
+    {
+      "text": "When the online services will be back.",
+      "question_id": "q004"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Offline",
+      "label": "Some DWP online services, since Nov 27",
+      "detail": "No return time given",
+      "claim_id": "c002"
+    },
+    {
+      "value": "Not affected",
+      "label": "Regular benefit and pension payments",
+      "detail": "DWP's own statement",
+      "claim_id": "c003"
+    },
+    {
+      "value": "20 million",
+      "label": "Claimants and customers DWP serves",
+      "detail": "About that many; the department's own figure",
+      "claim_id": "c009"
+    }
+  ],
+  "images": [
+    {
+      "id": "dwp-adelphi",
+      "title": "Department for Work and Pensions offices at the Adelphi building, London",
+      "file": "images/dwp-adelphi.jpg",
+      "alt": "The stone entrance of the Adelphi building on John Adam Street, London, with the name ADELPHI in gold letters above the doorway and tall brick office blocks behind it.",
+      "caption": "The Adelphi building in London, which housed DWP offices when this was taken in 2010. Shown to identify the department; not a place involved in this incident.",
+      "credit": "Steph Gray, CC BY-SA 2.0, via Wikimedia Commons (cropped)",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Department_for_Work_and_Pensions_(DWP),_Adelphi,_John_Adam_Street.jpg",
+      "sha256": "2adb9479421b0f6a6b017f9fab37d5dc4a1c0cb20d61ea97b8d7257840f365fc",
+      "width": 1599,
+      "height": 800
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "What does DWP say happened?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Are DWP's online services back?",
+      "group": "service",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What does it mean for claimants?",
+      "group": "impact",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Has this happened to a government department before?",
+      "group": "background",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "About DWP",
+      "group": "about",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the DWP cyber incident"
+    }
+  ]
+}
