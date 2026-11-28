@@ -133,6 +133,12 @@
     },
     {
       "type": "claims",
+      "title": "What has the attack cost Keio?",
+      "group": "business",
+      "open": true
+    },
+    {
+      "type": "claims",
       "title": "What should affected people do?",
       "group": "impact",
       "open": true
