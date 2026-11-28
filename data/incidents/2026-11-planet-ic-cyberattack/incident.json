@@ -1,0 +1,111 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-planet-ic-cyberattack",
+  "title": "Planet IC hosting cyberattack, Schwerin, Nov 2026",
+  "also_called": [
+    "the Schwerin city website outage",
+    "the Wemag customer portal outage"
+  ],
+  "subject": {
+    "name": "Planet IC",
+    "kind": "online-service",
+    "about": "Planet IC is a digital agency, IT company and data centre operator in Schwerin, in northern Germany, working since 1992 with about 50 staff. It builds and hosts websites, shops and online services, including for public bodies, banks and utilities.",
+    "about_url": "https://www.planet-ic.de/ueber-uns"
+  },
+  "lead_image": "wemag-schwerin-office",
+  "incident_type": "attack",
+  "answer_group": "hack-stated",
+  "service": {
+    "state": "partly-back",
+    "claim_id": "c011"
+  },
+  "status": "monitoring",
+  "incident_date": "2026-11-21",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Planet IC, Wemag, NRW.BANK, any city named, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Regional",
+  "size_basis": "One hosting company, but its customers include several city administrations in Mecklenburg-Vorpommern, the regional energy supplier Wemag and a state development bank. How many people's data was reached is not known.",
+  "who_is_affected": "People using the websites of Schwerin, Greifswald, Waren and other local bodies, and Wemag and Wemacom customers, who cannot use their online portals for now. Power, grid, internet and phone services work. Wemag customers who reused their portal password elsewhere should change it.",
+  "known": [
+    {
+      "text": "Planet IC says someone got unauthorised access to servers in its data centre on the evening of Nov 21.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "It took servers offline, and the websites it hosts went down with them, among them several city websites.",
+      "claim_id": "c008"
+    },
+    {
+      "text": "Wemag says the attackers potentially had access to customer data in its customer portals, which are offline.",
+      "claim_id": "c005"
+    },
+    {
+      "text": "The state criminal police and outside forensic experts are investigating.",
+      "claim_id": "c003"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether data was taken, and whose.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Who was behind it.",
+      "question_id": "q005"
+    },
+    {
+      "text": "When the websites and portals will be fully back.",
+      "question_id": "q006"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 21",
+      "label": "Unauthorised access",
+      "detail": "Saturday evening, per Planet IC",
+      "claim_id": "c001"
+    },
+    {
+      "value": "3+",
+      "label": "City websites hit",
+      "detail": "Schwerin, Greifswald, Waren",
+      "claim_id": "c008"
+    },
+    {
+      "value": "Offline",
+      "label": "Wemag customer portals",
+      "detail": "Power and phone unaffected",
+      "claim_id": "c007"
+    }
+  ],
+  "images": [
+    {
+      "id": "wemag-schwerin-office",
+      "title": "Wemag's office building in Schwerin",
+      "file": "images/wemag-schwerin-office.jpg",
+      "alt": "A large red-brick office building with a steep red tiled roof and rows of white windows, on a street corner in Schwerin under a clear blue sky, with autumn trees in front.",
+      "caption": "Wemag's office building on Obotritenring in Schwerin, in October 2024. Wemag, a Planet IC customer, says its customer portals were hit; the building itself is not part of the incident.",
+      "credit": "Tmv23, CC BY 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Obotritenring_40,_Schwerin_-_Verwaltungsgeb%C3%A4ude_WEMAG_(2024-10-20).jpg",
+      "sha256": "5d67cc3c9f93454b49af7df1b9e76ff792b0c217544303e50739a9ef07a1fccd",
+      "width": 1920,
+      "height": 1114
+    }
+  ],
+  "sections": [
+    { "type": "claims", "title": "What has Planet IC said happened?", "group": "cause", "open": true },
+    { "type": "claims", "title": "What went down?", "group": "impact", "open": true },
+    { "type": "claims", "title": "Is it back?", "group": "service", "open": true },
+    { "type": "claims", "title": "Was any data taken?", "group": "data", "open": true },
+    { "type": "questions", "title": "Questions people are asking", "open": true },
+    { "type": "claims", "title": "Who uses Planet IC, and were they affected?", "group": "users", "open": true },
+    { "type": "claims", "title": "What has been done about it?", "group": "response", "open": true },
+    { "type": "claims", "title": "Who was behind it?", "group": "attacker", "open": true },
+    { "type": "claims", "title": "What should Wemag customers do?", "group": "advice", "open": true },
+    { "type": "claims", "title": "About Planet IC", "group": "about", "open": true },
+    { "type": "timeline", "title": "Timeline of the Planet IC attack" }
+  ]
+}
