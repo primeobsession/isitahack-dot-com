@@ -12,7 +12,22 @@
     "about": "pCloud Pass is the password manager made by pCloud, a cloud storage company founded in 2013 that says it has over 24 million users. People use it to keep their passwords and fill them in on any device.",
     "about_url": "https://pass.pcloud.com/#/page/home"
   },
-  "no_photo": "Searched Wikimedia Commons for pCloud: no photograph of the company or its offices. pCloud has posted no notice about the attack on its own site (its statement was on Reddit), so there is no notice to screenshot.",
+  "lead_image": "pcloud-pass-home",
+  "images": [
+    {
+      "id": "pcloud-pass-home",
+      "title": "The pCloud Pass home page",
+      "file": "images/pcloud-pass-home.jpg",
+      "alt": "The top of the pCloud Pass website, headed \"Your Trustworthy European Password Manager\", saying pCloud Pass helps you keep your passwords and gives you secure access to them on all your devices.",
+      "caption": "Screenshot of pCloud’s pCloud Pass home page, Nov 28, 2026. pCloud has published no notice about the attack on its own site.",
+      "credit": "pCloud, screenshot by isitahack.com",
+      "rights": "screenshot",
+      "source_id": "s003",
+      "sha256": "f4e0e85330af425ddf8c8cc46e114921e6bb27fdecb054d0a94c6ca64424a308",
+      "width": 1600,
+      "height": 800
+    }
+  ],
   "incident_type": "breach",
   "answer_group": "hack-stated",
   "status": "monitoring",
@@ -74,13 +89,50 @@
     }
   ],
   "sections": [
-    { "type": "claims", "title": "What has pCloud said?", "group": "incident", "open": true },
-    { "type": "claims", "title": "Was any data taken?", "group": "data", "open": true },
-    { "type": "claims", "title": "What did customers see?", "group": "users", "open": true },
-    { "type": "questions", "title": "Questions people are asking", "open": true },
-    { "type": "claims", "title": "How did it happen?", "group": "cause", "open": true },
-    { "type": "claims", "title": "What should pCloud Pass users do?", "group": "response", "open": true },
-    { "type": "claims", "title": "About pCloud", "group": "about", "open": true },
-    { "type": "timeline", "title": "Timeline of the pCloud Pass cyberattack" }
+    {
+      "type": "claims",
+      "title": "What has pCloud said?",
+      "group": "incident",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Was any data taken?",
+      "group": "data",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What did customers see?",
+      "group": "users",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How did it happen?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What should pCloud Pass users do?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "About pCloud",
+      "group": "about",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the pCloud Pass cyberattack"
+    }
   ]
 }
