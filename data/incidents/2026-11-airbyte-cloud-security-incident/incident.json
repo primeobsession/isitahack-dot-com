@@ -4,7 +4,9 @@
   "title": "Airbyte Cloud security incident, Nov 2026",
   "subject": {
     "name": "Airbyte",
-    "kind": "online-service"
+    "kind": "online-service",
+    "about": "Airbyte is a company, started in 2020, that makes open-source software for moving data between apps, databases and data warehouses through more than 700 connectors. It also runs a hosted version, Airbyte Cloud.",
+    "about_url": "https://airbyte.com/company/about-us"
   },
   "incident_type": "attack",
   "answer_group": "hack-stated",
@@ -125,6 +127,11 @@
       "type": "claims",
       "title": "Who was affected?",
       "group": "impact"
+    },
+    {
+      "type": "claims",
+      "title": "Who uses Airbyte, and were they affected?",
+      "group": "users"
     },
     {
       "type": "claims",
