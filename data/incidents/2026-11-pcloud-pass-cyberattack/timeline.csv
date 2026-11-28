@@ -1,0 +1,3 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-27,,By Nov 27,approximate,Customers report emails saying a new device has connected to their pCloud Pass accounts,c005,
+t002,2026-11-27,,,stated,pCloud says a cyberattack targeting pCloud Pass occurred and was promptly contained,c001,Statement posted in reply to customers on Reddit and reported by BleepingComputer on Nov 27.
