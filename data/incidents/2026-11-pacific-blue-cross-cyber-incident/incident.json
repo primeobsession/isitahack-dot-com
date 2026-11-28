@@ -1,0 +1,97 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-pacific-blue-cross-cyber-incident",
+  "title": "Pacific Blue Cross cyber incident and outage, Nov 2026",
+  "also_called": [
+    "the Pacific Blue Cross outage",
+    "the PBC cyber incident"
+  ],
+  "subject": {
+    "name": "Pacific Blue Cross",
+    "kind": "health",
+    "about": "Pacific Blue Cross (PBC Health Benefits Society) is a not-for-profit health insurance provider based in Burnaby, British Columbia. It provides health, dental, life, disability and travel insurance, and about one in three British Columbians are enrolled in its group and individual plans.",
+    "about_url": "https://en.wikipedia.org/wiki/Pacific_Blue_Cross"
+  },
+  "lead_image": "burnaby-metrotown-skyline",
+  "incident_type": "outage",
+  "answer_group": "unclear",
+  "service": { "state": "down", "claim_id": "c002" },
+  "status": "monitoring",
+  "incident_date": "2026-11-25",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Pacific Blue Cross, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Regional",
+  "size_basis": "A health benefits provider serving about 1.7 million people in British Columbia. How many members are directly affected, and whether any data was reached, has not been said.",
+  "who_is_affected": "Pacific Blue Cross members in British Columbia: its website and contact centre are down, and some members have had to pay for prescriptions themselves. Keep claims and receipts; the company says it will process them once services are back. It has not said whether personal information was affected.",
+  "known": [
+    {
+      "text": "Pacific Blue Cross says a cyber incident has disrupted some of its systems.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Its website and contact centre are down, with no date given for their return.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "It says it has contained the incident and is restoring services with outside specialists.",
+      "claim_id": "c004"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether it was an attack, and what caused it.",
+      "question_id": "q005"
+    },
+    {
+      "text": "Whether members' personal information was reached.",
+      "question_id": "q002"
+    },
+    {
+      "text": "When services will be back.",
+      "question_id": "q003"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 25",
+      "label": "Disruption noticed",
+      "detail": "Early Wednesday, per the company",
+      "claim_id": "c003"
+    },
+    {
+      "value": "1.7 million",
+      "label": "British Columbians served",
+      "detail": "How many are affected is not known",
+      "claim_id": "c008"
+    }
+  ],
+  "images": [
+    {
+      "id": "burnaby-metrotown-skyline",
+      "title": "The Metrotown skyline in Burnaby, British Columbia",
+      "file": "images/burnaby-metrotown-skyline.jpg",
+      "alt": "Tall residential and office towers of Burnaby's Metrotown rising above a line of green trees, under a band of low grey cloud and a pale sky.",
+      "caption": "Metrotown in Burnaby, British Columbia, in 2022. Pacific Blue Cross is based in Burnaby; its offices are not shown and the buildings pictured are not part of the incident.",
+      "credit": "Zacharycmango, CC BY-SA 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Burnaby_Metrotown_skyline.jpg",
+      "sha256": "69c5d350c9992f5e14336caba26d844ea32b4370574afc12068a83963c408fc1",
+      "width": 1920,
+      "height": 1079
+    }
+  ],
+  "sections": [
+    { "type": "claims", "title": "What has Pacific Blue Cross said?", "group": "incident", "open": true },
+    { "type": "claims", "title": "What is down?", "group": "service", "open": true },
+    { "type": "claims", "title": "When did it start?", "group": "when", "open": true },
+    { "type": "claims", "title": "What caused it?", "group": "cause", "open": true },
+    { "type": "questions", "title": "Questions people are asking", "open": true },
+    { "type": "claims", "title": "What is being done about it?", "group": "response", "open": true },
+    { "type": "claims", "title": "How are members affected?", "group": "impact", "open": true },
+    { "type": "claims", "title": "What should members do?", "group": "advice", "open": true },
+    { "type": "claims", "title": "About Pacific Blue Cross", "group": "about", "open": true },
+    { "type": "timeline", "title": "Timeline of the Pacific Blue Cross outage" }
+  ]
+}
