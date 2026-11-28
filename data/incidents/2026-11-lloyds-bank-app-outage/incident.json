@@ -17,8 +17,8 @@
   "incident_type": "outage",
   "answer_group": "unclear",
   "service": {
-    "state": "down",
-    "claim_id": "c001"
+    "state": "back",
+    "claim_id": "c012"
   },
   "status": "monitoring",
   "incident_date": "2026-11-27",
@@ -28,7 +28,7 @@
   "verdict_approved_at": null,
   "size": "Large",
   "size_basis": "Lloyds Banking Group has more than 21 million mobile app users, and many Lloyds Bank and Bank of Scotland customers could not use the app or online banking on Nov 27. The bank has not said how many were affected.",
-  "who_is_affected": "Lloyds Bank and Bank of Scotland customers trying to use the app or online banking. The bank suggests clearing the browser cache or reinstalling the app; some people got in through the website instead. Nobody has said whether payments or data were affected.",
+  "who_is_affected": "Lloyds Bank and Bank of Scotland customers who could not use the app or online banking on the morning of Nov 27. Lloyds says all its services are back; anyone still having trouble should wait a few minutes and try again. Nobody has said whether payments or data were affected.",
   "known": [
     {
       "text": "Many Lloyds Bank customers could not log in to the app or online banking, make payments or check balances on the morning of Nov 27.",
@@ -39,8 +39,8 @@
       "claim_id": "c003"
     },
     {
-      "text": "Lloyds Banking Group says it is working to get things back to normal, and has given no cause.",
-      "claim_id": "c002"
+      "text": "Lloyds says all its services are back up and running, and has given no cause.",
+      "claim_id": "c012"
     },
     {
       "text": "Nobody has said the outage was a cyberattack.",
@@ -53,20 +53,16 @@
       "question_id": "q001"
     },
     {
-      "text": "When the app and online banking will be fully back.",
-      "question_id": "q003"
-    },
-    {
       "text": "Whether any customer data or payments were affected.",
       "question_id": "q004"
     }
   ],
   "figures": [
     {
-      "value": "Down",
-      "label": "Lloyds app and online banking, Nov 27",
-      "detail": "Not reported fixed at 12:01 GMT",
-      "claim_id": "c001"
+      "value": "Back",
+      "label": "Lloyds app and online banking",
+      "detail": "Lloyds said on Nov 27 all services were back",
+      "claim_id": "c012"
     },
     {
       "value": "4,000+",
