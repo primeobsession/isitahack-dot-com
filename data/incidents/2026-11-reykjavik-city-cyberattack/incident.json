@@ -1,0 +1,103 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-reykjavik-city-cyberattack",
+  "title": "Reykjavík City cyberattack, Nov 2026",
+  "also_called": [
+    "the Reykjavík cyberattack",
+    "the Reykjavíkurborg cyberattack"
+  ],
+  "subject": {
+    "name": "Reykjavík City",
+    "kind": "government",
+    "about": "Reykjavík City is the local government of Reykjavík, the capital of Iceland. It is governed by a City Council of 23 elected councillors, and the Mayor, appointed by the council, runs the city's administration.",
+    "about_url": "https://reykjavik.is/en/city-administration"
+  },
+  "lead_image": "reykjavik-city-hall",
+  "incident_type": "attack",
+  "answer_group": "hack-stated",
+  "status": "monitoring",
+  "incident_date": "2026-11-25",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Reykjavík City, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "service": {
+    "state": "down",
+    "claim_id": "c003"
+  },
+  "size": "Local",
+  "size_basis": "One city government, Iceland's capital, and the people who use its online services. The city has not said how many people's data, if any, was reached.",
+  "who_is_affected": "People who use Reykjavík City's online services. Online applications for financial assistance are unavailable; the city asks people to apply at one of its offices. The city has not yet said whether anyone's personal data was taken.",
+  "known": [
+    {
+      "text": "Reykjavík City says it suffered a cyberattack on several of its computer systems on Nov 25 and took many online services offline.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "The city is still working out how the attackers got in and what data they may have accessed.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "Its website still says online services are disrupted, and online applications for financial assistance are unavailable.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "The city is working with the security firm Syndis and CERT-IS, and is resetting all passwords and access keys.",
+      "claim_id": "c005"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "Whether personal data was taken, and whose.",
+      "question_id": "q003"
+    },
+    {
+      "text": "Who was behind the attack and whether it was ransomware.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Whether it is linked to the attack on the Blue Lagoon the same day.",
+      "question_id": "q006"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 25",
+      "label": "Attack detected",
+      "detail": "Services taken offline the same day",
+      "claim_id": "c001"
+    },
+    {
+      "value": "Weekend",
+      "label": "Most systems due back",
+      "detail": "Nov 28-29, the rest possibly early next week",
+      "claim_id": "c004"
+    }
+  ],
+  "images": [
+    {
+      "id": "reykjavik-city-hall",
+      "title": "Reykjavík City Hall by the Tjörnin pond",
+      "file": "images/reykjavik-city-hall.jpg",
+      "alt": "A long modern concrete and glass building with slim columns standing at the edge of a pond under a clear blue sky, with autumn shrubs in the foreground.",
+      "caption": "Reykjavík City Hall on the Tjörnin pond, 2012. It shows the city's seat of government; the building itself is not known to be involved in the incident.",
+      "credit": "Helmut Seger, CC BY-SA 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Rathaus_v_Tj%C3%B6rnin_20120918.jpg",
+      "sha256": "1459afcf7edce375d9374f511b988c3738ade6d0d1351f35320b9ed4cd622c2b",
+      "width": 1280,
+      "height": 852
+    }
+  ],
+  "sections": [
+    { "type": "claims", "title": "What has Reykjavík City said?", "group": "incident", "open": true },
+    { "type": "claims", "title": "Are the city's services back?", "group": "service", "open": true },
+    { "type": "claims", "title": "Was any data taken?", "group": "data", "open": true },
+    { "type": "claims", "title": "What caused it, and who was behind it?", "group": "cause", "open": true },
+    { "type": "questions", "title": "Questions people are asking", "open": true },
+    { "type": "claims", "title": "What is being done about it?", "group": "response", "open": true },
+    { "type": "claims", "title": "What else is happening in Iceland?", "group": "context", "open": true },
+    { "type": "claims", "title": "About Reykjavík City", "group": "about", "open": true },
+    { "type": "timeline", "title": "Timeline of the Reykjavík City cyberattack" }
+  ]
+}

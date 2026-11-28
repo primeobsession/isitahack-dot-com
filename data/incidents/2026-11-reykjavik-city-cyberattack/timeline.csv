@@ -1,0 +1,6 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-25,,,stated,Reykjavík City detects a cyberattack on several of its computer systems and takes many digital services offline,c001,
+t002,2026-11-25,,,stated,The Blue Lagoon also reports a cyberattack to CERT-IS; no link to the Reykjavík attack has been shown,c010,
+t003,2026-11-26,,,stated,The city says its digital services remain offline after a serious cyberattack and that it is working with Syndis and CERT-IS,c005,
+t004,2026-11-27,,,stated,"The city says it aims to bring most systems back that day and over the weekend, and is resetting all passwords and access keys",c004,
+t005,2026-11-27,,,stated,CERT-IS and civil protection keep Iceland's cyber alert level at the uncertainty level through the weekend,c011,
