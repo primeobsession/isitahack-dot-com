@@ -1,0 +1,147 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-octopus-cards-cyberattack",
+  "title": "Octopus Cards cyberattack and data breach, Nov 2026",
+  "also_called": [
+    "the Octopus data breach",
+    "the Octopus card cyberattack"
+  ],
+  "subject": {
+    "name": "Octopus",
+    "kind": "finance",
+    "about": "Octopus is Hong Kong's contactless stored-value card, used since 1997 to pay public transport fares and for everyday shopping. It is run by Octopus Cards Limited, part of Octopus Holdings, and in 2016 was used by 98 percent of Hong Kong people aged 15 to 64.",
+    "about_url": "https://en.wikipedia.org/wiki/Octopus_card"
+  },
+  "lead_image": "octopus-reader-kmb-bus",
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "status": "monitoring",
+  "incident_date": "2026-11-27",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Octopus Cards Limited, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Regional",
+  "size_basis": "Octopus is used by most people in Hong Kong, but the company says the attack involved about 7,500 customers and the contact details of about 22,000 merchants, and that cards and payments keep working.",
+  "who_is_affected": "About 7,500 Octopus customers, whose names and photos were involved, and contact people at about 22,000 merchants. Octopus will contact them by email or SMS. Cards and balances are safe, it says. Everyone should be wary of calls or messages claiming to be from Octopus.",
+  "known": [
+    {
+      "text": "Octopus says it detected a cyberattack on its systems on the morning of Nov 27 and contained it.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Names and photos of about 7,500 customers are involved; no credit card or bank account information.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "Contact details of about 22,000 merchants are affected.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "Cards, Mobile Octopus and Octopus Wallet keep working, and no financial loss has been found.",
+      "claim_id": "c004"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "How the attackers got in and who they were.",
+      "question_id": "q003"
+    },
+    {
+      "text": "Whether the information was copied out or published.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Which features are temporarily affected.",
+      "question_id": "q005"
+    }
+  ],
+  "figures": [
+    {
+      "value": "About 7,500",
+      "label": "Customers affected",
+      "detail": "Names and photos; some top-up details",
+      "claim_id": "c002"
+    },
+    {
+      "value": "About 22,000",
+      "label": "Merchants affected",
+      "detail": "Contact persons' details",
+      "claim_id": "c003"
+    },
+    {
+      "value": "Nov 27",
+      "label": "Attack detected",
+      "detail": "In the morning, per Octopus",
+      "claim_id": "c001"
+    }
+  ],
+  "images": [
+    {
+      "id": "octopus-reader-kmb-bus",
+      "title": "An Octopus card reader on a Hong Kong bus",
+      "file": "images/octopus-reader-kmb-bus.jpg",
+      "alt": "An orange Octopus card reader mounted on a rail beside a bus driver's seat, its screen showing two fares, with a street and passing cars outside the window.",
+      "caption": "An Octopus card reader on a bus in Hong Kong, 2012. It shows where the card is used; it is not part of the incident.",
+      "credit": "Ka890, CC BY-SA 3.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Octopus_reader_on_KMB_bus.JPG",
+      "sha256": "db6e5a33dbb6ad4e712aab4803136f7f8e2e74725a8af21142478646fa51d6b1",
+      "width": 1920,
+      "height": 1440
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "What has Octopus said?",
+      "group": "incident",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What information was involved?",
+      "group": "data",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Is Octopus still working?",
+      "group": "service",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What caused it?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What is being done about it?",
+      "group": "response",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What should customers do?",
+      "group": "advice",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "About Octopus",
+      "group": "about",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Octopus cyberattack"
+    }
+  ]
+}

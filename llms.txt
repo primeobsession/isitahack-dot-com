@@ -198,6 +198,8 @@
 - [US Air Force Cloud One breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-us-air-force-cloud-one-breach.html): the same report as a web page.
 - [Decathlon France customer data breach, Nov 2026](https://isitahack.com/incidents/2026-11-decathlon-customer-data-breach.md): the report as Markdown (still monitored). Built from its data folder.
 - [Decathlon France customer data breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-decathlon-customer-data-breach.html): the same report as a web page.
+- [Octopus Cards cyberattack and data breach, Nov 2026](https://isitahack.com/incidents/2026-11-octopus-cards-cyberattack.md): the report as Markdown (still monitored). Built from its data folder.
+- [Octopus Cards cyberattack and data breach, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-octopus-cards-cyberattack.html): the same report as a web page.
 - [Pacific Blue Cross cyber incident and outage, Nov 2026](https://isitahack.com/incidents/2026-11-pacific-blue-cross-cyber-incident.md): the report as Markdown (still monitored). Built from its data folder.
 - [Pacific Blue Cross cyber incident and outage, Nov 2026 (HTML)](https://isitahack.com/incidents/2026-11-pacific-blue-cross-cyber-incident.html): the same report as a web page.
 
@@ -304,6 +306,7 @@
 - [data/incidents/2026-11-planet-ic-cyberattack/](https://isitahack.com/data/incidents/2026-11-planet-ic-cyberattack/): the folder the Planet IC hosting cyberattack, Schwerin, Nov 2026 report is built from.
 - [data/incidents/2026-11-us-air-force-cloud-one-breach/](https://isitahack.com/data/incidents/2026-11-us-air-force-cloud-one-breach/): the folder the US Air Force Cloud One breach, Nov 2026 report is built from.
 - [data/incidents/2026-11-decathlon-customer-data-breach/](https://isitahack.com/data/incidents/2026-11-decathlon-customer-data-breach/): the folder the Decathlon France customer data breach, Nov 2026 report is built from.
+- [data/incidents/2026-11-octopus-cards-cyberattack/](https://isitahack.com/data/incidents/2026-11-octopus-cards-cyberattack/): the folder the Octopus Cards cyberattack and data breach, Nov 2026 report is built from.
 - [data/incidents/2026-11-pacific-blue-cross-cyber-incident/](https://isitahack.com/data/incidents/2026-11-pacific-blue-cross-cyber-incident/): the folder the Pacific Blue Cross cyber incident and outage, Nov 2026 report is built from.
 
 ## For search engines
