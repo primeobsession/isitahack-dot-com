@@ -1,0 +1,5 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-22,,,stated,"Malicious access to Decathlon customer data at an outside provider, according to Decathlon",c001,
+t002,2026-11-23,,Night of Nov 22 to 23,approximate,Four files said to come from Decathlon are posted on a hacking forum,c004,Clubic dates the posting to the night of Sunday to Monday.
+t003,2026-11-23,,Evening,stated,Decathlon confirms the malicious access to Ouest-France,c001,
+t004,2026-11-24T12:00:00+01:00,,,stated,"France 3 Hauts-de-France publishes Decathlon's confirmation, given to it directly",c001,
