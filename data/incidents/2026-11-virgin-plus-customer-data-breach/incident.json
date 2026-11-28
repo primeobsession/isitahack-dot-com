@@ -4,8 +4,11 @@
   "title": "Virgin Plus customer data breach, Nov 2026",
   "subject": {
     "name": "Virgin Plus",
-    "kind": "telecom"
+    "kind": "telecom",
+    "about": "Virgin Plus is a Canadian mobile phone provider owned by BCE, the parent company of Bell Canada. It sells wireless plans across Canada, and home internet and TV in parts of Ontario and Quebec.",
+    "about_url": "https://en.wikipedia.org/wiki/Virgin_Plus"
   },
+  "lead_image": "virgin-plus-kiosk",
   "incident_type": "breach",
   "answer_group": "hack-stated",
   "also_called": [
@@ -68,6 +71,21 @@
       "label": "Card or bank data affected",
       "detail": "Company says",
       "claim_id": "c003"
+    }
+  ],
+  "images": [
+    {
+      "id": "virgin-plus-kiosk",
+      "title": "A Virgin Plus kiosk in a Toronto shopping centre",
+      "file": "images/virgin-plus-kiosk.jpg",
+      "alt": "A red and white Virgin Plus sales kiosk with phones on display in a bright shopping-centre concourse, under a sign for Dundas St. subway access, with escalators behind it.",
+      "caption": "A Virgin Plus kiosk at the Toronto Eaton Centre in 2021. Not a place involved in the incident.",
+      "credit": "Coolplants, CC BY-SA 4.0, via Wikimedia Commons (cropped)",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Virgin_Plus_Kiosk.jpg",
+      "sha256": "8e7139fa4650251038d8d317dcde38cdb6dc1b926dca526e28e467c2d401452c",
+      "width": 1920,
+      "height": 1440
     }
   ],
   "sections": [
