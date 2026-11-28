@@ -12,7 +12,7 @@
     "about": "Decathlon is a French company that designs and sells sporting goods for all levels, founded in 1976. It has about 1,800 stores worldwide, 325 of them in France, and sells online at decathlon.fr.",
     "about_url": "https://www.decathlon.media/fr_FR/a-propos"
   },
-  "lead_image": "decathlon-phishing-page",
+  "lead_image": "decathlon-cherbourg-store",
   "incident_type": "breach",
   "answer_group": "hack-stated",
   "status": "monitoring",
@@ -70,17 +70,17 @@
   ],
   "images": [
     {
-      "id": "decathlon-phishing-page",
-      "title": "Decathlon's page on phishing",
-      "file": "images/decathlon-phishing-page.jpg",
-      "alt": "The top of a page on decathlon.fr with the Decathlon header and menu, the heading 'Phishing / hameçonnage : comment déjouer les tentatives de fraude ?' and a photo of two staff members' hands at a counter with a phone.",
-      "caption": "Screenshot of Decathlon's page on phishing, Nov 27, 2026. Decathlon has published no notice about the leak.",
-      "credit": "Decathlon, screenshot by isitahack.com",
-      "rights": "screenshot",
-      "source_id": "s005",
-      "sha256": "7fe563bb61054ad2280944c2f1f4041b87fbeccdfa1ce9e58a51f7d05f3119a2",
-      "width": 1600,
-      "height": 800
+      "id": "decathlon-cherbourg-store",
+      "title": "A Decathlon store in Cherbourg",
+      "file": "images/decathlon-cherbourg-store.jpg",
+      "alt": "The front of a Decathlon sports store with a large blue DECATHLON Tollevast Cherbourg sign on a brown facade, basketball hoops on display outside, a glass entrance with a Bienvenue sign and a palm tree, under a cloudy sky.",
+      "caption": "A Decathlon store at Tollevast, near Cherbourg, in August 2021. The leak concerns online orders on decathlon.fr; this store is not part of the incident.",
+      "credit": "Emilius123, CC BY-SA 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Decathlon_in_Cherbourg.jpg",
+      "sha256": "ff5db40f030e37f6fcb54152380214976a785577b8d77f8f888574ffaf3f88b0",
+      "width": 1280,
+      "height": 960
     }
   ],
   "sections": [
