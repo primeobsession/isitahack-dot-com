@@ -25,20 +25,7 @@
   "size": "Regional",
   "size_basis": "A health benefits provider serving about 1.7 million people in British Columbia. How many members are directly affected, and whether any data was reached, has not been said.",
   "who_is_affected": "Pacific Blue Cross members in British Columbia: its website and contact centre are down, and some members have had to pay for prescriptions themselves. Keep claims and receipts; the company says it will process them once services are back. It has not said whether personal information was affected.",
-  "known": [
-    {
-      "text": "Pacific Blue Cross says a cyber incident has disrupted some of its systems.",
-      "claim_id": "c001"
-    },
-    {
-      "text": "Its website and contact centre are down, with no date given for their return.",
-      "claim_id": "c002"
-    },
-    {
-      "text": "It says it has contained the incident and is restoring services with outside specialists.",
-      "claim_id": "c004"
-    }
-  ],
+  "known": [],
   "not_known": [
     {
       "text": "Whether it was an attack, and what caused it.",
