@@ -1,0 +1,167 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-korea-post-internet-post-office-hack",
+  "title": "Korea Post Internet Post Office hack, Nov 2026",
+  "also_called": [
+    "the Internet Post Office hack",
+    "the Korea Post data breach"
+  ],
+  "subject": {
+    "name": "Korea Post",
+    "kind": "government",
+    "about": "Korea Post is South Korea's national postal service, a government agency under the Ministry of Science and ICT. Besides delivering mail and parcels, it offers banking and insurance; its Internet Post Office website lets people send and manage mail online.",
+    "about_url": "https://en.wikipedia.org/wiki/Korea_Post"
+  },
+  "lead_image": "korea-post-sejong-hq",
+  "incident_type": "breach",
+  "answer_group": "hack-stated",
+  "service": {
+    "state": "down",
+    "claim_id": "c005"
+  },
+  "status": "monitoring",
+  "incident_date": "2026-11-25",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by Korea Post, any news outlet, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Large",
+  "size_basis": "South Korea's national postal service. At least 113,855 people's names, addresses and phone numbers were viewed in one day's records alone; seven more days are still being analysed, so the total is not known.",
+  "who_is_affected": "People and companies in South Korea who had registered mail in delivery between Nov 17 and 24. Korea Post says it will tell those affected. Be wary of texts or calls claiming to be the post office, asking you to change an address or pay a delivery fee.",
+  "known": [
+    {
+      "text": "Korea Post says hackers using overseas IP addresses got into a mobile Internet Post Office service.",
+      "claim_id": "c001"
+    },
+    {
+      "text": "Names, addresses and phone numbers of registered-mail recipients for Nov 17 to 24 were viewed.",
+      "claim_id": "c002"
+    },
+    {
+      "text": "At least 113,855 people are affected in one day's records alone.",
+      "claim_id": "c003"
+    },
+    {
+      "text": "The service is suspended and overseas access to the mobile site is blocked.",
+      "claim_id": "c005"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "How many people are affected in total.",
+      "question_id": "q003"
+    },
+    {
+      "text": "Whether mail contents or financial information were taken.",
+      "question_id": "q002"
+    },
+    {
+      "text": "Who was behind it.",
+      "question_id": "q004"
+    },
+    {
+      "text": "When the suspended service will be back.",
+      "question_id": "q005"
+    }
+  ],
+  "figures": [
+    {
+      "value": "113,855",
+      "label": "People affected in one day's records",
+      "detail": "Seven more days still being analysed",
+      "claim_id": "c003"
+    },
+    {
+      "value": "Nov 17-24",
+      "label": "Mail whose records were viewed",
+      "detail": "Registered mail in delivery",
+      "claim_id": "c002"
+    },
+    {
+      "value": "Nov 25",
+      "label": "Breach detected",
+      "detail": "About 10:30 a.m. Korean time",
+      "claim_id": "c004"
+    }
+  ],
+  "images": [
+    {
+      "id": "korea-post-sejong-hq",
+      "title": "Korea Post headquarters in Sejong",
+      "file": "images/korea-post-sejong-hq.jpg",
+      "alt": "A large white modernist office building with a raised concrete walkway passing in front of it, behind a strip of young trees and shrubs, under a blue sky with light cloud.",
+      "caption": "Korea Post headquarters in Sejong, South Korea, in 2016.",
+      "credit": "Minseong Kim, CC BY-SA 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Korea_Post_Sejong_HQ.jpg",
+      "sha256": "20406a39d1e3bfc66d14d3b824ed6d09470f2bbebbc341ae00fb449ba5e67e92",
+      "width": 1920,
+      "height": 1157
+    }
+  ],
+  "sections": [
+    {
+      "type": "claims",
+      "title": "What has Korea Post said?",
+      "group": "incident",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What information was taken?",
+      "group": "data",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "How many people are affected?",
+      "group": "scale",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "When was it found?",
+      "group": "when",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What is down?",
+      "group": "service",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What is not known yet?",
+      "group": "cause",
+      "open": true
+    },
+    {
+      "type": "questions",
+      "title": "Questions people are asking",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "What should customers do?",
+      "group": "advice",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "Has this happened elsewhere in Korea?",
+      "group": "context",
+      "open": true
+    },
+    {
+      "type": "claims",
+      "title": "About Korea Post",
+      "group": "about",
+      "open": true
+    },
+    {
+      "type": "timeline",
+      "title": "Timeline of the Korea Post hack"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-17,,Nov 17 to 24,stated,"Attackers view names, addresses and phone numbers of registered-mail recipients through the delivery-location change service",c002,Dates of the mail in delivery whose records were viewed.
+t002,2026-11-25T10:30:00+09:00,,About 10:30 a.m. Korean time,approximate,"Korea Post detects signs of the breach, then reports it to the privacy regulator and asks police to investigate",c004,
+t003,2026-11-28,,,stated,"Korea Post announces the hack: at least 113,855 people affected in one day's records",c003,
