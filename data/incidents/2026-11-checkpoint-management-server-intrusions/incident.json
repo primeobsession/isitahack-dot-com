@@ -4,7 +4,9 @@
   "title": "Check Point management server intrusions (GT13), Nov 2026",
   "subject": {
     "name": "Check Point",
-    "kind": "network"
+    "kind": "network",
+    "about": "Check Point Software Technologies is a cyber security company, founded in 1993, that makes firewalls and other security products used by businesses and governments to protect their networks.",
+    "about_url": "https://www.checkpoint.com/about-us/"
   },
   "incident_type": "attack",
   "answer_group": "hack-reported",

@@ -123,5 +123,21 @@
       "title": "What we checked and did not find",
       "file": "notes/checked-not-found.md"
     }
-  ]
+  ],
+  "images": [
+    {
+      "title": "The Vermont State House in Montpelier",
+      "alt": "A white granite building with a columned portico and a gold dome, at the end of a stone walkway, with autumn trees behind.",
+      "caption": "The Vermont State House in Montpelier, the seat of the state government, in October 2021. The building is not part of this incident.",
+      "credit": "King of Hearts, CC BY-SA 4.0, via Wikimedia Commons",
+      "rights": "licensed",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vermont_State_House_Montpelier_October_2021_HDR.jpg",
+      "id": "vermont-state-house-montpelier",
+      "file": "images/vermont-state-house-montpelier.jpg",
+      "sha256": "80ca8c15f325f75675eafc20dae4b01f8c558c6e10235bfb73faacf4ed8c0922",
+      "width": 1920,
+      "height": 1371
+    }
+  ],
+  "lead_image": "vermont-state-house-montpelier"
 }

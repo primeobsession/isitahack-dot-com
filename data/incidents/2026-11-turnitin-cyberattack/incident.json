@@ -4,7 +4,9 @@
   "title": "Turnitin cyberattack, Nov 2026",
   "subject": {
     "name": "Turnitin",
-    "kind": "online-service"
+    "kind": "online-service",
+    "about": "Turnitin is an education technology company that has worked with schools and universities since 1998. Teachers and researchers use its software to check written work for plagiarism and AI use and to grade and give feedback.",
+    "about_url": "https://www.turnitin.com/about"
   },
   "incident_type": "attack",
   "answer_group": "hack-stated",

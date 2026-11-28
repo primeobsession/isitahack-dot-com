@@ -4,11 +4,16 @@
   "title": "NSA internal network disruption, Nov 17, 2026",
   "subject": {
     "name": "NSA",
-    "kind": "government"
+    "kind": "government",
+    "about": "The National Security Agency is a US intelligence agency within the Department of Defense. It collects and processes foreign signals intelligence and protects US communications networks and information systems.",
+    "about_url": "https://en.wikipedia.org/wiki/National_Security_Agency"
   },
   "incident_type": "outage",
   "answer_group": "no-sign-of-hack",
-  "service": { "state": "back", "claim_id": "c016" },
+  "service": {
+    "state": "back",
+    "claim_id": "c016"
+  },
   "also_called": [
     "the NSA outage",
     "the NSANet outage"
@@ -135,5 +140,21 @@
       "title": "What we checked and did not find",
       "file": "notes/checked-not-found.md"
     }
-  ]
+  ],
+  "images": [
+    {
+      "title": "NSA headquarters at Fort Meade, Maryland",
+      "alt": "An aerial view of two dark glass office blocks and lighter concrete buildings surrounded by large car parks and woodland.",
+      "caption": "The National Security Agency's headquarters at Fort Meade, Maryland, seen from the air.",
+      "credit": "National Security Agency, public domain, via Wikimedia Commons",
+      "rights": "public-domain",
+      "source_url": "https://commons.wikimedia.org/wiki/File:National_Security_Agency_headquarters,_Fort_Meade,_Maryland.jpg",
+      "id": "nsa-headquarters-fort-meade",
+      "file": "images/nsa-headquarters-fort-meade.jpg",
+      "sha256": "09b9154fb3bbdb137a88c4ac5b5a7664811e55b6e6545ffab180fa20907c6e49",
+      "width": 1920,
+      "height": 1440
+    }
+  ],
+  "lead_image": "nsa-headquarters-fort-meade"
 }

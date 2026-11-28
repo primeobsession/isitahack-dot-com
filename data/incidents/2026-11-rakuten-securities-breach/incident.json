@@ -4,7 +4,9 @@
   "title": "Rakuten Securities breach, Nov 2026",
   "subject": {
     "name": "Rakuten Securities",
-    "kind": "finance"
+    "kind": "finance",
+    "about": "Rakuten Securities is a Japanese online brokerage, founded in 1999 and based in Tokyo, owned mostly by Rakuten's securities holding company with Mizuho Securities. People use it to trade Japanese and foreign shares, investment funds, FX and other products online.",
+    "about_url": "https://www.rakuten-sec.co.jp/web/company/profile/"
   },
   "incident_type": "breach",
   "answer_group": "hack-stated",
