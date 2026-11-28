@@ -2,7 +2,12 @@
   "format_version": 1,
   "slug": "2026-11-faa-ground-stop",
   "title": "FAA nationwide ground stop",
-  "subject": { "name": "FAA", "kind": "aviation" },
+  "subject": {
+    "name": "FAA",
+    "kind": "aviation",
+    "about": "The Federal Aviation Administration is the US government agency, part of the Department of Transportation, that regulates civil aviation. Its work includes air traffic control and certifying aircraft and pilots.",
+    "about_url": "https://en.wikipedia.org/wiki/Federal_Aviation_Administration"
+  },
   "incident_type": "outage",
   "answer_group": "unclear",
   "service": {
