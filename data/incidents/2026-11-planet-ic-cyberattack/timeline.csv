@@ -1,0 +1,6 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-21,,Saturday evening,stated,Unauthorised access to servers in Planet IC's data centre in Schwerin,c001,
+t002,2026-11-25,,,stated,Wemag says its customer portals are offline after an attack on its hosting provider,c007,
+t003,2026-11-26T10:28:00+01:00,,,stated,dpa reports that Planet IC confirmed the attack and that several city websites are down,c008,Time of the Nordkurier update.
+t004,2026-11-26,,,stated,NRW.BANK takes its website offline as a precaution,c009,Reported by Börsen-Zeitung on Nov 26.
+t005,2026-11-27T19:25:00-05:00,,,stated,"Schwerin's and Greifswald's websites, Wemag's portal and NRW.BANK's site are still down or limited at our check",c011,

@@ -1,0 +1,13 @@
+source_id,source_url,source_name,source_tier,independence_group,source_date,retrieved_at,archive_url,link_status,last_checked
+s001,https://www.planet-ic.de/,"Planet IC: home page notice, ""Aktuelle Information zu einem IT-Sicherheitsvorfall""",1,planet-ic,,2026-11-27T19:24:00-05:00,,ok,2026-11-27T19:24:00-05:00
+s002,https://www.planet-ic.de/ueber-uns,Planet IC: Über uns (about the company),1,planet-ic,,2026-11-27T19:24:00-05:00,,ok,2026-11-27T19:24:00-05:00
+s003,https://www.wemag.com/aktuelles-presse/wemag-unternehmensgruppe-informiert-ueber-cyberangriff-auf-hosting-dienstleister,WEMAG: WEMAG-Unternehmensgruppe informiert über Cyberangriff auf Hosting-Dienstleister,1,wemag,2026-11-25,2026-11-27T19:24:00-05:00,,ok,2026-11-27T19:24:00-05:00
+s004,https://www.wemag.com/,WEMAG: home page notice about the customer portal,1,wemag,,2026-11-27T19:24:00-05:00,,ok,2026-11-27T19:24:00-05:00
+s005,https://kundenportal.wemag.com/,WEMAG: customer portal page,1,wemag,,2026-11-27T19:25:00-05:00,,ok,2026-11-27T19:25:00-05:00
+s006,https://www.nordkurier.de/regional/mecklenburg-vorpommern/hacker-stehen-hinter-stoerungen-von-webseiten-im-nordosten-5039267,Nordkurier (dpa): Hacker legen Stadt-Webseiten lahm: Was steckt hinter dem Cyberangriff?,2,dpa,2026-11-26T10:28:00+01:00,2026-11-27T19:24:00-05:00,,ok,2026-11-27T19:24:00-05:00
+s007,https://www.boersen-zeitung.de/banken-finanzen/it-dienstleister-der-nrw-bank-angegriffen,Börsen-Zeitung: IT-Dienstleister der NRW.Bank angegriffen,2,boersen-zeitung,2026-11-26T15:31:00+01:00,2026-11-27T19:24:00-05:00,,ok,2026-11-27T19:24:00-05:00
+s008,https://www.security-insider.de/cyberangriff-planet-ic-kunden-websites-offline-wemag-datenabfluss-a-a12ee7057dc60704e62f5d5203418ffd/,Security-Insider: Cyberangriff auf Planet IC: Viele Kunden-Websites offline,2,security-insider,2026-11-27,2026-11-27T19:24:00-05:00,,ok,2026-11-27T19:24:00-05:00
+s009,https://schwerin-lokal.de/cyberangriff-schwerin-stadtportal-wemag/,Schwerin Lokal: Cyberangriff Schwerin: Stadtportal und WEMAG im Fokus,2,schwerin-lokal,2026-11-26,2026-11-27T19:24:00-05:00,,ok,2026-11-27T19:24:00-05:00
+s010,https://www.schwerin.de/,Landeshauptstadt Schwerin: Die Website ist vorübergehend nicht erreichbar,1,schwerin,,2026-11-27T19:25:00-05:00,,ok,2026-11-27T19:25:00-05:00
+s011,https://www.greifswald.de/,Universitäts- und Hansestadt Greifswald: home page notice,1,greifswald,,2026-11-27T19:25:00-05:00,,ok,2026-11-27T19:25:00-05:00
+s012,https://www.nrwbank.de/,NRW.BANK: home page notice,1,nrwbank,,2026-11-27T19:25:00-05:00,,ok,2026-11-27T19:25:00-05:00
