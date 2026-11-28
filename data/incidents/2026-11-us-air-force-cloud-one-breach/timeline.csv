@@ -1,0 +1,4 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-27,,,stated,"Reuters reports that hackers breached the Air Force's Cloud One platform, citing people familiar with the matter",c001,The intrusion itself was found earlier; when is not settled (c002).
+t002,2026-11-27T18:39:55-05:00,,,stated,NBC News reports that a US official confirmed the breach,c001,Time the NBC News video page was published.
+t003,2026-11-27T18:43:00-05:00,,,stated,Federal News Network reports its own source confirmed details and said the clean-up disrupted some functions,c005,

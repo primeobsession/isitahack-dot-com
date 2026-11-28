@@ -1,0 +1,103 @@
+{
+  "format_version": 1,
+  "slug": "2026-11-us-air-force-cloud-one-breach",
+  "title": "US Air Force Cloud One breach, Nov 2026",
+  "also_called": [
+    "the Air Force cloud hack",
+    "the Cloud One breach"
+  ],
+  "subject": {
+    "name": "Cloud One",
+    "kind": "government",
+    "about": "Cloud One is the US Air Force's main cloud computing platform, launched in 2017. It lets Air Force and Space Force units run applications for personnel, pay, logistics and maintenance on Amazon, Microsoft, Google and Oracle clouds.",
+    "about_url": "https://federalnewsnetwork.com/air-force/2026/11/hackers-breach-air-forces-cloud-one-computing-environment/"
+  },
+  "lead_image": "pentagon-aerial",
+  "incident_type": "breach",
+  "answer_group": "hack-reported",
+  "status": "monitoring",
+  "incident_date": "2026-11-27",
+  "disclaimer": "Made for entertainment using AI. Not endorsed by the US Air Force, the Department of Defense, any news outlet, government agency, company, or anyone else named.",
+  "main_question_id": "q001",
+  "verdict": null,
+  "verdict_approved_at": null,
+  "size": "Nation-level",
+  "size_basis": "A reported breach of a military platform that hosts Air Force personnel, pay and logistics systems, a matter for the national government. The known impact is disruption to parts of the platform; what was reached or taken is not known.",
+  "who_is_affected": "Air Force and Space Force units and staff whose applications run on Cloud One, where some updates and administrator access have reportedly been held back. Nobody has said personal data was taken, and members of the public need do nothing.",
+  "known": [
+    {
+      "text": "The Air Force says it does not comment on the security of specific systems, and has neither confirmed nor denied a breach.",
+      "claim_id": "c006"
+    },
+    {
+      "text": "Cloud One, launched in 2017, hosts Air Force systems for personnel, pay, logistics and maintenance.",
+      "claim_id": "c009"
+    }
+  ],
+  "not_known": [
+    {
+      "text": "What the hackers reached, and whether any data was taken.",
+      "question_id": "q002"
+    },
+    {
+      "text": "When the intrusion began and when it was found.",
+      "question_id": "q003"
+    },
+    {
+      "text": "Who was behind it.",
+      "question_id": "q004"
+    },
+    {
+      "text": "Whether the paused work and blocked updates have resumed.",
+      "question_id": "q005"
+    }
+  ],
+  "figures": [
+    {
+      "value": "Nov 27",
+      "label": "First reported",
+      "detail": "By Reuters, citing unnamed sources",
+      "claim_id": "c001"
+    },
+    {
+      "value": "3",
+      "label": "Outlets with own sources",
+      "detail": "Reuters, NBC News, Federal News Network",
+      "claim_id": "c001"
+    },
+    {
+      "value": "2017",
+      "label": "Cloud One launched",
+      "detail": "Runs on four commercial clouds",
+      "claim_id": "c009"
+    }
+  ],
+  "images": [
+    {
+      "id": "pentagon-aerial",
+      "title": "The Pentagon from the air",
+      "file": "images/pentagon-aerial.jpg",
+      "alt": "An aerial view of the Pentagon's long, pale stone wings and flat roofs, with autumn trees in front and the Potomac River and Washington area spreading to the horizon under a blue sky.",
+      "caption": "The Pentagon in Arlington, Virginia, headquarters of the Defense Department and the Department of the Air Force. Cloud One runs on commercial clouds; the building is not part of the incident.",
+      "credit": "Carol M. Highsmith, Library of Congress, public domain",
+      "rights": "public-domain",
+      "source_url": "https://www.loc.gov/item/2011632609/",
+      "sha256": "dd913792e916c4b98f943a52813f1488932450b62a10dbd5406930394275697d",
+      "width": 1920,
+      "height": 1275
+    }
+  ],
+  "sections": [
+    { "type": "claims", "title": "What has been reported?", "group": "breach", "open": true },
+    { "type": "claims", "title": "When did it happen?", "group": "when", "open": true },
+    { "type": "claims", "title": "What was disrupted?", "group": "impact", "open": true },
+    { "type": "claims", "title": "Was any data taken?", "group": "data", "open": true },
+    { "type": "claims", "title": "What has the Air Force said?", "group": "response", "open": true },
+    { "type": "claims", "title": "Who was behind it?", "group": "attacker", "open": true },
+    { "type": "questions", "title": "Questions people are asking", "open": true },
+    { "type": "claims", "title": "Is it linked to other recent hacks?", "group": "context", "open": true },
+    { "type": "claims", "title": "What people are asking online", "group": "discussion", "open": true },
+    { "type": "claims", "title": "About Cloud One", "group": "about", "open": true },
+    { "type": "timeline", "title": "Timeline of the Cloud One breach reports" }
+  ]
+}
