@@ -1,0 +1,3 @@
+event_id,event_time,event_end_time,time_text,time_basis,event_text,claim_id,notes
+t001,2026-11-25,,Early morning,stated,Pacific Blue Cross becomes aware of a disruption to its systems,c003,
+t002,2026-11-27,,,stated,"CBC News and Vista Radio report the cyber incident; the website and contact centre are down, with no restoration date",c002,
